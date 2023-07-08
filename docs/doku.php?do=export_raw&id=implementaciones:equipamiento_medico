@@ -1,0 +1,23 @@
+====== La CIAA en Equipamiento Médico ======
+
+Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en **Equipamiento Médico**.
+
+----
+
+===== Control de incubadoras de cuidados intensivos =====
+
+[[http://www.adox.com.ar/|{{..adox_1.png?140 }}]]
+[[http://www.alisonargentina.com.ar/|{{ ..alison.png?140}}]]
+###
+La empresa [[http://www.adox.com.ar/|Adox S.A.]], en articulación con [[http://www.alisonargentina.com.ar/|Alison Argentina S.A.]], está desarrollando un control para ser utilizado en **incubadoras de cuidados intensivos**.
+###
+
+{{ incubadora_cerrada_con_luz.jpg?230|Incubadora de cuidados intensivos}}
+
+###
+El sistema basado en la CIAA permitirá controlar:
+    * humedad y temperatura, utilizando resistencias y humidificadores en un ambiente cerrado, 
+    * una válvula proporcional y un sensor de oxígeno para poder conseguir diferentes concentraciones de oxígeno,
+    * motores, permitiendo modificar la posición de la incubadora. 
+También se propone que el sistema emita alarmas por puertas abiertas y registre diferentes eventos, entre otras funciones.
+###

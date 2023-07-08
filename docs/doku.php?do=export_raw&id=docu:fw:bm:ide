@@ -1,0 +1,8 @@
+====== IDE ======
+
+El IDE le provee al desarrollador de Firmware (programador en C/C++) la posibilidad de trabjar en un ambiente amigable y plug&play. Todos los tools necesarios para poder desarrollar aplicaciones en el Firmware serán instaladas de forma automática, esto incluye:
+  * eclipse
+  * php
+  * cygwin
+
+<- ^ ^ docu:fw:bm:ide:install|Instalación ->

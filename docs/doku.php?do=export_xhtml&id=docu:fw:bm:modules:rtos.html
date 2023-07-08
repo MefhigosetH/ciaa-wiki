@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:modules:rtos</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,modules,rtos"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:modules:rtos&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:modules"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:modules:rtos"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:modules';var JSINFO = {"id":"docu:fw:bm:modules:rtos","namespace":"docu:fw:bm:modules","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos.html#rtos">RTOS</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos.html#osek-os">OSEK-OS</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos.html#faq">FAQ</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos.html#testeando_osek">Testeando OSEK</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+<div class="docnavbar"><div class="leftnav">&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html" class="wikilink1" title="docu:fw:bm:modules:rtos:tst" data-wiki-id="docu:fw:bm:modules:rtos:tst">Testeando OSEK </a> →</div></div>
+<h1 class="sectionedit1" id="rtos">RTOS</h1>
+<div class="level1">
+
+<p>
+Es un sistema operativo de tiempo real (Real Time Operating System). 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;RTOS&quot;,&quot;hid&quot;:&quot;rtos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-91&quot;} -->
+<h2 class="sectionedit2" id="osek-os">OSEK-OS</h2>
+<div class="level2">
+<p class="divalign-justify">CIAA-Firmware utiliza <a href="http://www.osek-vdx.org/" class="urlextern" target="_blank" title="http://www.osek-vdx.org/" rel="ugc nofollow noopener">OSEK-OS</a>, que es un estándar de RTOS internacional creado por la industria automotriz y de libre licencia.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSEK-OS&quot;,&quot;hid&quot;:&quot;osek-os&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;92-278&quot;} -->
+<h3 class="sectionedit3" id="por_que_ciaa-firmware_utiliza_osek-os">¿Por qué CIAA-Firmware utiliza OSEK-OS?</h3>
+<div class="level3">
+<p class="divalign-justify">OSEK-<abbr title="Operating System">OS</abbr> fue creado por la industria automotriz, pero esa no es la razón para utilizarlo en CIAA-Firmware. La ventaja de OSEK-<abbr title="Operating System">OS</abbr> es que es un <strong>estándar</strong> y por ende existen muchas implementaciones. Hay implementaciones open source y cerradas, las hay con QM hasta SIL 3. Además de que hay muchas empresas que proveen soporte.</p><!--divalign-->
+<p class="divalign-justify">Al ser un estándar <strong>abierto</strong>, quien quiera es libre de usar el estándar, implementarlo, venderlo, comprarlo, etc. OSEK-<abbr title="Operating System">OS</abbr> nos genera la libertad de no dependencia.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfPor qu\u00e9 CIAA-Firmware utiliza OSEK-OS?&quot;,&quot;hid&quot;:&quot;por_que_ciaa-firmware_utiliza_osek-os&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;279-846&quot;} -->
+<h3 class="sectionedit4" id="introduccion_a_osek-os">Introducción a OSEK-OS</h3>
+<div class="level3">
+<p class="divalign-justify">Para entrar en tema rápidamente, puede empezar por una <a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:breve_introduccio_n_a_osek-vdx.pdf" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:breve_introduccio_n_a_osek-vdx.pdf" rel="ugc nofollow noopener">Breve introducción a OSEK</a>.</p><!--divalign-->
+<p class="divalign-justify">Un documento más detallado es <a href="http://proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:rtos:introduccion_a_osek-os.pdf" class="urlextern" target="_blank" title="http://proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:rtos:introduccion_a_osek-os.pdf" rel="ugc nofollow noopener">Introducción a OSEK-OS</a>.
+</p><!--divalign-->
+
+<p>
+También puede visitar el sitio oficial de <a href="http://www.osek-vdx.org/" class="urlextern" target="_blank" title="http://www.osek-vdx.org/" rel="ugc nofollow noopener">OSEK-VDX</a>, donde entre otros documentos encontrará las <a href="http://portal.osek-vdx.org/files/pdf/specs/os223.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/specs/os223.pdf" rel="ugc nofollow noopener">Especificaciones de OSEK versión 2.2.3</a> o <a href="http://en.wikipedia.org/wiki/OSEK" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/OSEK" rel="ugc nofollow noopener">OSEK en Wikipedia (inglés)</a>. .
+###
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Introducci\u00f3n a OSEK-OS&quot;,&quot;hid&quot;:&quot;introduccion_a_osek-os&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;847-1578&quot;} -->
+<h3 class="sectionedit5" id="osek-os_de_la_ciaa">OSEK-OS de la CIAA</h3>
+<div class="level3">
+
+<p>
+El OSEK de CIAA-Firmware está basado en <a href="http://opensek.sourceforge.net/" class="urlextern" target="_blank" title="http://opensek.sourceforge.net/" rel="ugc nofollow noopener">FreeOSEK</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSEK-OS de la CIAA&quot;,&quot;hid&quot;:&quot;osek-os_de_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1579-1697&quot;} -->
+<h2 class="sectionedit6" id="faq">FAQ</h2>
+<div class="level2">
+
+<p>
+Si tiene consultas, mire las preguntas frecuentes relacionadas a RTOS: <a href="./doku.php%3Fid=desarrollo:firmware:rtos:faq.html" class="wikilink1" title="desarrollo:firmware:rtos:faq" data-wiki-id="desarrollo:firmware:rtos:faq">FAQs</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;FAQ&quot;,&quot;hid&quot;:&quot;faq&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1698-1825&quot;} -->
+<h2 class="sectionedit7" id="testeando_osek">Testeando OSEK</h2>
+<div class="level2">
+
+<p>
+Si quiere portar el RTOS a una nueva plataforma es importante correr los tests, lo mismo se explica en la página <a href="./doku.php%3Fid=desarrollo:firmware:rtos:test.html" class="wikilink1" title="desarrollo:firmware:rtos:test" data-wiki-id="desarrollo:firmware:rtos:test">Tests de OSEK</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Testeando OSEK&quot;,&quot;hid&quot;:&quot;testeando_osek&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1826-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html" class="wikilink1" title="docu:fw:bm:modules:rtos" data-wiki-id="docu:fw:bm:modules:rtos">Módulos </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html" class="wikilink1" title="docu:fw:bm:modules:rtos:tst" data-wiki-id="docu:fw:bm:modules:rtos:tst">Testeando OSEK </a> →</div></div></div>
+</body>
+</html>

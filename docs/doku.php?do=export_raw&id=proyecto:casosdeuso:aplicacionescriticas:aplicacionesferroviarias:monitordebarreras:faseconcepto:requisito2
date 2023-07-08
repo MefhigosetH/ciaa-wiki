@@ -1,0 +1,48 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+
+===== Requisito 2 =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note>"el requisito 2 de esta fase debe ser el de examinar:\\
+<fc #ffffff>..</fc>a) las implicaciones RAMS para cualquier análisis financiero del sistema;\\
+<fc #ffffff>..</fc>b) las implicaciones RAMS para cualesquiera estudios de viabilidad del sistema."</note>
+
+###
+En consecuencia resulta:
+###
+
+
+###
+** a) Implicaciones RAMS en el análisis financiero**: 
+###
+
+###
+El presente proyecto es desarrollado por docentes universitarios en el marco de sus horas de trabajo dedicadas a la investigación aplicada. A su vez, aún si el presente desarrollo se concluye en forma exitosa de acuerdo a su concepción actual será solamente un caso de estudio que al menos en una primera etapa no se utilizará en reemplazo de ninguno de los sistemas que puedan encontrarse actualmente en uso. En consecuencia se puede considerar que no hay implicaciones RAMS sobre algún tipo de análisis financiero, ya que se trata de un proyecto de investigación de índole académico.
+###
+
+###
+** b) Implicaciones RAMS en el estudio de viabilidad**:
+###
+
+###
+Como se mencionó en el punto //a) Implicaciones RAMS en el análisis financiero// el presente proyecto es desarrollado por docentes universitarios en el marco de sus horas de trabajo dedicadas a la investigación aplicada y a su vez, aún si el presente desarrollo se concluye en forma exitosa será solamente un caso de estudio que al menos en una primera etapa no se utilizará en reemplazo de ninguno de los sistemas que puedan encontrarse actualmente en uso. De hecho, la principal objetivo que se persigue con el presente proyecto es el aprendizaje de las normas ferroviarias para sistemas de seguridad electrónicos. Por lo tanto el desempeño del sistema en término de sus implicaciones RAMS no incidirá en forma alguna respecto a la viabilidad de desarrollar el presente proyecto.
+###
+
+
+{{ :blanco.png?20 | }}
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3|Ir al Requisito 3 de la Fase de Concepto]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 
+

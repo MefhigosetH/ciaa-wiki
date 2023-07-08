@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#python_corriendo_en_la_edu-ciaa">Python corriendo en la EDU-CIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#soporte_de_hardware">Soporte de Hardware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#soporte_de_software">Soporte de Software</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#comenzar_con_micro_python_en_la_educiaa">Comenzar con Micro Python en la EDUCIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#proyectos_de_ejemplo">Proyectos de ejemplo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#contribuir">Contribuir</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#problemas_tipicos">Problemas típicos</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="python_corriendo_en_la_edu-ciaa">Python corriendo en la EDU-CIAA</h1>
+<div class="level1">
+
+<p>
+Existe en desarrollo un firmware que permite interpretar un programa escrito en lenguaje python. El proyecto es llamado <a href="https://micropython.org/" class="urlextern" target="_blank" title="https://micropython.org/" rel="ugc nofollow noopener">micro-python</a> y fue desarrollado para un hardware llamado pyboard. 
+</p>
+
+<p>
+Se desarrolló una versión de este firmware para correr en la EDU-CIAA, mediante el cual es posible ejecutar un archivo de extensión .py o utilizar una consola de python en donde el código se va ejecutando a medida que se van escribiendo las líneas.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Python corriendo en la EDU-CIAA&quot;,&quot;hid&quot;:&quot;python_corriendo_en_la_edu-ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-519&quot;} -->
+<h2 class="sectionedit2" id="soporte_de_hardware">Soporte de Hardware</h2>
+<div class="level2">
+
+<p>
+Hasta el momento el soporte de hardware existente es el siguiente:
+</p>
+<ul>
+<li class="level1"><div class="li"> Manejo de los 3 leds</div>
+</li>
+<li class="level1"><div class="li"> Manejo del led RGB</div>
+</li>
+<li class="level1"><div class="li"> Manejo de los 4 pulsadores</div>
+</li>
+<li class="level1"><div class="li"> Manejo de la UART</div>
+</li>
+<li class="level1"><div class="li"> Manejo del puerto RS-485</div>
+</li>
+<li class="level1"><div class="li"> Manejo de las 9 GPIOs</div>
+</li>
+<li class="level1"><div class="li"> Manejo del DAC</div>
+</li>
+<li class="level1"><div class="li"> Manejo de Timers</div>
+</li>
+<li class="level1"><div class="li"> Manejo de 11 salidas de PWM</div>
+</li>
+<li class="level1"><div class="li"> Manejo de 3 entradas analógicas</div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:poncho_ui.html" class="wikilink1" title="desarrollo:edu-ciaa:poncho_ui" data-wiki-id="desarrollo:edu-ciaa:poncho_ui">Poncho UI</a> (Teclado matricial y LCD HD44780U)</div>
+</li>
+<li class="level1"><div class="li"> EEPROM interna (16 Kbytes)</div>
+</li>
+<li class="level1"><div class="li"> Manejo de SPI modo Master</div>
+</li>
+<li class="level1"><div class="li"> RTC con alarma y registros de backup.</div>
+</li>
+<li class="level1"><div class="li"> Manejo de I2C modo Master</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte de Hardware&quot;,&quot;hid&quot;:&quot;soporte_de_hardware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;520-1101&quot;} -->
+<h2 class="sectionedit3" id="soporte_de_software">Soporte de Software</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Módulo json</div>
+</li>
+<li class="level1"><div class="li"> Módulo Modbus</div>
+</li>
+<li class="level1"><div class="li"> Módulo utime</div>
+</li>
+<li class="level1"><div class="li"> Módulo math</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte de Software&quot;,&quot;hid&quot;:&quot;soporte_de_software&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1102-1204&quot;} -->
+<h1 class="sectionedit4" id="comenzar_con_micro_python_en_la_educiaa">Comenzar con Micro Python en la EDUCIAA</h1>
+<div class="level1">
+
+<p>
+Para comenzar a utilizar Micro Python en la EDUCIAA se deberá grabar el firmware correspondiente en la placa.
+</p>
+<div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware">Cómo grabar el firmware en la placa</a>
+</div><div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar">Ya tengo el firmware grabado, comenzar a programar</a>
+</div><hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comenzar con Micro Python en la EDUCIAA&quot;,&quot;hid&quot;:&quot;comenzar_con_micro_python_en_la_educiaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1205-1632&quot;} -->
+<h2 class="sectionedit5" id="proyectos_de_ejemplo">Proyectos de ejemplo</h2>
+<div class="level2">
+
+<p>
+Se esta construyendo un repositorio con programas de ejemplo con su explicación. El nivel de los proyectos es variado y cubrirá temas simples de programación básica, y temas más complejos que implican el uso avanzado del hardware que posee la placa.
+</p>
+<div class="plugin_note notetip"><a href="https://github.com/ernesto-g/educiaa-micropython-demos" class="urlextern" target="_blank" title="https://github.com/ernesto-g/educiaa-micropython-demos" rel="ugc nofollow noopener">Para acceder a los ejemplos hacer click aquí</a>
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Proyectos de ejemplo&quot;,&quot;hid&quot;:&quot;proyectos_de_ejemplo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1633-2047&quot;} -->
+<h2 class="sectionedit6" id="contribuir">Contribuir</h2>
+<div class="level2">
+
+<p>
+Los módulos que faltan implementar son los siguientes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Stepper motor</div>
+</li>
+<li class="level1"><div class="li"> Manejo del core M0</div>
+</li>
+<li class="level1"><div class="li"> Control Servomotores</div>
+</li>
+<li class="level1"><div class="li"> Ethernet</div>
+</li>
+<li class="level1"><div class="li"> USB</div>
+</li>
+</ul>
+
+<p>
+Se está trabajando en las siguientes áreas:
+</p>
+<ul>
+<li class="level1"><div class="li"> PID</div>
+</li>
+<li class="level1"><div class="li"> Emulador</div>
+</li>
+<li class="level1"><div class="li"> IDE para editar el script y enviarlo a la placa</div>
+</li>
+<li class="level1"><div class="li"> Documentación y tutoriales</div>
+</li>
+</ul>
+
+<p>
+Para colaborar contactarse a la lista de embebidos embebidos32@googlegroups.com
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Contribuir&quot;,&quot;hid&quot;:&quot;contribuir&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2048-2448&quot;} -->
+<h2 class="sectionedit7" id="problemas_tipicos">Problemas típicos</h2>
+<div class="level2">
+<div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting">Troubleshooting</a>
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Problemas t\u00edpicos&quot;,&quot;hid&quot;:&quot;problemas_tipicos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2449-&quot;} --></div>
+</body>
+</html>

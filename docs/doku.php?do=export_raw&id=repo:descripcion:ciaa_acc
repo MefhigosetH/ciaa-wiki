@@ -1,0 +1,7 @@
+=== CIAA-ACC ===
+{{:desarrollo:ciaa_acc:ciaa-acc_top_armada_l.jpg?direct&200 |}} La CIAA-ACC está orientada al desarrollo de una computadora industrial en la modalidad de hardware libre que soporte aplicaciones de alto costo computacional, como son los sistemas de visión y procesamiento de imágenes y el manejo de pantallas de alta resolución, y que sea capaz de correr sistemas operativos de tipo Linux.\\
+La CIAA-ACC tiene un procesador Xilinx Zynq-7000 (Dual ARM Cortex A9 @800 MHz + Kintex-7 FPGA). Además cuenta con 1GB DDR3, 128 Mb QSPI + Micro SD, HDMI dual role, Gb Ethernet, USB 2.0 OTG, PCIe One Bank, UART, RS485, CAN, SPI, I2C y 16 GPIO.
+\\
+\\
+\\
+| **Requerimientos** |**Diagrama Esquemático** | **Circuito Impreso** | **Prototipo Preliminar** | <fc #777777>Versión Final</fc> |

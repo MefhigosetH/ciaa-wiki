@@ -1,0 +1,37 @@
+====== La CIAA en Transporte Ferroviario ======
+
+###
+Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en el **Transporte Ferroviario**.
+###
+
+----
+
+===== Sensor de temperatura de riel =====
+
+[[http://www.bcyl.com.ar/#&panel1-1|{{ ..trenesargcyl.png?200}}]]
+
+###
+La Gerencia de Tecnología de [[http://www.bcyl.com.ar/#&panel1-1|Trenes Argentinos - Cargas y Logística]] se encuentra desarrollando un sistema para monitorear la temperatura de los rieles de los trenes.
+###
+
+{{2014-05-13_at_16-05-00.jpg?200 }}
+
+###
+Las altas temperaturas a las que se someten los rieles aumentan la plasticidad del acero, generando  deformaciones que pueden causar el descarrilamiento del tren. Para evitar esto debe tenerse un monitoreo preciso de dichas temperaturas para indicar a qué velocidad deben circular los trenes para no circular a una velocidad demasiado lenta (por seguridad).
+###
+
+{{ 20140805_142749.jpg?200|Sensor de temperatura de riel}}
+
+###
+Se propone reemplazar el sistema que se utiliza actualmente en las líneas San Martín y Urquiza por uno nuevo basado en la CIAA, con lo que se obtendrán los siguientes beneficios:
+###
+  * terminar con problemas de fallas frecuentes,
+  * acortar tiempos de operación,
+  * trabajar con un sistema a prueba  de  obsolescencia  tecnológica, al ser **escalable** y **actualizable**. 
+  * más **económico** y **confiable** que una solución a medida de terceros. 
+
+{{ sensor_temperatura_riel.png?300|Sensor de temperatura de riel}}
+
+###
+**¿Cómo funcionará el sistema basado en la CIAA?** El sensor de temperatura se conectará directamente a la computadora industrial, que reportará los datos por Ethernet usando SNMP a un servidor central. Dicho servidor reportará los datos al sistema actual o eventualmente al Sistema de Control de Tráfico. 
+###

@@ -1,0 +1,116 @@
+====== Make ======
+
+###
+Para compilar el proyecto se utiliza [[http://www.gnu.org/software/make/|GNU Make]], de manera que la compilación pueda fácilmente ser cambiada mediante un archivo de configuración para distintos arquitecturas, compiladores, etc. según la necesidad del usuario. La estructura fue realizada para poder crear nuevos módulos de forma sencilla.
+###
+
+A quienes utilicen el IDE este cápitulo puede resultar inecesario.
+
+Desde el root se puede correr el siguiente comando para conocer las opciones:
+<code>
+make help
+</code>
+
+===== Root Make =====
+
+###
+El Makefile que se encuentra en el en el root al hacer un **git clone** o descargar una release es el root make. **Por lo general no se debe editar este Makefile**. Si cree que debe editar este Makefile contacte [[desarrollo:firmware:plan_desarrollo_fw#equipo_tecnico_a_cargo|al responsable del Makefile]].
+###
+
+Para seleccionar y configurar las variables del Makefile debe crear su propio **Makefile.mine** copiando el **Makefile.config** en el directorio raiz del firmware, por ejemplo ejecutando:
+
+<code>
+cp Makefile.config Makefile.mine
+</code>
+==== Makefile.mine ====
+
+###
+La ventaja de tener un Makefile.mine es que personaliza el Makefile para su entorno de trabajo pero este es ignorado por git al sincronizar con el repositorio. Cada desarrollador o usuario puede configurar su propio Makefile a través del Makefile.mine evitando dos problemas:
+###
+
+  * Por error hacer un commit de un Makefile modificado, lo cual le generaría problemas a los otros usuarios que utilizan CIAA-Firmware.
+  * Por error sobrescribir el Makefile local al hacer un git pull y perder la configuración. 
+
+En el Makefile.mine se pueden editar y configurar los siguientes parámetros:
+  * **BOARD** es la placa sobre la cual se trabajaca (ciaa_nxp, edu_ciaa_nxp, etc.)
+  * **ARCH** indica la arquitectura del hardware para la cual se desea compilar. Ej: x86, cortexM4.
+  * **CPUTYPE** indica el tipo de CPU. Ej: none, ia32, ia64, lpc43xx.
+  * **CPU** indica la CPU para la que se desea compilar. Ej: none, lpc4337.
+  * **COMPILER** es el compilador a utilizar. Ej: gcc.
+  * **PROJECT_PATH** es el Path al proyecto a compilar. Ej: examples$(DS)blinking para compliar el ejemplo **blinking**
+
+<note tip>
+Sólo necesario setear la variable **BOARD**, y en función de ésta automáticamente se setean **ARCH**, **CPUTYPE**, **CPU**, y **COMPILER**, por lo que no es necesario hacerlo a mano y pueden comentarse estas definiciones mediante **#**.\\
+La variable **PROJECT_PATH** si utiliza cygwin debe definirse de manera similar a: \\
+**PROJECT_PATH ?= $(DS)cygdrive$(DS)c$(DS)Temp$(DS)Proyecto1**
+</note>
+
+Se utiliza la variable $(DS) para indicar el separador de directorios (de manera automática se usa '/' para linux y '\' para windows). 
+
+En el mismo Makefile están comentados los valores que pueden tomar cada uno de los parámetros.
+
+<note tip>La utilización de un **Makefile.mine** es opcional, también es posible setear las variables deseadas como **BOARD** y **PROJECT_PATH** como variables de entorno utilizando los comandos set (en windows) y export (en linux). De esta misma forma es como por ejemplo el IDE basado en eclipse informa al Makefile que board o proyecto debe ser compilad.</note>
+
+==== Makefile del proyecto ====
+###
+Cada proyecto tiene también su Makefile. El mismo se encuentra bajo el directorio **mak** en el directorio principal del proyecto o ejemplo. En el ejemplo **examples/blinking** el makefile del ejemplo se encuentra en **examples/blinking/mak** y se llama **Makefile**. Este archivo **solo necesita edición en la variable MODS**, todo el resto es automático si se mantiene la estructura de directorios usada en los ejemplos (src, inc, mak, etc).
+###
+
+Este makefile contiene las siguientes definiciones:
+  * **PROJECT_NAME** el nombre del proyecto, se define automático en base el directorio usado.
+  * **INC_FLES** los paths a indicar al compilador para buscar includes files.
+  * **SRC_FILES** archivos a compilar ya sean archivos c como c++.
+  * **OIL_FILES** configuración del sistema operativo (si es utilizado).
+
+###
+Lo más recomendable es comenzar compilando un ejemplo y luego empezar un proyecto basado en el ejemplo más similar.
+###
+
+=== Módulos ===
+###
+Cada proyecto incluye en su Makefile los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] a compilar en una variable llamada MODS, por ejemplo:
+###
+<code>
+MODS += modules$(DS)posix \
+        modules$(DS)ciaak \
+        modules$(DS)config \
+        modules$(DS)bsp \
+        modules$(DS)platforms
+</code>
+
+###
+Es recomendable utilizar $(DS) en vez de / o \ para mantener la compatibilidad entre sistemas operativos (Linux, Windows, MAC OS).
+###
+
+===== Module Make =====
+###
+Esta sección es para quienes quieran desarrollar o extender un módulo del CIAA-Firmware (participar en el desarrollo de la CIAA-Firmware) y no para los que únicamente utilizan el CIAA-Firmware.
+###
+
+Cada [[desarrollo:firmware:arq_estatica_fw#modulos|módulo]] incluye su directorio **mak** que incluye un Makefile file con las siguientes variables:
+
+<code>
+# library
+LIBS += template
+# version
+template_VERSION = 0.8.2
+# library path
+template_PATH = $(ROOT_DIR)$(DS)modules$(DS)template
+# library source path
+template_SRC_PATH = $(template_PATH)$(DS)src
+# library include path
+template_INC_PATH = $(template_PATH)$(DS)inc
+# library source files
+template_SRC_FILES = $(wildcard $(template_SRC_PATH)$(DS)*.c)
+</code>
+
+###
+Cada [[desarrollo:firmware:arq_estatica_fw#modulos|módulo]] se agrega como una librería, para agregar a la variable LIBS en nombre del módulo. A continuación se define la versión del módulo, el path al módulo, el path a los fuentes, el path a los include files y las source files que se desean compilar.
+###
+
+Las siguientes variables son obligatorias y deben ser completadas por todos los módulos:
+  * LIBS += modulename
+  * modulename_INC_PATH
+  * modulename_SRC_FILES
+
+<- docu:fw:bm:estructura|Estructura de directorios ^ ^ docu:fw:bm:examples|Ejemplos ->

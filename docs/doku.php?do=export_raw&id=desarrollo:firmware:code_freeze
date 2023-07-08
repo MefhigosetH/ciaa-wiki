@@ -1,0 +1,11 @@
+Se denomina Code-Freeze al momento a partir del cual no se realizan mas modificaciones en un Software para poder llevar a cabo una [[tline:releases_de_ciaa-firmware|Release]].
+
+En el [[desarrollo:firmware|CIAA-Firmware]] los Code-Freeze se realizan entre 21 y 10 días antes de cada release.
+
+Una vez realizado un Code-Freeze solo se acpetan cambios en el master (o branch para la release) si los mismos son fundametales para poder realizar la Release, por ejemplo:
+  * En el proceso de testeo se encuentra un error
+  * Temas de documentación relevantes a la release
+  * Copyrights y créditos pueden ser modificados
+  * Mejoras en los comentarios
+
+Otros cambios que afecten el código **NO SON ACEPTADOS** y llegado el caso podrán ser eliminados.

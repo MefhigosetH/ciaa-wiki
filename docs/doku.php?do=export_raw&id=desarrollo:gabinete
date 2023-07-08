@@ -1,0 +1,109 @@
+====== Gabinete ======
+
+
+
+===== Equipo Técnico a cargo =====
+
+^ Función                            ^ Nombre          ^ Organización                        ^
+| Responsable del diseño             | Manuel Saintotte      | [[http://www.grupoalaska.com.ar]]   |
+| Colaboración en diseño (versión FreeCAD)    | Alamon Diego Fernando | [[http://www.inti.gob.ar/microynanoelectronica|INTI-CMNB]]        |
+| Responsable de Primera Impresión 3D |                       | [[http://adox.com.ar]]              |
+| Responsable de Segunda Impresión 3D|  Karen Antorveza                | [[http://trimaker.com/]]            | 
+
+===== Programa de Necesidades =====
+
+==== Requerimientos Formales ====
+
+  * **GAB_001**: Ventana superior transparente.
+
+  * **GAB_002**: Cavidad lateral para borneras fijas y desmontables.
+
+  * **GAB_003**: Mantener compatibilidad con las dimensiones del [[http://www.chillemihnos.com.ar/espanol/catalogo/840t.htm|gabinete R840T]] de la empresa Chillemi S.A. 
+
+  * **GAB_004**: Morfologías que permitan moldes de inyección simples, sin movimientos.
+
+==== Fijaciones ====
+
+  * **GAB_005**: Fijación frontal de la carcaza para facilitar el acceso una vez instalada.
+
+  * **GAB_006**: Fijación de la base a Riel DIN estándar.
+
+  * **GAB_006**: Fijación secundaria de la base por tornillos para los casos especiales.
+
+
+===== Management =====
+
+  *[[versiones:v1_0:gabinete:Plan_Desarrollo_GB|Plan de desarrollo del gabinete]]: Definición de los siguientes ítems:
+    *Management del desarrollo: Cronograma general, WBS, equipo técnico a cargo, y mecanismos de monitoreo y control.
+    *Estrategia de desarrollo: Estándares, herramientas y técnicas utilizadas para el diseño e impresión del gabinete.
+
+
+===== Diseño ===== 
+
+El diseño del gabinete se encuentra accesible en la [[https://grabcad.com/library/gabinete-para-ciaa-1|biblioteca CIAA de grabcad.com]], en formato Freecad y Solidworks 2013 editables.
+
+{{:versiones:v1_0:gabinete_ciaa_004.jpg?300 |}}{{ :versiones:v1_0:gabinete_ciaa_010.jpg?300|}}
+
+
+[[https://grabcad.com/library/gabinete-para-ciaa-1]]
+
+En la biblioteca se pueden encontrar las versiones anteriores del gabinete.
+
+==== Version 7.0 en FreeCAD ====
+Esta versión del gabinete se diseñó con el software [[http://www.freecadweb.org|FreeCAD]], un CAD 3D open source.
+
+La versión de FreeCAD que se utilizó es la 0.15 (build 3955).
+
+Se migró la versión 6.0 del gabinete incorporándole algunas mejoras:
+  * Anclaje para instalar sobre un riel DIN.
+  * Solapa recortable para uno de los USB (la CIAA-NXP tiene tres USB y la CIAA-FSL tiene dos).
+  * Espacio para las etiquetas que identificarán la señal de cada borne.
+
+{{ :desarrollo:gabinete:gabinete_v7_freecad.jpg?300 |}}
+
+Nota: Originalmente se pensó en diseñar un gabinete compatible con la CIAA-NXP y la CIAA-FSL, pero debido a que quedaron en diferentes posiciones algunos conectores laterales, la versión 7.0 del gabinete sólo puede ser usada en la CIAA-FSL.
+
+===== Impresión 3D =====
+
+==== Prototipo V2.0 ====
+{{:versiones:v1_0:img_20140525_233702.jpg?300 |}}{{ :versiones:v1_0:img_20140525_233818.jpg?300|}}
+
+Impresora 3D: **T-element, [[http://trimaker.com]]**
+
+Tecnología: **FDM**
+
+Material: **ABS**
+
+
+{{:versiones:v1_0:img-20140516-wa0002.jpg?300|}}{{ :versiones:v1_0:img-20140517-wa0009.jpg?300|}}
+
+==== Prototipo V7.0 ====
+El primer prototipo de la versión 7.0 fue impreso en el laboratorio de Procesos Microelectrónicos del INTI-CMNB.
+
+Impresora: [[http://www.stratasys.com/es/impresoras-3d/idea-series/uprint-se|uPrint SE]]
+
+Material: **ABS**
+
+|{{:desarrollo:gabinete:impresion_7.0_perspectiva.jpg?170}} |{{:desarrollo:gabinete:impresion_7.0_frente.jpg?200}} |{{:desarrollo:gabinete:impresion_7.0_riel.jpg?205}}|
+
+===== Opción comercial =====
+
+Gabinete de Chillemi Hnos. [[http://www.chillemihnos.com.ar/espanol/catalogo/840t.htm|modelo R840T]]. 
+
+==== Especificaciones técnicas ====
+
+  * Gabinete plástico en Sistema Riel Din.
+
+  * Inyectado en material A.B.S.
+
+  * Temperatura máxima: 80°C.
+
+  * Dimensiones (mm): 90 x 140 x 60.
+
+===== Gabinete para la EDU-CIAA-NXP =====
+
+Agustín Bassi (jagustinbassi_at_gmail_dot_com) diseñó un gabinete para la EDU-CIAA-NXP v1.1. Pueden descargarse los archivos del diseño {{:desarrollo:gabinete:edu-ciaa-nxp-gabinete.zip|aquí}}.
+Imágenes del gabinete impreso en 3D:
+{{ :desarrollo:gabinete:img_20151102_174901.jpg?500 |}}
+{{ :desarrollo:gabinete:img_20151102_175019.jpg?500 |}}
+{{ :desarrollo:gabinete:img_20151102_174930.jpg?500 |}}

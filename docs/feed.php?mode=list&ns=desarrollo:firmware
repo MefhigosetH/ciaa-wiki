@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:firmware</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:02:13+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.3.0&amp;rev=1418508941&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.4.0&amp;rev=1429630869&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.5.0&amp;rev=1427403086&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_dinamica&amp;rev=1438269898&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_estatica_fw&amp;rev=1417116416&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bootloader&amp;rev=1417102616&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bug&amp;rev=1425211740&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:callback&amp;rev=1411405811&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:caracteristicas_fw&amp;rev=1417129736&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:charlas&amp;rev=1429560387&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:code_freeze&amp;rev=1427402546&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:codigo&amp;rev=1411415712&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:coverage&amp;rev=1411657913&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura_de_directorios&amp;rev=1417118529&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura&amp;rev=1426370961&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:examples_ide&amp;rev=1427604440&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:filesystem&amp;rev=1420517657&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:firmware_layers&amp;rev=1411405810&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests&amp;rev=1441767107&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:fw_coding_guidelines&amp;rev=1417130904&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:generador&amp;rev=1468983132&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:git&amp;rev=1451273209&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:hisio&amp;rev=1450955762&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:instalacion_sw&amp;rev=1469979685&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:install_unit_tests&amp;rev=1411657919&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:librtcs&amp;rev=1456614539&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:lts&amp;rev=1425199705&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:mapas&amp;rev=1467167069&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:openocd&amp;rev=1432042117&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:participar&amp;rev=1411570891&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:php&amp;rev=1468431404&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:plan_desarrollo_fw&amp;rev=1433028478&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:porting&amp;rev=1416842241&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:primer_compile&amp;rev=1428413859&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:procesamiento_video&amp;rev=1420601561&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:proceso&amp;rev=1443944346&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:pver_fw&amp;rev=1411405806&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:remote_update&amp;rev=1411405806&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:repositorio&amp;rev=1440957091&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos&amp;rev=1421022153&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:sts&amp;rev=1425198666&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:submodules&amp;rev=1419101252&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:tareas_abiertas&amp;rev=1411657927&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:ufuzzy&amp;rev=1470092041&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:uncrustify&amp;rev=1468269146&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:unit_tests&amp;rev=1429671199&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:user_manual&amp;rev=1552524029&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:v3&amp;rev=1501702422&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:vscode&amp;rev=1552525614&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.3.0&amp;rev=1418508941&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-12-13T22:15:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:0.3.0</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.3.0&amp;rev=1418508941&amp;do=diff</link>
+        <description>Testing &lt;https://github.com/ciaa/Firmware/commits/0.3.0_rc1&gt;
+ Testeado de  commit  win  mac os  linux  ciaa-nxp  edu-ciaa  comments  adc_dac    &lt;fc #ff0000&gt;FAILED (ErrorHook)&lt;/fc&gt;  &lt;fc #008000&gt;PASSED&lt;/fc&gt; &lt;fc #008000&gt;PASSED&lt;/fc&gt;   blinking   &lt;fc #008000&gt;PASSED&lt;/fc&gt;  &lt;fc #008000&gt;PASSED&lt;/fc&gt; &lt;fc #008000&gt;PASSED&lt;/fc&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.4.0&amp;rev=1429630869&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-21T15:41:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:0.4.0</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.4.0&amp;rev=1429630869&amp;do=diff</link>
+        <description>Testing Firmware v0.4.0
+
+Para cada test se indica:
+
+	*  &lt;fc #008000&gt;PASSED&lt;/fc&gt;
+	*  &lt;fc #ff0000&gt;FAILED&lt;/fc&gt;
+	*  &lt;fc #ADAB4E&gt;TEÓRICAMENTE OK&lt;/fc&gt;
+ Testeado de  commit  win  mac os  linux64  CIAA-NXP  EDU-CIAA-NXP  CIAA-FSL  comments  adc_dac     &lt;fc #008000&gt;PASSED&lt;/fc&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.5.0&amp;rev=1427403086&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-26T20:51:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:0.5.0</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:0.5.0&amp;rev=1427403086&amp;do=diff</link>
+        <description>Testing 0.4.0
+Indicar
+&lt;fc #008000&gt;PASSED&lt;/fc&gt;
+ó
+&lt;fc #ff0000&gt;FAILED&lt;/fc&gt;
+ Testeado de  commit  win  mac os  linux  ciaa-nxp  edu-ciaa-nxp  ciaa-fls  comments  adc_dac         blinking         blinking_echo         blinking_lwip         blinking_modbus</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_dinamica&amp;rev=1438269898&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-30T15:24:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:arq_dinamica</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_dinamica&amp;rev=1438269898&amp;do=diff</link>
+        <description>Arquitectura dinámica
+
+Esta página ejemplifica la estructura dinámica del ciaa Firmware. La estructura se basa en la arquitectura presentada en Arquitectura del Firmware.
+
+Inicialización
+
+La primera figura muestra como se inicia el código de la ciaaFirmware.
+
+
+
+Acceso a un dispositivo</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_estatica_fw&amp;rev=1417116416&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-27T19:26:56+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:arq_estatica_fw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:arq_estatica_fw&amp;rev=1417116416&amp;do=diff</link>
+        <description>Arquitectura estática del CIAA-Firmware
+
+Módulos
+El CIAA-Firmware está dividido en módulos. Un módulo es un conjunto de archivos .h/.c y Makefiles, que implementa una funcionalidad específica. Cada módulo contiene una relativa gran cantidad de llamadas dentro del mismo, pero mantiene acotadas las dependencias a otros módulos, y de ser posible no tiene dependencias de otros módulos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bootloader&amp;rev=1417102616&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-27T15:36:56+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:bootloader</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bootloader&amp;rev=1417102616&amp;do=diff</link>
+        <description>Bootloader
+
+Introducción
+
+¿Qué es el “bootloader”?
+El bootloader es un conjunto de utilidades que permite la actualización del firmware de la CIAA por parte de un cliente en un entorno de producción, sin necesidad de disponer de herramientas especiales como una interface de depuración y eventualmente sin tener acceso al código fuente del sistema.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bug&amp;rev=1425211740&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-01T12:09:00+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:bug</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:bug&amp;rev=1425211740&amp;do=diff</link>
+        <description>Bugfixes
+
+No siempre es fácil distinguir entre un bug y una nueva funcionalidad. Para que se realize una patch versión de una STS o LTS uno o más bugs deben ser aceptados como tales.
+
+	*  De haber una documentación respecto al problema, el mismo no puede ser aceptado como bug.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:callback&amp;rev=1411405811&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:10:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:callback</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:callback&amp;rev=1411405811&amp;do=diff</link>
+        <description>Callback
+
+Una callback es una función que es utilizada para notificar la ocurrencia de un evento. Para ver información de Callback en Wiki.
+
+En ciaaFirmware y sistemas embebidos es un mecanismo muy utilizado para informar sobre notificaciones en el momento en que eventos ocurren. Por ejemplo cuando datos son recibidos, enviados, un pin de entrada tiene un flanco, etc, etc.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:caracteristicas_fw&amp;rev=1417129736&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-27T23:08:56+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:caracteristicas_fw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:caracteristicas_fw&amp;rev=1417129736&amp;do=diff</link>
+        <description>Requerimientos del CIAA-Firmware
+En esta sección se presentan los requerimientos propuestos para cada versión de CIAA-Firmware. En todos los casos, los requerimientos se dividen en tres categorías:
+	*  Requerimientos Funcionales.
+	*  Requerimientos de la Arquitectura del Firmware.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:charlas&amp;rev=1429560387&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-20T20:06:27+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:charlas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:charlas&amp;rev=1429560387&amp;do=diff</link>
+        <description>FRBA
+
+	*  Lugar: Medrano 951 (FRBA)
+	*  Día: 11 de Mayo de 2015
+	*  Horario: 19 a 22
+	*  Título 3: Primeros pasos con la CIAA
+	*  Título 4: Desarrollo de aplicaciones industriales a partir del Proyecto CIAA
+	*  Título 5: Desarrollo de aplicaciones basadas en la CIAA</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:code_freeze&amp;rev=1427402546&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-26T20:42:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:code_freeze</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:code_freeze&amp;rev=1427402546&amp;do=diff</link>
+        <description>Se denomina Code-Freeze al momento a partir del cual no se realizan mas modificaciones en un Software para poder llevar a cabo una Release.
+
+En el CIAA-Firmware los Code-Freeze se realizan entre 21 y 10 días antes de cada release.
+
+Una vez realizado un Code-Freeze solo se acpetan cambios en el master (o branch para la release) si los mismos son fundametales para poder realizar la Release, por ejemplo:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:codigo&amp;rev=1411415712&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T19:55:12+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:codigo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:codigo&amp;rev=1411415712&amp;do=diff</link>
+        <description>Código Fuente
+
+El código fuente se mantiene en GIT. Si nunca utilizó GIT le dejamos un Mini Tutorial de GIT
+
+Repositorio: &lt;https://github.com/ciaa/Firmware&gt;
+
+Tutorial paso a paso de GIT para la CIAA
+
+Acá encontrará un tutorial paso a paso de GIT para la CIAA.
+
+Bugs/Issues/Tasks
+
+Issue Tracking Tool: &lt;https://github.com/ciaa/Firmware/issues&gt;
+
+Soporte y discusiones
+
+TODO: Tal vez un foro</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:coverage&amp;rev=1411657913&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:11:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:coverage</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:coverage&amp;rev=1411657913&amp;do=diff</link>
+        <description>Test Code Coverage
+El término se refiere a la cantidad del software que ha sido testeado. Los tools utilizados para medir el test coverage modifican el software de tal forma de verificar si una instrucción ha sido ejecutada o no.
+Tipos de Coverage:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura_de_directorios&amp;rev=1417118529&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-27T20:02:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:estructura_de_directorios</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura_de_directorios&amp;rev=1417118529&amp;do=diff</link>
+        <description>Estructura de directorios
+
+El CIAA-Firmware está construido de forma modular.
+En el directorio principal luego de hacer un git clone o al bajar una release oficial se pueden encontrar los siguientes Directorios y Archivos:
+[Estructura de Directorios de CIAA-Firmware.]
+
+ Directorio o
+Archivo  Descripción</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura&amp;rev=1426370961&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-14T22:09:21+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:estructura</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:estructura&amp;rev=1426370961&amp;do=diff</link>
+        <description>Creo esta página duplica el contenido de (Estructura de directorios :()
+
+El CIAA-Firmware contiene las siguiente estructura:
+
+
+.
+|-- doc                 &lt;- Documentación
+|-- examples            &lt;- [[desarrollo:firmware:estructura_de_directorios|Ejemplos]]
+|-- externals           &lt;- Código utilizado por el Firmware pero que no es parte y puede contener otras licencias.
+|-- Makefile            &lt;- [[:make_environment|Makefile]]
+|-- Makefile.config     &lt;- Configuración por defecto para el [[:make_en…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:examples_ide&amp;rev=1427604440&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-29T04:47:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:examples_ide</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:examples_ide&amp;rev=1427604440&amp;do=diff</link>
+        <description>Eclipse: crear un proyecto a partir de &#039;Firmware-Examples&#039;
+
+Variables Globales del IDE
+Para simplificar el trabajo con proyectos, deben agregarse las siguientes variables globales al Eclipse que permitirán tener los principales paths almacenados en dichas variables. Algunos paths ya se han agregado en la variable de entorno PATH, con lo cual este paso en alguna de estas variables podría ser innecesario pero clarifica la configuración. Esto se hace desde el menú &#039;Windows⇒Preferences&#039; tal como se …</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:filesystem&amp;rev=1420517657&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-06T04:14:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:filesystem</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:filesystem&amp;rev=1420517657&amp;do=diff</link>
+        <description>File System de la CIAA
+
+El File System (en español sistema de archivos) es en general una capa de abstracción por software con la cual podemos manipular datos, algunas veces dentro de una memoria periférica. Un File System (de ahora en más se abreviara como</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:firmware_layers&amp;rev=1411405810&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:10:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:firmware_layers</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:firmware_layers&amp;rev=1411405810&amp;do=diff</link>
+        <description>Firmware Layers
+
+El Firmware de la ciaa esta programado en 4 capas:
+
+	*  Aplicación: es la aplicación que corre sobre el Firmware. Por ejemplo para convertir la ciaa en un PLC se deben cargar las aplicaciones ciaaProgramming y ciaaLadder.
+	*  Service Layer</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests&amp;rev=1441767107&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-09T02:51:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:functional_tests</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests&amp;rev=1441767107&amp;do=diff</link>
+        <description>Functional Tests (o Pruebas Funcionales)
+A diferencia de los Unit Tests (o Pruebas Unitarias) los test Funcionales corren en el Hardware y son llevados a cabo desde una computadora (de ahora en mas testmaster) desde la que se estimula y se testea el ciaaFirmware corriendo en el HW. La finalidad de los Test Funcionales son validar la integración y los requerimientos del ciaaFirmware en su conjunto.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:fw_coding_guidelines&amp;rev=1417130904&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-27T23:28:24+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:fw_coding_guidelines</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:fw_coding_guidelines&amp;rev=1417130904&amp;do=diff</link>
+        <description>CIAA Firmware Coding Guidelines
+
+INFO: Estamos trabajando en mejorar y extender estas Guidelines.
+
+General
+
+En esta sección se define un estilo de codificación para lenguaje de programación C a través de un conjunto de normas y recomendaciones que deben ser utilizadas en toda la documentación del proyecto.
+El uso de una guía común asegura la correcta comprensión de todo el código, además de facilitar el mantenimiento.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:generador&amp;rev=1468983132&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-20T02:52:12+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:generador</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:generador&amp;rev=1468983132&amp;do=diff</link>
+        <description>Generador de archivo OIL
+
+Qué es OIL?  (Por si no está en otro lado)
+
+*) xxx
+El propósito del generador es producir archivos de encabezados .h y .c a partir de unos templates de C con php embebido que se ejectua según unos archivos configuración .oil y .oilx.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:git&amp;rev=1451273209&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-28T03:26:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:git</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:git&amp;rev=1451273209&amp;do=diff</link>
+        <description>Tutorial de GIT
+
+Quien quiera realmente aprender GIT le recomendamos leer el libro oficial: &lt;http://git-scm.com/book/en/v2&gt;
+
+Descarga con GIT Shell (consola desde Windows)
+
+Trabajar con GIT implica hacerlo de manera automatizada y facilitar el trabajo colaborativo en el repositorio. Es indispensable si se va a colaborar con el proyecto, y no sólo hacer uso de él. Para hacerlo, se va a proceder a realizar una copia local del repositorio (Clonar), para ello se va a trabajar en una carpeta en &#039;C:\C…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:hisio&amp;rev=1450955762&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-24T11:16:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:hisio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:hisio&amp;rev=1450955762&amp;do=diff</link>
+        <description>HISIO
+
+Módulo para el manejo de Dio, Pwm, Pwd, Adc, Wdt, Ccu. Eeprom y Flash también estan soportados pero no serán implementados en una primera versión.
+
+Introducción
+
+References
+
+API IO Driver
+API IO Library
+
+Configuración
+
+El estándar define un lenguaje de configuración llamado DIL (Driver Implementation Language). Sin embargo sería necesario un nuevo parser por lo que se propone extender el OIL para la configuración de drivers. Como por ejemplo:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:instalacion_sw&amp;rev=1469979685&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T15:41:25+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:instalacion_sw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:instalacion_sw&amp;rev=1469979685&amp;do=diff</link>
+        <description>Instalación del Firmware
+
+Una vez terminada la primera versión de Firmware esta página contendrá las instrucciones para instalar el Firmware y poder compilarlo.
+
+Entre tanto puede acceder al código fuente en GIT, vea la instrucciones en Código Fuente
+
+Windows</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:install_unit_tests&amp;rev=1411657919&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:11:59+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:install_unit_tests</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:install_unit_tests&amp;rev=1411657919&amp;do=diff</link>
+        <description>Instalación para hacer Unit Tests
+
+Windows
+
+Para poder hacer Unit Tests, deberá primero instalar cygwin. Luego proceder como sigue: 
+
+	*  Para realizar  Unit Tests o Pruebas Unitarias deberán incluirse en cygwin los paquetes: ruby, ruby-rake como se explica al instalar cygwin
+	*  Descargar desde  aquí Unity y descomprimirlo en una carpeta conocida</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:librtcs&amp;rev=1456614539&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-27T23:08:59+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:librtcs</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:librtcs&amp;rev=1456614539&amp;do=diff</link>
+        <description>Módulo de Control
+ Autor  Título del proyecto  Tutor  Inicio  Fin  Diego Ezequiel Vommaro  Modulo de control a lazo cerrado para la CIAA  Ing. Juan Manuel Cruz  Febrero 2015  Marzo 2015 El Módulo de Control consiste en una biblioteca de software que permite implementar Sistemas de Control en Tiempo Real en la CIAA. El Módulo pertenece al CIAA-Firmware y se lo denomina RTCS por la sigla en inglés Real Time Control System.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:lts&amp;rev=1425199705&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-01T08:48:25+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:lts</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:lts&amp;rev=1425199705&amp;do=diff</link>
+        <description>Long Term Support Release
+
+LTS o Long Term Support Releases son releases en las el equipo de Firmware se compromete a realizar bugfixes durante 18 meses.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:mapas&amp;rev=1467167069&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-29T02:24:29+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:mapas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:mapas&amp;rev=1467167069&amp;do=diff</link>
+        <description>Mapa orientativo para hallar la documentación
+
+Dependencias para comenzar
+
+	* Hardware
+		* cómo comprar
+
+	* Software
+		* Linux: obtener e instalar dependencias y configurar
+			* distros
+
+		* Windows: Cygwin
+		* Eclipse
+			*  Linux: obtener e instalar
+			*  Linux: plugins
+			* Windows: obtener e instalar
+			* Windows: plugins
+			* configurar
+
+
+	* Versionamiento
+		*  Linux: clonar repo 
+
+	* Compilación
+		*  Linux: obtener e instalar
+		*  Linux: preparar toolchain
+		*</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:openocd&amp;rev=1432042117&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-05-19T13:28:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:openocd</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:openocd&amp;rev=1432042117&amp;do=diff</link>
+        <description>OpenOCD
+
+OpenOCD (Open On Chip Debugger) es un tool que se puede utilizar para debuggear y ejecutar paso a paso un programa sobre el HW.
+
+La versión de OpenOCD testeada y funcional de la CIAA es la 0.9.0: OpenOCD 0.9.0
+
+Instalación
+
+Instalación de libusb en Ubuntu</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:participar&amp;rev=1411570891&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-24T15:01:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:participar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:participar&amp;rev=1411570891&amp;do=diff</link>
+        <description>Participar en el desarrollo de Firmware
+
+¡Bienvenido al equipo de desarrollo de Firmware! 
+
+Esta página es para aquellos que estén interesados en comenzar a participar en el Grupo de Firmware.
+
+Dónde empezar
+
+Bueno, lo mejor es ir leyendo la Wiki de Firmware y sus links.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:php&amp;rev=1468431404&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-13T17:36:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:php</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:php&amp;rev=1468431404&amp;do=diff</link>
+        <description>Tutorial php
+
+Este tutorial sirve para asistir a quienes estén manipulando templates para la generación de código a partir de archivos OIL. Generador de archivo OIL
+
+Mucha más información en &lt;http://php.net/manual/es/&gt;
+
+PHP es un lenguaje interpretado con sintaxis derivada de C. El código PHP se intercala en un archivo de texto delimitado por los tags &lt;?php y ?&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:plan_desarrollo_fw&amp;rev=1433028478&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-05-30T23:27:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:plan_desarrollo_fw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:plan_desarrollo_fw&amp;rev=1433028478&amp;do=diff</link>
+        <description>Plan de desarrollo del CIAA-Firmware
+
+Tipos de Releases
+
+El firmware de la CIAA realiza 3 releases anualmente en los meses de abril, agosto y diciembre. Existen dos tipos de releases denominados STS y LTS:
+
+	*  STS se realizarán bugfixes hasta el siguiente release ya sea éste</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:porting&amp;rev=1416842241&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-24T15:17:21+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:porting</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:porting&amp;rev=1416842241&amp;do=diff</link>
+        <description>Porting (Portabilidad)
+
+La portabilidad es el proceso de adaptación de software para que un programa pueda ser utilizado en diferentes entornos o plataformas de hardware.
+
+Para el caso particular de la CIAA, los ports son las arquitecturas destino sobre la cual corre el RTOS.
+Para cada port, es necesario escribir algunas rutinas de código que dependen sí o sí del hardware, como por ejemplo el cambio de contexto, los handlers de ISRs.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:primer_compile&amp;rev=1428413859&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-07T13:37:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:primer_compile</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:primer_compile&amp;rev=1428413859&amp;do=diff</link>
+        <description>Compilando por primera vez
+
+El CIAA Firmware utiliza GNU Make para compilar. Hay que perderle el miedo a la linea de comandos y al Make. :)
+
+Por supuesto antes de poder compilar deben haber instalado los tools necesarios:Instalación del Firmware
+
+Les recomendamos leer Make, y por ejemplo utilizar los siguientes comandos, cuando esté parado en el directorio raiz del firmware (donde esté el makefile principal del proyecto):</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:procesamiento_video&amp;rev=1420601561&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-07T03:32:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:procesamiento_video</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:procesamiento_video&amp;rev=1420601561&amp;do=diff</link>
+        <description>Reconocimiento de Video/Imágenes
+
+Casos de uso
+Los siguientes son propuestas de productos que usarían la CIAA para reconocimiento de video/imágenes. Las mismas fueron realizadas por integrantes del grupo ciaa-hardware@googlegroups.com
+----------
+
+Identificar distintos modelos de productos en la línea de producción.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:proceso&amp;rev=1443944346&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-04T07:39:06+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:proceso</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:proceso&amp;rev=1443944346&amp;do=diff</link>
+        <description>Change Management
+
+Hoy estamos utilizando la funcionalidad de Issues en Github para llevar un track de los cambios.
+
+Configuration Management
+
+Se lleva a cabo en GitHub: &lt;https://github.com/ciaa/Firmware&gt;. Una introducción a Git se puede encontrar en: git
+
+Realizando cambios en el repositorio
+
+Cuando realice cambios en el repo tenga en cuenta que alguien realizara un review de los cambios y cuanto más fácil sea ralizarlo antes serán aceptados los cambios por ello:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:pver_fw&amp;rev=1411405806&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:10:06+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:pver_fw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:pver_fw&amp;rev=1411405806&amp;do=diff</link>
+        <description>Verificación y validación
+
+Como verificar y validar el Firmware esta siendo discutido en:
+
+&lt;https://github.com/ciaa/Firmware/issues/6&gt;
+
+Continuous Integration
+
+También se esta charlando la posibilidad de crear un Continuous Integration o Nightly Build:
+
+&lt;https://github.com/ciaa/Firmware/issues/11&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:remote_update&amp;rev=1411405806&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:10:06+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:remote_update</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:remote_update&amp;rev=1411405806&amp;do=diff</link>
+        <description>Actualización remota del Firmware
+
+:!: Esta es una funcionalidad planeada para la CIAA-Firmware 2.0.0 (apróx. 08.2015).
+
+Para implementar esta funcionalidad se necesitan dos aplicaciones cargadas en el Firmware, la aplicación principal del usuario y el Bootloader en sí.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:repositorio&amp;rev=1440957091&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-30T17:51:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:repositorio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:repositorio&amp;rev=1440957091&amp;do=diff</link>
+        <description>Primeros Pasos con Gerrit
+
+Introducción
+Este documento pretende ser una breve guía para comenzar a utilizar Git y Gerrit.
+Git es una herramienta que tiene por objetivo el control de versiones del código fuente. La misma permite ir guardando cada versión del código de forma tal de poder volver atrás en el código y determinar exactamente los cambios entre una versión y otra. Esta herramienta permite ademas que varios programadores trabajen simultáneamente
+en distintas partes del código, permitiend…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos&amp;rev=1421022153&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-12T00:22:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:rtos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos&amp;rev=1421022153&amp;do=diff</link>
+        <description>RTOS
+
+Es un sistema operativo de tiempo real (Real Time Operating System). 
+
+OSEK-OS
+CIAA-Firmware utiliza OSEK-OS, que es un estándar de RTOS internacional creado por la industria automotriz y de libre licencia.
+¿Por qué CIAA-Firmware utiliza OSEK-OS?
+OSEK-</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:sts&amp;rev=1425198666&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-01T08:31:06+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:sts</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:sts&amp;rev=1425198666&amp;do=diff</link>
+        <description>Short Term Support Release
+
+STS o Short Term Support Releases son releases en las el equipo de Firmware se compromete a realizar bugfixes hasta que se realize la siguiente release, en lo general un periodo de 4 meses.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:submodules&amp;rev=1419101252&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-12-20T18:47:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:submodules</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:submodules&amp;rev=1419101252&amp;do=diff</link>
+        <description>Esta página esta en construcción
+ Crear un nuevo submodulo en base a un directorio ###
+
+git filter-branch -f --subdirectory-filter &lt;directory&gt; HEAD -- --all 
+git remote add &lt;name&gt; &lt;http://...&gt;
+git push &lt;name&gt; master
+git reset --hard origin/master</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:tareas_abiertas&amp;rev=1411657927&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:12:07+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:tareas_abiertas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:tareas_abiertas&amp;rev=1411657927&amp;do=diff</link>
+        <description>Tareas abiertas
+
+Esta página resume algunas tareas que son necesarias llevar a cabo, si alguna de ellas es de su interes contacte al grupo de CIAA Firmware.
+
+Code coverage
+
+En los test es importante saber que cantidad del código ha sido testeado y que lineas del código no fueron ejecutadas nunca en los tests. Más información en Wikipedia:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:ufuzzy&amp;rev=1470092041&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-01T22:54:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:ufuzzy</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:ufuzzy&amp;rev=1470092041&amp;do=diff</link>
+        <description>µFuzzy
+
+Introducción
+
+µFuzzy es módulo de lógica difusa pensado para embebidos de bajo costo, independientemente de su arquitectura. Permite implementar sistemas de control a partir de una serie de reglas en lenguaje natural que describan el comportamiento deseado. A pesar de que en la actualidad existen otras librerías de lógica difusa, esta fue especialmente diseñada pensando en las limitaciones de los sistemas embebidos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:uncrustify&amp;rev=1468269146&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-11T20:32:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:uncrustify</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:uncrustify&amp;rev=1468269146&amp;do=diff</link>
+        <description>Uncrustify
+
+Uncrustify es una herramienta que sirve para chequear el formato del código y que ha sido considerada para aplicar la guía de estilo
+
+Dado que no se ha usado, se ha retirado del master, pero se puede recuperar de &lt;https://github.com/ciaa/Firmware/tree/release/1.0.x/modules/tools/Uncrustify&gt;
+
+ Mas información sobre Uncrustify.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:unit_tests&amp;rev=1429671199&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-22T02:53:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:unit_tests</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:unit_tests&amp;rev=1429671199&amp;do=diff</link>
+        <description>Unit Tests o Pruebas Unitarias
+
+Esta página explica la estrategia de prueba (testing) de Unit Testing del firmware de la CIAA.
+
+La finalidad de los Unit Tests es que el programador pueda verificar de forma sencilla las funciones que acaba de programar. Hasta se puede hacer la práctica interesante de primero escribir los Unit Tests y luego la funcionalidad.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:user_manual&amp;rev=1552524029&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-14T00:40:29+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:user_manual</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:user_manual&amp;rev=1552524029&amp;do=diff</link>
+        <description>Manual del Usuario de CIAA Firmware
+
+Esta página hace de Manual del Usuario del CIAA Firmware. Es para aquellos desarrolladores que quieran utilizar CIAA Firmware para sus proyectos.
+
+Se sugiere también suscribirse a la lista de correos ciaa-firmware@googlegroups.com dónde podrá conocer las novedades sobre el desarrollo y hacer consultas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:v3&amp;rev=1501702422&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-02T19:33:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:v3</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:v3&amp;rev=1501702422&amp;do=diff</link>
+        <description>Discusión sobre un nuevo Firmware
+
+	*  Eliminar posix (supongo esto esta claro)
+	*  programación en c/c++ (supongo esto esta claro)
+	*  Tener una interface para los drivers low level similar a sAPI o sAPI
+	*  Ofrecer soporte para FreeRTOS/FreeOSEK, los dos, ninguno, un nuevo rtos? abstraer mediante sAPI el sistema operativo como cambio de tareas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:vscode&amp;rev=1552525614&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-03-14T01:06:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:vscode</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:vscode&amp;rev=1552525614&amp;do=diff</link>
+        <description>Visual Studio Code
+
+Es posible compilar y depurar los proyectos de CIAA Firmware utilizando el editor gratuito multiplataforma Visual Studio Code. Para ello es necesario descargar un plugin para depuración nativa con GDB. El mismo se puede descargar siguiendo este</description>
+    </item>
+</rdf:RDF>

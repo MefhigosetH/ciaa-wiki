@@ -1,0 +1,60 @@
+
+===== Hardware de la CIAA =====
+
+Como cualquier otra computadora, la plataforma CIAA consta de una plaqueta electrónica y componentes físicos a los cuales llamamos “hardware”. Dependiendo del uso se diseñan y construyen distintos modelos de hardware de la CIAA, que son los que se muestran a continuación:
+
+{{page>repo:descripcion:ciaa_nxp&nofooter}}
+
+[[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|Visitar página principal]]. **[[proyecto:comprar|Comprar]]**.
+
+----
+
+{{page>repo:descripcion:edu_ciaa_nxp&nofooter}}[[desarrollo:edu-ciaa:edu-ciaa-nxp|Visitar página principal]]. **[[proyecto:comprar|Comprar]]**.
+
+----
+{{page>repo:descripcion:picociaa&nofooter}}[[desarrollo:hardware:picoCIAA|Visitar página principal]]. **[[proyecto:comprar|Comprar]]**. 
+
+----
+
+{{page>repo:descripcion:ciaa_fsl&nofooter}}
+[[desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio |Visitar página principal]].**[[proyecto:comprar|Comprar]]**. 
+
+----
+===== Versiones de la CIAA en desarrollo =====
+
+Existen tambien otros modelos y accesorios para usos más específicos en diversos estadíos de construcción:
+
+
+{{page>repo:descripcion:edu_ciaa_fsl&nofooter}}
+[[desarrollo:edu-ciaa:edu-ciaa-fsl |Visitar página principal]]
+-----
+{{page>repo:descripcion:ciaa_acc&nofooter}}
+[[ desarrollo:ciaa_acc:ciaa_acc_inicio |Visitar página principal]]
+----
+{{page>repo:descripcion:ciaa_nucleo_fsl&nofooter}}
+[[desarrollo:ciaa_nucleo_fsl|Visitar página principal]].
+-----
+{{page>repo:descripcion:ciaa_safety&nofooter}}
+[[.:ciaa_safety:start|Visitar página principal]]
+----
+{{page>repo:descripcion:ciaa_intel&nofooter}}
+[[desarrollo:edu-ciaa:edu-ciaa-intel |Versión educativa]] [[desarrollo:hardware:ciaa_intel:ciaa_intel_inicio |Versión industrial]]
+----
+{{page>repo:descripcion:edu_ciaa_xilinx&nofooter}}
+[[desarrollo:edu-ciaa:edu_ciaa_xilinx|Visitar página principal]]
+
+----
+{{page>repo:descripcion:ponchos&nofooter}}
+
+
+----
+===== ¿Cómo empezar? =====
+
+Si quiere visualizar o editar el diseño de los circuitos impresos y los diagramas esquemáticos de las placas entonces instale en su computadora la herramienta abierta multiplataforma [[http://www.kicad-pcb.org|Kicad]] que es la que se utiliza para diseñar las distintas placas de la familia CIAA.
+
+
+
+{{:imagenes:github_hardware_download.png?200 |}} Luego acceda al repositorio en [[https://github.com/ciaa/Hardware|Github]], seleccione "Clone or Download" y "Download ZIP", descomprima y tendrá una copia local.
+
+
+Finalmente, si quiere colaborar y participar con el diseño de hardware del Proyecto CIAA, [[:repo:uso:git_clone#hardware|clone el repositorio]] y subscríbase al [[https://groups.google.com/forum/#!forum/ciaa-hardware| foro de discusión pública y abierta de Hardware ]], donde se proponen, discuten y arman grupos de trabajo para el diseño de los nuevos modelos.

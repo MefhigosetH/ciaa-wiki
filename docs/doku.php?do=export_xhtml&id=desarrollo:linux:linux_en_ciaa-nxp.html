@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:linux:linux_en_ciaa-nxp</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,linux,linux_en_ciaa-nxp"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:linux:linux_en_ciaa-nxp&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:linux"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:linux:linux_en_ciaa-nxp"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:linux:linux_en_ciaa-nxp.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:linux';var JSINFO = {"id":"desarrollo:linux:linux_en_ciaa-nxp","namespace":"desarrollo:linux","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#linux_corriendo_en_ciaa-nxp">Linux corriendo en CIAA-NXP</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#como_cargar_linux_en_la_ciaa-nxp">Cómo cargar Linux en la CIAA-NXP</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#algunos_detalles_tecnicos_de_linux_corriendo_en_la_ciaa-nxp">Algunos detalles técnicos de Linux corriendo en la CIAA-NXP</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#roadmap">Roadmap</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#perifericos_soportados_en_upstream">Periféricos soportados en upstream</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:linux_en_ciaa-nxp.html#enlaces_de_interes">Enlaces de interés</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="linux_corriendo_en_ciaa-nxp">Linux corriendo en CIAA-NXP</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux corriendo en CIAA-NXP&quot;,&quot;hid&quot;:&quot;linux_corriendo_en_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-44&quot;} -->
+<h2 class="sectionedit2" id="como_cargar_linux_en_la_ciaa-nxp">Cómo cargar Linux en la CIAA-NXP</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;C\u00f3mo cargar Linux en la CIAA-NXP&quot;,&quot;hid&quot;:&quot;como_cargar_linux_en_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;45-91&quot;} -->
+<h3 class="sectionedit3" id="prerequisitos">Prerequisitos</h3>
+<div class="level3">
+
+<p>
+<a href="http://buildroot.org/downloads/manual/manual.html#requirement" class="urlextern" target="_blank" title="http://buildroot.org/downloads/manual/manual.html#requirement" rel="ugc nofollow noopener">Builroot requiere</a> tener instalados los siguientes tools:
+</p>
+<pre class="code">which
+sed
+make (version 3.81 or any later)
+binutils
+build-essential (only for Debian based systems)
+gcc (version 2.95 or any later)
+g++ (version 2.95 or any later)
+bash
+patch
+gzip
+bzip2
+perl (version 5.8.7 or any later)
+tar
+cpio
+python (version 2.6 or 2.7)
+unzip
+rsync
+wget
+ncurses-dev
+git
+bc</pre>
+
+<p>
+En debian/​ubuntu(14.04) ejecutar:
+</p>
+<pre class="code">sudo apt-get install sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio python unzip rsync wget libncurses5-dev git bc</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Prerequisitos&quot;,&quot;hid&quot;:&quot;prerequisitos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;92-765&quot;} -->
+<h3 class="sectionedit4" id="componentes">Componentes</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> U-Boot Emcraft-based 2010.03</div>
+</li>
+<li class="level1"><div class="li"> Linux Kernel v3.18-rc4 + port para LPC18xx/LPC43xx</div>
+</li>
+<li class="level1"><div class="li"> Buildroot 2014.11-git + config para CIAA LPC4337</div>
+</li>
+<li class="level1"><div class="li"> Busybox altamente customizado</div>
+</li>
+<li class="level1"><div class="li"> i2c-tools</div>
+</li>
+<li class="level1"><div class="li"> memtester</div>
+</li>
+<li class="level1"><div class="li"> mii-diag</div>
+</li>
+<li class="level1"><div class="li"> strace</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Componentes&quot;,&quot;hid&quot;:&quot;componentes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;766-1015&quot;} -->
+<h3 class="sectionedit5" id="pasos_a_seguir">Pasos a seguir</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="clonar_el_buildroot">1. Clonar el Buildroot</h4>
+<div class="level4">
+<pre class="code">$ git clone https://github.com/ciaa/buildroot.git
+$ cd buildroot/</pre>
+
+</div>
+
+<h4 id="configurar_buildroot">2. Configurar Buildroot</h4>
+<div class="level4">
+<pre class="code">$ pwd
+/home/user/buildroot
+
+$ make ciaa_lpc4337_defconfig</pre>
+
+</div>
+
+<h4 id="compilar">3. Compilar</h4>
+<div class="level4">
+<pre class="code">$ make</pre>
+
+<p>
+(prepararse unos mates mientras termina)
+</p>
+
+</div>
+
+<h4 id="grabar_la_ciaa">4. Grabar la CIAA</h4>
+<div class="level4">
+
+<p>
+Buildroot produce varias imágenes:
+</p>
+<pre class="code">$ ls output/images/
+lpc4337-ciaa.dtb  rootfs.cpio  u-boot.bin  uImage</pre>
+<p class="divalign-justify">Solamente necesitamos u-boot.bin y uImage. El u-boot.bin se debe grabar en la flash interna (0x1a000000) y el uImage en SPIFI (0x14000000). Esto no es tan simple, debido a que la configuración de openocd actual no soporta el acceso a SPIFI (falta verificar).</p><!--divalign-->
+<p class="divalign-justify">De todos modos, la grabación no es tan trillada. Se puede proceder de la siguiente forma. Se usa openocd y gdb con la configuración CIAA para acceder a la flash interna en 0x1a000000 y grabar u-boot.bin. Los comandos de gdb serían más o menos:</p><!--divalign-->
+<pre class="code">target remote :3333
+monitor halt
+monitor flash erase_sector 0 0 last
+monitor flash write_image erase unlock /home/user/buildroot/output/images/u-boot.bin 0x1A000000 bin</pre>
+<p class="divalign-justify">Una vez hecho esto se puede bootear la CIAA, y usar minicom/microcom para levantar la consola USART2 (la que viene con el USB) a 115200-8-N-1.</p><!--divalign-->
+<p class="divalign-justify">Una vez en la consola U-Boot, grabar la imagen Linux (uImage) es muy simple, usando un comando “run update”:</p><!--divalign-->
+<pre class="code">ciaa &gt; run update
+Auto-negotiation...completed.
+LPC18XX_MAC: link UP (100/Full)
+Using LPC18XX_MAC device
+TFTP from server 192.168.0.45; our IP address is 192.168.0.103
+Filename &#039;uImage-ciaa-nxp&#039;.
+Load address: 0x28000000
+Loading: T #################################################################
+       ###################
+done
+Bytes transferred = 1227114 (12b96a hex)</pre>
+<p class="divalign-justify">Cómo se puede ver, el comando transfiere de un servidor TFTP el archivo &#039;uImage-ciaa-nxp&#039;. Lo único que tenemos que hacer es configurar la dirección IP del servidor TFTP (192.168.0.45 por default) y copiar el archivo uImage al servidor:</p><!--divalign-->
+<pre class="code">$ cp output/images/uImage /srv/tftp/uImage-ciaa-nxp</pre>
+
+<p>
+Se encontrará una guía detallada paso por paso <a href="lib/exe/fetch.php%3Fmedia=desarrollo:linux:guia_instalacion_linux.pdf" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:linux:guia_instalacion_linux.pdf" rel="ugc nofollow noopener">aquí</a>
+</p>
+
+</div>
+
+<h4 id="faq">5. FAQ</h4>
+<div class="level4">
+
+<p>
+?? Q: ¿Cómo se instala un servidor TFTP? ??
+A: ¡Es muy fácil! Sólo tienes que… <a href="http://bit.ly/1pZ5rzo" class="urlextern" target="_blank" title="http://bit.ly/1pZ5rzo" rel="ugc nofollow noopener">http://bit.ly/1pZ5rzo</a>. Usuarios de Debian/​Ubuntu pueden ver <a href="http://askubuntu.com/q/201505" class="urlextern" target="_blank" title="http://askubuntu.com/q/201505" rel="ugc nofollow noopener">este tutorial</a>. Recordar que si conectan la CIAA-NXP directo a la PC donde funcionará el servidor TFTP, deberán configurar la conexión Ethernet con IP fija 192.168.0.45. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Pasos a seguir&quot;,&quot;hid&quot;:&quot;pasos_a_seguir&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1016-3664&quot;} -->
+<h2 class="sectionedit6" id="algunos_detalles_tecnicos_de_linux_corriendo_en_la_ciaa-nxp">Algunos detalles técnicos de Linux corriendo en la CIAA-NXP</h2>
+<div class="level2">
+<pre class="code"># dmesg
+Booting Linux on physical CPU 0x0
+Linux version 3.18.0-rc4 (zeta@arch) (gcc version 4.8.2 (OSELAS.Toolchain-2013.12.2) ) #2 Thu Dec 4 17:39:12 ART 2014
+CPU: ARMv7-M [410fc241] revision 1 (ARMv7M), cr=00000000
+CPU: unknown data cache, unknown instruction cache
+Machine model: CIAA NXP LPC4337
+bootconsole [earlycon0] enabled
+On node 0 totalpages: 2048
+free_area_init_node: node 0, pgdat 281a0efc, node_mem_map 287f0000
+  Normal zone: 16 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 2048 pages, LIFO batch:0
+pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+pcpu-alloc: [0] 0 
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 2032
+Kernel command line: console=ttyS0,115200 earlyprintk ip=192.168.0.103:192.168.0.45:::ciaa-nxp:eth0:off ethaddr=C0:B1:3C:88:78:93
+PID hash table entries: 32 (order: -5, 128 bytes)
+Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Memory: 6328K/8192K available (931K kernel code, 77K rwdata, 152K rodata, 476K init, 74K bss, 1864K reserved)
+Virtual kernel memory layout:
+    vector  : 0x00000000 - 0x00001000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+    vmalloc : 0x00000000 - 0xffffffff   (4095 MB)
+    lowmem  : 0x28000000 - 0x28800000   (   8 MB)
+      .text : 0x28008000 - 0x28116cf8   (1084 kB)
+      .init : 0x28117000 - 0x2818e000   ( 476 kB)
+      .data : 0x2818e000 - 0x281a1520   (  78 kB)
+       .bss : 0x281a1520 - 0x281b3fed   (  75 kB)
+NR_IRQS:16 nr_irqs:16 16
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836480000000ns
+Calibrating delay loop... 15.87 BogoMIPS (lpj=79360)
+pid_max: default: 4096 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+devtmpfs: initialized
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti &lt;giometti@linux.it&gt;
+PTP clock support registered
+Switched to clocksource lpc3250 timer
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+console [ttyS0] disabled
+of_serial 400c1000.serial: ttyS0 at MMIO 0x400c1000 (irq = 19, base_baud = 9000000) is a 16550A
+console [ttyS0] enabled
+bootconsole [earlycon0] disabled
+of_serial 400c2000.serial: ttyS1 at MMIO 0x400c2000 (irq = 20, base_baud = 9000000) is a 16550A
+stmmaceth 40010000.ethernet: no reset control found
+stmmac - user ID: 0x11, Synopsys ID: 0x36
+ Ring mode enabled
+ DMA HW capability register supported
+ Enhanced/Alternate descriptors
+	Enabled extended descriptors
+ RX Checksum Offload Engine supported (type 2)
+ TX Checksum insertion supported
+ Wake-Up On Lan supported
+ Enable RX Mitigation via HW Watchdog Timer
+libphy: stmmac: probed
+eth0: PHY ID 0007c0f1 at 1 IRQ POLL (stmmac-0:01) active
+i2c /dev entries driver
+TCP: cubic registered
+Freeing unused kernel memory: 476K (28117000 - 2818e000)</pre>
+<pre class="code">/ # free
+             total         used         free       shared      buffers
+Mem:          6804         2800         4004            0            0
+-/+ buffers:               2800         4004</pre>
+<pre class="code">/ # memtester 800K 1
+memtester version 4.3.0 (32-bit)
+Copyright (C) 2001-2012 Charles Cazabon.
+Licensed under the GNU General Public License version 2 (only).
+
+pagesize is 4096
+pagesizemask is 0xfffff000
+want 0MB (819200 bytes)
+got  0MB (819200 bytes), trying mlock ...locked.
+  Loop 1/1:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+  8-bit Writes        : ok
+  16-bit Writes       : ok
+
+Done.</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Algunos detalles t\u00e9cnicos de Linux corriendo en la CIAA-NXP&quot;,&quot;hid&quot;:&quot;algunos_detalles_tecnicos_de_linux_corriendo_en_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3665-8361&quot;} -->
+<h2 class="sectionedit7" id="roadmap">Roadmap</h2>
+<div class="level2">
+
+<p>
+Si bien la CIAA NXP ya bootea y funciona de manera relativamente estable, existen varios interrogantes y tareas que están pendientes. Sin ningún orden particular:
+</p>
+<ul>
+<li class="level1"><div class="li"> <del>Migrar a un kernel XIP</del>  Listo.</div>
+</li>
+<li class="level1"><div class="li"> <del>Migrar a un rootfs XIP</del>  Ezequiel hizo algunos avances usando ROMFS. No es realmente XIP, pero permite reducir el uso de RAM notablemente.</div>
+</li>
+<li class="level1"><div class="li"> <del>Habilitar y probar las entradas y salidas GPIOs</del>  Completado.</div>
+</li>
+<li class="level1"><div class="li"> <del>Habilitar y probar I2C Completado</del>  Ernesto pudo leer de la EEPROM.</div>
+</li>
+<li class="level1"><div class="li"> <del>Habilitar y probar SPI</del>  Completado. Funciona usando mainline.</div>
+</li>
+<li class="level1"><div class="li"> Habilitar y probar USB (Faltaría configurar el árbol del USB0PLL)</div>
+</li>
+<li class="level1"><div class="li"> Habilitar y probar RTC</div>
+</li>
+<li class="level1"><div class="li"> <del>Implementar driver para watchdog</del> Completado.</div>
+</li>
+<li class="level1"><div class="li"> <del>Implementar un driver PWM usando el SCT</del> Completado.</div>
+</li>
+<li class="level1"><div class="li"> Implementar drivers IIO para ADC/DAC</div>
+</li>
+<li class="level1"><div class="li"> Usar el timer systick implementado en mainline</div>
+</li>
+<li class="level1"><div class="li"> <del>Configurar y probar httpd y telnetd</del> El driver stmmac en mainline no funciona para LPC43xx. Ezequiel porteó el driver stm32 de Emcraft para el IP core MAC, el cual funciona bien y pudo probar httpd.</div>
+</li>
+<li class="level1"><div class="li"> Investigar la posibilidad de usar la SRAM para liberar SDRAM [3].</div>
+</li>
+<li class="level1"><div class="li"> Si la memoria RAM escasea, es posible hacer un análisis detallado del footprint dinámico (usando ftrace) y estático (usando readelf). Esto puede ser interesante para identificar grandes sumideros de memoria y tratar de reducirlos [4].</div>
+</li>
+<li class="level1"><div class="li"> Investigar la utilización del MPU</div>
+</li>
+<li class="level1"><div class="li"> Investigar la utilización del companion CPU cortex-M0, para realizar multiprocesamiento asimétrico. Work-in-progress por Ariel D&#039;alessandro. <a href="./doku.php%3Fid=desarrollo:linux:multiprocesamiento_asimetrico.html" class="wikilink1" title="desarrollo:linux:multiprocesamiento_asimetrico" data-wiki-id="desarrollo:linux:multiprocesamiento_asimetrico">Más información</a>.</div>
+</li>
+<li class="level1"><div class="li"><del> Investigar por qué es necesario mantener el clock USB0 encendido</del>  Posiblemente no interese una vez que los clks USB estén inicializados.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Roadmap&quot;,&quot;hid&quot;:&quot;roadmap&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;8362-10222&quot;} -->
+<h2 class="sectionedit8" id="perifericos_soportados_en_upstream">Periféricos soportados en upstream</h2>
+<div class="level2">
+
+<p>
+En <a href="https://github.com/manabian/linux-lpc/wiki/Status" class="urlextern" target="_blank" title="https://github.com/manabian/linux-lpc/wiki/Status" rel="ugc nofollow noopener">esta wiki</a> se puede consultar una tabla del estado
+de cada periférico respecto de su soporte en el kernel oficial o <em>upstream</em>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Perif\u00e9ricos soportados en upstream&quot;,&quot;hid&quot;:&quot;perifericos_soportados_en_upstream&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;10223-10459&quot;} -->
+<h2 class="sectionedit9" id="enlaces_de_interes">Enlaces de interés</h2>
+<div class="level2">
+
+<p>
+[1] <a href="http://electronicdesign.com/embedded/practical-advice-running-uclinux-cortex-m3m4" class="urlextern" target="_blank" title="http://electronicdesign.com/embedded/practical-advice-running-uclinux-cortex-m3m4" rel="ugc nofollow noopener">Practical Advice on Running uClinux on Cortex-M3/M4</a>
+</p>
+
+<p>
+[2] <a href="http://www.flashmemorysummit.com/English/Collaterals/Proceedings/2011/20110809_S108_Cosaro.pdf" class="urlextern" target="_blank" title="http://www.flashmemorysummit.com/English/Collaterals/Proceedings/2011/20110809_S108_Cosaro.pdf" rel="ugc nofollow noopener">Quad SPI Flash: Benefits and Uses in General Purpose Microcontrollers</a>
+</p>
+
+<p>
+[3] <a href="http://blackfin.uclinux.org/doku.php?id=linux-kernel:drivers:example_on-chip_sram" class="urlextern" target="_blank" title="http://blackfin.uclinux.org/doku.php?id=linux-kernel:drivers:example_on-chip_sram" rel="ugc nofollow noopener">Example Driver using On-Chip SRAM</a>
+</p>
+
+<p>
+[4] Para más información acerca del análisis y la reducción del footprint de memoria, se puede consultar el proyecto <a href="http://elinux.org/Kernel_dynamic_memory_allocation_tracking_and_reduction" class="urlextern" target="_blank" title="http://elinux.org/Kernel_dynamic_memory_allocation_tracking_and_reduction" rel="ugc nofollow noopener">Kernel dynamic memory allocation tracking and reduction</a>, <a href="https://events.linuxfoundation.org/images/stories/slides/elc2013_garcia.pdf" class="urlextern" target="_blank" title="https://events.linuxfoundation.org/images/stories/slides/elc2013_garcia.pdf" rel="ugc nofollow noopener">slides</a>.
+</p>
+
+<p>
+[5] <a href="http://www.lpcware.com/content/project/lpc43xx-dual-core-notes" class="urlextern" target="_blank" title="http://www.lpcware.com/content/project/lpc43xx-dual-core-notes" rel="ugc nofollow noopener">LPC43xx dual core notes</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enlaces de inter\u00e9s&quot;,&quot;hid&quot;:&quot;enlaces_de_interes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;10460-&quot;} --></div>
+</body>
+</html>

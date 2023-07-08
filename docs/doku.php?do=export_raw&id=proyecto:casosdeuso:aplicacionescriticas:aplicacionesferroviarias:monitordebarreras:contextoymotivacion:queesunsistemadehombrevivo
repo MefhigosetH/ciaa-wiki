@@ -1,0 +1,43 @@
+====== Sistemas de alerta para la operación de material ferroviario rodante  ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Sistema de hombre muerto =====
+
+###
+El sistema de protección instalado en el material rodante ferroviario denominado “Sistema de Hombre Muerto” es un sistema de seguridad básico y primario que **actúa por la ausencia de una acción**, siendo esta última, la
+aplicación continua de presión mecánica sobre un pedal existente en la cabina del conductor, o sobre un pulsador solidario al control de aceleración, de acuerdo al tipo de vehículo que se trate. La liberación de esta válvula de pedal o interruptor, sugiere el desvanecimiento del conductor o ausencia de control humano en la conducción, provocando la aplicación inmediata (o con cierto retardo) del sistema de freno de emergencia. 
+###
+
+###
+Como es fácil de entender, **esta situación de pedal o pulsador permanentemente apretado, resulta ser de alta vulnerabilidad** a la hora de anular la función de protección ya que cualquier peso muerto o traba de algún tipo colocada expresamente y de manera indebida, reemplazaría la acción que debe aplicar el personal de a bordo quedando inhibido el sistema de protección.
+###
+
+###
+Algunos vehículos, presentan también la peligrosa posibilidad de anulación con marcha en deriva de su propio sistema original de protección. Esto se logra a través de maniobras inapropiadas efectuadas en la consola de mando cuando el vehículo todavía se halla en movimiento, hecho que los sistemas más modernos hoy pueden evitar. 
+###
+
+{{ :blanco.png?10 | }}
+
+===== Sistema de hombre vivo =====
+
+###
+Los sistemas más modernos, denominados “de Hombre Vivo”, **actúan por la presencia de acciones** que revelan de manera sistemática y continua, el control humano dentro de la cabina de conducción.
+###
+
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:hombre_vivo.jpg?nolink&400 |}}
+
+###
+Conceptualmente se **reemplaza una acción estática y fija por una acción dinámica de reinicio del sistema**, en general de orden cíclico y repetitivo. Esto se logra a través del diseño de una adecuada interfase Hombre-Máquina donde se ponen de manifiesto las acciones de interacción (alertas y permisos) dando una condición de marcha segura a medida que se repite cada ciclo.
+###
+
+###
+La actuación final del sistema se alcanza cuando este detecta en distintas etapas y en oportunidades sucesivas, la ausencia de intervención humana en la cabina de conducción. A partir de ello se desencadenan una serie de eventos (alertas sucesivas) que culminan con la penalización de freno obteniéndose la detención completa de material rodante involucrado.
+###
+
+{{ :blanco.png?10 | }}
+
+###
+**Volver a la página** dónde se presenta la [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion|justificación de la elección del proyecto del Monitor de Barreras]].
+###

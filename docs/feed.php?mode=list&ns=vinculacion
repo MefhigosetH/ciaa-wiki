@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> vinculacion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T14:59:31+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:contactos_locales&amp;rev=1465858487&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:empresas&amp;rev=1414519510&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:gobiernoyentidades&amp;rev=1442859442&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:medios&amp;rev=1473343077&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:sidebar&amp;rev=1485973245&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:contactos_locales&amp;rev=1465858487&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-13T22:54:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>vinculacion:contactos_locales</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:contactos_locales&amp;rev=1465858487&amp;do=diff</link>
+        <description>Contactos locales
+
+En esta página se publica la red federal de contactos locales vinculados al Proyecto CIAA, que surge como resultado de la estrecha colaboración que se ha establecido con la Red RUSE del CONFEDI.
+
+Las funciones de estos contactos son:
+
+	*  Colaborar en la difusión del proyecto CIAA.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:empresas&amp;rev=1414519510&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-10-28T18:05:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>vinculacion:empresas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:empresas&amp;rev=1414519510&amp;do=diff</link>
+        <description>Vinculación con empresas
+
+ 27 de octubre. Visita a una pyme en Villa Elisa, Colón, Entre Rios, para visitar la planta de    Key Automatizaciones.
+
+Key desarrolla y fabrica máquinas están para envasar y agrupar respectivamente, en forma automática, diversos tipos de paquetes de distintos productos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:gobiernoyentidades&amp;rev=1442859442&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-21T18:17:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>vinculacion:gobiernoyentidades</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:gobiernoyentidades&amp;rev=1442859442&amp;do=diff</link>
+        <description>Vinculación con Gobierno y Entidades
+
+19/09/2015 Prsentación en Wisit15 organizado por Proyecto Uqbar y la Universidad Nacional de Quilmes.
+Implementación de protocolo Firmata para la CIAA a cargo de Ian Olivieri
+
+18/09/2015: Presentación y avances del proyecto CIAA a cargo de Pablo Ridolfi y Taller sobre aplicaciones practicas de la CIAA a cargo de Gerardo Sager y Eric Pernia. En BIEL Light+Building 2015.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:medios&amp;rev=1473343077&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T13:57:57+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>vinculacion:medios</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:medios&amp;rev=1473343077&amp;do=diff</link>
+        <description>La CIAA en los medios
+
+Crean en Córdoba un paracaídas con piloto automático para usar en zonas de desastre 30/08/2016
+
+Instalaron una red de sensores inalámbricos para poder prevenir heladas 30/05/2016
+
+Entrevista a Gerardo Sager y Ariel Lutenberg en Argentina Investiga por Radio Universidad de La Plata 28/09/2015
+
+Dr. Ing. Ariel Lutenberg de la FIUBA realizó distintas charlas en la FIUNA 18/09/2015
+
+Se adjudicaron 18 proyectos para adoptar la Computadora Industrial Abierta Argentina (CIAA)
+ 17/…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:sidebar&amp;rev=1485973245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T18:20:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>vinculacion:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=vinculacion:sidebar&amp;rev=1485973245&amp;do=diff</link>
+        <description>Acerca de la CIAA
+
+ Inicio
+
+ Origen del proyecto
+
+ Propuesta innovadora
+
+ Coordinación del proyecto
+
+ Grupos de trabajo
+
+ Licencia BSD de la CIAA
+
+
+Vinculación y Prensa
+
+ Red de contactos locales (63)
+
+ Vídeos y Demostraciones
+
+ La CIAA en los Medios
+
+ Gobierno y Entidades
+
+ Visitas a Empresas
+
+ Premios y Reconocimientos
+
+ Agenda de Eventos
+
+
+Industria
+
+ La CIAA en la Industria:
+
+ Robusta y confiable
+
+ Empresas utilizando la CIAA
+
+ Versiones de la CIAA:
+
+ CIAA-Safety NEW 
+
+ CIAA-FSL
+
+ CIAA-INTEL…</description>
+    </item>
+</rdf:RDF>

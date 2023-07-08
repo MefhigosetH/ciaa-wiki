@@ -1,0 +1,44 @@
+====== Cursos y material de estudio ======
+
+###
+En torno a las distintas áreas del Proyecto CIAA se ofrecen cursos presenciales o a distancia para ayudar a la formación de los interesados, la mayoría de los cuales están contenidos dentro de la propuesta de los [[educacion:cursos:cursos_programacion_ciaa|Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)]]
+y cuyo contenido está disponible online.
+###
+
+###
+Además de estos links se pueden descargar distintos libros y material publicado sobre el Proyecto CIAA:
+
+  * [[http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:breve_introduccio_n_a_osek-vdx.pdf|Breve introducción a OSEK]], por Mariano Cerdeiro.
+  * [[http://proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:rtos:introduccion_a_osek-os.pdf|Libro "Introducción a OSEK-OS, el Sistema Operativo del CIAA-Firmware"]], por Mariano Cerdeiro.
+
+###
+
+/*
+  * [[educacion:cursos:cursos_programacion_ciaa|Introducción a la Programación de Microcontroladores]] 
+
+<note>Contenido: 1. Introducción a los Sistemas Embebidos. 2. Instalación del software. 3. Organización de un programa: variables y control de flujo. 4. Ejecución del programa y tiempo de reacción del usuario. 5. Periféricos típicos. 6. Necesidad de que el programa corra en la placa en lugar de en la PC: el Lenguaje C.
+7. Niveles de tensión de los pines, familias lógicas. Resistencia de Pull­-up y Pull-­Down. Ley de ohm. </note>
+
+  * [[educacion:cursos:cursos_programacion_ciaa|Programación de microcontroladores en lenguaje C (I)]]
+
+<note>Contenido: 1. Introducción a la Programación en C.  Uso de las herramientas de C de la CIAA.  2. Ciclo de compilación de un programa. 3. Tipos de datos, operadores y variables. 4. Control de flujo. 5. Funciones con parámetros pasados por copia. Concepto de definición de función e implementación de la función. 6. Entradas y salidas digitales. 7. Delay bloqueante. 8. Entradas y salidas analógicas. 9. Enumeración. Máquina de Estados Finitos. Antirrebotes (Debounce). 10. Concepto de interrupción. Interrupción periódica de Timer para temporizar el programa. Módulo Tick. 11. Delay no bloqueante, concepto de función reentrante. 12. Punteros a variables de tipos simples. Concepto de tipo de datos del puntero y aritmética de los mismos. 13. Funciones con parámetros pasados por referencia. 14. Arrays, estructuras, punteros a los mismos. 15. Funciones: pasaje de vectores y estructuras por referencia y utilización en su interior, operador “flechita” (->). 16. Puerto serie USART (Universal Synchronous/Asynchronous Receiver/Transmitter). </note>
+
+  * [[educacion:cursos:cursos_programacion_ciaa|Gestión de Proyectos e Ingeniería de Software]] 
+
+<note>Contenido: \\ //Gestión de Proyectos (2 clases)//: 1. Constitución del Proyecto. 2. Propósito y Objetivos. 3. Gestión del Alcance. 4. Requerimientos. 5. Planificación: Desglose en tareas (WBS), Activity On Node (AON) y Diagrama de Gantt. 6. Gestión de Calidad. 7. Gestión de Riesgos. 
+\\ //Ingeniería de Software (6 clases)//: 1. Introducción a la ingeniería de software. 2. Proceso de desarrollo de software y ciclos de vida. 3. Requerimientos de software y casos de uso de software. 4. Nociones Arquitectura y Diseño de software embebido. 5. Control de versiones. 6. Makefiles. 7. Doxigen. 8. Implementación de software orientado a test (TDD). 9. Aseguramiento de la calidad del software. 10. Certificaciones y ensayos. </note>
+
+  * [[educacion:cursos:cursos_programacion_ciaa|Programación de microcontroladores en lenguaje C (II)]] 
+
+<note>Contenido: 1. Bibliotecas compatibles con la estructura de la CIAA. Configuración de Eclipse y
+depuración de un programa en caliente. 2. I2C. 3. SPI. 4. Memoria SD. 5. USB Device. 6. USB ­ Host. 7. WiFi. 8. 802.15.4 y Zigbee (personal area network).</note>
+
+  * [[educacion:cursos:cursos_programacion_ciaa|Paquete Tecnológico de la Plataforma CIAA]] 
+
+<note>Contenido: 1. Diseño de circuitos impresos con KiCad, el software utilizado en el Proyecto CIAA. 2. Introducción a la Programación Orientada a Objetos (POO). 3. IDE4PLC para programación de la EDU­­CIAA­NXP en Ladder. 4. MicroPython en la EDU­­CIAA­NXP. 5. Java en la EDU­­CIAA­NXP.</note>
+
+  * [[educacion:cursos:curso_kicad|Diseño con KiCad de circuitos impresos de mediana complejidad y multicapa]] 
+
+<note>Contenido: 1. Presentación de KiCad. 2. Introducción a Git. 3. Ruteo en dos capas. 4. Modelos 3D. 5. Conceptos generales de stack-up. 6. Conceptos generales de impedancia controlada.</note>
+
+*/

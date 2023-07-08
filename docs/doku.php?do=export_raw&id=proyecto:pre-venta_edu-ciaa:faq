@@ -1,0 +1,97 @@
+====== Preguntas + Frecuentes: ======
+**Preg:** ¿Cómo hago para solicitar una EDU-CIAA?\\
+**Resp:** 
+    *Buscá tu  Contacto Local [[vinculacion:contactos_locales|Acá]],  elegí el más cercano a tu casa, pensando que vas a tener que verlo físicamente en algún momento para que te entregue la EDU-CIAA.
+    *Enviale la solicitud en la que se deben completar los siguientes datos:
+        ***Institución:** (Requerido: Nombre de la Empresa o Institucion solicitante. Si es estudiante poner "Estudiante", si es docente "Docente", si no es ninguno de estos casos, "Particular")	
+        ***Provincia:**(Requerido)
+        ***Ciudad/Barrio:**(Requerido) 
+        ***Correo Electrónico:** (Requerido, todos los contactos subsiguientes serán realizados a través de este mail, inclusive el envío de facturas escaneadas)
+        ***Nombre y Apellido:** (Requerido Persona de contacto en caso de ser una Institución /Empresa)	
+        ***Cantidad Solicitada:** (Requerido, en números)
+        ***Condición Fiscal:**	(Requerido puede ser uno de estos: "Consumidor Final", "IVA Exento", "Responsable Inscripto", "Responsable Monotributo")
+        ***CUIT:** (Requerido si la condición fiscal es distinta de "Consumidor Final")
+        ***Razón Social:**	(Requerido, si es empresa o institución, tal cual figura en la inscripción en AFIP, si es particular, docente o estudiante, repetir Nombre y Apellido )
+        ***Domicilio:** (Requerido)
+
+**Preg:**  ¿Cómo puedo saber si mi pedido fue realizado correctamente? \\
+**Resp:** Además de que tu Contacto Local te conteste el mail de solicitud, en la 
+[[https://docs.google.com/spreadsheets/d/1ekz25n5IgOiJssrh3W8SZ7VtANaGV-dAkNzxIlAJWsg/edit?usp=sharing|planilla online de la segunda preventa de 1.000 EDU-CIAAs]]
+podés verificar que tu pedido ha sido correctamente cargado. Para eso buscá la pestaña correspondiente a tu contacto local y en la planilla deberían estár cargados os datos que enviaste al realizar la solicitud.
+Si hay discrepancias o errores, avisale a tu Contacto Local para que los corrija. Solamente el contacto Local tiene permisos para editar la Planilla, pero cualquiera puede verla.
+
+ 
+**Preg:** ¿Cuanto cuesta la EDU-CIAA?\\
+**Resp:**  La EDU-CIAA tiene un costo de $AR 550 por unidad
+
+**Preg:** En mi Facultad/Empresa/Institución los trámites para conseguir los fondos para pagar las EDUCIAA que necesito son largos/complicados/etc 
+y no estoy seguro de que me los otorguen en tiempo y forma ¿Puedo reservar y después cancelar la reserva si no consigo el dinero?\\
+**Resp:** En realidad lo podés hacer, pero este sistema de reservas y ventas se basa en la buena fe de todos y en que no hay comportamientos especulativos por 
+parte de los distintos participantes. En caso de dudas, antes de realizar la reserva, comunicate con tu Contacto Local y explicale tu situación así buscamos 
+una solución que no perjudique a nadie.  
+
+**Preg:** ¿Me van a dar una factura?\\
+**Resp:**  Por supuesto! La Factura se confecciona con los datos que enviaste a tu Contacto Local y se entrega junto con la EDU-CIAA.
+
+**Preg:** En mi Facultad/Empresa/Institución me solicitan la factura antes de realizar el pago ¿Ustedes me la envían?\\
+**Resp:** Las facturas pueden confeccionarse previamente al pago y se envían **//escaneadas//** al email que incluiste en tu solicitud. Para solicitarla, 
+enviá un mail a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>'' y en el asunto poné tu Código de Operación así podemos identificar tu pedido.
+
+**Preg:** ¿Qué es el Código de Operación y donde lo obtengo??\\
+**Resp:** Es un código que se genera automáticamente y sirve para identificar tu pedido. En la [[https://docs.google.com/spreadsheets/d/1ekz25n5IgOiJssrh3W8SZ7VtANaGV-dAkNzxIlAJWsg/edit?usp=sharing|planilla online de la segunda preventa de 1.000 EDU-CIAAs]] 
+podés verlo y copiarlo, está en la columna **"D"** bajo el encabezado **"Cod. Operación"**.
+
+**Preg:** En mi Facultad/Empresa/Institución me dicen que la factura escaneada no les sirve, ¿pueden enviarmela por correo?\\
+**Resp:** Lamentablemente, el envío de material por correo postal está más alla de nuestra capacidad logística. Las facturas se confeccionan físicamente en CABA. Si tenés alguien que pueda venir a retirarla, con gusto se la entregaremos. 
+Es necesario concertar una cita a tal efecto para eso, enviá un mail a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>''
+
+**Preg:** ¿Quién vende la EDUCIAA?\\
+**Resp:** La EDUCIAA es un desarrollo colectivo, pero a los efectos prácticos la institución que se ocupa de la fabricación y venta de la EDUCIAA es la "ASOCIACIÓN CIVIL PARA LA INVESTIGACIÓN, PROMOCIÓN Y DESARROLLO DE LOS SISTEMAS ELECTRÓNICOS EMBEBIDOS" más conocida como [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/institucional/|ACSE o "Asociación Civil de Sistemas Embebidos"]]. Como es una entidad sin fines de lucro, no puede vender Bienes, pero si prestar Servicios. Entonces la ACSE no "vende" la EDUCIAA sino que ofrece un Curso Online de uso de la EDUCIAA en el que se incluye el material necesario para seguirlo (EDUCIAA).
+
+**Preg:** ¿La EDUCIAA tiene Garantía?\\
+**Resp:** La EDUCIAA se someterá a un ensayo eléctrico y funcional antes de ser entregada.\\ 
+Por sus características de uso experimental, es muy probabable que durante el uso didáctico sea sobreexigida o directamente deteriorada por distintas razones (por ejemplo conectarla a una tensión superior a la especificada, puesta en cortocircuito de las salidas, etc.) Como esto no es verificable  y la logística necesaria para ofrecer una garantía se encuentra completamente fuera del alcance de la ACSE, **//NO//** se ofrece garantía
+ de ningún tipo.\\ 
+En caso de fallas o necesidad de reparaciones, en cambio pueden acudir a la comunidad de desarrolladores de la EDUCIAA para obtener indicaciones o 
+asesoramiento.[[https://groups.google.com/group/embebidos32/subscribe|embebidos32@googlegroups.com]] 
+
+**Preg:** ¿Cuál es la descripción que aparece en la Factura?\\
+**Resp:** El texto que va aparecer como descripción es el siguiente: 
+   *"Curso Online de Capacitación en plataforma CIAA  (Computadora Industrial  Abierta Argentina), incluye soporte técnico y placa".\\ 
+
+Alternativamente, a solicitud del comprador se pueden admitir las siguientes variantes:
+   *"Curso de Capacitación en plataforma CIAA  (Computadora Industrial  Abierta Argentina), incluye soporte técnico y placa".
+   *"Curso  de Capacitación en Sistemas Embebidos en plataforma CIAA  (Computadora Industrial  Abierta Argentina)".
+   *"Curso Online de Capacitación en plataforma CIAA  (Computadora Industrial  Abierta Argentina), incluye soporte técnico".
+   *"Curso Online de Capacitación en plataforma CIAA  (Computadora Industrial  Abierta Argentina)". 
+
+__En todos los casos, el importe que se detallará es por el total de EDUCIAA que se pidan y no se detallará el precio unitario__.\\
+
+**Preg:** En mi Facultad/Empresa/Institución me piden que la descripción de la factura sea distinta a la que ustedes hacen ¿Pueden poner en la factura el siguiente texto.....(texto provisto por el solicitante)?\\
+**Resp:** Depende, ya que debe tener en cuenta que la ACSE no puede vender Bienes, solo brindar servicios. No se puede poner por ejemplo " 15 Placas Educativas EDU-CIAA". Si se pueden poner textos del estilo de los detallados más arriba. Hacé tu consulta a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>''
+
+**Preg:** ¿Donde me anoto para tomar el curso online que me facturaron?\\
+**Resp:** En este momento todavía no está en marcha el cursos online. A medida que vayamos preparando material didáctico, lo iremos subiendo al sitio del proyecto. La idea general es que cuando se comiencen a entregar las EDUCIAA, haya un material básico como para aprender a utilizar la IDE, conectar la placa, y hacer programas básicos. A medida que la comunidad de usuarios crezca, se espera que éstos hagan contribuciones, contactando a los responsables o subresponsables respectivos.
+
+
+
+**Preg:** Voy a pagar las EDUCIAAs que compre con fondos de caja chica y las facturas no pueden superar los XXXXX $ ¿pueden hacerme 2 facturas por la mitad del valor total c/u?\\
+**Resp:** Si. Enviá un mail solicitándolo a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>''
+
+**Preg:** Voy a pagar las EDUCIAAs que compre con fondos de caja chica y necesito  dos facturas con fechas distintas ¿pueden hacerlas así?\\
+**Resp:** Si. Enviá un mail solicitándolo a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>''
+
+
+**Preg:** ¿Cuándo hay que pagar?\\
+**Resp:** Cuando se llegue a 500 reservas en la Preventa se habilitará el pago y se les enviarán a todos los solicitantes las instrucciones respectivas.
+
+**Preg:** ¿Cómo se realiza el pago?\\
+**Resp:** El pago se realizará unicamente por transferencia bancaria a la cuenta de la ACSE.
+
+**Preg:** ¿Puedo pagar con cheque?\\
+**Resp:** No. El pago se realizará unicamente por transferencia bancaria a la cuenta de la ACSE.
+
+**Preg:** En mi Facultad/Empresa/Institución me dicen que solamente pueden pagar con cheque. ¿Qué puedo hacer?\\
+**Resp:** Una solución posible es que te den el cheque a vos, y que lo deposites en la cuenta de la ACSE. Para 
+ello vas a tener que dirigirte a una sucursal del Banco Patagonia y realizar el depósito en la cuenta de la ACSE. 
+Si tenés dudas enviá un mail a ''<FacturasAdelantadas@proyecto-ciaa.com.ar>''

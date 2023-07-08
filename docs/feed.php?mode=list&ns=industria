@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> industria</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:00:22+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria:ciaa_en_empresas&amp;rev=1429847355&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria:ciaa_en_empresas&amp;rev=1429847355&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T03:49:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>industria:ciaa_en_empresas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria:ciaa_en_empresas&amp;rev=1429847355&amp;do=diff</link>
+        <description>Empresas utilizando la CIAA
+
+Diferentes industrias ya están utilizando la CIAA como plataforma para sus desarrollos. Conozca más en las siguientes páginas: 
+
+[Productos y desarrollos basados en la CIAA]
+
+	*  Agricultura
+	*  Automatización industrial    
+	*  Conectividad inalámbrica
+	*  Control numérico por computadora (CNC)</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,98 @@
+====== CIAA-FSL ======
+
+{{ :desarrollo:hardware:ciaa_freescale:ciaa_fsl_top_armada.jpg?450 | Prototipo funcional de la CIAA-FSL}}
+
+===== Estado actual (09/01/15) =====
+  * Hay 20 CIAA-FSL CEIBO v1.0 fabricadas por Ernesto Mayer S.A.
+  * Hay una CIAA-FSL CEIBO v1.0 fabricada en el laboratorio de prototipado de la [[http://www.bioingenieria.edu.ar | UNER]].
+  * Hay cinco placas armadas, de las cuales una fue soldada manualmente por el INTI-CMNB y cuatro fueron armadas por Asembli. Todas fueron probadas por el INTI-CMNB y funcionan correctamente (al menos sus interfaces básicas). Fueron distribuidas por Ignacio Zaradnik a distintos desarrolladores.
+  * Está finalizado el diseño de la versión CEIBO v1.1 con una corrección en las entradas digitales (ver la sección Versiones).
+  * Actualmente hay un equipo trabajando en el firmware específicamente en los drivers necesarios para esta versión de CIAA.
+
+===== Versiones =====
+Luego de las pruebas efectuadas a la versión CEIBO V1.0, se detectó que los pines utilizados para las entradas digitales, eran únicamente para entradas analógicas diferenciales. 
+Por este motivo, se diseñó una nueva versión CEIBO V1.1 con esta corrección.
+Además, se ajustaron los valores de algunos componentes y se redujo la cantidad de ferrites diferentes.
+Para consultar las modificaciones realizadas a la versión CEIBO v1.0, acceder al archivo 
+[[https://github.com/ciaa/Hardware/blob/master/PCB/FSL/CIAA_K60/doc/modificaciones/cambios_CEIBO_1_0.txt | Cambios CEIBO v1.0]].
+
+===== Diagramas Esquemáticos =====
+
+[[https://github.com/ciaa/Hardware/blob/master/PCB/FSL/CIAA_K60/doc/CIAA_K60.pdf?raw=true| Descargar esquemáticos de la CIAA-FSL CEIBO v1.1]]\\
+{{:desarrollo:hardware:ciaa_freescale:ciaa_k60_ceibo_1_1.pdf|Descargar esquemáticos de la CIAA-FSL CEIBO v1.0}}\\
+
+Todos los esquemáticos publicados en las siguientes secciones corresponden a la versión CEIBO v1.1.\\
+
+
+==== Descripción de subsistemas e interfaces ====
+
+En esta sección se describe cada subsistema de la CIAA.
+
+=== CPU y Debugger ===
+  - [[CPU_freescale| CIAA-Freescale: CPU]].
+  - [[JTAG_freescale| CIAA-Freescale: Debugger]].
+
+=== Memorias ===
+  - Memorias internas del K60
+      - Flash 512KB
+      - SRAM 128KB
+  - Memoria Flash (32-Mbit).
+  - EEPROMs: 1Mbit y 2Kbit
+  - Zócalo para SD
+Ver página [[Memorias_freescale| CIAA-Freescale: Memorias]].
+
+=== Fuente de alimentación ===
+Tensión de Entrada: 12VCC a 30VCC
+
+Ver página: [[Fuente_freescale| CIAA-Freescale: Fuente de alimentación]].
+
+=== Interfaces de comunicación ===
+  - Ethernet. Ver página: [[ethernet_freescale| CIAA-Freescale: Ethernet]].
+  - USB On-The-Go. Ver página: [[USB_OTG_freescale| CIAA-Freescale: USB-OTG]].
+  - USB Debug. Ver página: [[JTAG_freescale| CIAA-Freescale: Debugger]].
+  - RS232. Ver página: [[RS485_RS232_CAN_freescale| CIAA-Freescale: RS485_RS232_CAN]].
+  - RS485. Ver página: [[RS485_RS232_CAN_freescale| CIAA-Freescale: RS485_RS232_CAN]].
+  - CAN. Ver página: [[RS485_RS232_CAN_freescale| CIAA-Freescale: RS485_RS232_CAN]].
+
+=== Entradas/Salidas ===
+  - 8 x Entradas digitales. Ver página: [[entradas_digitales_freescale| CIAA-Freescale: Entradas digitales]].
+  - 4 x Entradas analógicas. Ver página: [[entradas_analogicas_freescale| CIAA-Freescale: Entradas analógicas]].
+  - 1 x Salida Analógica. Ver página: [[salida_analogica_freescale| CIAA-Freescale: Salida analógica]].
+  - 4 x Salidas Open-Drain. Ver página: [[Salidas_digitales_freescale| CIAA-Freescale: Salidas digitales]].
+  - 4 x Salidas a Relé. Ver página: [[Salidas_digitales_freescale| CIAA-Freescale: Salidas digitales]].
+  - 16 x LV-GPIO. Ver página: [[gpio_freescale| CIAA-Freescale: GPIO]].
+  - 1 x Puerto Auxiliar I²C. Ver página [[gpio_freescale| CIAA-Freescale: GPIO]].
+  - 1 x Uart/SPI Auxiliar. Ver página [[gpio_freescale| CIAA-Freescale: GPIO]].
+  - 4 x Entradas Analógicas Auxiliares. Ver página [[gpio_freescale| CIAA-Freescale: GPIO]].
+
+===== Placa de Circuito Impreso (PCB) =====
+Documentación y material relacionado al PCB de la CIAA-Freescale. \\
+[[https://github.com/ciaa/Hardware/tree/master/PCB/FSL|Acceso al repositorio de hardware en GitHub.]]
+
+==== Fotos del primer PCB armado (CEIBO v1.0) ====
+
+|{{:desarrollo:hardware:ciaa_freescale:ciaa_fsl_top_armada.jpg?270}}|{{:desarrollo:hardware:ciaa_freescale:ciaa_fsl_bottom_armada.jpg?270}}|
+
+==== Fotos del PCB (CEIBO v1.0) ====
+
+|{{:desarrollo:hardware:ciaa_freescale:ciaa_fsl_top.jpg?270}}|{{:desarrollo:hardware:ciaa_freescale:ciaa_fsl_bot.jpg?355}}|
+
+==== Vistas 3D (CEIBO v1.0) ====
+
+{{pcb_top.jpg?direct&315|}} {{pcb_bottom.jpg?direct&300|}}
+
+==== Implementación ====
+=== Lista de Materiales (BOM) ===
+
+[[https://github.com/ciaa/Hardware/blob/master/PCB/FSL/CIAA_K60/doc/CIAA_K60-BoM.csv?raw=true | Descargar Lista de Materiales de la CIAA-FSL CEIBO v1.1 (Archivo CSV)]]
+
+=== Archivos Gerber ===
+
+[[https://github.com/ciaa/Hardware/tree/master/PCB/FSL/CIAA_K60/gerber | Acceso a los archivos Gerber CEIBO V1.1 en GitHub]]
+
+==== Validación ====
+=== Procedimiento y consideraciones para armado ===
+=== Procedimiento para revisión y PEM ===
+
+===== Documentación completa =====
+Consultar la documentación completa en [[https://github.com/ciaa/Hardware/tree/master/PCB/FSL/CIAA_K60/doc | Documentación CIAA-FSL]].

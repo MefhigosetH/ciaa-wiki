@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_safety:el_bus_pci_y_sus_senales</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_safety,el_bus_pci_y_sus_senales"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_safety"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_safety';var JSINFO = {"id":"desarrollo:ciaa_safety:el_bus_pci_y_sus_senales","namespace":"desarrollo:ciaa_safety","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h3 class="sectionedit1" id="el_bus_pci_y_sus_senales">El bus PCI y sus señales</h3>
+<div class="level3">
+
+<p>
+Respetando la asignación de los pines de alimentación en el mismo orden que hace referencia “The PCI Local Bus Specification Revision 2.2.” las demás señales se distribuyen en el bus de tal manera que en esta primera versión de la CIAA Safety contemple la mayor cantidad de  puertos y periféricos más comunes utilizados en la mayoría de los microcontroladores. De esta manera tratamos de desarrollar un estándar que debe ser respetado en desarrollos futuros. (Sujeto a revisión)
+</p>
+
+<p>
+De acuerdo a la disponibilidad de funcionalidades que presenta el seleccionado microcontrolador (Ver <a href="./doku.php%3Fid=desarrollo:ciaa_safety:hardware_cpu.html" class="wikilink1" title="desarrollo:ciaa_safety:hardware_cpu" data-wiki-id="desarrollo:ciaa_safety:hardware_cpu">CPU</a>), el bus PCI quedaría de la siguiente manera:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales&amp;media=desarrollo:ciaa_safety:propuesta_pci-104.png.html" class="media" title="desarrollo:ciaa_safety:propuesta_pci-104.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_safety:propuesta_pci-104.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+Como puede observarse en esta disposición de señales, el bus PCI contempla:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Alimentación</strong> (GND, 3.3V, 5V, +12V, -12V, VI/O)</div>
+</li>
+<li class="level1"><div class="li"> <strong>USB</strong> (VBUS, D+, D-) </div>
+</li>
+<li class="level1"><div class="li"> <strong>UART1</strong> (LINRX, LINTX): estos pines aceptan la función de GPIO</div>
+</li>
+<li class="level1"><div class="li"> <strong>UART2</strong> (SCIRX, SCITX): estos pines aceptan la función de GPIO</div>
+</li>
+<li class="level1"><div class="li"> <strong>CAN1</strong> (CAN1-STB, CAN1RX, CAN1TX)</div>
+</li>
+<li class="level1"><div class="li"> <strong>CAN2</strong> (CAN2-STB, CAN2RX, CAN2TX)</div>
+</li>
+<li class="level1"><div class="li"> <strong>I2C</strong> (I2C_SCL, I2C_SDA): estos pines aceptan la función de GPIO</div>
+</li>
+<li class="level1"><div class="li"> <strong>ETHERNET</strong> (ETH_TXP, ETH_TXN, ETH_RXP, ETH_RXN)</div>
+</li>
+<li class="level1"><div class="li"> <strong>ADC</strong> (ADREFHI, ADREFLO, AD1IN[0], AD1IN[1], AD1IN[2], AD1IN[3], AD1IN[4], AD1IN[5], AD1IN[6], AD1IN[7], AD1IN[8], AD1IN[9], AD1IN[10], AD1IN[11], AD1IN[12], AD1IN[13], AD1IN[14], AD1IN[15], AD1IN[16], AD1IN[17], AD1IN[18], AD1IN[19])</div>
+</li>
+<li class="level1"><div class="li"> <strong>GPIO</strong> (GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO15, GPIO16, GPIO17, GPIO18, GPIO19)</div>
+</li>
+<li class="level1"><div class="li"> <strong>RESTABLECIOMIENTO Y CONTROL</strong> ( NERROR, WARMRST, POWRST)</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

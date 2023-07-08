@@ -1,0 +1,31 @@
+====== CIAA-FSL: CPU MK60FX512VLQ15 ======
+
+===== Diagrama Esquemático =====
+
+{{02-cpu.png}}
+
+===== Características =====
+  * CPU: [[http://cache.freescale.com/files/microcontrollers/doc/data_sheet/K60P144M150SF3.pdf|Freescale MK60FX512VLQ15]]
+    * ARM Cortex-M4 @ 150 MHz
+    * 512 kB Flash, 128 kB SRAM
+    * Encapsulado LQFP144
+
+===== Descripción =====
+  * En esta hoja del esquemático se realizan las conexiones de todas las interfaces de la CPU, los cristales, los leds de estado y el reset.
+  * Los dos leds de estado son para uso del usuario, uno rojo y otro verde.
+  * El oscilador de 12 MHz es utilizado por la CPU para generar todos los clocks internos necesarios.
+  * El cristal 32,768 KHz es utilizado por el RTC de la CPU.
+  * Para el reset de la CPU se utiliza un switch táctil.
+  * Consultar las características de cada interfaz de la CPU en las subsiguientes páginas de la documentación.
+
+===== Referencias =====
+  * [[http://cache.freescale.com/files/microcontrollers/doc/ref_manual/K60P144M150SF3RM.pdf?fr=gdc | K60 Sub-Family Reference Manual]]
+  * [[http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=K60_120 | K60 Sub-Family WEB]]
+
+===== Datasheets de componentes importantes =====
+  * [[http://cache.freescale.com/files/microcontrollers/doc/data_sheet/K60P144M150SF3.pdf | Freescale MK60FX512VLQ15]]
+  * [[http://www.abracon.com/Resonators/abs25.pdf | Abracon Corporation ABS25-32.768KHZ-T]]
+  * [[http://www.silabs.com/Support%20Documents/TechnicalDocs/Si501-2-3.pdf | Silicon Laboratories 501HCA12M0000CAG]]
+  * [[http://media.digikey.com/pdf/Data%20Sheets/Everlight%20PDFs/QTLP600C.pdf | Everlight Electronics QTLP600C4TR]]
+  * [[http://www.abracon.com/Magnetics/new/ACML-0603.pdf | Abracon Corporation ACML-0603-101-T]]
+  * [[http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F2-1437565-7%7FU2%7Fpdf%7FEnglish%7FENG_CD_2-1437565-7_U2.pdf%7F2-1437565-9 | TE Connectivity 2-1437565-9]]

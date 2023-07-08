@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:ciaa_intel:ciaa_intel_inicio</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,ciaa_intel,ciaa_intel_inicio"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:ciaa_intel"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:ciaa_intel';var JSINFO = {"id":"desarrollo:hardware:ciaa_intel:ciaa_intel_inicio","namespace":"desarrollo:hardware:ciaa_intel","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html#ciaa-intel">CIAA-INTEL</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html#diagrama_en_bloques">Diagrama en bloques</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html#caracteristicas_preliminares">Características preliminares</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html#documentos_de_referencia">Documentos de referencia</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio.html#diseno">Diseño</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ciaa-intel">CIAA-INTEL</h1>
+<div class="level1">
+
+<p>
+La CIAA-INTEL está siendo desarrollada actualmente por el <a href="http://www2.electron.frba.utn.edu.ar/dplab/" class="urlextern" target="_blank" title="http://www2.electron.frba.utn.edu.ar/dplab/" rel="ugc nofollow noopener">Laboratorio de Procesamiento Digital (DPLab)</a> de la <a href="http://www.frba.utn.edu.ar/" class="urlextern" target="_blank" title="http://www.frba.utn.edu.ar/" rel="ugc nofollow noopener">UTN-FRBA</a>.
+</p>
+
+<p>
+Estará basada en el SoM <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html" class="urlextern" target="_blank" title="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html" rel="ugc nofollow noopener">Edison</a>, cuyas características son:
+</p>
+<ul>
+<li class="level1"><div class="li"> CPU: Dual-core, dual-threaded Intel® Atom™ CPU at 500 <abbr title="Megahertz">MHz</abbr> and a 32-bit Intel® Quark™ microcontroller at 100 <abbr title="Megahertz">MHz</abbr></div>
+</li>
+<li class="level1"><div class="li"> RAM: 1 <abbr title="Gigabyte">GB</abbr> LPDDR3 POP memory (2 channel 32bits @ 800MT/sec)</div>
+</li>
+<li class="level1"><div class="li"> NVM: 4 <abbr title="Gigabyte">GB</abbr> eMMC (v4.51 <abbr title="specification">spec</abbr>)</div>
+</li>
+<li class="level1"><div class="li"> Wi-Fi: Broadcom 43340 802.11 a/b/g/n Dual-band (2.4 and 5 <abbr title="Gigahertz">GHz</abbr>) Onboard antenna or external antenna (SKU configurations)</div>
+</li>
+<li class="level1"><div class="li"> Bluetooth 4.0</div>
+</li>
+<li class="level1"><div class="li"> 1.8V GPIO, SD Card, UART, SPI, I2C, I2S, USB 2.0</div>
+</li>
+<li class="level1"><div class="li"> <abbr title="Operating System">OS</abbr>: Yocto Poky, Linux kernel 3.10.17</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-INTEL&quot;,&quot;hid&quot;:&quot;ciaa-intel&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-812&quot;} -->
+<h2 class="sectionedit2" id="diagrama_en_bloques">Diagrama en bloques</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:ciaa_intel:ciaa_intel_inicio&amp;media=desarrollo:hardware:ciaa_intel:ciaa-intel.png.html" class="media" title="desarrollo:hardware:ciaa_intel:ciaa-intel.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa_intel:ciaa-intel.png" class="mediacenter" loading="lazy" title=" CIAA-INTEL " alt=" CIAA-INTEL " /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama en bloques&quot;,&quot;hid&quot;:&quot;diagrama_en_bloques&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;813-910&quot;} -->
+<h2 class="sectionedit3" id="caracteristicas_preliminares">Características preliminares</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Fuente de alimentación 8-30V (DC)</div>
+</li>
+<li class="level1"><div class="li"> 12 entradas optoacopladas 24V</div>
+</li>
+<li class="level1"><div class="li"> 12 salidas open-drain 0.5A 60V</div>
+</li>
+<li class="level1"><div class="li"> 4 entradas analógicas 0-10V o 0-20mA</div>
+</li>
+<li class="level1"><div class="li"> 1 salida analógica 0-10V o 0-20mA</div>
+</li>
+<li class="level1"><div class="li"> Socket para memoria microSD</div>
+</li>
+<li class="level1"><div class="li"> RS485/Profibus DP</div>
+</li>
+<li class="level1"><div class="li"> USB OTG</div>
+</li>
+<li class="level1"><div class="li"> Consola TTY a través de USB</div>
+</li>
+<li class="level1"><div class="li"> Expansiones de 3.3V: I2C, I2S, SPI, GPIO</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas preliminares&quot;,&quot;hid&quot;:&quot;caracteristicas_preliminares&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;911-1285&quot;} -->
+<h2 class="sectionedit4" id="documentos_de_referencia">Documentos de referencia</h2>
+<div class="level2">
+
+<p>
+Página principal: <a href="https://communities.intel.com/community/makers/edison/documentation" class="urlextern" target="_blank" title="https://communities.intel.com/community/makers/edison/documentation" rel="ugc nofollow noopener">Intel® Edison: Software &amp; Documentation</a>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23139-102-3-27268/edison_PB_331179-001.pdf" class="urlextern" target="_blank" title="https://communities.intel.com/servlet/JiveServlet/downloadBody/23139-102-3-27268/edison_PB_331179-001.pdf" rel="ugc nofollow noopener">Intel® Edison Product Brief</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-6-27348/edison-module_HG_331189-002.pdf" class="urlextern" target="_blank" title="https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-6-27348/edison-module_HG_331189-002.pdf" rel="ugc nofollow noopener">Intel® Edison Compute Module Hardware Guide</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23323-102-2-27417/MINI_EDISON_BREAKOUT_HVM_8_26.pdf" class="urlextern" target="_blank" title="https://communities.intel.com/servlet/JiveServlet/downloadBody/23323-102-2-27417/MINI_EDISON_BREAKOUT_HVM_8_26.pdf" rel="ugc nofollow noopener">Intel® Edison Breakout Board Schematic</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23309-102-2-27413/edison_arduino_hvm_8_26.pdf" class="urlextern" target="_blank" title="https://communities.intel.com/servlet/JiveServlet/downloadBody/23309-102-2-27413/edison_arduino_hvm_8_26.pdf" rel="ugc nofollow noopener">Intel® Edison Arduino Board Schematic</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Documentos de referencia&quot;,&quot;hid&quot;:&quot;documentos_de_referencia&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1286-2082&quot;} -->
+<h2 class="sectionedit5" id="diseno">Diseño</h2>
+<div class="level2">
+
+<p>
+Podés descargar una versión preliminar del esquemático <a href="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa_intel:ciaa-intel.pdf" class="media mediafile mf_pdf" title="desarrollo:hardware:ciaa_intel:ciaa-intel.pdf (606.4 KB)">aquí</a>.
+</p>
+
+<p>
+¿Querés participar del desarrollo? Escribinos a <a href="mailto:&#100;&#112;&#108;&#97;&#98;&#45;&#105;&#110;&#102;&#111;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#111;&#110;&#46;&#102;&#114;&#98;&#97;&#46;&#117;&#116;&#110;&#46;&#101;&#100;&#117;&#46;&#97;&#114;" class="mail" title="&#100;&#112;&#108;&#97;&#98;&#45;&#105;&#110;&#102;&#111;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#111;&#110;&#46;&#102;&#114;&#98;&#97;&#46;&#117;&#116;&#110;&#46;&#101;&#100;&#117;&#46;&#97;&#114;">&#100;&#112;&#108;&#97;&#98;&#45;&#105;&#110;&#102;&#111;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#111;&#110;&#46;&#102;&#114;&#98;&#97;&#46;&#117;&#116;&#110;&#46;&#101;&#100;&#117;&#46;&#97;&#114;</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o&quot;,&quot;hid&quot;:&quot;diseno&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2083-&quot;} --></div>
+</body>
+</html>

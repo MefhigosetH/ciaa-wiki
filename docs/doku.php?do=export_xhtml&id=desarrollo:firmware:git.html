@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:git</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,git"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:git&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:git"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:git.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:git","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#tutorial_de_git">Tutorial de GIT</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#descarga_con_git_shell_consola_desde_windows">Descarga con GIT Shell (consola desde Windows)</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#descarga_con_git_shell_consola_desde_linux">Descarga con GIT Shell (consola desde Linux)</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#trabajando_con_branches">Trabajando con branches</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#realizar_cambios">Realizar cambios</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:git.html#trabajar_sobre_una_release">Trabajar sobre una release</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="tutorial_de_git">Tutorial de GIT</h1>
+<div class="level1">
+
+<p>
+Quien quiera realmente aprender GIT le recomendamos leer el libro oficial: <a href="http://git-scm.com/book/en/v2" class="urlextern" target="_blank" title="http://git-scm.com/book/en/v2" rel="ugc nofollow noopener">http://git-scm.com/book/en/v2</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tutorial de GIT&quot;,&quot;hid&quot;:&quot;tutorial_de_git&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-141&quot;} -->
+<h2 class="sectionedit2" id="descarga_con_git_shell_consola_desde_windows">Descarga con GIT Shell (consola desde Windows)</h2>
+<div class="level2">
+
+<p>
+Trabajar con GIT implica hacerlo de manera automatizada y facilitar el trabajo colaborativo en el repositorio. Es indispensable si se va a colaborar con el proyecto, y no sólo hacer uso de él. Para hacerlo, se va a proceder a realizar una copia local del repositorio (Clonar), para ello se va a trabajar en una carpeta en &#039;C:\CIAA&#039; de manera que no quede dentro de “Mis Documentos” (por defecto para GitHub) por los inconvenientes que a veces puede traer el caracter de espacio en los path de compilación.
+</p>
+
+<p>
+Para ello abrimos el GIT Shell instalado desde GitHub y hacemos lo siguiente:
+</p>
+<pre class="code">cd /           ☜ Para ir al root, típicamente C:\
+mkdir CIAA     ☜ Creamos la carpeta CIAA
+cd CIAA        ☜ Accedemos a la carpeta CIAA</pre>
+
+<p>
+Este punto nuestro Path debería ser C:\CIAA&gt;. Pasamos a clonar el repositorio
+</p>
+<pre class="code">git clone --recursive https://github.com/ciaa/Firmware.git</pre>
+
+<p>
+Es importante no olvidar la opción <em>recursive</em>, ya que esta le indica a git que descargue los submódulos del repositorio.
+En caso de que no hayamos incluido la opción <em>recursive</em>, debemos ejecutar:
+</p>
+<pre class="code">git submodule init
+git submodule update</pre>
+
+<p>
+Si todo anduvo bien, a continuación deberíamos ver cómo progresa la descarga del repositorio. Una vez finalizada la descarga podemos ingresar a la carpeta Firmware que se ha creado con la copia local del repositorio.
+</p>
+<pre class="code">cd Firmware</pre>
+<ul>
+<li class="level1"><div class="li">Ver el contenido de la carpeta en consola (también ya puede usarse el explorador de windows normal porque está en nuesta PC!) listamos el directorio</div>
+</li>
+</ul>
+<pre class="code">ls            ☜ También podría usar el comando dir</pre>
+
+<p>
+Si todo anduvo bien veríamos algo como lo siguiente
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:git&amp;media=desarrollo:firmware:git_firmware_clone.png.html" class="media" title="desarrollo:firmware:git_firmware_clone.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:git_firmware_clone.png" class="media" loading="lazy" title="Captura de los comandos mencionados." alt="Captura de los comandos mencionados." /></a><br/>
+
+</p>
+
+<p>
+Por último, si el repositorio se ha actualizado y queremos actualizar también nuestra copia local con estos cambios, hay que hacer un &#039;pull&#039; del mismo una vez que nos encontremos en el path nuestra copia local, para el ejemplo &#039;C:\CIAA\Firmware&#039;
+</p>
+<pre class="code">git pull</pre>
+
+<p>
+Para este ejemplo, como recién acabamos de hacer una copia local el repositorio se encuentra actualizado. Caso contrario se actualizará con los cambios.
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:git&amp;media=desarrollo:firmware:git_firmware_pull.png.html" class="media" title="desarrollo:firmware:git_firmware_pull.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:git_firmware_pull.png" class="media" loading="lazy" title="Captura de los comandos mencionados." alt="Captura de los comandos mencionados." /></a><br/>
+
+</p>
+
+<p>
+Si hicimos algún cambio en la copia local podemos ver los cambios mediante el comando status:
+</p>
+<pre class="code">git status    ☜ Muestra los cambios en el repositorio</pre>
+
+<p>
+Cuando necesitemos volver a sincronizar nuestro repositorio local con el de la CIAA, deberemos hacer nuevamente un &#039;pull&#039;, pero si tenemos cambios hechos que entran en conflicto con la actualización, GIT nos avisará que antes de hacerla que debe indicarse qué se hace con los cambios. Si lo que hicimos fueron solamente pruebas que no importa <strong>perder</strong>, y sólo queremos tener nuevamente la última copia del repositorio descartamos los cambios mediantes el comando &#039;checkout&#039;:
+</p>
+<pre class="code">git checkout -f         ☜ Fuerza a descartar los cambios</pre>
+
+<p>
+Ahora si podremos hacer un &#039;pull&#039; del repositorio
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descarga con GIT Shell (consola desde Windows)&quot;,&quot;hid&quot;:&quot;descarga_con_git_shell_consola_desde_windows&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;142-3226&quot;} -->
+<h2 class="sectionedit3" id="descarga_con_git_shell_consola_desde_linux">Descarga con GIT Shell (consola desde Linux)</h2>
+<div class="level2">
+
+<p>
+Antes de hacerlo en Linux debe estar seguro que tiene &#039;git&#039; instalado en su sistema. De no tenerlo, deberá hacer
+</p>
+<pre class="code">sudo apt-get install git    ☜ Descarga e instala &#039;git&#039;</pre>
+
+<p>
+A continuación puede seguir el procedimiento mencionado para Windows, con las consideraciones del caso para crear/moverse por los directorios.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descarga con GIT Shell (consola desde Linux)&quot;,&quot;hid&quot;:&quot;descarga_con_git_shell_consola_desde_linux&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:3,&quot;range&quot;:&quot;3227-3614&quot;} -->
+<h1 class="sectionedit4" id="trabajando_con_branches">Trabajando con branches</h1>
+<div class="level1">
+
+<p>
+El git tiene un branch llamado master que es el principal. Es una buena práctica que el master siempre este listo como para una posible release, por lo que salvo muy pequenios cambios siempre es importante trabajar en un branch.
+</p>
+
+<p>
+Para trabajar con branches lo primero es crear una:
+</p>
+<pre class="code">git branch branchname</pre>
+
+<p>
+Luego se pueden listar los branches:
+</p>
+<pre class="code">server:~/ciaa/Firmware2$ git branch -a
+* block
+  master
+  modbus
+  mybranch
+  new_osek_port
+  osek_mac</pre>
+
+<p>
+El * indica el branch actual.
+</p>
+
+<p>
+Para cambiar de branches será necesario hacer:
+</p>
+<pre class="code">git checkout newbranch</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Trabajando con branches&quot;,&quot;hid&quot;:&quot;trabajando_con_branches&quot;,&quot;codeblockOffset&quot;:9,&quot;secid&quot;:4,&quot;range&quot;:&quot;3615-4251&quot;} -->
+<h2 class="sectionedit5" id="realizar_cambios">Realizar cambios</h2>
+<div class="level2">
+
+<p>
+Es importante no realizar cambios en el master a menos de no estar MUY seguro de lo que uno hace. Por favor hacerlo siempre sobre branches.
+</p>
+
+<p>
+Luego de editar uno o más archivos se puede utilizar el siguiente commando para ver el estado rel repoitorio:
+</p>
+<pre class="code">server:~/ciaa/Firmware2$ git status
+# On branch block
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#	modified:   modules/posix/inc/ciaaBlockDevices.h
+#	modified:   modules/posix/src/ciaaBlockDevices.c
+#
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#	FLASH.BIN
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</pre>
+
+<p>
+Para poder subir cambios al repo hay que primero utiliar el comando add
+</p>
+<pre class="code">git add modules/posix/inc/ciaaBlockDevices.h</pre>
+
+<p>
+y luego 
+</p>
+<pre class="code">git commit -m&quot;#&lt;ticket&gt; commentario&quot;</pre>
+
+<p>
+Es una buena práctica no solo indicar un comentario sino el ticket por la cual se realiza el cambio.
+</p>
+
+<p>
+para no tener que hacer git add con cada archivo se puede tambien utilizar
+</p>
+<pre class="code">git add -u</pre>
+
+<p>
+Una vez realizados los cambios los mismos se encuentran en el repo pero únicamente en la copia local. Para subir los mismos al servidor se debe utilizar el comando
+</p>
+<pre class="code">git push</pre>
+
+<p>
+en el caso de ser un nuevo branch hay que indicar que uno quiere subirlo al servidor:
+</p>
+<pre class="code">git push origin branchname</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Realizar cambios&quot;,&quot;hid&quot;:&quot;realizar_cambios&quot;,&quot;codeblockOffset&quot;:12,&quot;secid&quot;:5,&quot;range&quot;:&quot;4252-5774&quot;} -->
+<h1 class="sectionedit6" id="trabajar_sobre_una_release">Trabajar sobre una release</h1>
+<div class="level1">
+
+<p>
+A la hora de llevar a cabo trabajos o proyectos utilizando como plataforma el CIAA-Firmware se recomienda trabajar con la última release y no sobre la rama master del repositorio.
+</p>
+
+<p>
+Las releases se identifican con etiquetas o tags. Para conocerlas se debe ejecutar:
+</p>
+<pre class="code">server:~/ciaa/Firmware$ git tag
+0.0.1
+0.2.0
+0.3.0
+0.3.0-rc1
+0.3.0-rc2
+0.4.0
+0.4.1
+0.5.0
+0.6.0
+0.6.1
+0.7.0-alpha
+1.0.0
+KSKD_1.0.2</pre>
+
+<p>
+Suponiendo que la última release correponde al tag 1.0.0 (como sucede en este caso), se procede de la siguiente manera:
+</p>
+<pre class="code">git checkout tags/1.0.0
+git submodules update</pre>
+
+<p>
+Listo! Todo configurado para trabajar sobre la última versión del CIAA-Firmware.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Trabajar sobre una release&quot;,&quot;hid&quot;:&quot;trabajar_sobre_una_release&quot;,&quot;codeblockOffset&quot;:18,&quot;secid&quot;:6,&quot;range&quot;:&quot;5775-&quot;} --></div>
+</body>
+</html>

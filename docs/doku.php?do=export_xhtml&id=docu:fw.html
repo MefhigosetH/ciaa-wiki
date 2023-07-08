@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=docu"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu';var JSINFO = {"id":"docu:fw","namespace":"docu","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:hw:intro.html" class="wikilink1" title="docu:hw:intro" data-wiki-id="docu:hw:intro">Hardware </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:linux.html" class="wikilink1" title="docu:fw:linux" data-wiki-id="docu:fw:linux">Linux </a> →</div></div>
+<h1 class="sectionedit1" id="firmware">Firmware</h1>
+<div class="level1">
+<p class="divalign-justify">El <strong>firmware</strong> es el programa que <strong>se ejecuta en la CPU del microcontrolador</strong>. Éste comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. La CIAA tiene tanto la posibilidad de correr <a href="./doku.php%3Fid=docu:fw:linux.html" class="wikilink1" title="docu:fw:linux" data-wiki-id="docu:fw:linux">linux</a> como un <a href="./doku.php%3Fid=docu:fw:bm.html" class="wikilink2" title="docu:fw:bm" rel="nofollow" data-wiki-id="docu:fw:bm">bm</a>. El Firmware también incluye un <a href="./doku.php%3Fid=docu:fw:bm:ide.html" class="wikilink1" title="docu:fw:bm:ide" data-wiki-id="docu:fw:bm:ide">ide</a> para poder desarrollar desde un entorno confortable y amigable.</p><!--divalign-->
+
+<p>
+La <strong>CIAA</strong> ofrece 2 Firmwares, uno basado en <a href="./doku.php%3Fid=docu:fw:linux.html" class="wikilink1" title="docu:fw:linux" data-wiki-id="docu:fw:linux">linux</a> y otro <a href="./doku.php%3Fid=docu:fw:bm.html" class="wikilink2" title="docu:fw:bm" rel="nofollow" data-wiki-id="docu:fw:bm">bm</a> basado en OSEK y un posix like.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Firmware&quot;,&quot;hid&quot;:&quot;firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-707&quot;} -->
+<h2 class="sectionedit2" id="que_firmware_utilizarlinux_o_baremetal">¿Que Firmware utilizar: Linux ó BareMetal?</h2>
+<div class="level2">
+
+<p>
+No hay una respuesta a esta pregunta. Depende de lo que el usuario desee hacer y mediante que medios. Le ofrecemos la siguiente tabla comparativa:
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Característica </th><th class="col1"> Linux </th><th class="col2"> Baremetal </th><th class="col3"> Comentarios </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> Memoria FLASH </td><td class="col1"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col2"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col3"> Linux necesita de aproximadamente xxx ROM, mientras que el Firmware basado en BareMetal unos pocos kbytes de memoria ROM </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Memoria RAM </td><td class="col1"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col2"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col3"> Linux necesita de aproximadamente 12Mbytes de RAM, mientras que el Firmware basado en BareMetal unos pocos kbytes de memoria RAM </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Carga dinámica de Tareas </td><td class="col1"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col2"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col3"> En linux se pueden cargar programas de forma dinámica, mientras que en Baremetal deben estar todas las aplicaciones programadas en el momento de compilar </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Manejo dinámico de memoria </td><td class="col1"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col2"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col3"> En aplicaciónes donde el manejo dinámico de memoria sea una necesidad constante puede que resulte mejor utilizar Linux. </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Periféricos </td><td class="col1"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col2"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col3"> La gran comunidad de Linux ofrece la posibilidad de tener para casi todos los dispositivos un driver, en el caso de baremetal le recomendamos ver la tabla de drivers soportados </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Portados a EDU-CIAA </td><td class="col1"> &lt;fc #ff0000&gt;✘&lt;/fc&gt; </td><td class="col2"> &lt;fc #00ff00&gt;✔&lt;/fc&gt; </td><td class="col3"> Dadas las necesidades de ROM y RAM que se necesitan para correr Linux, no es posible utilizarlo en las EDU-CIAAs </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;914-2209&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQue Firmware utilizar: Linux \u00f3 BareMetal?&quot;,&quot;hid&quot;:&quot;que_firmware_utilizarlinux_o_baremetal&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;708-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:hw:intro.html" class="wikilink1" title="docu:hw:intro" data-wiki-id="docu:hw:intro">Hardware </a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=desarrollo:docu:indice.html" class="wikilink1" title="desarrollo:docu:indice" data-wiki-id="desarrollo:docu:indice">Indice </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:linux.html" class="wikilink1" title="docu:fw:linux" data-wiki-id="docu:fw:linux">Linux </a> →</div></div></div>
+</body>
+</html>

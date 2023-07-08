@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-i2c"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_i2c_masterclase_i2c">Soporte I2C Master: Clase I2C</h1>
+<div class="level1">
+
+<p>
+Ejemplo lectura y escritura de una memoria tipo 24C04:
+</p>
+<pre class="code">import pyb
+print(&quot;Test I2C with AT24C04&quot;)
+
+i2c = pyb.I2C(100000) #100Khz
+i2c.slave_addr(0x50)
+
+def writeByte(addr,value):
+    data = bytearray()
+    data.append(addr)
+    data.append(value)
+    i2c.write(data)
+
+
+def readBytes(addr,size):
+    data = bytearray()
+    data.append(addr)    
+    i2c.write(data)    
+    return i2c.read(size)
+
+writeByte(0x00,11)
+pyb.delay(10)
+writeByte(0x01,22)
+pyb.delay(10)
+writeByte(0x02,33)
+pyb.delay(10)
+
+
+data = readBytes(0x00,16)
+print(&quot;[0]:&quot;+str(data[0]))
+print(&quot;[1]:&quot;+str(data[1]))
+print(&quot;[2]:&quot;+str(data[2]))</pre>
+
+<p>
+El constructor de la clase I2C recibe como argumento la velocidad (100Khz o 400Khz) expresada en Hz: Luego de crear el objeto i2c, se ejecuta el método slave_addr mediante el cual se configura la dirección del dispositivo esclavo que se utilizará al leer y escribir datos por el bus. Puede cambiarse en cualquier momento.
+</p>
+
+<p>
+Se podrá leer y escribir datos mediante el método write, el cual recibe un bytearray y el método read el cual recibe como argumento la cantidad de bytes a leer y devuelve un array de bytes con los datos leídos.
+</p>
+
+<p>
+En el ejemplo se escriben dos funciones, para poder escribir un byte en la memoria y luego poder leer una cierta cantidad de bytes, siempre indicando la dirección.
+</p>
+
+</div>
+</div>
+</body>
+</html>

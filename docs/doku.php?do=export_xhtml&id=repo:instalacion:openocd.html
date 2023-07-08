@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>repo:instalacion:openocd</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="repo,instalacion,openocd"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=repo:instalacion:openocd&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=repo:instalacion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:openocd.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=repo:instalacion:openocd"/>
+<link rel="canonical" href="./doku.php%3Fid=repo:instalacion:openocd.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='repo:instalacion';var JSINFO = {"id":"repo:instalacion:openocd","namespace":"repo:instalacion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:openocd.html#instalacion_openocd">Instalación OpenOCD</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:openocd.html#linux">Linux</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:openocd.html#windows">Windows</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:openocd.html#osx">OSX</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="instalacion_openocd">Instalación OpenOCD</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n OpenOCD&quot;,&quot;hid&quot;:&quot;instalacion_openocd&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-37&quot;} -->
+<h2 class="sectionedit2" id="linux">Linux</h2>
+<div class="level2">
+
+<p>
+Descargar, descomprimir y compilar OpenOCD:
+</p>
+<pre class="code bash"><span class="kw3">cd</span> ~<span class="sy0">/</span>ciaa-ide
+<span class="kw2">wget</span> http:<span class="sy0">//</span>ufpr.dl.sourceforge.net<span class="sy0">/</span>project<span class="sy0">/</span>openocd<span class="sy0">/</span>openocd<span class="sy0">/</span>0.9.0<span class="sy0">/</span>openocd-0.9.0.tar.bz2
+<span class="kw2">tar</span> <span class="re5">-xvjf</span> openocd-0.9.0.tar.bz2
+<span class="kw3">cd</span> openocd-0.9.0
+.<span class="sy0">/</span>configure <span class="re5">--enable-ftdi</span> 
+<span class="kw2">make</span></pre>
+
+<p>
+Copiar los permisos de OpenOCD en las reglas de udev y reiniciar el servicio:
+</p>
+<pre class="code bash"><span class="kw2">sudo</span> <span class="kw2">cp</span> contrib<span class="sy0">/</span><span class="nu0">99</span>-openocd.rules <span class="sy0">/</span>etc<span class="sy0">/</span>udev<span class="sy0">/</span>rules.d<span class="sy0">/</span>
+<span class="kw2">sudo</span> service udev restart</pre>
+
+<p>
+Si ya ha <a href="./doku.php%3Fid=repo:uso:git_clone.html" class="wikilink1" title="repo:uso:git_clone" data-wiki-id="repo:uso:git_clone">clonado el repositorio de firmware</a>, <a href="./doku.php%3Fid=repo:conexion:edu_ciaa_nxp.html" class="wikilink1" title="repo:conexion:edu_ciaa_nxp" data-wiki-id="repo:conexion:edu_ciaa_nxp">conectar mediante USB DEBUG</a>. Si estaba conectada, desconectarla y volver a conectarla. Luego, probar OpenOCD:
+</p>
+<pre class="code bash">.<span class="sy0">/</span>src<span class="sy0">/</span>openocd <span class="re5">-f</span> ~<span class="sy0">/</span>ciaa-ide<span class="sy0">/</span>workspaces<span class="sy0">/</span>Firmware<span class="sy0">/</span>modules<span class="sy0">/</span>tools<span class="sy0">/</span>openocd<span class="sy0">/</span>cfg<span class="sy0">/</span>cortexM4<span class="sy0">/</span>lpc43xx<span class="sy0">/</span>lpc4337<span class="sy0">/</span>ciaa-nxp.cfg</pre>
+
+<p>
+Debería verse lo siguiente:
+</p>
+<pre class="code">Open On-Chip Debugger 0.9.0 (2015-05-12-12:27)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect &#039;jtag&#039;
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints</pre>
+
+<p>
+(ctrl+c para terminar)
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;hid&quot;:&quot;linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;38-1502&quot;} -->
+<h2 class="sectionedit3" id="windows">Windows</h2>
+<div class="level2">
+<div class="plugin_note noteimportant">PARTE DE ESTO VA A SU PROPIA SECCIÓN “DRIVERS”
+</div>
+<p>
+Para descargar el OpenOCD compilado y listo para utilizar (actualmente la versión 0.9.0), puede irse a la zona de descargas de la web de <a href="http://www.freddiechopin.info/en/download" class="urlextern" target="_blank" title="http://www.freddiechopin.info/en/download" rel="ugc nofollow noopener">freddiechopin</a> o directamente descargarse del siguiente <a href="http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0" class="urlextern" target="_blank" title="http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0" rel="ugc nofollow noopener">link</a>
+</p>
+
+<p>
+Al momento de instalar los drivers, debe tenerse en cuenta que funcionará como 2 dispositivos distintos, y por lo tanto cada uno tendrá un driver asociado. Lo primero es instalar los <a href="http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip" class="urlextern" target="_blank" title="http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip" rel="ugc nofollow noopener">drivers por defecto del fabricante FTDI para puerto virtual (VCP)</a>. En el Administrador de Dispositivos deberían aparecer 2 nuevos puertos COM, tal como sigue:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:openocd&amp;media=desarrollo:firmware:ft2232h_ftdi_devices.png.html" class="media" title="desarrollo:firmware:ft2232h_ftdi_devices.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ft2232h_ftdi_devices.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+Luego para el canal A (también aparece como &#039;Converter A&#039; o &#039;Interface 0&#039;), debe reemplazarse el driver actual de FTDI por otro llamado WinUSB utilizando la aplicación <a href="http://zadig.akeo.ie" class="urlextern" target="_blank" title="http://zadig.akeo.ie" rel="ugc nofollow noopener">zadig</a> para la versión de Win correspondiente, para que OpenOCD pueda funcionar correctamente. Debe ir al menú &#039;Options⇒List All Devices&#039;, elegir &#039;USB Serial Converter A&#039; y cambiar el driver nuevo a &#039;WinUSB&#039;, para luego hacer click en &#039;Reinstall Driver&#039;, tal como se ve aquí:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:openocd&amp;media=desarrollo:firmware:driver_winusb_zadig_ft2232h.png.html" class="media" title="desarrollo:firmware:driver_winusb_zadig_ft2232h.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:driver_winusb_zadig_ft2232h.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+Finalmente 1 de los 2 puertos COM virtuales debería desaparecer, y se crea un dispositivo USB nuevo cuyo driver dejó de ser el de FTDI, quedando todo de la siguiente manera:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:openocd&amp;media=desarrollo:firmware:driver_winusb_devmanager.png.html" class="media" title="desarrollo:firmware:driver_winusb_devmanager.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:driver_winusb_devmanager.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+<div class="plugin_note noteimportant"><strong>Nota:</strong> Si Falla Zadig, mostrando el mensaje “The driver installation failed.” entonces intente bajando una versión anterior de Zadig en el siguiente link: <a href="http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download" class="urlextern" target="_blank" title="http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download" rel="ugc nofollow noopener">http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download</a>
+<p>
+Esta solución fue encontrada en: <a href="https://github.com/pbatard/libwdi/issues/1" class="urlextern" target="_blank" title="https://github.com/pbatard/libwdi/issues/1" rel="ugc nofollow noopener">https://github.com/pbatard/libwdi/issues/1</a>
+</p>
+
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Windows&quot;,&quot;hid&quot;:&quot;windows&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:3,&quot;range&quot;:&quot;1503-3560&quot;} -->
+<h2 class="sectionedit4" id="osx">OSX</h2>
+<div class="level2">
+<div class="plugin_note noteimportant">Completar
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSX&quot;,&quot;hid&quot;:&quot;osx&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:4,&quot;range&quot;:&quot;3561-&quot;} --></div>
+</body>
+</html>

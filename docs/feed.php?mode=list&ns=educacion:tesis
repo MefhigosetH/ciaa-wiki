@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> educacion:tesis</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:05:07+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:propuestas_de_tesis&amp;rev=1520377811&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_en_curso&amp;rev=1520374063&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_finalizadas&amp;rev=1520374939&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:propuestas_de_tesis&amp;rev=1520377811&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-06T23:10:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:tesis:propuestas_de_tesis</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:propuestas_de_tesis&amp;rev=1520377811&amp;do=diff</link>
+        <description>Propuestas de Tesis y Proyecto final de carrera
+En el mes de abril de 2016 lanzaremos una nueva búsqueda de estudiantes que quieran desarrollar su tesis o trabajo final de carrera en relación con el Proyecto CIAA. Esta búsqueda será canalizada a través de la lista de correos</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_en_curso&amp;rev=1520374063&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-06T22:07:43+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:tesis:tesis_en_curso</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_en_curso&amp;rev=1520374063&amp;do=diff</link>
+        <description>Tesis y Proyectos Finales en curso
+Ya se encuentran trabajando los primeros 7 estudiantes de ingeniería informática, electrónica y carreras afines, que realizan sus trabajos de Tesis y Proyecto Final de Carrera tomando como plataforma base la CIAA, contribuyendo así al crecimiento del</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_finalizadas&amp;rev=1520374939&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-06T22:22:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:tesis:tesis_finalizadas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis:tesis_finalizadas&amp;rev=1520374939&amp;do=diff</link>
+        <description>Tesis y Proyectos Finalizados
+Los siguientes son los trabajos finalizados de Tesis y Proyecto Final de Carrera que ya son parte del Proyecto CIAA: Nombre           Carrera y Universidad  Tema elegido  Tutor CIAA  Tutor Universidad  Fecha de finalización</description>
+    </item>
+</rdf:RDF>

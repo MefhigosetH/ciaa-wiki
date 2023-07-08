@@ -1,0 +1,37 @@
+===== Functional Tests (o Pruebas Funcionales) =====
+
+###
+A diferencia de los [[unit_tests|Unit Tests (o Pruebas Unitarias)]] los test Funcionales corren en el Hardware y son llevados a cabo desde una computadora (de ahora en mas [[desarrollo:firmware:functional_tests:testmaster|testmaster]]) desde la que se estimula y se testea el ciaaFirmware corriendo en el HW. La finalidad de los Test Funcionales son validar la integración y los requerimientos del ciaaFirmware en su conjunto.
+###
+
+###
+Para poder realizar la estimulación, el HW corre un ciaaFirmware con una aplicación especificada denominada [[desarrollo:firmware:functional_tests:testslave|testslave]]. Esta aplicación recibe los comandos enviados desde el [[desarrollo:firmware:functional_tests:testmaster|testmaster]] (computadora) y realiza operaciones definidas.
+###
+
+==== Configuración de testeo ====
+
+La siguiente figura muestra la configuración utilizada para testear el ciaaFirmware.
+
+{{test_funcional_y_de_integracion.png|}}
+
+lo que en la realidad se ve similar a:
+
+{{20140805_120331.jpg?direct&600|}}
+
+==== Testeando un Puerto ==== 
+
+###
+Por ejemplo, desde el testmaster pedimos que el HW abra o cierre un relé. El testmaster envía por MODBUS un comando para la testslave. La testslave recibe este pedido y lo lleva a cabo, en este caso cerrar o abrir el relé. Desde el testmaster se puede confirmar mediante una [[desarrollo:firmware:functional_tests:placa_i_o|placa I/O]] si la operación fue llevada a cabo de forma correcta.
+###
+
+Las pruebas funcionales a la versión liberada (release 0.2.0) se están realizando sobre el banco de prueba que se muestra en la siguiente imagen:
+
+{{bancopruebasfuncionales.jpg?600|}}
+
+La aplicación que corre en PC (Test Application) va enviando distintos comandos a la CIAA utilizando el protocolo MODBUS, y obtiene el resultado de la acción solicitada leyendo por línea serie la información desde la IO Board.
+Con esta aplicación se prevé hacer distintas pruebas funcionales, como ser:
+  * Acciones previstas
+  * Solicitudes erróneas
+  * Mediciones de velocidad de respuesta, carga aceptable, etc.
+Toda esta información se guarda en archivo para su posterior análisis
+  

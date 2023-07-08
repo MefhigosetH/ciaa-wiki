@@ -1,0 +1,7 @@
+====== Firmware Layers ======
+
+El Firmware de la ciaa esta programado en 4 capas:
+  * **Aplicación**: es la aplicación que corre sobre el Firmware. Por ejemplo para convertir la ciaa en un PLC se deben cargar las aplicaciones ciaaProgramming y ciaaLadder.
+  * **Service Layer**: provee distintos servicios a la aplicación. por ejemplo una interfaz RTOS y POSIX Like.
+  * **Interface Layer**: permite abstraer la mayor cantidad de funcionalidad de los drivers a esta capa. La finalidad de esta capa es permitir que la capa de drivers sea lo más fina posible, permitiendo portar el Firmware a nuevas plataformas de forma rápida y sencilla reutilizando la mayor porción de código.
+  * **Driver Layer**: es la capa del Firmware que depende del HW y debe ser reprogramada para cada arquitectura.

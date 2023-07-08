@@ -1,0 +1,236 @@
+====== Computadora Industrial Abierta Argentina (CIAA) ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+###
+The **CIAA Project** was born in the year 2013 as a **group initiative between the academic and the industrial sector**, represented by [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|ACSE]] and [[http://www.cadieel.org.ar/esp/index.php|CADIEEL]], respectively.
+###
+
+The **CIAA Goals** are:
+  - To motivate the national technological development.
+  - To give positive visibility to Argentinean electronics.
+  - To genereate structural changes in the way knowdeledge is developed and used.
+
+###
+All of this in an **open, collaborative and articulated framework** between industry and Academics.
+###
+
+{{ :blanco.png?50 | }}
+
+===== Main Milesontes and Achievements by the CIAA Project =====
+
+###
+To achieve the goals the first step was to articulate the work of dozens of [[proyecto:aportes_instituciones|Institutions]], [[:aportes_universidades|Universities]], [[:aportes_pymes|Companies]] and [[:aportes_desarrolladores|Developers]] to desing CIAA´s first version, denominated [[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|CIAA-NXP]], for being based in a processor manufactured by NXP Semiconductors:
+###
+
+{{:imagen_portada_1.png?&360|}} {{:imagen_portada_2.png?&290|}}
+
+{{ :blanco.png?20 | }}
+
+
+###
+The CIAA-NXP model is the **first and only computer in the world that gathers two features**:
+###
+  - To be **industrial**, since its design is prepared for the confiability, temperature, vibrations, electromagnetic noise, tensions, shortcircuits and so on and on that [[industria:ciaa_en_empresas|industrial products and process demand]].
+  - To be **open**, since all the information about its hardware, firmware, software and so on, is openly available in internet under [[:proyecto:licencia_CIAA|BSD license]], to be used as anyone wants to.
+
+
+###
+To advance furthermore **CIAA versions were developed based in other brands microprocessors** such as [[:desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio|CIAA-FSL]], [[:desarrollo:hardware:ciaa_intel:ciaa_intel_inicio|CIAA-INTEL]] and [[:desarrollo:hardware:ciaa_pic:ciaa_pic_inicio|CIAA-PIC]].
+###
+
+###
+As a consequence, the CIAA besides being the first industrial open computer, is also **the first really open computer in the world**; since its design is no longer tied up to the processors of a determined company as it happens with other open computers.
+###
+
+###
+The CIAA is [[:proyecto:comprar|manufactured and comercialized]] by different argentinean companies, to which can be summed many more, with no limitation, since its design is free and open, to the point at which any interested party can manufacture their own version of the platform.
+###
+
+###
+It must not to be lost out of sight that the CIAA project is much more than [[:desarrollo:hardware|hardware]], since it includes an [[:desarrollo:software-ide|IDE environment]] for [[:desarrollo:firmware|Programming in C languange]], [[:desarrollo:linux|Linux]] Support, a [[:desarrollo:software-plc|PLC languange programming environment]], a [[:desarrollo:gabinete|case]] design and the first designs of some of its [[:desarrollo:microelectronica|integrated circuits]].
+###
+
+###
+Besides, a educational version of the platform, the [[:desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]], more simple and of lesser cost has been designed, to achieve an **impact in Primary, Highschool and universty level education**:
+###
+
+{{ :versiones:educiaav1_0:hardware:edu_ciaa_nxp:34-Finales.jpg?450 }}
+
+###
+The EDU-CIAA is being sold all over the country through the denominated [[:proyecto:pre-venta_edu-ciaa|Presales]], whcih are organized by the [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|ACSE]], [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse/|Red RUSE]], [[http://www.confedi.org.ar/|CONFEDI]] and the [[http://www.cadieel.org.ar/esp/index.php|CADIEEL]] support.
+###
+
+###
+The different verisons of the **EDU-CIAA use the same processors and programs than the CIAA** so, **the students learn to resolve real problems**; and can apply their knowledge when working at **technological environments or at their own Entrepreneurship**.
+###
+
+###
+For all of this achivementes the CIAA project was recognized with importants [[:difusion:premios|awards and recognitions]], ammong them the **INNOVAR award 2014** in the category "Innovative Product" and the **Sadosky foundation award** for "colaborative investigation between Industry and Academics" not to mention [[http://www.diputados.gov.ar/proyectos/proyecto.jsp?id=168457|being declared of national interest by the Honorable Congress of the Nation]].
+###
+
+{{ ..:INNOVAR_2.jpg?&480 }}
+
+###
+The goal of giving postive visibility to Argentinean electronics was achieved since [[:vinculacion:Medios|the CIAA was addressed in an infinity of journalistic articles]] and present in massive events, such as the launch of the CIAA project at a 10.000 people auditorium; [[http://www.tedxriodelaplata.org/eventos/tedxr%C3%ADodelaplata-2014|TEDxRiodelaplata 2014]] and [[https://www.youtube.com/watch?v=jzXiX_xqhJ4|the flight of the CIAAcopter at the Marambio Base Antartida]] with broad national repercusion.
+###
+
+{{ ..:TEDx_CIAA2.jpg?&480 }}
+
+{{ :blanco.png?50 | }}
+
+===== Líneas actuales de trabajo =====
+
+###
+**El Proyecto CIAA es mucho más que diseñar distintas versiones de una computadora** y mostrar casos de éxito en su aplicación. Entre los objetivos del proyecto está el de "generar cambios estructurales en la forma en la que se desarrollan y utilizan los conocimientos" y el de "impulsar el desarrollo tecnológico nacional". 
+###
+
+###
+Por eso se está trabajando con distintos Ministerios, Instituciones, Empresas, Universidades, Escuelas, etc, **para introducir nuevas metodologías en el dearrollo de productos y procesos productivos de las industrias** y para lograr el **desarrollo de importantes capacidades tecnológicas en la educación**. 
+###
+
+###
+Para abordar el sector industrial se cuenta con el apoyo del Ministerio de Ciencia, Tecnologìa e Innovación Productiva (MinCyT), que lanzó una [[http://www.mincyt.gob.ar/convocatoria/proyectos-de-innovacion-desarrollo-y-adopcion-de-la-computadora-industrial-abierta-argentina-ciaa-10929|convocatoria para apoyar proyectos basados en la CIAA]]. Además se está trabajando en la creación y puesta en marcha del [[https://www.dropbox.com/s/086r5m0i5mwti2f/SistemasCriticosyCETEM.pdf?dl=0|Centro Tecnológico Metalúrgico (CETEM)]], que brindará a las industrias soporte en el desarrollo de sistemas electrónicos y sistemas críticos.
+###
+
+###
+Para impulsar la [[educacion|inserción de la CIAA en el sistema educativo]] se conformó la [[vinculacion:contactos_locales|Red Federal de Contactos Locales]], con casi 60 representantes en 22 de las 24 provincias argentinas, gracias al apoyo de la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse/|Red RUSE]] del [[http://www.confedi.org.ar/|CONFEDI]], y actualmente se trabaja en articulación con diversas instituciones estatales.
+###
+
+###
+A la vez, pensando en desarrollos cada vez más complejos, se está avanzando en nuevos diseños de la CIAA, orientados a [[https://www.dropbox.com/s/6hpcxti8t2u2p82/FormularioPDTS.pdf?dl=0|sistemas críticos]] y a aplicaciones de [[https://www.dropbox.com/s/7dfh40mpd6dmhsz/PICT%202014%20-%20Categoria%20IIB%20-%20Descripcion%20Tecnica.pdf?dl=0|alta capacidad de computo]].
+###
+
+###
+Los interesados en recibir novedades sobre el Proyecto CIAA pueden suscribirse a la 
+[[https://groups.google.com/group/embebidos32/subscribe|la lista de correos con más de 3000 desarrolladores]] y también pueden participar en cualquiera de las áreas de desarrollo del proyecto: [[desarrollo:firmware|Firmware]], [[desarrollo:gabinete|Gabinete]], [[desarrollo:hardware|Hardware]], [[desarrollo:linux|Linux]], [[desarrollo:microelectronica|Microelectrónica]], [[desarrollo:sistema|Sistema]], [[desarrollo:software-ide|Software-IDE]], [[desarrollo:software-plc|Software-PLC]],  [[desarrollo:testing|Testing]]. 
+###
+
+{{ :blanco.png?50 | }}
+
+===== Empresas e instituciones que participan en el desarrollo de la CIAA =====
+
+El Proyecto CIAA es posible gracias a empresas e instituciones aportan horas de trabajo, insumos y fabricación de prototipos, a lo que se suma el aporte de diseños y códigos de desarrolladores independientes, totalizando así el equivalente a más de 15 millones de pesos argentinos:
+
+[[http://www.cadieel.org.ar/|{{:blanco.png?100}}]]
+[[http://www.cadieel.org.ar/|{{:cadieel_logos02-01.jpg?150}}]]
+[[http://www.cadieel.org.ar/|{{:blanco.png?25}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:blanco.png?25}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:acse.jpg?260}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:blanco.png?50}}]]
+
+[[http://www.fi.uba.ar/|{{:blanco.png?80}}]]
+[[http://www.fi.uba.ar/|{{:logo_FIUBA.png?180}}]]
+[[http://www.fi.uba.ar/|{{:blanco.png?30}}]]
+[[http://www.frba.utn.edu.ar/|{{:blanco.png?30}}]]
+[[http://www.frba.utn.edu.ar/|{{:logo_utn_frba.png?250}}]]
+[[http://www.frba.utn.edu.ar/|{{:blanco.png?20}}]]
+
+[[http://www.inti.gob.ar/|{{:blanco.png?50}}]]
+[[http://www.inti.gob.ar/|{{:354px-INTI.svg.png?65}}]]
+[[http://www.inti.gob.ar/|{{:blanco.png?20}}]]
+[[http://www.uner.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.uner.edu.ar/|{{:logo_UNER.png?100}}]]
+[[http://www.uner.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.unlp.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.unlp.edu.ar/|{{:UNLP.png?130}}]]
+[[http://www.unlp.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.diec.uns.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.diec.uns.edu.ar/|{{:Logo_DIEC_vertical.png?90}}]]
+[[http://www.diec.uns.edu.ar/|{{:blanco.png?30}}]]
+
+[[http://www.uncoma.edu.ar/|{{:blanco.png?35}}]]
+[[http://www.uncoma.edu.ar/|{{:UNCOMA.png?70}}]]
+[[http://www.uncoma.edu.ar/|{{:blanco.png?20}}]]
+[[http://web.fceia.unr.edu.ar/|{{:blanco.png?20}}]]
+[[http://web.fceia.unr.edu.ar/|{{:FCEIA.png?140}}]]
+[[http://web.fceia.unr.edu.ar/|{{:blanco.png?30}}]]
+[[http://www.unq.edu.ar/|{{:blanco.png?10}}]]
+[[http://www.unq.edu.ar/|{{:logoUNQ.png?140}}]]
+[[http://www.unq.edu.ar/|{{:blanco.png?10}}]]
+[[http://www.unca.edu.ar/|{{:blanco.png?20}}]]
+[[http://www.unca.edu.ar/|{{:UNCA.png?70}}]]
+[[http://www.unca.edu.ar/|{{:blanco.png?30}}]]
+
+[[http://www.nablaenergia.com.ar/|{{:blanco.png?20}}]]
+[[http://www.nablaenergia.com.ar/|{{:NablaEnergia.png?200}}]]
+[[http://www.nablaenergia.com.ar/|{{:blanco.png?10}}]]
+[[http://www.adox.com.ar/|{{:blanco.png?10}}]]
+[[http://www.adox.com.ar/|{{:adox_1.png?140}}]]
+[[http://www.adox.com.ar/|{{:blanco.png?10}}]]
+[[http://www.elemon.com.ar/elemon/|{{:blanco.png?10}}]]
+[[http://www.elemon.com.ar/elemon/|{{:Elemon.png?180}}]]
+[[http://www.elemon.com.ar/elemon/|{{:blanco.png?10}}]]
+
+[[http://www.arrowar.com/iweb/|{{:blanco.png?30}}]]
+[[http://www.arrowar.com/iweb/|{{:arrow.png?140}}]]
+[[http://www.arrowar.com/iweb/|{{:blanco.png?30}}]]
+[[http://www.suremptec.com/|{{:blanco.png?30}}]]
+[[http://www.suremptec.com/|{{:SUR_horizontal_res-media.png?140}}]]
+[[http://www.suremptec.com/|{{:blanco.png?30}}]]
+[[http://www.asembli.com/|{{:blanco.png?30}}]]
+[[http://www.asembli.com/|{{:Asembli.PNG?180}}]]
+[[http://www.asembli.com/|{{:blanco.png?30}}]]
+
+[[http://www.emtech.com.ar/|{{:blanco.png?10}}]]
+[[http://www.emtech.com.ar/|{{:emtech.png?190}}]]
+[[http://www.emtech.com.ar/|{{:blanco.png?10}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{:blanco.png?10}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{:GSTR.png?80}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{:blanco.png?10}}]]
+[[http://www.unt.edu.ar/|{{:blanco.png?10}}]]
+[[http://www.unt.edu.ar/|{{:UNT.png?100}}]]
+[[http://www.unt.edu.ar/|{{:blanco.png?10}}]]
+[[http://www.assisi.com.ar/|{{:blanco.png?10}}]]
+[[http://www.assisi.com.ar/|{{:Assisi.png?180}}]]
+[[http://www.assisi.com.ar/|{{:blanco.png?10}}]]
+
+[[https://www.unaj.edu.ar/|{{:blanco.png?50}}]]
+[[https://www.unaj.edu.ar/|{{:UNAJ.png?200}}]]
+[[https://www.unaj.edu.ar/|{{:blanco.png?30}}]]
+[[http://www.electrocomponentes.com/|{{:blanco.png?5}}]]
+[[http://www.electrocomponentes.com/|{{:Electrocomponentes.png?150}}]]
+[[http://www.electrocomponentes.com/|{{:blanco.png?5}}]]
+[[http://www.numetron.com.ar/|{{:blanco.png?15}}]]
+[[http://www.numetron.com.ar/|{{:LogoNumetron_Normal.png?160}}]]
+[[http://www.numetron.com.ar/|{{:blanco.png?15}}]]
+
+[[http://www.grupoalaska.com.ar|{{:blanco.png?30}}]]
+[[http://www.grupoalaska.com.ar|{{:GrupoAlaska_logo.png?150}}]]
+[[http://www.grupoalaska.com.ar|{{:blanco.png?30}}]]
+[[http://ide4plc.wordpress.com/|{{:blanco.png?30}}]]
+[[http://ide4plc.wordpress.com/|{{:logoIDE4PLC.png?150}}]]
+[[http://ide4plc.wordpress.com/|{{:blanco.png?30}}]]
+[[http://www.trimaker.com/|{{:blanco.png?30}}]]
+[[http://www.trimaker.com/|{{:Logo Trimaker.png?180}}]]
+[[http://www.trimaker.com/|{{:blanco.png?30}}]]
+
+[[http://www.dai-ichi.com.ar/|{{:blanco.png?10}}]]
+[[http://www.dai-ichi.com.ar/|{{:logo_dai_ichi.png?280}}]]
+[[http://www.dai-ichi.com.ar/|{{:blanco.png?5}}]]
+{{:blanco.png?30|Vortex Technologies}}
+{{:logo_vortex.png?60|Vortex Technologies}}
+{{:blanco.png?20|Vortex Technologies}}
+[[http://www.globallogic.com.ar/|{{:blanco.png?20}}]]
+[[http://www.globallogic.com.ar/|{{:GlobalLogic.png?220}}]]
+[[http://www.globallogic.com.ar/|{{:blanco.png?30}}]]
+
+[[http://www.mayerpcb.com/|{{:blanco.png?20}}]]
+[[http://www.mayerpcb.com/|{{:Mayer.png?220}}]]
+[[http://www.mayerpcb.com/|{{:blanco.png?20}}]]
+[[http://www.chillemihnos.com.ar/|{{:blanco.png?20}}]]
+[[http://www.chillemihnos.com.ar/|{{:chillemi.png?80}}]]
+[[http://www.chillemihnos.com.ar/|{{:blanco.png?20}}]]
+[[http://www.vanguardiasur.com.ar|{{:blanco.png?20}}]]
+[[http://www.vanguardiasur.com.ar|{{:vanguardiasur-logo.png?200}}]]
+[[http://www.vanguardiasur.com.ar|{{:blanco.png?20}}]]
+
+[[http://www.debtech.com.ar/|{{:blanco.png?100}}]]
+[[http://www.debtech.com.ar/|{{:debtech_1.png?130}}]]
+[[http://www.debtech.com.ar/|{{:blanco.png?50}}]]
+[[http://inarci.com/|{{:blanco.png?50}}]]
+[[http://inarci.com/|{{:inarci_logo.png?160}}]]
+[[http://inarci.com/|{{:blanco.png?50}}]]
+
+{{ :blanco.png?50 | }}

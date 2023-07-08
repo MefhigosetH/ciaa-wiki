@@ -1,0 +1,8 @@
+=== CIAA-NUCLEO-FSL ===
+{{:desarrollo:ciaa_nucleo_fsl.jpg?direct&200 |}} La CIAA-NUCLEO-FSL es una versión minimalista y modular de la CIAA-FSL pensada como módulo de procesamiento para aplicaciones de bajo costo que requieran una conexión Ethernet. Posee conectores de expansión tipo pinera simple para poder agregarle fácilmente electrónica adicional específica de cada aplicación.
+\\
+\\
+\\
+\\
+
+| **Requerimientos** | **Diagrama Esquemático** | <fc #777777>Circuito Impreso</fc> | <fc #777777>Prototipo Preliminar</fc> | <fc #777777>Versión Final</fc> |

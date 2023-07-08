@@ -1,0 +1,10 @@
+Testing https://github.com/ciaa/Firmware/commits/0.3.0_rc1
+
+^ Testeado de ^ commit ^ win ^ mac os ^ linux ^ ciaa-nxp ^ edu-ciaa ^ comments ^
+| adc_dac | |  <fc #ff0000>FAILED (ErrorHook)</fc>| | <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| | |
+| blinking | | <fc #008000>PASSED</fc>| | <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| | |
+| blinking_echo | | <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| | |
+| blinking_lwip | | <fc #ff0000>FAILED (Compile)</fc>| | <fc #ff0000>FAILED (Compile)</fc>| <fc #008000>PASSED</fc> | | @Pablo: works? |
+| blinking_modbus | | | | <fc #008000>PASSED</fc>| <fc #008000>PASSED</fc>| |modes availables: Modbus Slave (functios: 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x0F, 0x10, 0x17), Modbus ASCII |
+| rtos tests | | <fc #008000>PASSED</fc>| | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/commit/d300db68cf07e3c5524cf03fc266dff01de2a0e1|Github]] [[http://ciaa1.uns.edu.ar/jenkins/job/RTOS_x64/14/|Jenkins]] | <fc #008000>PASSED</fc>| | |
+| unit tests | | | | | n.a. | n.a. | |

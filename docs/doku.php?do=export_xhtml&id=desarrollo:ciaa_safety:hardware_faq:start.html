@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_safety:hardware_faq:start</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_safety,hardware_faq,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_safety:hardware_faq:start&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_safety:hardware_faq"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_safety:hardware_faq:start.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_safety:hardware_faq:start"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_safety:hardware_faq:start.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_safety:hardware_faq';var JSINFO = {"id":"desarrollo:ciaa_safety:hardware_faq:start","namespace":"desarrollo:ciaa_safety:hardware_faq","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="preguntas_frecuentes_acerca_del_prototipo_ciaa-safety">Preguntas frecuentes acerca del prototipo CIAA-Safety</h1>
+<div class="level1">
+
+<p>
+<strong>¿La CIAA Safety está certificada?</strong>
+</p>
+
+<p>
+El proyecto contempla el desarrollo de un prototipo CIAA Safety certificable, no certificado. ¿Qué significa esto? que el prototipo va a contar con todos los aspectos básicos para llevar adelante el proceso de certificación de acuerdo al ámbito en el que se va a aplicar.
+Por ejemplo, si se va a utilizar para la industria y se necesita certificar SIL3 de acuerdo con IEC 61508, el prototipo va a ser probado de manera voluntaria y cumplir con los requerimientos esenciales.
+Para ello se seleccionó un MCU certificado SIL3: <a href="http://example.com" class="urlextern" target="_blank" title="http://example.com" rel="ugc nofollow noopener">Ver certificación TÜV SÜD para TMS570LS12x</a>
+</p>
+
+<p>
+<strong>¿El MCU TMS570 tiene poca Memoria RAM?</strong>
+</p>
+
+<p>
+La familia de MCU TI Hercules TMS570 tiene relativamente poca memoria RAM. Lamentablemente el encapsulado seleccionado (TMS570LS12x) no dispone de controlador EMC o EMIF para ampliarla, pero se considera que esta primera versión debe cumplir con el objetivo de atender o resolver aplicaciones críticas sencillas, próximas versiones incorporarán esas características. Además debido a esta limitación de memoria se aclara que no se considera ejecutar un sistema operativo como GNU/Linux debido a que no es aplicable a entornos críticos.
+</p>
+
+<p>
+<strong>¿Por qué utilizar ARM Cortex R4 y no un ARM Cortex R5?</strong>
+</p>
+
+<p>
+Los procesadores ARM Cortex R5 son similares a los ARM Cortex R4 con un pipeline mejorado, tienen mejores características, mejores buses para multiproceso, más caché, etc. ¡Pero por el momento son BGA! que no quita que en un futuro se puedan emplear o que podamos indagar con este formato. Uno de los posibles casos de uso de la CIAA Safety son aplicaciones aeronáuticas y en este dominio emplear un BGA tiene sus inconvenientes. Uno de estos inconvenientes es la “dilatación térmica”, las bolas de soldadura de estos componentes no son muy flexibles. Al igual que todos los dispositivos de montaje superficial, hay flexión, debido a una diferencia en el Coeficiente de Dilatación Térmica entre el sustrato PCB y BGA (estrés térmico), o la flexión y la vibración (tensión mecánica) puede que las uniones soldadas se fracturen.
+</p>
+
+<p>
+Fuente: 
+<a href="http://www.od-lambda.com/2010/01/soldadura-smd-y-bga.html" class="urlextern" target="_blank" title="http://www.od-lambda.com/2010/01/soldadura-smd-y-bga.html" rel="ugc nofollow noopener">http://www.od-lambda.com/2010/01/soldadura-smd-y-bga.html</a>
+</p>
+
+<p>
+En definitiva una de las causas (entre otros) de estas roturas se producen por cambios de temperatura bruscos y recordemos que cuando un avión vuela sufre cambio de temperaturas y vibraciones en lapsos de tiempos muy cortos. Por lo anterior no se considera la tecnología BGA para este prototipo. 
+</p>
+
+<p>
+<strong>¿La CIAA-Safety podrá conectarse a otras CIAA?</strong>
+</p>
+
+<p>
+La CIAA-Safety podrá conectarse a otras CIAA a través de sus periféricos de comunicaciones (Ethernet, CAN, etc) no compartiendo el mismo lugar físico y también podrá conectarse en una misma estructura siempre y cuando estas estén diseñadas con él o una variación del factor de forma PC/104. Por ejemplo la CIAA ACC que aunque sus conectores sean del tipo PCIe-104, tendrá conectividad a través del Modulo de Expansión o Conexión en el cual contemple ambos conectores (PCI y PCIe).
+</p>
+
+</div>
+</div>
+</body>
+</html>

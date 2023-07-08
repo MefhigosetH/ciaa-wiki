@@ -1,0 +1,45 @@
+====== Grabando el firmware en la placa ======
+
+El primer paso es grabar el firmware en la EDU-CIAA, para ello necesitamos compilar el proyecto y tener funcionando OpenOCD para poder grabarlo en la placa, la misma la conectaremos por el conector USB-debug.
+
+===== Configurando entorno de desarrollo =====
+
+Para configurar el entorno de trabajo con el compilador y OpenOCD, leer el siguiente tutorial 
+
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux|Configuración del entorno de desarrollo (Linux)]].
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows|Configuración del entorno de desarrollo (Windows)]].
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx|Configuración del entorno de desarrollo (OSX/MacOS)]]
+
+<note important>Todos los comandos deberán ejecutarse como root</note>
+
+Instalamos git y zip en el sistema:
+  $ aptitude install git 
+  $ aptitude install zip 
+
+===== Clonando el repositorio del firmware =====
+
+Luego debemos clonar el repositorio del proyecto micropython para la EDU-CIAA creado por Martín Ribelotta:
+
+  $ git clone https://github.com/martinribelotta/micropython.git
+  $ cd micropython
+
+<note warning>NOTA: El repositorio anterior puede no ser estable debido a que el proyecto se encuentra en desarrollo. Para utilizar la última versión estable del proyecto, se puede clonar el siguiente repositorio en lugar del anterior:</note>
+
+  $ git clone https://github.com/ernesto-g/micropython.git
+  $ cd micropython
+  $ git checkout cese  
+
+===== Compilando y grabando el firmware =====
+
+Ingresamos al directorio ciaa-nxp y compilamos el proyecto
+
+  $ cd ciaa-nxp
+  $ make
+
+Conectamos la placa por el conector USB de debug y grabamos el firmware generado mediante el comando:
+
+  $ make download
+
+<note tip>
+[[desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar|El firmware ya esta grabado en la placa, continuar]]
+</note>

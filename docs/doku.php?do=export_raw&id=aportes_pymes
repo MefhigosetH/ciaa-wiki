@@ -1,0 +1,60 @@
+====== Aportes de las PyMEs ======
+###
+Además de contar con el apoyo de universidades e instituciones de todo el país, el Proyecto CIAA es posible gracias al impulso de decenas de pequeñas y medianas empresas (PyMEs) argentinas, que aportaron trabajo, servicios y productos para el desarrollo de la CIAA:
+###
+
+=== Diseño y desarrollo de la CIAA ===
+^ Empresa            ^ Aporte                                    ^ Estado      ^ Ubicación              ^
+| DebTech            | Hosting 1 año Web Wiki CIAA               | Realizado   | Ciudad de Buenos Aires |
+| Elemon             | Hardware CIAA-PIC                         | Realizado   | Ciudad de Buenos Aires |
+| Emtech             | Hardware CIAA-NXP                         | Realizado   | Bariloche, Río Negro   |
+| :::                | Linux                                     | Realizado   | :::                    |
+| :::                | Software-IDE                              | Realizado   | :::                    |
+| :::                | Sistema                                   | Realizado   | :::                    |
+| NablaEnergía       | Hardware CIAA-PIC                         | Realizado   | Ciudad de Buenos Aires |
+| Numetrón           | Hardware CIAA-NXP                         | Realizado   | Ciudad de Buenos Aires |
+| :::                | Firmware                                  | Realizado   | :::                    |
+| :::                | Software-IDE                              | Realizado   | :::                    |
+| Sur Emprendimientos Tecnológicos | Sistema                     | Realizado   | Ciudad de Buenos Aires |
+| VanguardiaSur      | Linux                                     | Realizado   | Rosario, Santa Fe      |
+
+
+=== Fabricantes de circuitos impresos ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Dai Ichi           | 6 PCBs (4 capas) para CIAA-NXP  | Realizado    | Ciudad de Buenos Aires       |
+| Ernesto Mayer      | 6 PCBs (4 capas) para CIAA-FSL  | Realizado    | Vicente López (Buenos Aires) |
+| Inarci             | 6 PCBs (2 capas) maqueta CIAA   | Realizado    | Ciudad de Buenos Aires       |
+| :::                | 6 PCBs (4 capas) para CIAA-NXP  | Realizado    | :::                          | 
+
+
+=== Distribuidores de componentes ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Arrow Argentina    | Componentes maqueta CIAA	       | Realizado    |	Ciudad de Buenos Aires       |
+| Electrocomponentes | Componentes maqueta CIAA        | Realizado    |	Ciudad de Buenos Aires       |
+| :::                | Componentes para 8 CIAA-FSL     | Comprometido | :::                          | 	
+| Elemon             | Componentes para 8 CIAA-PIC     | Comprometido | Ciudad de Buenos Aires       |
+
+
+=== Armadores de placas electrónicas ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Asembli            | Armado de 6 CIAA-FSL            | Realizado    | Ciudad de Buenos Aires       |
+| Assisi             | Armado de maqueta CIAA          | Realizado    |	Ciudad de Buenos Aires       |
+| :::                | Armado de 6 CIAA-NXP	       | Realizado    | :::                          |
+| Electronica Arlia  | Armado de 6 CIAAs               | Comprometido | Ciudad de Buenos Aires       |
+
+
+=== Fabricantes de equipos y sistemas electrónicos ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Adox               | Impresión 1 gabinete CIAA       | Realizado    |	Ituzaingo (Buenos Aires)     |
+| :::                | Componentes para 6 CIAA-NXP     | Realizado    | :::                          |
+
+
+=== Fabricantes de gabinetes ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Chillemi Hnos      | 4 gabinetes 840t                | Realizado    |	Bernal (Buenos Aires)        |
+
+
+=== Imprentas 3D ===
+^ Empresa            ^ Aporte                          ^ Estado       ^ Ubicación                    ^
+| Trimaker           | Impresión 1 gabinete CIAA       | Realizado    |	Ciudad de Buenos Aires       |
+| ZAxis              | Impresión 2 gabinetes CIAA      | Comprometido |	Ciudad de Buenos Aires       |

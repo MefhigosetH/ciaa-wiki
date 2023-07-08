@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>borradores:micropython_instalar</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="borradores,micropython_instalar"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=borradores:micropython_instalar&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=borradores"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=borradores:micropython_instalar"/>
+<link rel="canonical" href="./doku.php%3Fid=borradores:micropython_instalar.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='borradores';var JSINFO = {"id":"borradores:micropython_instalar","namespace":"borradores","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html#instalacion_de_micropython">Instalación de micropython</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html#clonando_el_repositorio_del_firmware">Clonando el repositorio del firmware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html#compilando_y_grabando_el_firmware">Compilando y grabando el firmware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html#utilizacion_del_ide_beta">Utilización del IDE (beta)</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:micropython_instalar.html#programando_un_script_de_python">Programando un script de python</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="instalacion_de_micropython">Instalación de micropython</h1>
+<div class="level1">
+
+<p>
+Micropython requiere de un programa anfitrión instalado en la placa, que cumple dos funciones:
+</p>
+<ul>
+<li class="level1"><div class="li"> Interprete de python vía la terminal serial</div>
+</li>
+<li class="level1"><div class="li"> Ejecución autónoma de un programa python almacenado en la placa </div>
+</li>
+</ul>
+
+<p>
+Para ambos casos, hay que instalar y configurar:
+</p>
+<ul>
+<li class="level1"><div class="li"> El compilador (link)</div>
+</li>
+<li class="level1"><div class="li"> Los drivers (link)</div>
+</li>
+<li class="level1"><div class="li"> La <a href="./doku.php%3Fid=repo:conexion:edu_ciaa_nxp.html" class="wikilink1" title="repo:conexion:edu_ciaa_nxp" data-wiki-id="repo:conexion:edu_ciaa_nxp">conexión</a></div>
+</li>
+<li class="level1"><div class="li"> La <a href="./doku.php%3Fid=repo:instalacion:terminales.html" class="wikilink1" title="repo:instalacion:terminales" data-wiki-id="repo:instalacion:terminales">comunicación</a></div>
+</li>
+</ul>
+
+<p>
+En linux puede hacer falta instalar zip <em><strong>nota: lo dejé pero no sé si es necesario</strong></em>:
+</p>
+<pre class="code bash">  $ <span class="kw2">sudo</span> <span class="kw2">aptitude install</span> <span class="kw2">zip</span> </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n de micropython&quot;,&quot;hid&quot;:&quot;instalacion_de_micropython&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-606&quot;} -->
+<h2 class="sectionedit2" id="clonando_el_repositorio_del_firmware">Clonando el repositorio del firmware</h2>
+<div class="level2">
+
+<p>
+El repositorio oficial de micropython para la EDU-CIAA es <a href="lib/exe/fetch.php%3Ftok=969a43&amp;media=https:%252F%252Fgithub.com%252Fmartinribelotta%252Fmicropython.html" class="media mediafile mf_com_martinribelotta_micropython" title="https://github.com/martinribelotta/micropython">https://github.com/martinribelotta/micropython</a>, creado por Martín Ribelotta. Las versiones más estables suelen estar en <a href="lib/exe/fetch.php%3Ftok=80ff80&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Fmicropython.html" class="media mediafile mf_com_ernesto-g_micropython" title="https://github.com/ernesto-g/micropython">https://github.com/ernesto-g/micropython</a>, mantenido por Ernesto Gigliotti.
+</p>
+
+<p>
+Para clonar el repositorio del proyecto micropython para la EDU-CIAA hay que ejecutar
+</p>
+<pre class="code bash">$ <span class="kw2">git clone</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>ernesto-g<span class="sy0">/</span>micropython.git
+$ <span class="kw3">cd</span> micropython
+$ <span class="kw2">git checkout</span> frozen</pre>
+
+<p>
+Si deseamos colaborar con el proyecto, entonces mejor clonar el oficial:
+</p>
+<pre class="code bash">$ <span class="kw2">git clone</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>martinribelotta<span class="sy0">/</span>micropython.git
+$ <span class="kw3">cd</span> micropython</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Clonando el repositorio del firmware&quot;,&quot;hid&quot;:&quot;clonando_el_repositorio_del_firmware&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:2,&quot;range&quot;:&quot;607-1385&quot;} -->
+<h2 class="sectionedit3" id="compilando_y_grabando_el_firmware">Compilando y grabando el firmware</h2>
+<div class="level2">
+
+<p>
+Ingresamos al directorio ciaa-nxp y compilamos el proyecto:
+</p>
+<pre class="code bash">$ <span class="kw3">cd</span> ciaa-nxp
+$ <span class="kw2">make</span></pre>
+
+<p>
+Grabamos el firmware generado mediante el comando:
+</p>
+<pre class="code bash"><span class="co4">$ </span><span class="kw2">make</span> download</pre>
+
+<p>
+Si se abre una terminal a la placa, deberíamos ver el prompt del intérprete:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=borradores:micropython_instalar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png"><img src="lib/exe/fetch.php%3Fw=700&amp;tok=413c4a&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png" class="media" loading="lazy" alt="" width="700" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilando y grabando el firmware&quot;,&quot;hid&quot;:&quot;compilando_y_grabando_el_firmware&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:3,&quot;range&quot;:&quot;1386-1775&quot;} -->
+<h2 class="sectionedit4" id="utilizacion_del_ide_beta">Utilización del IDE (beta)</h2>
+<div class="level2">
+
+<p>
+Existe un IDE simplificado que nos permite escribir el script de python y enviárselo a la placa, por otro lado se está trabajando en un IDE completo pero que todavía no es estable.
+</p>
+
+<p>
+Se puede obtener un instalador con todas las dependencias incluidas <a href="lib/exe/fetch.php%3Ftok=857690&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Feduciaa_python_editor%252Freleases.html" class="media mediafile mf_com_ernesto-g_educiaa_python_editor_releases" title="https://github.com/ernesto-g/educiaa_python_editor/releases">https://github.com/ernesto-g/educiaa_python_editor/releases</a> o tambien se puede clonar el <a href="lib/exe/fetch.php%3Ftok=de1ca8&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Feduciaa_python_editor.git.html" class="media mediafile mf_git" title="https://github.com/ernesto-g/educiaa_python_editor.git">repositorio</a> y resolver las dependencias especificadas. Para ver todas las opciones de instalación, lea el archivo <a href="lib/exe/fetch.php%3Ftok=b742b4&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Feduciaa_python_editor%252Fblob%252Fmaster%252FREADME.md" class="media mediafile mf_md" title="https://github.com/ernesto-g/educiaa_python_editor/blob/master/README.md">README.md</a>
+</p>
+
+<p>
+Al ejecutar el IDE deberemos ver el siguiente entorno de trabajo:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=borradores:micropython_instalar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide.png"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=d972fd&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide.png" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+</div>
+
+<h4 id="configuracion_de_puerto_serie">Configuración de puerto serie</h4>
+<div class="level4">
+
+<p>
+En el menú EDU-CIAA → Configuration → selecionamos el segundo de los puertos creados, y presionamos OK
+</p>
+
+</div>
+
+<h4 id="grabando_el_script_en_la_placa">Grabando el script en la placa</h4>
+<div class="level4">
+
+<p>
+Escribimos un pequeño script de prueba:
+</p>
+<pre class="code python"><span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Hello world&quot;</span><span class="br0">&#41;</span></pre>
+
+<p>
+Para grabar el script, mantenemos presionado el botón de reset en la placa y luego presionamos el botón “Load Script”. Aparecerá el siguiente diálogo de progreso:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=borradores:micropython_instalar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load.png"><img src="lib/exe/fetch.php%3Fw=450&amp;tok=e0e76b&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load.png" class="mediacenter" loading="lazy" alt="" width="450" /></a>
+</p>
+
+<p>
+Al soltar el botón de reset, se comenzará la copia del script.
+</p>
+
+</div>
+
+<h4 id="usando_la_terminal_del_ide">Usando la terminal del IDE</h4>
+<div class="level4">
+
+<p>
+La IDE nos provee una ventana la cual cumple la función de terminal. Para acceder a la consola de la placa desde el IDE, presionamos el botón “Terminal”. Al reiniciar la placa con el botón de reset veremos el mensaje de “Hello World” debido a la ejecución del script.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=borradores:micropython_instalar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=824221&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+</div>
+
+<h4 id="snippets">Snippets</h4>
+<div class="level4">
+
+<p>
+El IDE cuenta con pequeños programas de ejemplo (snippets) los cuales pueden agregarse al script para realizar las primeras pruebas con la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Utilizaci\u00f3n del IDE (beta)&quot;,&quot;hid&quot;:&quot;utilizacion_del_ide_beta&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:4,&quot;range&quot;:&quot;1776-3740&quot;} -->
+<h2 class="sectionedit5" id="programando_un_script_de_python">Programando un script de python</h2>
+<div class="level2">
+
+<p>
+Python es un lenguaje de programación interpretado con una sintaxis que favorece un código legible.Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y funcional. 
+</p>
+
+<p>
+Para comenzar a aprender este lenguaje se recomiendan los siguientes enlaces:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://es.wikipedia.org/wiki/Python" class="urlextern" target="_blank" title="https://es.wikipedia.org/wiki/Python" rel="ugc nofollow noopener">Python. Wikipedia</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf" class="urlextern" target="_blank" title="http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf" rel="ugc nofollow noopener">Python para todos. Libro en español.</a></div>
+</li>
+</ul>
+
+<p>
+Para acceder a la documentación de las bibliotecas Python que pueden utilizarse para manejar el hardware de la placa, dirigirse al siguiente enlace:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas">Bibliotecas python para manejo del hardware</a></div>
+</li>
+</ul>
+
+<p>
+Para descargar proyectos de ejemplo dirigirse al siguiente enlace: 
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#proyectos_ejemplo" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python">Proyectos de ejemplo</a></div>
+</li>
+</ul>
+
+<p>
+Si queremos que solo arranque la consola, bastará con hacer un script vacío, si queremos que la consola nunca aparezca, no deberemos dejar que el script termine, colocando un bucle que englobe todo el código.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Programando un script de python&quot;,&quot;hid&quot;:&quot;programando_un_script_de_python&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:5,&quot;range&quot;:&quot;3741-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+====== Ingeniería de Sistema de la CIAA ======
+
+/* Comentario interno */
+
+###
+El área de **Ingeniería de Sistema** del Proyecto CIAA tiene la tarea de mantener articuladas las distintas áreas y recursos de desarrollo, de modo que el resultado sea un producto consistente, y que se verifique el cumplimiento de los requerimientos y planificaciones pre-establecidas para el proyecto.
+###
+
+###
+El objetivo del área de Sistema es articular no sólo el desarrollo de los productos hardware, firmware, software e IDE, sino también los procesos, las personas, la información, las instalaciones, los servicios, y todos aquellos elementos necesarios para que el desarrollo de la CIAA sea exitoso.
+###
+
+===== Equipo de coordinación del área de Ingeniería de Sistema =====
+
+^ Función                    ^ Nombre                     ^ Organización                            ^
+| Responsable de Sistema     | Ing. Paola Pezoimburu      | Sur Emprendimientos Tecnológicos S.R.L. |
+| Sub-responsable de Sistema | Mg. Ing. Guillermo Güichal | EmTech S.A.                             |
+
+
+===== Requerimientos =====
+
+  * [[desarrollo:sistema:Requerimientos_Sistema|Requerimientos de Sistema]].
+
+
+===== Tareas =====
+
+###
+Las principales tareas que realizan como parte de Ingeniería de Sistema para la CIAA son:
+###
+
+==== Documentación ====
+
+  * Actualización de documentación en la página web.
+  * Revisión de la consistencia de la documentación.
+  * Revisión de la consistencia entre documentación en la web y documentación en los repositorios git.
+  * Revisión de la consistencia entre documentación en la web e intercambios de correo de las distintas listas.
+
+==== Seguimiento del Proyecto CIAA ====
+  * Revisión de planificaciones establecidas y avances de cada línea de desarrollo.
+  * Vinculación con equipos de desarrollo de la CIAA.
+  * Vinculación con desarrolladores de productos basados en la CIAA.
+  * Participación en reuniones de coordinación del proyecto.
+  * Participación en presentaciones del proyecto en eventos.
+
+==== Infraestructura tecnológica ====
+  * Contratación del Nombre de Dominio del Proyecto CIAA.
+  * Mantenimiento de servidor de página web. 
+  * Mantenimiento de Dokuwiki como herramienta de documentación.
+
+
+===== Procedimientos para tareas =====
+
+==== Incorporación de nuevos Grupos de trabajo ====
+
+###
+Cuando de acuerdo al requerimiento [[.:sistema:requerimientos_sistema#ciaa_sis_009|CIAA_SIS_009]] corresponda incorporar un nuevo Grupo de trabajo al Proyecto CIAA, se seguirá el siguiente procedimiento:
+###
+
+  - Identificar a un integrante del nuevo Grupo de trabajo como contacto de vinculación.
+  - Solicitar al contacto de vinculación los siguientes datos del Grupo de trabajo:
+    - Nombre identificador (Ej.: nombre de la empresa, universidad o institución participante).
+    - Ubicación geográfica (Localidad y Provincia).
+    - Dirección del sitio web, si lo tuviere.
+    - Descripción de las tareas y/o aportes realizados al proyecto.
+    - Lista de los integrantes del grupo, con la tarea a cargo de cada uno.
+    - Logo del Grupo de trabajo, en lo posible en formato PNG.
+  - Agregar el Grupo de trabajo a la página destinada para tal fin: [[proyecto:grupos_de_trabajo|Grupos de trabajo]]:
+    - Agregar la ubicación geográfica al mapa.
+    - Agregar el grupo a las dos tablas.
+  - Agregar el logo y enlace al sitio web del grupo a:
+    - [[http://www.proyecto-ciaa.com.ar/|Portada]].
+    - [[:start|Inicio de la wiki]].
+  - Si el Grupo de trabajo es una PyME, agregar el aporte ya concretado a:
+    - [[:aportes_pymes|Aportes de las PyMEs]].
+  - Si el nuevo Grupo de trabajo participa en la coordinación de alguna de las áreas del Proyecto CIAA, agregar esta participación en:
+    - [[proyecto:coordinacion|Coordinación del Proyecto CIAA]].
+  - Verificar que la participación de los integrantes del grupo de trabajo sea consistente con lo documentado en las páginas de las áreas donde participan.
+  - Notificar al contacto de vinculación que se ha concretado la incorporación del Grupo de trabajo, pidiendo revisión de los cambios realizados en la web.

@@ -1,0 +1,40 @@
+=====Estudio y selección de la arquitectura de Hardware=====
+
+Dentro de los campos de conocimiento se plantea:
+
+* Análisis, selección y utilización a nivel chip de procesadores o circuitos lógicos 
+programables que brinden la capacidad de cómputo y las arquitecturas requeridas. 
+
+ 
+Frente al problema planteado respecto a la necesidad de respuesta en Tiempo Real crítico 
+(mencionado anteriormente como Hard RT) y determinismo por parte del hardware, se plantean 
+diferentes enfoques, nuevamente recurriendo al análisis del estado del arte: 
+
+En el caso del sistema propuesto, una Computadora   Industrial   Abierta   para   aplicaciones   críticas,  
+debemos buscar un esquema de hardware que soporte ambas características:  
+ 
+  * Un subsistema determinístico para respuesta en tiempo real crítico (Hard Real­Time). 
+  * Un subsistema de propósito general, no determinístico, para procesamiento por lotes, comunicación e interfaz de usuario. 
+
+
+===Arquitectura===
+
+  * Puede utilizarse un dual­core Cortex­A9 o similar, en el cual uno de los núcleos ejecuta un  sistema operativo de propósito general como Linux, y el otro núcleo trabaja por lotes  encargados por el primero, sin sistema operativo o con uno muy sencillo como FreeRTOS  (funcionalidad conocida en la jerga como bare­metal) a fin de asegurar una mayor  respuesta en tiempo real. Este caso es similar al uso de una Unidad de Procesamiento  Gráfica de Propósito General (GPGPU). 
+  * Otra alternativa podría consistir en procesadores multicore asimétricos. Por ejemplo:  Texas Instruments ofrece un SoC con un procesador central Cortex­A15 (no determinístico) más un subsistema que comprende un Cortex­M4 más un TMS320 (ambos son procesadores de alto determinismo, ideales para aplicaciones de tiempo real) que corren a la par del sistema central y se le despachan tareas como esclavos. Freescale  Semiconductors también ofrece una solución similar: la línea Vybrid, que consiste de un núcleo Cortex­A5 más un núcleo Cortex­M4. 
+ 
+Esta última opción podría considerarse como una tendencia a futuro para todo lo que es  procesamiento heterogéneo, aunque todavía existen algunos inconvenientes al momento de  diseñar sistemas de procesamiento paralelo asimétrico con arquitecturas NUMA (Non Unified Memory Architecture). 
+
+=== Posibles SoCs===
+
+Recurriendoal estado del arte, surgen varias propuestas de SoCs que podrían 
+proveer las características requeridas: 
+ 
+  * Sistema con procesador Cortex­A9 dual­core y procesador gráfico integrado (para interfaz  de usuario y procesamiento visual). Uno de los núcleos del A9 cumpliría la función de  propósito general, mientras que el otro ejecutaría un sistema operativo de tiempo real (sabiendo que el núcleo Cortex­A no está pensado para este tipo de SO). 
+  * Sistema con procesadores Cortex­A y Cortex­M integrados en el mismo SoC. Similar al caso anterior, pero el núcleo encargado de las tareas de tiempo real es un procesador determinístico y diseñado específicamente para esta aplicación. 
+  * Sistema con procesadores independientes Cortex­A y Cortex­M. Existen las mismas ventajas que el caso anterior, pero se agrega la posibilidad de una mayor variedad de fabricantes de estos procesadores (por ejemplo, se puede elegir un Cortex­A de TI y un Cortex­M de NXP, ya que se trata de dos chips separados). La desventaja existe a la hora de intercambiar información entre los procesadores, ya que no compartirán un bus interno de alta velocidad. Una opción a considerar sería un bus USB 2.0 (480Mbps). 
+  * Sistema con procesador Cortex­A y FPGA. En este caso, el procesador Cortex­A seguiría cumpliendo la función de ejecutar un sistema operativo de propósito general orientado a aplicaciones, pero la función de tiempo real sería lleva a cabo por un dispositivo de lógica combinacional y secuencial programable: un FPGA. En este tipo de dispositivos ya no se ejecuta un programa secuencial, sino que directamente se sintetizan funciones lógicas interconectando pequeños bloques funcionales de hardware. Por lo tanto la respuesta en tiempo real de un FPGA es mucho más determinista que el de cualquier sistema 9/13 programable secuencial. De hecho, puede utilizarse el FPGA para sintetizar un procesador secuencial determinista, como un Cortex­M. 
+  * Sistema con procesador Cortex­A y FPGA, más un chip externo con un procesador Cortex­M. Este caso reúne todas las ventajas del anterior, y suma un procesador dedicado directamente a asistir al FPGA con tareas críticas de tiempo real. El problema de la comunicación que surge al estar en chips diferentes puede resolverse implementando un bus de datos de alta velocidad en el FPGA que se comunique con el procesador Cortex­M. 
+
+A su vez, este procesador es el utilizado en la CIAA actual, por ello, existiría la posibilidad  de migrar software desarrollado para dicha plataforma a la nueva versión de alta  capacidad, permitiendo así dotar de escalabilidad a los proyectos existentes actualmente. 
+
+Luego de sopesar las diferentes alternativas **a priori** se considera que la opción más conveniente sería la de utilizar una plataforma equivalente a la Zynq­7000 de Xilinx [21], que consiste de un procesador Cortex­A9 dual­core con un FPGA, y un procesador Cortex­M externo de montaje opcional (que podría estar contemplado en el sistema, pero si no se lo requiere se puede salvar el costo de dicho procesador). El Cortex­M que se utilizaría sería del mismo tipo utilizado en la CIAA, a fin de asegurar la escalabilidad mencionada en el párrafo anterior. 

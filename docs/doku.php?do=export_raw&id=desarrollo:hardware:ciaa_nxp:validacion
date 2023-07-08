@@ -1,0 +1,22 @@
+~~NOTOC~~
+====== Validación de la CIAA-NXP ======
+
+===== Tablero de ensayos =====
+
+{{ :desarrollo:hardware:ciaa_nxp:test-ciaa-nxp.png?direct |}}
+Se conecta la CIAA en un tablero eléctrico alimentándola con una fuente switching de 24Vdc 35W y se conectan diferentes cargas en las salidas de la placa.
+
+==== Cargas inductivas de 24Vdc en las salidas a relé ====
+
+Se procedió a conectar 4 relés de 24Vdc 200mW con diodo de protección incorporado en las cuatro salidas a relé de la CIAA. El ensayo consistió en activar y desactivar cada relé con períodos diferentes (800ms, 900ms, 1000ms y 1100ms respectivamente) mientras se verifica el correcto funcionamiento de una conexión TCP al puerto 7 (echo).
+Para determinar que el ensayo fue satisfactorio, se corrió durante 8 horas verificando el correcto funcionamiento.
+A continuación se puede ver el esquema de conexión del ensayo:
+{{ reles24v.png?300 |}}
+==== Cargas inductivas de 220Vac en las salidas a relé ====
+
+Se procedió a conectar 4 relés de 220Vac 900mW con filtro RC en las cuatro salidas a relé de la CIAA. El ensayo consistió en activar y desactivar cada relé con períodos diferentes (800ms, 900ms, 1000ms y 1100ms respectivamente) mientras se verifica el correcto funcionamiento de una conexión TCP al puerto 7 (echo).
+Para determinar que el ensayo fue satisfactorio, se corrió durante 8 horas verificando el correcto funcionamiento.
+El filtro RC está construido con un capacitor poliéster de 1uF 400V en serie con una resistencia de carbón de 47 ohm 2W.
+A continuación se puede ver el esquema de conexión del ensayo:
+{{ reles220v.png?300 |}}
+**Importante:** Este es un ensayo de stress. Por cuestiones de seguridad no se deben conectar cargas cuya alimentación supere los 24V en esta versión de hardware.

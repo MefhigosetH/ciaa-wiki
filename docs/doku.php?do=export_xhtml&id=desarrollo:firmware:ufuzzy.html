@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:ufuzzy</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,ufuzzy"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:ufuzzy&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:ufuzzy"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:ufuzzy.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:ufuzzy","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html#ufuzzy">µFuzzy</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html#introduccion">Introducción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html#caracteristicas_soportadas">Características soportadas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html#diseno">Diseño</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:ufuzzy.html#mas_informacion">Más información</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ufuzzy">µFuzzy</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00b5Fuzzy&quot;,&quot;hid&quot;:&quot;ufuzzy&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-23&quot;} -->
+<h2 class="sectionedit2" id="introduccion">Introducción</h2>
+<div class="level2">
+
+<p>
+µFuzzy es módulo de <a href="https://es.wikipedia.org/wiki/L%C3%B3gica_difusa" class="urlextern" target="_blank" title="https://es.wikipedia.org/wiki/L%C3%B3gica_difusa" rel="ugc nofollow noopener">lógica difusa</a> pensado para embebidos de bajo costo, independientemente de su arquitectura. Permite implementar sistemas de control a partir de una serie de reglas en lenguaje natural que describan el comportamiento deseado. A pesar de que en la actualidad existen otras librerías de lógica difusa, esta fue especialmente diseñada pensando en las limitaciones de los sistemas embebidos.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Introducci\u00f3n&quot;,&quot;hid&quot;:&quot;introduccion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;24-516&quot;} -->
+<h2 class="sectionedit3" id="caracteristicas_soportadas">Características soportadas</h2>
+<div class="level2">
+<div class="table sectionedit4"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Métodos de inferencia      </th><td class="col1 leftalign"> Sugeno               </td>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<th class="col0"></th><td class="col1 leftalign"> Mamdani              </td>
+	</tr>
+	<tr class="row2">
+		<th class="col0 leftalign" rowspan="2"> Funciones de membresía     </th><td class="col1 leftalign"> trapezoidal          </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> tabulada             </td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign" rowspan="6"> T-normas                   </th><td class="col1 leftalign"> mínimo               </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> producto algebraico  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> diferencia acotada   </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> producto drástico    </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> producto de Einstein </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> producto de Hamacher </td>
+	</tr>
+	<tr class="row10">
+		<th class="col0 leftalign" rowspan="6"> S-normas                   </th><td class="col1 leftalign"> máximo               </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> suma algebraica      </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> suma acotada         </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> suma drástico        </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"> suma de Einstein     </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"> suma de Hamacher     </td>
+	</tr>
+	<tr class="row16">
+		<th class="col0" rowspan="2"> Métodos de defuzzificación </th><td class="col1 leftalign"> centro de gravedad   </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> media ponderada      </td>
+	</tr>
+	<tr class="row18">
+		<th class="col0 leftalign" rowspan="3"> Conectivos lógicos         </th><td class="col1 leftalign"> conjunción           </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0 leftalign"> disyunción           </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"> negación             </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:4,&quot;range&quot;:&quot;558-1703&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas soportadas&quot;,&quot;hid&quot;:&quot;caracteristicas_soportadas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;517-1704&quot;} -->
+<h3 class="sectionedit5" id="advertencia">Advertencia</h3>
+<div class="level3">
+
+<p>
+La versión 0.4 de µFuzzy no soporta reglas con pesos. Esta característica será incluida en la versión 0.5.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Advertencia&quot;,&quot;hid&quot;:&quot;advertencia&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1705-1840&quot;} -->
+<h2 class="sectionedit6" id="diseno">Diseño</h2>
+<div class="level2">
+
+<p>
+Este módulo fue desarrollado con el objetivo de ser compatible con cualquier microcontrolador que pueda programarse en ANSI C. Por estas razones, se tomaron los siguientes recaudos a la hora de desarrollarlo:
+</p>
+<ul>
+<li class="level1"><div class="li"> Está programado en ANSI C, excepto por el uso de enteros de 64 bits, aunque puede deshabilitarse.</div>
+</li>
+<li class="level1"><div class="li"> No utiliza I/O.</div>
+</li>
+<li class="level1"><div class="li"> No reserva memoria dinámicamente.</div>
+</li>
+<li class="level1"><div class="li"> No utiliza operaciones con punto flotante.</div>
+</li>
+<li class="level1"><div class="li"> No depende de macros propias de ningún compilador.</div>
+</li>
+<li class="level1"><div class="li"> Sólo depende de &lt;stdint.h&gt;, por usar enteros de tamaño fijo y enteros rápidos.</div>
+</li>
+</ul>
+
+<p>
+Por otro lado, por razones de performance, µFuzzy utiliza un formato binario propio denominado CFS para definir las reglas del sistema. Para brindar compatibilidad con el formato FIS de MATLAB que es el más difundido, se desarrolló un conversor por línea de comandos denominado cfsconvert, fácilmente integrable al toolchain, y capaz de generar un archivo CFS o código fuente C.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:ufuzzy&amp;media=desarrollo:firmware:uf_overview.png.html" class="media" title="desarrollo:firmware:uf_overview.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:uf_overview.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o&quot;,&quot;hid&quot;:&quot;diseno&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1841-2854&quot;} -->
+<h2 class="sectionedit7" id="mas_informacion">Más información</h2>
+<div class="level2">
+
+<p>
+<a href="http://www.francosalinasmendoza.com/ufuzzy/Trabajo%20de%20Graduacion.pdf" class="urlextern" target="_blank" title="http://www.francosalinasmendoza.com/ufuzzy/Trabajo%20de%20Graduacion.pdf" rel="ugc nofollow noopener">Trabajo de Graduación</a>
+<a href="lib/exe/fetch.php%3Fmedia=uf_especificacion_del_formato_cfs.pdf" class="media mediafile mf_pdf" title="uf_especificacion_del_formato_cfs.pdf (76.4 KB)">Especificación del formato CFS</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00e1s informaci\u00f3n&quot;,&quot;hid&quot;:&quot;mas_informacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2855-&quot;} --></div>
+</body>
+</html>

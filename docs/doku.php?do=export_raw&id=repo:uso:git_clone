@@ -1,0 +1,53 @@
+====== Repositorios CIAA ======
+Estos son los principales repositorios del proyecto CIAA y la manera de clonarlos
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+
+===== Firmware =====
+<code bash>
+cd $HOME/workspaces
+git clone --recursive https://github.com/ciaa/Firmware.git
+</code>
+
+===== Hardware =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/Hardware.git
+</code>
+
+===== IDE4PLC =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/IDE4PLC.git
+</code>
+
+===== Firmata4CIAA =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/Firmata4CIAA.git
+</code>
+
+===== Software-IDE =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/Software-IDE.git
+</code>
+
+===== Ponchos =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/Ponchos.git
+</code>
+
+===== Linux =====
+<code bash>
+cd $HOME/workspaces
+git clone https://github.com/ciaa/linux.git
+</code>

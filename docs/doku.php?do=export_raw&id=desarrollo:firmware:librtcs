@@ -1,0 +1,80 @@
+====== Módulo de Control ======
+^ Autor ^ Título del proyecto ^ Tutor ^ Inicio ^ Fin ^
+| Diego Ezequiel Vommaro | Modulo de control a lazo cerrado para la CIAA | Ing. Juan Manuel Cruz | Febrero 2015 | Marzo 2015 |
+
+###
+El Módulo de Control consiste en una biblioteca de software que permite implementar Sistemas de Control en Tiempo Real en la CIAA. El Módulo pertenece al CIAA-Firmware y se lo denomina RTCS por la sigla en inglés Real Time Control System.
+###
+
+###
+El objetivo es proveer **a los desarrolladores de sistemas de control en sistemas embebidos** una interfaz que permita implementar sus controladores en la CIAA en forma sencilla.
+###
+
+===== ¿Qué son los Sistemas de Control? =====
+
+Los Sistemas de Control a lazo cerrado son ampliamente utilizados en los procesos modernos de fabricación, en los sistemas robóticos y en cualquier operación industrial que requiera el control de temperatura, presión, humedad, caudal, etc.
+
+Un sistema de control a lazo cerrado se lo puede representar mediante el siguiente esquema:
+
+{{ :desarrollo:firmware:sistema_control_realimentado.jpeg?500 |}}
+
+Se puede ver que, a diferencia de un control a lazo abierto, aquí la salida se compara con la entrada de referencia, luego se determina un error o desvío y finalmente se produce una señal de control que reduce dicho desvío a cero o a un valor muy pequeño.
+El control a lazo cerrado posee muchas ventajas por sobre el control a lazo abierto, pero se debe diseñar e implementar el controlador adecuado.
+
+De aquí en más se llamará Sistemas de Control a los sistemas de control a lazo cerrado.
+
+El elemento central de los Sistemas de Control es el **Controlador automático**. Existen de varios tipos y una clasificación válida sería la siguiente:
+  * Controladores PID (Control clásico)
+  * Controladores en el espacio de estados (Control moderno)
+  * Controladores robustos
+
+===== ¿Por qué la CIAA? =====
+
+  *Hoy en día casi la **totalidad de los Controladores Automáticos** que integran los Sistemas de Control se implementan por computadora.
+
+{{ :desarrollo:firmware:scr_controlador.jpeg |}}
+  * En la industria hay una gran cantidad de sistemas de control a lazo cerrado
+  * Todo sistema de control necesita de una computadora para calcular en tiempo real las acciones de control que reducen el desvío a cero o a un valor mínimo.
+  * Un módulo dedicado a las tareas de control automático es indispensable para una computadora industrial.
+
+Por eso, este proyecto propone el diseño y desarrollo de un módulo de control a lazo cerrado para la Computadora Industrial Abierta Argentina (CIAA).
+
+===== Descripción del Módulo de Control "RTCS" =====
+
+{{ :desarrollo:firmware:rtcs_descripcion_grafico.jpg |}}
+
+Como se comentó oportunamente, el Modulo RTCS pertenece al CIAA-Firmware, por lo tanto, es un Módulo escrito en lenguaje estándar C, compila y ejecuta para cualquiera de las plataformas soportadas (como ser Linux, Windows, Mac OS, CIAA-NXP, EDU-CIAA-NXP, EDU-CIAA-FSL, etc...). Además posee una descripción del funcionamiento en digramas UML, documentación en Doxygen, Unit Test, respeta los coding guidelines del CIAA-Firmware y todos los archivos fuentes están disponibles en el repositorio oficial del proyecto CIAA.
+
+
+Actualmente, el módulo soporta **controladores en el espacio de estados**. Gracias a su diseño "escalable" se permite agregar nuevos tipos de controladores sin modificar el código existente.
+
+Resumen de requerimientos:
+  * Sistemas SISO
+  * Sistemas MIMO
+  * Observadores de estado
+  * Sistemas reguladores
+  * Sistemas servo o servosistemas
+  * Escalable y flexible para la incorporación de nuevos controladores sin modificar el código existente
+  * Implementación independiente del procesador y del sistema operativo de tiempo real que se utilice.
+  * Integrado al proyecto CIAA (repositorio, coding guidelines, ensayos, documentación)
+
+Este proyecto esta basado en un trabajo anterior producto de una tesis de grado [1].
+
+
+===== El Módulo RTCS en acción =====
+
+|{{ :desarrollo:firmware:ds0001.png|Respuesta al escalón a lazo abierto|Respuesta a lazo abierto de una planta sobreamortiguada}}|{{ :desarrollo:firmware:rtcs_lazo_abierto_2.png|Detalle de la respuesta a lazo abierto}}|
+
+
+|  {{ :desarrollo:firmware:rtcs_lazo_cerrado.png|Respuesta a lazo cerrado}}  |
+
+###
+La respuesta al escalón de una planta sobre-amortiguada a lazo abierto se ve acelerada a lazo cerrado gracias al controlador que se ejecuta en  la CIAA.
+###
+===== Descargas =====
+[[https://dl.dropboxusercontent.com/u/73329077/Informe_final_rtcs.pdf | Informe Final]]
+[[https://github.com/ciaa/Firmware | Código Fuente]]
+
+===== Referencias =====
+  * **ESPÓSITO, J. E (2013)** Diseño, implementación y validación de una biblioteca de control para sistemas embebidos.
+

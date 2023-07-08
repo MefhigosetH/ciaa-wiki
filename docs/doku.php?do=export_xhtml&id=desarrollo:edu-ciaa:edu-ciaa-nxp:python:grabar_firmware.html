@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,grabar_firmware"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html#grabando_el_firmware_en_la_placa">Grabando el firmware en la placa</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html#configurando_entorno_de_desarrollo">Configurando entorno de desarrollo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html#clonando_el_repositorio_del_firmware">Clonando el repositorio del firmware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html#compilando_y_grabando_el_firmware">Compilando y grabando el firmware</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="grabando_el_firmware_en_la_placa">Grabando el firmware en la placa</h1>
+<div class="level1">
+
+<p>
+El primer paso es grabar el firmware en la EDU-CIAA, para ello necesitamos compilar el proyecto y tener funcionando OpenOCD para poder grabarlo en la placa, la misma la conectaremos por el conector USB-debug.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Grabando el firmware en la placa&quot;,&quot;hid&quot;:&quot;grabando_el_firmware_en_la_placa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-258&quot;} -->
+<h2 class="sectionedit2" id="configurando_entorno_de_desarrollo">Configurando entorno de desarrollo</h2>
+<div class="level2">
+
+<p>
+Para configurar el entorno de trabajo con el compilador y OpenOCD, leer el siguiente tutorial 
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux">Configuración del entorno de desarrollo (Linux)</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows">Configuración del entorno de desarrollo (Windows)</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx">Configuración del entorno de desarrollo (OSX/MacOS)</a></div>
+</li>
+</ul>
+<div class="plugin_note noteimportant">Todos los comandos deberán ejecutarse como root
+</div>
+<p>
+Instalamos git y zip en el sistema:
+</p>
+<pre class="code">$ aptitude install git 
+$ aptitude install zip </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configurando entorno de desarrollo&quot;,&quot;hid&quot;:&quot;configurando_entorno_de_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;259-948&quot;} -->
+<h2 class="sectionedit3" id="clonando_el_repositorio_del_firmware">Clonando el repositorio del firmware</h2>
+<div class="level2">
+
+<p>
+Luego debemos clonar el repositorio del proyecto micropython para la EDU-CIAA creado por Martín Ribelotta:
+</p>
+<pre class="code">$ git clone https://github.com/martinribelotta/micropython.git
+$ cd micropython</pre>
+<div class="plugin_note notewarning">NOTA: El repositorio anterior puede no ser estable debido a que el proyecto se encuentra en desarrollo. Para utilizar la última versión estable del proyecto, se puede clonar el siguiente repositorio en lugar del anterior:
+</div><pre class="code">$ git clone https://github.com/ernesto-g/micropython.git
+$ cd micropython
+$ git checkout cese  </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Clonando el repositorio del firmware&quot;,&quot;hid&quot;:&quot;clonando_el_repositorio_del_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;949-1541&quot;} -->
+<h2 class="sectionedit4" id="compilando_y_grabando_el_firmware">Compilando y grabando el firmware</h2>
+<div class="level2">
+
+<p>
+Ingresamos al directorio ciaa-nxp y compilamos el proyecto
+</p>
+<pre class="code">$ cd ciaa-nxp
+$ make</pre>
+
+<p>
+Conectamos la placa por el conector USB de debug y grabamos el firmware generado mediante el comando:
+</p>
+<pre class="code">$ make download</pre>
+<div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar">El firmware ya esta grabado en la placa, continuar</a>
+
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilando y grabando el firmware&quot;,&quot;hid&quot;:&quot;compilando_y_grabando_el_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1542-&quot;} --></div>
+</body>
+</html>

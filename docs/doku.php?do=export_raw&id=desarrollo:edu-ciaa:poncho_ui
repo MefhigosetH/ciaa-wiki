@@ -1,0 +1,19 @@
+===== Poncho "Interfaz de Usuario" (compatible con EDU-CIAA-NXP) =====
+
+###
+Es el primer Poncho para la EDU-CIAA-NXP desarrollado por Martín de Almeida, Leonel Caraccioli y Eric Pernia.
+###
+
+###
+Este módulo permite darle una cara más amigable a la EDU-CIAA, logrando una experiencia de usuario más interactiva. Cuenta con un teclado matricial de 4x4, un potenciómetro lineal, un display LCD de 2x16 y entradas y salidas, que permitirán seguir ampliando las funcionalidades. Está diseñado específicamente para conectarse montado directamente sobre la EDU-CIAA.
+###
+
+###
+Su prototipo físico se realizó en Diciembre de 2014. En la siguiente fotografía se puede ver al mismo montado sobre la EDU-CIAA-NXP.
+###
+
+{{:desarrollo:edu-ciaa:edu-ciaa_poncho_ui.png?nolink&600|}}
+
+{{:desarrollo:edu-ciaa:esquematico_poncho_ui.pdf|Descargar esquemático.}}
+
+[[desarrollo:ciaa:ponchos|Volver a la sección Ponchos.]]

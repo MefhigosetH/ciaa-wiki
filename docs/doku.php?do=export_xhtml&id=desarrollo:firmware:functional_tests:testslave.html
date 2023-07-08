@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:functional_tests:testslave</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,functional_tests,testslave"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:functional_tests:testslave&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware:functional_tests"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:functional_tests:testslave"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:functional_tests:testslave.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware:functional_tests';var JSINFO = {"id":"desarrollo:firmware:functional_tests:testslave","namespace":"desarrollo:firmware:functional_tests","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html#aplicacion_testslave">Aplicación testslave</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html#resumen">Resumen</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html#terminos_definiciones_y_abreviaturas">Términos, definiciones y abreviaturas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html#mapa_modbus">Mapa Modbus</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests:testslave.html#casos_de_uso">Casos de uso</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="aplicacion_testslave">Aplicación testslave</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Aplicaci\u00f3n testslave&quot;,&quot;hid&quot;:&quot;aplicacion_testslave&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-37&quot;} -->
+<h2 class="sectionedit2" id="resumen">Resumen</h2>
+<div class="level2">
+
+<p>
+La aplicación testslave permite al usuario acceder a todos los dispositivos mediante la escritura y lectura en diferentes direcciones Holding Registers de Modbus. Estas direcciones permiten especificar el path del dispositivo, los argumentos a utilizar en las funciones ioctl(), read() y write(), y ver los resultados obtenidos.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resumen&quot;,&quot;hid&quot;:&quot;resumen&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;38-388&quot;} -->
+<h2 class="sectionedit3" id="terminos_definiciones_y_abreviaturas">Términos, definiciones y abreviaturas</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Holding Register: Tipo de dato para confeccionar un mapa de direcciones. Cada dirección contiene un dato de 16 bits.</div>
+</li>
+<li class="level1 node"><div class="li"> HR_string: string almacenado en una o más direcciones Modbus. Dado que las direcciones Modbus son de 16 bits los string siempre tienen longitud par. Además los mismo no terminan en el caracter &#039;\0&#039;, dado que se conoce de antemana cuál es la longitud máxima. Cuando el largo un string sea menor al tamaño disponible, siempre se deben completar los caracteres disponibles con el valor 0x00. Los caracteres dentro de una dirección modbus se almacenan de la siguiente manera: </div>
+<ul>
+<li class="level2"><div class="li"> parte alta: primer caracter</div>
+</li>
+<li class="level2"><div class="li"> parte baja: segundo caracter</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HR_version3: version dada por tres dígitos:</div>
+<ul>
+<li class="level2"><div class="li"> primer dirección: major version</div>
+</li>
+<li class="level2"><div class="li"> segunda dirección: minor version</div>
+</li>
+<li class="level2"><div class="li"> tercera dirección: patch version</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> HR_int8_t o HR_uint8_t: Entero de 8 contenido en la parte baja del holding register, la parte alta debe ser completada con el bit de sino.</div>
+</li>
+<li class="level1"><div class="li"> HR_int16_t o HR_uint16_t: Entero de 16 en formato bigendian</div>
+</li>
+<li class="level1"><div class="li"> HR_int32_t o HR_uint32_t: Entero de 32 en formato bigendian, almacenado en 2 holding registers. No se permite acceder a los holding registers de manera individual.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;T\u00e9rminos, definiciones y abreviaturas&quot;,&quot;hid&quot;:&quot;terminos_definiciones_y_abreviaturas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;389-1658&quot;} -->
+<h2 class="sectionedit4" id="mapa_modbus">Mapa Modbus</h2>
+<div class="level2">
+
+<p>
+El mapa Modbus Holding Registers se divide en diferentes secciones según los datos que se pueden acceder.
+</p>
+<div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Número de rango </th><th class="col1"> Rango </th><th class="col2"> Título </th><th class="col3"> Descripción </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 1 </td><td class="col1"> 0 a 199 </td><td class="col2"> Información general </td><td class="col3"> Se encuentra información del modelo de placa, versión de Firmware y submódulos, etc </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 2 </td><td class="col1"> 200 a 399 </td><td class="col2"> Ejecución de comandos </td><td class="col3"> Direcciones para indicar la ejecución de un comando determinado </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 3 </td><td class="col1"> 400 a 499 </td><td class="col2"> Parámetros </td><td class="col3"> Direcciones para inicializar los parámetros utilizados en los diferentes comandos que se pueden ejecutar </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> 4 </td><td class="col1"> 500 a 2499 </td><td class="col2"> Intercambio de datos </td><td class="col3"> Área de memoria para intercambio de datos.</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:5,&quot;range&quot;:&quot;1792-2310&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Mapa Modbus&quot;,&quot;hid&quot;:&quot;mapa_modbus&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1659-2311&quot;} -->
+<h3 class="sectionedit6" id="informacion_general">Información general</h3>
+<div class="level3">
+<div class="table sectionedit7"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Inicio </th><th class="col1"> Longitud </th><th class="col2"> Tipo </th><th class="col3"> r/w </th><th class="col4"> Rango de valores </th><th class="col5"> Descripción </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 0 </td><td class="col1"> 10 </td><td class="col2"> HR_string </td><td class="col3"> r </td><td class="col4"> a-z A-Z 0-9 . : - _ / </td><td class="col5"> Nombre de la placa </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 50 </td><td class="col1"> 3 </td><td class="col2"> HR_version3 </td><td class="col3"> r </td><td class="col4"> 0.0.0 - 65535.65535.65535 </td><td class="col5"> Versión de testslave </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 53 </td><td class="col1"> 3 </td><td class="col2"> HR_version3 </td><td class="col3"> r </td><td class="col4"> 0.0.0 - 65535.65535.65535 </td><td class="col5"> Versión de firmware </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> 56 </td><td class="col1"> 3 </td><td class="col2"> HR_version3 </td><td class="col3"> r </td><td class="col4"> 0.0.0 - 65535.65535.65535 </td><td class="col5"> Versión de RTOS </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> 59 </td><td class="col1"> 3 </td><td class="col2"> HR_version3 </td><td class="col3"> r </td><td class="col4"> 0.0.0 - 65535.65535.65535 </td><td class="col5"> Versión de Modbus </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:7,&quot;range&quot;:&quot;2344-2799&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Informaci\u00f3n general&quot;,&quot;hid&quot;:&quot;informacion_general&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2312-2800&quot;} -->
+<h3 class="sectionedit8" id="ejecucion_de_comandos">Ejecución de comandos</h3>
+<div class="level3">
+
+<p>
+En este sector del mapa modbus se encuentran direcciones que al escribir determinados valores, el programa ejecuta cierta acción. Para verificar el fin de dicha acción se debe leer la dirección correspondiente.
+</p>
+<div class="table sectionedit9"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Inicio </th><th class="col1"> Longitud </th><th class="col2"> Tipo </th><th class="col3"> r/w </th><th class="col4"> Rango de valores </th><th class="col5"> Descripción </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" rowspan="8"> 200 </td><td class="col1" rowspan="8"> 1 </td><td class="col2" rowspan="8"> HR_int16_t </td><td class="col3" rowspan="8"> r/w </td><td class="col4" rowspan="8"> 0 - x </td><td class="col5"> w 10 - ejecutar open() </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> w 11 - ejecutar close() </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> w 12 - ejecutar read() </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> w 13 - ejecutar write() </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> w 14 - ejecutar ioctl() </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> w 15 - ejecutar lseek() </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> r 0 - si la ejecución finalizó </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> r !=0 - si la ejecución no finalizó. El valor leído coincide con el la operación que se está ejecutando </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:9,&quot;range&quot;:&quot;3049-3645&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejecuci\u00f3n de comandos&quot;,&quot;hid&quot;:&quot;ejecucion_de_comandos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2801-3646&quot;} -->
+<h3 class="sectionedit10" id="parametros">Parámetros</h3>
+<div class="level3">
+
+<p>
+En este sector se encuentran diferentes parámetros que son utilizados por los comandos descriptos en el sector anterior.
+</p>
+<div class="table sectionedit11"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Inicio </th><th class="col1"> Longitud </th><th class="col2"> Tipo </th><th class="col3"> r/w </th><th class="col4"> Rango de valores </th><th class="col5"> Descripción </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 400 </td><td class="col1"> 20 </td><td class="col2"> HR_string </td><td class="col3"> r/w </td><td class="col4"> a-z A-Z 0-9 . : - _ / </td><td class="col5"> parámetro <strong>path</strong> de la función open() </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 420 </td><td class="col1"> 1 </td><td class="col2"> HR_uint8_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFF </td><td class="col5"> parámetro <strong>oflag</strong> de la función open() </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 421 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> valor de <strong>retorno</strong> de las funciones open(), close(), ioctl() read(), write() </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> 423 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> parámetro <strong>fildes</strong> de las funciones close(), ioctl(), read() write() </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> 425 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> parámetro <strong>request</strong> de las funciones ioctl()</td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> 427 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> parámetro <strong>param</strong> de las funciones ioctl()</td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> 429 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> parámetro <strong>nbyte</strong> de las funciones read() y write()</td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> 431 </td><td class="col1"> 2 </td><td class="col2"> HR_int32_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> parámetro <strong>offset</strong> de la función ioctl()</td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> 433 </td><td class="col1"> 2 </td><td class="col2"> HR_uint8_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFF </td><td class="col5"> parámetro <strong>whence</strong> de la función ioctl()</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:11,&quot;range&quot;:&quot;3792-4773&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Par\u00e1metros&quot;,&quot;hid&quot;:&quot;parametros&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;3647-4778&quot;} -->
+<h3 class="sectionedit12" id="intercambio_de_datos">Intercambio de datos</h3>
+<div class="level3">
+
+<p>
+El área de intercambio de datos no es más que un buffer para leer y escribir datos. Este se utiliza en las operaciones read() y write().
+La longitud del buffer depende de la plataforma en la que se corra la aplicación, debido a la memoria disponible en el microcontrolador, por este motivo de debe leer la dirección 500 para conocer este valor y no superar el límite real del buffer.
+</p>
+<div class="table sectionedit13"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Inicio </th><th class="col1"> Longitud </th><th class="col2"> Tipo </th><th class="col3"> r/w </th><th class="col4"> Rango de valores </th><th class="col5"> Descripción </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 500 </td><td class="col1"> 2 </td><td class="col2"> HR_uint32_t </td><td class="col3"> r </td><td class="col4"> 0 - 0xFFFFFFFF </td><td class="col5"> longitud del buffer utilizado en write() y read()</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 502 </td><td class="col1"> depende del valor leído en la dirección 500 </td><td class="col2"> HR_uint16_t </td><td class="col3"> r/w </td><td class="col4"> 0 - 0xFFFF </td><td class="col5"> buffer para intercambio de datos. Utilizado como buffer en la funciones read() y write()</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:13,&quot;range&quot;:&quot;5201-5546&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Intercambio de datos&quot;,&quot;hid&quot;:&quot;intercambio_de_datos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;4779-5548&quot;} -->
+<h2 class="sectionedit14" id="casos_de_uso">Casos de uso</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Casos de uso&quot;,&quot;hid&quot;:&quot;casos_de_uso&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:14,&quot;range&quot;:&quot;5549-&quot;} --></div>
+</body>
+</html>

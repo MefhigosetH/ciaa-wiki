@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> edu-ciaa-nxp</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:06:54+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:desarrolladores&amp;rev=1428150454&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:fotosensablaje&amp;rev=1426788397&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:requerimientos&amp;rev=1425928422&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:desarrolladores&amp;rev=1428150454&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-04T12:27:34+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>edu-ciaa-nxp:desarrolladores</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:desarrolladores&amp;rev=1428150454&amp;do=diff</link>
+        <description>Equipo de desarrollo de la EDU-CIAA-NXP
+ Función                                          Nombre                     Unidad Académica  Coordinador General                              Mg. Bioing. Eduardo Filomena  UNER              Responsable de Definición Bloques funcionales</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:fotosensablaje&amp;rev=1426788397&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-19T18:06:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>edu-ciaa-nxp:fotosensablaje</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:fotosensablaje&amp;rev=1426788397&amp;do=diff</link>
+        <description>Fotos del proceso de ensamblaje de la EDU-CIAA-NXP
+
+Estas fotos fueron tomadas durante el proceso de ensamblaje de la EDU-CIAA-NXP, realizado por la empresa Asembli.
+Las versiones en alta resolución y fotos adicionales pueden bajarse de:  Dropbox
+
+Recepción</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:requerimientos&amp;rev=1425928422&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-09T19:13:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>edu-ciaa-nxp:requerimientos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=edu-ciaa-nxp:requerimientos&amp;rev=1425928422&amp;do=diff</link>
+        <description>Propósito, alcance, objetivos y requerimientos de la EDU-CIAA-NXP
+
+Propósito
+
+Los propósitos de la EDU-CIAA son:
+
+	*  Proveer una plataforma de desarrollo moderna y económica basada en la CIAA que sirva a docentes y a estudiantes en los cursos de sistemas embebidos.</description>
+    </item>
+</rdf:RDF>

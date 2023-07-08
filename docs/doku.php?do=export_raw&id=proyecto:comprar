@@ -1,0 +1,30 @@
+~~NOTOC~~
+
+====== Dónde comprar las placas CIAA ======
+
+Las siguientes empresas comercializan distintas versiones de plataformas del Proyecto CIAA:
+
+^ Empresa  ^ [[http://www.asembli.com/|Asembli]] ^ [[https://www.electrocomponentes.com/|Electrocomponentes]] ^ [[http://www.exo.com.ar|Exo]] ^ [[http://www.probattery.com.ar/nueva/|Probattery]] ^ [[https://vicda.com.ar/|VICDA]] ^
+| [[desarrollo:ciaa_acc:ciaa_acc_inicio|CIAA-ACC]] |  comprar  | | | | |
+| [[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|CIAA-NXP]] | |  [[https://www.electrocomponentes.com/tienda/desarrollo/computadora-industrial-abierta-argentina-ciaa-nxp-x|comprar]]  | [[http://exo.com.ar/consulta/soporte|por mayor]] |  [[http://articulo.mercadolibre.com.ar/MLA-637399040-computadora-abierta-probattery-p-automatizacion-industrial-_JM|comprar]]  | |
+| [[desarrollo:ciaa-z3r0|CIAA-Z3R0]] | [[https://articulo.mercadolibre.com.ar/MLA-695415616-plaqueta-ciaa-0-z3r0-_JM|comprar]] | | | | |
+| [[desarrollo:ciaa-z3r0#bajar_programas_depuracion|Debug-Z3R0]] | [[https://articulo.mercadolibre.com.ar/MLA-695413599-debugger-stlink-st-enlace-v2-mini-stm8-stm32-para-ciaa-z3ro-_JM|comprar]] | | | | |
+| [[desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA-NXP]] | |  [[https://www.electrocomponentes.com/tienda/desarrollo/computadora-industrial-abierta-argentina-ciaa-nxp-edu|comprar]]  | | | |
+| [[desarrollo:hardware:picociaa|picoCIAA]] | | | | |  [[http://www.picociaa.com/#!/producto/1/|comprar]]  |
+| [[repo:ponchos:EducativoUNSJ|Poncho Educativo]] |  [[https://articulo.mercadolibre.com.ar/MLA-695611477-ponchos-para-edu-ciaa-nxp-precio-a-convenir-_JM|comprar]]  | | | | |
+| [[repo:ponchos:PLC|Poncho PLC]] |  [[https://articulo.mercadolibre.com.ar/MLA-695611477-ponchos-para-edu-ciaa-nxp-precio-a-convenir-_JM|comprar]]  | | | | |
+
+
+===== Considerá que... =====
+
+###
+A su vez, al ser una plataforma abierta, como se explica en [[proyecto:propuesta_innovadora|Propuesta Innovadora]] y en [[proyecto:licencia_ciaa|Licencia BSD de la CIAA]], en el futuro más empresas comercializarán las distintas CIAAs y serán incorporadas a este listado.
+###
+
+<note important>
+###
+Siendo la CIAA un proyecto open source el [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|ACSE]] y el [[http://www.cadieel.org.ar|CADIEEL]] no se responsabilizan por la fabricación y venta de la CIAA que realicen las empresas, ni tienen ningún beneficio económico asociado.
+###
+</note>
+
+Ante dudas o consultas escribir a <contacto@proyecto-ciaa.com.ar>.

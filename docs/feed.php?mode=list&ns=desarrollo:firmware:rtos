@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:firmware:rtos</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:26:22+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:faq&amp;rev=1438876647&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:indice_prueba&amp;rev=1426454606&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:test&amp;rev=1421090090&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:faq&amp;rev=1438876647&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-06T15:57:27+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:rtos:faq</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:faq&amp;rev=1438876647&amp;do=diff</link>
+        <description>?????? FAQ: OSEK ??????
+
+????? El RTOS no compila y dice que falta un archivo *_Cfg.h ?????
+
+Estos archivos son generados en base a la configuración OIL. Debe recordar de correr
+
+
+make generate
+
+
+o en su defecto con un clean previo haciendo
+
+
+make clean_generate</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:indice_prueba&amp;rev=1426454606&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-15T21:23:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:rtos:indice_prueba</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:indice_prueba&amp;rev=1426454606&amp;do=diff</link>
+        <description>ToC
+
+	*  rtos
+	*  faq</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:test&amp;rev=1421090090&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-12T19:14:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:rtos:test</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos:test&amp;rev=1421090090&amp;do=diff</link>
+        <description>Testeo de OSEK
+
+OSEK-VDX especifica, además del sistema operativo, un test para verificar que el mismo es conforme a las especificaciones.
+
+Bajo www.osek-vdx.org se pueden encontrar los siguientes 3 documentos:
+
+	*  OSEK/VDX Conformance Testing Methodology: explica la metodología de testeo
+	*  OSEK/VDX Operating System Test Plan: define el plan de pruebas (los test cases)</description>
+    </item>
+</rdf:RDF>

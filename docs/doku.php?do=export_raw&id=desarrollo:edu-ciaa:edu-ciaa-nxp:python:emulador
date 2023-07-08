@@ -1,0 +1,70 @@
+====== Emulador de EDU-CIAA corriendo MicroPython ======
+
+Este software emulador, que se instala de forma independiente al IDE, permite simular la placa EDU-CIAA ejecutando el firmware de MicroPython, emulando la mayoría de los periféricos que posee la placa. El emulador se ejecuta desde el IDE, mediante el boton "Emulator". De esta forma ya no es necesario disponer de la placa física para hacer el desarrollo, pudiendo desarrollarse clases en donde la cantidad de alumnos es superior a la cantidad de placas, e ir turnando el uso de las placas una vez que el código está probado y funcionando.
+
+===== Instalación del emulador =====
+
+Se podrá encontrar la última versión en el siguiente link:
+
+  * [[https://github.com/ernesto-g/educiaa_python_emulator/releases|Releases]]
+
+Existen versiones para Windows 7 y 10 y para distribuciones de Linux basadas en Debian (Debian, Ubuntu, Xubuntu, Mint, etc.). Tambien es posible ejecutarlo desde el código fuente en otras versiones de Linux y OSX, que posean los paquetes requeridos.
+
+===== Utilización del emulador =====
+
+Una vez instalado el emulador, se podrá ejecutar el script de python programado en el IDE presionando el botón "Emulator" {{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png}}. Aparecerán dos ventanas, una con la terminal del emulador, y otra con una imagen de la EDU-CIAA, la cual tendrá sobre la misma los botones y los LEDs que posee la placa, el resto de los periféricos se podrán acceder y simular desde el menú "Peripherals".
+
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png}}
+
+La salida por pantalla del código se mostrará en la ventana de terminal emulada, mientras que el estado de los LEDs se visualizará sobre la ventana con la imagen de la EDU-CIAA. También es posible presionar los pulsadores T1 a T4 para simular los pulsadores que posee la placa.
+
+===== Utilización de periféricos =====
+
+==== GPIOs ====
+
+En el menú Peripherals, seleccionar la opción "GPIOs". Aparecerá la siguiente ventana:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_gpios_1.png|}}
+
+En ella se listan las 9 GPIOs que tiene definidas en su conector la EDU-CIAA. La segunda columna indica si el pin está configurado como entrada o como salida. En el caso de que esté configurado como entrada, en la tercer columna se podrá asignar el valor "1" (check tildado) o "0" (check sin tidar). En el caso de que esté configurado como salida, en la tercer columna se podrá observar el estado actual del pin.
+
+Se recomienda probar esta ventana con el snippet llamado "PIN Interrupt Example".
+
+==== UART y RS485 ====
+
+En el menú Peripherals, seleccionar la opción "UART" para simular la UART que posee la placa ruteada al conector, o "RS-485" para simular la UART con interfaz RS485 . 
+
+Aparecerá la siguiente ventana:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_uart_1.png?600|}}
+
+En el área negra, se mostrarán los bytes que la placa transmite, mientras que mediante el botón "Send" se podrá simular el envío de una trama a la placa, la cual se escribe en el campo a la derecha del botón.
+
+Si se selecciona el modo "ASCII", el envío y la recepción interpretarán los bytes como ascii (si se envía una 'a' se enviará el byte 0x61). Si se selecciona el modo Hex, le mostrarán los bytes en hexadecimal en el área negra, y el texto ingresado para simular un envío, deberá estar escrito en hexa, sin separar con espacios cada byte (por ejemplo 316F326D).
+
+Se recomienda probar esta ventana con el snippet llamado “UART-RS485 Example”.
+
+==== Salidas PWM ====
+
+En el menú Peripherals, seleccionar la opción "PWM". Aparecerá la siguiente ventana:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_pwm_1.png?500|}}
+
+En esta ventana se listan las 11 salidas PWM que posee la placa, y se indica el % del ciclo de actividad configurado para cada una, si se tilda el check correspondiente, se mostrará la forma de onda en el gráfico de la izquierda. En la parte inferior derecha se indica la frecuencia de operación, que es común a todas las salidas PWM.
+
+Se recomienda probar esta ventana con el snippet llamado “PWM Example”.
+
+==== Entradas analógicas ====
+
+En el menú Peripherals, seleccionar la opción "ADC". Aparecerá la siguiente ventana:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_adc_1.png?300|}}
+
+Mediante esta ventana es posible setear un valor para cada entrada analógica, el mismo se setea en cuentas (0 a 1023) y no en tensión (0 a 3.3V)
+
+Se recomienda probar esta ventana con el snippet llamado “ADC Example”.
+
+==== Salida analógica (DAC) ====
+
+En el menú Peripherals, seleccionar la opción "DAC". Aparecerá la siguiente ventana:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_dac_1.png?500|}}
+
+En esta ventana se puede observar la señal de salida configurada para el módulo DAC.
+
+Se recomienda probar esta ventana con el snippet llamado “DAC Example”.

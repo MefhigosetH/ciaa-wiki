@@ -1,0 +1,71 @@
+====== La CIAA en la Industria Automotriz ======
+
+Las siguientes empresas están utilizando la CIAA en el desarrollo de equipos para la **Industria Automotriz**.
+
+----
+[[http://www.itca.com.ar/|{{ :implementaciones:logo_itca.png?120|}}]]
+===== Unidad de Control Electrónica Vehicular Programable =====
+
+###
+El [[http://www.itca.com.ar/|Instituto Tecnológico de Capacitación Automotriz (ITCA)]] se encuentra desarrollando una **Unidad de Control Electrónica Vehicular Programable (UCEVP)** para aplicarla al control de motores a explosión.
+###
+
+###
+La UCEVP es la encargada de controlar el sistema de inyección electrónica empleada en vehículos de combustión interna. Su principal función es mejorar el rendimiento del motor aumentando la eficiencia en el uso del combustible y reduciendo los índices de contaminación. Esto se logra evaluando la demanda generada al sistema por el conductor y el estado actual del motor. Una vez realizado este análisis y junto a la cartografía almacenada en el sistema, la computadora determina cuáles son las mejores acciones a ejecutar sobre los parámetros del motor para lograr responder a los pedidos del usuario preservando el rendimiento.
+###
+{{ :implementaciones:esquema_ucevp.png?500 |Sistema de reportes y navegación en tiempo real}}
+
+=== Alcance del proyecto ===
+  * **Producto nacional**: empezar a transitar el camino de la investigación y desarrollo de un sistema como el descripto para que, de ser necesario en el futuro, ya se tengan las bases necesarias para desarrollarlo totalmente en nuestro país. 
+  * **Educativo**: Brindarle a la  comunidad educativa un entorno en donde pueda estar en contacto con el funcionamiento interno y las problemáticas de este tipo de sistemas. Pudiendo también modificar los parámetros de ajuste y puesta a punto. 
+  * **Generación de subproductos**: Usar los conocimientos adquiridos para generar importantes productos comerciales para las automotrices y los talleres de servicio.
+
+=== Vinculación con la CIAA ===
+  * Hacer de la CIAA la plataforma base del hardware que, con el agregado de circuitos auxiliares específicos de la aplicación, conformaran la UCEVP. 
+  * Emplear el firmware RTOS basado en el estándar OSEK-OS de la CIAA.
+  * Ser un punto de testeo de la plataforma dada las exigencias mecánicas y eléctricas que implica estar instalada en un vehículo.
+  * Vincular a los participantes de todos los proyectos, compartiendo información, experiencias y dudas que fomenten el desarrollo tecnológico argentino y que nos permitan avanzar en esta línea.
+
+
+----
+[[http://www.caesistemas.com.ar/|{{ :implementaciones:cae_logo.jpg|}}]]
+===== Seguridad vial y gestión de flotas =====
+###
+[[http://www.caesistemas.com.ar/|CAE Sistemas S.R.L.]] es una empresa dedicada a la **seguridad vial y monitoreo de vehículos en tiempo real**, que actualmente se encuentra desarrollando su quinta generación de equipos. Con el surgimiento del Proyecto CIAA [[http://www.caesistemas.com.ar/|CAE Sistemas]] decidió participar utilizando el conocimiento para realizar un mejor equipo y a su vez colaborar con el proyecto.
+###
+
+=== ¿Cómo funciona el equipo? ===
+
+El equipo permite el monitoreo y control del comportamiento del chofer, del vehículo y de la carga. 
+
+{{ :implementaciones:CAE_Sistemas_1.png?600 |Sistema de reportes y navegación en tiempo real}}
+###
+Al ser un equipo desarrollado enteramente por [[http://www.caesistemas.com.ar/|CAE Sistemas]], es posible adaptarlo a múltiples funcionalidades entre ellas:
+###
+{{ :implementaciones:CAE_Sistemas_0.png?250|Sistema de reportes y navegación en tiempo real}}
+  * Registro de la **posición** y almacenamiento para realizar informes y recorridos.
+  * Monitoreo de la **velocidad**, **aceleraciones**, **frenadas bruscas**.
+  * Control del **cinturón de seguridad**, **temperatura de la carga**, **sobrecarga** del vehículo.
+  * Realizar acciones en base a las mediciones (**alarmas**, aviso vía **SMS**, corte de contacto).
+  * **Control del personal** que utiliza el vehículo, para evitar el uso no autorizado y realizar los informes por cada chofer.
+  * Adaptación del equipo al ámbito industrial, **recolección de datos vía modbus**.
+  * **Conectividad inalámbrica** por varios medios: GSM, GPRS, 3G, WIFI, Radiofrecuencia (2.4GHz).
+  * Ubicación mediante varios medios: GPS, GLONASS, triangulación de celdas GSM, triangulación WIFI, sensores (acelerómetro, giróscopo y brújula).
+  * **Cámara de fotos** en el vehículo.
+  * **Control de válvulas en camiones cisternas**.
+  * **Control de combustible** y cargas.
+  * **Programación a distancia** por aire (OTA).
+
+=== Aportes al Proyecto CIAA ===
+###
+Con este desarrollo [[http://www.caesistemas.com.ar/|CAE Sistemas]] estará participando del Proyecto CIAA de la siguientes formas:
+###
+  * Adopción de partes del firmware de la CIAA utilizando OSEK y el estándar POSIX.
+  * Utilización de parte del hardware para las interfaces externas.
+  * Realimentación al Proyecto CIAA con la experiencia y las pruebas en campo.
+  * Desarrollo de módulos necesarios para la implementación del equipo de monitoreo y control de flota: Comunicación con los módulos de GPS, GPRS, WIFI, interfaces para los sensores.
+  * Desarrollo de librería de triangulación WIFI y de celdas GSM.
+  * Utilización del hardware en entornos hostiles: ruido y vibraciones de motor, altas temperaturas, temperaturas bajo 0.
+  * Desarrollo de programación a distancia por aire (OTA).
+
+----

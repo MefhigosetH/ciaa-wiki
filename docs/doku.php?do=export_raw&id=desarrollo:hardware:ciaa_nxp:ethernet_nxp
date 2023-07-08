@@ -1,0 +1,35 @@
+====== CIAA-NXP: Ethernet ======
+
+
+===== Descripción =====
+###
+Dada la enorme difusión y robustez que tiene el standard IEEE-802.3 y sus derivados, conocido generalmente como Ethernet (([[http://es.wikipedia.org/wiki/Ethernet|Estándar Ethernet en Wikipedia]])), éste es ampliamente utilizado en enorme cantidad de equipos electrónicos en todas las áreas. Es por ello que la CIAA versión NXP lo ha incorporado entre sus alternativas de comunicación, permitiendo mediante su salida en conector RJ45 formar parte de una red de cableado estructurado. Las posibilidades que abre este tipo de conectividad son enormes, tan solo con mencionar la simple incorporación del stack TCP/IP muestra el camino para su uso en Intranets e Internet.
+###
+
+###
+Para su implementación se ha optado por el Ethernet Transceiver LAN8720A, que provee de todas las características mencionadas, pudiendo adaptarse de manera automática a redes de 10Mbps/100Mbps, interconectándose de manera sencilla con la CPU mediante su interface RMII (Reduced Media Independent Interface) utilizando pocos recursos.
+###
+
+###
+En la capa física se ha optado por el J0011D01BNL, que está compuesto del conector RJ45 con transformador de pulsos, choke de modo común y LEDs integrados, reduciendo el espacio necesario en el PCB.
+###
+
+
+===== Características =====
+
+  * Basado en el estándar  IEEE802.3/802.3u (Fast Ethernet).
+  * Transceptor Full-Duplex 10Mbps/100Mbps (10-BASE-T/100BASE-TX).
+  * Capa Física (PHY) de Bajo consumo.
+  * Auto-MDIX, detección automática de conexión directa o cruzada.
+  * Auto-Negociación del tipo de enlace (10Mbps/100Mbps, Half/Full Duplex).
+  * Interface RMII hacia la CPU.
+  * LEDs de estado.
+
+
+===== Especificación de los componentes =====
+
+  * Ethernet PHY: [[http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf|LAN8720A]].
+  * Conector RJ45: [[http://productfinder.pulseeng.com/products/datasheets/J403.pdf|Pulse J0011D01BNL]].
+  * Oscilador: [[http://www.abracon.com/Oscillators/ASV.pdf|ASV-50.000MHZ-E-T]]
+
+

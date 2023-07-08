@@ -1,0 +1,39 @@
+====== La CIAA en la industria del Petróleo y Gas ======
+
+###
+Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en la industria del **Petróleo y Gas**.
+###
+
+----
+
+===== Antena auto-orientable VSAT para campamentos petroleros =====
+
+[[http://www.vsatmotion.com/|{{ vsat.png?200}}]]
+
+###
+La empresa [[http://www.vsatmotion.com/|VSATMotion]] se encuentra desarrollando una **antena auto-orientable del tipo VSAT para enlaces de voz y datos para campamentos petroleros** (perforación, WO, Pulling, Servicios Especiales).
+###
+
+###
+Actualmente durante las perforaciones petroleras se utilizan antenas tipo VSAT fijas. Cada vez que los equipos de perforación se mueven a otro sitio, se debe enviar un técnico a mover la antena (esto a veces ocurre 2 o 3 veces al mes). Lo mismo sucede si se desalinea una antena. Los técnicos pueden tardar en resolver el problema un par de horas o varios días (según la disponibilidad de los técnicos y la locación de la antena), dejando los campamentos de perforación sin comunicación (la mayoría de las veces los sitios de perforación se encuentran a varios kilómetros de los centros urbanos).
+###
+
+###
+La idea de desarrollar una antena auto-orientable surgió precisamente para solucionar los problemas antes mencionados y para sustituir importaciones, ya que las antenas auto-orientables en la actualidad se desarrollan en el extranjero.
+###
+
+{{ DSA7.png?250|Antena auto-orientable VSAT}}
+
+###
+Para este proyecto **se utilizará la CIAA como electrónica central** para controlar a lazo cerrado el movimiento de la antena. Básicamente se deben controlar los siguientes procesos:
+###
+
+  - **Despliegue de antena**: Cuando se llega al sitio donde operará la antena, se debe desplegar el plato.
+  - **Apuntamiento grueso**: A partir de sensores se determina la orientación actual de la antena y hacia dónde debe desplazarse tanto en azimuth como en elevación para apuntar hacia el satélite. Una vez determinado el movimiento se procede a ejecutarlo (a lazo cerrado).
+  - **Apuntamiento fino**: Una vez que el plato de la antena está orientado, se habilita el sensor que mide el nivel de atenuación de la señal recibida del satélite y se ejecuta un ajuste de la orientación del plato para maximizar el nivel de intensidad de la señal.
+  - **Repliegue de antena**: Antes de mover la antena se debe replegar el plato.
+
+La siguiente es una demostración real de la antena durante la exposición [[http://www.oge-patagonia.com.ar|Oil&Gas Patagonia 2014]]:
+{{ youtube>-iZv62qUZPE }}
+
+----

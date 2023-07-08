@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:fw_coding_guidelines</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,fw_coding_guidelines"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:fw_coding_guidelines&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:fw_coding_guidelines"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:fw_coding_guidelines.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:fw_coding_guidelines","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#ciaa_firmware_coding_guidelines">CIAA Firmware Coding Guidelines</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#general">General</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#indentation3_espacios_y_no_tabs">Indentation: 3 espacios y no tabs</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#no_trailing_spaces">No trailing spaces</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#comentarios">Comentarios</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#doxygen">Doxygen</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#plantillas_templates">Plantillas (templates)</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#nombres_de_macros">Nombres de macros</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#nombre_de_funciones">Nombre de funciones</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:fw_coding_guidelines.html#commits">Commits</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ciaa_firmware_coding_guidelines">CIAA Firmware Coding Guidelines</h1>
+<div class="level1">
+
+<p>
+INFO: Estamos trabajando en mejorar y extender estas Guidelines.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA Firmware Coding Guidelines&quot;,&quot;hid&quot;:&quot;ciaa_firmware_coding_guidelines&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-113&quot;} -->
+<h2 class="sectionedit2" id="general">General</h2>
+<div class="level2">
+
+<p>
+En esta sección se define un estilo de codificación para lenguaje de programación C a través de un conjunto de normas y recomendaciones que deben ser utilizadas en toda la documentación del proyecto.
+El uso de una guía común asegura la correcta comprensión de todo el código, además de facilitar el mantenimiento.
+</p>
+
+<p>
+Lo expuesto en esta sección, trata exclusivamente del estilo de programación en lenguaje C en cuanto a codificación, es decir, no aborda cuestiones de diseño, organización funcional, etc. 
+</p>
+
+<p>
+Para mayor información sobre guías de estilo de codificación pueden consultarse:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://homepages.inf.ed.ac.uk/dts/pm/Papers/nasa-c-style.pdf" class="urlextern" target="_blank" title="http://homepages.inf.ed.ac.uk/dts/pm/Papers/nasa-c-style.pdf" rel="ugc nofollow noopener">C STYLE GUIDE-NASA Software Engineering Laboratory Series SEL-94-003</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.misra-c.com" class="urlextern" target="_blank" title="http://www.misra-c.com" rel="ugc nofollow noopener">MISRA C</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;General&quot;,&quot;hid&quot;:&quot;general&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;114-915&quot;} -->
+<h2 class="sectionedit3" id="indentation3_espacios_y_no_tabs">Indentation: 3 espacios y no tabs</h2>
+<div class="level2">
+
+<p>
+Las normas de indentation (sangría, mal traducido como indentación) indican la posición en la que se deben colocar los diferentes elementos que se incluyen en el código fuente.
+Este corrimiento hacia la derecha, un cierto espacio, de un bloque de texto, permite visualizarlo mejor y más rápidamente del texto contiguo.
+</p>
+
+<p>
+El uso de caracteres espacio (3) y no el caracter TAB (tabulador) asegura que los distintos programadores hagan uniformemente el espaciado y no sea dependiente del tamaño (cantidad de espacios) que tienen definido en el TAB.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Indentation: 3 espacios y no tabs&quot;,&quot;hid&quot;:&quot;indentation3_espacios_y_no_tabs&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;916-1515&quot;} -->
+<h2 class="sectionedit4" id="no_trailing_spaces">No trailing spaces</h2>
+<div class="level2">
+
+<p>
+Existe una razón práctica de evitar espacios en blanco innecesarios al final de una línea, y es que si los programadores no tienen cuidado de evitar este uso, cualquier necesidad de hacer una comparación de cambios o buscar diferencias en archivos, surgen diferencias que interfieren en líneas aparentemente sin cambios, sólo porque alguien ha retirado o agregado espacios.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;No trailing spaces&quot;,&quot;hid&quot;:&quot;no_trailing_spaces&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1516-1929&quot;} -->
+<h2 class="sectionedit5" id="comentarios">Comentarios</h2>
+<div class="level2">
+
+<p>
+<strong>Los comentarios del código deberán estar escritos en inglés.</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Los comentarios deberán tener el mismo nivel de sangrado que el código que comentan.</div>
+</li>
+<li class="level1"><div class="li"> Los comentarios no deberán repetir y/o reformular el código, ya que su propósito es explicar la intención del código.</div>
+</li>
+<li class="level1"><div class="li"> No se recomiendan los comentarios de fin de línea (doble barra inclinada / / ), puesto que su utilización declina en el uso de pocas palabras o abreviaturas que dificultan su comprensión.<br/>
+</div>
+</li>
+</ul>
+
+<p>
+¡Comentar no es pérdida de tiempo!<br/>
+
+La métrica CP (Comment Percentage) se define como el número de líneas de comentarios dividido por el número de líneas (no en blanco) del código. Un valor aceptable para este parámetro es de alrededor del 20%
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comentarios&quot;,&quot;hid&quot;:&quot;comentarios&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1930-2701&quot;} -->
+<h2 class="sectionedit6" id="doxygen">Doxygen</h2>
+<div class="level2">
+
+<p>
+Los comentarios de funciones, macros, types, etc. deberán estar hechos siguiendo la sintaxis utilizada por el generador automático de documentación <a href="http://www.stack.nl/~dimitri/doxygen/" class="urlextern" target="_blank" title="http://www.stack.nl/~dimitri/doxygen/" rel="ugc nofollow noopener">doxygen</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Doxygen&quot;,&quot;hid&quot;:&quot;doxygen&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2702-2924&quot;} -->
+<h2 class="sectionedit7" id="plantillas_templates">Plantillas (templates)</h2>
+<div class="level2">
+
+<p>
+La estructura de cada nuevo archivo debe estar basada en los templates definidos para tal fin.<br/>
+
+Lea atentamente el contenido de las distintas secciones y complete de acuerdo con lo solicitado en ellas. 
+</p>
+
+<p>
+Los modelos de plantilla se encuentra en: <a href="https://github.com/ciaa/Firmware/tree/master/modules/template" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/master/modules/template" rel="ugc nofollow noopener">https://github.com/ciaa/Firmware/tree/master/modules/template</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plantillas (templates)&quot;,&quot;hid&quot;:&quot;plantillas_templates&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2925-3273&quot;} -->
+<h2 class="sectionedit8" id="nombres_de_macros">Nombres de macros</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> POSIX or standard macros use the name as defined in the standard with the ciaaPOSIX_prefix</div>
+<ul>
+<li class="level2"><div class="li"><code>#define ciaaPOSIX_stdio_MAXFILDES      20</code></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Non standard interface use the following schema ModuleName_MACRO_NAME</div>
+<ul>
+<li class="level2"><div class="li"><code>#define ciaaDioDevices_MAXDEVICES   20</code> </div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Nombres de macros&quot;,&quot;hid&quot;:&quot;nombres_de_macros&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;3274-3573&quot;} -->
+<h2 class="sectionedit9" id="nombre_de_funciones">Nombre de funciones</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> POSIX or standard interfaces use the name as defined in the standard with the ciaaPOSIX_ prefix</div>
+<ul>
+<li class="level2"><div class="li"><code>int32_t ciaaPOSIX_open(char const * path, uint8_t oflag)</code> </div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Non standard interfaces use following schema ModuleName_functionName</div>
+<ul>
+<li class="level2"><div class="li"><code>void ciaaDioDevices_init(void)</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Nombre de funciones&quot;,&quot;hid&quot;:&quot;nombre_de_funciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3574-3887&quot;} -->
+<h2 class="sectionedit10" id="commits">Commits</h2>
+<div class="level2">
+
+<p>
+Cuando sea necesario hacer un commit en los repositorios, se deberá incluir una breve descripción de los cambios realizados. Para esto se deberá utilizar el comando:
+</p>
+
+<p>
+<code>git commit -m “&lt;mensaje&gt;”</code>
+</p>
+
+<p>
+Donde “mensaje” se usa para asociar al commit con la descripción mencionada.
+</p>
+
+<p>
+Para las actualizaciones relacionadas con el firmware, se deberá vincular el commit con los tickets (issue) implicados en los cambios realizados. Esto quiere decir, hacer:
+</p>
+
+<p>
+<code>git commit -m “#123 Descripción del commit vinculado al ticket 123”</code>
+</p>
+
+<p>
+<code>git commit -m “#123 Descripción del commit vinculado al ticket 123 y también al #246 por tal y cual cosa!”</code>
+</p>
+
+<p>
+Luego, cuando se hace el push queda vinculado el commit con ese ticket y es mucho más fácil el seguimiento.<br/>
+Hacer un ticket es muy sencillo, se puede crear desde la web github (botón “issues”).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Commits&quot;,&quot;hid&quot;:&quot;commits&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;3888-&quot;} --></div>
+</body>
+</html>

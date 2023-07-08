@@ -1,0 +1,69 @@
+====== Estructura de directorios ======
+
+El CIAA-Firmware está construido de forma modular.
+
+###
+En el directorio principal luego de hacer un [[git|git clone]] o al bajar una release oficial se pueden encontrar los siguientes Directorios y Archivos:
+###
+{{estructura_carpetas_firmware.png|Estructura de Directorios de CIAA-Firmware.}}\\
+
+^ Directorio o\\ Archivo ^ Descripción ^
+| .git | Contiene archivos de GIT vinculados al manejo de este repositorio, no son parte en si de CIAA-Firmware |
+| doc | Contiene la documentación del proyecto. |
+| examples | Contiene algunos ejemplos que se pueden utilizar de base para futuros desarrollos |
+| externals | Contiene librerías o tools necesarios por CIAA-Firmware pero que no son parte directa de la CIAA y pueden contener otras licencias. |
+| modules | Contiene los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] del CIAA-Firmware. |
+| out | Todos los archivos de salida, ya sean librerías, binarios o archivos generados son almacenados en este y sub directorios. |
+| Makefile | Este archivo es el [[:make_environment|makefile principal]] de CIAA-Firmware. |
+| Makefile.config | Contiene un ejemplo de como debería ser Makfile.mine. |
+| Makefile.mine | No existe por defecto (GIT no lo descarga del repositorio porque debe ser propio de cada usuario). Debe crearse a partir de una copia de Makefile.config, puede encontrar más información en [[:make_environment|Make]]. |
+
+===== doc (Documentación del CIAA-Firmware) =====
+###
+Contiene los fuentes documentación oficial de una Release. También se puede encontrar documentación en nuestra [[desarrollo:firmware|Wiki del CIAA-Firmware]].
+###
+
+La documentación se puede generar desde el makefile utilizando:
+<code>
+make doc
+</code>
+
+===== examples (Ejemplos del CIAA-Firmware) =====
+###
+Contiene los ejemplos de CIAA-Firmware. A todo aquel que comience a programar utilizando el CIAA-Firmware le recomendamos iniciar el proyecto basado en alguno de nuestros ejemplos.
+###
+
+La primera versión contiene la siguiente estructura bajo el directorios examples:
+
+^ Directorios        ^ Descripción                                    ^
+| blinking_with_rtos | Un ejemplo de un Led Titilando con OSEK RTOS   |
+| blinking wo_rtos   | Un ejemplo de un Led Titilando sin ningún RTOS |
+
+###
+Para poder compilar algún ejemplo debe editar el Makefile.mine. Si todavía no tiene un Makefile.mine lea nuestra introducción a [[:make_environment|Makefile]].
+###
+
+
+===== externals (Software y Tools Externos) =====
+###
+Este directorio contiene el Software y Tools externos al CIAA-Firmware, que son necesarios para compilar, testear, etc. el Firmware. Tenga en cuenta que el Software y Tools en esta carpeta no son parte de CIAA-Firmware y pueden contener otras licencias.
+###
+
+^ Directorio ^ Descripción ^
+| ceedling | Tool utilizada para los [[unit_tests|Unit Tests o Pruebas Unitarias]] |
+| platforms | Software utilizado para las plataformas, desde scritps para el linker como códigos de startup para la inicialización del software. Con el tiempo intentaremos reescribir todas estas rutinas y scripts para que no sea necesario utilizar scripts o software externo. |
+
+===== modules (Módulos de CIAA-Firmware) =====
+
+Contiene los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] de software del CIAA-Firmware.
+
+===== out (Archivos de salida) =====
+
+Contiene todos los archivos generados por el CIAA-Firmware:
+
+^ Directorio ^ Descripción ^
+| bin | Contiene el binario del proyecto, es el archivo que se va a correr en la PC o a cargar en el CIAA-Firmware |
+| ceedling | Contiene todo lo relevante a las salidas de los [[unit_tests|Unit Tests o Pruebas Unitarias]] |
+| doc | Contiene la documentación generada utilizando: <code>make doc</code> |
+| gen | Archivos generados de [[rtos|OSEK RTOS]] |
+| lib | Por cada Módulo el make genera un archivo .a, osea una libreria |

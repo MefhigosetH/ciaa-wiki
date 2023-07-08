@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> repo:ponchos</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:06:38+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:audio&amp;rev=1484095503&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:biopotenciales&amp;rev=1516540486&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:caidas&amp;rev=1484096039&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:celdacarga&amp;rev=1484095697&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:controltemperatura&amp;rev=1506139421&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ecg&amp;rev=1484096179&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativo1&amp;rev=1484095457&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativounsj&amp;rev=1512481237&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:espwroom32&amp;rev=1505516790&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ethernet&amp;rev=1484097441&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansor_puertos&amp;rev=1505521129&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansoresciaa&amp;rev=1484153741&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:fpga&amp;rev=1484150218&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:gpsl86&amp;rev=1505517291&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:interfazusuario&amp;rev=1484100212&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:iot&amp;rev=1484097964&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:joystick&amp;rev=1506140356&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:l298&amp;rev=1484098513&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:midi&amp;rev=1505514967&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:misionsae&amp;rev=1484100581&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:osciloscopio&amp;rev=1484095401&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:oximetro&amp;rev=1484098307&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:picowifi&amp;rev=1484098751&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:plc&amp;rev=1505516407&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:puentehxi2c&amp;rev=1484100773&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:simon&amp;rev=1484099126&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:sumorobot&amp;rev=1484154393&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:wifibt_cese_espwroom32&amp;rev=1505570656&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:audio&amp;rev=1484095503&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:45:03+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:audio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:audio&amp;rev=1484095503&amp;do=diff</link>
+        <description>Poncho  Audio
+
+
+
+	*  Descripción: Poncho con entrada de micrófono y salida de audio conectados al ADC y al DAC respectivamente.
+		*  Autor: Giovagnoli Valentin.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Audio_amp_mic&gt;
+		*  Wiki: Poncho Audio
+
+
+
+&lt;fc #008080&gt;EDU-CIAA&lt;/fc&gt; Diagrama Esquemático  Circuito Impreso</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:biopotenciales&amp;rev=1516540486&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-01-21T13:14:46+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:biopotenciales</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:biopotenciales&amp;rev=1516540486&amp;do=diff</link>
+        <description>Poncho  de Adquisición de Biopotenciales
+
+
+
+	*  Descripción: Poncho para medición de Biopotenciales.
+		*  Autor: Bruno Javier Cesario - Gonzalo Cuenca - Eduardo Filomena
+		*  URL PONCHO: &lt;https://github.com/EFilomena/PonchoDeBiopotenciales&gt;
+		*  Wiki:  Poncho Biopotenciales
+
+
+
+&lt;fc #008080&gt;EDU-CIAA-NXP&lt;/fc&gt; Diagrama Esquemático</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:caidas&amp;rev=1484096039&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:53:59+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:caidas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:caidas&amp;rev=1484096039&amp;do=diff</link>
+        <description>Poncho  Detector de Caídas
+
+
+
+	*  Descripción: Poncho que permite conectar módulos con acelerómetro, wifi, GSM. Implementa una fuente a batería de 9V con la cual se alimenta el circuito y puede alimentar la EDU-CIAA. Posee además tres leds, un buzzer y se puede leer la tensión de batería con el A/D de la EDU-CIAA.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:celdacarga&amp;rev=1484095697&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:48:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:celdacarga</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:celdacarga&amp;rev=1484095697&amp;do=diff</link>
+        <description>Poncho  Celda de Carga
+
+
+
+	*  Descripción: Poncho para conectar una celda de carga, se amplifica la señal, se hace una conversión con un A/D externo y se ingresa a la EDU-CIAA por I2C.
+		*  Autor: Rey Hernandez Hernán Felipe.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Celda_de_carga&gt;
+		*</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:controltemperatura&amp;rev=1506139421&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-23T04:03:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:controltemperatura</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:controltemperatura&amp;rev=1506139421&amp;do=diff</link>
+        <description>Poncho  Control de Temperatura
+
+
+
+	*  Descripción: Es una poncho destinado a intermediar con termocuplas mas el control de dos interruptores a traves de relays, pensado para hacer control de temperatura en un tanque de agua a travez de resistencias.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ecg&amp;rev=1484096179&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:56:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:ecg</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ecg&amp;rev=1484096179&amp;do=diff</link>
+        <description>Poncho  ECG
+
+
+
+	*  Descripción: El Poncho ECG permite monitorear frecuencia cardíaca utiliza el integrado AD8232. La señal procesada ingresa por el conversor A/D de la EDU-CIAA. Este circuito se basa en el diseño de Sparkfun.
+		*  Autor: Jorge Fonseca.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativo1&amp;rev=1484095457&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:44:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:educativo1</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativo1&amp;rev=1484095457&amp;do=diff</link>
+        <description>Poncho Educativo 1
+
+
+
+	*  Descripción: Este poncho tiene una variedad de componentes para realizar ensayos variados y poder aplicar los conceptos aprendidos en la carrera. Implementa entradas Analógicas, salidas PWM, salidas a relé y entradas optoacopladas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativounsj&amp;rev=1512481237&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-12-05T13:40:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:educativounsj</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:educativounsj&amp;rev=1512481237&amp;do=diff</link>
+        <description>Poncho Educativo de la UNSJ
+
+
+
+	*  Descripción: Display LCD de 16×2, Teclado, Buzzer, RS232 y potenciómetro para el A/D. También posee varios conectores simples para otras interfaces como SPI e I2C. 
+		*  Autor: Leandro Gustavo Sarmiento de UNSJ</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:espwroom32&amp;rev=1505516790&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-15T23:06:30+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:espwroom32</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:espwroom32&amp;rev=1505516790&amp;do=diff</link>
+        <description>Poncho ESP-WROOM-32
+
+
+
+	*  Descripción: El módulos ESP-WROOM-32 combina capacidades para WiFi y Bluetooth con un bajo consumo de energía, lo cual lo hace ideal para aplicaciones IoT.
+		*  Autor: Ing. Iván Sierra de Cika Internacional
+		*  URL PONCHO:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ethernet&amp;rev=1484097441&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:17:21+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:ethernet</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:ethernet&amp;rev=1484097441&amp;do=diff</link>
+        <description>Poncho  Ethernet
+
+
+
+	*  Descripción: Poncho que agrega comunicación Ethernet que puede funcionar con la EDU-CIAA-NXP y la EDU-CIAA-FSL, utilizando el chip LAN8720A. 
+		*  Autor: Gerardo García, Ignacio Zaradnik y Diego Brengi.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/ethernet_LAN8720A_v2&gt;
+		*</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansor_puertos&amp;rev=1505521129&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-16T00:18:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:expansor_puertos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansor_puertos&amp;rev=1505521129&amp;do=diff</link>
+        <description>Poncho Expansor de Puertos
+
+
+
+	*  Descripción: Este circuito implementa un expansor de entradas y salidas digitales, y adaptador de nivel de tensión Low Voltage (3V3) a RS232 para puerto serie. 
+
+Las entradas digitales son del tipo a transistor NPN “sinking” y se activan con tensión de continua externa en el rango de entre 3,5 a 25VDC.  Las entradas se pueden activar a través de contactos secos o salidas transistorizadas “sourcing”. Las salidas digitales son del tipo a transistor NPN “sinking” a…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansoresciaa&amp;rev=1484153741&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T16:55:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:expansoresciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:expansoresciaa&amp;rev=1484153741&amp;do=diff</link>
+        <description>Expansores para CIAA
+
+
+
+	*  Descripción: Son prolongadores para los conectores de expansión de la CIAA-NXP y CIAA-FSL.
+		*  Autor:  Matias Leandro Ferraro.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/expansores_ciaa&gt;
+		*  Wiki: Expansores para CIAA
+
+
+
+&lt;fc #008080&gt;CIAA-NXP CIAA-FSL&lt;/fc&gt; Diagrama Esquemático  Circuito Impreso</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:fpga&amp;rev=1484150218&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T15:56:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:fpga</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:fpga&amp;rev=1484150218&amp;do=diff</link>
+        <description>Poncho  FPGA ICE40
+
+
+
+	*  Descripción: Poncho FPGA basado en la placa Olimex iCE40HX1K-EVB
+		*  Autor: Martin Ribelotta
+		*  URL PONCHO: &lt;https://github.com/martinribelotta/poncho_fpga&gt;
+		*  Wiki:  Poncho FPGA ICE40
+
+
+
+&lt;fc #008080&gt;EDU-CIAA&lt;/fc&gt; Diagrama Esquemático  Circuito Impreso  &lt;fc #777777&gt;Fabricación&lt;/fc&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:gpsl86&amp;rev=1505517291&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-15T23:14:51+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:gpsl86</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:gpsl86&amp;rev=1505517291&amp;do=diff</link>
+        <description>Poncho GPS L86
+
+
+
+	*  Descripción: Módulo GNSS (Global Navigation Satellite System) Quectel L86. Cuenta con antena embebida de 1.84cm x 1.84cm x 0.4cm; utiliza el chipset MT3333 MediaTek de nueva generación. Es compatible con el GPS L80 de QUECTEL. Proporciona una plataforma flexible y escalable para migrar de GPS a GNSS.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:interfazusuario&amp;rev=1484100212&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T02:03:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:interfazusuario</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:interfazusuario&amp;rev=1484100212&amp;do=diff</link>
+        <description>Poncho  Interfaz de Usuario
+
+
+
+	*  Descripción: Este módulo permite darle una cara más amigable a la EDU-CIAA, logrando una experiencia de usuario más interactiva. Cuenta con un teclado matricial de 4×4, un potenciómetro lineal, un display LCD de</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:iot&amp;rev=1484097964&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:26:04+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:iot</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:iot&amp;rev=1484097964&amp;do=diff</link>
+        <description>Poncho  IoT
+
+
+
+	*  Descripción: Es una placa que sea capaz de conectarse a la EDU-CIAA-NXP y que provea por medio del módulo WiFi RN1810 de microchip conectividad inalámbrica a la placa. Este módulo se conecta por medio del puerto serie de la EDU-CIAA-NXP.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:joystick&amp;rev=1506140356&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-23T04:19:16+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:joystick</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:joystick&amp;rev=1506140356&amp;do=diff</link>
+        <description>Poncho  Joystick
+
+
+
+	*  Descripción:  Poncho de la edu-ciaa con funcionalidad de Joystick que puede ser usado como interface de control de otros sistemas como juegos en pantallas o proyectos con motores.
+		*  Autor:  Toris Alan
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Joystick&gt;
+		*</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:l298&amp;rev=1484098513&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:35:13+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:l298</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:l298&amp;rev=1484098513&amp;do=diff</link>
+        <description>Poncho Puente H con L298
+
+
+
+	*  Descripción:  El L298 implementa un doble puente H con un L298. Las entradas de control estan optoacopladas para proteger a la EDU-CIAA. Además posee varios indicadores LED para seguir el funcionamiento.
+		*  Autor: Suarez Baron Juan Carlos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:midi&amp;rev=1505514967&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-15T22:36:07+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:midi</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:midi&amp;rev=1505514967&amp;do=diff</link>
+        <description>Poncho MIDI
+
+
+
+	*  Descripción: Este circuito implementa una interfaz MIDI conforme a la especificación de dicho estándar y un conjunto de actuadores para el disparo de paquetes e interacción con dispositivos compatibles. Se alimentará a través de USB o fuente externa.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:misionsae&amp;rev=1484100581&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T02:09:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:misionsae</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:misionsae&amp;rev=1484100581&amp;do=diff</link>
+        <description>Poncho  Misión SAE
+
+
+
+	*  Descripción: El Poncho misión SAE “Ingeniería Satelital en la Escuela” es una reimplementación en Kicad del Poncho utilizado para la actividad mencionada. Más información sobre el tema en &lt;http://www.suremptec.com/es/noticias-y-eventos/127-exitoso-cierre-de-la-primera-edicion-de-la-mision-sae.html&gt; . El Poncho posee un módulo ZigBee, un sensor de presión y un módulo acelerómetro.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:osciloscopio&amp;rev=1484095401&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T00:43:21+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:osciloscopio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:osciloscopio&amp;rev=1484095401&amp;do=diff</link>
+        <description>Poncho Osciloscopio
+
+
+
+	*  Descripción: Poncho que implementa un osciloscopio básico con selección de atenuación, DC/AC, nivel de disparo y un display para mostrar la señal capturada.
+		*  Autor: Nicolás Dassieu Blanchet.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Osciloscopio&gt;
+		*</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:oximetro&amp;rev=1484098307&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:31:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:oximetro</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:oximetro&amp;rev=1484098307&amp;do=diff</link>
+        <description>Poncho  Oxímetro
+
+
+
+	*  Descripción: La función del poncho es implementar un oximetro de pulso basado en el integrado AFE4490 de Texas Instruments y usando como configuración del sensor el estándar introducido por Nellcor.
+		*  Autor: Meira Fernando.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:picowifi&amp;rev=1484098751&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:39:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:picowifi</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:picowifi&amp;rev=1484098751&amp;do=diff</link>
+        <description>Poncho WiFi PicoCIAA
+
+
+
+	*  Descripción:  Se trata de una placa sencilla para la picoCIAA (picoPoncho) que contiene un módulo wifi ESP8266, conectores para la asociación a la picociaa y elementos de manejo del ESP.
+		*  Autor: De Jesús Meleán Sergio Renato.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:plc&amp;rev=1505516407&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-15T23:00:07+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:plc</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:plc&amp;rev=1505516407&amp;do=diff</link>
+        <description>Poncho  PLC
+
+
+
+	*  Descripción: Agrega Etradas optiacopladas y salidas de relé, además de un display LCD para implementar un PLC.
+		*  Autor:  Mariano Bustos - E.E.S.T. N°5, Jorge Osio.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Poncho%20PLC&gt;
+		*  Wiki: Poncho PLC
+
+
+
+&lt;fc #008080&gt;EDU-CIAA&lt;/fc&gt; Diagrama Esquemático</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:puentehxi2c&amp;rev=1484100773&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T02:12:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:puentehxi2c</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:puentehxi2c&amp;rev=1484100773&amp;do=diff</link>
+        <description>Poncho  Puente H por i2c
+
+
+
+	*  Descripción: Este circuito implementa un controlador para dos motores paso a paso o cuatro motores DC de baja potencia. Podra usarse con la EDU-CIAA con una fuente de alimentacion externa.
+		*  Autor:  Martinez Horacio.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:simon&amp;rev=1484099126&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T01:45:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:simon</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:simon&amp;rev=1484099126&amp;do=diff</link>
+        <description>Poncho Simon
+
+
+
+	*  Descripción: Poncho para implementar el clásico juego del Simon, con pulsadores, LEDs de colores y buzzer.
+		*  Autor: Bassi Juan Agustín.
+		*  URL PONCHO: &lt;https://github.com/ciaa/Ponchos/tree/master/Simon&gt;
+		*  Wiki: Poncho Simon
+
+
+
+&lt;fc #008080&gt;EDU-CIAA&lt;/fc&gt; Diagrama Esquemático  Circuito Impreso</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:sumorobot&amp;rev=1484154393&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-11T17:06:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:sumorobot</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:sumorobot&amp;rev=1484154393&amp;do=diff</link>
+        <description>Poncho Robot Sumo
+
+
+
+	*  Descripción: PCB simple faz quie puede fabricarse en forma casera para implementar un robot sumo. Manejo de dos motores en ambos sentidos, con relés. Manejo de 4 sensores de línea infrarrojos. Manejo de salida transistor adicional. Posibilidad de conectar dos módulos de ultrasonido FR04.  Alimentación de 12 Volts.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:wifibt_cese_espwroom32&amp;rev=1505570656&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-16T14:04:16+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:ponchos:wifibt_cese_espwroom32</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:ponchos:wifibt_cese_espwroom32&amp;rev=1505570656&amp;do=diff</link>
+        <description>Poncho  Wifi-BT CESE ESP-WROOM-32
+
+
+
+	*  Descripción: El circuito de este proyecto permite realizar un poncho para la EDU-CIAA usando el módulo ESP-WROOM-32 que cuenta con conectividad WIFI y BLUETOOTH. El circuito se alimenta con energía de la placa EDU-CIAA y se comunicará con la EDU-CIAA por UART.</description>
+    </item>
+</rdf:RDF>

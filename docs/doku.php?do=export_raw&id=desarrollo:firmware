@@ -1,0 +1,86 @@
+====== CIAA-Firmware ======
+
+###
+El **firmware** es el programa que **se ejecuta en la CPU del microcontrolador**. Éste comprende los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. 
+###
+
+El Firmware utiliza:
+  * El estándar **OSEK-OS** como [[desarrollo:firmware:rtos|RTOS]] (Sistema Operativo de Tiempo Real).
+  * El estándar **POSIX**, que describe un conjunto de interfaces de aplicación adaptables a una gran variedad de implementaciones de sistemas operativos. El **POSIX** de la CIAA es un **POSIX** Like.
+  * Implementa **MODBUS** como protocolo de comunicaciones.
+
+En las siguientes secciones podrá interiorizarse en la documentación del desarrollo del CIAA-Firmware.
+
+==== ¿Cómo comenzar a utilizar el CIAA Firmware?  ====
+
+###
+Si quiere utilizar el CIAA-Firmware le recomendamos comenzar a leer el [[desarrollo:firmware:user_manual|manual de usuario]] y las subpáginas.
+###
+
+==== ¿Cómo participar del desarrollo del CIAA-Firmware? ====
+
+###
+Si es nuevo en el proyecto y quiere participar del desarrollo del Firmware le recomendamos que lea la siguiente página: [[desarrollo:firmware:participar|Cómo participar en el grupo de Firmware]].
+###
+
+
+===== Plan de desarrollo =====
+
+En el [[.:firmware:Plan_Desarrollo_FW|Plan de desarrollo del firmware]] encontrará la definición de:
+    * Cronograma general de releases (versiones del CIAA-Firmware).
+    * [[.:firmware:plan_desarrollo_fw#equipo_tecnico_a_cargo|Equipo técnico a cargo]].
+    * Componentes a desarrollar y responsables a cargo.
+    * Estándares utilizados.
+
+
+===== Proceso de Desarrollo =====
+
+La siguiente página describe el [[.:firmware:proceso|Proceso de Desarrollo del Firmware]] de la CIAA.
+
+===== Requerimientos =====
+
+  *[[.:firmware:Caracteristicas_FW|Requerimientos del CIAA-Firmware]]: Documento de requerimientos propuestos para el desarrollo del Firmware de la CIAA.
+
+
+===== Diseño =====
+
+  *[[.:firmware:rtos|RTOS]]: Sistema operativo elegido para el CIAA-Firmware.
+
+  *[[.:firmware:arq_estatica_fw|Arquitectura estática]]: Módulos que conforman el firmware.
+ 
+  *[[.:firmware:Arq_Dinamica|Arquitectura dinámica]]: Comportamiento en el tiempo del firmware.
+
+  *[[desarrollo:modbus:modbus_design|MODBUS]].
+
+  *[[.:firmware:estructura_de_directorios|Estructura de directorios]].
+
+  *[[.:firmware:generador|Generador de archivos OIL]].
+
+
+===== Implementación =====
+
+  * [[desarrollo:firmware:Codigo|Código fuente]]: Acceso al repositorio de código desarrollado. Información necesaria para entender el código y compilarlo.
+
+  * [[desarrollo:firmware:Repositorio]]: Guia para la configuración de las herramientas Git y Gerrit para contribuir en el desarrollo del código.
+
+  * [[desarrollo:firmware:Instalacion_SW|Manual de instalación del firmware]].
+
+  * [[desarrollo:firmware:Primer compile|Compilando por primera vez]].
+
+  * Guía de estilo de codificación: Les recomendamos leer la sección [[desarrollo:firmware:fw_coding_guidelines|CIAA Firmware Coding Guidelines]] para interiorizarse de las reglas y recomendaciones a cumplir para aportar código al proyecto.
+
+===== Verificación y Validación =====
+###
+Como parte del desarrollo del Firmware de la CIAA se ejecutan también procesos de Verificación y de Validación.
+###
+
+La **Verificación** del CIAA-Firmware se realiza en tres etapas de testing:
+  * [[desarrollo:firmware:Unit Tests|Unit Tests (o Pruebas Unitarias)]]: Pruebas realizadas en PC, donde se testea sólo un archivo C por test.
+
+  * Module Tests (o Pruebas de Módulo): Pruebas realizadas en PC, donde se testea un módulo de firmware.
+
+  * [[desarrollo:firmware:Functional Tests|Functional Tests (o Pruebas Funcionales)]]: Pruebas realizadas sobre el hardware, donde se testea todo el firmware.
+
+###
+La **Validación** se realiza sobre cada versión del CIAA-Firmware, una vez que éstas se terminan de desarrollar. Para validar cada versión se ejecuta un conjunto de ensayos sobre el hardware, mediante los que se busca demostrar el cumplimiento de todos los [[desarrollo:firmware:caracteristicas_fw|requerimientos]] propuestos para esa versión de firmware. Estos ensayos pueden ser funcionales, de stress, negativos, entre otros.
+###

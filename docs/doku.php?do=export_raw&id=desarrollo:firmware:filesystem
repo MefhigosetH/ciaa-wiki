@@ -1,0 +1,16 @@
+====== File System de la CIAA =====
+
+El //File System// (en español sistema de archivos) es en general una capa de abstracción por software con la cual podemos manipular datos, algunas veces dentro de una memoria periférica. Un //File System// (de ahora en más se abreviara como **FS**) provee un modelo dónde nuestros datos se ven representados por archivos y estos se organizan dentro de carpetas. 
+
+En una primera instancia el **FS** estructura la información de manera de poder acceder de forma transparente a ella desde nuestra aplicación. Las aplicaciones industriales requieren de la posibilidad de almacenar datos de forma persistente localmente, por motivos diversos. El **FS** se encarga de proveernos una manera simple de trabajar con nuestros datos. Vale destacar que la tarea más importante del **FS** es la estructuración de nuestra información, por lo que se pueden utilizar un **FS** sin que estos trabajen directamente sobre un medio de almacenamiento. Este es un punto importante, puesto que se suele asociar la idea de un **FS** estrictamente con una unidad de disco (pensando en una PC), sin embargo este //matrimonio// no necesariamente se celebra la mayoría de las veces.
+
+En el caso del //firmware// de la **CIAA**, se implementará una capa de abstracción aún más arriba del **FS** que se llama **VFS** y hace referencia a un //Virtual FileSystem Switch// (en español conmutador de sistema de archivos virtual). La función del **VFS** es otorgar una interfaz uniforme. Los **FS** tiene un interfaz concreta según el medio en el que trabaja la estructuración de la información, entonces un **FS** pude trabajar sobre una memoria periférica mientras que otro puede trabajar sobre una red. En este caso, el **VFS** permite acceder de forma homogénea a la información que administran los diferentes **FS** sin necesidad de que la aplicación conozca el **FS** en concreto.
+
+{{ :desarrollo:firmware:vfs-layer.png?400|}}
+Para aclarar ideas, podemos enfocarnos en la imagen de la derecha. Sí imaginamos estos conceptos como capas, podemos observar el orden de ellas en la imagen. Cabe aclarar que la capa del **FS**, estaría compuesta por varios componentes que serían los **FS** en concreto según el //medio// en el que trabaja, o sea, podemos pensar en estos componentes como //módulos//. Este acercamiento nos permite definir de manera precisa responsabilidades: 
+
+  * System call interface: APIs para las aplicaciones.
+  * Virtual FileSystem Switch: Mantiene un registro de los archivos abiertos, puntos de montaje, etc.
+  * File System: Comprende como se implementa efectivamente el sistema de archivo. Puede capturar y almacenar los datos para un archivo, obtiene el contenido de un directorio, crear y borra tanto archivos como directorios. 
+  * Disk driver and buffer cache: Módulo que efectivamente lee y escribe el medio.
+

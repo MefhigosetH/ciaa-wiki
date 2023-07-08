@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="proyecto,casosdeuso,aplicacionescriticas,aplicacionesferroviarias,monitordebarreras,contextoymotivacion"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion"/>
+<link rel="canonical" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras';var JSINFO = {"id":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion","namespace":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias">Diseño e Implementación de un Monitor de Barreras Ferroviarias</h1>
+<div class="level1">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=10&amp;tok=881b07&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="10" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o e Implementaci\u00f3n de un Monitor de Barreras Ferroviarias&quot;,&quot;hid&quot;:&quot;diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-104&quot;} -->
+<h2 class="sectionedit2" id="contexto_y_motivacion">Contexto y motivación</h2>
+<div class="level2">
+<p class="divalign-justify">En el marco del Proyecto CIAA se busca lograr un acercamiento al desarrollo de soluciones con alto valor agregado y capacitar en estas temáticas a estudiantes, docentes, profesionales e investigadores. Para eso se intenta conseguir un primer acercamiento a las aplicaciones críticas y eventualmente hacer uso de la plataforma <a href="./doku.php%3Fid=desarrollo:ciaa_safety:start.html" class="wikilink1" title="desarrollo:ciaa_safety:start" data-wiki-id="desarrollo:ciaa_safety:start">CIAA-Safety</a> que se encuentra actualmente en desarrollo. </p><!--divalign-->
+<p class="divalign-justify">A su vez, existen dos proyectos de investigación acreditados actualmente en curso que están directamente relacionados con el diseño de soluciones electrónicas para aplicaciones en sistemas críticos:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <strong>Proyecto de Desarrollo Tecnológico y Social (PDTS) CIN-CONICET Nº151</strong> “Desarrollo de una Computadora Industrial Abierta Argentina (CIAA) para aplicaciones que requieran de seguridad funcional certificada”, $200.000 (2016/2017).</div>
+</li>
+<li class="level1"><div class="li"> <strong>Proyecto Desarrollo Estratégico (PDE) UBA Nº23</strong> “Controlador electrónico para barreras automáticas ferroviarias con nivel de integridad de seguridad certificable hasta SIL4”. $75.000 (2016/2017).</div>
+</li>
+</ul>
+<p class="divalign-justify">En relación con el Proyecto UBA-PDE Nº23 se optó por realizar un primer proyecto relativamente simple en el área de  las aplicaciones ferroviarias con el fin de alcanzar los siguientes objetivos:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <strong>Aprendizaje</strong>: adquirir los conocimientos y experiencias de nivel básico e intermedio en relación con las aplicaciones ferroviarias de seguridad crítica.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Educativos</strong>: presentar un caso de estudio de acceso libre y gratuito que sirva para formar a estudiantes y docentes en las metodologías propias del desarrollo de sistemas críticos.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Vinculación</strong>: establecer relaciones con empresas, organismos e instituciones ligadas al sector ferroviario a partir del abordaje de un caso concreto de aplicación.</div>
+</li>
+</ul>
+<p class="divalign-justify">En este contexto durante la <a href="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/escuela/" class="urlextern" target="_blank" title="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/escuela/" rel="ugc nofollow noopener">Sexta Escuela para la Enseñanza de los Sistemas Embebidos</a> desarrollada del 29 de mayo al 3 de junio de 2016 en la ciudad de Alta Gracia, Provincia de Córdoba, se organizó un curso de Diseño de Sistemas Críticos. En este curso se presentaron los conceptos generales relacionados con el diseño de los sistemas críticos y se eligió un primer proyecto de aplicación en el campo de los sistemas ferroviarios: el Diseño e Implementación de un Monitor de Barreras. </p><!--divalign-->
+<p class="divalign-justify">Se sugiere continuar la lectura en alguna de las siguientes páginas:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias">¿Por qué es tan difícil y valioso diseñar e implementar un sistema crítico para aplicaciones ferroviarias y qué metodologías de trabajo se recomiendan?</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion">¿Por qué se eligió el Proyecto del Monitor de Barreras Ferroviarias?</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias">¿En qué consiste un sistema Monitor de Barreras Ferroviarias?</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio">¿Cuál es el primer paso para realizar el diseño e implementación de un Monitor de Barreras Ferroviarias?</a></div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=10&amp;tok=881b07&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="10" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Contexto y motivaci\u00f3n&quot;,&quot;hid&quot;:&quot;contexto_y_motivacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;105-&quot;} --></div>
+</body>
+</html>

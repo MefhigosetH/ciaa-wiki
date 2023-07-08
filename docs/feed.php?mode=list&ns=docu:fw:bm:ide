@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> docu:fw:bm:ide</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:11:44+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;rev=1439923865&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_entorno&amp;rev=1439397195&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_primeros_pasos&amp;rev=1440326261&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_win_debug&amp;rev=1439401699&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux_debian&amp;rev=1440374595&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux&amp;rev=1489786563&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install&amp;rev=1451940566&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;rev=1439923865&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-18T18:51:05+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:ide_edu_ciaa_debug</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;rev=1439923865&amp;do=diff</link>
+        <description>Debug con la placa EDU-CIAA y el Entorno IDE
+
+Configuración del entorno CIAA-IDE
+Si estuviste compilando para hacer debug en Windows y ahora quieres probar con la placa EDU-CIAA, lo primero que tienes que hacer es un Clean Project. Todos los archivos generados en Builds anteriores, fueron para el CPU de tu PC, y no para el micro controlador de la EDU-CIAA.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_entorno&amp;rev=1439397195&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-12T16:33:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:ide_entorno</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_entorno&amp;rev=1439397195&amp;do=diff</link>
+        <description>Configuración del Entorno CIAA-IDE
+
+Workspace
+Al Iniciar el entorno CIAA-IDE, éste le solicita que seleccione una carpeta de trabajo. Esta Carpeta es la que contendrá el Workspace. En particular puede elegirse dentro del directorio de instalación del CIAA-IDE.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_primeros_pasos&amp;rev=1440326261&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-23T10:37:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:ide_primeros_pasos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_primeros_pasos&amp;rev=1440326261&amp;do=diff</link>
+        <description>Primeros Pasos
+
+Proyecto Blinking
+Para abrir el código fuente del proyecto, debemos ir al menú &#039;File⇒New⇒Makefile Project with Existing code&#039;, dado que tenemos nuestro código y también nuestro Makefile, y no necesitamos utilizar uno generado por Eclipse. Si no instaló el Firmware junto al entorno CIAA-IDE, tiene 2 opciones, o lo descarga desde la web siguiendo las instrucciones en</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_win_debug&amp;rev=1439401699&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-12T17:48:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:ide_win_debug</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:ide_win_debug&amp;rev=1439401699&amp;do=diff</link>
+        <description>Debug con Windows
+
+Debug Configuration
+Tanto el entorno CIAA-IDE como el Firmware, esta preparado para iniciar los primeros pasos sin necesidad de tener la placa EDU-CIAA, o con la posibilidad de hacer debug del software desarrollado, sin ésta.
+Para que el Win Debug funcione es necesario realizar la siguiente configuración. En principio debemos decirle al IDE donde se encuentra el ejecutable que genera el Makefile nuestro. Para esto Hacemos Click derecho sobre el proyecto &#039;Debug As⇒Debug Configu…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux_debian&amp;rev=1440374595&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-24T00:03:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:install_linux_debian</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux_debian&amp;rev=1440374595&amp;do=diff</link>
+        <description>Paso a paso: CIAA-IDE en Debian con una EDU-CIAA-NXP
+
+Requisitos
+
+	*  Una EDU-CIAA-NXP.
+	*  Ubuntu 14.04 o posterior.
+	*  Al menos 1GB de espacio libre en el home del usuario (/home/$USER).
+
+Configuración de las herramientas por línea de comandos
+
+1) Instalar paquetes adicionales:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux&amp;rev=1489786563&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-03-17T21:36:03+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:install_linux</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install_linux&amp;rev=1489786563&amp;do=diff</link>
+        <description>Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP
+
+Requisitos
+
+	*  Una EDU-CIAA-NXP.
+	*  Ubuntu 16.04 o posterior.
+	*  Al menos 1GB de espacio libre en el home del usuario (/home/$USER).
+
+Configuración de las herramientas por línea de comandos
+
+1) Instalar paquetes adicionales:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install&amp;rev=1451940566&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-01-04T20:49:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide:install</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide:install&amp;rev=1451940566&amp;do=diff</link>
+        <description>Instalación Software-IDE de la CIAA
+El CIAA-Software-IDE es el entorno de desarrollo del CIAA-Firmware. En su versión más completa, se ofrece un instalador llamado CIAA-IDE-Suite con el cual podrán de forma sencilla instalar y configurar automáticamente la totalidad de las herramientas necesarias para trabajar con la CIAA, incluyendo otras herramientas además del Firmware como ser IDE4PLC.</description>
+    </item>
+</rdf:RDF>

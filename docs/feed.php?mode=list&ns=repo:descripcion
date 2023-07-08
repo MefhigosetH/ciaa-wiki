@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> repo:descripcion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:23:30+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_acc&amp;rev=1510318276&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_fsl&amp;rev=1471899339&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_intel&amp;rev=1469203580&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nucleo_fsl&amp;rev=1471475563&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nxp&amp;rev=1468525331&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_safety&amp;rev=1469203233&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_fsl&amp;rev=1471512689&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_nxp&amp;rev=1468525255&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_xilinx&amp;rev=1469203661&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:firmata&amp;rev=1471474980&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:gabinete_edu_ciaa_nxp_bassi&amp;rev=1479583435&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_c&amp;rev=1471448358&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_java&amp;rev=1471475248&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_ladder&amp;rev=1469117559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_micropython&amp;rev=1471473788&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_snap&amp;rev=1471473937&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:openocd&amp;rev=1469987934&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:picociaa&amp;rev=1469028765&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ponchos&amp;rev=1514292755&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:toolchain_arm&amp;rev=1469988112&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_acc&amp;rev=1510318276&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-11-10T12:51:16+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_acc</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_acc&amp;rev=1510318276&amp;do=diff</link>
+        <description>CIAA-ACC
+
+ La CIAA-ACC está orientada al desarrollo de una computadora industrial en la modalidad de hardware libre que soporte aplicaciones de alto costo computacional, como son los sistemas de visión y procesamiento de imágenes y el manejo de pantallas de alta resolución, y que sea capaz de correr sistemas operativos de tipo Linux.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_fsl&amp;rev=1471899339&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-22T20:55:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_fsl&amp;rev=1471899339&amp;do=diff</link>
+        <description>CIAA-FSL
+
+ Versión hermana de la CIAA-NXP. Comparten el factor de forma y las interfaces. Pensada para utilizarse en (pero no limitada a) equipos de automatización industrial. Se alimenta con 24V (CC). Tiene entradas digitales optoacopladas, entradas analógicas configurables 0-10V o 0-20mA, salidas digitales open-drain y relé, salida analógica configurable 0-10V o 0-20mA, interfaces de comunicación RS232, RS485, CAN, Ethernet, USB-OTG y microSD. Basada en el microcontrolador MK60FX512VLQ15.…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_intel&amp;rev=1469203580&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-22T16:06:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_intel</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_intel&amp;rev=1469203580&amp;do=diff</link>
+        <description>CIAA-Intel
+
+ La primer CIAA con procesador Intel Atom. Utiliza un sistema operativo basado en GNU/Linux. Está basada en el SoM Edison y orientada a aplicaciones que requieran conectividad Wi-Fi y Bluetooth (Internet-of-Things).
+
+
+
+
+
+
+
+
+
+
+
+
+ &lt;fc #777777&gt;Requerimientos&lt;/fc&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nucleo_fsl&amp;rev=1471475563&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T23:12:43+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_nucleo_fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nucleo_fsl&amp;rev=1471475563&amp;do=diff</link>
+        <description>CIAA-NUCLEO-FSL
+
+ La CIAA-NUCLEO-FSL es una versión minimalista y modular de la CIAA-FSL pensada como módulo de procesamiento para aplicaciones de bajo costo que requieran una conexión Ethernet. Posee conectores de expansión tipo pinera simple para poder agregarle fácilmente electrónica adicional específica de cada aplicación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nxp&amp;rev=1468525331&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-14T19:42:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_nxp&amp;rev=1468525331&amp;do=diff</link>
+        <description>CIAA-NXP
+
+ La primer CIAA en ser diseñada, probada y producida en serie. Pensada para utilizarse en (pero no limitada a) equipos de automatización industrial. Se alimenta con 24V (CC). Tiene entradas digitales optoacopladas, entradas analógicas configurables 0-10V o 0-20mA, salidas digitales open-drain y relé, salida analógica configurable 0-10V o 0-20mA, interfaces de comunicación RS232, RS485, CAN, Ethernet y USB-OTG. Basada en el microcontrolador LPC4337.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_safety&amp;rev=1469203233&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-22T16:00:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ciaa_safety</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ciaa_safety&amp;rev=1469203233&amp;do=diff</link>
+        <description>CIAA-Safety
+
+ La CIAA-Safety es una versión de la CIAA que sigue las prácticas recomendadas por los estándares internacionales de seguridad funcional para aplicaciones críticas. Mientras la complejidad de los sistemas electrónicos aumenta, también aumenta el número de posibles errores. Por ello, la serie de normas IEC 61508 establece el uso de diversos métodos para evitar errores sistemáticos y para la recuperación segura ante averías y fallos de funcionamiento.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_fsl&amp;rev=1471512689&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-18T09:31:29+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:edu_ciaa_fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_fsl&amp;rev=1471512689&amp;do=diff</link>
+        <description>EDU-CIAA-FSL
+
+ Es una versión reducida de la CIAA-FSL y de bajo costo, orientada a proyectos educativos de todos los niveles, usada tanto por profesionales como novatos. Posee un microcontrolador MK60FX512VLQ15 con 46 ports expuestos a través de conectores genéricos de 2.54mm de pitch, interfaz de debug y programación, USB-OTG y RS485.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_nxp&amp;rev=1468525255&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-14T19:40:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:edu_ciaa_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_nxp&amp;rev=1468525255&amp;do=diff</link>
+        <description>EDU-CIAA-NXP
+
+ Es una versión reducida de la CIAA-NXP y de bajo costo, orientada a proyectos educativos de todos los niveles, usada tanto por profesionales como novatos. Posee un microcontrolador LPC4337 con 46 ports expuestos a través de conectores genéricos de 2.54mm de pitch, interfaz de debug y programación, USB-OTG y RS485.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_xilinx&amp;rev=1469203661&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-22T16:07:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:edu_ciaa_xilinx</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:edu_ciaa_xilinx&amp;rev=1469203661&amp;do=diff</link>
+        <description>EDU-CIAA-Xilinx
+
+La EDU-CIAA-Xilinx surge con la misma filosofía de la EDU-CIAA-NXP y es una plataforma de bajo costo para el aprendizaje de los sistemas embebidos implementados con softcores sobre FPGA. Esta plataforma permite la enseñanza, aprendizaje y experimentación en áreas tales como procesamiento de señal, comunicaciones digitales, procesamiento de imágenes y visión por computadora.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:firmata&amp;rev=1471474980&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T23:03:00+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:firmata</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:firmata&amp;rev=1471474980&amp;do=diff</link>
+        <description>Firmata
+
+Firmata es un protocolo de comunicación y control entre un programa en una PC y un microcontrolador por medio de un firmware instalado en este último. La implementación de ese firmware para la CIAA se llama Firmata4CIAA. Sobre este protocolo se comunica</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:gabinete_edu_ciaa_nxp_bassi&amp;rev=1479583435&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T19:23:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:gabinete_edu_ciaa_nxp_bassi</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:gabinete_edu_ciaa_nxp_bassi&amp;rev=1479583435&amp;do=diff</link>
+        <description>Este es un gabinete para la EDU-CIAA-NXP diseñado por Agustín Bassi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hasta que hallen su hogar definitivo, los stl están en el grupo</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_c&amp;rev=1471448358&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T15:39:18+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:lenguaje_c</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_c&amp;rev=1471448358&amp;do=diff</link>
+        <description>Lenguaje C
+
+
+C es el lenguaje por excelencia para la implementación de sistemas en tiempo real gracias al preciso control que ofrece sobre el hardware, permitiendo obtener el máximo rendimiento. Es el que mayor soporte tiene por parte de los fabricantes de hardware. También es el más difícil para aprender y dominar.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_java&amp;rev=1471475248&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T23:07:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:lenguaje_java</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_java&amp;rev=1471475248&amp;do=diff</link>
+        <description>Java
+
+
+Java es un lenguaje orientado a objetos, el más utilizado en entornos corporativos, disponible ahora en la CIAA gracias al port de HVM, que adapta la plataforma Java a los requerimientos de un sistema de tiempo real.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_ladder&amp;rev=1469117559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-21T16:12:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:lenguaje_ladder</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_ladder&amp;rev=1469117559&amp;do=diff</link>
+        <description>Ladder
+
+ El lenguaje ladder o lenguaje de contacto o en escalera es un lenguaje de programación gráfico de PLC estandarizado en la norma IEC 61131-3 y basado en circuitos eléctricos de comnutación de contactos, bobinas, temporizadores y contadores. La interfaz gráfica</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_micropython&amp;rev=1471473788&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T22:43:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:lenguaje_micropython</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_micropython&amp;rev=1471473788&amp;do=diff</link>
+        <description>Micropython
+
+ Python es un lenguaje de programación  orientado a objetos e interpretado con una sintaxis que favorece un código legible y que es utilizado en prestigiosas universidades como “primer lenguaje”, siendo ideal para comenzar a aprender a programar. Se desarrolló un</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_snap&amp;rev=1471473937&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T22:45:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:lenguaje_snap</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:lenguaje_snap&amp;rev=1471473937&amp;do=diff</link>
+        <description>Snap
+
+
+Snap y su entorno permiten utilizar un microcontrolador desde una PC de modo muy sencillo mediante un lenguaje visual que usa bloques para representar estructuras de programación.  Se utiliza en escuelas como primer acercamiento a la programación. Como entorno de desarrollo se usa</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:openocd&amp;rev=1469987934&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T17:58:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:openocd</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:openocd&amp;rev=1469987934&amp;do=diff</link>
+        <description>OpenOCD
+
+El hardware de la CIAA viene provisto con el chip FT2232H, que se encarga de hacer un puente entre la interfase JTAG del microcontrolador y el USB que conecta a la PC en el puerto USB dedicado al debug. La herramienta de código abierto OpenOCD (On-Chip Debugger) es la encargada de manejar el chip FT2232H por el USB y a la vez todo lo referido al JTAG. Luego el debugger (GDB) utilizado en nuestro IDE-Eclipse o de modo autónomo, puede hacer su tarea simplemente conectándose el puerto 3333…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:picociaa&amp;rev=1469028765&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-20T15:32:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:picociaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:picociaa&amp;rev=1469028765&amp;do=diff</link>
+        <description>picoCIAA
+
+Una de las últimas versiones desarrolladas, se trata de la primer CIAA con factor de forma mini PCI Express, pensada para utilizarse integrada a otras plataformas embebidas cumpliendo el rol de plug-in para interfaces de tiempo real. Posee un microcontrolador LPC54102 como sistema principal y un sub-sistema programable basado en LPC11U35 para programación y debug del MCU principal.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ponchos&amp;rev=1514292755&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-12-26T12:52:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:ponchos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:ponchos&amp;rev=1514292755&amp;do=diff</link>
+        <description>Ponchos
+
+[Logo Ponchos ]
+[ ]
+
+Llamamos “Ponchos” a los módulos conectables sobre alguna CIAA que extienden la funcionalidad de la misma agregando el hardware necesario para distintas aplicaciones. 
+
+Visitar página principal de Ponchos</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:toolchain_arm&amp;rev=1469988112&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T18:01:52+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:descripcion:toolchain_arm</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:descripcion:toolchain_arm&amp;rev=1469988112&amp;do=diff</link>
+        <description>Para compilar para el procesador ARM (por ejemplo para la CIAA-NXP será el LPC4337), debe instalarse el compilador [gcc para ARM].</description>
+    </item>
+</rdf:RDF>

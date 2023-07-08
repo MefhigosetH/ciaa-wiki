@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_acc:estudio_aproximado_de_costos</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_acc,estudio_aproximado_de_costos"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_acc:estudio_aproximado_de_costos&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_acc"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:estudio_aproximado_de_costos.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_acc:estudio_aproximado_de_costos"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_acc:estudio_aproximado_de_costos.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_acc';var JSINFO = {"id":"desarrollo:ciaa_acc:estudio_aproximado_de_costos","namespace":"desarrollo:ciaa_acc","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="estudio_aproximado_de_costos">Estudio aproximado de costos</h1>
+<div class="level1">
+
+<p>
+A fines de estimar los costos de los componentes electrónicos del PCB, se realizó un listado mínimo de componentes que podría tener la CIAA-ACC con los precios del distribuidor Digikey (FOB USA). 
+</p>
+
+<p>
+De la misma manera, y en base a cotizaciones solicitadas con anterioridad para otros PCBs de alta velocidad, se <strong>estimó</strong> el costo de la fabricación del PCB con impedancia controlada (FOB China) y del armado (en Argentina).
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_acc:costos_ciaa_acc.ods" class="media mediafile mf_ods" title="desarrollo:ciaa_acc:costos_ciaa_acc.ods (60 KB)">Estimación de costos CIAA-ACC</a>
+</p>
+
+<p>
+Al final del archivo se puede ver el total FOB, que suma <strong>USD 664 para 10 placas</strong> y <strong>USD 517 para 100 placas</strong>.
+</p>
+
+<p>
+Estos números incluyen <strong>fabricación, componentes y armado</strong> y hay que sumarles los costos de los envíos y los aranceles de importación.
+</p>
+
+<p>
+El costo unitario final va a ser mayor al de los kits de desarrollo, pero hay que tener en cuenta algunos factores a la hora de realizar comparaciones con otras placas que tienen Zynq7000.
+</p>
+<ul>
+<li class="level1"><div class="li"> La CIAA-ACC no es un kit de desarrollo educativo. Incluirá componentes de rango industrial y todas las protecciones necesarias para que sea robusta. </div>
+</li>
+<li class="level1"><div class="li"> Se usará el Zynq XC7Z030-2FBG676I (USD 333), que es muy superior al que tienen las placas comerciales económicas (XC7Z010 o XC7Z020).</div>
+</li>
+<li class="level1"><div class="li"> La CIAA-ACC contará con una gran cantidad de periféricos y con sus conectores listos para usar (Gigabit Ethernet, micro USB, USB tipo A, micro-SD, HDMI, RS-232, RS-485, CAN, JTAG, etc.), es decir, no requerirá una carrier board para funcionar como otras placas del mercado.</div>
+</li>
+<li class="level1"><div class="li"> La CIAA-ACC tendrá conectores PCIe/104 (inferior y superior) que permitirán conformar un stack o clúster de varias CIAA-ACC.</div>
+</li>
+<li class="level1"><div class="li"> La CIAA-ACC se podrá expandir debido a que contará con un conector FMC para agregar, por ejemplo, una placa con conversores AD.</div>
+</li>
+</ul>
+
+<p>
+Algunos precios de referencia (ver la sección <a href="./doku.php%3Fid=desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas.html" class="wikilink1" title="desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas" data-wiki-id="desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas">Diseños de referencia</a>):
+</p>
+<ul>
+<li class="level1"><div class="li"> Parallela board: Cuesta USD 99. Tiene el XC7Z010 y tiene solamente un conector Ethernet y una micro SD.</div>
+</li>
+<li class="level1"><div class="li"> Zybo: Cuesta USD 189. Tiene varios periféricos pero tiene el XC7Z010.</div>
+</li>
+<li class="level1"><div class="li"> Zedboard: Cuesta USD 495. Tiene todos los periféricos necesarios pero tiene el XC7Z020.</div>
+</li>
+<li class="level1"><div class="li"> SoM picoZed: El que trae el XC7Z030 sale USD 459. Sólo es un SoM sin ningún conector. Para tener el sistema completo hay que comprar la carrier que sale USD 425 adicionales .</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

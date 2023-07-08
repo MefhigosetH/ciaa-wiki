@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:ciaa</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:01:00+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_existentes&amp;rev=1505573640&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_nuevos&amp;rev=1484079606&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos&amp;rev=1485976981&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_existentes&amp;rev=1505573640&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-16T14:54:00+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa:ponchos_existentes</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_existentes&amp;rev=1505573640&amp;do=diff</link>
+        <description>Ponchos Existentes
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------
+
+
+
+----------</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_nuevos&amp;rev=1484079606&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-10T20:20:06+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa:ponchos_nuevos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos_nuevos&amp;rev=1484079606&amp;do=diff</link>
+        <description>Nuevos Ponchos
+
+Participar en el desarrollo de Ponchos
+
+Para participar en el desarrollo de los Ponchos  le sugerimos unirse a los siguientes grupos y listas de correo:
+
+	*  Grupo en Google de Hardware del proyecto CIAA.
+	*  Grupo en Google de la EDU-CIAA.
+
+Repositorio de ponchos
+
+Se utiliza un repositorio separado al de las placas CIAA para no mezclar ya que son dos flujos separados de trabajo. El repositorio es</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos&amp;rev=1485976981&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T19:23:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa:ponchos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa:ponchos&amp;rev=1485976981&amp;do=diff</link>
+        <description>Ponchos CIAA
+
+[Logo Ponchos ]
+
+Llamamos “Ponchos” a los módulos que se conectan sobre algún procesador de la familia CIAA. El nombre “Poncho” se utiliza entre la comunidad del proyecto CIAA como sinónimo de “Shield” o placa de expansión.Estos módulos extienden la funcionalidad de alguna CIAA, EDU-CIAA, picoCIAA, etc., agregando el hardware necesario para distintas aplicaciones.</description>
+    </item>
+</rdf:RDF>

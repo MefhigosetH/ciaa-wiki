@@ -1,0 +1,211 @@
+====== Testeo de OSEK ======
+OSEK-VDX especifica, además del sistema operativo, un test para verificar que el mismo es conforme a las especificaciones.
+
+Bajo www.osek-vdx.org se pueden encontrar los siguientes 3 documentos:
+  * [[http://portal.osek-vdx.org/files/pdf/modistarc/tmeth20.pdf|OSEK/VDX Conformance Testing Methodology]]: explica la metodología de testeo
+  * [[http://portal.osek-vdx.org/files/pdf/modistarc/ostestplan20.pdf|OSEK/VDX Operating System Test Plan]]: define el plan de pruebas (los test cases)
+  * [[http://portal.osek-vdx.org/files/pdf/modistarc/ostestproc20.pdf|OSEK/VDX Operating System Test Procedure]]: define el procedimiento de como se deben ejecutar los test cases. 
+
+Hay que tener en cuenta que la última especificación de OSEK-VDX OS es la 2.2.3, sin embargo los documentos de testeo hacen referencia a la versión de OSEK-VDX OS 2.0 rev 1. Por ello algunos tests no pueden ser llevados a cabo. 
+
+==== OSEK/VDX Conformance Testing Methodology ====
+
+Este documento explica la metodología de teste en general de OSEK/VDX (ver todas las partes del estándar). 
+Entre otras cosas explica la configuración utilizada para testear el RTOS. Y que los tests se llevan a cabo utilizando las interfaces globales del RTOS. Se trata de un black box test.
+
+El test de OSEK-VDX OS es una aplicación que utiliza el RTOS y verifica que se comporte de una forma determinada.
+
+{{ :desarrollo:firmware:rtos:osek_conf_test.png?200 |}}
+
+El test del sistema operativo se divide en las siguientes partes:
+  * Servicios de administración de tareas (Task management services)
+  * Servicios de manejo de interrupciones (Interrupt handling services)
+    * Estas interfaces no están más disponibles en OSEK/VDX OS 2.2.3 y por ello no pueden ser testeadas.
+  * Servicios de administración de recursos (Resource management services)
+  * Servicios de control de eventos (Event control services)
+  * Servicios de alarma (Alarm services)
+  * Servicios de control de ejecución del sistema operativo (Operating system execution control services)
+  * TODO (Hook routines)
+
+En cada parte se testea el grupo correspondiente de interfaces que el sistema operativo ofrece a tal fin (ver tabla TODO). 
+
+^ Type ^ OS Interface ^ Service Call ^
+| Task management services | Transfer task into read state | ActivateTask |
+| ::: | Terminate calling task | TerminateTask |
+| ::: | Terminate calling task and activate succeeding task | ChainTask |
+| ::: | Call scheduler | Schedule |
+| ::: | Get currently active task | GetTaskId |
+| ::: | Get state of a task | GetTaskState |
+| Resource management services | Get resource and enter critical section | GetResource |
+| ::: | Release resource and leave critical section | ReleaseResource |
+| Event control services | Set event of extended task | SetEvent |
+| ::: | Clear Event | ClearEvent |
+| ::: | Get event mask of a task | GetEvent |
+| ::: | Wait for setting of an event | WaitEvent |
+| Alarms services | Read alarm base characteristics | GetAlarmBase |
+| ::: | Occupy and set relative alarm | SetRelAlarm |
+| ::: | Occupy and set absolute alarm | GetAbsAlarm |
+| ::: | Cancel alarm | CancelAlarm |
+| ::: | Get alarm value | GetAlarm |
+| Operating system execution control services | Get current application mode | GetApplicationmode |
+| ::: | Start operating system | StartOS |
+| ::: | Shut down operating system | ShutdownOS |
+| Hook routines | Called if OS service returns an error | ErrorHook |
+| ::: | Called at task switch before entering context of new task | PreTaskHook |
+| ::: | Called at task switch after leaving context of old task | PostTaskHook |
+| ::: | Called after start-up | StartupHook |
+| ::: | Called before shutdown | ShutdownHook |
+
+Dado que OSEK-VDX OS es un sistema operativo estático y el mismo necesita ser generado, los tests se deben llevar a cabo en múltiples configuraciones. 
+
+Se testearán las 4 clases de conformidad:
+  * BCC1: únicamente tareas básicas, una activación por tarea, una tarea por prioridad (todas las tareas tienen distintas prioridades).
+  * BCC2: como BCC1 pero admite múltiples tareas por prioridad y múltiple activación de las tareas.
+  * ECC1: como BCC1 y tareas extendidas.
+  * ECC2: como BCC2 y tareas extendidas. (NOTA al pie: las tareas extendidas no pueden tener múltiple activación)
+
+Para más información respecto a las clases de conformidad de OSEK-VDX OS le recomendamos repasar el TODO REF .
+
+Se testearán los 3 tipos de scheduling:
+  * non-preemptive: los cambios de tareas son ejecutados únicamente en puntos de rescheduling definidos en cada interfaz del OS.
+  * full-preemptive: los cambios de tareas pueden ser realizados en cualquier instrucción.
+  * mixed-preemptive: dependiendo de la tarea, se utilizan ambos tipos de scheduling.
+
+Para más información respecto a los tipos de scheduling le recomendamos repasar TODO REF.
+
+Por último se testearán los dos tipos de reporte de error:
+  * Standard: los errores definidos estándar son reportados por el sistema operativo.
+  * Extended: además de los errores estándares, se realizan y reportan controles extras.
+
+Para más información respecto a los tipos de errores le recomendamos repasar TODO REF.
+
+La combinatoria de los tipos de conformidad, los tipos de scheduling y tipos de errores reportados requieren que el sistema operativo sea generado y compilado en un proceso iterativo para poder testear todas las combinaciones definidas en el test.
+
+==== OSEK-VDX OS Test Plan ====
+
+Cada test case contiene los siguientes campos:
+  * Número de test (Test case No.): indica el número de test case.
+  * Sched. policy, Conf. class, Status: indica en que scheduling (full, non, mixed más información en ...), en que Configuration. class (BCC1, BCC2, ECC1, ECC2, más información en …) y que tipo de status 
+  * Action: la acción a ser ejecutada en este testcase.
+  * Expected result: el resultado esperado. En el caso de obtenerlo, el test case será positivo en caso contrario habrá fallado.
+
+El documento especifica:
+  * 41 test cases de task management
+  * 12 test cases de interrupt processing (NOTA al pie: ISR3 no existe más en OSEK 2.2.3)
+  * 26 test cases de event mechanism
+  * 16 test cases de resource management
+  * 36 test cases de alarms
+  * 8 test cases error handling, hook routines and OS execution control
+
+Un total de 139 test cases.
+
+Veamos algunos ejemplos.
+
+=== Task Management test case 7 ===
+
+^ Test case No. ^ Sched. policy Conf. class Status ^ Action ^ Expected Result ^
+| 7 | m, f | Call ActivateTask() from preemptive task on suspended extended task which has higher priority than running task. | Running task is preempted. Activated task becomes running and its events are cleared. Service returns E_OK |
+| ::: | E1, E2 | ::: | ::: |
+| ::: | s, e | ::: | ::: |
+
+Este test case indica que se debe llamar a ActivateTask de una preemptive task a una tarea extendida suspendida con una prioridad mayor a la de la tarea actual.
+
+Como resultado la tarea que ejecuta el ActivateTask debe ser interrumpida (preempted) y la tarea extendida deberá ser ejecutada y todos sus eventos colocados a cero. La llamada ActivateTask debe haber retornado E_OK.
+El test case debe ser ejecutado en un sistema mixed y un full preemptive (ref), en ECC1 y ECC2 (ref) y tanto en standard error como con extended errors (ref).
+
+Para implementar este test se necesita un OSEK configurado con las tareas necesarias, además de poder detectar cuando una tarea es interrumpida y luego recuperar el control. Pero esto ya no es parte de esta especificación sino de procedimiento del test.
+
+==== OSEK/VDX Operating System Test Procedure ====
+
+Finalmente el test procedure describe como se debe ejecutar cada test case especificado en (REF). Para ello especifica secuencias de test por cada tipo (task management, interrupt processing, event mechanism, etc.)
+
+Por ejemplo la *secuencia 1* de task management ejecutará los test cases: 1, 10, 15, 20, 21, 22, 24, 25, 26, 27, 30, 35, 36, 37, 38, 40 (orden ascendente no el de ejecución). Esta secuencia se ejecutará en todas las conformidades (BCC1, BCC2, ECC1, ECC2), en todos los schedulings (mixed, non, full) y en modo extended.
+
+También se especifican 2 tareas:
+  * Tarea 1
+    * nombre: Task1
+    * type: basic
+    * autostart: yes
+    * priority: 1
+    * max. acitvation: 1
+    * preemptive: non, full
+  * Tarea 2
+    * nombre: Task2
+    * type: basic
+    * autostart: no
+    * priority: 2
+    * max. activations: 2
+    * preemptive: non, full
+
+Y dos interrupciones. Es importante tener en cuenta que las ISR3 no existen más en OSEK/VDX OS 2.2.3 por lo que todos los tests referentes a ISR3 no podrán ser ejecutados.
+
+Luego se describe uno a uno los pasos a ser llevados a cabo.
+
+{{ :desarrollo:firmware:rtos:testproc01.png?nolink&600 |Test Sequence 1}}
+
+Habilitar las interrupciones. Esto no es parte del test en sí, es más bien una pre condición.
+Luego se deben ejecutar los test cases:
+1, 40 y 24 en el respectivo orden, ....
+
+De esta forma en el documento de procedimiento de test (REF) son ejecutados los test especificados en el plan del test (ref).
+
+En total el documento define:
+  * 15 secuencias de task management
+    * Las cuales se combinan en 130 proyectos (configuraciones).
+  * 5 secuencias de resource management
+    * Los cuales se combinan en 24 proyectos (configuraciones) diferentes.
+  * 4 secuencias de event mechanismus
+    * Los cuales se combinan en 20 proyectos (configuraciones) diferentes.
+  * 2 secuencias de error handling
+    * Los cuales se combinan en 16 proyectos (configuraciones) diferentes.
+  * 7 secuencias de alarmas
+    * Los cuales se combinan en 36 proyectos (configuraciones) diferentes.
+
+Lo que hace un total de 226 proyectos (configuraciones) diferentes.
+
+===== Corriendo los tests de conformidad de OSEK/VDX OS en la CIAA-Firmware =====
+
+En la sección anterior se explicaron los documentos que especifican como testear un OSEK/VDX OS para validar su conformidad.
+
+Esta sección explica como es testeado el RTOS de la CIAA Firmware.
+
+Los tests del RTOS se encuentran en:
+  * https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest
+
+La abreviatura tst se refiere a test y ctest al test de conformidad (conformance tests).
+Este directorio contiene los siguientes subdirectorios:
+  * bin: contiene un script en perl que genera proyectos (por cada tests se genera un proyecto de CIAA-Firmware, ver REF).
+  * cfg: archivo para generar las configuraciones de los tests
+  * dbg: scripts necesarios para cargar, correr y leer resultados de los tests de forma automatizada.
+  * doc: ??? es necesario
+  * etc: contiene la pre configuración de cada tests
+  * gen: genera algunos macros necesarios para los tests
+  * inc: contiene los header files de los tests.
+  * mak: makefile para correr los tests.
+  * src: el código fuente de la aplicación que ejecuta los tests.
+
+Una vez que está el [[docu:fw:bm:make|makefile.mine]] esté correctamente configurado, en una consola ejecutar el comando:
+<code>
+make rtostests
+</code>
+
+y si el [[docu:fw:bm:make|makefile.mine]] se configuró para usar una CIAA, conectela a la PC para que se hagan los test del RTOS y en otro consola hacer:
+<code>
+make openocd
+</code>
+
+En el caso de correr en la CIAA, los ctest se ejecutan en memoria RAM para no perder ciclos de vida de grabación de la memoria flash de la CIAA.
+
+A medida que los ctests avancen, en la carpeta '/out/rtos/doc/ctest' irán apareciendo archivos con información de loggeo. En particular 'ctestSummary.log' contendrá un resumen de los ctest ejecutados y 'ctestfull.log' un loggeo exhaustivo de todo lo ocurrido.
+
+Cada proyecto (configuración) incluye un archivo de configuración [[http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf|OIL]], código fuente y un makefile y se encuentra en un directorio diferente.
+
+La CIAA-Firmware utiliza un [[https://github.com/ciaa/Firmware/blob/master/modules/rtos/tst/ctest/bin/ctest.pl|script escrito en perl]] para llevar a cabo la tarea de testeo en los siguientes pasos:
+  * Generar el archivo de configuración del RTOS (archivo OIL) para el tests siguiendo las 4 conformidades y 3 tipos de scheduling, según especifique el test
+  * Generar el sistema operativo basado en  OIL del punto 1.
+  * Compilar y Linkear la aplicación de testeo con el OSEK generado en el punto 2.
+  * Correr la aplicación mediante GDB (en PC o Target).
+  * Leer el resultado de los tests
+  * Continuar con la siguiente configuración comenzando en el paso 1.
+
+<- docu:fw:bm:modules:rtos ^ docu:fw:bm:modules:rtos ^ ..->

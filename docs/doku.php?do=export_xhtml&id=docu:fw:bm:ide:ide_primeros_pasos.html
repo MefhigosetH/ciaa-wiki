@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:ide:ide_primeros_pasos</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,ide,ide_primeros_pasos"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:ide"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_primeros_pasos.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:ide:ide_primeros_pasos"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:ide';var JSINFO = {"id":"docu:fw:bm:ide:ide_primeros_pasos","namespace":"docu:fw:bm:ide","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_primeros_pasos.html#primeros_pasos">Primeros Pasos</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_primeros_pasos.html#proyecto_blinking">Proyecto Blinking</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_primeros_pasos.html#configuracion_del_proyecto">Configuración del Proyecto</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_primeros_pasos.html#configuracion_del_makefile">Configuración del Makefile</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+<div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_entorno.html" class="wikilink1" title="docu:fw:bm:ide:ide_entorno" data-wiki-id="docu:fw:bm:ide:ide_entorno">Configuración del Entorno CIAA-IDE </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_win_debug" data-wiki-id="docu:fw:bm:ide:ide_win_debug">Debug con Windows </a> →</div></div>
+<h1 class="sectionedit1" id="primeros_pasos">Primeros Pasos</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Primeros Pasos&quot;,&quot;hid&quot;:&quot;primeros_pasos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-29&quot;} -->
+<h2 class="sectionedit2" id="proyecto_blinking">Proyecto Blinking</h2>
+<div class="level2">
+<p class="divalign-justify">Para abrir el código fuente del proyecto, debemos ir al menú &#039;File⇒New⇒Makefile Project with Existing code&#039;, dado que tenemos nuestro código y también nuestro Makefile, y no necesitamos utilizar uno generado por Eclipse. Si no instaló el Firmware junto al entorno CIAA-IDE, tiene 2 opciones, o lo descarga desde la web siguiendo las instrucciones en <a href="./doku.php%3Fid=desarrollo:firmware:codigo.html" class="wikilink1" title="desarrollo:firmware:codigo" data-wiki-id="desarrollo:firmware:codigo">Código Fuente</a>, o vuelve a ejecutar el <a href="./doku.php%3Fid=docu:fw:bm:ide:install.html" class="wikilink1" title="docu:fw:bm:ide:install" data-wiki-id="docu:fw:bm:ide:install">Instalador del Software-IDE de la CIAA</a> y en la ventana de componentes, selecciona unicamente el item Firmware-x.y.z.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:primeros_pasos:makefile_project_with_existing_code.png.html" class="media" title="docu:fw:bm:ide:primeros_pasos:makefile_project_with_existing_code.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:primeros_pasos:makefile_project_with_existing_code.png" class="mediacenter" loading="lazy" title=" Makefile Project with Existing Code" alt=" Makefile Project with Existing Code" /></a>
+</p>
+<p class="divalign-justify">Luego, debe elegirse la carpeta Firmware, dejando las opciones por defecto (toolchain &#039;none&#039; dado que esto lo configura nuestro Makefile)</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:primeros_pasos:new_project.jpg.html" class="media" title="docu:fw:bm:ide:primeros_pasos:new_project.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:primeros_pasos:new_project.jpg" class="media" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Proyecto Blinking&quot;,&quot;hid&quot;:&quot;proyecto_blinking&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;30-955&quot;} -->
+<h2 class="sectionedit3" id="configuracion_del_proyecto">Configuración del Proyecto</h2>
+<div class="level2">
+<p class="divalign-justify">Una vez creado el proyecto, nos encontraremos con un entorno como el que se presenta a continuación. </p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:primeros_pasos:ciaaide.png.html" class="media" title="docu:fw:bm:ide:primeros_pasos:ciaaide.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:primeros_pasos:ciaaide.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Para que el IDE ademas pueda indexar las definiciones propias de posix, es necesario agregar los Includes del gcc.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del Proyecto&quot;,&quot;hid&quot;:&quot;configuracion_del_proyecto&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;956-1281&quot;} -->
+<h3 class="sectionedit4" id="gnu_c">GNU C</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>C:\CIAA\cygwin\usr\arm-none-eabi\arm-none-eabi\include</strong></div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:settingideposix.jpg.html" class="media" title="docu:fw:bm:ide:settingideposix.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:settingideposix.jpg" class="media" loading="lazy" alt="" /></a>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:settingideposix2.jpg.html" class="media" title="docu:fw:bm:ide:settingideposix2.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:settingideposix2.jpg" class="media" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;GNU C&quot;,&quot;hid&quot;:&quot;gnu_c&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1282-1447&quot;} -->
+<h2 class="sectionedit5" id="configuracion_del_makefile">Configuración del Makefile</h2>
+<div class="level2">
+<p class="divalign-justify">Dado que el Proyecto CIAA tiene su propio Makefile, hay que indicarle al IDE cómo manejarse con él, puesto que no queremos que genere un Makefile automáticamente. Principalmente se le indica qué comando es necesario para hacer un &#039;clean&#039; o un &#039;Build&#039; incremental. Particularmente, se utiliza &#039;clean_generate&#039; para borrar los archivos objeto y luego volver a generar los archivos fuentes del RTOS-OSEK. En caso de trabajar sin RTOS-OSEK, sólo hace falta usar el comando &#039;clean&#039;.
+La primera vez que se compila el proyecto, es necesario hacer un <strong>Clean Project</strong>. Esto ejecutará el comando clean_generate del make, creando todos los archivos necesarios para la compilación con el RTOS.</p><!--divalign-->
+
+<p>
+Notar que el campo Build esta vacío, esto permite hacer build incrementales.
+</p>
+<p class="divalign-justify"><a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos&amp;media=docu:fw:bm:ide:settingbuild.jpg.html" class="media" title="docu:fw:bm:ide:settingbuild.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:settingbuild.jpg" class="media" loading="lazy" alt="" /></a><div class="plugin_note noteimportant">No seleccionar la opción “Enable parallel build” ya que al realizar el clean_generate puede finalizar primero la generación del sistema operativo y luego el clean, borrando los archivos generados.
+
+</div></p><!--divalign-->
+
+<p>
+Por último hacemos Build Project y la compilación debería ser exitosa. Para Realizar el <strong>Debug</strong> en el entorno Windows, puede continuar en el siguiente apartado <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_win_debug" data-wiki-id="docu:fw:bm:ide:ide_win_debug">Debug con Windows</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del Makefile&quot;,&quot;hid&quot;:&quot;configuracion_del_makefile&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1448-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_entorno.html" class="wikilink1" title="docu:fw:bm:ide:ide_entorno" data-wiki-id="docu:fw:bm:ide:ide_entorno">Configuración del Entorno CIAA-IDE </a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:ide.html" class="wikilink1" title="docu:fw:bm:ide" data-wiki-id="docu:fw:bm:ide">IDE </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_win_debug" data-wiki-id="docu:fw:bm:ide:ide_win_debug">Debug con Windows </a> →</div></div></div>
+</body>
+</html>

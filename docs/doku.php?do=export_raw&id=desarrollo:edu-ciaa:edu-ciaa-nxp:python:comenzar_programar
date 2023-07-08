@@ -1,0 +1,118 @@
+====== Comenzar a programar con Micro Python ======
+
+Para comenzar a programar existen dos opciones, utilizar un programa para interactuar con la consola de python (miniterm, teraterm, etc) o utilizar el IDE desarrollado para escribir un script de python y grabarlo en la placa.
+
+
+===== Primeros pasos: Conexión de la placa a la PC =====
+
+{{page>repo:conexion:edu_ciaa_nxp_uart&nofooter}}
+
+
+==== Instalación de drivers ====
+Cuando conectamos la placa al USB, se generará un puerto serie (COM virtual) en la PC. En el caso de Linux aparecerá el dispositivo /dev/ttyUSB0 y /dev/ttyUSB1, en el caso de Windows, se detectará un dispositivo desconocido, por lo que deberemos instalar el driver para poder utilizar el puerto serie virtual.
+
+=== Instalación de driver para windows ===
+  -Ingresamos a la página del [[http://www.ftdichip.com/Drivers/VCP.htm|driver del chip ftdi]]
+  -En la tabla que aparece en la página, seleccionamos la versión de 32 o 64 bits para Windows.
+  -Descargamos y descromprimimos el archivo ZIP en una ruta conocida (Por ejemplo Mis Documentos)
+  -Conectar la placa y esperar a que Windows comience el proceso de instalación del driver del dispositivo detectado. La instalación fallará.
+  -Click en INICIO -> Panel de Control
+  -Dentro del panel de control seleccionamos "Sistema" y luego "Administrador de dispositivos"
+  -Dentro de la categoría "Puertos (COM y LTP)" aparecerán dos puertos "USB serial port" en conflicto.
+  -Hacemos click derecho sobre el primero de los puertos y elegimos "Actualizar software de controlador"
+  -Seleccionamos la opción "Buscar software de controlador en el equipo"
+  -Por último seleccionamos el botón examinar y seleccionamos la carpeta que descomprimimos con el driver. Tildamos el check "Incluir subcarpetas" y presionamos "Siguiente"
+  -Windows instalará el driver correspondiente y aparecerán los dos puertos COM virtuales listos para funcionar.
+
+===== Utilizando la consola de la EDU-CIAA =====
+
+Cuando conectamos la placa al USB, se generará un puerto serie en la PC (en Windows se deberá instalar el [[http://www.ftdichip.com/Drivers/VCP.htm|driver del chip ftdi]]) si abrimos este puerto a 115200bps con un programa como miniterm o teraterm, tendremos una consola en donde tendremos el stdout y el stdin del script de python que se ejecuta. 
+
+=== Ejemplo para Linux utilizando miniterm: ===
+
+  $ aptitude install python-serial
+  $ miniterm.py -p /dev/ttyUSB1 -b 115200
+
+=== Ejemplo para Windows utilizando TeraTerm: ===
+
+  - Descargar [[http://logmett.com/tera-term-the-latest-version|TeraTerm]] e instalarlo.
+  - Menú File -> New Connection -> seleccionar la opción "Serial" y elegir el puerto COM correspondiente a la placa.
+  - Menú Setup -> Serial port -> configurar la velocidad en 115200
+
+Al reiniciar la placa mediante el botón de reset, se verá el cursor de la consola de Python:
+
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png?700|}}
+===== Utilización del IDE (beta) =====
+
+Existe un IDE simplificado que nos permite escribir el script de python y enviárselo a la placa, por otro lado se está trabajando en un IDE completo pero que todavía no es estable.
+Deberemos bajar el IDE desde [[https://github.com/ernesto-g/educiaa_python_editor]] podemos clonar el repositorio y ejecutar "python Main.py" o buscar el instalador en la página de "releases".
+
+  * [[https://github.com/ernesto-g/educiaa_python_editor/releases|Releases]]
+
+Al ejecutar el IDE deberemos ver el siguiente entorno de trabajo:
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide2.png?400 |}}
+
+
+En el caso de Windows, deberemos instalar el [[http://www.ftdichip.com/Drivers/VCP.htm|driver del chip ftdi]], mediante el cual se creará un COM virtual cuando se conecte la placa, dicho COM deberá ser seleccionado en la configuración del IDE ya que mediante el mismo se enviará el script a la placa.
+
+=== Configuración de puerto serie ===
+
+Luego de instalar el driver FDI, aparecerán dos nuevos puertos serie en el sistema. 
+
+En el menú EDU-CIAA -> Configuration -> selecionamos el segundo de los puertos creados, y presionamos OK
+
+=== Grabando el script en la placa ===
+
+Escribimos un pequeño script de prueba:
+
+  print("Hello world")
+
+Para grabar el script, mantenemos presionado el botón de reset en la placa y luego presionamos el botón "Load Script". Aparecerá el siguiente diálogo de progreso:
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load2.png?450 |}}
+
+Al soltar el botón de reset, se comenzará la copia del script.
+
+=== Usando la terminal del IDE ===
+En lugar de utilizar miniterm o Teraterm, el IDE nos provee una ventana la cual cumple la función de los programas mencionados. Para acceder a la consola de la placa desde el IDE, presionamos el botón "Terminal". 
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_terminal.png}}
+Al reiniciar la placa con el botón de reset veremos el mensaje de "Hello World" debido a la ejecución del script.
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png?400 |}}
+
+=== Snippets ===
+El IDE cuenta con pequeños programas de ejemplo (snippets) los cuales pueden agregarse al script para realizar las primeras pruebas con la placa. Para acceder a los mismos, se debe presionar el botón "Snippets" {{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_snippets.png}}. Aparecerá una ventana con una lista de ejemplos los cuales podrán agregarse al código que se esta escribiendo mediante el botón "Add code".
+
+=== Emulador ===
+Si no se dispone de la placa, igualmente es posible ejecutar un emulador que simula a la EDU-CIAA corriendo micropython. De esta manera es posible probar una gran cantidad de ejemplos sin necesidad de disponer del dispositivo real.
+
+Para utilizar el emulador, debe instalarse aparte, se podrá encontrar la última versión en el siguiente link:
+
+  * [[https://github.com/ernesto-g/educiaa_python_emulator/releases|Releases]]
+
+Una vez instalado el emulador, se podrá ejecutar el script de python programado en el IDE presionando el botón "Emulator" {{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png}}. Aparecerán dos ventanas, una con la terminal del emulador, y otra con una imagen de la EDU-CIAA, la cual tendrá sobre la misma los botones y los LEDs que posee la placa, el resto de los periféricos se podrán acceder y simular desde el menú "Peripherals".
+
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png}}
+
+Para más información sobre cómo utilizar el emulador, dirigirse a la sección [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador|Emulador de EDU-CIAA corriendo MicroPython]].
+
+===== Programando un script de python =====
+Python es un lenguaje de programación interpretado con una sintaxis que favorece un código legible.Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y funcional. 
+
+Para comenzar a aprender este lenguaje se recomiendan los siguientes enlaces:
+
+  * [[https://es.wikipedia.org/wiki/Python|Python. Wikipedia]]
+  * [[http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf|Python para todos. Libro en español.]]
+
+
+Para acceder a la documentación de las bibliotecas Python que pueden utilizarse para manejar el hardware de la placa, dirigirse al siguiente enlace:
+
+<note tip>[[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas|Bibliotecas python soportadas]]</note>
+ 
+
+Para descargar proyectos de ejemplo dirigirse al siguiente enlace: 
+
+<note tip>[[desarrollo:edu-ciaa:edu-ciaa-nxp:python#proyectos_ejemplo|Proyectos de ejemplo]]</note>
+
+Si queremos que solo arranque la consola, bastará con hacer un script vacío, si queremos que la consola nunca aparezca, no deberemos dejar que el script termine, colocando un bucle que englobe todo el código.

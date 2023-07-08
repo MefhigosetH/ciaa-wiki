@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:librtcs</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,librtcs"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:librtcs&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:librtcs"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:librtcs.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:librtcs","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#modulo_de_control">Módulo de Control</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#que_son_los_sistemas_de_control">¿Qué son los Sistemas de Control?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#por_que_la_ciaa">¿Por qué la CIAA?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#descripcion_del_modulo_de_control_rtcs">Descripción del Módulo de Control &quot;RTCS&quot;</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#el_modulo_rtcs_en_accion">El Módulo RTCS en acción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#descargas">Descargas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:librtcs.html#referencias">Referencias</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="modulo_de_control">Módulo de Control</h1>
+<div class="level1">
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Autor </th><th class="col1"> Título del proyecto </th><th class="col2"> Tutor </th><th class="col3"> Inicio </th><th class="col4"> Fin </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> Diego Ezequiel Vommaro </td><td class="col1"> Modulo de control a lazo cerrado para la CIAA </td><td class="col2"> Ing. Juan Manuel Cruz </td><td class="col3"> Febrero 2015 </td><td class="col4"> Marzo 2015 </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:2,&quot;range&quot;:&quot;34-216&quot;} --><p class="divalign-justify">El Módulo de Control consiste en una biblioteca de software que permite implementar Sistemas de Control en Tiempo Real en la CIAA. El Módulo pertenece al CIAA-Firmware y se lo denomina RTCS por la sigla en inglés Real Time Control System.</p><!--divalign-->
+<p class="divalign-justify">El objetivo es proveer <strong>a los desarrolladores de sistemas de control en sistemas embebidos</strong> una interfaz que permita implementar sus controladores en la CIAA en forma sencilla.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00f3dulo de Control&quot;,&quot;hid&quot;:&quot;modulo_de_control&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-656&quot;} -->
+<h2 class="sectionedit3" id="que_son_los_sistemas_de_control">¿Qué son los Sistemas de Control?</h2>
+<div class="level2">
+
+<p>
+Los Sistemas de Control a lazo cerrado son ampliamente utilizados en los procesos modernos de fabricación, en los sistemas robóticos y en cualquier operación industrial que requiera el control de temperatura, presión, humedad, caudal, etc.
+</p>
+
+<p>
+Un sistema de control a lazo cerrado se lo puede representar mediante el siguiente esquema:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:sistema_control_realimentado.jpeg.html" class="media" title="desarrollo:firmware:sistema_control_realimentado.jpeg"><img src="lib/exe/fetch.php%3Fw=500&amp;tok=a5233c&amp;media=desarrollo:firmware:sistema_control_realimentado.jpeg" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+
+<p>
+Se puede ver que, a diferencia de un control a lazo abierto, aquí la salida se compara con la entrada de referencia, luego se determina un error o desvío y finalmente se produce una señal de control que reduce dicho desvío a cero o a un valor muy pequeño.
+El control a lazo cerrado posee muchas ventajas por sobre el control a lazo abierto, pero se debe diseñar e implementar el controlador adecuado.
+</p>
+
+<p>
+De aquí en más se llamará Sistemas de Control a los sistemas de control a lazo cerrado.
+</p>
+
+<p>
+El elemento central de los Sistemas de Control es el <strong>Controlador automático</strong>. Existen de varios tipos y una clasificación válida sería la siguiente:
+</p>
+<ul>
+<li class="level1"><div class="li"> Controladores PID (Control clásico)</div>
+</li>
+<li class="level1"><div class="li"> Controladores en el espacio de estados (Control moderno)</div>
+</li>
+<li class="level1"><div class="li"> Controladores robustos</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 son los Sistemas de Control?&quot;,&quot;hid&quot;:&quot;que_son_los_sistemas_de_control&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;657-1896&quot;} -->
+<h2 class="sectionedit4" id="por_que_la_ciaa">¿Por qué la CIAA?</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li">Hoy en día casi la <strong>totalidad de los Controladores Automáticos</strong> que integran los Sistemas de Control se implementan por computadora.</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:scr_controlador.jpeg.html" class="media" title="desarrollo:firmware:scr_controlador.jpeg"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:scr_controlador.jpeg" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+<ul>
+<li class="level1"><div class="li"> En la industria hay una gran cantidad de sistemas de control a lazo cerrado</div>
+</li>
+<li class="level1"><div class="li"> Todo sistema de control necesita de una computadora para calcular en tiempo real las acciones de control que reducen el desvío a cero o a un valor mínimo.</div>
+</li>
+<li class="level1"><div class="li"> Un módulo dedicado a las tareas de control automático es indispensable para una computadora industrial.</div>
+</li>
+</ul>
+
+<p>
+Por eso, este proyecto propone el diseño y desarrollo de un módulo de control a lazo cerrado para la Computadora Industrial Abierta Argentina (CIAA).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfPor qu\u00e9 la CIAA?&quot;,&quot;hid&quot;:&quot;por_que_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1897-2624&quot;} -->
+<h2 class="sectionedit5" id="descripcion_del_modulo_de_control_rtcs">Descripción del Módulo de Control &quot;RTCS&quot;</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:rtcs_descripcion_grafico.jpg.html" class="media" title="desarrollo:firmware:rtcs_descripcion_grafico.jpg"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:rtcs_descripcion_grafico.jpg" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+Como se comentó oportunamente, el Modulo RTCS pertenece al CIAA-Firmware, por lo tanto, es un Módulo escrito en lenguaje estándar C, compila y ejecuta para cualquiera de las plataformas soportadas (como ser Linux, Windows, Mac <abbr title="Operating System">OS</abbr>, CIAA-NXP, EDU-CIAA-NXP, EDU-CIAA-FSL, etc…). Además posee una descripción del funcionamiento en digramas UML, documentación en Doxygen, Unit Test, respeta los coding guidelines del CIAA-Firmware y todos los archivos fuentes están disponibles en el repositorio oficial del proyecto CIAA.
+</p>
+
+<p>
+Actualmente, el módulo soporta <strong>controladores en el espacio de estados</strong>. Gracias a su diseño “escalable” se permite agregar nuevos tipos de controladores sin modificar el código existente.
+</p>
+
+<p>
+Resumen de requerimientos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Sistemas SISO</div>
+</li>
+<li class="level1"><div class="li"> Sistemas MIMO</div>
+</li>
+<li class="level1"><div class="li"> Observadores de estado</div>
+</li>
+<li class="level1"><div class="li"> Sistemas reguladores</div>
+</li>
+<li class="level1"><div class="li"> Sistemas servo o servosistemas</div>
+</li>
+<li class="level1"><div class="li"> Escalable y flexible para la incorporación de nuevos controladores sin modificar el código existente</div>
+</li>
+<li class="level1"><div class="li"> Implementación independiente del procesador y del sistema operativo de tiempo real que se utilice.</div>
+</li>
+<li class="level1"><div class="li"> Integrado al proyecto CIAA (repositorio, coding guidelines, ensayos, documentación)</div>
+</li>
+</ul>
+
+<p>
+Este proyecto esta basado en un trabajo anterior producto de una tesis de grado [1].
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n del M\u00f3dulo de Control \&quot;RTCS\&quot;&quot;,&quot;hid&quot;:&quot;descripcion_del_modulo_de_control_rtcs&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2625-4000&quot;} -->
+<h2 class="sectionedit6" id="el_modulo_rtcs_en_accion">El Módulo RTCS en acción</h2>
+<div class="level2">
+<div class="table sectionedit7"><table class="inline">
+	<tr class="row0">
+		<td class="col0"><a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:ds0001.png.html" class="media" title="desarrollo:firmware:ds0001.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ds0001.png" class="mediaright" loading="lazy" title="Respuesta al escalón a lazo abierto|Respuesta a lazo abierto de una planta sobreamortiguada" alt="Respuesta al escalón a lazo abierto|Respuesta a lazo abierto de una planta sobreamortiguada" /></a></td><td class="col1"><a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:rtcs_lazo_abierto_2.png.html" class="media" title="desarrollo:firmware:rtcs_lazo_abierto_2.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:rtcs_lazo_abierto_2.png" class="mediaright" loading="lazy" title="Detalle de la respuesta a lazo abierto" alt="Detalle de la respuesta a lazo abierto" /></a></td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:7,&quot;range&quot;:&quot;4041-4261&quot;} --><div class="table sectionedit8"><table class="inline">
+	<tr class="row0">
+		<td class="col0 centeralign">  <a href="lib/exe/detail.php%3Fid=desarrollo:firmware:librtcs&amp;media=desarrollo:firmware:rtcs_lazo_cerrado.png.html" class="media" title="desarrollo:firmware:rtcs_lazo_cerrado.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:rtcs_lazo_cerrado.png" class="mediaright" loading="lazy" title="Respuesta a lazo cerrado" alt="Respuesta a lazo cerrado" /></a>  </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:8,&quot;range&quot;:&quot;4264-4342&quot;} --><p class="divalign-justify">La respuesta al escalón de una planta sobre-amortiguada a lazo abierto se ve acelerada a lazo cerrado gracias al controlador que se ejecuta en  la CIAA.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;El M\u00f3dulo RTCS en acci\u00f3n&quot;,&quot;hid&quot;:&quot;el_modulo_rtcs_en_accion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;4001-4505&quot;} -->
+<h2 class="sectionedit9" id="descargas">Descargas</h2>
+<div class="level2">
+
+<p>
+<a href="https://dl.dropboxusercontent.com/u/73329077/Informe_final_rtcs.pdf" class="urlextern" target="_blank" title="https://dl.dropboxusercontent.com/u/73329077/Informe_final_rtcs.pdf" rel="ugc nofollow noopener"> Informe Final</a>
+<a href="https://github.com/ciaa/Firmware" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware" rel="ugc nofollow noopener"> Código Fuente</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descargas&quot;,&quot;hid&quot;:&quot;descargas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;4506-4670&quot;} -->
+<h2 class="sectionedit10" id="referencias">Referencias</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <strong>ESPÓSITO, J. E (2013)</strong> Diseño, implementación y validación de una biblioteca de control para sistemas embebidos.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Referencias&quot;,&quot;hid&quot;:&quot;referencias&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;4671-&quot;} --></div>
+</body>
+</html>

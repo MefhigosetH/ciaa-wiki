@@ -1,0 +1,20 @@
+====== Testing Firmware v0.4.0 ======
+
+Para cada test se indica:
+  * <fc #008000>PASSED</fc>
+  * <fc #ff0000>FAILED</fc>
+  * <fc #ADAB4E>TEÓRICAMENTE OK</fc>
+
+^ Testeado de ^ commit ^ win ^ mac os ^ linux64 ^ CIAA-NXP ^ EDU-CIAA-NXP ^ CIAA-FSL ^ comments ^
+| adc_dac | | | | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a|4d6ad071a9]] | | | |
+| blinking | | | | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a|4d6ad071a9]] | | | |
+| blinking_echo | | | | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a|4d6ad071a9]] | | | |
+| blinking_lwip | | | | <fc #ff0000>FAILED</fc> COMPILE | | | |
+| blinking_modbus | | | | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a|4d6ad071a9]] | | <fc #008000>PASSED</fc> | |
+| blinking_modbus_master | | | | <fc #008000>PASSED</fc> [[https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a|4d6ad071a9]] | | <fc #008000>PASSED</fc> | |
+| unit tests | | | | <fc #008000>PASSED</fc> [[http://ciaa1.uns.edu.ar/jenkins/job/Unit%20Tests/190/|Jenkins]] | n.a. | n.a. | |
+| rtos tests | | <fc #ADAB4E>TEÓR. OK</fc> | <fc #ADAB4E>TEÓR. OK</fc> | <fc #008000>PASSED</fc> [[http://ciaa1.uns.edu.ar/jenkins/job/RTOS_x64/21/|Jenkins]] | <fc #008000>PASSED</fc> | <fc #008000>PASSED</fc> | <fc #008000>PASSED</fc> |
+| DIO Driver | | | | | <fc #ADAB4E>TEÓR. OK</fc> | <fc #008000>WORKS</fc> | |
+| ADC Driver | | | | | | | |
+| Serial Driver | | | | | | | |
+| Modbus | | | | | | | |

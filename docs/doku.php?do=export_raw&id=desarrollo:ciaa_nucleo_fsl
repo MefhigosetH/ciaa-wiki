@@ -1,0 +1,37 @@
+====== CIAA-NUCLEO-FSL ======
+
+###
+La CIAA-NUCLEO-FSL es una **versión minimalista y modular de la  CIAA-FSL pensada como módulo de procesamiento** para aplicaciones de bajo costo que requieran una conexión Ethernet. Posee conectores de expansión tipo pinera simple para poder agregarle fácilmente electrónica adicional específica de cada aplicación.
+###
+
+{{:desarrollo:ciaa_nucleo_fsl.jpg?200|}}
+
+//(La imagen es ilustrativa, no es una placa ruteada)//
+
+
+=== Desarrollo inicial ===
+
+La propuesta inicial de esta plataforma fue realizada por Esteban Volentini como reemplazo de las placas Rabbit.
+El objetivo es resolver la parte compleja como el procesador y el Ethernet en un PCB de 4 capas, y luego dejar al usuario el desarrollo de la electrónica restante. 
+
+==Involucrados directos==
+  * Esteban Volentini (UNT)
+  * Diego Brengi (UNLaM)
+  * Christian Huy (UNLaM) (Esquemático y Ruteo del PCB)
+  * Ignacio Zaradnik (UNLaM)
+  * Empresa Auspiciante: http://www.equiser.com.ar/
+  * fabricación del primer prototipo: Juan Manuel Reta (UNER).
+
+Se buscan colaboradores.
+
+=== Estado actual ===
+La CIAA-NUCLEO-FSL ha terminado su etapa de diseño esquemático y PCB. Se esperan por los recursos para la etapa de prototipado.
+
+=== Repositorio ===
+
+El trabajo se lleva en el repositorio de Hardware del proyecto CIAA:
+
+   git clone https://github.com/ciaa/Hardware.git
+   cd Hardware/PCB/FSL-MINI
+O mediante web a https://github.com/ciaa/Hardware/tree/master/PCB/FSL-MINI
+

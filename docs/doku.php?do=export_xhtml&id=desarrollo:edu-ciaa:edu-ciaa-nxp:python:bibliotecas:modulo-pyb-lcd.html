@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-lcd"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_lcd_tipo_hd44780uclase_lcd">Soporte LCD tipo HD44780U: Clase LCD</h1>
+<div class="level1">
+<pre class="code">import pyb
+
+lcd = pyb.LCD(2,0) # 2 lines, dot format:5x8
+lcd.clear()
+
+lcd.write(&quot;Test LCD\nEDUCIAA&quot;)
+pyb.delay(1000)
+
+lcd.clear()
+lcd.config_cursor(True,True) #Cursor ON, Blink ON
+
+c=0
+while(True):
+    c=c+1   
+    lcd.goto_xy(0,0)
+    lcd.write(&quot;counter:&quot;+str(c))        
+    lcd.goto_xy(10,1)
+    lcd.write(str(c))
+    pyb.delay(1000)</pre>
+
+<p>
+El constructor recibe la cantidad de lineas (1,2,3 o 4) y el formato del caracter (0:5&times;8 - 1:5&times;10).
+El cursor se encuentra deshabilitado por defecto, mediante el método “config_cursor” es posible habilitar su visualización y blinking.
+El método “goto_xy” posiciona el cursor en la columna y fila especificada, permitiendo al método “write” escribir desde dicha posición.
+</p>
+
+</div>
+</div>
+</body>
+</html>

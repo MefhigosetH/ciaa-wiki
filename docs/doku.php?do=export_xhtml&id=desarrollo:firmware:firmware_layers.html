@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:firmware_layers</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,firmware_layers"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:firmware_layers&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:firmware_layers.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:firmware_layers"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:firmware_layers.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:firmware_layers","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="firmware_layers">Firmware Layers</h1>
+<div class="level1">
+
+<p>
+El Firmware de la ciaa esta programado en 4 capas:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Aplicación</strong>: es la aplicación que corre sobre el Firmware. Por ejemplo para convertir la ciaa en un PLC se deben cargar las aplicaciones ciaaProgramming y ciaaLadder.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Service Layer</strong>: provee distintos servicios a la aplicación. por ejemplo una interfaz RTOS y POSIX Like.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Interface Layer</strong>: permite abstraer la mayor cantidad de funcionalidad de los drivers a esta capa. La finalidad de esta capa es permitir que la capa de drivers sea lo más fina posible, permitiendo portar el Firmware a nuevas plataformas de forma rápida y sencilla reutilizando la mayor porción de código.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Driver Layer</strong>: es la capa del Firmware que depende del HW y debe ser reprogramada para cada arquitectura.</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

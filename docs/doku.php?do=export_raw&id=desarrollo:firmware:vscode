@@ -1,0 +1,65 @@
+====== Visual Studio Code ======
+
+Es posible compilar y depurar los proyectos de CIAA Firmware utilizando el editor gratuito multiplataforma Visual Studio Code. Para ello es necesario descargar un plugin para depuración nativa con GDB. El mismo se puede descargar siguiendo este [[https://marketplace.visualstudio.com/items?itemName=webfreak.debug|enlace]].
+
+Una vez instalado el plugin debemos crear una carpeta en el directorio con el nombre ''.vscode'' donde se instaló el repositorio del CIAA Firmware. Dentro de esta carpeta creamos un archivo ''tasks.json'' donde copiamos el siguiente contenido:
+
+
+<note>{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "make",
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make all",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}</note>

@@ -1,0 +1,1 @@
+{"display":"standalone","scope":"\/devwiki\/","name":"","short_name":"","description":"","start_url":"\/devwiki\/","background_color":"#fff","theme_color":"#008800","icons":[{"src":"http:\/\/www.proyecto-ciaa.com.ar\/devwiki\/lib\/exe\/fetch.php?media=wiki:dokuwiki.svg","sizes":"17x17 512x512","type":"image\/svg+xml"}]}

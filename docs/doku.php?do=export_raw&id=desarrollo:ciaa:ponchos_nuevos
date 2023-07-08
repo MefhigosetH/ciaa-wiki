@@ -1,0 +1,37 @@
+====== Nuevos Ponchos ======
+
+===== Participar en el desarrollo de Ponchos =====
+
+Para participar en el desarrollo de los Ponchos  le sugerimos unirse a los siguientes grupos y listas de correo:
+  * [[https://groups.google.com/forum/#!forum/ciaa-hardware|Grupo en Google de Hardware del proyecto CIAA]].
+  * [[https://groups.google.com/forum/#!forum/educiaa|Grupo en Google de la EDU-CIAA]].
+
+===== Repositorio de ponchos =====
+
+Se utiliza un repositorio separado al de las placas CIAA para no mezclar ya que son dos flujos separados de trabajo. El repositorio es https://github.com/ciaa/Ponchos
+
+El comando para obtener el repositorio localmente es:
+
+   git clone https://github.com/ciaa/Ponchos
+
+Cada Poncho tiene su subdirectorio.
+
+===== Nuevos Ponchos =====
+
+==== Recomendaciones y especificaciones====
+
+  * [[:desarrollo:edu-ciaa:Especificaciones y recomendaciones para desarrollar un Pocho|Especificaciones y recomendaciones para desarrollar un Poncho]].
+
+==== Ponchos modelos ====
+
+{{ :desarrollo:edu-ciaa:pgrande3.png?direct&100|}}
+Se trata de un conjunto de [[desarrollo:edu-ciaa:Ponchos Modelos| Ponchos modelo]] de diferentes tamaños que pueden usarse como [[:desarrollo:edu-ciaa:Uso de Templates de Kicad|TEMPLATES de Kicad]], que utilizan bibliotecas que facilitan la creación de un Poncho y con textos instructivos que indican las acciones necesarias para documentar adecuadamente el diseño. Al momento se encuentran disponibles en GitHub los siguientes modelos:
+    * Poncho Grande: Sujeción a los cuatro orificios de la EDU-CIAA.
+    * Poncho Mediano: Sujeción a la EDU-CIAA con dos orificios.
+    * Poncho Chico: Sujeción solo con los dos conectores de la EDU-CIAA. 
+    * Poncho Izquierdo: Utiliza solamente el conector P2.
+    * Poncho Derecho: Utiliza solamente el conector P1.
+
+  * [[desarrollo:edu-ciaa:Ponchos Modelos| Link a los Ponchos modelo]]
+
+   

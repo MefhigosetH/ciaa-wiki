@@ -1,0 +1,65 @@
+====== CIAA-FSL: Interfaces: RS232, RS485 y CAN ======
+
+===== Diagrama Esquemático =====
+
+{{ 04-rs485_rs232_can.png |}}
+
+===== Características =====
+  * Interfaz serial RS232
+    * Basada en el estándar EIA/TIA-232.
+    * Data Rate máximo mayor a 250Kbps.
+    * Filtrado con ferrites.
+    * Control de Flujo por Hardware RTS/CTS.
+    * Salida de tipo DCE con conector DB9.
+    * [[http://www.st.com/web/en/resource/technical/document/datasheet/CD00002950.pdf|Transceptor RS232 ST ST3232E]]
+
+  * Interfaz RS485 compatible con Profibus
+    * Compatible con el estándar TIA/EIA-485 y con los requerimientos de Profibus.
+    * Distancia máxima posible: 1200m.
+    * Data Rate máximo 20Mbps.
+    * Permite hasta 256 nodos en el Bus.
+    * Protección contra descargas electrostáticas (ESD).
+    * Protección contra transitorios.
+    * Protección contra diferencia de potencial de tierra entre nodos.
+    * Resistencia de terminación del bus opcional mediante jumper.
+    * Resistencias de Fail-Safe opcionales mediante jumper.
+    * Interfaz con borneras.
+    * [[http://www.exar.com/common/content/document.ashx?id=1398|Transceptor Profibus Exar Corporation SP1486EEN-L]]
+
+  * Interfaz CAN
+    * Transceptor compatible con el estándar ISO11898.
+    * Estado recesivo mediante V-Split (mejoras en EMC)
+    * Transceptor de Alta Velocidad, hasta 1 Mbit/s (High-Speed).
+    * Protección contra descargas electrostáticas (ESD).
+    * Protección contra transitorios.
+    * Resistencia de terminación del bus opcional mediante jumper.<br />
+    * Interfaz con borneras.
+    * [[http://www.onsemi.com/pub_link/Collateral/AMIS-42665-D.PDF | Transceptor CAN On Semiconductor AMIS42665TJAA1RG]]
+
+===== Descripción =====
+  * **RS232**:Dada la enorme difusión que tiene el estándar de comunicaciones conocido como RS-232, éste es ampliamente utilizado hoy día ya sea para dispositivos industriales como de consumo en general. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su clásica conexión DB9 comunicarse con una enorme cantidad de dispositivos. El proyecto está basado en el driver ST3232E que cumple con el estándar EIA/TIA-232. Al mismo se le han adicionado ferrite beads para aumentar su inmunidad al ruido de alta frecuencia, y se ha optado por dar soporte para control de flujo por hardware (RTS/CTS).
+
+  * **RS485**: Dada la enorme robustez que provee el estándar de comunicaciones conocido como RS-485, es la principal razón por la que es ampliamente utilizado en la industria hoy en día. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su bus diferencial alcanzar grandes distancias para comunicar los distintos nodos participantes en una red RS-485. El proyecto está basado en el driver SP1486EEN-L que cumple con el estándar EIA/TIA-485 y también es compatible con los requerimientos de Profibus. Al mismo se le han adicionado protecciones, resistencias de Fail-Safe y resistencia de terminación del bus. Como alternativa se ha dejado la posibilidad de deshabilitar momentáneamente la recepción mientras se está enviando datos al bus, u opcionalmente dejar siempre la recepción habilitada permitiendo escuchar lo que ocurre en el bus, incluso cuando el driver es el que está haciendo uso del mismo, análogamente al método de acceso CSMA/CD.
+
+  * **CAN**: Es el principal estándar de comunicación utilizado en la indutria automotriz, por la enorme robustez que ofrece. Sus bondades de latencia conocida, multi-master, detección y señalización de errores, retransmisión automática, compatibilidad asegurada por su estandarización, etc., lo convierten sin dudas en una opción muy atractiva. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su bus diferencial comunicar los distintos nodos participantes en una red CAN. El proyecto está basado en el driver AMIS42665TJAA1RG que cumple con el estándar ISO11898, agregando además la característica de V-Split que provee un nivel de tensión conocido para el estado recesivo, ofreciendo también mejoras en lo que a EMC refiere (consultar la [[http://www.nxp.com/documents/application_note/AN10211.pdf | Nota de aplicación de NXP, sección 5.1]] ). Al mismo se le han adicionado protecciones y resistencias de terminación del bus opcionales.
+
+===== Referencias =====
+  * **RS485**
+    * [[http://www.ti.com/lit/an/slla070d/slla070d.pdf | Nota de Aplicación de TI slla070d]]
+    * [[http://www.ti.com/lit/an/slla272b/slla272b.pdf | Nota de Aplicación de TI slla272b]]
+    * [[http://www.ti.com/lit/an/slla292a/slla292a.pdf | Nota de Aplicación de TI slla292a]]
+    * [[http://www.ni.com/support/serial/resinfo.htm | Serial Troubleshooting Wizard]]
+    * [[http://profibus.felser.ch/en/ | Manual de Profibus]]
+    * [[http://www.ti.com/lit/an/slyt324/slyt324.pdf | RS-485: Passive failsafe for an idle bus]]
+
+  * **CAN**
+    * [[http://www.onsemi.com/pub_link/Collateral/AND8169-D.PDF | EMI/ESD Protection Solutions for the CAN Bus]]
+    * [[http://www.onsemi.com/pub_link/Collateral/AND8181-D.PDF | TVS Diode Selection Guidelines for the CAN Bus]]
+
+===== Datasheets de componentes importantes =====
+  * [[http://www.st.com/web/en/resource/technical/document/datasheet/CD00002950.pdf | Transceptor RS232 ST ST3232E]]
+  * [[http://www.exar.com/common/content/document.ashx?id=1398 | Transceptor RS485 Exar Corporation SP1486EEN-L]]
+  * [[http://www.onsemi.com/pub_link/Collateral/AMIS-42665-D.PDF | Transceptor CAN On Semiconductor AMIS42665TJAA1RG]]
+  * [[http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf | NXP PESD1CAN]]
+  * [[http://www.onsemi.com/pub_link/Collateral/P6SMB11CAT3-D.PDF | On Semiconductor P6SMB11CAT3G]]
+  * [[http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0110S0100BLM18B.pdf | Murata BLM18BD470SN1D]]

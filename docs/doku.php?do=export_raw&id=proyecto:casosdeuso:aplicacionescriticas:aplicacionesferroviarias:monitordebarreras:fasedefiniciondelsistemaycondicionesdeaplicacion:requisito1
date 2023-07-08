@@ -1,0 +1,197 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 1 =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note><fc #ffffff>..</fc> a) El perfil de la misión del sistema, incluidos: \\
+<fc #ffffff>...</fc> - Los requisitos del rendimiento \\
+<fc #ffffff>...</fc> - Los objetivos RAMS \\
+<fc #ffffff>...</fc> - La estrategia y las condiciones de funcionamiento a largo plazo \\
+<fc #ffffff>...</fc> - La estrategia y las condiciones de mantenimiento a largo plazo \\
+<fc #ffffff>...</fc> - Las consideraciones sobre la vida del sistema, incluidas cuestiones relacionadas con el costo. \\
+<fc #ffffff>...</fc> - Las consideraciones logísticas. \\
+<fc #ffffff>..</fc> b) La frontera del sistema, incluidas: \\
+<fc #ffffff>...</fc> - Las interfaces con el entorno físico \\
+<fc #ffffff>...</fc> - Las interfaces con otros sistemas tecnológicos \\
+<fc #ffffff>...</fc> - Las interfaces con seres humanos \\
+<fc #ffffff>...</fc> - Las interfaces con otros organismos ferroviarios. \\
+<fc #ffffff>..</fc> c) El alcance de las condiciones de aplicación que influyen sobre el sistema, incluidas: \\
+<fc #ffffff>...</fc> - Las restricciones impuestas por la infraestructura existente \\
+<fc #ffffff>...</fc> - Las condiciones de funcionamiento del sistema \\
+<fc #ffffff>...</fc> - Las condiciones de mantenimiento del sistema \\
+<fc #ffffff>...</fc> - Las condiciones de apoyo logístico \\
+<fc #ffffff>..</fc> d) El examen de datos de experiencias anteriores correspondientes a sistemas semejantes \\
+<fc #ffffff>...</fc> - Peligros inherentes al proceso que vaya a ser controlado \\
+<fc #ffffff>...</fc> - Peligros medioambientales \\
+<fc #ffffff>...</fc> - Peligros a la seguridad \\
+<fc #ffffff>...</fc> - La influencia de acontecimientos externos \\
+<fc #ffffff>...</fc> - Las fronteras del sistema que vaya a ser analizado \\
+<fc #ffffff>...</fc> - La influencia que ejercen sobre la RAMS las restricciones de la infraestructura existente. </note>
+
+###
+De aplicar estos puntos resulta:
+###
+
+###
+** a) El perfil de la misión del sistema**, incluidos:
+###
+
+###
+** Los requisitos del rendimiento**: se pretende que el rendimiento de los pasos a nivel en los que vaya a ser colocado el Monitor de Barreras mejore al colocar este sistema en comparación con su desempeño actual, donde no existe ningún monitoreo remoto del funcionamiento de la/s barrera/s del paso a nivel.
+###
+
+###
+**Los objetivos RAMS**: Los objetivos están definidos de modo tal de lograr una incidencia nula sobre la seguridad del sistema ferroviario sobre el cual se colocará el Monitor de Barreras. A la vez, se espera lograr una alta fiabilidad, y una alta incidencia sobre la disponibilidad y mantenibilidad de las barreras de los pasos a nivel en donde el sistema sea instalado.
+###
+
+###
+**La estrategia y las condiciones de funcionamiento a largo plazo**: en el presente proyecto se entiende que el “largo plazo” está dado a partir de los seis meses desde que esté finalizada la instalación y puesta en marcha de cada Monitor de Barreras. Se considera que a partir de ese momento el funcionamiento quedará por completo a cargo de cada una de las empresas prestatarias del servicio ferroviario, debiendo fijar cada una de ellas la estrategia y condiciones de funcionamiento, de modo de sostener el nivel de rendimiento RAMS de los monitores de barreras que hayan sido instalados.
+###
+
+###
+**La estrategia y las condiciones de mantenimiento a largo plazo**: en el presente proyecto se entiende que el “largo plazo” está dado a partir de los seis meses desde que esté finalizada la instalación y puesta en marcha de cada Monitor de Barreras. Se considera que a partir de ese momento el mantenimiento quedará por completo a cargo de cada una de las empresas prestatarias del servicio ferroviario, debiendo fijar cada una de ellas la estrategia y condiciones de mantenimiento, de modo de sostener el nivel de rendimiento RAMS de los monitores de barreras que hayan sido instalados.
+###
+
+###
+**Las consideraciones sobre la vida del sistema, incluidas cuestiones relacionadas con el costo**: la vida del sistema se espera que esté dividida en dos grandes etapas. Una primera centrada en la instalación y puesta en marcha de cada Monitor de Barreras, que estará a cargo de los docentes e investigadores que desarrollan este proyecto. Luego de cumplidos seis meses de que el sistema esté operativo, se dará inicio a una segunda etapa donde la operación y mantenimiento del mismo estará a cargo de las empresas prestatarias del servicio ferroviario. En consecuencia, dado que los componentes del sistema son relativamente simples y económicos, el mayor costo que tendrá el proyecto son las horas de ingeniería necesarias para implementar y documentar un Monitor de Barreras que cumpla con las normas ferroviarias que se consideren adecuadas. Se considera que este trabajo es parte de las tareas de investigación a desarrollar por los docentes e investigadores a cargo del presente proyecto, y en consecuencia no deberá ser sustentado por las empresas prestatarias del servicio ferroviario.
+###
+
+###
+**Las consideraciones logísticas**: se considera que para poder desarrollar con éxito el presente proyecto será necesario contar con apoyo logístico por parte de las empresas prestatarias del servicio ferroviario en lo que respecta a la instalación, puesta en marcha y prueba en los pasos a nivel de los monitores de barreras a ser instalados.
+###
+
+###
+** b) La frontera del sistema **
+###
+
+###
+La frontera del monitor de barreras ferroviarias está determinada por todas las interfaces con el entorno físico, con otros sistemas tecnológicos, con los seres humanos y con otros organismos ferroviarios.
+###
+
+###
+**Las interfaces con el entorno físico**: Estas interfaces están integradas por los sistemas de conectividad: GPRS -SMS , TCP-IP, Radiofrecuencia, Fibra óptica y cable. Un módulo lógico de control que  permite un manejo inteligente de entradas digitales/analógicas y proporciona la facilidad de supervisar remotamente diferentes estados (brazo roto, semáforo, posición de brazo, alarmas de intrusión u otras,radio apagada), además de tensión de batería, fuente y el propio vínculo de comunicación.
+###
+
+###
+El modem con cualquiera de sus interfaces cuenta con un protocolo de interconexión entre los distintos PaN y la interfaz gráfica. Comunica en forma bidireccional los diferentes estados del PaN.
+###
+
+###
+**Las interfaces con otros sistemas tecnológicos**: La interfaz con el entorno físico está dada básicamente por elementos de campo en contacto con el medio físico. Estos elementos con diferentes configuraciones y capacidades deben ser robustos, resistentes y preparados para operar en ambientes exigentes. Los elementos están constituidos por entradas/salidas digitales y entradas analógicas, y se basa en las especificaciones técnicas de monitores de paso a nivel incluidas en el punto 8 de las Entradas del documento de la Fase 1 en su versión 1.0.
+###
+
+###
+Las entradas digitales son optoacopladas o contacto a relé.  En el monitor de barreras estas entradas son: los circuitos que determinan la operación del PaN, interruptores, relés, estado de elevación de la barrera, estado de alimentación AC, indicador de voltaje de batería baja, señales de aproximación, barreras peatonales y restauración de fallas o advertencias.
+###
+
+###
+Las salidas digitales también son optoacopladas o con relé. Consisten en señales indicadoras que son las siguientes: prueba de batería, indicador de estado normal, indicador de estado de riesgo, indicador de falla, indicador de falla en batería, indicador de falla de relés, indicador de falla de la electrónica del monitor de barrera.
+###
+
+###
+Las entradas analógicas se utilizan para monitorear los distintos niveles de tensión del sistema y son las siguientes: batería, energía eléctrica, temperatura del habitáculo, temperatura de los rieles y motor, posición del brazo.
+###
+
+###
+**Las interfaces con seres humanos**:  El sistema, en su operación normal, se espera en lo posible que sea autónomo y que no tenga interacción con humanos. La interacción inevitables es la consultas de un operador de barreras sobre el estado del sistema. 
+###
+
+###
+Independientemente de si se producen o no alertas por fallas ocurridas, cada unidad de campo se comunica periódicamente de modo automático con el centro de monitoreo, a fin de constatar el correcto funcionamiento de cada enlace y en caso de detectarse una falla, esta será reflejada con el menor retardo en la interfaz gráfica.
+###
+
+###
+**Las interfaces con otros organismos ferroviarios**: Las interfases del monitor de barrera con otros organismos ferroviarios está dada por la interacción con las empresas privadas que tienen la concesión de administración de los pasos a  nivel y las organizaciones públicas a las cuales pertenecen estos PaN. También el sistema dispondrá de una interacción definida con  la CNRT (Agregar referencia) cuya funcionalidad será la de supervisar el monitoreo.
+###
+
+###
+** c) El alcance de las condiciones de aplicación que influyen sobre el sistema:**
+###
+
+###
+Este alcance de las condiciones de aplicación que influyen en el sistema está dado por las restricciones de estas condiciones que impiden el normal funcionamiento del monitor de barreras. Estas restricciones se identifican como las impuestas por la infraestructura existente y las condiciones de funcionamiento, de mantenimiento y de apoyo logístico.
+###
+
+###
+**Las restricciones impuestas por la infraestructura existente**: El monitor de barrera cuenta con restricciones relativas a la señalización, cartelería del PaN, largo del brazo, ángulo de elevación, contactos de ocupación de tren y fuente de alimentación. Una restricción importante también está determinada por la interrupción de la conectividad entre los sensores y el centro de monitoreo.
+###
+
+###
+**Las condiciones de funcionamiento del sistema**: El normal funcionamiento del sistema está garantizado si se cumplen determinadas condiciones ambientales como la temperatura de trabajo y humedad ambiente. Existen condicionamientos mecánicos que también determinan el funcionamiento como la frecuencia de accionamiento de las barrera y que los sensores toleren condiciones ambientales de montajes extremas como nivel de vibración, temperatura, humedad y polución.
+###
+
+###
+**Las condiciones de mantenimiento del sistema**:  Deben asegurar un mantenimiento preventivo y otro correctivo para evitar o mitigar las consecuencias de los fallos del sistema.  El mantenimiento preventivo asegura la conservación de equipos o instalaciones mediante realización de revisión y reparación que garanticen su buen funcionamiento y fiabilidad. El mantenimiento correctivo repara o pone en condiciones de funcionamiento aquellos equipos que dejaron de funcionar o están dañados.
+###
+
+###
+Para un correcto cumplimiento de las políticas de mantenimiento se debe contar con un  diagnóstico confiable y adecuadas condiciones accesibilidad para reparación y/o sustitución de partes dañadas o averiadas.
+###
+
+###
+**Las condiciones de apoyo logístico**: El apoyo logístico debe asegurar el conjunto de medios o infraestructura necesarios para llevar a cabo las tareas de mantenimiento. Las condiciones de apoyo logístico deben ser las adecuadas para hacer posible que el operador de la vía de la empresa que tiene la concesión del PaN sea capaz de interactuar de manera confiable y eficiente con el operador de mantenimiento de la misma empresa.
+###
+
+###
+** d) El examen de datos de experiencias anteriores correspondientes a sistemas semejantes**
+###
+
+###
+**Peligros inherentes al proceso que vaya a ser controlado**:  Los peligros inherentes a un sistema de barrera, son los de colisión de vehículos o personas con material rodante (trenes) producido por una falla de tipo tecnológica o de los componentes del sistema de accionamiento de barreras o por fallas del software o hardware de control. El evento intermedio entre la falla y la colisión se debe a la falta de la contención en el PaN o a una excesiva demora en el estado de barrera baja que genera la sensación de falla en los conductores o peatones y tienden a no respetarla. Un peligro es el potencial del sistema para causar daño o lesión. Bajo esta definición el subsistema Monitor de Barreras no genera situaciones de peligro por sí mismo, pero conlleva un riesgo al no detectarse (ni darse la señal de alarma correspondiente) un fallo que podría provocar la ocurrencia de un accidente sólo si el sistema de barreras también falla.
+###
+
+###
+Un peligro inherente al monitor de barreras sería la interferencia de este con el normal funcionamiento del Sistema de Barreras por efectos de una deficiencia en la colocación de sensores que producen mal accionamiento de levas o cualquier mecanismo móvil.
+###
+
+###
+**Peligros medioambientales**: El mayor peligro medioambiental es el riesgo de inundaciones, el equipo podría permanecer bajo agua durante horas e incluso días.
+###
+
+###
+**Peligros a la seguridad**: No se han encontrado registros sobre peligros a la seguridad por el uso de un monitor de barreras.
+###
+
+###
+**La influencia de acontecimientos externos**: Los acontecimientos externos más destacados lo constituyen los daños a la integridad del sistema por vandalismo.
+###
+
+###
+**Las fronteras del sistema que vaya a ser analizado**: Las fronteras se delimitan muy estrictamente, el monitor de barreras no debe ser considerado durante la etapa de desarrollo y pruebas operativas como un elemento de seguridad del sistema general de barreras.
+###
+
+###
+Su operatoria en esta primera etapa será la de registrar eventos y estados del sistema para un posterior análisis y evaluación del rendimiento del mismo.
+###
+
+###
+Finalizada con éxito la fase 12 de seguimiento y verificación, la entidad regulatoria y las empresas ferroviarias podrán decidir la modificación de estas fronteras si así lo consideran conveniente.
+###
+
+###
+La influencia que ejercen sobre la RAMS las restricciones de la infraestructura existente:  La infraestructura existente resulta variada en tecnología y estados de mantenimiento, algunas especificaciones de carácter general se pueden definir en este apartado.
+###
+
+###
+Se desconoce la disponibilidad de contactos internos del mecanismo (conmutador, levas, reles, etc.) para captar señales de accionamiento.
+###
+  * Tensión de Comando: 24 VDC
+  * Sistema de sujeción y anclaje al piso.
+  * Brazo de barrera, actualmente de madera
+  * Espacio interior reducido para la ubicación del monitor.
+
+{{ :blanco.png?20 | }}
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion:requisito2|Ir al Requisito 2 de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Volver a la Página Inicial de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 

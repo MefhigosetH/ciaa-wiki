@@ -1,0 +1,50 @@
+====== CIAA-FSL: Salidas Digitales ======
+
+===== Diagrama Esquemático =====
+{{ 08-salidas_digitales.png |}}
+
+
+===== Características =====
+  * 4 x Salidas Open-Drain
+    * Corriente limitada a 1A, mediante gate driver.
+    * Tensión máxima de salida soportada: 60V.
+    * Indicación mediante LED
+    * Frecuencia máxima de conmutación (estimada): 2MHz
+  * 4 x Salidas a Relé
+    * Corriente Máxima de contactos 5A
+    * Tensión máxima de conmutación: 277V AC, 30V DC
+    * Indicación mediante LED
+
+===== Descripción =====
+La CIAA dispone de salidas digitales para operar en distintas aplicaciones.
+Es conveniente contar con distintos tipos de salidas, a fin de cubrir un
+abanico mayor de las posibles aplicaciones en las que puede utilizarse la
+CIAA. Por esta razón, se cuenta con dos tipos de salidas: a Relé y Open
+Drain.
+
+Las salidas a Relé son útiles para poder trabajar como si fuera un simple interruptor
+controlado desde la CPU, manteniendo una aislación magnetica con el circuito
+de esta última. Con dicho Relé, pueden manejarse desde contactores, luces de
+control o cualquier equipo o dispositivo que opere en los rangos de tensión y
+corriente del mismo, tanto en contínua (DC) como en alterna (AC). La única
+debilidad del Relé, es su baja frecuencia de conmutación, ya que el contacto es
+mecánico. Por lo que sólo pueden operarse equipos o dispositivos que no requieran
+encendidos y apagados repetitivos, con un tiempo de descanse muy corto.
+
+Las salidas Open Drain, utilizan tecnología de estado sólido de potencia. Son
+útiles para conmutaciones rápidas, con dispositivos que trabajen en
+corriente contínua. En este circuito se utiliza un MOSFET Driver para
+controlar el encendido de dichos MOSFET. A su vez, este driver sirve para
+limitar la corriente de conmutación del MOSFET a 1A, dado que la salida del
+driver llega hasta 5V, fijando la tensión de Gate a un máximo. Este tipo de
+salidas requieren que la carga se conecte entre una fuente externa y el Drain
+del MOSFET. A su vez, se requiere unir las masas de las fuentes para poder
+cerrar el circuito de corriente.
+
+===== Referencias =====
+  * [[http://es.wikipedia.org/wiki/Entrada/salida | Wikipedia, Entradas/Salidas]]
+
+===== Datasheets de componentes importantes =====
+  * Relé: [[http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=PCH_series_relay_data_sheet_E&DocType=DS&DocLang=English| 1461353-2]]
+  * MOSFET Driver: [[http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en536128 | MCP1415-16]]
+  * MOSFET: [[https://www.fairchildsemi.com/datasheets/FQ/FQT13N06L.pdf | FQT13N06LTF]]

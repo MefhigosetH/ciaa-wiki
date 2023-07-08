@@ -1,0 +1,86 @@
+====== Configuración del entorno de desarrollo (OSX/MacOS) ======
+
+Utilizaremos OSX en los ejemplos de cómo instalar las herramientas necesarias en nuestro sistema para poder compilar el firmware y grabarlo en la EDU-CIAA.
+
+===== Instalador de XCode =======
+
+XCode debe descargarse desde el App Store. Tener en cuenta que en su versión actual (2015/10) son 3.6GB.
+
+===== Instalación de Homebrew =====
+
+Homebrew es un administrador de paquetes para OSX. Para instalarlo se debe ejecutar la siguiente instrucción en una ventana de la aplicación Terminal:
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    
+
+===== Notas para OSX El Capitan =======
+
+El software instalado por Homebew reside en el directorio /usr/local. Este directorio no existe al momento de la instalación del sistema y no podrá ser creado en El Capitan debido a SIP (System Integrity Protection).
+
+Para desactivar SIP, en el arranque del sistema presionar las teclas Comando y R al mismo tiempo hasta que aparezca el logo de la manzana. Una vez en la pantalla de recuperación, acceder al menú Utilidades -> Terminal y ejecutar:
+
+    csrutil disable --without debug
+    
+Reintentar la instalación de curl.
+
+===== Instalación del compilador =====
+
+Primero necesitaremos un compilador para ARM:
+
+    brew install gcc-arm-none-eabi
+Comprobamos que la versión del compilador sea 4.8.4
+
+  $ arm-none-eabi-gcc --version
+
+Deberá aparecer la leyenda:
+
+''arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140725 (release) [ARM/embedded-4_8-branch revision 213147]
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.''
+ 
+===== Instalación OpenOCD =====
+
+Para instalarlo:
+
+    brew install openocd
+
+Para comprobar que la herramienta esté instalada, ejecutamos:
+
+  $ openocd --version   
+
+===== Conflictos entre OpenOCD y driver FTDI del sistema operativo ======
+
+Apple incluye en su sistema operativo un driver para los conversores seriales FTDI que no es compatible con OpenOCD. Para poder grabar la placa, es necesario descargar el controlador, ejecutar `make donwload` y luego volver a cargar el controlador:
+
+    sudo kextunload -b com.apple.driver.AppleUSBFTDI
+    make download
+    sudo kextload -b com.apple.driver.AppleUSBFTDI
+    
+Si se desea automatizar esta tarea, se puede abrir el archivo Makefile de la carpeta ciaa-nxp e insertar esas líneas alrededor del comando openocd:
+
+	@sudo kextunload -b com.apple.driver.AppleUSBFTDI || echo "Sin descarga"
+	@openocd -f ciaa-nxp.cfg \
+		-c "init" \
+		-c "halt 0" \
+		-c "flash write_image erase unlock $^ 0x1A000000 bin" \
+		-c "reset run" \
+		-c "shutdown"
+	@echo "Reloading KEXT for FTDI access"
+	@sudo kextload -b com.apple.driver.AppleUSBFTDI || echo "Falla al cargar"
+
+La contraseña del usuario será requerida para realizar las acciones de load/unload.
+    
+===== Conexión serial con el dispositivo ======
+
+Los ejemplos de CIAA utilizan el paquete pyserial para comunicación, para instalarlo en OSX:
+    
+    brew install python
+    pip install pyserial
+    
+Una vez instalado, el comando para la comunicación es:
+
+    miniterm.py -p /dev/cu.usbserial-141B -b 115200
+
+
+Ahora podremos grabar el firmware en la placa, siguiendo las instrucciones en [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware|Grabando el firmware en la placa]]

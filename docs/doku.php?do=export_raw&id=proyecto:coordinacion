@@ -1,0 +1,38 @@
+====== Coordinación del Proyecto CIAA ======
+
+###
+El equipo de Coordinación del Proyecto de desarrollo de la Computadora Industrial Abierta Argentina está constituido de la siguiente forma:
+###
+
+^ Área         ^ Función             ^ Personas designadas        ^ Organización                           ^
+| Coordinación | Coordinador General | Esp. Ing. Eric Pernia | UNQ / FI-UBA | 
+|:::           | Co-Coordinador | Martín Ribelotta         |EmTech S.A.    | 
+| Vinculación y Difusión | Responsable          | Dr. Ing. Ariel Lutenberg   | FIUBA, CONICET, ACSE     | 
+| Difusión y Marketing   | Responsable         | Lic. Gerardo Cadierno      | CADIEEL                                |
+|:::           | Subresponsable      | Cristian Oppel             | CADIEEL                                |
+| Finanzas y Logística | Responsable | Ing. Ariel Perez           | ACSE                          |
+|:::           | Subresponsable      | Sr. Jorge Correa           | ACSE                                   |
+| [[desarrollo:firmware|Firmware]] | Responsable | Ing. Mariano Cerdeiro | UTN-FRBA                        |
+|:::           | Subresponsable      | Ing. Esteban Volentini | LabMicro, FaCET UNT |
+| [[desarrollo:gabinete|Gabinete]] | Responsable| Manuel Saintotte| Grupo Alaska                           |
+| [[desarrollo:hardware|Hardware]] | Responsable de Hardware de la CIAA      | Martín Ribelotta         |EmTech S.A.    | 
+| ::: | Responsable [[desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]] | Mg. Bioing. Eduardo Filomena | UNER |
+| ::: | Responsable [[desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio|CIAA-FSL]] | Ing. Ignacio Zaradnik | Electrocomponentes S.A., ACSE     |
+| ::: | Responsable [[desarrollo:hardware:ciaa_intel:ciaa_intel_inicio|CIAA-INTEL]] | Esp. Ing. Alejandro Furfaro | UTN-FRBA         |
+| ::: | Responsable [[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|CIAA-NXP]] | Ing. Juan Cecconi     | UTN-FRBA, Numetron S.R.L.         |
+| ::: | Responsable [[desarrollo:hardware:ciaa_pic:ciaa_pic_inicio|CIAA-PIC]] | Ing. César Fuoco      | UTN-FRBA |
+| ::: | Responsable [[desarrollo:ciaa_nucleo_fsl|CIAA-NUCLEO-FSL]] | Mg. Ing. Diego Brengi | UNLaM |
+| ::: | Responsable [[desarrollo:hardware:picociaa|picoCIAA]] | Esp. Ing. Pablo Ridolfi | UTN-FRBA, UTN-FRH, FIUBA |
+| ::: | Responsable [[desarrollo:ciaa-z3r0|CIAA-Z3R0]] | Esp. Ing. Eric Pernia | UNQ / FI-UBA | 
+| [[desarrollo:linux|Linux]] | Responsable | Ezequiel García      | VanguardiaSur                          |
+|:::           | Subresponsable      | Martín Ribelotta           | EmTech S.A.                            |
+| [[desarrollo:microelectronica|Microelectrónica]] | Responsable | Dr. Ing. Mariano García Inza | FIUBA    |
+| [[desarrollo:sistema|Sistema]] | Responsable | Ing. Paola Pezoimburu | Sur Emprendimientos Tecnológicos S.R.L.| 
+|:::           | Subresponsable      | Mg. Ing. Guillermo Güichal | EmTech S.A.                            |
+| [[desarrollo:software-ide|Software-IDE]] | Responsable | Martín Ribelotta  | EmTech S.A.                 |
+|:::           | Subresponsable      | Ing. Juan Cecconi          | UTN-FRBA, Numetron S.R.L.              | 
+| [[desarrollo:software-plc|Software-PLC]] | Responsable    | Esp. Ing. Eric Pernia | UNQ / FI-UBA |  
+|:::                                       | Subresponsable | Dr. Lic. Carlos Lombardi | UNQ                |
+| Vinculación industrial       | Responsable         | Javier Viqueira            | CADIEEL, Adox S.A.     |
+|:::                           | Subresponsable      | Lic. Julieta Pando         | CADIEEL                |
+| Vinculación educativa        | Responsable         | Ing. Gerardo Sager         | UNLP, ACSE, RUSE       |

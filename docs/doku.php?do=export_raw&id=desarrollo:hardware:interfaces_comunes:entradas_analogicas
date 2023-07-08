@@ -1,0 +1,25 @@
+====== Entradas Analógicas ======
+===== Esquemático =====
+{{ desarrollo:hardware:entanalog.png |}}
+===== Características =====
+  * 4 Entradas analógicas configurables por Corriente/Tensión.
+  * Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia de carga 237 Ohm.
+  * Control por tensión 0-10V, impedancia de entrada 45 KOhm.
+  * Protección contra transitorios.
+  * Protección por filtrado de alta frecuencia
+  * Protección por diodos de enclavamiento
+  * Amplificador-Buffer, estable y Rail-to-Rail 
+  * Optimizado para aprovechar el rango del ADC (10 Bits)
+
+===== Descripción =====
+Debido a la gran cantidad de sensores analógicos utilizados en la industria y en la electrónica en general, la CIAA ha incorporado 4 entradas analógicas configurables. Estas tienen la capacidad de poder funcionar en lazo de corriente (4-20mA) o en tensión (0-10V) mediante la selección por medio de jumpers. Esta versatilidad conviente a las entradas analógicas de la CIAA en uno de sus fuertes para los procesos de automatización.
+El circuito ha sido diseñado teniendo en cuenta las variaciones de temperatura, corriente inversa de las protecciones, tensión de offset del AO, etc. Por esto, se han elegido componentes de alta precisión y baja variación con la temperatura, minimizando la inceridumbre asociada a la medición.
+
+===== Bibliografía =====
+  * [[wp>Current_loop‎|Wikipedia, Current Loop 4-20 mA]]
+  * [[wp>0-10_V_lighting_control|Wikipedia, Lighting Control 0-10V]]
+
+===== Especificación de los componentes =====
+  * Supresor de Transitorios: [[http://www.littelfuse.com/~/media/Electronics_Technical/Datasheets/TVS_Diodes/Littelfuse_TVS_Diode_SMBJ_Datasheet.pdf|SMBJ20CA]].
+  * Amplificador Operacional: [[http://ww1.microchip.com/downloads/en/DeviceDoc/21685d.pdf|MCP6024]].
+

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:rtos:test</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,rtos,test"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:rtos:test&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware:rtos"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:rtos:test.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:rtos:test"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:rtos:test.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware:rtos';var JSINFO = {"id":"desarrollo:firmware:rtos:test","namespace":"desarrollo:firmware:rtos","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="testeo_de_osek">Testeo de OSEK</h1>
+<div class="level1">
+
+<p>
+OSEK-VDX especifica, además del sistema operativo, un test para verificar que el mismo es conforme a las especificaciones.
+</p>
+
+<p>
+Bajo <a href="http://www.osek-vdx.org" class="urlextern" target="_blank" title="http://www.osek-vdx.org" rel="ugc nofollow noopener">www.osek-vdx.org</a> se pueden encontrar los siguientes 3 documentos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/tmeth20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/tmeth20.pdf" rel="ugc nofollow noopener">OSEK/VDX Conformance Testing Methodology</a>: explica la metodología de testeo</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/ostestplan20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/ostestplan20.pdf" rel="ugc nofollow noopener">OSEK/VDX Operating System Test Plan</a>: define el plan de pruebas (los test cases)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/ostestproc20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/ostestproc20.pdf" rel="ugc nofollow noopener">OSEK/VDX Operating System Test Procedure</a>: define el procedimiento de como se deben ejecutar los test cases. </div>
+</li>
+</ul>
+
+<p>
+Hay que tener en cuenta que la última especificación de OSEK-VDX <abbr title="Operating System">OS</abbr> es la 2.2.3, sin embargo los documentos de testeo hacen referencia a la versión de OSEK-VDX <abbr title="Operating System">OS</abbr> 2.0 rev 1. Por ello algunos tests no pueden ser llevados a cabo. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Testeo de OSEK&quot;,&quot;hid&quot;:&quot;testeo_de_osek&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-935&quot;} -->
+<h3 class="sectionedit2" id="osek_vdx_conformance_testing_methodology">OSEK/VDX Conformance Testing Methodology</h3>
+<div class="level3">
+
+<p>
+Este documento explica la metodología de teste en general de OSEK/VDX (ver todas las partes del estándar). 
+Entre otras cosas explica la configuración utilizada para testear el RTOS. Y que los tests se llevan a cabo utilizando las interfaces globales del RTOS. Se trata de un black box test.
+</p>
+
+<p>
+El test de OSEK-VDX <abbr title="Operating System">OS</abbr> es una aplicación que utiliza el RTOS y verifica que se comporte de una forma determinada.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:rtos:test&amp;media=desarrollo:firmware:rtos:osek_conf_test.png.html" class="media" title="desarrollo:firmware:rtos:osek_conf_test.png"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=d7a83d&amp;media=desarrollo:firmware:rtos:osek_conf_test.png" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+El test del sistema operativo se divide en las siguientes partes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Servicios de administración de tareas (Task management services)</div>
+</li>
+<li class="level1 node"><div class="li"> Servicios de manejo de interrupciones (Interrupt handling services)</div>
+<ul>
+<li class="level2"><div class="li"> Estas interfaces no están más disponibles en OSEK/VDX <abbr title="Operating System">OS</abbr> 2.2.3 y por ello no pueden ser testeadas.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Servicios de administración de recursos (Resource management services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de control de eventos (Event control services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de alarma (Alarm services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de control de ejecución del sistema operativo (Operating system execution control services)</div>
+</li>
+<li class="level1"><div class="li"> TODO (Hook routines)</div>
+</li>
+</ul>
+
+<p>
+En cada parte se testea el grupo correspondiente de interfaces que el sistema operativo ofrece a tal fin (ver tabla TODO). 
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Type </th><th class="col1"> <abbr title="Operating System">OS</abbr> Interface </th><th class="col2"> Service Call </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" rowspan="6"> Task management services </td><td class="col1"> Transfer task into read state </td><td class="col2"> ActivateTask </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Terminate calling task </td><td class="col1"> TerminateTask </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Terminate calling task and activate succeeding task </td><td class="col1"> ChainTask </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Call scheduler </td><td class="col1"> Schedule </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Get currently active task </td><td class="col1"> GetTaskId </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Get state of a task </td><td class="col1"> GetTaskState </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0" rowspan="2"> Resource management services </td><td class="col1"> Get resource and enter critical section </td><td class="col2"> GetResource </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> Release resource and leave critical section </td><td class="col1"> ReleaseResource </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0" rowspan="4"> Event control services </td><td class="col1"> Set event of extended task </td><td class="col2"> SetEvent </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> Clear Event </td><td class="col1"> ClearEvent </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Get event mask of a task </td><td class="col1"> GetEvent </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> Wait for setting of an event </td><td class="col1"> WaitEvent </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> Alarms services </td><td class="col1"> Read alarm base characteristics </td><td class="col2"> GetAlarmBase </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0" rowspan="2"> ::: </td><td class="col1"> Occupy and set relative alarm </td><td class="col2"> SetRelAlarm </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> Occupy and set absolute alarm </td><td class="col1"> GetAbsAlarm </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> ::: </td><td class="col1"> Cancel alarm </td><td class="col2"> CancelAlarm </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> ::: </td><td class="col1"> Get alarm value </td><td class="col2"> GetAlarm </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> Operating system execution control services </td><td class="col1"> Get current application mode </td><td class="col2"> GetApplicationmode </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0" rowspan="2"> ::: </td><td class="col1"> Start operating system </td><td class="col2"> StartOS </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> Shut down operating system </td><td class="col1"> ShutdownOS </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0" rowspan="5"> Hook routines </td><td class="col1"> Called if <abbr title="Operating System">OS</abbr> service returns an error </td><td class="col2"> ErrorHook </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> Called at task switch before entering context of new task </td><td class="col1"> PreTaskHook </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0"> Called at task switch after leaving context of old task </td><td class="col1"> PostTaskHook </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0"> Called after start-up </td><td class="col1"> StartupHook </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0"> Called before shutdown </td><td class="col1"> ShutdownHook </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;2208-3733&quot;} -->
+<p>
+Dado que OSEK-VDX <abbr title="Operating System">OS</abbr> es un sistema operativo estático y el mismo necesita ser generado, los tests se deben llevar a cabo en múltiples configuraciones. 
+</p>
+
+<p>
+Se testearán las 4 clases de conformidad:
+</p>
+<ul>
+<li class="level1"><div class="li"> BCC1: únicamente tareas básicas, una activación por tarea, una tarea por prioridad (todas las tareas tienen distintas prioridades).</div>
+</li>
+<li class="level1"><div class="li"> BCC2: como BCC1 pero admite múltiples tareas por prioridad y múltiple activación de las tareas.</div>
+</li>
+<li class="level1"><div class="li"> ECC1: como BCC1 y tareas extendidas.</div>
+</li>
+<li class="level1"><div class="li"> ECC2: como BCC2 y tareas extendidas. (NOTA al pie: las tareas extendidas no pueden tener múltiple activación)</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a las clases de conformidad de OSEK-VDX <abbr title="Operating System">OS</abbr> le recomendamos repasar el TODO REF .
+</p>
+
+<p>
+Se testearán los 3 tipos de scheduling:
+</p>
+<ul>
+<li class="level1"><div class="li"> non-preemptive: los cambios de tareas son ejecutados únicamente en puntos de rescheduling definidos en cada interfaz del <abbr title="Operating System">OS</abbr>.</div>
+</li>
+<li class="level1"><div class="li"> full-preemptive: los cambios de tareas pueden ser realizados en cualquier instrucción.</div>
+</li>
+<li class="level1"><div class="li"> mixed-preemptive: dependiendo de la tarea, se utilizan ambos tipos de scheduling.</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a los tipos de scheduling le recomendamos repasar TODO REF.
+</p>
+
+<p>
+Por último se testearán los dos tipos de reporte de error:
+</p>
+<ul>
+<li class="level1"><div class="li"> Standard: los errores definidos estándar son reportados por el sistema operativo.</div>
+</li>
+<li class="level1"><div class="li"> Extended: además de los errores estándares, se realizan y reportan controles extras.</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a los tipos de errores le recomendamos repasar TODO REF.
+</p>
+
+<p>
+La combinatoria de los tipos de conformidad, los tipos de scheduling y tipos de errores reportados requieren que el sistema operativo sea generado y compilado en un proceso iterativo para poder testear todas las combinaciones definidas en el test.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSEK\/VDX Conformance Testing Methodology&quot;,&quot;hid&quot;:&quot;osek_vdx_conformance_testing_methodology&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;936-5468&quot;} -->
+<h3 class="sectionedit4" id="osek-vdx_os_test_plan">OSEK-VDX OS Test Plan</h3>
+<div class="level3">
+
+<p>
+Cada test case contiene los siguientes campos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Número de test (Test case No.): indica el número de test case.</div>
+</li>
+<li class="level1"><div class="li"> Sched. policy, Conf. class, Status: indica en que scheduling (full, non, mixed más información en …), en que Configuration. class (BCC1, BCC2, ECC1, ECC2, más información en …) y que tipo de status </div>
+</li>
+<li class="level1"><div class="li"> Action: la acción a ser ejecutada en este testcase.</div>
+</li>
+<li class="level1"><div class="li"> Expected result: el resultado esperado. En el caso de obtenerlo, el test case será positivo en caso contrario habrá fallado.</div>
+</li>
+</ul>
+
+<p>
+El documento especifica:
+</p>
+<ul>
+<li class="level1"><div class="li"> 41 test cases de task management</div>
+</li>
+<li class="level1"><div class="li"> 12 test cases de interrupt processing (NOTA al pie: ISR3 no existe más en OSEK 2.2.3)</div>
+</li>
+<li class="level1"><div class="li"> 26 test cases de event mechanism</div>
+</li>
+<li class="level1"><div class="li"> 16 test cases de resource management</div>
+</li>
+<li class="level1"><div class="li"> 36 test cases de alarms</div>
+</li>
+<li class="level1"><div class="li"> 8 test cases error handling, hook routines and <abbr title="Operating System">OS</abbr> execution control</div>
+</li>
+</ul>
+
+<p>
+Un total de 139 test cases.
+</p>
+
+<p>
+Veamos algunos ejemplos.
+</p>
+
+</div>
+
+<h4 id="task_management_test_case_7">Task Management test case 7</h4>
+<div class="level4">
+<div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Test case No. </th><th class="col1"> Sched. policy Conf. class Status </th><th class="col2"> Action </th><th class="col3"> Expected Result </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" rowspan="3"> 7 </td><td class="col1"> m, f </td><td class="col2" rowspan="3"> Call ActivateTask() from preemptive task on suspended extended task which has higher priority than running task. </td><td class="col3" rowspan="3"> Running task is preempted. Activated task becomes running and its events are cleared. Service returns E_OK </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> E1, E2 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> s, e </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:5,&quot;range&quot;:&quot;6442-6816&quot;} -->
+<p>
+Este test case indica que se debe llamar a ActivateTask de una preemptive task a una tarea extendida suspendida con una prioridad mayor a la de la tarea actual.
+</p>
+
+<p>
+Como resultado la tarea que ejecuta el ActivateTask debe ser interrumpida (preempted) y la tarea extendida deberá ser ejecutada y todos sus eventos colocados a cero. La llamada ActivateTask debe haber retornado E_OK.
+El test case debe ser ejecutado en un sistema mixed y un full preemptive (ref), en ECC1 y ECC2 (ref) y tanto en standard error como con extended errors (ref).
+</p>
+
+<p>
+Para implementar este test se necesita un OSEK configurado con las tareas necesarias, además de poder detectar cuando una tarea es interrumpida y luego recuperar el control. Pero esto ya no es parte de esta especificación sino de procedimiento del test.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSEK-VDX OS Test Plan&quot;,&quot;hid&quot;:&quot;osek-vdx_os_test_plan&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;5469-7614&quot;} -->
+<h3 class="sectionedit6" id="osek_vdx_operating_system_test_procedure">OSEK/VDX Operating System Test Procedure</h3>
+<div class="level3">
+
+<p>
+Finalmente el test procedure describe como se debe ejecutar cada test case especificado en (REF). Para ello especifica secuencias de test por cada tipo (task management, interrupt processing, event mechanism, etc.)
+</p>
+
+<p>
+Por ejemplo la *secuencia 1* de task management ejecutará los test cases: 1, 10, 15, 20, 21, 22, 24, 25, 26, 27, 30, 35, 36, 37, 38, 40 (orden ascendente no el de ejecución). Esta secuencia se ejecutará en todas las conformidades (BCC1, BCC2, ECC1, ECC2), en todos los schedulings (mixed, non, full) y en modo extended.
+</p>
+
+<p>
+También se especifican 2 tareas:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> Tarea 1</div>
+<ul>
+<li class="level2"><div class="li"> nombre: Task1</div>
+</li>
+<li class="level2"><div class="li"> type: basic</div>
+</li>
+<li class="level2"><div class="li"> autostart: yes</div>
+</li>
+<li class="level2"><div class="li"> priority: 1</div>
+</li>
+<li class="level2"><div class="li"> max. acitvation: 1</div>
+</li>
+<li class="level2"><div class="li"> preemptive: non, full</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Tarea 2</div>
+<ul>
+<li class="level2"><div class="li"> nombre: Task2</div>
+</li>
+<li class="level2"><div class="li"> type: basic</div>
+</li>
+<li class="level2"><div class="li"> autostart: no</div>
+</li>
+<li class="level2"><div class="li"> priority: 2</div>
+</li>
+<li class="level2"><div class="li"> max. activations: 2</div>
+</li>
+<li class="level2"><div class="li"> preemptive: non, full</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Y dos interrupciones. Es importante tener en cuenta que las ISR3 no existen más en OSEK/VDX <abbr title="Operating System">OS</abbr> 2.2.3 por lo que todos los tests referentes a ISR3 no podrán ser ejecutados.
+</p>
+
+<p>
+Luego se describe uno a uno los pasos a ser llevados a cabo.
+</p>
+
+<p>
+<img src="lib/exe/fetch.php%3Fw=600&amp;tok=83e458&amp;media=desarrollo:firmware:rtos:testproc01.png" class="mediacenter" loading="lazy" title="Test Sequence 1" alt="Test Sequence 1" width="600" />
+</p>
+
+<p>
+Habilitar las interrupciones. Esto no es parte del test en sí, es más bien una pre condición.
+Luego se deben ejecutar los test cases:
+1, 40 y 24 en el respectivo orden, ….
+</p>
+
+<p>
+De esta forma en el documento de procedimiento de test (REF) son ejecutados los test especificados en el plan del test (ref).
+</p>
+
+<p>
+En total el documento define:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> 15 secuencias de task management</div>
+<ul>
+<li class="level2"><div class="li"> Las cuales se combinan en 130 proyectos (configuraciones).</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 5 secuencias de resource management</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 24 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 4 secuencias de event mechanismus</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 20 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 2 secuencias de error handling</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 16 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 7 secuencias de alarmas</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 36 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Lo que hace un total de 226 proyectos (configuraciones) diferentes.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OSEK\/VDX Operating System Test Procedure&quot;,&quot;hid&quot;:&quot;osek_vdx_operating_system_test_procedure&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;7615-9785&quot;} -->
+<h2 class="sectionedit7" id="corriendo_los_tests_de_conformidad_de_osek_vdx_os_en_la_ciaa-firmware">Corriendo los tests de conformidad de OSEK/VDX OS en la CIAA-Firmware</h2>
+<div class="level2">
+
+<p>
+En la sección anterior se explicaron los documentos que especifican como testear un OSEK/VDX <abbr title="Operating System">OS</abbr> para validar su conformidad.
+</p>
+
+<p>
+Esta sección explica como es testeado el RTOS de la CIAA Firmware.
+</p>
+
+<p>
+Los tests del RTOS se encuentran en:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest" rel="ugc nofollow noopener">https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest</a></div>
+</li>
+</ul>
+
+<p>
+La abreviatura tst se refiere a test y ctest al test de conformidad (conformance tests).
+Este directorio contiene los siguientes subdirectorios:
+</p>
+<ul>
+<li class="level1"><div class="li"> bin: contiene un script en perl que genera proyectos (por cada tests se genera un proyecto de CIAA-Firmware, ver REF).</div>
+</li>
+<li class="level1"><div class="li"> cfg: archivo para generar las configuraciones de los tests</div>
+</li>
+<li class="level1"><div class="li"> dbg: scripts necesarios para cargar, correr y leer resultados de los tests de forma automatizada.</div>
+</li>
+<li class="level1"><div class="li"> doc: ??? es necesario</div>
+</li>
+<li class="level1"><div class="li"> etc: contiene la pre configuración de cada tests</div>
+</li>
+<li class="level1"><div class="li"> gen: genera algunos macros necesarios para los tests</div>
+</li>
+<li class="level1"><div class="li"> inc: contiene los header files de los tests.</div>
+</li>
+<li class="level1"><div class="li"> mak: makefile para correr los tests.</div>
+</li>
+<li class="level1"><div class="li"> src: el código fuente de la aplicación que ejecuta los tests.</div>
+</li>
+</ul>
+
+<p>
+Corriendo el comando:
+make rtostests
+</p>
+
+<p>
+Cada proyecto (configuración) incluye un archivo de configuración <a href="http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf" rel="ugc nofollow noopener">OIL</a>, código fuente y un makefile y se encuentra en un directorio diferente.
+</p>
+
+<p>
+La CIAA-Firmware utiliza un <a href="https://github.com/ciaa/Firmware/blob/master/modules/rtos/tst/ctest/bin/ctest.pl" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/blob/master/modules/rtos/tst/ctest/bin/ctest.pl" rel="ugc nofollow noopener">script escrito en perl</a> para llevar a cabo la tarea de testeo en los siguientes pasos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Generar el archivo de configuración del RTOS (archivo OIL) para el tests siguiendo las 4 conformidades y 3 tipos de scheduling, según especifique el test</div>
+</li>
+<li class="level1"><div class="li"> Generar el sistema operativo basado en  OIL del punto 1.</div>
+</li>
+<li class="level1"><div class="li"> Compilar y Linkear la aplicación de testeo con el OSEK generado en el punto 2.</div>
+</li>
+<li class="level1"><div class="li"> Correr la aplicación mediante GDB (en PC o Target).</div>
+</li>
+<li class="level1"><div class="li"> Leer el resultado de los tests</div>
+</li>
+<li class="level1"><div class="li"> Continuar con la siguiente configuración comenzando en el paso 1.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Corriendo los tests de conformidad de OSEK\/VDX OS en la CIAA-Firmware&quot;,&quot;hid&quot;:&quot;corriendo_los_tests_de_conformidad_de_osek_vdx_os_en_la_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;9786-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+====== Selección final de la arquitectura de hardware ======
+
+La mayoría de las discusiones se realizaron en la lista CIAA-Hardware con la participación de muchos diseñadores de hardware que ya han participado en otros proyectos CIAA. Otras definiciones se realizaron entre el grupo de INTI-CMNB que diseñará la placa y Martín Ribelotta de EmTech, quien tiene experiencia en aplicaciones HPC. También hubo comunicación fluida con el equipo de diseño de la CIAA-Safety ya que se analizó la posibilidad de interconexión entre ambas placas.
+
+===== Opciones descartadas =====
+
+A continuación se listan las opciones analizadas y descartadas por diferentes motivos.
+
+  * Serie Zynq UltraScale+ MPSoC
+    * Tecnología muy nueva (en desarrollo).
+    * No se consiguen aún en Digikey.
+    * Las versiones gratuitas de los programas ISE y Vivado no lo van a soportar.  
+  * SoC Freescale iMX6
+    * Ya existen en el mercado numerosos productos con estos micros y a muy buen precio.
+    * Algunos periféricos del iMX6 son muy limitados, como por ejemplo el PCIe x1 o el Ethernet 1Gb.
+  * Epiphany Multicore Coprocessor (Adapteva)
+    * Dependencia absoluta de Adapteva, no se pueden comprar en ningún distribuidor.
+    * En este momento (2015), no se consiguen los chips ni en su página (dice sold out).
+    * Procesadores muy caros (USD 600).
+  * MIPS Processor (Warrior o Aptiv) 
+    * En caso de querer implementar el IP core en silicio, habría que afrontar costos altísimos e imposibles.
+    * En caso de querer implementarlo en FPGA, se necesitaría una FPGA de gran tamaño y alto costo y la performance obtenida sería mucho menor a la de un SoC físico.
+    * Tecnología propietaria, de alto costo y difícil de adquirir.
+  * GPU NVIDIA o AMD Radeon
+    * Dificultad para adquirir chips Nvidia o AMD.
+    * Drivers propietarios.
+    * Documentación difícil de conseguir.
+  
+===== Opción seleccionada Xilinx Zynq-7000 =====
+
+La opción seleccionada para el procesador es la [[http://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html|Serie Zynq-7000 ]] de Xilinx. En la sección [[desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx|Propuesta para la utilización de un SoC/MPSoC  Zynq]] se describe esta familia de Xilinx.
+
+Se copian aquí algunas ventajas y características positivas que reforzaron la decisión:
+  * Disponible a la venta en Digikey.
+  * Diseños de referencia disponibles.
+  * Documentación disponible.
+  * Mayor potencia de cómputo frente a las otras opciones.
+  * Interfaces de comunicación de muy alta velocidad (10 Gb/s o más).
+  * Disponibilidad de herramientas de desarrollo gratuitas (en la gama baja de la familia).
+  * La parte de Lógica Programable permite implementar aceleradores de procesamiento por hardware.
+  * Se pueden ingresar datos/muestras directamente al sistema, las interfaces no son limitantes (por ejemplo para video en HD).
+
+En la lista CIAA-Hardware se discutieron todas las ventajas y desventajas, su alto costo, su alcance y las aplicaciones posibles que podrían desarrollarse con este SoC + FPGA. Se llegó a la conclusión de que era el hardware más adecuado para las aplicaciones que se buscan y de que realmente sería un diseño abierto que serviría como diseño de referencia para la industria o para fines educativos.
+
+==== Selección de part number y encapsulado dentro de la familia Zynq-7000 ====
+
+Luego de haber seleccionado la familia Zynq-7000, se analizó cuál de todos los procesadores era más conveniente. Para esto, se revisaron los modelos que soporta la versión Webpack del software Vivado: Z-7010, Z-7015, Z-7020 y Z-7030. De estas opciones se seleccionó el más potente, el Z-7030, a fines de cumplir con los requisitos de las aplicaciones de Alto Costo Computacional (considerando también que el costo no es un factor decisivo en este proyecto).
+
+{{ :desarrollo:ciaa_acc:zynq_z030_vivado.png?direct |Diagrama interno del procesador  Zynq Z-7030 extraída del software Vivado}}
+
+=== Encapsulado ===
+
+Las opciones de encapsulado del Z-7030 son las siguientes.
+
+  * Encapsulado SBG485 (pitch 0.8mm, 19x19mm): 318.75 U$S
+    * Ventajas: Se puede soldar en su lugar el 7Z015.
+  * Encapsulado FBG484 (pitch 1mm, 23x23mm): 290 U$S
+    * Ventajas: Precio inferior, pero no hay gran diferencia.
+    * Desventajas: No es compatible con otras partes.
+  * Encapsulado FBG676 (pitch 1mm, 27x27mm): 333.75 U$S
+    * Ventajas: Se puede soldar en su lugar el 7Z035 o el 7Z045.
+  * Encapsulado FFG676 (pitch 1mm, 27x27mm): 417.50 U$S
+    * Ventajas: Se puede soldar en su lugar el 7Z035 o el 7Z045. Los transceivers son de mayor velocidad.
+    * Desventajas: Precio elevado.
+
+Todas las partes elegidas son de grado industrial y tienen "speed grade" 2 (aunque podrán utilizarse partes con "speed grade" 1). 
+
+A continuación se listan algunos argumentos que se expusieron en la lista y que ayudaron en la decisión del encapsulado:
+
+  * En cuanto al pitch, no hay diferencia entre utilizar el de 0.8mm o el de 1mm ya que el breakout es idéntico (no pasan dos tracks entre pads BGA salvo que se recurra a una fabricación más cara).
+  * Los encapsulados más grandes tienen cantidades más interesantes de pines HR/HP. 
+  * En el encapsulado FFG676, los transceivers pueden llegar a 12.5 Gb/s. 
+  * No hay diferencia de pines entre un FFG676 y FBG676, por lo tanto eligiendo cualquiera de estos dos encapsulados, se tendría la mayoría de los FPGA+SoC de Xilinx cubiertos y el diseño sería muy escalable.
+  * Si se selecciona el SBG485 sólo se estaría incluyendo la gama baja que no está a la altura de los requerimientos del proyecto.
+  
+**En conclusión el part number con mayores ventajas es el XC7Z030-2FBG676I (speed grade 2)**. También podría ser el XC7Z030-1FBG676I (speed grade 1). Estos part numbers son compatibles con el FFG676, se podrá soldar en la placa cualquiera de estas opciones: 7Z030/35/45. 

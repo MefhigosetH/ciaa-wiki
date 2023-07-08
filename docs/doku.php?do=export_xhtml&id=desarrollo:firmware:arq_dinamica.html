@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:arq_dinamica</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,arq_dinamica"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:arq_dinamica&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:arq_dinamica"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:arq_dinamica.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:arq_dinamica","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html#arquitectura_dinamica">Arquitectura dinámica</a></div></li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html#inicializacion">Inicialización</a></div></li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html#acceso_a_un_dispositivo">Acceso a un dispositivo</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html#abrir_un_dispositivo">Abrir un dispositivo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_dinamica.html#acceso">Acceso</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="arquitectura_dinamica">Arquitectura dinámica</h1>
+<div class="level1">
+
+<p>
+Esta página ejemplifica la estructura dinámica del ciaa Firmware. La estructura se basa en la arquitectura presentada en <a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">Arquitectura del Firmware</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura din\u00e1mica&quot;,&quot;hid&quot;:&quot;arquitectura_dinamica&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-211&quot;} -->
+<h1 class="sectionedit2" id="inicializacion">Inicialización</h1>
+<div class="level1">
+
+<p>
+La primera figura muestra como se inicia el código de la ciaaFirmware.
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:lifecycle.png" class="media" title="desarrollo:firmware:lifecycle.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:lifecycle.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Inicializaci\u00f3n&quot;,&quot;hid&quot;:&quot;inicializacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;212-344&quot;} -->
+<h1 class="sectionedit3" id="acceso_a_un_dispositivo">Acceso a un dispositivo</h1>
+<div class="level1">
+
+<p>
+ciaaFirmware implementa un sistema similar a POSIX, claro limitado teniendo en cuenta los recursos disponibles en un dispositivo embebido.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acceso a un dispositivo&quot;,&quot;hid&quot;:&quot;acceso_a_un_dispositivo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;345-523&quot;} -->
+<h2 class="sectionedit4" id="abrir_un_dispositivo">Abrir un dispositivo</h2>
+<div class="level2">
+
+<p>
+Abrir un archivo/dispositivo se realiza con la función open:
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:open.png" class="media" title="desarrollo:firmware:open.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:open.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Abrir un dispositivo&quot;,&quot;hid&quot;:&quot;abrir_un_dispositivo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;524-644&quot;} -->
+<h2 class="sectionedit5" id="acceso">Acceso</h2>
+<div class="level2">
+
+<p>
+EL Firmware permite 2 tipos de acceso a los dispositivos, sincrónico y asincrónico. Cada forma de acceder a los dispositivos tiene sus ventajas y desventajas.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Sincrónico</strong>: la aplicación que llama a la escritura o lectura es interrumpida hasta completar la operación.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Asincrónico</strong>: la aplicación que llama a la escritura o lectura retoma el control inmediatamente y es informada por una <a href="./doku.php%3Fid=desarrollo:firmware:callback.html" class="wikilink1" title="desarrollo:firmware:callback" data-wiki-id="desarrollo:firmware:callback">callback</a> sobre el resultado de la operación.</div>
+</li>
+</ul>
+
+<p>
+El sistema <strong>Sincrónico</strong> es más sencillo de implementar, pero requiere de un buffer adicional en la capa de Interfaz. El sistema <strong>Asincrónico</strong> permite a la aplicación recibir los datos y la notificación de ellos en tiempo real.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acceso&quot;,&quot;hid&quot;:&quot;acceso&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;645-1368&quot;} -->
+<h3 class="sectionedit6" id="acceso_sincronico">Acceso Sincrónico</h3>
+<div class="level3">
+
+<p>
+El acceso sincrónico es el más sencillo de implementar para una aplicación. Se llama a las funciones read o write y el programa es bloqueado hasta recibir datos o hasta haber enviado los datos.
+</p>
+
+</div>
+
+<h4 id="leer">Leer</h4>
+<div class="level4">
+
+<p>
+Esquema de lectura de datos de forma sincrónica
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:readblocking.png" class="media" title="desarrollo:firmware:readblocking.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:readblocking.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+
+<h4 id="escribir">Escribir</h4>
+<div class="level4">
+
+<p>
+Esquema de escritura de datos de forma sincrónica
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:writeblocking.png" class="media" title="desarrollo:firmware:writeblocking.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:writeblocking.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acceso Sincr\u00f3nico&quot;,&quot;hid&quot;:&quot;acceso_sincronico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1369-1795&quot;} -->
+<h3 class="sectionedit7" id="acceso_asincronico">Acceso Asincrónico</h3>
+<div class="level3">
+
+<p>
+El acceso asincrónico permiten a una aplicación iniciar una lectura y escritura y que el sistema le devuelva el control inmediatamente. De esta forma podrá realizar otras tareas. Cuando la operación de lectura y/o escritura es terminada es informada mediante un <a href="./doku.php%3Fid=desarrollo:firmware:callback.html" class="wikilink1" title="desarrollo:firmware:callback" data-wiki-id="desarrollo:firmware:callback">Callback</a>
+</p>
+
+</div>
+
+<h4 id="leer1">Leer</h4>
+<div class="level4">
+
+<p>
+Lectura de datos de forma asincrónica.
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:readnonblocking.png" class="media" title="desarrollo:firmware:readnonblocking.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:readnonblocking.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+
+<h4 id="escribir1">Escribir</h4>
+<div class="level4">
+
+<p>
+Escritura de datos de forma asincrónica.
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:writenonblocking.png" class="media" title="desarrollo:firmware:writenonblocking.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:writenonblocking.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acceso Asincr\u00f3nico&quot;,&quot;hid&quot;:&quot;acceso_asincronico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1796-&quot;} --></div>
+</body>
+</html>

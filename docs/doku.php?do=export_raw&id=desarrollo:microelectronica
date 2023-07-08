@@ -1,0 +1,51 @@
+====== CIAA-Microelectrónica ======
+
+===== Objetivos =====
+###
+La misión del área de desarrollo CIAA-Microelectrónica es **fomentar el diseño de circuitos integrados** y mostrar su potencial aplicación en la industria argentina. Además, se busca **generar un ámbito para el debate sobre potenciales aportes que la microelectrónica podría ofrecer a los sectores industriales**.
+###
+
+###
+La idea central es abordar el diseño y posterior fabricación de circuitos integrados. Los proyectos se definen en base a necesidades e intereses relacionados con potenciales aplicaciones del Proyecto CIAA y la EDU-CIAA. El diseño es realizado por estudiantes universitarios bajo supervisión de docentes y especialistas del área.
+###
+
+
+===== Equipo técnico a cargo =====
+
+^ Nombre                       ^ Organización      ^ Función                                  ^
+| Dr. Ing. Mariano García Inza |  FIUBA            | Responsable de CIAA-Microelectrónica     |
+| Martín Carrá                 |  FIUBA            | Diseño esquemático Proyecto #1: LDO      |
+| Ing. Ezequiel Rubinsztain    |  FIUBA            | Diseño esquemático Proyecto #1: LDO      |
+| Ignacio Lesser               |  FIUBA            | Diseño físico (layout) Proyecto #1: LDO  |
+| Leonardo Giaccone            |  FIUBA            | Diseño físico (layout) Proyecto #1: LDO  |
+| Ing. Sebastián Carbonetto    |  FIUBA            | Diseño físico (layout) Proyecto #1: LDO  |
+| Ing. Octavio Alpago          |  FIUBA , UTN-FRBA | Revisión Proyecto #1: LDO                |
+| Gabriel Sanca                |  FIUBA            | Revisión Proyecto #1: LDO                |
+| Sebastián Pazos              |  UTN-FRBA         | Revisión Proyecto #1: LDO                |
+
+
+==== ¿Cómo participar de CIAA-Microelectrónica? ====
+###
+En breve más información sobre cómo colaborar con el proyecto CIAA-Microelectrónica.
+###
+
+
+===== Proyectos de CIAA-Microelectrónica =====
+
+###
+Cada chip que se desarrolle será encarado como un nuevo proyecto de CIAA-Microelectrónica. Estos proyectos se definirán en base a necesidades e intereses que surjan del uso de la CIAA y la EDU-CIAA. Las posibilidades serán debatidas entre los integrantes del grupo, no se descartándose diseños digitales, analógicos o de señal mixta. Los avances en este sentido serán publicados en esta web.
+###
+
+==== Proyecto #1: Regulador lineal Low Drop Out (LDO) ====
+
+###
+El primer chip diseñado es un **regulador de tensión serie de salida 3,3V**. El objetivo del dispositivo es reemplazar específicamente el regulador comercial utilizado en la EDU-CIAA. Por este motivo el chip fue diseñado para funcionar con una tensión fija de 5V a la entrada. La tecnología utilizada es CMOS 0,5 um.
+###
+
+###
+Este es un proyecto desarrollado conjuntamente por docentes y estudiantes de la UBA y la UTN-FRBA. El encapsulado y bondeo será realizado en colaboración con el Centro de Micro y Nanoelectrónica del Bicentenario (CMNB) del INTI.
+###
+
+{{ LDO_esquematico.png |Esquemático simplificado del proyecto CIAA-Microelectronica #1: LDO}}
+
+{{ LDO_Layout.png |Layout del proyecto CIAA-Microelectronica #1: LDO (enviado a fabricar el 01 de dic. de 2014)}}

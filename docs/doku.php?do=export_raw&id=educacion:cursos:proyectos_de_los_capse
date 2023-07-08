@@ -1,0 +1,71 @@
+====== Proyectos propuestos en los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE) ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+###
+En los [[educacion:cursos:cursos_programacion_ciaa|Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)]] los participantes pueden desarrollar en forma opcional **proyectos de su interés personal o profesional**. 
+###
+
+###
+Ejemplos de proyectos son el **control de una impresora 3D** o **la automatización de un invernadero**. También integrantes de empresas han elaborado proyectos de **prototipos de nuevos productos** o para **el monitoreo de su producción**. 
+###
+
+###
+A continuación se listan los proyectos propuestos en las distintas ediciones de los CAPSE. En la documentación de cada uno de los proyectos figura el correo electrónico de su autor.
+###
+
+###
+Para ver más ejemplos ir a [[proyecto:casosdeuso|Aplicaciones industriales, académicas, educativas y personales de la CIAA]]
+###
+
+{{ :blanco.png?10 | }}
+
+
+===== 1ra Cohorte (marzo a julio de 2016) =====
+
+^ Título del Proyecto               ^ Autor/es ^ Ciudad ^ Aplicación ^ Organización ^ Documentación ^
+| Analizador de incubadora neonatal	                     | Gustavo Aristimuño   | San Miguel (GBA) | Educación | Instituto de Formación Técnica Nº182 | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DbjJaQ2FmMC1yMjRfczNxTjIxWXMwWERWRzJn|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DeEN0WTZ4TXNaZzJoUWdUOE1jeU5DS1k3MUpj|Informe de Avance]] |
+| Control de biodigestor utilizando la CIAA-NXP 	     | Daniel Oteiza	    | La Plata (BA) | Industrial | PampaFox S.R.L. | [[ |Planificación del Proyecto]] |						
+| Control de portón eléctrico con placa EDU CIAA	     | Emilce Beatriz Lucero | La Rioja (LR) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DaFlLUERzTHFyci1rQnl3TzVaWW9HQkswTnNz|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DM3ZvRTJFc1NMd2M4RE84TE1jU2RFY3RFbXI4|Informe de Avance]] |								
+| Control de posición de un motor de pasos basado en la CIAA | Alejandro Garcia, Ramiro	Chiocci | Pilar (GBA), CABA | Personal | - | [[ |Planificación del Proyecto]] |
+| Control de un simulador de cinta transportadora	     | Enrique	Gallardo     | San Martín (GBA) | Educación | - | [[ |Planificación del Proyecto]] |								
+| Control de una antena adaptiva	                     | Pablo Narvaez         | Salta (SA) | Académica | UCSA | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DeWpOTm41bjU0WkVQdFJQRklITWN6aE5tRVpZ|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DeGVSZDAzR1dmYkZ2MUd3WjRabm5tOVZRSlJJ|Informe de Avance]] |						
+| Controlador electrónico de calefones con la EDU-CIAA       | Juan Cristian Núñez   | Martinez (GBA) | Industrial | Orbis Mertig SAIC | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DZUw5UzNuMTZfd3FvRFlJOGV1OExmNUJVYUZJ|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1Da2Z5aWNnclNNMXdzNXpZbkhPSF9vWnRhNV9N|Informe de Avance]] |
+| Demodulador para control remoto infrarrojo RC5 basado en la EDU-CIAA | Felipe Agustín Cantisani, Lucas Martin Treser | Neuquén (NQ), Mar del Plata (BA) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DYWJXc2ZmaTlIV0dlMHJ6czBGVHZSXzRER2dv|Planificación del Proyecto]] |								
+| Diseño de un sistema de potencial evocado auditivo con la EDU-CIAA    | Estefania Evelyn Luna    | La Rioja (LR) | Académica | UTN-FRLR | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DOFZKYWRYbTBaNXdmTjBWdEp6akVhV3I4SWZN|Planificación del Proyecto]] |								
+| Diseño e implementación de una impresora 3D con la EDU-CIAA | Gustavo Saucedo, Ezequiel Quintana, Patricia	Ferraris, Juan Henry Tito Pacoricona, Efraín Marvel Cruz | Grand Bourg (GBA), Colón (GBA), CABA | Educación | Dos Escuelas y Atalaya Sur | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DVzlFSjQ0NTdNVFl5T3ZiLWpwWlJOVDVSeTdV|Planificación del Proyecto]] |
+| Generador de barrido en frecuencia configurable con la EDU-CIAA | Ariel Muszkat        | CABA | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DT1d6R19Tckota2xFX1FZbDNvbGNKSEhqRExr|Planificación del Proyecto]] |								
+| Guiador óptico de telescopio	                                  | Omar Areso           | Tres de Febrero (GBA) | Académica | Instituto de Astronomía y Física del Espacio (IAFE) | [[ |Planificación del Proyecto]] |
+| Huerta orgánica automatizada mediante la EDU-CIAA               | Santiago Boeri Paz   | CABA | Personal | - | [[ |Planificación del Proyecto]] |								
+| Implementacion de la FFT para la edu-ciaa-nxp	                  | Daniel Alejandro Gil | Concordia (ER) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DNDBfNlNTRm1wRGJNTTZpbzk2YnFleUxoSnJn|Planificación del Proyecto]] [[https://drive.google.com/file/d/0Bz_Vhed1HU1DMWc5ZnJRQVV0aUVoTHI2eXk1Q3dhd3lCR0ZN/view?usp=drivesdk|Informe de Avance]] |						
+| Implementación de la Norma IEEE 11073-20601 sobre USB de equipos médicos para la EDU-CIAA | Carlos Dell'Aquila, Leonardo Mancini | Rivadavia (SJ), CABA | Académica | UNSJ | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DTFl3eHd0N0tOYl80R3d1MVhUWFJIQ1E1WTJN|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DcVA4WEJ4aXQ3T3hsd1pkX0c0RjVfTTd4eXJz|Informe de Avance]] |  
+| Implementación de un webserver en la EDU-CIAA	                  | César Gianfelici     | Córdoba (CBA) | Personal | - | [[ |Planificación del Proyecto]] |
+| Incorporación de la CIAA en el control de un sistema de pulverización avanzado | Rodolfo Podadera | San Francisco (CBA) | Académica | UTN-FRSF | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DTW94LTNNVXl1a1JwU1pLSzM3QzhucUlYeGJV|Planificación del Proyecto]] |
+| Instrumentación y Control de un Sistema de Filtración Tangencial utilizando la CIAA | Martin	Di Tullio  | La Reja (GBA) | Industrial | Puriteina S.R.L. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DQVNBZGJVS2pBWGtKMTI3ZFZCbFZPR0xUQzJJ|Planificación del Proyecto]] |
+| Lectura de un encoder incremental con la EDU-CIAA               | Luciano Perren       | Rafaela (SF) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1Da3VsZGdheFBEWW5aNUVYQ3NRNTlsMDhSMF9B|Planificación del Proyecto]] |								
+| Medidor de tanques                                              | Julio Oscar	Di Santi | Martinez (GBA) | Industrial | Daliara S.R.L. | [[ |Planificación del Proyecto]] |								
+| Micromotor eléctrico para odontología | Hector Andres Torres | Villa Ballester (GBA) | Industrial | Blue Rocket | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DSXFwNEFBVkNPNk5HelVlWnVhdXJTUnBqa0Nv|Planificación del Proyecto]] |
+| Modulo capturador de direcciones wifi y bluetooth               | Carlos Pantelides    | CABA | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DRU1sdjVDbjdrYnJoYy02THFodG1wSFI4MGxv|Planificación del Proyecto]] |								
+| Prototipo de automatización para el control inalámbrico de luminarias Leds | Pablo Galván, Miguel Angel Navarrete | Córdoba (CBA)| Industrial | DTA S.A. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DZzQ5ZkZ3R29TRFQ1T3JpMHJJclZCQVdBTldR|Planificación del Proyecto]] |
+| Prototipo de invernadero automatizado utilizando la EDU-CIAA    | Alfredo Rivamar      | San Rafael (MDZ) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DLWpsMHgybTZSYm9meHJTTzlHbGJlNGJKSG5n|Planificación del Proyecto]] |
+| Puerta de enlace entre redes locales utilizando la EDU-CIAA     | Juan Igancio Pedroche | CABA | Industrial | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DZnNwVmo5UW94cGQ3dnFkN01GdlNRWHdQU25Z|Planificación del Proyecto]] |								
+| Registro en memoria SD de imágenes de una cámara con puerto paralelo con la EDU-CIAA |Luis Manuel Herrera, Luis Mariano Campos | Yerba Buena (TUC), Tucuman (TUC) | Industrial | Viveo S.R.L.| [[https://drive.google.com/open?id=0Bz_Vhed1HU1DR2tFVTYwcXpYanhsZkpNWmRHaGNXLThkRkRj|Planificación del Proyecto]] |
+| Sensor inductivo inteligente programable vía IO-link basado en la CIAA | Gabriel Pyznar | CABA | Industrial | ECFA S.R.L. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DcG11ejMxZC0wT0FZLXBwdWRRREhQdnhwS293|Planificación del Proyecto]] |								
+| Sistema de adquisición de datos de napas freáticas basado en la EDU-CIAA | Alejandro Debus | Urdinarrain (ER) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DSzhpbnlfZWpEbm9WdXl3WjJ1WHpJMDdhV080|Planificación del Proyecto]] |								
+| Sistema de adquisición de datos oceanográficos para monitoreo remoto empleando la CIAA | Santiago Murano, Diego Gigena Ivanovich, David Quiriconi | Comodoro Rivadavia | Academica | UNPSJB |[[https://drive.google.com/open?id=0Bz_Vhed1HU1DRkxHU0xzSW5hbTdtZFJuXzdqaFE0dlFwSkxz|Planificación del Proyecto]] |				
+| Sistema de adquisición de datos para relevamiento de presiones de recipientes	| Elisandro Bianchi | Avellaneda (SF) | Industrial | Colven S.A. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DdDU1TF9ZMEs5NlNuSmZpU0huMmloTnVEYy1V|Planificación del Proyecto]] |								
+| Sistema de adquisición de datos para un CNC | Hugo Zanini | Chivilcoy (BA) | Personal | - | [[ |Planificación del Proyecto]] |								
+| Sistema de adquisición de datos para un infiltrómetro basado en la EDU-CIAA | Gabriel Eduardo Nuñez | Corrientes (CORR) | Industrial | Work System Servicios Informáticos S.R.L. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DNEl5MkJTM0hQVTMtbW1tak0tV3dkYkUxMHBr|Planificación del Proyecto]] |							
+| Sistema de adquisición de datos para una laguna de estabilizacion   | Esteban Sarroca | La Rioja (LR) | Académica | UTN-FRLR y UNLAR | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DUHZfVG4tbG9WSkhJNEJpTU04bTBBNk9ONG9V|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DMktEX1AtdHJwd2hDVThSVjUxUW5LSGx0MU9n|Informe de Avance]] |							
+| Sistema de adquisición de datos para una planta depuradora basado en la EDU-CIAA | Jeremías José Palacios | Río Ceballos (CBA) | Industrial | ARES S.A. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DZWItX1JTeV9FaTFWOU50SDNxMjZ6LXdicHU4|Planificación del Proyecto]] |								
+| Sistema de control de acceso utilizando la EDU-CIAA | Carlos Esteban Garin | Caseros (GBA) | Industrial | Nova Electrónica | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DS040a0FpaUk4SHlNYmZ4RjJ5LUxneTNOc253|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1Dbnk0alJSNlIxOEg5QjRWUjdPaDlraUlWdjF3|Informe de Avance]] |								
+| Sistema de control PID de temperatura para una cámara térmica genérica | Cesar Eduardo Rossi   | CABA | Industrial | Industrias Rosch | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DRktFMnhOWjBLUVd6S2RtVkp6dXRJd2RyeDg0|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1Da0ZsWnVhUWRCRUEwZkgzTEkyLVVMQnpDWkNF|Informe de Avance]] |
+| Sistema de monitoreo y accionamiento de piso radiante basado en la EDU-­CIAA | Antonio Jose Martins | Villa de Mayo (GBA) | Industrial | Industrias Saladillo | [[https://drive.google.com/open?id=0Bz_Vhed1HU1Db2p2b0lGcTVWNENsZDd5S0xUV1g0T1J4djNv|Planificación del Proyecto]] |			 					
+| Sistema de rehabilitación motriz para pacientes | Lucas Medina | Florencio Varela (GBA) | Industrial | Arsultra S.A. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DUERieXhURWpLZnc|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DSkRDcmtnM0tHcnRyZXdPOE9YUDVaT2RIenl3|Informe de Avance]] |								
+| Sistema de testeo de plaquetas Ls-Link utilizando EDU-CIAA | Gabriel Martínez	| Montevideo (URUGUAY) | Industrial | Logicasur | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DQVFQWEQ0cUFlV1JGam9NbExNUmN6X0hDbzd3|Planificación del Proyecto]] |							
+| Stack USB para dispositivos MIDI para la EDU-CIAA | Carlos Ignacio Mancón | CABA | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DMU5OZXlVVVJWUzQ5Si1RQmozM2lHdzlkX0I4|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DTE81Ukc5bS15bXFSTnd0dFpxYkRzTmp4bE5N|Informe de Avance]] |								
+| Supervisión remota de un compresor de Resonador Magnético Nuclear | Sergio Commiso | Junin (BA) | Industrial | Lynac Systems | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DUERieXhURWpLZnc|Planificación del Proyecto]] [[https://drive.google.com/open?id=0Bz_Vhed1HU1DYjgtd01nRDlHWkVXcC1rLUhhOHpvcUc2cHdZ|Informe de Avance]] |								
+| Tracking Automatico de Satelites GEO con posicionamiento GPS aplicado en la EDU-CIAA | Juan de Dios Benitez, Gustavo Fabián Paredes | Posadas (MI), Concepción del Uruguay (ER) | Personal | - | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DbzlOejl5T3MzZG1NUVY1SnJWbkFzdVdnQllZ|Planificación del Proyecto]] | 						
+| Utilización de la EDU-CIAA como interfaz HMI | Ernesto Galiano | San Francisco (CBA) | Industrial | Computrol  S.R.L. | [[https://drive.google.com/open?id=0Bz_Vhed1HU1DM1k0WXcxRDNmNjg|Planificación del Proyecto]] |								
+ 						

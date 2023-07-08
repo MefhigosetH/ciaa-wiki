@@ -1,0 +1,130 @@
+====== CIAA-Z3R0 ======
+
+La CIAA-Z3R0 es una plataforma de bajo costo pensada para la enseñanza desde la primaria hasta la universidad y para el entusiasta de los sistemas embebidos.
+
+{{:desarrollo:ciaa-z3r0_03.png?450|}}
+ 
+La CIAA-Z3R0 es ideal para aplicaciones de bajo consumo y proyectos de robótica educativa ya que está diseñada para ser integrada como componente en un diseño mayor debido a su reducido tamaño, permitiendo ser conectada mediante tiras de pines o soldada a través de su borde de agujeros parra montaje [[https://learn.sparkfun.com/tutorials/how-to-solder---castellated-mounting-holes|castellated]]:
+
+{{:desarrollo:edu-ciaa_y_ciaa-z3r0.jpg?400|}}
+
+
+===== Microcontrolador ===== 
+
+La CIAA-Z3R0 posee un microcontrolador Silicon Labs EFM32HG322F64 (QFP48) con núcleo ARM Cortex-M0+, 64KB de memoria Flash y 8KB de memoria SRAM. Hasta 25 MHz. 
+
+   * Hoja de datos del microcontrolador EFM32HG322F64: [[http://www.mouser.com/ds/2/368/EFM32HG322-1099590.pdf | EFM32HG322-1099590.pdf]].
+   * Manual de referencia de la Familia EFM32 Happy Gecko: [[https://www.silabs.com/documents/public/reference-manuals/EFM32HG-RM.pdf | EFM32HG-RM.pdf]].
+
+===== Bajar programas / depuración ===== 
+
+Con el objetivo de reducir costos se tomó la decisión de separar el //debugger//. De esta forma se puede utilizar un único //debugger// para programar/depurar múltiples placas abaratando de esa forma el costo de desarrollo. En particular se recomienda el ST Link V2 debido a su bajo precio.
+
+{{:desarrollo:st_link_v2.png?400|}}
+
+**ST Link V2 en Linux**
+
+En Linux no es necesario descargar drivers para el ST Link V2, se enumera por ejemplo de la siguiente manera:
+
+{{:desarrollo:st_link_v2_-_linux.png?500|}}
+
+
+**ST Link V2 en Windows**
+
+En windows, en cambio, se debe descarga e instalar el driver provisto por el fabricante:
+
+[[
+http://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html#getsoftware-scroll | Driver ST Link v2 para Windows ]] (archivo llamado "en.stsw-link009.zip", incluye versión de 32 y 64 bits, elija la correcta).
+
+Una vez instalado en el administrador de dispositivos de Windows puede observarse:
+
+{{:desarrollo:driver_st_link_v2_-_windows.png?500|}}
+
+===== Conexión y funcionalidades de los pines ===== 
+
+Para consultar la asignación de pines de la CIAA-Z3R0 en PDF, con información del uso de los mismos en el microcontrolador y el conexionado de la placa se recomienda descargar este documento: 
+
+{{https://github.com/epernia/sAPI/raw/develop/documentation/CIAA-Z3R0/CIAA-Z3R0%20Board%20-%20Conexion%20y%20Pines.pdf | CIAA-Z3R0 Board - Conexión y Pines.pdf}}
+
+===== Diseño del diagrama esquemático ====
+
+El esquemático de la CIAA-Z3R0 se realizó en KICAD y está diponible en este link:
+
+{{https://github.com/ciaa/Hardware/blob/master/PCB/Z3R0/ciaa-z3r0.pdf | Descargar esquemático de CIAA-Z3R0}}
+
+===== Listado de materiales =====
+
+* Listado de materiales: [[https://github.com/ciaa/Hardware/blob/master/PCB/Z3R0/docs/bom_v0.2.xls?raw=true | bom_v0.2.xls]]
+
+===== Placa de Circuito Impreso (PCB) =====
+
+   * Dimensiones del circuito: 18,80 mm de ancho, por 51,81 mm de alto.
+   * Fabricación: [[https://github.com/ciaa/Hardware/tree/master/PCB/Z3R0/gerbers | Gerbers CIAA-Z3R0]]
+
+El circuito impreso de la CIAA-Z3R0 está desarrollado en Kicad. La documentación completa y material relacionado al PCB de la CIAA-Z3R0 se puede obtener del \\
+[[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-NXP | Repositorio de hardware en GitHub.]]
+
+Para bajar el repositorio desde la línea de comandos (Linux/Unix):
+     $ git clone https://github.com/ciaa/Hardware/
+     $ cd  Hardware/PCB/Z3R0
+
+===== Entorno de Desarrollo Integrado (IDE) ===== 
+
+**Nota:** Recuerde instalar el driver del //debugger// para que funcione si utliza Windows.
+
+Contamos con 2 alternativas de IDEs para programar en C/C++ la CIAA-Z3R0 al igual que para la EDU-CIAA-NXP, cada uno de ellos se adapta a distintas necesidades de usuarios. Estos son:
+
+**CIAA-IDE 0.6.0 (Embedded IDE)**
+
+Descargar [[https://github.com/martinribelotta/embedded-ide-builder/releases/ | CIAA-IDE 0.6.0 (Embedded IDE)]]. El archivo //CIAA_Suite-v0.6-x86_64.AppImage// es para Linux de 64 bits mientras que el archivo //CIAA_Suite-v0.6-win32.exe// es para Windows de 32 o 64 bits.
+
+Existe una plantilla de Embedded IDE para crear proyectos con la biblioteca sAPI, llamada [[https://github.com/ciaa/EmbeddedIDE-templates | CIAA-Z3R0_lib-sAPI_STLinkV2]]. Es la forma más sencilla de comenzar a utilizar la plataforma CIAA-Z3R0. Para primeras instalaciones de Embedded IDE **recuerde actualizar las plantillas al iniciar**.
+
+{{ :desarrollo:embedded_ide_-_ciaa-z3r0_-_windows.png?600 |}}
+
+**CIAA Software IDE (Eclipse)**
+
+Este IDE es más complicado de configurar y utilizar pero permite //debuggear// la placa y utilizar plugins hechos por terceros.
+
+El proyecto base para crear programas con biblioteca sAPI puede descargarse aquí [[ https://github.com/epernia/sAPI/raw/develop/CIAA-Z3R0_lib-sAPI_STLinkV2.zip | CIAA-Z3R0_lib-sAPI_STLinkV2.zip]].  
+
+Pasos para programación y debug desde Eclipse (Windows):
+
+   * Debe instalar y configurar el Eclipse como se indican los pasos para la EDU-CIAA-NXP (ver en este link: [[https://github.com/ciaa/IDE4PLC/blob/master/docs/ide4plc-install_es.md | Instalar CIAA Software IDE (Eclipse)]]).
+   * Descomprimir el proyecto **CIAA-Z3R0_lib-sAPI_STLinkV2.zip** en una carpeta conocida.
+   * El instalador **Setup_CIAA_IDE_Suite_v1.2.2.zip** incluye una versión anterior de OpenOCD que no soporta esta placa por lo que deberá [[https://github.com/epernia/sAPI/raw/develop/oocd.zip | descargar la nueva versión de OpenOCD]] y ubicarla en la ruta **C:\CIAA**, quedando **C:\CIAA\oocd** (esta versión de OpenOCD es la que incluye actualmente Embedded IDE, asi que si ya lo tiene instalado utilice ese).
+   * Abrir Eclipse, crear un workspace.
+   * Para añadir el proyecto **CIAA-Z3R0_lib-sAPI_STLinkV2** deberá elegir **File --> New --> Makefile Project with Existing Code**, luego en la ventana que aparece cargar en **Project Name**, **CIAA-Z3R0_lib-sAPI_STLinkV2** y en **Existing Code Location** buscar la ruta de la carpeta **CIAA-Z3R0_lib-sAPI_STLinkV2**. Finalmente presionar en **Finish** y el proyecto deberá aparecer en Eclipse.
+   * Configurar parámetros de C/C++ Build. Debe hacer click con el botón derecho del mouse sobre la carpeta del proyecto en Eclipse y seleccionar la opción **Properties**, en la ventana que aparece seleccionar la opción **C/C++ Build**, luego seleccionar la pestaña (tab) **Behaviour** de la siguiente manera (ver imagen): 
+      * En **Build (incremental build)** escribir **Compilar_proyecto**. 
+      * En **Clean** escribir **Limpiar_proyecto**.  
+{{ :desarrollo:eclipse_-_ciaa-z3r0_-_windows_-_c_build-clean.png?600 |}}
+   * Probar presionando **Build** con el proyecto seleccionado, debería ver lo siguiente:
+{{ :desarrollo:eclipse_-_ciaa-z3r0_-_windows_-_build-.png?600 |}}
+   * Configurar //debugger//. Con el proyecto seleccionado elegir **Run --> Debug Configurations**. En la ventana que aparece:
+      * Doble click en **GDB OpenOCD Debugging**, con esto se crea la configuración **CIAA-Z3R0_lib-sAPI_STLinkV2 Default**.
+      * En la pestaña **Main** de la configuración:
+         * **C/C++ Application** igrese la ruta del archivo **.elf** a debuggear (en la carpeta out del proyecto).
+         * En **Project**, poner **CIAA-Z3R0_lib-sAPI_STLinkV2**.
+{{ :desarrollo:eclipse_-_ciaa-z3r0_-_windows_-_debug_1-.png?600 |}}
+      * En la pestaña **Debugger** de la configuración:
+         * En **OpenOCD Setup --> Executable** poner **C:\CIAA\oocd\bin\openocd.exe**.
+         * En **OpenOCD Setup --> Config options** poner **-f C:\CIAA-Z3R0\CIAA-Z3R0_lib-sAPI_STLinkV2\libs\openocd.cfg**. Donde "C:\CIAA-Z3R0\CIAA-Z3R0_lib-sAPI_STLinkV2" es el path del proyecto y "openocd.cfg" es el script de openOCD.
+         * En **GDB Client Setup --> Executable** poner **C:\CIAA\cygwin\usr\arm-none-eabi\bin\arm-none-eabi-gdb.exe**.
+{{ :desarrollo:eclipse_-_ciaa-z3r0_-_windows_-_debug_2-.png?600 |}}
+      * Para finalizar, presionar sobre el botón **Debug** para iniciar la sesión de debug.
+{{ :desarrollo:eclipse_-_ciaa-z3r0_-_windows_-_debuggeando_2.png?600 |}}
+
+
+===== Soporte de la biblioteca sAPI para esta placa ===== 
+
+En este documento en pdf se resume gráficamente el soporte y nombres de periféricos soportados por la biblioteca sAPI para la CIAA-Z3R0. Descargar: [[ https://github.com/epernia/sAPI/raw/develop/documentation/CIAA-Z3R0/CIAA-Z3R0%20Board%20-%20sAPI%20v0.5.pdf | CIAA-Z3R0 Board - sAPI v0.5.pdf]].
+
+Próximamente se incluirán más módulos. 
+
+/*
+-------
+
+{{page>repo:descripcion:ponchos&nofooter}}
+
+-------*/

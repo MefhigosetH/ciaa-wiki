@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> educacion:cursos</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:04:40+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse1ercohorte2016&amp;rev=1462540725&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse2dacohorte2016&amp;rev=1485875578&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:curso_kicad&amp;rev=1461770387&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:cursos_programacion_ciaa&amp;rev=1595951968&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_la_cese&amp;rev=1554208350&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_los_capse&amp;rev=1466551114&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_tesis_uner&amp;rev=1465214000&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_del_seminario_se_fiuba&amp;rev=1468617630&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse1ercohorte2016&amp;rev=1462540725&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-05-06T13:18:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:capse1ercohorte2016</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse1ercohorte2016&amp;rev=1462540725&amp;do=diff</link>
+        <description>1er Cohorte del 2016 de los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)
+
+
+
+[ ]
+Las fechas de los cursos de la “1ra cohorte del 2016” son las siguientes: Nivel                         Curso</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse2dacohorte2016&amp;rev=1485875578&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-31T15:12:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:capse2dacohorte2016</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:capse2dacohorte2016&amp;rev=1485875578&amp;do=diff</link>
+        <description>2da Cohorte del 2016 de los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)
+
+
+
+[ ]
+Los cursos están orientados al público con o sin experiencia previa, interesado en aprender a trabajar con sistemas embebidos. El objetivo es abordar en forma gradual temas cada vez más desafiantes, hasta lograr implementar aplicaciones electrónicas digitales basadas en microcontroladores.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:curso_kicad&amp;rev=1461770387&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-04-27T15:19:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:curso_kicad</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:curso_kicad&amp;rev=1461770387&amp;do=diff</link>
+        <description>Curso KiCad para el diseño de circuitos de mediana complejidad y multicapa
+
+El Centro de Micro y Nanoelectrónica del Instituto Nacional de Tecnología Industrial (INTI-CMNB) dicta cursos teórico-prácticos sobre el uso de KiCad para diseño de circuitos de mediana complejidad y multicapa</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:cursos_programacion_ciaa&amp;rev=1595951968&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-07-28T15:59:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:cursos_programacion_ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:cursos_programacion_ciaa&amp;rev=1595951968&amp;do=diff</link>
+        <description>Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)
+
+
+
+[ ]
+El objetivo de los cursos es aprender a realizar aplicaciones electrónicas basadas en microcontroladores ARM de 32 bits, abordando de manera gradual desde problemas simples hasta problemas de mayor complejidad.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_la_cese&amp;rev=1554208350&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-04-02T12:32:30+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:proyectos_de_la_cese</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_la_cese&amp;rev=1554208350&amp;do=diff</link>
+        <description>Proyectos de la Especialización en Sistemas Embebidos de la Universidad de Buenos Aires (CESE-FIUBA)
+
+
+
+[ ]
+En la Carrera de Especialización en Sistemas Embebidos de la FIUBA los alumnos deben desarrollar un trabajo final que tenga finalidad académica, sea el prototipo de un producto o automatice la producción.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_los_capse&amp;rev=1466551114&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-21T23:18:34+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:proyectos_de_los_capse</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_los_capse&amp;rev=1466551114&amp;do=diff</link>
+        <description>Proyectos propuestos en los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)
+
+
+
+[ ]
+En los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE) los participantes pueden desarrollar en forma opcional proyectos de su interés personal o profesional. Ejemplos de proyectos son el control de una impresora 3D</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_tesis_uner&amp;rev=1465214000&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-06T11:53:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:proyectos_de_tesis_uner</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_de_tesis_uner&amp;rev=1465214000&amp;do=diff</link>
+        <description>Tesis de grado de Bioingeniería de la Facultad de Ingeniería de la Universidad Nacional de Entre Ríos (UNER)
+
+
+
+[ ]
+En la Facultad de Ingeniería de la UNER se dicta la Carrera de Bioingeniería, dónde los alumnos deben realizar una tesis para graduarse, que tenga finalidad académica o sea el prototipo de un producto.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_del_seminario_se_fiuba&amp;rev=1468617630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-15T21:20:30+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos:proyectos_del_seminario_se_fiuba</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos:proyectos_del_seminario_se_fiuba&amp;rev=1468617630&amp;do=diff</link>
+        <description>Proyectos del Seminario de Sistemas Embebidos de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)
+
+
+
+[ ]
+En la Carrera de Ingeniería Electrónica de la FIUBA se dicta el curso electivo Seminario de Sistemas Embebidos, dónde los alumnos deben desarrollar un trabajo final que tenga finalidad académica, sea el prototipo de un producto o automatice la producción.</description>
+    </item>
+</rdf:RDF>

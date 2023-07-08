@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>repo:configuracion:java</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="repo,configuracion,java"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=repo:configuracion:java&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=repo:configuracion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=repo:configuracion:java.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=repo:configuracion:java"/>
+<link rel="canonical" href="./doku.php%3Fid=repo:configuracion:java.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='repo:configuracion';var JSINFO = {"id":"repo:configuracion:java","namespace":"repo:configuracion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<p>
+Los componentes de java pueden ser de distintos proveedores y versiones y pueden convivir simultáneamente usando la arquitectura de update-alternatives.
+</p>
+
+<p>
+Los programas que nos interesan son <strong>java</strong> para ejecutar y <strong>javac</strong>, el compilador. Para ver que versiones hay instaladas, use –list
+</p>
+<pre class="code bash">update-alternatives <span class="re5">--list</span> <span class="kw2">java</span></pre>
+
+<p>
+Una salida de ejemplo, consistente con los siguientes ejemplos es:
+</p>
+<pre class="code">/opt/java/jdk1.7.0_71/bin/java
+/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java</pre>
+
+<p>
+Para consultar el compilador:
+</p>
+<pre class="code bash">update-alternatives <span class="re5">--list</span> <span class="kw2">javac</span></pre>
+
+<p>
+Siendo la salida 
+</p>
+<pre class="code">/opt/java/jdk1.7.0_71/bin/javac
+/usr/lib/jvm/java-7-openjdk-amd64/bin/javac</pre>
+
+<p>
+Si bajamos la nueva versión y la descomprimimos en /opt/java/jdk1.8.0_102, tendríamos que ver algo como
+</p>
+<pre class="code bash"><span class="kw2">ls</span> <span class="sy0">/</span>opt<span class="sy0">/</span>java<span class="sy0">/</span> <span class="re5">-1</span></pre>
+<pre class="code">jdk1.7.0_71
+jdk1.8.0_102</pre>
+
+<p>
+Hay que instalar las alternativas:
+</p>
+<pre class="code bash"><span class="kw2">sudo</span> update-alternatives <span class="re5">--install</span> <span class="sy0">/</span>usr<span class="sy0">/</span>bin<span class="sy0">/</span><span class="kw2">java</span> <span class="kw2">java</span> <span class="sy0">/</span>opt<span class="sy0">/</span>java<span class="sy0">/</span>jdk1.8.0_102<span class="sy0">/</span>jre<span class="sy0">/</span>bin<span class="sy0">/</span><span class="kw2">java</span> <span class="nu0">3</span>
+<span class="kw2">sudo</span> update-alternatives <span class="re5">--install</span> <span class="sy0">/</span>usr<span class="sy0">/</span>bin<span class="sy0">/</span><span class="kw2">javac</span> <span class="kw2">javac</span> <span class="sy0">/</span>opt<span class="sy0">/</span>java<span class="sy0">/</span>jdk1.8.0_102<span class="sy0">/</span>bin<span class="sy0">/</span><span class="kw2">javac</span> <span class="nu0">3</span></pre>
+
+<p>
+Siendo el formato: 
+</p>
+<pre class="code bash">update-alternatives <span class="re5">--install</span> EJECUTABLE NOMBRE RUTA_REAL_EJECUTABLE PRIORIDAD</pre>
+
+<p>
+Controlar tras instalar que estén y seleccionarlas, primero el <strong>java</strong>:
+</p>
+<pre class="code bash"><span class="kw2">sudo</span> update-alternatives <span class="re5">--config</span> <span class="kw2">java</span></pre>
+
+<p>
+Hay que seleccionar con el número la opción deseado si no es la que está actualmente marcada con <strong> * </strong>
+</p>
+<pre class="code">There are 3 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      auto mode
+  1            /opt/java/jdk1.7.0_71/bin/java                   1         manual mode
+* 2            /opt/java/jdk1.8.0_102/jre/bin/java              3         manual mode
+  3            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      manual mode
+
+Press enter to keep the current choice[*], or type selection number: </pre>
+
+<p>
+Luego, el compilador, <strong>javac</strong>:
+</p>
+<pre class="code bash"><span class="kw2">sudo</span> update-alternatives <span class="re5">--config</span> <span class="kw2">javac</span></pre>
+<pre class="code">There are 3 choices for the alternative javac (providing /usr/bin/javac).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      auto mode
+  1            /opt/java/jdk1.7.0_71/bin/javac               1         manual mode
+* 2            /opt/java/jdk1.8.0_102/bin/javac              3         manual mode
+  3            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      manual mode
+
+Press enter to keep the current choice[*], or type selection number: </pre>
+
+<p>
+Se puede comprobar que versión está activa con
+</p>
+<pre class="code bash"><span class="kw2">java</span> <span class="re5">-version</span></pre>
+<pre class="code">java version &quot;1.8.0_102&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)</pre>
+
+<p>
+Tras cambiar a otra versión:
+</p>
+<pre class="code bash"><span class="kw2">java</span> <span class="re5">-version</span></pre>
+<pre class="code">java version &quot;1.7.0_65&quot;
+OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-0ubuntu0.14.04.1)
+OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)</pre>
+</div>
+</body>
+</html>

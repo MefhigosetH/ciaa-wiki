@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,interfaces_comunes,fuente_de_alimentacion"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:interfaces_comunes"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:interfaces_comunes';var JSINFO = {"id":"desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion","namespace":"desarrollo:hardware:interfaces_comunes","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+
+
+<h1 class="sectionedit1" id="fuente_de_alimentacion">Fuente de Alimentación</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Fuente de Alimentaci\u00f3n&quot;,&quot;hid&quot;:&quot;fuente_de_alimentacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;11-49&quot;} -->
+<h2 class="sectionedit2" id="diagrama_esquematico">Diagrama esquemático</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:fuente.png" class="media" title="desarrollo:hardware:fuente.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:fuente.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama esquem\u00e1tico&quot;,&quot;hid&quot;:&quot;diagrama_esquematico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;50-130&quot;} -->
+<h2 class="sectionedit3" id="descripcion">Descripción</h2>
+<div class="level2">
+
+<p>
+La fuente de alimentación de la CIAA (v1.0) fue concebida para lograr el compromiso entre un alto rendimiento y un amplio rango de tensión de entrada. Por tal razón se optó por una fuente switching con topología reductora (buck o step-down) para obtener una primer tensión de 5V con capacidad de 3A, regulados a partir de un rango típico de entre 12VDC y 30VDC. Se utilizó el circuito integrado monolítico <a href="http://www.ti.com/lit/ds/symlink/lm2596.pdf" class="urlextern" target="_blank" title="http://www.ti.com/lit/ds/symlink/lm2596.pdf" rel="ugc nofollow noopener">LM2596</a>, que cumple con estos requisitos dando la ventaja de tener compensación interna, tesión de salida fija en 5V, protección térmica, frecuencia de trabajo de 150 KHz (moderadamente alta, lo cual reduce el tamaño del inductor).
+Se le han adicionado al circuito recomendado por el fabricante una serie de protecciones adicionales para garantiar la robustez del diseño, a saber:<br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Diodo para protección de polaridad en la entrada</div>
+</li>
+<li class="level1"><div class="li"> Polyswitch para limitar las sobre-corrientes</div>
+</li>
+<li class="level1"><div class="li"> Supresor de transitorios</div>
+</li>
+</ul>
+
+<p>
+Se ha colocado un regulador lineal <a href="http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" class="urlextern" target="_blank" title="http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" rel="ugc nofollow noopener">NCV1117ST33</a> con salida de 3.3V-1A a partir de fuente de switching de 5V, debido a la poca eficiencia energética que este tipo de fuentes presenta. Se optó por este tipo de fuente para alimentar la lógica principal por sus bondades de bajo ruido y buena regulación.
+Finalmente se ha realizado un filtrado adicional sobre esta fuente de 3.3V para contar con una versión apta para alimentar los circuitos analógicos de la CIAA, principalmente los ADC. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n&quot;,&quot;hid&quot;:&quot;descripcion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;131-1685&quot;} -->
+<h2 class="sectionedit4" id="caracteristicas">Características</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Rango de tensión de entrada típico: 12VDC a 30VDC</div>
+</li>
+<li class="level1"><div class="li"> Fuente de Switching para reducción a 5V-3A</div>
+</li>
+<li class="level1"><div class="li"> Fuente lineal de 3.3V-1A a partir de los 5V</div>
+</li>
+<li class="level1"><div class="li"> Fuente filtrada de 3.3V para conversores ADC</div>
+</li>
+<li class="level1"><div class="li"> Protección de polaridad en la entrada</div>
+</li>
+<li class="level1"><div class="li"> Protección de sobre-corrientes</div>
+</li>
+<li class="level1"><div class="li"> Protección contra transitorios</div>
+</li>
+<li class="level1"><div class="li"> Protección por sobre-temperatura</div>
+</li>
+<li class="level1"><div class="li"> LED testigo de encendido</div>
+</li>
+<li class="level1"><div class="li"> Alimentación de gran parte de sus funcionalidades por USB</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas&quot;,&quot;hid&quot;:&quot;caracteristicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1686-2162&quot;} -->
+<h2 class="sectionedit5" id="bibliografia_adicional">Bibliografía adicional</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://es.wikipedia.org/wiki/Fuente_conmutada" class="urlextern" target="_blank" title="http://es.wikipedia.org/wiki/Fuente_conmutada" rel="ugc nofollow noopener">Wikipedia, Fuente conmutada</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://es.wikipedia.org/wiki/Regulador_de_tensi%C3%B3n" class="urlextern" target="_blank" title="http://es.wikipedia.org/wiki/Regulador_de_tensi%C3%B3n" rel="ugc nofollow noopener">Wikipedia, Regulador de Tensión</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ti.com/lit/ds/symlink/lm2596.pdf" class="urlextern" target="_blank" title="http://www.ti.com/lit/ds/symlink/lm2596.pdf" rel="ugc nofollow noopener">Especificación de LM2596</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" class="urlextern" target="_blank" title="http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF" rel="ugc nofollow noopener">Especificación de NCV1117ST33</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bibliograf\u00eda adicional&quot;,&quot;hid&quot;:&quot;bibliografia_adicional&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2163-&quot;} --></div>
+</body>
+</html>

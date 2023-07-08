@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,emulador"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html#emulador_de_edu-ciaa_corriendo_micropython">Emulador de EDU-CIAA corriendo MicroPython</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html#instalacion_del_emulador">Instalación del emulador</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html#utilizacion_del_emulador">Utilización del emulador</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html#utilizacion_de_perifericos">Utilización de periféricos</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="emulador_de_edu-ciaa_corriendo_micropython">Emulador de EDU-CIAA corriendo MicroPython</h1>
+<div class="level1">
+
+<p>
+Este software emulador, que se instala de forma independiente al IDE, permite simular la placa EDU-CIAA ejecutando el firmware de MicroPython, emulando la mayoría de los periféricos que posee la placa. El emulador se ejecuta desde el IDE, mediante el boton “Emulator”. De esta forma ya no es necesario disponer de la placa física para hacer el desarrollo, pudiendo desarrollarse clases en donde la cantidad de alumnos es superior a la cantidad de placas, e ir turnando el uso de las placas una vez que el código está probado y funcionando.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Emulador de EDU-CIAA corriendo MicroPython&quot;,&quot;hid&quot;:&quot;emulador_de_edu-ciaa_corriendo_micropython&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-604&quot;} -->
+<h2 class="sectionedit2" id="instalacion_del_emulador">Instalación del emulador</h2>
+<div class="level2">
+
+<p>
+Se podrá encontrar la última versión en el siguiente link:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ernesto-g/educiaa_python_emulator/releases" class="urlextern" target="_blank" title="https://github.com/ernesto-g/educiaa_python_emulator/releases" rel="ugc nofollow noopener">Releases</a></div>
+</li>
+</ul>
+
+<p>
+Existen versiones para Windows 7 y 10 y para distribuciones de Linux basadas en Debian (Debian, Ubuntu, Xubuntu, Mint, etc.). Tambien es posible ejecutarlo desde el código fuente en otras versiones de Linux y OSX, que posean los paquetes requeridos.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n del emulador&quot;,&quot;hid&quot;:&quot;instalacion_del_emulador&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;605-1038&quot;} -->
+<h2 class="sectionedit3" id="utilizacion_del_emulador">Utilización del emulador</h2>
+<div class="level2">
+
+<p>
+Una vez instalado el emulador, se podrá ejecutar el script de python programado en el IDE presionando el botón “Emulator” <a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png" class="media" loading="lazy" alt="" /></a>. Aparecerán dos ventanas, una con la terminal del emulador, y otra con una imagen de la EDU-CIAA, la cual tendrá sobre la misma los botones y los LEDs que posee la placa, el resto de los periféricos se podrán acceder y simular desde el menú “Peripherals”.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+La salida por pantalla del código se mostrará en la ventana de terminal emulada, mientras que el estado de los LEDs se visualizará sobre la ventana con la imagen de la EDU-CIAA. También es posible presionar los pulsadores T1 a T4 para simular los pulsadores que posee la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Utilizaci\u00f3n del emulador&quot;,&quot;hid&quot;:&quot;utilizacion_del_emulador&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1039-1885&quot;} -->
+<h2 class="sectionedit4" id="utilizacion_de_perifericos">Utilización de periféricos</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Utilizaci\u00f3n de perif\u00e9ricos&quot;,&quot;hid&quot;:&quot;utilizacion_de_perifericos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1886-1927&quot;} -->
+<h3 class="sectionedit5" id="gpios">GPIOs</h3>
+<div class="level3">
+
+<p>
+En el menú Peripherals, seleccionar la opción “GPIOs”. Aparecerá la siguiente ventana:
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_gpios_1.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_gpios_1.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_gpios_1.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+En ella se listan las 9 GPIOs que tiene definidas en su conector la EDU-CIAA. La segunda columna indica si el pin está configurado como entrada o como salida. En el caso de que esté configurado como entrada, en la tercer columna se podrá asignar el valor “1” (check tildado) o “0” (check sin tidar). En el caso de que esté configurado como salida, en la tercer columna se podrá observar el estado actual del pin.
+</p>
+
+<p>
+Se recomienda probar esta ventana con el snippet llamado “PIN Interrupt Example”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;GPIOs&quot;,&quot;hid&quot;:&quot;gpios&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1928-2611&quot;} -->
+<h3 class="sectionedit6" id="uart_y_rs485">UART y RS485</h3>
+<div class="level3">
+
+<p>
+En el menú Peripherals, seleccionar la opción “UART” para simular la UART que posee la placa ruteada al conector, o “RS-485” para simular la UART con interfaz RS485 . 
+</p>
+
+<p>
+Aparecerá la siguiente ventana:
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_uart_1.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_uart_1.png"><img src="lib/exe/fetch.php%3Fw=600&amp;tok=3e8e72&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_uart_1.png" class="media" loading="lazy" alt="" width="600" /></a>
+</p>
+
+<p>
+En el área negra, se mostrarán los bytes que la placa transmite, mientras que mediante el botón “Send” se podrá simular el envío de una trama a la placa, la cual se escribe en el campo a la derecha del botón.
+</p>
+
+<p>
+Si se selecciona el modo “<abbr title="American Standard Code for Information Interchange">ASCII</abbr>”, el envío y la recepción interpretarán los bytes como ascii (si se envía una &#039;a&#039; se enviará el byte 0x61). Si se selecciona el modo Hex, le mostrarán los bytes en hexadecimal en el área negra, y el texto ingresado para simular un envío, deberá estar escrito en hexa, sin separar con espacios cada byte (por ejemplo 316F326D).
+</p>
+
+<p>
+Se recomienda probar esta ventana con el snippet llamado “UART-RS485 Example”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;UART y RS485&quot;,&quot;hid&quot;:&quot;uart_y_rs485&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2612-3586&quot;} -->
+<h3 class="sectionedit7" id="salidas_pwm">Salidas PWM</h3>
+<div class="level3">
+
+<p>
+En el menú Peripherals, seleccionar la opción “PWM”. Aparecerá la siguiente ventana:
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_pwm_1.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_pwm_1.png"><img src="lib/exe/fetch.php%3Fw=500&amp;tok=a8b135&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_pwm_1.png" class="media" loading="lazy" alt="" width="500" /></a>
+</p>
+
+<p>
+En esta ventana se listan las 11 salidas PWM que posee la placa, y se indica el % del ciclo de actividad configurado para cada una, si se tilda el check correspondiente, se mostrará la forma de onda en el gráfico de la izquierda. En la parte inferior derecha se indica la frecuencia de operación, que es común a todas las salidas PWM.
+</p>
+
+<p>
+Se recomienda probar esta ventana con el snippet llamado “PWM Example”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Salidas PWM&quot;,&quot;hid&quot;:&quot;salidas_pwm&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;3587-4191&quot;} -->
+<h3 class="sectionedit8" id="entradas_analogicas">Entradas analógicas</h3>
+<div class="level3">
+
+<p>
+En el menú Peripherals, seleccionar la opción “ADC”. Aparecerá la siguiente ventana:
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_adc_1.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_adc_1.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=775af5&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_adc_1.png" class="media" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+Mediante esta ventana es posible setear un valor para cada entrada analógica, el mismo se setea en cuentas (0 a 1023) y no en tensión (0 a 3.3V)
+</p>
+
+<p>
+Se recomienda probar esta ventana con el snippet llamado “ADC Example”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Entradas anal\u00f3gicas&quot;,&quot;hid&quot;:&quot;entradas_analogicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;4192-4613&quot;} -->
+<h3 class="sectionedit9" id="salida_analogica_dac">Salida analógica (DAC)</h3>
+<div class="level3">
+
+<p>
+En el menú Peripherals, seleccionar la opción “DAC”. Aparecerá la siguiente ventana:
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_dac_1.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_dac_1.png"><img src="lib/exe/fetch.php%3Fw=500&amp;tok=fbcbc5&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator_dac_1.png" class="media" loading="lazy" alt="" width="500" /></a>
+</p>
+
+<p>
+En esta ventana se puede observar la señal de salida configurada para el módulo DAC.
+</p>
+
+<p>
+Se recomienda probar esta ventana con el snippet llamado “DAC Example”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Salida anal\u00f3gica (DAC)&quot;,&quot;hid&quot;:&quot;salida_analogica_dac&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;4614-&quot;} --></div>
+</body>
+</html>

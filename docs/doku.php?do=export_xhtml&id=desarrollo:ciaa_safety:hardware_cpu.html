@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_safety:hardware_cpu</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_safety,hardware_cpu"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_safety:hardware_cpu&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_safety"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_safety:hardware_cpu.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_safety:hardware_cpu"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_safety:hardware_cpu.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_safety';var JSINFO = {"id":"desarrollo:ciaa_safety:hardware_cpu","namespace":"desarrollo:ciaa_safety","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h4 id="cpu">CPU</h4>
+<div class="level4">
+
+<p>
+En esta primera versión de la CIAA-Safety el CPU elegido es de la familia MCU RM4x de la firma Texas Instruments que permite desarrollar sistemas para aplicaciones críticas. Esta tecnología ha sido desarrollada para cumplir los requisitos de la norma de seguridad IEC 61508 SIL-3 y es ideal para aplicaciones con requisitos de seguridad específicos.
+</p>
+
+<p>
+El microcontrolador elegido es el RM48L952 basado en arquitectura ARM® Cortex™-R4F que ofrece hasta 220 <abbr title="Megahertz">MHz</abbr> de rendimiento de punto flotante suministrando más de 350 DMIPS. Con características de seguridad integradas, opciones avanzadas de conectividad y dispositivos periféricos flexibles de control en tiempo real. 
+</p>
+
+</div>
+
+<h4 id="caracteristica_principal">Característica principal</h4>
+<div class="level4">
+
+<p>
+“220Mhz Lockstep ARM Cortex-R4F based MCU for IEC61508 Functional Safety Applications”
+</p>
+
+</div>
+
+<h4 id="caracteristicas_generales">Características Generales</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> CHIP:  RM48L952-PGE (CIAA-Safety v1.0)</div>
+</li>
+<li class="level1"><div class="li"> Package Size: 144LQFP: 20 x 20: 484 mm2.</div>
+</li>
+<li class="level1"><div class="li"> CPU: ARM-Cortex - R4F         </div>
+</li>
+<li class="level1"><div class="li"> Frequency (<abbr title="Megahertz">MHz</abbr>): 220</div>
+</li>
+<li class="level1"><div class="li"> Flash (KB): 3072</div>
+</li>
+<li class="level1"><div class="li"> RAM (KB): 256    </div>
+</li>
+<li class="level1"><div class="li"> Data Flash (KB): 64    </div>
+</li>
+</ul>
+
+<p>
+Fuente: 
+<a href="http://www.ti.com/product/RM48L952?keyMatch=RM48L952&amp;tisearch=Search-EN-Everything" class="urlextern" target="_blank" title="http://www.ti.com/product/RM48L952?keyMatch=RM48L952&amp;tisearch=Search-EN-Everything" rel="ugc nofollow noopener">http://www.ti.com/product/RM48L952?keyMatch=RM48L952&amp;tisearch=Search-EN-Everything</a>
+</p>
+
+</div>
+
+<h4 id="implementacion">Implementación</h4>
+<div class="level4">
+
+<p>
+De todas las designaciones que contiene cada uno de los pines del microcontrolador, se designa una de sus funcionalidades de forma independiente, es decir que no contemplen doble funcionalidad. En la siguiente imagen se identifica cada uno de los pines de acuerdo a su designación.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:ciaa_safety:hardware_cpu&amp;media=desarrollo:ciaa_safety:identificacion2.png.html" class="media" title="desarrollo:ciaa_safety:identificacion2.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_safety:identificacion2.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+Por lo tanto se ha identificado y seleccionado:
+</p>
+<ul>
+<li class="level1"><div class="li"> 1 Conector JTAG</div>
+</li>
+<li class="level1"><div class="li"> 1 Oscilador externo</div>
+</li>
+<li class="level1"><div class="li"> 1 Periférico SPI nativo</div>
+</li>
+<li class="level1"><div class="li"> 1 Modulo MIBSPI de 3 CS</div>
+</li>
+<li class="level1"><div class="li"> 2 Puertos de comunicación serial (UART)</div>
+</li>
+<li class="level1"><div class="li"> 1 USB HOST</div>
+</li>
+<li class="level1"><div class="li"> 1 periférico I2C</div>
+</li>
+<li class="level1"><div class="li"> 24 ADC</div>
+</li>
+<li class="level1"><div class="li"> 2 Periféricos seriales CAN</div>
+</li>
+<li class="level1"><div class="li"> 1 Ethernet</div>
+</li>
+<li class="level1"><div class="li"> 20 GPIO</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:ciaa_safety:hardware_cpu&amp;media=desarrollo:ciaa_safety:bloques.png.html" class="media" title="desarrollo:ciaa_safety:bloques.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_safety:bloques.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+De esta manera el modulo procesador contendrá al conector jtag, al microcontrolador, oscilador externo, memoria flash SPI de 512 Mb, reguladores y adaptadores de tensión, indicadores lumínicos, PHY USB, ETHERNET, CAN y el conector de bus PCI donde en este se definirán donde estarán ubicados los pines de las todas las señales.
+</p>
+<div class="plugin_note noteclassic">Cabe aclarar que a medida que la tecnología evolucione (procesadores más potentes), el modulo que contenga a este procesador también lo hará, permitiendo de esta manera desarrollar nuevas versiones de la CIAA-Safety sin la necesidad de re-diseñar nuevamente el conjunto de aplicaciones.
+</div>
+</div>
+</div>
+</body>
+</html>

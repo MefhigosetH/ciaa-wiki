@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:instalacion_sw</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,instalacion_sw"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:instalacion_sw"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:instalacion_sw","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#instalacion_del_firmware">Instalación del Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#windows">Windows</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#compilador_arm-gcc">Compilador ARM-GCC</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#openocd">OpenOCD</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#ide_-_eclipse">IDE - Eclipse</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#plug-in_gnu-arm-openocd_para_eclipse">Plug-In GNU-ARM-OpenOCD para Eclipse</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:instalacion_sw.html#linux">Linux</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="instalacion_del_firmware">Instalación del Firmware</h1>
+<div class="level1">
+
+<p>
+Una vez terminada la primera versión de Firmware esta página contendrá las instrucciones para instalar el Firmware y poder compilarlo.
+</p>
+
+<p>
+Entre tanto puede acceder al código fuente en GIT, vea la instrucciones en <a href="./doku.php%3Fid=desarrollo:firmware:codigo.html" class="wikilink1" title="desarrollo:firmware:codigo" data-wiki-id="desarrollo:firmware:codigo">Código Fuente</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n del Firmware&quot;,&quot;hid&quot;:&quot;instalacion_del_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-283&quot;} -->
+<h2 class="sectionedit2" id="windows">Windows</h2>
+<div class="level2">
+
+<p>
+<strong>Evite instalar los tools o hacer el git clone en directorios con espacios</strong>. Los espacios son un problema que todavia no resolvimos.
+</p>
+
+<p>
+repo:instalacion:cygwin&amp;nofooter
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Windows&quot;,&quot;hid&quot;:&quot;windows&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;284-482&quot;} -->
+<h2 class="sectionedit3" id="compilador_arm-gcc">Compilador ARM-GCC</h2>
+<div class="level2">
+
+<p>
+Para compilar para el procesador ARM (por ejemplo para la CIAA-NXP será el LPC4337), debe instalarse el compilador  <a href="https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-win32.exe" class="urlextern" target="_blank" title="https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-win32.exe" rel="ugc nofollow noopener">arm-none-eabi-gcc para Windows</a>, o accediendo a al sitio <a href="https://launchpad.net/gcc-arm-embedded" class="urlextern" target="_blank" title="https://launchpad.net/gcc-arm-embedded" rel="ugc nofollow noopener">https://launchpad.net/gcc-arm-embedded</a>
+.Para simplificar el proceso de compilación, es recomendable durante la instalación activar la opción que incluye el path del compilador en la variable de entorno PATH. Caso contrario hay que hacerlo manualmente desde el Panel de Control⇒Sistema⇒Variables de Entorno, típicamente agregando: “C:\Archivos de programa\GNU Tools ARM Embedded\4.8 2014q2\bin” o el path correspondiente a la instalación.
+Puede verificarse que el PATH está incluido, abriendo una consola de windows (cmd) tal como se mencionó anteriormente.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilador ARM-GCC&quot;,&quot;hid&quot;:&quot;compilador_arm-gcc&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;483-1381&quot;} -->
+<h2 class="sectionedit4" id="openocd">OpenOCD</h2>
+<div class="level2">
+
+<p>
+El hardware de la CIAA viene provisto con el chip FT2232H, que se encarga de hacer un puente entre la interfase JTAG del microcontrolador y el USB que conecta a la PC en el puerto USB dedicado al debug. La herramienta de código abierto <a href="http://openocd.sourceforge.net/" class="urlextern" target="_blank" title="http://openocd.sourceforge.net/" rel="ugc nofollow noopener">OpenOCD (On-Chip Debugger)</a> es la encargada de manejar el chip FT2232H por el USB y a la vez todo lo referido al JTAG. Luego el debugger (GDB) utilizado en nuestro IDE-Eclipse puede hacer su tarea simplemente conectándose el puerto 3333 (TCP) que el OpenOCD tiene en escucha esperando la conexión.
+</p>
+
+<p>
+Para descargar el OpenOCD compilado y listo para utilizar (actualmente la versión 0.9.0), puede irse a la zona de descargas de la web de <a href="http://www.freddiechopin.info/en/download" class="urlextern" target="_blank" title="http://www.freddiechopin.info/en/download" rel="ugc nofollow noopener">freddiechopin</a> o directamente descargarse del siguiente <a href="http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0" class="urlextern" target="_blank" title="http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0" rel="ugc nofollow noopener">link</a>
+</p>
+
+<p>
+Además, debe tenerse en cuenta que el chip FT2232H posee 2 canales de comunicación independientes (A y B) pero que ambos salen por el mismo USB, es decir, la PC verá 2 dispositivos distintos (en realidad uno compuesto). Uno será el que conecta al JTAG manejado por OpenOCD como fue mencionado, y el otro se verá como un puerto virtual COM. Este último puede servir principalmente para debug.
+</p>
+
+<p>
+Al momento de instalar los drivers, debe tenerse en cuenta que funcionará como 2 dispositivos distintos, y por lo tanto cada uno tendrá un driver asociado. Lo primero es instalar los <a href="http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip" class="urlextern" target="_blank" title="http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip" rel="ugc nofollow noopener">drivers por defecto del fabricante FTDI para puerto virtual (VCP)</a>. En el Administrador de Dispositivos deberían aparecer 2 nuevos puertos COM, tal como sigue:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:instalacion_sw&amp;media=desarrollo:firmware:ft2232h_ftdi_devices.png.html" class="media" title="desarrollo:firmware:ft2232h_ftdi_devices.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ft2232h_ftdi_devices.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+Luego para el canal A (también aparece como &#039;Converter A&#039; o &#039;Interface 0&#039;), debe reemplazarse el driver actual de FTDI por otro llamado WinUSB utilizando la aplicación <a href="http://zadig.akeo.ie" class="urlextern" target="_blank" title="http://zadig.akeo.ie" rel="ugc nofollow noopener">zadig</a> para la versión de Win correspondiente, para que OpenOCD pueda funcionar correctamente. Debe ir al menú &#039;Options⇒List All Devices&#039;, elegir &#039;USB Serial Converter A&#039; y cambiar el driver nuevo a &#039;WinUSB&#039;, para luego hacer click en &#039;Reinstall Driver&#039;, tal como se ve aquí:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:instalacion_sw&amp;media=desarrollo:firmware:driver_winusb_zadig_ft2232h.png.html" class="media" title="desarrollo:firmware:driver_winusb_zadig_ft2232h.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:driver_winusb_zadig_ft2232h.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+Finalmente 1 de los 2 puertos COM virtuales debería desaparecer, y se crea un dispositivo USB nuevo cuyo driver dejó de ser el de FTDI, quedando todo de la siguiente manera:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:instalacion_sw&amp;media=desarrollo:firmware:driver_winusb_devmanager.png.html" class="media" title="desarrollo:firmware:driver_winusb_devmanager.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:driver_winusb_devmanager.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+<div class="plugin_note noteimportant"><strong>Nota:</strong> Si Falla Zadig, mostrando el mensaje “The driver installation failed.” entonces intente bajando una versión anterior de Zadig en el siguiente link: <a href="http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download" class="urlextern" target="_blank" title="http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download" rel="ugc nofollow noopener">http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download</a>
+<p>
+Esta solución fue encontrada en: <a href="https://github.com/pbatard/libwdi/issues/1" class="urlextern" target="_blank" title="https://github.com/pbatard/libwdi/issues/1" rel="ugc nofollow noopener">https://github.com/pbatard/libwdi/issues/1</a>
+</p>
+
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OpenOCD&quot;,&quot;hid&quot;:&quot;openocd&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1382-4276&quot;} -->
+<h2 class="sectionedit5" id="ide_-_eclipse">IDE - Eclipse</h2>
+<div class="level2">
+
+<p>
+El IDE utilizado para codificar el Firmware en &#039;C&#039; es <a href="http://www.eclipse.org/cdt/" class="urlextern" target="_blank" title="http://www.eclipse.org/cdt/" rel="ugc nofollow noopener">Eclipse CDT (C/C++)</a>. La versión utilizada actualmente puede descargarse de acá: <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2" class="urlextern" target="_blank" title="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2" rel="ugc nofollow noopener">CDT 8.3.0 for Eclipse Kepler SR2</a> (se han encontrado problemas con la versión más reciente de Eclipse &#039;Luna-R&#039; usado con el plug-in para para GNU-ARM-OpenOCD, por lo tanto a la fecha no es recomendable su uso)
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;IDE - Eclipse&quot;,&quot;hid&quot;:&quot;ide_-_eclipse&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;4277-4765&quot;} -->
+<h2 class="sectionedit6" id="plug-in_gnu-arm-openocd_para_eclipse">Plug-In GNU-ARM-OpenOCD para Eclipse</h2>
+<div class="level2">
+
+<p>
+Además debe instalarse el plug-in para GNU-ARM-OpenOCD, desde el menú &#039;Help⇒Install New Software…“, agregando en el sitio de descarga para la instalación la siguiente dirección: <strong>http://gnuarmeclipse.sourceforge.net/updates</strong>, tal como se muestra a continuación:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:instalacion_sw&amp;media=desarrollo:firmware:eclipse_plugin_arm.png.html" class="media" title="desarrollo:firmware:eclipse_plugin_arm.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:eclipse_plugin_arm.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plug-In GNU-ARM-OpenOCD para Eclipse&quot;,&quot;hid&quot;:&quot;plug-in_gnu-arm-openocd_para_eclipse&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;4766-5133&quot;} -->
+<h2 class="sectionedit7" id="linux">Linux</h2>
+<div class="level2">
+
+<p>
+La mayor parte de las herramientas se encuentran instaladas por defecto en este caso.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;hid&quot;:&quot;linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;5134-5238&quot;} -->
+<h3 class="sectionedit8" id="cygwin">Cygwin</h3>
+<div class="level3">
+
+<p>
+Desde luego en Linux no hace falta instalarlo! <img src="lib/images/smileys/wink.svg" class="icon smiley" alt=";-)" />
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Cygwin&quot;,&quot;hid&quot;:&quot;cygwin&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;5239-5307&quot;} -->
+<h3 class="sectionedit9" id="compilador_arm-gcc1">Compilador ARM-GCC</h3>
+<div class="level3">
+
+<p>
+Para compilar para el procesador ARM (por ejemplo para la CIAA-NXP será el LPC4337), debe instalarse el compilador  <a href="https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2" class="urlextern" target="_blank" title="https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2" rel="ugc nofollow noopener">arm-none-eabi-gcc para Linux</a>, o accediendo a al sitio <a href="https://launchpad.net/gcc-arm-embedded" class="urlextern" target="_blank" title="https://launchpad.net/gcc-arm-embedded" rel="ugc nofollow noopener">https://launchpad.net/gcc-arm-embedded</a>
+Para simplificar el proceso de compilación, es recomendable incluir el path del compilador en la variable de entorno PATH. Puede verificarse que el PATH está incluido, abriendo una consola y tecleando &#039;./arm-none-eabi-gcc –version&#039; para ver que lo encuentra y en tal caso nos mostrará la versión del mismo.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilador ARM-GCC&quot;,&quot;hid&quot;:&quot;compilador_arm-gcc1&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;5308-5987&quot;} -->
+<h3 class="sectionedit10" id="php">PHP</h3>
+<div class="level3">
+
+<p>
+En este caso sólo hace falta instalar la versión de línea de comando (CLI), por lo que en consola debemos hacer:
+</p>
+<pre class="code">sudo apt-get install php5-cli</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;PHP&quot;,&quot;hid&quot;:&quot;php&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;5988-6164&quot;} -->
+<h3 class="sectionedit11" id="openocd1">OpenOCD</h3>
+<div class="level3">
+
+<p>
+Para utilizar OpenOCD en Linux debemos compilarlo configurándolo para que funcione con el chip FT2232.
+Si estamos en un sistema operativo de 64 bits (ej: Ubuntu 64-bits), es necesario instalar primero las siguientes librerías (para 32 bits saltear este paso)
+</p>
+<pre class="code">sudo apt-get install libgtk2.0-0:i386 libxtst6:i386 libpangox-1.0-0:i386 libpangoxft-1.0-0:i386 libidn11:i386 libglu1-mesa:i386 libncurses5:i386 libudev1:i386 libusb-1.0:i386 libusb-0.1:i386 gtk2-engines-murrine:i386 libnss3-1d:i386 libwebkitgtk-1.0-0</pre>
+
+<p>
+Ahora si, para 32/64-bits continuamos con el mismo procedimiento. Lo primero que debemos hacer es instalar el driver necesario para el chip FT2232 y el paquete libusb:
+</p>
+<pre class="code">sudo apt-get install libftdi-dev
+sudo apt-get install libusb-1.0-0-dev</pre>
+
+<p>
+Antes de compilar el openocd necesitamos instalar el siguiente paquete:
+</p>
+<pre class="code">sudo apt-get install pkg-config</pre>
+
+<p>
+Ahora vamos a configurar e instalar OpenOCD.  Utilizaremos la versión 0.9.0.
+Para descargar y descomprimir los archivos fuente:
+</p>
+<pre class="code">wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+tar -xvjf openocd-0.9.0.tar.bz2</pre>
+
+<p>
+Finalmente compilamos OpenOCD para que funcione con nuestro chip FT2232:
+</p>
+<pre class="code">cd openocd-0.9.0
+./configure --enable-ftdi 
+make
+sudo make install</pre>
+
+<p>
+Para utilizarlo debemos ejecutar:
+</p>
+<pre class="code">openocd -f &lt;archidodeconfiguración&gt;</pre>
+
+<p>
+Por ejemplo:
+</p>
+<pre class="code">openocd -f CIAA/Firmware/modules/tools/openocd/cfg/ciaa-nxp.cfg</pre>
+
+<p>
+Además, debe tenerse en cuenta que el chip FT2232H posee 2 canales de comunicación independientes (A y B) pero que ambos salen por el mismo USB, es decir, la PC verá 2 dispositivos distintos (en realidad uno compuesto). Uno será el que conecta al JTAG manejado por OpenOCD como fue mencionado, y el otro se verá como un puerto serie por USB. Este puerto debería encontrarse en &#039;/dev/ttyUSB&#039;, y puede servir para principalmente para debug.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OpenOCD&quot;,&quot;hid&quot;:&quot;openocd1&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:11,&quot;range&quot;:&quot;6165-8130&quot;} -->
+<h3 class="sectionedit12" id="ide_-_eclipse1">IDE - Eclipse</h3>
+<div class="level3">
+
+<p>
+El IDE utilizado para codificar el Firmware en &#039;C&#039; es <a href="http://www.eclipse.org/cdt/" class="urlextern" target="_blank" title="http://www.eclipse.org/cdt/" rel="ugc nofollow noopener">Eclipse CDT (C/C++)</a>. La versión utilizada actualmente puede descargarse de acá: <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2" class="urlextern" target="_blank" title="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2" rel="ugc nofollow noopener">CDT 8.3.0 for Eclipse Kepler SR2</a> (se han encontrado problemas con la versión más reciente de Eclipse &#039;Luna-R&#039; usado con el plug-in para para GNU-ARM-OpenOCD, por lo tanto a la fecha no es recomendable su uso). Notese que la versión utilizada requiere tener instalado Java, ante cualquier inconveniente hay que verificar que el mismo se encuentre instalado.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;IDE - Eclipse&quot;,&quot;hid&quot;:&quot;ide_-_eclipse1&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:12,&quot;range&quot;:&quot;8131-8766&quot;} -->
+<h3 class="sectionedit13" id="plug-in_gnu-arm-openocd_para_eclipse1">Plug-In GNU-ARM-OpenOCD para Eclipse</h3>
+<div class="level3">
+
+<p>
+Además debe instalarse el plug-in para GNU-ARM-OpenOCD, desde el menú &#039;Help⇒Install New Software…”, agregando en el sitio de descarga para la instalación la siguiente dirección: <strong>http://gnuarmeclipse.sourceforge.net/updates</strong>, tal como se muestra a continuación:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:instalacion_sw&amp;media=desarrollo:firmware:eclipse_plugin_arm.png.html" class="media" title="desarrollo:firmware:eclipse_plugin_arm.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:eclipse_plugin_arm.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plug-In GNU-ARM-OpenOCD para Eclipse&quot;,&quot;hid&quot;:&quot;plug-in_gnu-arm-openocd_para_eclipse1&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:13,&quot;range&quot;:&quot;8767-&quot;} --></div>
+</body>
+</html>

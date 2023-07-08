@@ -1,0 +1,50 @@
+====== Debug con la placa EDU-CIAA y el Entorno IDE ======
+===== Configuración del entorno CIAA-IDE =====
+###
+Si estuviste compilando para hacer debug en Windows y ahora quieres probar con la placa EDU-CIAA, lo primero que tienes que hacer es un **Clean Project**. Todos los archivos generados en Builds anteriores, fueron para el CPU de tu PC, y no para el micro controlador de la EDU-CIAA.
+
+Para que el Makefile reconozca que se quiere compilar para la placa EDU-CIAA, debes modificar el archivo Makefile.mine. Los posibles valores de la variable BOARD son:
+  * ciaa_sim_ia32           <= Es el valor definido por default para x86
+  * ciaa_sim_ia64
+  * **edu_ciaa_nxp**        <= Es el que identifica a la placa EDU-CIAA
+  * ciaa_nxp
+  * ciaa_fsl
+  * ciaa_pic
+
+###
+
+\\
+===== Compilando el proyecto =====
+###
+Una vez configurada la variable de entorno, debes compilar el proyecto. Como podrás ver en la imagen siguiente, la extensión del archivo generado ya no es .exe sino **.axf**. Si esto no es así, vuelve al paso anterior, y verifica no tener errores de tipeo el valor cargado en la variable BOARD. No te recomendamos que cambies el Makefile a mano, si lo hiciste, restáuralo a su versión original, y sólo modifica el archivo Makefile.mine.
+###
+
+{{:docu:fw:bm:ide:buildokeduciaa.png|}}
+\\
+===== Configuración de OpenOCD para Debug =====
+###
+Durante la instalación del CIAA-IDE, además de instalarse los drivers para la conexión de la placa, se han instalado las herramientas para Debug. Se utilizará OpenOCD  para hacer el nexo JTAG-GDB mediante la conexión USB. 
+Lo primero que debemos hacer es abrir la consola cygwin y pararnos en el directorio Firmware:
+<code>
+cd /cygdrive/c/Ciaa/Firmware
+</code>
+Luego debemos ejecutar el comando:
+<code>
+make openocd
+</code>
+Se debería ver como se muestra a continuación:
+{{:docu:fw:bm:ide:makeopenocd.jpg|}}
+###
+No cerrar esta ventana ya que eclipse utilizará el servicio que está corriendo para poder hacer debug en nuestra placa.
+###
+Finalmente, desde el menu 'Run⇒Debug Configurations...' se debe crear una nueva 'debug configuration' del tipo 'GDB OpenOCD Debugging'. Una vez hecho esto, colocar los siguientes valores:
+###
+
+{{:docu:fw:bm:ide:debugopenocd.jpg|}}
+
+{{:docu:fw:bm:ide:debugopenocd2.png|}}
+
+###
+Si tienes una Placa EDU-CIAA "Virgen", cuya flash nunca ha sido programada, o si por algún motivo se ha borrado completamente la flash del microcontrolador, es posible que al intentar iniciar una sesión de Debug, el CIAA-IDE te muestre un error. Para poder iniciar la sesion de debug, te recomendamos sigas las instrucciones de la pagina [[desarrollo:hardware:primeros_pasos|Primeros pasos con el Hardware de la CIAA]]. 
+###
+<- docu:fw:bm:ide:ide_win_debug|Debug con Windows ^ docu:fw:bm:ide|IDE ^ docu:fw:bm:woide|Trabajando sin IDE ->

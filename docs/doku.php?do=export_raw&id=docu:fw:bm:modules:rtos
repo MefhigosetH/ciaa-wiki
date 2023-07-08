@@ -1,0 +1,46 @@
+====== RTOS ======
+
+Es un sistema operativo de tiempo real (Real Time Operating System). 
+
+===== OSEK-OS =====
+###
+CIAA-Firmware utiliza [[http://www.osek-vdx.org/|OSEK-OS]], que es un estándar de RTOS internacional creado por la industria automotriz y de libre licencia.
+###
+
+==== ¿Por qué CIAA-Firmware utiliza OSEK-OS? ====
+
+###
+OSEK-OS fue creado por la industria automotriz, pero esa no es la razón para utilizarlo en CIAA-Firmware. La ventaja de OSEK-OS es que es un **estándar** y por ende existen muchas implementaciones. Hay implementaciones open source y cerradas, las hay con QM hasta SIL 3. Además de que hay muchas empresas que proveen soporte.
+###
+
+###
+Al ser un estándar **abierto**, quien quiera es libre de usar el estándar, implementarlo, venderlo, comprarlo, etc. OSEK-OS nos genera la libertad de no dependencia.
+###
+
+==== Introducción a OSEK-OS ====
+
+###
+Para entrar en tema rápidamente, puede empezar por una [[http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:breve_introduccio_n_a_osek-vdx.pdf|Breve introducción a OSEK]].
+###
+
+###
+Un documento más detallado es [[http://proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=desarrollo:firmware:rtos:introduccion_a_osek-os.pdf|Introducción a OSEK-OS]].
+
+###
+También puede visitar el sitio oficial de [[http://www.osek-vdx.org/|OSEK-VDX]], donde entre otros documentos encontrará las [[http://portal.osek-vdx.org/files/pdf/specs/os223.pdf|Especificaciones de OSEK versión 2.2.3]] o [[http://en.wikipedia.org/wiki/OSEK|OSEK en Wikipedia (inglés)]]. .
+###
+
+==== OSEK-OS de la CIAA ====
+
+El OSEK de CIAA-Firmware está basado en [[http://opensek.sourceforge.net/|FreeOSEK]].
+
+
+===== FAQ =====
+
+Si tiene consultas, mire las preguntas frecuentes relacionadas a RTOS: [[desarrollo:firmware:rtos:faq|FAQs]].
+
+===== Testeando OSEK =====
+
+Si quiere portar el RTOS a una nueva plataforma es importante correr los tests, lo mismo se explica en la página [[desarrollo:firmware:rtos:test|Tests de OSEK]]
+
+<- ^ docu:fw:bm:modules:rtos|Módulos ^ docu:fw:bm:modules:rtos:tst|Testeando OSEK ->

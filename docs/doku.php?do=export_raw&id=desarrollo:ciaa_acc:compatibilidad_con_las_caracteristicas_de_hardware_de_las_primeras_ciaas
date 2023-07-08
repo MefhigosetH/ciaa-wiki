@@ -1,0 +1,22 @@
+====== Compatibilidad con las características de hardware de las primeras CIAAs ======
+
+En un primer momento, cuando comenzó el proyecto CIAA, fueron definidas las características técnicas que tendrían todos los modelos de CIAAs. Ese documento puede consultarse en el siguiente link: [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/11/CIAA-Hardware-v1.1.pdf|Características técnicas de hardware de la CIAA]].
+
+Si bien la CIAA-ACC es totalmente diferente a las primeras CIAAs (CIAA-NXP y CIAA-FSL), por su alcance, prestaciones y complejidad, se intentará cumplir con la mayor cantidad de requisitos posibles, siempre que sea beneficioso para el futuro usuario de la placa.
+
+A continuación se hace un análisis de los aspectos que se podrán cumplir y de los que no se cumplirán:
+
+  * Factor de forma: No se cumplirá. Tendrá el factor de forma estándar de la especificación PCIe-104 a fines de poder stackear varias CIAAs. 
+  * Microcontrolador: Si bien en el documento se opta por un Cortex-M, entre las opciones mencionadas están los Cortex-A. Se utilizará un 2x Cortex-A9.
+  * Encapsulado: No se cumplirá. En el documento se opta por LQFP, y se utilizará BGA con pitch de 1 mm para el Zynq y de 0.8 mm para las memorias DDR3.  
+  * PCB en 4 capas fabricable localmente: No se cumplirá. Serán 8 capas como mínimo y no será fabricable en el país, más que nada por la limitación del tamaño de las vías (8 mils) y del espesor de los materiales que difiere mucho de lo estándar.
+  * Expansión de memoria RAM: Se cumplirá. Incluiremos 1GB de memoria DDR3.
+  * EEPROM I2C para MAC-ADDRESS: Se cumplirá.
+  * Conector JTAG/SWD: Se cumplirá.
+  * Debugger integrado con FT2232: Se cumplirá a medias, porque no se utilizará un FT2232H, si no algo más versátil y pequeño como un Cortex-M0.
+  * Interfaces de comunicación: Se cumplirá. Tendrá Ethernet, USB OTG, CAN, RS232, RS485 y memoria microSD.
+  * Entradas/Salidas: Se cumplirá a medias. No se incluirán entradas ni salidas analógicas ni salidas a relé.
+  * Fuente de alimentación: No se cumplirá ya que no se podrá alimentar con tensiones tan altas como las otras CIAAs. La entrada del power jack será de +5VCC por una cuestión de eficiencia ya que las tensiones necesarias para el Zynq son muy bajas. Además de poder funcionar stand-alone, también se podrá utilizar una fuente estandarizada PCI-104.
+  * Conectores: Se incluirán todos a excepción de las borneras.
+  * Software de diseño: Se cumplirá. Se utilizará el software libre KiCAD para diseñar esquemático y PCB. Además, debido a la complejidad del proyecto y a que INTI cuenta con la licencia del programa Hyperlynx de Mentor Graphics con todas las funcionalidades necesarias para diseñar un PCB de alta velocidad, se utilizará este software para realizar simulaciones pre y post layout.
+  * Documentación y control de versiones: Se cumplirá. Se usarán wiki y git.

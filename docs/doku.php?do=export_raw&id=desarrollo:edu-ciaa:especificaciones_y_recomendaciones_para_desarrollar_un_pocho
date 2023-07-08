@@ -1,0 +1,98 @@
+=====Especificaciones y recomendaciones para desarrollar un Pocho=====
+Se documenta aquí toda la información necesaria para desarrollar un nuevo Poncho.
+
+
+====Conectores====
+  * Las EDU-CIAA utiliza dos conectores de 20x2 , con un paso 100 mils (2,54mm).
+  * En la EDU-CIAA se recomienda soldar el conector hembra, vertical.
+  * En los ponchos se recomienda soldar los pines machos.
+
+====Identificación de conectores====
+Las EDU-CIAA poseen dos conectores de expansión denominados P1 y P2.
+
+^  P1  ^^^^^^
+^Pin EDU-CIAA^Nombre Largo^N. Corto^ Pin Poncho^Tipo de Pin^Descripción^
+| 1          |RESET       |  RST   |  1        |INPUT       | Es el reset del microprocesador, se activa conectándolo a tierra.|
+| 2          | +5V    |  +5V     |  2        | Power out    | Son los 5V internos de la CIAA.|
+| 3          |ISP       |  ISP   |  3        |INPUT       | |
+| 4          |GPIO_GND  | GND    |  4        | Power out  | Tierra digital. |
+| 5          |          |        |  5        |       | |
+| 6          |          |        |  6        |       | |
+| 7          |          |        |  7        |       | |
+| 8          |          |        |  8        |       | |
+| 9          |          |        |  9        |       | |
+| 10          |          |        |  10        |       | |
+| 11          |          |        |  11        |       | |
+| 12          |          |        |  12        |       | |
+| 13         |          |        |  13        |       | |
+| 14          |          |        |  14        |       | |
+| 15          |          |        |  15        |       | |
+| 16          |          |        |  16        |       | |
+| 17          |          |        |  17        |       | |
+| 18          |          |        |  18        |       | |
+| 19          |          |        |  19        |       | |
+| 20          |GPIO_GND  |        |  20        |       | |
+| 21          |          |        |  21        |       | |
+| 22          |GPIO_GND  |        |  22        |       | |
+| 23          |          |        |  23        |       | |
+| 24          |GPIO_GND  |        |  24        |       | |
+| 25          |          |        |  25        |       | |
+| 26          |GPIO_GND  |        |  26        |       | |
+| 27          |          |        |  27        |       | |
+| 28          |GPIO_GND  |        |  28        |       | |
+| 29          |          |        |  29        |       | |
+| 30          |GPIO_GND  |        |  30        |       | |
+| 31          |          |        |  31        |       | |
+| 32          |GPIO_GND  |        |  32        |       | |
+| 33         |          |        |  33        |       | |
+| 34         |          |        |  34        |       | |
+| 35          |          |        |  35        |       | |
+| 36          |          |        |  36        |       | |
+| 37          |          |        |  37        |       | |
+| 38          |GPIO_GND  |        |  38        |       | |
+| 39          |          |        |  39        |       | |
+| 40          |GPIO_GND  |        |  40        |       | |
+
+
+^  P2  ^^^^^^
+^Pin EDU-CIAA^Nombre Largo^N. Corto^ Pin Poncho^Tipo de Pin^Descripción^
+| 1          |+3.3V       |  3.3   |  41        |Power out  | Son los 3.3V internos de la CIAA.|
+| 2          |+5V         |  +5V   |  42        |Power out    | Son los 5V internos de la CIAA. |
+| 3          |GPIO_GND    |        |  43        |       | |
+| 4          |          |        |  44        |       | |
+| 5          |GPIO_GND  |        |  45        |       | |
+| 6          |          |        |  46        |       | |
+| 7          |GPIO_GND  |        |  47        |       | |
+| 8          |          |        |  48        |       | |
+| 9          |          |        |  49        |       | |
+| 10          |          |        |  50        |       | |
+| 11          |GPIO_GND  |        |  51        |       | |
+| 12          |          |        |  52        |       | |
+| 13          |GPIO_GND  |        |  53        |       | |
+| 14          |          |        |  54        |       | |
+| 15          |          |        |  55        |       | |
+| 16          |          |        |  56        |       | |
+| 17          |GPIO_GND  |        |  57        |       | |
+| 18          |          |        |  58        |       | |
+| 19          |GPIO_GND  |        |  59        |       | |
+| 20          |          |        |  60        |       | |
+| 21          |          |        |  61        |       | |
+| 22          |          |        |  62        |       | |
+| 23          |          |        |  63        |       | |
+| 24          |          |        |  64        |       | |
+| 25          |GPIO_GND  |        |  65        |       | |
+| 26          |          |        |  66        |       | |
+| 27          |GPIO_GND  |        |  67        |       | |
+| 28          |          |        |  68        |       | |
+| 29          |          |        |  69        |       | |
+| 30          |          |        |  70        |       | |
+| 31          |          |        |  71        |       | |
+| 32          |          |        |  72        |       | |
+| 33          |          |        |  73        |       | |
+| 34          |          |        |  74        |       | |
+| 35          |          |        |  75        |       | |
+| 36          |          |        |  76        |       | |
+| 37          |GPIO_GND  |        |  77        |       | |
+| 38          |          |        |  78        |       | |
+| 39          |GPIO_GND  |        |  79        |       | |
+| 40          |          |        |  80        |       | |

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_acc,compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_acc"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_acc';var JSINFO = {"id":"desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas","namespace":"desarrollo:ciaa_acc","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas">Compatibilidad con las características de hardware de las primeras CIAAs</h1>
+<div class="level1">
+
+<p>
+En un primer momento, cuando comenzó el proyecto CIAA, fueron definidas las características técnicas que tendrían todos los modelos de CIAAs. Ese documento puede consultarse en el siguiente link: <a href="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/11/CIAA-Hardware-v1.1.pdf" class="urlextern" target="_blank" title="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/11/CIAA-Hardware-v1.1.pdf" rel="ugc nofollow noopener">Características técnicas de hardware de la CIAA</a>.
+</p>
+
+<p>
+Si bien la CIAA-ACC es totalmente diferente a las primeras CIAAs (CIAA-NXP y CIAA-FSL), por su alcance, prestaciones y complejidad, se intentará cumplir con la mayor cantidad de requisitos posibles, siempre que sea beneficioso para el futuro usuario de la placa.
+</p>
+
+<p>
+A continuación se hace un análisis de los aspectos que se podrán cumplir y de los que no se cumplirán:
+</p>
+<ul>
+<li class="level1"><div class="li"> Factor de forma: No se cumplirá. Tendrá el factor de forma estándar de la especificación PCIe-104 a fines de poder stackear varias CIAAs. </div>
+</li>
+<li class="level1"><div class="li"> Microcontrolador: Si bien en el documento se opta por un Cortex-M, entre las opciones mencionadas están los Cortex-A. Se utilizará un 2x Cortex-A9.</div>
+</li>
+<li class="level1"><div class="li"> Encapsulado: No se cumplirá. En el documento se opta por LQFP, y se utilizará BGA con pitch de 1 mm para el Zynq y de 0.8 mm para las memorias DDR3.  </div>
+</li>
+<li class="level1"><div class="li"> PCB en 4 capas fabricable localmente: No se cumplirá. Serán 8 capas como mínimo y no será fabricable en el país, más que nada por la limitación del tamaño de las vías (8 mils) y del espesor de los materiales que difiere mucho de lo estándar.</div>
+</li>
+<li class="level1"><div class="li"> Expansión de memoria RAM: Se cumplirá. Incluiremos 1GB de memoria DDR3.</div>
+</li>
+<li class="level1"><div class="li"> EEPROM I2C para MAC-ADDRESS: Se cumplirá.</div>
+</li>
+<li class="level1"><div class="li"> Conector JTAG/SWD: Se cumplirá.</div>
+</li>
+<li class="level1"><div class="li"> Debugger integrado con FT2232: Se cumplirá a medias, porque no se utilizará un FT2232H, si no algo más versátil y pequeño como un Cortex-M0.</div>
+</li>
+<li class="level1"><div class="li"> Interfaces de comunicación: Se cumplirá. Tendrá Ethernet, USB OTG, CAN, RS232, RS485 y memoria microSD.</div>
+</li>
+<li class="level1"><div class="li"> Entradas/Salidas: Se cumplirá a medias. No se incluirán entradas ni salidas analógicas ni salidas a relé.</div>
+</li>
+<li class="level1"><div class="li"> Fuente de alimentación: No se cumplirá ya que no se podrá alimentar con tensiones tan altas como las otras CIAAs. La entrada del power jack será de +5VCC por una cuestión de eficiencia ya que las tensiones necesarias para el Zynq son muy bajas. Además de poder funcionar stand-alone, también se podrá utilizar una fuente estandarizada PCI-104.</div>
+</li>
+<li class="level1"><div class="li"> Conectores: Se incluirán todos a excepción de las borneras.</div>
+</li>
+<li class="level1"><div class="li"> Software de diseño: Se cumplirá. Se utilizará el software libre KiCAD para diseñar esquemático y PCB. Además, debido a la complejidad del proyecto y a que INTI cuenta con la licencia del programa Hyperlynx de Mentor Graphics con todas las funcionalidades necesarias para diseñar un PCB de alta velocidad, se utilizará este software para realizar simulaciones pre y post layout.</div>
+</li>
+<li class="level1"><div class="li"> Documentación y control de versiones: Se cumplirá. Se usarán wiki y git.</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

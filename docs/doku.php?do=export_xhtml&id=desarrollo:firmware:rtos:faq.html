@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:rtos:faq</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,rtos,faq"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:rtos:faq&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware:rtos"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:rtos:faq.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:rtos:faq"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:rtos:faq.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware:rtos';var JSINFO = {"id":"desarrollo:firmware:rtos:faq","namespace":"desarrollo:firmware:rtos","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<p>
+?????? <abbr title="Frequently Asked Questions">FAQ</abbr>: OSEK ??????
+</p>
+
+<p>
+????? El RTOS no compila y dice que falta un archivo *_Cfg.h ?????
+</p>
+
+<p>
+Estos archivos son generados en base a la configuración OIL. Debe recordar de correr
+</p>
+<pre class="code">make generate</pre>
+
+<p>
+o en su defecto con un clean previo haciendo
+</p>
+<pre class="code">make clean_generate</pre>
+
+<p>
+para que estos archivos sean generados.
+</p>
+
+<p>
+????? ¿Qué es OIL? ?????
+</p>
+
+<p>
+OIL es OSEK Implementation Language, es un lenguaje de configuración para indicar al RTOS cuántas tareas hay, qué prioridades tienen, etc. Es parte del estándar. 
+</p>
+</div>
+</body>
+</html>

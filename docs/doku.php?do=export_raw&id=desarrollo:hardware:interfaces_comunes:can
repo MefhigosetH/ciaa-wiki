@@ -1,0 +1,19 @@
+====== Interfaz CAN ======
+===== Diagrama esquemático =====
+{{ desarrollo:hardware:can.png |}}
+===== Características =====
+  * Transceptor compatible con el estándar ISO11898.
+  * Estado recesivo mediante V-Split (mejoras en EMC) 
+  * Transceptor de Alta Velocidad, hasta 1 Mbit/s (High-Speed).
+  * Protección contra descargas electrostáticas (ESD).
+  * Protección contra transitorios.
+  * Resistencia de terminación del bus opcional mediante jumper.
+
+===== Descripción =====
+Dada la enorme robustez que provee el estándar de comunicaciones conocido como CAN, éste es ampliamente utilizado en la industria, principalmente en la automotriz. Sus bondades de latencia conocida, multi-master, detección y señalización de errores, retransmisión automática, compatibilidad asegurada por su estandarización, etc, lo convierten sin dudas en una opción muy atractiva. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su bus diferencial comunicar los distintos nodos participantes en una red CAN.
+
+El proyecto está basado en el driver [[http://www.nxp.com/documents/data_sheet/TJA1040.pdf|TJA1040]] que cumple con el estándar ISO11898, agregando además la característica de V-Split que provee un nivel de tensión conocido para el estado recesivo, ofreciendo también mejoras en lo que a EMC refiere. Al mismo se le han adicionado protecciones y resistencias de terminación del bus opcionales.
+
+===== Bibliografía =====
+  * [[wpes>CAN_bus|Wikipedia, Bus CAN]]
+  * [[http://www.nxp.com/documents/application_note/AN10211.pdf|Nota de Aplicación de NXP, AN10211]] 

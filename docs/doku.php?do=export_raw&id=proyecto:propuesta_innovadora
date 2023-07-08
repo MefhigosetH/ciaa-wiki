@@ -1,0 +1,22 @@
+====== Propuesta Innovadora ======
+
+###
+La CIAA es la primera iniciativa a nivel internacional que conjuga simultáneamente tres elementos cuya concurrencia la transforman en una propuesta única e innovadora:
+###
+
+
+  - ### **Es industrial porque dispone de diferentes mecanismos de protección eléctrica contra fallas o sobrecargas**. De esta forma brinda una base para diseñar sistemas capaces de considerar cuestiones de disponibilidad, confiabilidad, verificación, validación y seguridad intrínseca (([[http://en.wikipedia.org/wiki/Reliability,_availability_and_serviceability_(computer_hardware)|Confiabilidad, disponibilidad y mantenibilidad]],     [[http://en.wikipedia.org/wiki/Verification_and_validation_(software)|Verificación y validación]],[[http://en.wikipedia.org/wiki/Formal_verification#Industry_use|Verificación formal]],[[http://es.wikipedia.org/wiki/Safety_Integrity_Level|Seguridad intrínseca]])), además de la posibilidad de certificar normas internacionales como las IEC 61131 y la IEC 61508 (([[http://en.wikipedia.org/wiki/International_Electrotechnical_Commission|International Electrotechnical Commission]],[[http://en.wikipedia.org/wiki/IEC_61131|IEC 61131]],[[http://en.wikipedia.org/wiki/IEC_61508|IEC 61508]])), contemplando criterios de robustez ante interferencia electromagnética, sobrecarga de las salidas, vibraciones mecánicas, estrés térmico, perturbaciones en la tensión de alimentación y variabilidad de los componentes, entre otras.
+###
+  - ### **Es abierta porque toda la información sobre su diseño está gratuitamente disponible en esta web** (diagrama esquemático, diseño del circuito impreso, código fuente del firmware y del software, diseño del gabinete), para que sea usada sin restricciones por empresas y profesionales en sus productos y procesos productivos, sin que sea necesario notificar en forma alguna sobre su uso, y pudiendo cada uno modificar libremente el diseño publicado para adaptarlo a sus propias necesidades.
+###
+  - ### **Es argentina porque es una plataforma desarrollada por PyMEs, profesionales y docentes**, sin recurrir al aporte directo del estado o de corporaciones multinacionales, lo que permite **ofrecer versiones basadas en distintos procesadores**, a partir del uso combinado de capas de abstracción de hardware (HAL) y de una interfaz de programación de aplicaciones (API) pensadas para su uso conjunto con un sistema operativo de tiempo real, siguiendo una estructura de funciones tipo POSIX. 
+###
+
+### La CIAA cambia la lógica con la cual se agrega valor a la producción industrial porque rompe un esquema individual donde cada empresa debe afrontar en soledad todos los costos, riesgos e incertidumbres que conlleva el desarrollo de nueva tecnología, y lo reemplaza por otro colaborativo en el que muchos de esos riesgos y costos se minimizan o incluso desaparecen gracias a esta nueva forma de construir conocimiento.
+###
+
+### 
+Estas características disruptivas y distintivas no sólo permiten incorporar tecnología electrónica para hacer más competitiva a la industria, sino que además empodera al empresario PyME y a los desarrolladores independendientes al permitirles diseñar sistemas a la medida de sus necesidades sin depender de empresas multinacionales que ofrecen soluciones propietarias cerradas, que son complejas de escalar.
+###
+
+\\

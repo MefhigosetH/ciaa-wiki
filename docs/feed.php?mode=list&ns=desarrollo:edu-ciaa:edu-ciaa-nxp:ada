@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:edu-ciaa:edu-ciaa-nxp:ada</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:29:04+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:blinky&amp;rev=1498170387&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_linux&amp;rev=1498167571&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_windows&amp;rev=1498167355&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:por_que_ada&amp;rev=1498171262&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:ravenscar&amp;rev=1498171179&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:blinky&amp;rev=1498170387&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-22T22:26:27+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:ada:blinky</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:blinky&amp;rev=1498170387&amp;do=diff</link>
+        <description>Proyecto Blinky en Ada
+
+Clonar el Repositorio
+
+Lo primero que debemos hacer es clonar el repositorio del proyecto Blinky desde GitHub. Debemos clonarlo de modo recursivo, ya que el proyecto incluye el repositorio del Runtime como submódulo. Se debe tener Git instalado (si no se ha instalado se deben seguir las instrucciones de instalación en</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_linux&amp;rev=1498167571&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-22T21:39:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_linux</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_linux&amp;rev=1498167571&amp;do=diff</link>
+        <description>Instalación del Entorno de Desarrollo para Ada en Linux
+
+Descargar e Instalar GNAT GPL 2017
+
+	*  Descargar el archivo tar.
+		*  Abrir https://libre.adacore.com/download/configurations en el navegador.
+		*  Donde dice “Select your platform” elegir las opciones “ARM ELF format (hosted on Linux)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_windows&amp;rev=1498167355&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-22T21:35:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_windows</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:instalacion_windows&amp;rev=1498167355&amp;do=diff</link>
+        <description>Instalación del Entorno de Desarrollo para Ada en Windows
+
+Descargar e Instalar GNAT GPL 2017
+
+	*  Descargar el archivo exe.
+		*  Abrir https://libre.adacore.com/download/configurations en el navegador.
+		*  Donde dice “Select your platform” elegir las opciones “ARM ELF format (hosted on Windows)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:por_que_ada&amp;rev=1498171262&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-22T22:41:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:ada:por_que_ada</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:por_que_ada&amp;rev=1498171262&amp;do=diff</link>
+        <description>¿Por qué usar Ada?
+
+La metodología de desarrollo de software conocida como programación orientada a objetos (OOP) ha estado disponible en lenguajes de programación por más de cuarenta años. Los sistemas se pueden diseñar con una arquitectura orientada a objetos si el lenguaje de programación soporta simplemente los conceptos de clase, objeto y encapsulación, pero el verdadero poder de la programación orientada a objetos proviene de varias características adicionales como: herencia, polimorfismo …</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:ravenscar&amp;rev=1498171179&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-22T22:39:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:ada:ravenscar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:ada:ravenscar&amp;rev=1498171179&amp;do=diff</link>
+        <description>¿Qué es el Perfil de Ravenscar?
+
+El perfil de Ravenscar es un subconjunto del lenguaje de programación Ada especialmente pensado para los sistemas de tiempo real. Impone ciertas restricciones y requerimientos a las capacidades concurrentes del lenguaje para poder realizar análisis temporales y permitir una implementación eficiente del núcleo de ejecución.</description>
+    </item>
+</rdf:RDF>

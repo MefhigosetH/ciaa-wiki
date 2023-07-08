@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-rtc"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_rtcclase_rtc">Soporte RTC: Clase RTC</h1>
+<div class="level1">
+<pre class="code">import pyb
+rtc = pyb.RTC()
+
+# (year, month, day, weekday, hours, minutes, seconds)
+#newDt = [2015,12,31,0,18,16,0]
+#rtc.datetime(newDt)
+
+while True:
+    now = rtc.datetime()
+    print(now)   
+    pyb.delay(1000)</pre>
+
+<p>
+El método “datetime” lee o setea los valores de fecha y hora del modulo RTC. Si no se le pasan argumentos, el método devolverá una tupla de 7 valores con la fecha y hora actual. Si se la pasa una tupla igual como argumento, esos valores se cargan en el modulo RTC. El formato de la tupla es: 
+</p>
+
+<p>
+(year, month, day, weekday, hours, minutes, seconds)
+</p>
+
+<p>
+El campo “weekday” toma los valores de 0 a 6 El modulo RTC continua funcionando después de un reset del CPU y si se alimenta al mismo con una batería, el RTC seguirá funcionando inclusive sin la alimentación principal del CPU.
+</p>
+
+<p>
+Ejemplo de calibración:
+</p>
+<pre class="code">import pyb
+rtc = pyb.RTC()
+rtc.calibration(0)
+newDt = [2015,12,31,0,18,16,0]
+rtc.datetime(newDt)</pre>
+
+<p>
+El método “calibration” ajusta de forma periódica el contador del módulo RTC los valores permitidos son -131072 to 131072. 
+Leer <a href="http://www.nxp.com/documents/user_manual/UM10503.pdf" class="urlextern" target="_blank" title="http://www.nxp.com/documents/user_manual/UM10503.pdf" rel="ugc nofollow noopener">http://www.nxp.com/documents/user_manual/UM10503.pdf</a> para información detallada del procedimiento de calibración. Luego de la calibración se debe setear una fecha y hora.
+</p>
+
+<p>
+Ejemplo uso de registros de backup:
+</p>
+<pre class="code">import pyb
+rtc = pyb.RTC()
+
+#rtc.write_bkp_reg(0,27)
+#rtc.write_bkp_reg(32,28)
+#rtc.write_bkp_reg(63,29)
+
+while True:
+    print(rtc.read_bkp_reg(0))
+    print(rtc.read_bkp_reg(32))
+    print(rtc.read_bkp_reg(63))
+    pyb.delay(1000)</pre>
+
+<p>
+Existen 64 registros de 32bits que mantendrán sus valores a pesar de que se reinicie el CPU y si se alimenta al mismo con una batería, se mantendrán los valores inclusive sin la alimentación principal del CPU.
+</p>
+
+<p>
+El método “write_bkp_reg” tiene como argumento la dirección del registro (0 a 63) y el valor de 32bit a escribir. El método “read_bkp_reg” tiene como argumento la dirección del registro (0 a 63) y devolverá el valor que se encuentra en el mismo.
+</p>
+
+<p>
+Ejemplo uso de alarma:
+</p>
+<pre class="code">import pyb
+rtc = pyb.RTC()
+
+newDt = [2015,12,31,0,20,15,0]
+rtc.datetime(newDt)
+
+def rtcCallback(rtc):
+    print(&quot;Alarm int!&quot;)
+
+alarmDt = [2015,12,31,0,20,16,10]
+rtc.alarm_datetime(alarmDt,pyb.RTC.MASK_SEC | pyb.RTC.MASK_MIN)
+rtc.callback(rtcCallback)
+
+print(&quot;alarm:&quot;)
+print(rtc.alarm_datetime())</pre>
+
+<p>
+En este ejemplo se define una función (rtcCallback) que se ejecutará cuando se cumpla la fecha de la alarma. Mediante el método “alarm_datetime” se configura (o lee) la fecha de la alarma con la misma tupla de 7 valores usada para configurar la fecha y hora actual, y como segundo argumento se le pasa la mascara de la alarma la cual se construye con las constantes:
+</p>
+<ul>
+<li class="level1"><div class="li"> pyb.RTC.MASK_SEC : Se chequea el campo de segundos en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_MIN : Se chequea el campo de minutos en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_HR : Se chequea el campo de horas en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_DAY : Se chequea el campo de día en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_MON : Se chequea el campo de mes en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_YR : Se chequea el campo de año en la comparación.</div>
+</li>
+<li class="level1"><div class="li"> pyb.RTC.MASK_DOW : Se chequea el campo de día de la semana en la comparación.</div>
+</li>
+</ul>
+
+<p>
+Mediante el método “callback” se setea la función que se ejecutara cuando se produzca la alarma. En el ejemplo se construye la máscara con segundos y minutos, por lo que la alarma se producirá cada hora, a los 16 minutos y 10 segundos.
+</p>
+
+<p>
+Para deshabilitar la alarma puede ejecutarse el método “alarm_disable”.
+</p>
+
+</div>
+</div>
+</body>
+</html>

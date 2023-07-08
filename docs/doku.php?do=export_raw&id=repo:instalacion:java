@@ -1,0 +1,35 @@
+===== Instalación de java =====
+
+Por lo general, la instalación de java consiste en dos componentes: la JRE (Java Runtime Environment), necesaria para ejecutar los programas y la JDK (Java Development Kit) para compilarlos. Estos componentes pueden ser provistos por al menos Oracle, IBM u OpenJDK. Los que se sabe que funcionan para las diversas actividades de la CIAA son los de Oracle.
+
+Hay dos contextos de uso de java. Uno, para ejecutar eclipse-cdt, preparado para C/C++, que sólo requiere la JRE (versión 1.7 SE) y otro para ejecutar eclipse-automotive y compilar el código java que es utilizará en la placa que requiere la JDK (versión 1.8 SE).
+
+En caso de bajar la JDK, esta incluye la JRE.
+
+
+==== Linux ====
+
+Se puede instalar en la carpeta de Eclipse o [[repo:configuracion:java|para todo el sistema]]
+
+**64-bits**\\
+  * Descargar el archivo ''jre-7u79-linux-x64.tar.gz'' desde http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html y moverlo a la carpeta ''$HOME/ciaa-ide''.
+  * Descomprimir dentro de Eclipse:
+<code bash>
+cd $HOME/ciaa-ide/eclipse-cdt
+tar -xzvf ../jre-7u79-linux-x64.tar.gz
+mv jre1.7.0_79/ jre/
+</code>
+
+**32-bits**\\
+  * Descargar el archivo ''jre-7u79-linux-i586.tar.gz'' desde http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html y moverlo a la carpeta ''$HOME/ciaa-ide''.
+  * Descomprimir dentro de Eclipse:
+<code>
+cd $HOME/ciaa-ide/eclipse-cdt
+tar -xzvf ../jre-7u79-linux-i586.tar.gz
+mv jre1.7.0_79/ jre/
+</code>
+
+==== Windows ====
+
+
+==== Mac ====

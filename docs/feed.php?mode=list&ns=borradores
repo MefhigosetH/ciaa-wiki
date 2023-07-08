@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> borradores</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:28:08+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:ciaa_nucleo_fsl&amp;rev=1467848941&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:entorno&amp;rev=1470016589&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:firmware&amp;rev=1471475306&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshow&amp;rev=1469663282&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshowparapresentacion&amp;rev=1469662664&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_linux&amp;rev=1479574170&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_windows&amp;rev=1470016810&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_instalar&amp;rev=1469709700&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_intro&amp;rev=1469463380&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:prueba&amp;rev=1471815834&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:pruebavideo&amp;rev=1470165384&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:sidebar&amp;rev=1471887934&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:ciaa_nucleo_fsl&amp;rev=1467848941&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-06T23:49:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:ciaa_nucleo_fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:ciaa_nucleo_fsl&amp;rev=1467848941&amp;do=diff</link>
+        <description>CIAA-NUCLEO-FSL
+
+
+
+(La imagen es ilustrativa, no es una placa ruteada)
+
+Desarrollo inicial
+
+La propuesta inicial de esta plataforma fue realizada por Esteban Volentini como reemplazo de las placas Rabbit.
+El objetivo es resolver la parte compleja como el procesador y el Ethernet en un PCB de 4 capas, y luego dejar al usuario el desarrollo de la electrónica restante.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:entorno&amp;rev=1470016589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-01T01:56:29+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:entorno</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:entorno&amp;rev=1470016589&amp;do=diff</link>
+        <description>Entorno propuesto
+
+En toda la documentación se asumirá la siguiente estructura de archivos. Esto no quiere decir que tenga que ser respetada, pero en caso contrario, tenga en cuenta adaptar los ejemplos e instrucciones a su entorno.
+
+Linux
+
+
+~/ciaa-ide/
+          |
+          /bin/
+          |   |
+          |   /gcc-arm-none-eabi-4_9-2015q1-20150306-linux
+          |   /openocd-0.9.0
+          |   /eclipse-cdt
+          |   /eclipse-automotive
+          |
+          /workspaces/
+                  …</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:firmware&amp;rev=1471475306&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T23:08:26+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:firmware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:firmware&amp;rev=1471475306&amp;do=diff</link>
+        <description>Lenguajes de programación
+
+Como cualquier otra computadora, la CIAA usa programas para cumplir con sus funciones y esos programas se escriben numerosos lenguajes.
+
+Como cualquier otra computadora, una placa CIAA ejecuta programas a los cuales llamamos “software” o</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshow&amp;rev=1469663282&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-27T23:48:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:inicioconslideshow</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshow&amp;rev=1469663282&amp;do=diff</link>
+        <description>&lt;slider desarrollo:hardware:ciaa_nxp:foto.png&gt;
+CIAA NXP
+&lt;/slider&gt;
+
+&lt;slider desarrollo:edu-ciaa:edu-ciaa-nxp.png&gt;
+EDU CIAA NXP
+&lt;/slider&gt;
+
+&lt;slider desarrollo:hardware:picociaa.jpg&gt;
+
+PICO CIAA
+&lt;/slider&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshowparapresentacion&amp;rev=1469662664&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-27T23:37:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:inicioconslideshowparapresentacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:inicioconslideshowparapresentacion&amp;rev=1469662664&amp;do=diff</link>
+        <description>~~SLIDESHOW~~ 
+
+
+slide 1
+
+ &lt;http://www.jacho.net/oscar/playground/slideshow&gt;
+-----
+
+slide 2
+
+slide 2
+
+----------
+
+slide 3
+
+slide 3
+
+----------</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_linux&amp;rev=1479574170&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T16:49:30+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:install_linux</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_linux&amp;rev=1479574170&amp;do=diff</link>
+        <description>Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP
+
+Requisitos
+
+	*  Una EDU-CIAA-NXP.
+	*  Ubuntu 14.04 o posterior.
+	*  Al menos 1GB de espacio libre en el home del usuario (/home/$USER).
+
+Configuración de las herramientas por línea de comandos
+
+
+
+Toolchain</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_windows&amp;rev=1470016810&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-01T02:00:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:install_windows</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:install_windows&amp;rev=1470016810&amp;do=diff</link>
+        <description>drivers
+
+cygwin
+
+openocd
+
+terminal
+
+gcc-arm
+
+java
+
+eclipse
+
+plugins
+
+...</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_instalar&amp;rev=1469709700&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-28T12:41:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:micropython_instalar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_instalar&amp;rev=1469709700&amp;do=diff</link>
+        <description>Instalación de micropython
+
+Micropython requiere de un programa anfitrión instalado en la placa, que cumple dos funciones:
+
+	*  Interprete de python vía la terminal serial
+	*  Ejecución autónoma de un programa python almacenado en la placa 
+
+Para ambos casos, hay que instalar y configurar:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_intro&amp;rev=1469463380&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-25T16:16:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:micropython_intro</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:micropython_intro&amp;rev=1469463380&amp;do=diff</link>
+        <description>Python corriendo en la EDU-CIAA
+
+Existe en desarrollo un firmware que permite interpretar un programa escrito en lenguaje python. El proyecto es llamado micro-python y fue desarrollado para un hardware llamado pyboard. 
+
+Se desarrolló una versión de este firmware para correr en la EDU-CIAA, mediante el cual es posible ejecutar un archivo de extensión .py o utilizar una consola de python en donde el código se va ejecutando a medida que se van escribiendo las líneas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:prueba&amp;rev=1471815834&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-21T21:43:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:prueba</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:prueba&amp;rev=1471815834&amp;do=diff</link>
+        <description>&lt;http://freeware.the-meiers.org/&gt;
+&lt;http://proyecto-ciaa.com.ar/noexiste&gt;</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:pruebavideo&amp;rev=1470165384&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-02T19:16:24+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:pruebavideo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:pruebavideo&amp;rev=1470165384&amp;do=diff</link>
+        <description>Chiquito 2
+
+[Some funny video]
+
+No tan chiquito
+
+[Some funny video]</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:sidebar&amp;rev=1471887934&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-22T17:45:34+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:sidebar&amp;rev=1471887934&amp;do=diff</link>
+        <description>&lt;nspages  -simpleList -textPages=“Borradores” -exclude&gt;</description>
+    </item>
+</rdf:RDF>

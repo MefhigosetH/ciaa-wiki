@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>repo:instalacion:terminales</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="repo,instalacion,terminales"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=repo:instalacion:terminales&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=repo:instalacion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:terminales.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=repo:instalacion:terminales"/>
+<link rel="canonical" href="./doku.php%3Fid=repo:instalacion:terminales.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='repo:instalacion';var JSINFO = {"id":"repo:instalacion:terminales","namespace":"repo:instalacion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="comunicacion_por_terminal">Comunicación por terminal</h2>
+<div class="level2">
+
+<p>
+Para comunicarse con programas en la placa desde una PC, es necesario contar con algún programa de terminal.
+</p>
+
+<p>
+Baudrate puede ser 115200, 9600 o alguna otra velocidad que dependerá del programa en la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comunicaci\u00f3n por terminal&quot;,&quot;hid&quot;:&quot;comunicacion_por_terminal&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-250&quot;} -->
+<h3 class="sectionedit2" id="linux">Linux</h3>
+<div class="level3">
+
+<p>
+El puerto de conexión suele ser /dev/ttyUSB1 o /dev/ttyUSB2
+</p>
+
+</div>
+
+<h4 id="minitermpy">miniterm.py</h4>
+<div class="level4">
+<pre class="code bash">$ <span class="kw2">sudo</span> <span class="kw2">aptitude install</span> python-serial
+$ miniterm.py <span class="re5">-p</span> <span class="sy0">/</span>dev<span class="sy0">/</span>ttyUSB1 <span class="re5">-b</span> <span class="nu0">115200</span></pre>
+
+</div>
+
+<h4 id="minicom">minicom</h4>
+<div class="level4">
+<pre class="code bash">$ <span class="kw2">sudo</span> <span class="kw2">apt-get install</span> minicom
+<span class="kw2">sudo</span> minicom <span class="re5">-s</span></pre>
+<ul>
+<li class="level1 node"><div class="li"> serial port setup</div>
+<ul>
+<li class="level2"><div class="li"> A → /dev/ttyUSB1</div>
+</li>
+<li class="level2"><div class="li"> E → 115200 8N1</div>
+</li>
+<li class="level2"><div class="li"> F → no</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> esc</div>
+</li>
+<li class="level1"><div class="li"> Save setup as dfl</div>
+</li>
+<li class="level1"><div class="li"> Exit</div>
+</li>
+<li class="level1"><div class="li"> ^A Q (para salir)</div>
+</li>
+</ul>
+
+<p>
+de ahí en más, 
+</p>
+<pre class="code bash"><span class="co4">$ </span>minicom</pre>
+
+<p>
+opcionalmente, si cambia la ubicación de la placa o la velocidad
+</p>
+<pre class="code bash"><span class="co4">$ </span>minicom <span class="re5">-p</span> <span class="sy0">/</span>dev<span class="sy0">/</span>ttyUSB1 <span class="re5">-b</span> <span class="nu0">115200</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;hid&quot;:&quot;linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;251-853&quot;} -->
+<h3 class="sectionedit3" id="windows">Windows</h3>
+<div class="level3">
+
+<p>
+El puerto de conexión es algun COMx:
+</p>
+
+</div>
+
+<h4 id="teraterm">teraterm</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Descargar <a href="http://logmett.com/tera-term-the-latest-version" class="urlextern" target="_blank" title="http://logmett.com/tera-term-the-latest-version" rel="ugc nofollow noopener">TeraTerm</a> e instalarlo.</div>
+</li>
+<li class="level1"><div class="li"> Menú File → New Connection → seleccionar la opción “Serial” y elegir el puerto COM correspondiente a la placa.</div>
+</li>
+<li class="level1"><div class="li"> Menú Setup → Serial port → configurar la velocidad en 115200</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="putty">putty</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> La página de descarga es <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" class="urlextern" target="_blank" title="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" rel="ugc nofollow noopener">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></div>
+</li>
+</ul>
+
+<p>
+Con putty.exe alcanza, pero tambien puede ser conveniente bajar psftp.exe o directamente todo.
+</p>
+
+<p>
+Para conectarse a la placa hay que configurar:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:terminales&amp;media=imagenes:putty_config.jpg.html" class="media" title="imagenes:putty_config.jpg"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=66d545&amp;media=imagenes:putty_config.jpg" class="media" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+Luego se puede guardar la configuración:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:terminales&amp;media=imagenes:putty_profile.jpg.html" class="media" title="imagenes:putty_profile.jpg"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=d285ee&amp;media=imagenes:putty_profile.jpg" class="media" loading="lazy" alt="" width="400" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Windows&quot;,&quot;hid&quot;:&quot;windows&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:3,&quot;range&quot;:&quot;854-1583&quot;} -->
+<h3 class="sectionedit4" id="multiplataforma">Multiplataforma</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="coolterm">CoolTerm</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=repo:instalacion:terminales&amp;media=imagenes:coolterm.png.html" class="media" title="imagenes:coolterm.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=eaa2bb&amp;media=imagenes:coolterm.png" class="media" loading="lazy" alt="" width="300" /></a>
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar de <a href="http://freeware.the-meiers.org/" class="urlextern" target="_blank" title="http://freeware.the-meiers.org/" rel="ugc nofollow noopener">http://freeware.the-meiers.org/</a></div>
+</li>
+</ul>
+
+<p>
+En linux puede hacer falta resolver dependencias, si no alcanza con
+</p>
+<pre class="code bash"><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> libicu52:i386</pre>
+
+<p>
+siga las instrucciones del sitio.
+</p>
+
+<p>
+Una vez funcionando, para configurar
+</p>
+<ul>
+<li class="level1 node"><div class="li"> Options→</div>
+<ul>
+<li class="level2 node"><div class="li"> Serial Port</div>
+<ul>
+<li class="level3"><div class="li"> Port </div>
+</li>
+<li class="level3"><div class="li"> Baudrate </div>
+</li>
+</ul>
+</li>
+<li class="level2 node"><div class="li"> Terminal</div>
+<ul>
+<li class="level3"><div class="li"> Mode: Line</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Multiplataforma&quot;,&quot;hid&quot;:&quot;multiplataforma&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:4,&quot;range&quot;:&quot;1584-&quot;} --></div>
+</body>
+</html>

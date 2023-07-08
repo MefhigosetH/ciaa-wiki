@@ -1,0 +1,14 @@
+====== Configuración del Entorno CIAA-IDE ======
+===== Workspace =====
+
+###
+Al Iniciar el entorno CIAA-IDE, éste le solicita que seleccione una carpeta de trabajo. Esta Carpeta es la que contendrá el Workspace. En particular puede elegirse dentro del directorio de instalación del CIAA-IDE.
+###
+{{ :docu:fw:bm:ide:ide_entorno:seleccion_de_workspace.png |}}
+
+Nota: Al desinstalar el Software CIAA-IDE, se elimina completamente el directorio de instalación y todo su contenido.
+
+
+\\
+
+<- docu:fw:bm:ide:install|Instalación ^ docu:fw:bm:ide|IDE ^ docu:fw:bm:ide:ide_primeros_pasos|Primeros Pasos ->

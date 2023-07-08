@@ -1,0 +1,90 @@
+====== Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE) ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+###
+El objetivo de los cursos es aprender a realizar aplicaciones electrónicas basadas en microcontroladores ARM de 32 bits, abordando de manera gradual desde problemas simples hasta problemas de mayor complejidad. 
+Los cursos están orientados a docentes secundarios o universitarios, personal de empresas, estudiantes, profesionales independientes, etc., interesados en aprender a trabajar con sistemas embebidos.
+###
+
+###
+Los cursos se dictan en **modalidad a distancia** mediante una plataforma interactiva, en la cual el docente presenta los temas en una videoconferencia en tiempo real que los alumnos siguen desde sus computadoras, pudiendo hacer consultas mediante chat, micrófono, webcam o compartiendo su pantalla. Las clases son teórico-prácticas. Para realizar el curso los alumnos deben contar con una [[desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]] y un [[https://goo.gl/nCN7jf|kit económico]] compuesto por sensores, motores, módulo WiFi, memoria SD, etc.
+###
+
+###
+Los cursos se desarrollan en dos niveles, cada uno de ellos compuesto por 16 clases de 3hs:
+###
+
+^ Nivel ^ Nombre del curso y link al contenido clase por clase ^                                             
+|   1   | [[https://docs.google.com/document/d/1Kv6rORhUFC6FKV1PQkTNhqbxi8F3Lpd9TEdcARXzrV8/edit#heading=h.4s0u40eauh63
+|Introducción a la Programación de Microcontroladores]] | 
+|   2   | [[https://docs.google.com/document/d/180NZajb7zhem1qEXuH9sebeLu3HU_BZjDNseWBXwIZ8/edit#heading=h.9jc4jwrk2lr7
+|Ingeniería de Software, Internet de las Cosas (IoT) y diseño de PCBs]] |
+
+/*
+|   3   | [[https://docs.google.com/document/d/1cnsXp-yY0gnIV5o55jkIbx4vHNcdlzhk2Isbrp9rqyQ/edit|Sistemas operativos en tiempo real]] |
+*/
+
+###
+Las clases inician la **semana del 24 de agosto** y se extienden por un total de 8 semanas para el Nivel 1, y luego otras 8 semanas para el Nivel 2. De esta manera el Nivel 2 termina a mediados de diciembre 2020 aproximadamente.
+###
+
+###
+Los horarios de cursada son **miércoles y viernes de 18 a 21 h**.
+###
+
+/*
+| complementario | Solicitar | [[https://goo.gl/9FKYix|Sistemas Operativos de Tiempo Real   ]] |
+*/
+
+/*
+###
+Los turnos se ajustan en función de la disponibilidad que los alumnos manifiesten al completar el formulario de inscripción (ver más abajo). Las posibilidades entre las que los alumnos pueden elegir los horarios abarcan de lunes a sábado y desde la mañana hasta la noche.
+###
+*/
+
+/*
+###
+Los turnos disponibles son los siguientes, sujetos a alcanzar un cupo mínimo en cada uno de ellos:
+###
+
+^ Turno  ^ Horario                              ^
+|    1   | Jueves 19 a 22hs y Sábados de 10 a 13hs       |
+|    2   | Jueves 19 a 22hs y Sábados de 10 a 13hs       |
+|    3   | Miércoles 19 a 22hs y Sábados de 10 a 13hs    |
+*/
+
+
+###
+El pago es mediante transferencia bancaria de acuerdo al siguiente cronograma:
+###
+
+^ Opción      ^ Arancel                ^ Vencimiento                           ^ Fecha límite de inscripción ^
+| Nivel 1 y 2 | 5 cuotas de $6.000 c/u | Cuota 1/5 - 17 de agosto de 2020      | 17 de agosto de 2020        |
+| :::         | :::                    | Cuota 2/5 - 10 de septiembre de 2020  | :::                         |
+| :::         | :::                    | Cuota 3/5 - 10 de octubre de 2020     | :::                         |
+| :::         | :::                    | Cuota 4/5 - 10 de noviembre de 2020   | :::                         |
+| :::         | :::                    | Cuota 5/5 - 10 de diciembre de 2020   | :::                         |
+
+
+###
+La organización de los cursos y cobro de los aranceles está a cargo de la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|ACSE]]. Los docentes de los cursos han dictado ediciones previas de los CAPSE y se desempeñan también en la [[http://laboratorios.fi.uba.ar/lse/especializacion.html|Carrera de Especialización y en la Maestría en Sistemas Embebidos de la UBA]]. 
+###
+
+{{ :blanco.png?10 | }}
+
+===== Inscripción =====
+
+###
+La inscripción se realiza mediante [[https://forms.gle/4c7kc1YznqpFpedC7|este formulario web]], hasta el **7 de agosto**. Una vez cerrada la inscripción se evaluará si se alcanza el cupo mínimo para abrir una cohorte y se indicarán a los inscriptos los pasos a seguir para el abono de la primer cuota. Para consultas y más información escribir a [[cursosembebidos@gmail.com|cursosembebidos@gmail.com]]
+###
+
+
+/*
+###
+La información sobre ediciones anteriores de los CAPSE se puede ver en estos links:
+###
+  * [[educacion:cursos:CAPSE1ercohorte2016|1ra Cohorte 2016]]
+  * [[educacion:cursos:CAPSE2dacohorte2016|2da Cohorte 2016]]
+*/

@@ -1,0 +1,92 @@
+====== Propuesta para la utilizacion de un SoC/MPSoC  Zynq ======
+//Página en construcción.//
+
+ Sitio web de la arquitectura: [[http://www.xilinx.com/products/silicon-devices/soc.html|Xilinx All Programmable SoC]]
+
+===== Familias Candidatas =====
+[[http://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html|Serie Zynq 7000 (Dual Core)]] 
+
+[[http://www.xilinx.com/products/silicon-devices/soc/zynq-ultrascale-mpsoc.html|Serie Zynq UltraEscale+MPSoC (QuadCore + RealTime DualCore + GPU)]]
+
+===== Caracteristicas Generales de cada Familia ===== 
+
+==== Serie Zynq 7000 ====
+
+=== Processing System (PS) ===
+<code>  
+- Dual-core ARM Cortex-A9 MPCore a 1GHz
+- Soporte para memorias DDR3, DDR3L, DDR2, LPDDR2, 2x Quad-SPI, NAND, NOR
+- Conectividad:
+        2x Tri-mode Gigabit Ethernet
+        2x USB 2.0 (OTG)
+        2x SD/SDIO
+        2x UART
+        2x CAN 2.0B
+        2x I2C
+        2x SPI
+        4x 32b GPIO
+</code>
+
+=== Programmable Logic System (PL) ===
+<code>
+- 28 a 144 K celdas lógicas
+- 220 a 2000 DSP Slices
+- PCI Gen2 x8
+- Transceivers a 12.5 Gb/s
+</code>
+
+
+
+==== Serie Zynq UltraEscale+ MPSoC ====
+
+=== Processing System (PS) ===
+<code>  
+- Application Processors: Quad-core ARM Cortex-A53 MPCore a 1.3GHz 
+- Real Time Processors: Dual-core ARM Cortex-R5 MPCore a 600MHz
+- GPU: ARM Mali-400MP a 466MHz
+- Soporte para memorias DDR4, LPDDR4, DDR3, DDR3L, LPDDR3, 2x Quad-SPI, NAND
+- Conectividad:
+        2x USB 3.0, SATA 3.0
+        DisplayPort
+        PCIe Gen2x4
+        2x USB 2.0 (OTG)
+        4x Tri-mode Gigabit Ethernet
+        2x SD/SDIO
+        2x UART
+        2x CAN 2.0B
+        2x I2C
+        2x SPI
+        4x 32b GPIO
+</code>
+
+=== Programmable Logic System (PL) ===
+<code>
+- 83 a 914 K celdas lógicas
+- 1700 a 3500 DSP Slices
+- PCI Gen4 x8 / Gen3 x16
+- Video Codec
+- 100G Ethernet
+- Transceivers a 32.75 Gb/s
+</code>
+
+===== Tablas Comparativas de esta Propuesta =====
+
+==== Ventajas y Desventajas de cada Familia ====
+^ Familia       ^ Ventajas       ^ Desventajas          ^
+^ Zynq 7000    |Disponible a la venta     |Menor Potencia de Computo         | 
+^::: |Reference Designs |  |
+^Zynq UltraEscale+ MPSoC|Mayor Potencia de Computo |Tecnologia Nueva (en desarrollo)  |
+^::: |Applications Processor + RealTime Processor |  |
+^::: |Conectividad de muy alta velocidad |  |
+
+==== Ventajas y Desventajas Frente a otras soluciones ====
+
+=== Ventajas ===
+  - La parte de Lógica Programable permite implementar Aceleradores de Procesamiento por Hardware
+  - Se pueden ingresar datos/muestras directamente al sistema, las interfaces no son cuello de botella (p.ej. para Video en HD)
+  - Interfaces de comunicación de muy alta velocidad (10 Gb/s o más) 
+
+=== Desventajas ===
+  - Sistema mas complejo de implementar
+  - Encapsulados BGA de alta densidad, PCB multicapa
+  - Herramientas Gratuitas pero no Libres

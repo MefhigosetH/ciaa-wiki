@@ -1,0 +1,9 @@
+=== CIAA-Intel ===
+{{:desarrollo:edu-ciaa:20150417_000237.jpg?direct&200 |}} La primer CIAA con procesador Intel Atom. Utiliza un sistema operativo basado en GNU/Linux. Está basada en el SoM Edison y orientada a aplicaciones que requieran conectividad Wi-Fi y Bluetooth (Internet-of-Things).
+\\
+\\
+\\
+\\
+\\
+\\
+| <fc #777777>Requerimientos</fc> | <fc #777777>Diagrama Esquemático</fc> | <fc #777777>Circuito Impreso</fc> | <fc #777777>Prototipo Preliminar</fc> | <fc #777777>Versión Final</fc> |

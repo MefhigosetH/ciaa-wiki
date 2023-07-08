@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> proyecto</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T14:58:55+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:aportes_instituciones&amp;rev=1429962133&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso&amp;rev=1467754012&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:colaborar&amp;rev=1471959325&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar_ciaa&amp;rev=1471688544&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar&amp;rev=1588027965&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:coordinacion&amp;rev=1565135442&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:grupos_de_trabajo&amp;rev=1471957180&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:licencia_ciaa&amp;rev=1429847738&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:origen_ciaa&amp;rev=1429847634&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:pre-venta_edu-ciaa&amp;rev=1464957447&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:propuesta_innovadora&amp;rev=1429847660&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:redessociales&amp;rev=1471957729&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:aportes_instituciones&amp;rev=1429962133&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-25T11:42:13+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:aportes_instituciones</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:aportes_instituciones&amp;rev=1429962133&amp;do=diff</link>
+        <description>Aportes de Instituciones
+
+Las siguientes son las instituciones que participan activamente en el Proyecto CIAA realizando aportes concretos:
+ Grupo                            Área del Proyecto       Ubicación                    &lt;http://www.sase.com.ar/asociacion-civil-sistemas-embebidos&gt;  Coordinación General.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso&amp;rev=1467754012&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-05T21:26:52+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso&amp;rev=1467754012&amp;do=diff</link>
+        <description>Aplicaciones industriales, académicas, educativas y personales de la plataforma CIAA
+
+
+
+[ ]
+Los desarrollos electrónicos suelen dividirse entre “proyectos académicos” (hechos en el contexto de un curso de formación) y “proyectos de aplicación industrial</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:colaborar&amp;rev=1471959325&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-23T13:35:25+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:colaborar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:colaborar&amp;rev=1471959325&amp;do=diff</link>
+        <description>se puede colaborar de muy distintos modos (sin ordenar) (link cuando corresponda)
+
+	*  sumándote a algún grupo de trabajo
+	*  diseñando ponchos
+	*  programando el firmware
+	*  usando y reportando errores y sugerencias
+	*  revisando y extendiendo la documentación</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar_ciaa&amp;rev=1471688544&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-20T10:22:24+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:comprar_ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar_ciaa&amp;rev=1471688544&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar&amp;rev=1588027965&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-04-27T22:52:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:comprar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:comprar&amp;rev=1588027965&amp;do=diff</link>
+        <description>Dónde comprar las placas CIAA
+
+Las siguientes empresas comercializan distintas versiones de plataformas del Proyecto CIAA:
+ Empresa   Asembli  Electrocomponentes  Exo  Probattery  VICDA  CIAA-ACC   comprar       CIAA-NXP    comprar   por mayor   comprar    CIAA-Z3R0  comprar      Debug-Z3R0  comprar      EDU-CIAA-NXP    comprar      picoCIAA       comprar   Poncho Educativo   comprar       Poncho PLC   comprar      
+Considerá que...</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:coordinacion&amp;rev=1565135442&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-08-06T23:50:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:coordinacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:coordinacion&amp;rev=1565135442&amp;do=diff</link>
+        <description>Coordinación del Proyecto CIAA
+El equipo de Coordinación del Proyecto de desarrollo de la Computadora Industrial Abierta Argentina está constituido de la siguiente forma: Área          Función              Personas designadas         Organización</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:grupos_de_trabajo&amp;rev=1471957180&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-23T12:59:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:grupos_de_trabajo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:grupos_de_trabajo&amp;rev=1471957180&amp;do=diff</link>
+        <description>Grupos de Trabajo de la CIAA
+
+Los siguientes son los distintos grupos que realizan tareas relacionadas con el Proyecto CIAA:
+
+[ Grupos de Trabajo]
+ Grupo                            Área del Proyecto       Ubicación                    &lt;http://www.sase.com.ar/asociacion-civil-sistemas-embebidos&gt;  &lt;http://www.cadieel.org.ar/esp/index.php&gt;  Coordinación General  Ciudad de Buenos Aires</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:licencia_ciaa&amp;rev=1429847738&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T03:55:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:licencia_ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:licencia_ciaa&amp;rev=1429847738&amp;do=diff</link>
+        <description>Licencia de la CIAA
+El hardware, el firmware y el software de la CIAA, así como los documentos y archivos generados como parte de su desarrollo, son liberados bajo las condiciones de la Licencia BSD modificada.La Licencia BSD modificada permite la redistribución ilimitada</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:origen_ciaa&amp;rev=1429847634&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T03:53:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:origen_ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:origen_ciaa&amp;rev=1429847634&amp;do=diff</link>
+        <description>Origen del Proyecto CIAA
+La Computadora Industrial Abierta Argentina (CIAA) se comenzó a gestar en julio de 2013, cuando la Secretaría de Planeamiento Estratégico Industrial del Ministerio de Industria de la Nación (SPEI) y la Secretaría de Políticas Universitarias del Ministerio de Educación de la Nación (SPU) convocaron a la Asociación Civil para la Investigación, Promoción y Desarrollo de los Sistemas Electrónicos Embebidos (ACSE) y a la Cámara de Industrias Electrónicas, Electromecánicas y L…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:pre-venta_edu-ciaa&amp;rev=1464957447&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-03T12:37:27+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:pre-venta_edu-ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:pre-venta_edu-ciaa&amp;rev=1464957447&amp;do=diff</link>
+        <description>Pre-venta de EDU-CIAAs
+La ACSE y la Red RUSE del CONFEDI organizaron la primera preventa de 1.000 EDU-CIAAs, que se entregaron a partir del 15 de julio de 2015.- “Pre-Venta” significa que primero los interesados hicieron su reserva, la que implicó un compromiso de compra, pero que el pago lo realizaron recién cuando las EDU-CIAAs reservadas superaron la cantidad mínima establecida de 500 unidades.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:propuesta_innovadora&amp;rev=1429847660&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T03:54:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:propuesta_innovadora</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:propuesta_innovadora&amp;rev=1429847660&amp;do=diff</link>
+        <description>Propuesta Innovadora
+La CIAA es la primera iniciativa a nivel internacional que conjuga simultáneamente tres elementos cuya concurrencia la transforman en una propuesta única e innovadora:
+	*   Es industrial porque dispone de diferentes mecanismos de protección eléctrica contra fallas o sobrecargas</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:redessociales&amp;rev=1471957729&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-23T13:08:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:redessociales</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:redessociales&amp;rev=1471957729&amp;do=diff</link>
+        <description>Contactate con el Proyecto CIAA</description>
+    </item>
+</rdf:RDF>

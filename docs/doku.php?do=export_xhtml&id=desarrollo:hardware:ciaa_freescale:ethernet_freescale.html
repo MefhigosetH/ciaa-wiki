@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:ciaa_freescale:ethernet_freescale</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,ciaa_freescale,ethernet_freescale"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:ciaa_freescale:ethernet_freescale&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:ciaa_freescale"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:ciaa_freescale';var JSINFO = {"id":"desarrollo:hardware:ciaa_freescale:ethernet_freescale","namespace":"desarrollo:hardware:ciaa_freescale","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#ciaa-fslinterfaz_ethernet">CIAA-FSL: Interfaz Ethernet</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#diagrama_esquematico">Diagrama Esquemático</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#caracteristicas">Características</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#descripcion">Descripción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#referencias">Referencias</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_freescale:ethernet_freescale.html#datasheets_de_componentes_importantes">Datasheets de componentes importantes</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ciaa-fslinterfaz_ethernet">CIAA-FSL: Interfaz Ethernet</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-FSL: Interfaz Ethernet&quot;,&quot;hid&quot;:&quot;ciaa-fslinterfaz_ethernet&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-43&quot;} -->
+<h2 class="sectionedit2" id="diagrama_esquematico">Diagrama Esquemático</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:ciaa_freescale:ethernet_freescale&amp;media=desarrollo:hardware:ciaa_freescale:03-ethernet.png.html" class="media" title="desarrollo:hardware:ciaa_freescale:03-ethernet.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa_freescale:03-ethernet.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama Esquem\u00e1tico&quot;,&quot;hid&quot;:&quot;diagrama_esquematico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;44-99&quot;} -->
+<h2 class="sectionedit3" id="caracteristicas">Características</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> Transceiver: <a href="http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf" class="urlextern" target="_blank" title="http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf" rel="ugc nofollow noopener"> Micrel KSZ8041TLI</a></div>
+<ul>
+<li class="level2"><div class="li"> Compatible con el estándar IEEE 802.3u.</div>
+</li>
+<li class="level2"><div class="li"> Full-Duplex 10Mbps/100Mbps (10Base-T/100Base-TX).</div>
+</li>
+<li class="level2"><div class="li"> Diseño CMOS de bajo consumo, menor a 180 mW.</div>
+</li>
+<li class="level2"><div class="li"> Interfaz MII/RMII/SMII hacia la CPU.</div>
+</li>
+<li class="level2"><div class="li"> Salidas programables para LEDs de link, actividad y velocidad.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Jack RJ45: <a href="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" class="urlextern" target="_blank" title="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" rel="ugc nofollow noopener"> Pulse J0011D01BNL</a></div>
+<ul>
+<li class="level2"><div class="li"> Transformador y choque de modo común integrados.</div>
+</li>
+<li class="level2"><div class="li"> 2 leds (verde y amarillo).</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Oscilador de 25 <abbr title="Megahertz">MHz</abbr>: <a href="http://www.foxonline.com/pdfs/FXO_HC73.pdf" class="urlextern" target="_blank" title="http://www.foxonline.com/pdfs/FXO_HC73.pdf" rel="ugc nofollow noopener"> Fox Electronics FXO-HC735-25</a></div>
+</li>
+<li class="level1 node"><div class="li"> Clock Buffer: <a href="http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF" class="urlextern" target="_blank" title="http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF" rel="ugc nofollow noopener"> ON Semiconductor NB2304AI2</a></div>
+<ul>
+<li class="level2"><div class="li"> Delay cero entre entrada y salida</div>
+</li>
+<li class="level2"><div class="li"> Salida 2xREF</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas&quot;,&quot;hid&quot;:&quot;caracteristicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;100-963&quot;} -->
+<h2 class="sectionedit4" id="descripcion">Descripción</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> El modo de conexión utilizado entre el K60 y el transceiver es RMII, para el cual es necesario un clock de 50 <abbr title="Megahertz">MHz</abbr>.</div>
+</li>
+<li class="level1"><div class="li"> Se utiliza un oscilador de 25 <abbr title="Megahertz">MHz</abbr> conectado a un buffer con dos salidas con el doble de frecuencia que la de referencia, una se conecta al transceiver y la otra al K60.</div>
+</li>
+<li class="level1"><div class="li"> El shield del conector RJ45 se conecta al chassis general de la placa que a su vez está conectado al terminal de puesta a tierra.</div>
+</li>
+<li class="level1"><div class="li"> El shield del conector RJ45 está conectado a la masa del circuito a través de un capacitor de 100 nF y un resistor de 1 Mohm. Este circuito permite un camino controlado para la descarga electrostática (ESD), captada por el shield, hacia GND. Como recomienda la Nota de Texas (citada abajo), estos componentes pueden cambiarse por un ferrite o un resistor de 0 ohm, según los resultados del test de EMC.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n&quot;,&quot;hid&quot;:&quot;descripcion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;964-1829&quot;} -->
+<h2 class="sectionedit5" id="referencias">Referencias</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.micrel.com/_PDF/Ethernet/app-notes/an-111.pdf" class="urlextern" target="_blank" title="http://www.micrel.com/_PDF/Ethernet/app-notes/an-111.pdf" rel="ugc nofollow noopener"> Micrel General PCB Design and Layout Guidelines</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://ww1.microchip.com/downloads/en/AppNotes/en562748.pdf" class="urlextern" target="_blank" title="http://ww1.microchip.com/downloads/en/AppNotes/en562748.pdf" rel="ugc nofollow noopener"> SMSC Ethernet Physical Layer Layout Guidelines</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ti.com/lit/an/snla107a/snla107a.pdf" class="urlextern" target="_blank" title="http://www.ti.com/lit/an/snla107a/snla107a.pdf" rel="ugc nofollow noopener"> Texas Instrument Reducing Radiated Emissions in Ethernet 10/100 LAN</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Referencias&quot;,&quot;hid&quot;:&quot;referencias&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1830-2212&quot;} -->
+<h2 class="sectionedit6" id="datasheets_de_componentes_importantes">Datasheets de componentes importantes</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf" class="urlextern" target="_blank" title="http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf" rel="ugc nofollow noopener"> Micrel KSZ8041TLI</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" class="urlextern" target="_blank" title="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" rel="ugc nofollow noopener"> Pulse J0011D01BNL</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF" class="urlextern" target="_blank" title="http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF" rel="ugc nofollow noopener"> ON Semiconductor NB2304AI2</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.foxonline.com/pdfs/FXO_HC73.pdf" class="urlextern" target="_blank" title="http://www.foxonline.com/pdfs/FXO_HC73.pdf" rel="ugc nofollow noopener"> Fox Electronics FXO-HC735-25</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Datasheets de componentes importantes&quot;,&quot;hid&quot;:&quot;datasheets_de_componentes_importantes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2213-&quot;} --></div>
+</body>
+</html>

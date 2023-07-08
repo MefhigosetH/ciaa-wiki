@@ -1,0 +1,48 @@
+=== CPU ===
+
+En esta primera versión de la CIAA-Safety el CPU elegido es de la familia MCU RM4x de la firma Texas Instruments que permite desarrollar sistemas para aplicaciones críticas. Esta tecnología ha sido desarrollada para cumplir los requisitos de la norma de seguridad IEC 61508 SIL-3 y es ideal para aplicaciones con requisitos de seguridad específicos.
+
+El microcontrolador elegido es el RM48L952 basado en arquitectura ARM® Cortex™-R4F que ofrece hasta 220 MHz de rendimiento de punto flotante suministrando más de 350 DMIPS. Con características de seguridad integradas, opciones avanzadas de conectividad y dispositivos periféricos flexibles de control en tiempo real. 
+
+=== Característica principal ===
+
+“220Mhz Lockstep ARM Cortex-R4F based MCU for IEC61508 Functional Safety Applications”
+
+=== Características Generales ===
+
+  * CHIP:  RM48L952-PGE (CIAA-Safety v1.0)
+  * Package Size: 144LQFP: 20 x 20: 484 mm2.
+  * CPU: ARM-Cortex - R4F         
+  * Frequency (MHz): 220
+  * Flash (KB): 3072
+  * RAM (KB): 256    
+  * Data Flash (KB): 64    
+
+Fuente: 
+http://www.ti.com/product/RM48L952?keyMatch=RM48L952&tisearch=Search-EN-Everything
+
+=== Implementación ===
+
+De todas las designaciones que contiene cada uno de los pines del microcontrolador, se designa una de sus funcionalidades de forma independiente, es decir que no contemplen doble funcionalidad. En la siguiente imagen se identifica cada uno de los pines de acuerdo a su designación.
+
+{{ :desarrollo:ciaa_safety:identificacion2.png |}}
+
+Por lo tanto se ha identificado y seleccionado:
+
+  * 1 Conector JTAG
+  * 1 Oscilador externo
+  * 1 Periférico SPI nativo
+  * 1 Modulo MIBSPI de 3 CS
+  * 2 Puertos de comunicación serial (UART)
+  * 1 USB HOST
+  * 1 periférico I2C
+  * 24 ADC
+  * 2 Periféricos seriales CAN
+  * 1 Ethernet
+  * 20 GPIO
+
+{{ :desarrollo:ciaa_safety:bloques.png |}}
+
+De esta manera el modulo procesador contendrá al conector jtag, al microcontrolador, oscilador externo, memoria flash SPI de 512 Mb, reguladores y adaptadores de tensión, indicadores lumínicos, PHY USB, ETHERNET, CAN y el conector de bus PCI donde en este se definirán donde estarán ubicados los pines de las todas las señales.
+
+<note>Cabe aclarar que a medida que la tecnología evolucione (procesadores más potentes), el modulo que contenga a este procesador también lo hará, permitiendo de esta manera desarrollar nuevas versiones de la CIAA-Safety sin la necesidad de re-diseñar nuevamente el conjunto de aplicaciones.</note>

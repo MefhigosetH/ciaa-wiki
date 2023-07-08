@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:ciaa_nxp:ethernet_nxp</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,ciaa_nxp,ethernet_nxp"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:ciaa_nxp:ethernet_nxp&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:ciaa_nxp"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:ciaa_nxp';var JSINFO = {"id":"desarrollo:hardware:ciaa_nxp:ethernet_nxp","namespace":"desarrollo:hardware:ciaa_nxp","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#ciaa-nxpethernet">CIAA-NXP: Ethernet</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#descripcion">Descripción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#caracteristicas">Características</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#especificacion_de_los_componentes">Especificación de los componentes</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ciaa-nxpethernet">CIAA-NXP: Ethernet</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-NXP: Ethernet&quot;,&quot;hid&quot;:&quot;ciaa-nxpethernet&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-35&quot;} -->
+<h2 class="sectionedit2" id="descripcion">Descripción</h2>
+<div class="level2">
+<p class="divalign-justify">Dada la enorme difusión y robustez que tiene el standard IEEE-802.3 y sus derivados, conocido generalmente como Ethernet <sup><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#fn__1" id="fnt__1" class="fn_top">1)</a></sup>, éste es ampliamente utilizado en enorme cantidad de equipos electrónicos en todas las áreas. Es por ello que la CIAA versión NXP lo ha incorporado entre sus alternativas de comunicación, permitiendo mediante su salida en conector RJ45 formar parte de una red de cableado estructurado. Las posibilidades que abre este tipo de conectividad son enormes, tan solo con mencionar la simple incorporación del stack TCP/IP muestra el camino para su uso en Intranets e Internet.</p><!--divalign-->
+<p class="divalign-justify">Para su implementación se ha optado por el Ethernet Transceiver LAN8720A, que provee de todas las características mencionadas, pudiendo adaptarse de manera automática a redes de 10Mbps/100Mbps, interconectándose de manera sencilla con la CPU mediante su interface RMII (Reduced Media Independent Interface) utilizando pocos recursos.</p><!--divalign-->
+<p class="divalign-justify">En la capa física se ha optado por el J0011D01BNL, que está compuesto del conector RJ45 con transformador de pulsos, choke de modo común y LEDs integrados, reduciendo el espacio necesario en el PCB.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n&quot;,&quot;hid&quot;:&quot;descripcion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;36-1305&quot;} -->
+<h2 class="sectionedit3" id="caracteristicas">Características</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Basado en el estándar  IEEE802.3/802.3u (Fast Ethernet).</div>
+</li>
+<li class="level1"><div class="li"> Transceptor Full-Duplex 10Mbps/100Mbps (10-BASE-T/100BASE-TX).</div>
+</li>
+<li class="level1"><div class="li"> Capa Física (PHY) de Bajo consumo.</div>
+</li>
+<li class="level1"><div class="li"> Auto-MDIX, detección automática de conexión directa o cruzada.</div>
+</li>
+<li class="level1"><div class="li"> Auto-Negociación del tipo de enlace (10Mbps/100Mbps, Half/Full Duplex).</div>
+</li>
+<li class="level1"><div class="li"> Interface RMII hacia la CPU.</div>
+</li>
+<li class="level1"><div class="li"> LEDs de estado.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas&quot;,&quot;hid&quot;:&quot;caracteristicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1306-1706&quot;} -->
+<h2 class="sectionedit4" id="especificacion_de_los_componentes">Especificación de los componentes</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Ethernet PHY: <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf" class="urlextern" target="_blank" title="http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf" rel="ugc nofollow noopener">LAN8720A</a>.</div>
+</li>
+<li class="level1"><div class="li"> Conector RJ45: <a href="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" class="urlextern" target="_blank" title="http://productfinder.pulseeng.com/products/datasheets/J403.pdf" rel="ugc nofollow noopener">Pulse J0011D01BNL</a>.</div>
+</li>
+<li class="level1"><div class="li"> Oscilador: <a href="http://www.abracon.com/Oscillators/ASV.pdf" class="urlextern" target="_blank" title="http://www.abracon.com/Oscillators/ASV.pdf" rel="ugc nofollow noopener">ASV-50.000MHZ-E-T</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Especificaci\u00f3n de los componentes&quot;,&quot;hid&quot;:&quot;especificacion_de_los_componentes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1707-&quot;} --><div class="footnotes">
+<div class="fn"><sup><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:ethernet_nxp.html#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content"><a href="http://es.wikipedia.org/wiki/Ethernet" class="urlextern" target="_blank" title="http://es.wikipedia.org/wiki/Ethernet" rel="ugc nofollow noopener">Estándar Ethernet en Wikipedia</a></div></div>
+</div>
+</div>
+</body>
+</html>

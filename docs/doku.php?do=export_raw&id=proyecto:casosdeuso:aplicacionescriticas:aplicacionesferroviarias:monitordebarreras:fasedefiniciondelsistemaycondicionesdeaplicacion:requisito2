@@ -1,0 +1,85 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 2 =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note>
+el requisito 2 de esta fase debe ser el de realizar: \\
+<fc #ffffff>..</fc> a) El análisis preliminar RAM para apoyar objetivos \\
+<fc #ffffff>..</fc> b) La identificación preliminar de peligros para: \\
+<fc #ffffff>...</fc> - Identificar subsistemas asociados con peligros identificados \\
+<fc #ffffff>...</fc> - Identificar los tipos de acontecimientos que dan lugar a accidentes que necesitan set tenidos en cuenta, incluidos los fallos de componentes, los defectos de procedimiento, el error humano y los fallos de mecanismos dependientes. \\
+<fc #ffffff>...</fc> - Definir los criterios iniciales de tolerancia de riesgos.
+</note>
+
+###
+En consecuencia resulta:
+###
+
+###
+**a) Análisis preliminar RAM para apoyar objetivos:**
+###
+
+###
+Los objetivos propuestos para el presente proyecto de acuerdo a lo expuesto en la Fase 1 son:
+###
+  * Aprendizaje: adquirir los conocimientos y experiencias de nivel básico e intermedio en relación con las aplicaciones ferroviarias de seguridad crítica.
+  * Educativos: presentar un caso de estudio de acceso libre y gratuito que sirva para formar a estudiantes y docentes en las metodologías propias del desarrollo de sistemas críticos.
+  * Vinculación: establecer relaciones con empresas, organismos e instituciones ligadas al sector ferroviario a partir del abordaje de un caso concreto de aplicación.
+
+###
+A su vez se pretende que el Monitor de Barreras permita alcanzar una alta fiabilidad y una mejora en la disponibilidad y mantenibilidad de las barreras de los pasos a nivel del sistema ferroviario.
+###
+
+###
+En consecuencia, se observa que de lograrse las metas RAM para el presente Monitor de Barreras se estará apoyando los objetivos. Esta afirmación se sustenta en que durante el desarrollo de este proyecto se habrá aprendido a implementar sistemas para aplicaciones críticas y, por lo tanto, será posible transmitir los conocimientos aprendidos a los estudiantes interesados en esta temática. A la vez que se estima que al mostrar los primeros resultados del Monitor de Barreras en operación, éste constituirá un caso de éxito que facilitará establecer vínculos con las empresas, organismos e instituciones ligadas al sector ferroviario.
+###
+
+###
+** b) La identificación preliminar de peligros**:
+###
+
+###
+La norma UNE EN 50126 define al peligro en su apartado 3.17 como “una situación física que encierra posibilidades de que se produzcan lesiones humanas”. En este sentido el objetivo de seguridad propuesto para el Monitor de Barreras es lograr que en ninguna condición de uso este tenga incidencia alguna sobre la seguridad del sistema ferroviario o implique ningún tipo de peligro.
+###
+
+###
+No obstante esto, se considera que podrían existir situaciones de mal uso del Monitor de Barreras que impliquen cierto nivel de peligro. Por ejemplo este sería el caso si se tomasen decisiones relacionadas con la seguridad a partir de la información que provea el Monitor de Barreras.
+###
+
+###
+También impactaría cierto nivel de peligro si se produjese algún tipo de explosión o incendio en el Monitor de Barreras, tal que pudiera causar lesiones a las personas, o un deterioro sobre otros sistemas que en caso de mal funcionamiento pudieran producir lesiones humanas.
+###
+
+###
+Las situaciones descriptas en los párrafos precedentes deben ser analizadas y evitadas. Esta problemática se abordará como parte de los documentos incluidos en las Entregas de la presente fase de “Definición del sistema y condiciones de aplicación” (documento de Políticas RAMS y documento de Plan de Seguridad), y se profundizará en los documentos correspondientes a las fases siguientes.
+###
+
+###
+** Identificar subsistemas asociados con peligros identificados**: En función de lo indicado en los párrafos precedentes se observa que los peligros identificados no están asociados específicamente a algún subsistema del Monitor de Barreras, sino que más bien hacen al mal uso del sistema, en el sentido de procedimientos establecidos con criterios inadecuados, o mal ejecutados, o bien a un mal diseño en términos generales. Esto se aborda con mayor detalle en los documentos de Políticas RAMS y Plan de Seguridad.
+###
+
+###
+Identificar los tipos de acontecimientos que dan lugar a accidentes que necesitan ser tenidos en cuenta, incluidos los fallos de componentes, los defectos de procedimiento, el error humano y los fallos de mecanismos dependientes. A partir de lo indicado en los párrafos precedentes, se desprende que los tipos de acontecimientos que pueden dar lugar a accidentes y que deben ser tenidos en cuenta se pueden deber en primer lugar a los defectos de procedimiento y al error humano, y luego además a fallos de componentes que pudieran causar incendios o sobrecalentamiento, por ejemplo. Esta problemática se aborda en detalle en los documentos de Políticas RAMS y Plan de Seguridad que forman parte de la Entrega de la presente fase de definición del sistema y condiciones de aplicación.
+###
+
+###
+** Definir los criterios iniciales de tolerancia de riesgos**: la norma UNE EN 50126 define en su apartado 3.34 al riesgo como “La tasa probable de ocurrencia de un peligro que ocasione daño, y el grado de severidad de dicho daño”. De acuerdo a lo expresado en los párrafos precedentes se procurará que sea improbable la ocurrencia de peligros. Esto se aborda en detalle en los documentos de Políticas RAMS y Plan de Seguridad que forman parte de la Entrega de la presente fase de definición del sistema y condiciones de aplicación.
+###
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion:requisito3|Ir al Requisito 3 de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Volver a la Página Inicial de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 

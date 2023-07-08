@@ -1,0 +1,81 @@
+====== Python corriendo en la EDU-CIAA ======
+
+Existe en desarrollo un firmware que permite interpretar un programa escrito en lenguaje python. El proyecto es llamado [[https://micropython.org/|micro-python]] y fue desarrollado para un hardware llamado pyboard. 
+
+Se desarrolló una versión de este firmware para correr en la EDU-CIAA, mediante el cual es posible ejecutar un archivo de extensión .py o utilizar una consola de python en donde el código se va ejecutando a medida que se van escribiendo las líneas.
+
+===== Soporte de Hardware =====
+
+Hasta el momento el soporte de hardware existente es el siguiente:
+  * Manejo de los 3 leds
+  * Manejo del led RGB
+  * Manejo de los 4 pulsadores
+  * Manejo de la UART
+  * Manejo del puerto RS-485
+  * Manejo de las 9 GPIOs
+  * Manejo del DAC
+  * Manejo de Timers
+  * Manejo de 11 salidas de PWM
+  * Manejo de 3 entradas analógicas
+  * [[desarrollo:edu-ciaa:poncho_ui|Poncho UI]] (Teclado matricial y LCD HD44780U)
+  * EEPROM interna (16 Kbytes)
+  * Manejo de SPI modo Master
+  * RTC con alarma y registros de backup.
+  * Manejo de I2C modo Master
+
+===== Soporte de Software =====
+  * Módulo json
+  * Módulo Modbus
+  * Módulo utime
+  * Módulo math
+====== Comenzar con Micro Python en la EDUCIAA======
+
+Para comenzar a utilizar Micro Python en la EDUCIAA se deberá grabar el firmware correspondiente en la placa.
+
+<note tip>[[desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware|Cómo grabar el firmware en la placa]]</note>
+
+
+<note tip>[[desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar|Ya tengo el firmware grabado, comenzar a programar]]</note>
+
+----
+
+
+
+
+
+
+
+
+
+===== Proyectos de ejemplo =====
+
+Se esta construyendo un repositorio con programas de ejemplo con su explicación. El nivel de los proyectos es variado y cubrirá temas simples de programación básica, y temas más complejos que implican el uso avanzado del hardware que posee la placa.
+
+<note tip>[[https://github.com/ernesto-g/educiaa-micropython-demos|Para acceder a los ejemplos hacer click aquí]]</note>
+
+
+
+===== Contribuir =====
+
+Los módulos que faltan implementar son los siguientes:
+  * Stepper motor
+  * Manejo del core M0
+  * Control Servomotores
+  * Ethernet
+  * USB
+
+Se está trabajando en las siguientes áreas:
+  * PID
+  * Emulador
+  * IDE para editar el script y enviarlo a la placa
+  * Documentación y tutoriales
+
+Para colaborar contactarse a la lista de embebidos embebidos32@googlegroups.com
+
+===== Problemas típicos =====
+
+<note tip>[[desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting|Troubleshooting]]</note>
+
+
+
+

@@ -1,0 +1,39 @@
+====== La CIAA una plataforma diferente pensada para la industria ======
+
+Muchas veces cuando se presenta la CIAA surgen algunas preguntas: ¿es una plataforma de hardware libre al estilo de varias que están en el mercado y la academia? ¿es una versión argentina de placas como Arduino, Raspberry y otras?
+
+En cierto modo, lo es: la CIAA es una plataforma electrónica de hardware libre. Sin embargo, presenta ciertas características que la hacen cualitativamente diferente respecto de las demás, al punto que configura una experiencia única a nivel global.
+
+Una de las principales diferencias es su concepción, en la que se priorizó generar un producto robusto para que soporte las condiciones hostiles de los ambientes industriales los que abundan ruidos, vibraciones, temperaturas extremas, picos de tensión e interferencias electromagnéticas, pero, a la vez, diseñarla de modo tal que pueda ser fabricada en Argentina. 
+
+Justamente, muchos de quienes desarrollamos la CIAA comenzamos trabajando con Arduino, Raspberry o BeagleBone, herramientas que tuvieron un rol importante en nuestra formación. Sin embargo, notamos que no servían cuando tenían que ser aplicadas a un ámbito industrial. 
+
+¿Por qué? La respuesta está en sus mismos manuales (( [[http://beagleboard.org/static/beaglebone/latest/Docs/Hardware/BONE_SRM.pdf|BeagleBone Rev A6 System Reference Manual (pág. 4)]] \\ [[http://beagleboard.org/static/BBSRM_latest.pdf|BeagleBoard Rev C4 System Reference Manual (pág. 3)]] \\ [[http://www.myraspberry-pi.org/wp-content/uploads/2013/02/Raspberry.Pi_.User_.Guide_.pdf|Raspberry Pi User Guide]] \\ [[http://arduino.cc/en/Main/ArduinoBoardUno| Arduino Uno]] )) son: “placas de desarrollo”, es decir que sirven para diseñar prototipos o hacer demostraciones de ideas de productos, o para un uso de tipo ‘hobbysta ‘ o aficionado, y no están concebidas y fabricadas como productos terminados para ser usados en el mundo real de una fábrica. 
+
+A modo de ejemplo, algunas de las precauciones están indicadas en los manuales de estas plaquetas son las siguientes: “No conecte señales lógicas de 5 volts a estos pines o la plaqueta será dañada”. (( [[http://beagleboard.org/static/beaglebone/latest/Docs/Hardware/BONE_SRM.pdf|BeagleBone Rev A6 System Reference Manual (pág. 54)]])) (( [[http://beagleboard.org/static/BBSRM_latest.pdf|BeagleBone Rev A6 System Reference Manual (pág. 95)]])) Otra precaución sugerida es la de no aplicar “tensión eléctrica a ningún pin de entrada o salida cuando la placa no esté alimentada. Esto dañará el procesador y anulará la garantía”. Esto significa que si la placa está conectada a algún sensor y accidentalmente de desconecta su alimentación, entonces el procesador puede dañarse. Como se puede apreciar, la fragilidad de la operación es extrema, todo lo contrario a la robustez de la CIAA.
+
+También aclaran que al ser placas de desarrollo “no están implementadas las medidas de seguridad y protección que típicamente llevan los productos finales” y tampoco se obliga a cumplir con regulaciones y certificaciones de seguridad y calidad. Dos puntos que sí están considerados en la CIAA que, como dijimos está concebida desde su origen como una plataforma industrial por lo cual dispone de mecanismos de protección eléctrica contra fallas o sobrecargas, y, de esta forma, brinda una base sólida para diseñar sistemas robustos y confiables de considerar cuestiones de disponibilidad, confiabilidad, verificación, validación y seguridad intrínseca.
+
+Esto le brinda la posibilidad de certificar normas internacionales como las IEC 61131 y la IEC 61508, contemplando criterios de robustez ante interferencia electromagnética, sobrecarga de las salidas, vibraciones mecánicas, estrés térmico, perturbaciones en la tensión de alimentación y variabilidad de los componentes, entre otras.
+
+Por ese motivo ante la pregunta de si la CIAA es como tener una placa Arduino o Raspberry equipada con un shield adosado que la provea de entradas optoacopladas, es decir, protegidas frente a sobrepicos de tensión, la respuesta es “no”, pues si la placa base no está diseñada para soportar interferencia electromagnética (sea irradiada o conducida) esa presunta protección es insuficiente pues es esa misma placa base la que de por sí no estará preparada para soportar ambientes industriales con ruido eléctrico.
+
+También habría que tener en cuanta qué conectores utiliza el shield, porque si no son apropiados para entornos industriales es un indicador de que la placa tampoco está preparada para soportar las vibraciones de ese entorno sin que el shield se suelte de la base.
+
+Además, sería necesario tener en cuenta la tensión de alimentación de los shields de Arduino, Raspberry o BeagleBone que usualmente requieren 5 VDC muy estables, mientras que en ambientes industriales la tensión estándar es 24 de VDC y con amplio rangos de variación, una característica que fue tomada por la CIAA a la hora de diseñar su fuente de alimentación. (( [[http://beagleboard.org/static/BBSRM_latest.pdf|BeagleBone Rev A6 System Reference Manual (pág. 22, 30, 45, 100)]]))  
+
+La CIAA constituye el primer caso de una plataforma concebida de modo que su diseño puede ofrecerse en versiones basadas en microcontroladores de distintas marcas para dotarla así de mayor flexibilidad. A modo de ejemplo, sería como si un coche pudiera funcionar con un motor de cualquier empresa automotriz. 
+
+Del mismo modo, ya existen versiones de la CIAA basadas en procesadores de NXP y Freescale, y están en proceso de desarrollo versiones basadas en procesadores de Texas Instruments, Atmel, PIC, entre otros. Lo más porderoso y original de este concepto es que el mismo código de firmware puede correr en cualquiera de estas versiones de la CIAA. 
+
+Esta característica la convierte en una plataforma completamente única y muy diferente a Arduino, Raspberry o BeagleBone, porque le CIAA es la única plataforma que le da al usuario la posibilidad de cambiar libremente de procesador, según le convenga.
+
+Otro aspecto determinante de la CIAA es su firmware, que tiene un diseño muy diferente al de las plaquetas para aficionados, lo que  permite utilizarlo para desarrollar productos pasibles de ser usados en productos que se aplican en sistemas que requieren un alto nivel de seguridad, como son aquellos donde se pone en riesgo la vida de las personas o bienes de alto valor.
+
+Para lograr esto, la CIAA está basada en una implementación propia del sistema operativo OSEK, que desde hace años es un standard internacional abierto (ISO 17356), que fue desarrollado por la industria automotriz europea (BMW, Bosch, DaimlerChrysler, Opel, PSA Peugeot Citroën, Renault, Siemens, Volkswagen) y es utilizado por el consorcio internacional AUTOSAR (AUTomotive Open System ARchitecture).  (( [[http://es.wikipedia.org/wiki/OSEK|Wikipedia OSEK]] \\ [[http://www.osek-vdx.org/|OSEK.org]]))
+
+De este modo, la CIAA es adecuada para ser utilizada en aplicaciones cuya calidad y prestación deben ser probadas y certificadas bajo estándares internacionales de altísima exigencia como, por ejemplo, los sistemas médicos, ferroviarios o espaciales. 
+
+Esto permite que cualquier usuario de la CIAA pueda aprovechar para su aplicación un entorno de desarrollo seguro y de alta calidad que, además, ha sido validado por el Instituto Nacional de Tecnología Industrial (INTI).
+
+Por todas estas razones la CIAA es una plataforma multiprocesador creada y pensada para la industria, y es muy diferente a otras plataformas que son excelentes, pero que están pensadas para usos no industriales, como Arduino, Raspberry y BeagleBone, y que se limitan a utilizar un determinado procesador fabricado por única empresa.

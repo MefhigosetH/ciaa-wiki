@@ -1,0 +1,7 @@
+=== EDU-CIAA-FSL ===
+{{:desarrollo:edu-ciaa:edu_ciaa_k60.jpg?200|}} Es una versión reducida de la CIAA-FSL y de bajo costo, orientada a proyectos educativos de todos los niveles, usada tanto por profesionales como novatos. Posee un microcontrolador MK60FX512VLQ15 con 46 ports expuestos a través de conectores genéricos de 2.54mm de pitch, interfaz de debug y programación, USB-OTG y RS485.
+\\
+\\
+| **Requerimientos** | **Diagrama Esquemático** | **Circuito Impreso** | <fc #777777>Prototipo Preliminar</fc> | <fc #777777>Versión Final</fc> |
+
+

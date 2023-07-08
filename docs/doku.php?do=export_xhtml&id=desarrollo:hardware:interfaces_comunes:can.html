@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:interfaces_comunes:can</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,interfaces_comunes,can"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:interfaces_comunes:can&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:interfaces_comunes"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:interfaces_comunes:can"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:interfaces_comunes:can.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:interfaces_comunes';var JSINFO = {"id":"desarrollo:hardware:interfaces_comunes:can","namespace":"desarrollo:hardware:interfaces_comunes","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html#interfaz_can">Interfaz CAN</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html#diagrama_esquematico">Diagrama esquemático</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html#caracteristicas">Características</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html#descripcion">Descripción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:interfaces_comunes:can.html#bibliografia">Bibliografía</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="interfaz_can">Interfaz CAN</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interfaz CAN&quot;,&quot;hid&quot;:&quot;interfaz_can&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-27&quot;} -->
+<h2 class="sectionedit2" id="diagrama_esquematico">Diagrama esquemático</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:interfaces_comunes:can&amp;media=desarrollo:hardware:can.png.html" class="media" title="desarrollo:hardware:can.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:can.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama esquem\u00e1tico&quot;,&quot;hid&quot;:&quot;diagrama_esquematico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;28-96&quot;} -->
+<h2 class="sectionedit3" id="caracteristicas">Características</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Transceptor compatible con el estándar ISO11898.</div>
+</li>
+<li class="level1"><div class="li"> Estado recesivo mediante V-Split (mejoras en EMC) </div>
+</li>
+<li class="level1"><div class="li"> Transceptor de Alta Velocidad, hasta 1 Mbit/s (High-Speed).</div>
+</li>
+<li class="level1"><div class="li"> Protección contra descargas electrostáticas (ESD).</div>
+</li>
+<li class="level1"><div class="li"> Protección contra transitorios.</div>
+</li>
+<li class="level1"><div class="li"> Resistencia de terminación del bus opcional mediante jumper.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas&quot;,&quot;hid&quot;:&quot;caracteristicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;97-459&quot;} -->
+<h2 class="sectionedit4" id="descripcion">Descripción</h2>
+<div class="level2">
+
+<p>
+Dada la enorme robustez que provee el estándar de comunicaciones conocido como CAN, éste es ampliamente utilizado en la industria, principalmente en la automotriz. Sus bondades de latencia conocida, multi-master, detección y señalización de errores, retransmisión automática, compatibilidad asegurada por su estandarización, etc, lo convierten sin dudas en una opción muy atractiva. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su bus diferencial comunicar los distintos nodos participantes en una red CAN.
+</p>
+
+<p>
+El proyecto está basado en el driver <a href="http://www.nxp.com/documents/data_sheet/TJA1040.pdf" class="urlextern" target="_blank" title="http://www.nxp.com/documents/data_sheet/TJA1040.pdf" rel="ugc nofollow noopener">TJA1040</a> que cumple con el estándar ISO11898, agregando además la característica de V-Split que provee un nivel de tensión conocido para el estado recesivo, ofreciendo también mejoras en lo que a EMC refiere. Al mismo se le han adicionado protecciones y resistencias de terminación del bus opcionales.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n&quot;,&quot;hid&quot;:&quot;descripcion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;460-1457&quot;} -->
+<h2 class="sectionedit5" id="bibliografia">Bibliografía</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://es.wikipedia.org/wiki/CAN_bus" class="interwiki iw_wpes" target="_blank" title="https://es.wikipedia.org/wiki/CAN_bus" rel="noopener">Wikipedia, Bus CAN</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.nxp.com/documents/application_note/AN10211.pdf" class="urlextern" target="_blank" title="http://www.nxp.com/documents/application_note/AN10211.pdf" rel="ugc nofollow noopener">Nota de Aplicación de NXP, AN10211</a> </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bibliograf\u00eda&quot;,&quot;hid&quot;:&quot;bibliografia&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1458-&quot;} --></div>
+</body>
+</html>

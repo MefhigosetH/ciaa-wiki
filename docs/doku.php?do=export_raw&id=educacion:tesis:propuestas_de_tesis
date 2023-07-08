@@ -1,0 +1,111 @@
+====== Propuestas de Tesis y Proyecto final de carrera ======
+
+###
+En el mes de **abril de 2016** lanzaremos una nueva búsqueda de estudiantes que quieran desarrollar su tesis o trabajo final de carrera en relación con el Proyecto CIAA. Esta búsqueda será canalizada a través de la lista de correos [[https://groups.google.com/group/embebidos32/subscribe|embebidos32@googlegroups.com]].
+###
+
+===== Temas de trabajo propuestos =====
+
+###
+Los siguientes son sólo algunos de los temas de trabajo propuestos:
+###
+
+**CIAA Firmware**
+  * Diseño de un nuevo proceso de desarrollo para CIAA-Firmware con Gerrit/Github/Jenkins.
+  * Analizar la calidad del CIAA Firmware mediante tools como: gcov, [[http://en.wikipedia.org/wiki/BLAST_model_checker|BALAST]] [[http://www.sonarqube.org/|sonar|]], SPLINT, etc.
+  * Diseñar una metodología de configuración para el CIAA-Firmware. 
+  * Versionamiento de los distintos módulos en diferentes repositorios incluyendo la autoinstalación con dependencias.
+  * Implementación de sockets.
+
+**Biblioteca sAPI**
+  * Implementar la biblioteca sAPI (v0.5.0 o superior) en la PicoCIAA o en la CIAA-PIC.
+  * Biblioteca sAPI para USB (Device y Host).
+  * Biblioteca sAPI de CAN, CANOpen. 
+  * Biblioteca sAPI de manejo de String, o más general de Streams.  
+  * Biblioteca sAPI de manejo de displays gráficos y touch. Sería deseable que además hacer una herramienta que permita dibujar pantallas a msotrar en el display en la PC (por ejemplo en formato SVG o JSON) y exportarlas a algún formato o generar el código compatible con el driver. 
+
+**IDE4PLC** (requiere saber C y Smalltalk, en este último contactar a <ericpernia@gmail.com>).
+  * Agragado de bloques de funciones para manejo UART, SPI, I2C.
+  * Agragado de entradas y salidas analógicas. 
+  * Manejo de archivos de proyecto.
+
+**Embedded IDE (CIAA IDE)** (requiere saber C++).
+  * Completar el Debugger.
+  * Autocompletado/indexado: utiliza ctags para indexar y clang para autocompletar. Es deseable combinar todo en uno solo. Hay varios candidatos, clangd, rtags, etc.
+  * Repensar el sistema de templates: Actualmente esta basado en diff y patch. Esto requiere que todos los archivos del proyecto sean texto (no se puede poner binarios, imgágenes o pdf de documentación, etc.).
+  * Mover todo lo que se pueda de la configuración al workspace: Hoy usamos QSettings, es mejor usar un json general con la ubicación del proyecto y todos los parámetros dentro de otro json en el proyecto.
+  * Agregado de plugins: Buscar la forma de que el IDE acepte plugins (en scripting) que no impacte en la performance.
+
+**CIAABOT IDE** (requiere saber Node.js, Electron.js y Angular).
+  * Agrregar soporte para la CIAA-Z3R0. Para esto se habló de armar algún json que describa las placas con periféricos y capacidades para habilitar o no ciertos bloques. 
+  * Debug: utilizar en la placa el intérprete de firmata y utilizando bibliotecas de JS como Johnny Five o Cylon ir ejecutando paso a paso los bloques para hacer un debug "bloque a bloque". Este ejemplo puede ayudar: https://blockly-demo.appspot.com/static/demos/interpreter/step-execution.html.
+
+**Eclipse IDE** (requiere saber Java y plugins de Eclipse).
+  * Crear un plugin de eclipse para realizar un wizard de nuevo proyecto de la CIAA (Eclipse CDT, Makefile project). 
+
+**Linux de CIAA-NXP** (requiere saber de arquitecturas de microcontroladores y Linux Embebido).
+  * Implementar un mecanismo de protección entre procesos usando la MPU del CPU.
+  * Explotar el core M0 para implementar multiprocesamiento asimétrico (AMP).
+  * Implementar un IPC entre 2 Cores uno corriendo Linux y otro CIAA-Firmware.
+
+**Ideas de tecnologías a portar para la CIAAs**
+  * Port de [[http://opencv.org/|OpenCV]] o [[http://libccv.org/|libcvv]].
+  * Portar un intérprete de javascript a la EDU-CIAA, o armar una plataforma utilizando Cylon.js o JhonnyFive que usando el protocolo firmata permita controlar la EDU-CIAA desde la PC con javascript.
+
+**¡Algo nuevo!**
+  * Hacer algo nuevo que no exista todavía en el Proyecto CIAA para aportarlo. Puede ser desde un nuevo poncho con cierto hardware, hasta un conjunto de drivers para las placas existentes. El límite es tu imaginación.
+
+===== Metodología de trabajo =====
+
+###
+En la realización de estos trabajos se aplica la metodología de gestión de proyectos establecida por el [[http://www.pmi.org/|Project Management Institute]] y realizar el trabajo completo en un plazo no mayor a un año corrido.
+###
+
+Para lograr esto la propuesta es la siguiente:
+   * Durante diciembre 2014 y enero 2015 los interesados definieron su tema de tesis e hicieron una investigación preliminar al respecto, con ayuda del equipo de desarrolladores del Proyecto CIAA y los tutores locales que correspondan a sus respectivas Unidades Académicas.
+   * Durante febrero y marzo 2015 los interesados están recibiendo en forma gratuita un curso básico de gestión de proyectos a cargo del Coordinador General del Proyecto CIAA, Dr. Ing. Ariel Lutenberg, y la Responsable de Sistema del Proyecto CIAA, Ing. Paola Pezoimburu en el marco del cual preparan el plan de trabajo para la realización de su trabajo de tesis.
+   *  Entre abril 2015 y diciembre 2015 los interesados ejecutarán el plan trazado, de acuerdo a los hitos definidos y a los plazos establecidos para cada etapa, debiendo ser la defensa del trabajo con fecha máxima el 15 de diciembre de 2015.
+
+
+===== Tareas comunes a los trabajos =====
+
+###
+En líneas generales los trabajos seguirán una serie de etapas, cada una compuesta por un conjunto de tareas:
+###
+
+  * Diseño:
+    * Análisis de requerimientos.
+    * Diagramas en UML.
+    * Especificación del software.
+    * Concepto de verificación mediante tests.
+
+  * Implementación:
+    * Implementación del código en C/C++/otros.
+    * Implementación de los tests.
+
+  * Validación:
+    * Implementación de los tests funcionales.
+
+  *  Documentación:
+    * Documentación de las distintas actividades desempeñadas a lo largo del proyecto.
+
+===== Conocimientos y aptitudes =====
+
+###
+Para desarrollar cada trabajo se requiere una serie de conocimientos y aptitudes. No es necesario contar con todos ellos de manera previa, sino que a lo largo del trabajo se podrán ir adquiriendo y profundizando. ¡Hay mucho para aprender!
+###
+
+  * Programación en C/C++, Perl.
+  * Uso de guidelines de programación y herramientas de documentación.
+  * Experiencia en Debugging preferentemente OpenOCD.
+  * Entorno de trabajo en Linux y Eclipse.
+  * Conocimientos de GNU Makefile.
+  * Capacidad de trabajar en equipo.
+  * Pensamiento analítico.
+  * Capacidad de abstracción.
+
+===== ¿Interesado? =====
+
+###
+Si estás interesado en participar en el apasionante Proyecto CIAA y embarcarte en el mundo de los Sistemas Embebidos, contanos qué proyecto te interesa y envianos tu CV a [[mailto:tesis@proyecto-ciaa.com.ar|tesis@proyecto-ciaa.com.ar]].
+###

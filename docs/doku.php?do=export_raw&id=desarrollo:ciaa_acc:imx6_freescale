@@ -1,0 +1,99 @@
+=====Propuesta para la utilización de un SoC iMX6=====
+Se estudia y se analiza la alternativa iMX6, estudiando los dispositivos disponibles dentro de la familia, los aspectos que pueden favorecer el desarrollo  y los objetivos asociados a la CIAA-ACC.
+
+====Familia====
+Breve resumen de la familia y selección para el análisis posterior.
+  * URL Principañ: [[http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&cof=0&am=0 | Familia iMX6 de Freescale]]
+  * Dispositivos y características principales: 
+     * Ver http://cache.freescale.com/files/32bit/doc/brochure/FLYRIMXPRDCMPR.pdf
+     * [[http://www.freescale.com/webapp/search/parametricExcel.sp?load=taxoPara&aType=OP&c=c380_c127_c126 | Planilla de cálculo para selección]] 
+  * Selección del candidato si se usa un iMX6 (preliminar):
+     * **i.MX6 UltraLite**: Descartado  por el micro Cortex-A7@528 MHz
+     * **i.MX6 SoloLite**: Descartado por el pitch de 0.5, solamente rango commercial y por tener aceleración de video por SW.
+     * **i.MX6 SoloX**: Descartado por  tener aceleración de video por SW. Nota: tiene un cortex A9 + Cortex M4. 
+     * **i.MX6 Solo**: Tiene un solo núcleo. (Objetivo de proyecto)
+     * **i.MX6 DualLite**: No tiene SATA (Evaluar importancia del SATA). Posee menores características de Hw gráfico que el Dual(shaders, 2D engine) (Objetivo de proyecto)
+     * **i.MX6 Dual**: Posible alternativa, pero el quad posee mayor capacidad de cómputo (Objetivo de proyecto).
+     * **i.MX6 Quad**: Posible alternativa, pero la línea plus tiene mejores características de aceleración gráfica (+shaders y +layers).
+     * **i.MX6 DualPlus**: Candidato. (pero aún no esta a la venta?) (El quadplus es más acorde a los objetivos del proyecto)
+     * **i.MX6 QuadPlus**: Candidato (con mayor capacidad de cómputo que el Dual/DualPlus pero aún no esta a la venta?).
+
+  * Dispositivo seleccionado para esta alternativa: i.MX6 Quad (y si se consigue el QuadPlus?)
+
+====Datos generales====
+  * Procesador: ARM 
+  * Tipo: Cortex-A9
+  * Nro de cores: 4  (1, 2 o 4 Depende del modelo)
+  * Máxima frecuencia de trabajo: 1.0 a  1.2 GHz
+  * Memoria: LP-DDR2, DDR3/LV-DDR3 400/533 MHz
+ 
+====Periféricos de interés====
+Falta definir periféricos importantes de la CIAA-ACC.
+   * Aceleración gráfica:
+   * HDMI:
+   * MIPI CSI:
+   * Ethernet:
+   * USB:
+   * SATA:
+   * PCIe:
+   * LVDS:
+   * CAN:
+   * ADC:
+   * RS232:
+
+
+====Información técnica disponible====
+  * Hojas de datos completas: Poseen en general esquemáticos, gerbers y archvivos de diseño.
+     * http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&cof=0&am=0
+  * Notas de aplicación para el layout:
+  * Diseños de referencia: 
+      * [[http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREPLAT | Sabre Platform for Smart Devices ]]
+      * [[http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREBRD | Sabre Smart Devices ]]
+      * [[http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREAUTO | Sabre for Automotive Infotainment ]]
+      * [[http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=IMX6SLEVK | IMX6SLEVK: i.MX 6SoloLite Evaluation Kit ]]
+  * Disponible sin NDA?: SI.
+  * Otras: Perfiles de temp, ejemplos, diseños adicionales, etc.
+====Compra de chips====
+  * Distribuidor en Argentina: [[http://www.electrocomponentes.com/ | Electrocomponentes]]
+  * Distribuidor en el exterior:  [[http://www.digikey.com/product-search/en/integrated-circuits-ics/embedded-microprocessors/2556260?k=imx6 | Digikey, productos iMX6]]
+  * Precio unitario: 25 a 82 USD 
+  * Precio por cantidades:
+  * Soporte técnico y asistencia:
+  * ITAR (International Traffic in Arms Regulations): No posee. Investigar los de grado industrial.
+
+
+====Partes====
+
+  * IMX6DQAEC: i.MX 6Dual/6Quad Automotive and Infotainment Applications Processors - Data Sheet
+     * MCIMX6Q6AVT10AC
+     * MCIMX6Q6AVT10ACR
+  * IMX6DQIEC: i.MX 6Dual/6Quad Applications Processors for Industrial Products - Data Sheet
+     * MCIMX6Q7CVT08AC
+     * MCIMX6Q7CVT08AD
+
+Falta analizar...
+
+====Encapsulados====
+
+  * Encapsulado de mayor pitch posible:  FCPBGA 21 x 21 mm, 0.8 mm pitch,  25 x 25 Ball Matrix, 624 balls.
+  * PoP: Posee pitch de 0.5 mm y es solo consumer.
+
+
+==== Software ====
+  * Port de Linux:
+  * Toolchain:
+  * Licencias Toolchain:
+
+==== Ventajas y Desventajas Frente a otras soluciones ====
+
+=== Ventajas ===
+  * Disponibilidad de numerosos diseños de referencia.
+  * Disponibilidad de toda la documentación (sin firmar NDA).
+  * Representante de Freescale en Argentina (Electrocomponentes). 
+  * Frente a la familia Zynq, el tener GPU y PCIe por hardware es otra ventaja.
+  * Precio bajo por ser un producto muy popular a nivel mundial.
+  * Herramientas gratuitas y libres.
+
+=== Desventajas ===
+  * Ya existen en el mercado numerosos productos con estos micros y a muy buen precio.
+  * Algunos periféricos del iMX6 son muy limitados, como por ejemplo el PCIe x1.

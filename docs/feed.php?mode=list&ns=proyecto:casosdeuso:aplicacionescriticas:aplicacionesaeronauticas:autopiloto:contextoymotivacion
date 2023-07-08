@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:20:27+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:justificacioneleccion&amp;rev=1474476954&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:normasaeronauticas&amp;rev=1474477051&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo&amp;rev=1474646800&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:justificacioneleccion&amp;rev=1474476954&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-21T16:55:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:justificacioneleccion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:justificacioneleccion&amp;rev=1474476954&amp;do=diff</link>
+        <description>Diseño e Implementación de un Autopiloto
+
+
+
+¿Por qué se eligió el Proyecto de un Autopiloto?
+
+En la página de Contexto y Motivación se explica por qué se tomó la decisión de hacer el desarrollo e implementación de un sistema aeronáutico relacionado con aplicaciones de seguridad. En esa página se explica por qué entre todos los proyectos posibles se eligió el autopiloto.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:normasaeronauticas&amp;rev=1474477051&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-21T16:57:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:normasaeronauticas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:normasaeronauticas&amp;rev=1474477051&amp;do=diff</link>
+        <description>Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados
+
+[ ]
+
+
+Normativa asociada al diseño de sistemas electrónicos para aplicaciones aeronáuticas
+
+Marco jurídico y autoridad internacional
+
+La Organización de Aviación Civil Internacional (OACI) (en inglés: International Civil Aviation Organization, ICAO) es una agencia de la Organización de las Naciones Unidas creada en 1944 por el Convenio sobre Aviación Civil Internacional para estudiar los problemas de la av…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo&amp;rev=1474646800&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-23T16:06:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo&amp;rev=1474646800&amp;do=diff</link>
+        <description>Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados
+
+[ ]
+
+
+Planificación del desarrollo
+
+El proyecto Autopiloto está dividido en tres líneas de trabajo interrelacionadas:
+
+	*  Desarrollo de CIAAPilot
+	*  Ajuste del prototipo CIAA Safety al CIAAPilot</description>
+    </item>
+</rdf:RDF>

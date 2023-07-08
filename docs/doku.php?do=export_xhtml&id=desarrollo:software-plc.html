@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:software-plc</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,software-plc"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:software-plc&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=desarrollo"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:software-plc"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:software-plc.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo';var JSINFO = {"id":"desarrollo:software-plc","namespace":"desarrollo","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html#ide4plc_el_software-plc_de_la_ciaa">IDE4PLC, el Software-PLC de la CIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html#equipo_de_coordinacion_del_desarrollo_de_software">Equipo de coordinación del desarrollo de software</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html#participar_en_el_desarrollo_del_software-plc">Participar en el desarrollo del Software-PLC</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html#plan_desarrollo_de_software">Plan desarrollo de software</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:software-plc.html#implementacion">Implementación</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ide4plc_el_software-plc_de_la_ciaa">IDE4PLC, el Software-PLC de la CIAA</h1>
+<div class="level1">
+<p class="divalign-justify">El Software-PLC de la CIAA es el entorno de desarrollo integrado (IDE) industrial que se ejecuta en una PC (Windows / Linux compatible / MAC <abbr title="Operating System">OS</abbr> X) que permite:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> Codificar a través de los <strong>lenguajes de programación para PLC</strong> definidos por la norma <strong>IEC 61131-3</strong> , el programa que se ejecutará en la plataforma CIAA.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Compilar </strong>dicho código para la arquitectura del microcontrolador de la plataforma.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Interactuar con CIAA-Firmware</strong> para la ejecución de los programas.</div>
+</li>
+<li class="level1"><div class="li"> Visualizar y editar el <strong>mapa de memoria</strong> de la CIAA.</div>
+</li>
+</ul>
+
+<p>
+<strong>Importante</strong>: Si usted desea programar la CIAA usando lenguajes C/C++ entonces utilice <a href="./doku.php%3Fid=desarrollo:software-ide.html" class="wikilink1" title="desarrollo:software-ide" data-wiki-id="desarrollo:software-ide">Software-IDE</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;IDE4PLC, el Software-PLC de la CIAA&quot;,&quot;hid&quot;:&quot;ide4plc_el_software-plc_de_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-762&quot;} -->
+<h2 class="sectionedit2" id="equipo_de_coordinacion_del_desarrollo_de_software">Equipo de coordinación del desarrollo de software</h2>
+<div class="level2">
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Función                         </th><th class="col1 leftalign"> Nombre                   </th><th class="col2 leftalign"> Organización     </th><th class="col3 leftalign"> Mail                   </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Responsable de Software-PLC     </td><td class="col1 leftalign"> Ing. Eric Pernia          </td><td class="col2"> <a href="http://www.unq.edu.ar/" class="urlextern" target="_blank" title="http://www.unq.edu.ar/" rel="ugc nofollow noopener">UNQ</a> </td><td class="col3"> <a href="mailto:&#101;&#114;&#105;&#99;&#112;&#101;&#114;&#110;&#105;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="mail" title="&#101;&#114;&#105;&#99;&#112;&#101;&#114;&#110;&#105;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#101;&#114;&#105;&#99;&#112;&#101;&#114;&#110;&#105;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Sub-responsable de Software-PLC </td><td class="col1 leftalign"> Dr. Lic. Carlos Lombardi  </td><td class="col2 leftalign"> <a href="http://www.unq.edu.ar/" class="urlextern" target="_blank" title="http://www.unq.edu.ar/" rel="ugc nofollow noopener">UNQ</a>             </td><td class="col3"> <a href="mailto:&#99;&#97;&#114;&#108;&#111;&#109;&#98;&#97;&#114;&#100;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="mail" title="&#99;&#97;&#114;&#108;&#111;&#109;&#98;&#97;&#114;&#100;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#97;&#114;&#108;&#111;&#109;&#98;&#97;&#114;&#100;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;827-1192&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Equipo de coordinaci\u00f3n del desarrollo de software&quot;,&quot;hid&quot;:&quot;equipo_de_coordinacion_del_desarrollo_de_software&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;763-1194&quot;} -->
+<h2 class="sectionedit4" id="participar_en_el_desarrollo_del_software-plc">Participar en el desarrollo del Software-PLC</h2>
+<div class="level2">
+
+<p>
+Para participar en el desarrollo del Software-PLC le sugerimos unirse al <a href="https://groups.google.com/forum/#!forum/ciaa-software-plc" class="urlextern" target="_blank" title="https://groups.google.com/forum/#!forum/ciaa-software-plc" rel="ugc nofollow noopener">Grupo en Google del CIAA-Software-PLC</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Participar en el desarrollo del Software-PLC&quot;,&quot;hid&quot;:&quot;participar_en_el_desarrollo_del_software-plc&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1195-1428&quot;} -->
+<h2 class="sectionedit5" id="plan_desarrollo_de_software">Plan desarrollo de software</h2>
+<div class="level2">
+<div class="table sectionedit6"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Fecha       </th><th class="col1 leftalign"> Versión         </th><th class="col2 leftalign"> Boards Soportadas  </th><th class="col3"> CIAA-Firmware utilizado </th><th class="col4"> Objetivos de la versión </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> 16/09/2015  </td><td class="col1 centeralign">  Release 1.0.2  </td><td class="col2 leftalign"> EDU-CIAA-NXP       </td><td class="col3"> Release 0.6.1 </td><td class="col4"> <a href="./doku.php%3Fid=desarrollo:software-plc:obj-v1.0.2.html" class="wikilink1" title="desarrollo:software-plc:obj-v1.0.2" data-wiki-id="desarrollo:software-plc:obj-v1.0.2">Ingresar</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 20/05/2015  </td><td class="col1 centeralign">  Release 1.0.1  </td><td class="col2 leftalign"> EDU-CIAA-NXP       </td><td class="col3"> Release 0.5.0 </td><td class="col4"> Pequeña modificación </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 18/05/2015  </td><td class="col1 centeralign">  Release 1.0.0  </td><td class="col2 leftalign"> EDU-CIAA-NXP       </td><td class="col3"> Release 0.5.0 </td><td class="col4"> <a href="./doku.php%3Fid=desarrollo:software-plc:obj-v1.0.0.html" class="wikilink1" title="desarrollo:software-plc:obj-v1.0.0" data-wiki-id="desarrollo:software-plc:obj-v1.0.0">Ingresar</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:6,&quot;range&quot;:&quot;1470-1916&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plan desarrollo de software&quot;,&quot;hid&quot;:&quot;plan_desarrollo_de_software&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1429-1916&quot;} -->
+<h2 class="sectionedit7" id="implementacion">Implementación</h2>
+<div class="level2">
+<p class="divalign-justify">El Software-PLC surge en base al desarrollo libre IDE4PLC, elaborado por Eric Pernia como su tesis de grado en la Universidad Nacional de Quilmes. <a href="http://ide4plc.wordpress.com/" class="urlextern" target="_blank" title="http://ide4plc.wordpress.com/" rel="ugc nofollow noopener">Ver más sobre IDE4PLC</a>.</p><!--divalign-->
+
+<p>
+IDE4PLC versión 1.0.2 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/IDE4PLC/releases/download/v1.0.2win/IDE4PLCv1.0.2-Win.zip" class="urlextern" target="_blank" title="https://github.com/ciaa/IDE4PLC/releases/download/v1.0.2win/IDE4PLCv1.0.2-Win.zip" rel="ugc nofollow noopener">IDE4PLC versión 1.0.2 para Windows</a>.</div>
+</li>
+</ul>
+
+<p>
+IDE4PLC versión 1.0.1 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/IDE4PLC/releases/download/v1.0.1win/IDE4PLCv1.0.1-Win.zip" class="urlextern" target="_blank" title="https://github.com/ciaa/IDE4PLC/releases/download/v1.0.1win/IDE4PLCv1.0.1-Win.zip" rel="ugc nofollow noopener">IDE4PLC versión 1.0.1 para Windows</a>.</div>
+</li>
+</ul>
+
+<p>
+IDE4PLC versión 1.0.0 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://www.dropbox.com/s/w5i3q3iebugd4fr/IDE4PLCv1.0.0-Linux.tar.gz?dl=0" class="urlextern" target="_blank" title="https://www.dropbox.com/s/w5i3q3iebugd4fr/IDE4PLCv1.0.0-Linux.tar.gz?dl=0" rel="ugc nofollow noopener">IDE4PLC versión 1.0.0 para Linux</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.dropbox.com/s/zaci2zaq2gg7hxn/IDE4PLCv1.0.0-Win.zip?dl=0" class="urlextern" target="_blank" title="https://www.dropbox.com/s/zaci2zaq2gg7hxn/IDE4PLCv1.0.0-Win.zip?dl=0" rel="ugc nofollow noopener">IDE4PLC versión 1.0.0 para Windows</a>.</div>
+</li>
+</ul>
+
+<p>
+IDE4PLC versión 0.08 alpha para LPCXpresso se encuentra disponible para los Sistemas Operativos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://www.dropbox.com/s/2c9w0mo9wts8zm5/IDE4PLCv0.0.8alpha-Linux.zip?dl=1" class="urlextern" target="_blank" title="https://www.dropbox.com/s/2c9w0mo9wts8zm5/IDE4PLCv0.0.8alpha-Linux.zip?dl=1" rel="ugc nofollow noopener">IDE4PLC versión 0.08 alpha para Linux</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.dropbox.com/s/7kllejwmguokpnp/IDE4PLCv0.0.8alpha.app.zip?dl=1" class="urlextern" target="_blank" title="https://www.dropbox.com/s/7kllejwmguokpnp/IDE4PLCv0.0.8alpha.app.zip?dl=1" rel="ugc nofollow noopener">IDE4PLC versión 0.08 alpha para Mac OS X</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.dropbox.com/s/f3ta23au2a7hbii/IDE4PLCv0.0.8alpha-Win.zip?dl=1" class="urlextern" target="_blank" title="https://www.dropbox.com/s/f3ta23au2a7hbii/IDE4PLCv0.0.8alpha-Win.zip?dl=1" rel="ugc nofollow noopener">IDE4PLC versión 0.08 alpha para Windows</a> (requiere LPCXpresso IDE).</div>
+</li>
+</ul>
+
+<p>
+Para mayor información sobre las versiones disponibles puede visitar el sitio de IDE4PLC: <a href="http://ide4plc.wordpress.com/descargas/" class="urlextern" target="_blank" title="http://ide4plc.wordpress.com/descargas/" rel="ugc nofollow noopener">http://ide4plc.wordpress.com/descargas/</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Implementaci\u00f3n&quot;,&quot;hid&quot;:&quot;implementacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1917-3576&quot;} -->
+<h3 class="sectionedit8" id="documentacion_de_ide4plc">Documentación de IDE4PLC</h3>
+<div class="level3">
+
+<p>
+Se encuentra disponible en: <a href="http://ide4plc.wordpress.com/documentacion/" class="urlextern" target="_blank" title="http://ide4plc.wordpress.com/documentacion/" rel="ugc nofollow noopener">http://ide4plc.wordpress.com/documentacion/</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Documentaci\u00f3n de IDE4PLC&quot;,&quot;hid&quot;:&quot;documentacion_de_ide4plc&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;3577-3691&quot;} -->
+<h3 class="sectionedit9" id="elementos_graficos_estandar_definidos_en_iec_61131-32003_soportados_en_ide4plc">Elementos gráficos estándar definidos en IEC 61131-3:2003 soportados en IDE4PLC</h3>
+<div class="level3">
+
+<p>
+<a href="https://ide4plc.files.wordpress.com/2015/08/ide4plc-elementos-grc3a1ficos-sopotados-v1-r0.pdf" class="urlextern" target="_blank" title="https://ide4plc.files.wordpress.com/2015/08/ide4plc-elementos-grc3a1ficos-sopotados-v1-r0.pdf" rel="ugc nofollow noopener">Descargar en pdf</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Elementos gr\u00e1ficos est\u00e1ndar definidos en IEC 61131-3:2003 soportados en IDE4PLC&quot;,&quot;hid&quot;:&quot;elementos_graficos_estandar_definidos_en_iec_61131-32003_soportados_en_ide4plc&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3692-&quot;} --></div>
+</body>
+</html>

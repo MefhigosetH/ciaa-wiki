@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-timer"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html#soporte_timersclase_timer">Soporte Timers: Clase Timer</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html#constructor">Constructor</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html#metodos">Métodos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html#ejemplo_1uso_de_timeout_e_interval">Ejemplo 1: Uso de timeout e interval</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer.html#ejemplo_2ejecucion_cada_100hz">Ejemplo 2: Ejecución cada 100Hz</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="soporte_timersclase_timer">Soporte Timers: Clase Timer</h1>
+<div class="level1">
+
+<p>
+La clase Timer permitirá crear objetos que representan los módulos Timers del microcontrolador.
+</p>
+
+<p>
+No se implementó la clase TimerChannel, por lo que las funcionalidades de Output Compare e Input Capture no son accesibles.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte Timers: Clase Timer&quot;,&quot;hid&quot;:&quot;soporte_timersclase_timer&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-268&quot;} -->
+<h2 class="sectionedit2" id="constructor">Constructor</h2>
+<div class="level2">
+
+<p>
+La clase posee un constructor que recibe un solo argumento, este argumento es el número de timer que controlará.
+</p>
+
+<p>
+Timers disponibles: 0,1,2 y 3
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Constructor&quot;,&quot;hid&quot;:&quot;constructor&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;269-440&quot;} -->
+<h2 class="sectionedit3" id="metodos">Métodos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> interval(t,fn) : Ejecuta la función pasada como argumento fn periódicamente cada el tiempo t expresado en ms</div>
+</li>
+<li class="level1"><div class="li"> timeout(t,fn) : Ejecuta la función pasada como argumento fn luego del tiempo t expresado en ms</div>
+</li>
+<li class="level1"><div class="li"> init(prescaler,period): Configura el timer con un prescaler dado y un periodo dado (números de 32bit)</div>
+</li>
+<li class="level1"><div class="li"> init(freq) : Configura el timer para la frecuencia dada (de 1 a 1000000 Hz)</div>
+</li>
+<li class="level1"><div class="li"> callback(fn) : Configura una función que se ejecutará al vencerse el timer.La función recibirá como argumento el objeto Timer.</div>
+</li>
+<li class="level1"><div class="li"> counter([value]): Devuelve o setea el valor del contador del Timer (número de 32bit)</div>
+</li>
+<li class="level1"><div class="li"> freq([value]): Devuelve o setea el valor de la frecuencia del Timer (de 1 a 1000000 Hz)</div>
+</li>
+<li class="level1"><div class="li"> period([value]): Devuelve o setea el valor del periodo (valor de comparación de la cuenta) número de 32 bit)</div>
+</li>
+<li class="level1"><div class="li"> prescaler([value]): Devuelve o setea el valor del prescaler (número de 32bit)</div>
+</li>
+<li class="level1"><div class="li"> source_freq(): Devuelve la frecuencia de operación del microcontrolador en Hz</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00e9todos&quot;,&quot;hid&quot;:&quot;metodos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;441-1463&quot;} -->
+<h2 class="sectionedit4" id="ejemplo_1uso_de_timeout_e_interval">Ejemplo 1: Uso de timeout e interval</h2>
+<div class="level2">
+<pre class="code">import pyb
+
+def callb(timer):
+      print(&quot;Interval interrupt&quot;)
+      print(timer)
+
+def callbTimeout (timer):
+      print(&quot;Timeout interrupt&quot;)
+      print(timer)
+
+print(&quot;Test Timers&quot;)
+
+t1 = pyb.Timer(1)
+t2 = pyb.Timer(2)
+t1.interval(2000,callb)
+t2.timeout(5000,callbTimeout)
+
+while True:
+        pyb.delay(1000)</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo 1: Uso de timeout e interval&quot;,&quot;hid&quot;:&quot;ejemplo_1uso_de_timeout_e_interval&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1464-1865&quot;} -->
+<h2 class="sectionedit5" id="ejemplo_2ejecucion_cada_100hz">Ejemplo 2: Ejecución cada 100Hz</h2>
+<div class="level2">
+<pre class="code">import pyb
+
+counter=0
+
+def callb(timer):
+    global counter
+    counter+=1
+
+
+t1 = pyb.Timer(1)
+t1.init(freq=100) #100Hz
+t1.callback(callb)
+
+while True:
+        pyb.delay(1000)
+        print(&quot;counter:&quot;+str(counter))
+      </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo 2: Ejecuci\u00f3n cada 100Hz&quot;,&quot;hid&quot;:&quot;ejemplo_2ejecucion_cada_100hz&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1866-&quot;} --></div>
+</body>
+</html>

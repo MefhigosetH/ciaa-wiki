@@ -1,0 +1,98 @@
+===== Comunicación por terminal =====
+
+Para comunicarse con programas en la placa desde una PC, es necesario contar con algún programa de terminal.
+
+Baudrate puede ser 115200, 9600 o alguna otra velocidad que dependerá del programa en la placa.
+
+
+==== Linux ====
+
+El puerto de conexión suele ser /dev/ttyUSB1 o /dev/ttyUSB2
+
+=== miniterm.py ===
+
+<code bash>
+$ sudo aptitude install python-serial
+$ miniterm.py -p /dev/ttyUSB1 -b 115200
+</code>
+
+=== minicom ===
+<code bash>
+$ sudo apt-get install minicom
+sudo minicom -s
+</code>
+
+  * serial port setup
+    * A -> /dev/ttyUSB1
+    * E -> 115200 8N1
+    * F -> no
+  * esc
+  * Save setup as dfl
+  * Exit
+  * ^A Q (para salir)
+
+de ahí en más, 
+
+<code bash>
+$ minicom
+</code>
+
+opcionalmente, si cambia la ubicación de la placa o la velocidad
+
+<code bash>
+$ minicom -p /dev/ttyUSB1 -b 115200
+</code>
+
+
+
+==== Windows ====
+
+El puerto de conexión es algun COMx:
+
+=== teraterm ===
+
+  * Descargar [[http://logmett.com/tera-term-the-latest-version|TeraTerm]] e instalarlo.
+  * Menú File -> New Connection -> seleccionar la opción "Serial" y elegir el puerto COM correspondiente a la placa.
+  * Menú Setup -> Serial port -> configurar la velocidad en 115200
+
+=== putty ===
+  * La página de descarga es [[ http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html]]
+
+Con putty.exe alcanza, pero tambien puede ser conveniente bajar psftp.exe o directamente todo.
+
+Para conectarse a la placa hay que configurar:
+
+{{:imagenes:putty_config.jpg?400|}}
+
+Luego se puede guardar la configuración:
+
+{{:imagenes:putty_profile.jpg?400|}}
+
+
+==== Multiplataforma ====
+
+=== CoolTerm ===
+
+{{:imagenes:coolterm.png?300|}}
+
+  * Descargar de [[http://freeware.the-meiers.org/]]
+
+En linux puede hacer falta resolver dependencias, si no alcanza con
+
+<code bash>
+sudo apt-get install libicu52:i386
+</code>
+
+siga las instrucciones del sitio.
+
+Una vez funcionando, para configurar
+  * Options->
+    * Serial Port
+      * Port 
+      * Baudrate 
+    * Terminal
+      * Mode: Line
+
+
+
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:unit_tests</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,unit_tests"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:unit_tests&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:unit_tests.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:unit_tests"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:unit_tests.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:unit_tests","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:unit_tests.html#unit_tests_o_pruebas_unitarias">Unit Tests o Pruebas Unitarias</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:unit_tests.html#como_testear">Cómo testear</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:unit_tests.html#mocks">Mocks</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="unit_tests_o_pruebas_unitarias">Unit Tests o Pruebas Unitarias</h1>
+<div class="level1">
+
+<p>
+Esta página explica la estrategia de prueba (testing) de Unit Testing del firmware de la CIAA.
+</p>
+
+<p>
+La finalidad de los Unit Tests es que el programador pueda verificar de forma sencilla las funciones que acaba de programar. Hasta se puede hacer la práctica interesante de primero escribir los Unit Tests y luego la funcionalidad.
+</p>
+
+<p>
+Por cada archivo C se desean testear todas las funciones <strong>externas</strong> con Unit Tests, no las funciones <strong>internas</strong> (las cuales son definidas con el prefijo static). Las funciones internas, de existir, deben ser testeadas de forma indirecta utilizando las funciones externas.
+</p>
+
+<p>
+Puede encontrar más información sobre <a href="https://es.wikipedia.org/wiki/Prueba_unitaria" class="interwiki iw_wpes" target="_blank" title="https://es.wikipedia.org/wiki/Prueba_unitaria" rel="noopener">Unit Testing</a> en Wikipedia.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Unit Tests o Pruebas Unitarias&quot;,&quot;hid&quot;:&quot;unit_tests_o_pruebas_unitarias&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-746&quot;} -->
+<h2 class="sectionedit2" id="como_testear">Cómo testear</h2>
+<div class="level2">
+
+<p>
+Cada Módulo de ciaaFirmware contiene un directorio llamado <strong>tst</strong>, en este se encuentran los unit tests. Por cada archivo C hay un archivo con el mismo nombre del archivo .c a testear y el prefijo <strong>tst_</strong>.
+</p>
+
+<p>
+Como herramienta de ayuda para testear se va a utilizar <a href="http://www.throwtheswitch.org/ceedling" class="urlextern" target="_blank" title="http://www.throwtheswitch.org/ceedling" rel="ugc nofollow noopener">Ceedling</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;C\u00f3mo testear&quot;,&quot;hid&quot;:&quot;como_testear&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;747-1093&quot;} -->
+<h3 class="sectionedit3" id="un_ejemplo">Un ejemplo</h3>
+<div class="level3">
+
+<p>
+Por ejemplo si implementamos una función que suma dos números de 16 bits y retorna un número de 16 bits todos con signo y no sabemos si estamos en una arquitectura de 16 o 32 bits implementamos la siguiente función:
+</p>
+<pre class="code c"><span class="kw4">int16_t</span> sum16bits<span class="br0">&#40;</span><span class="kw4">int16_t</span> <span class="kw4">const</span> a<span class="sy0">,</span> <span class="kw4">int16_t</span> <span class="kw4">const</span> b<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw4">int16_t</span> ret<span class="sy0">;</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span><span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>a<span class="sy0">+</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>b<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>INT16_MAX<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      ret <span class="sy0">=</span> INT16_MAX<span class="sy0">;</span>
+   <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span><span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>a<span class="sy0">+</span><span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>b<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">&lt;</span> <span class="br0">&#40;</span><span class="kw4">int32_t</span><span class="br0">&#41;</span>INT16_MIN<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+      ret <span class="sy0">=</span> INT16_MIN<span class="sy0">;</span>
+   <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+     ret <span class="sy0">=</span> a <span class="sy0">+</span> b<span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+&nbsp;
+   <span class="kw1">return</span> ret<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+La función se encuentra por ejemplo en un archivo sum.c. En el subdirectorio tst creamos un archivo llamado tst_sum.c. El mismo contiene un código similar al anterior y tiene como finalidad probar la función que acabamos de escribir:
+</p>
+<pre class="code c">tst_sumNormal<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw4">int16_t</span> ret<span class="sy0">;</span>
+   ret <span class="sy0">=</span> sum16bits<span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">10</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   TEST_ASSERT_EQUAL_INT<span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">30</span><span class="sy0">,</span> ret<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+tst_sumOverflow<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw4">int16_t</span> ret<span class="sy0">;</span>
+   ret <span class="sy0">=</span> sum16bits<span class="br0">&#40;</span><span class="nu0">20000</span><span class="sy0">,</span> <span class="nu0">25000</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   TEST_ASSERT_EQUAL_INT<span class="br0">&#40;</span>INT16_MAX<span class="sy0">,</span> ret<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+tst_sumUnderflow<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw4">int16_t</span> ret<span class="sy0">;</span>
+   ret <span class="sy0">=</span> sum16bits<span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">10000</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">30000</span><span class="br0">&#41;</span><span class="sy0">;</span>
+   TEST_ASSERT_EQUAL_INT<span class="br0">&#40;</span>INT16_MIN<span class="sy0">,</span> ret<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+En este ejemplo tenemos una función sum16bits que tiene 3 paths (caminos) y en cada test testeamos uno. El resultado es que no probamos todas las opciones posibles (no testeamos por ejemplo si 4 + 2 = 6), pero al menos todos las declaraciones y sentencias del C. Esto es denominado 100% statement coverage. La meta es lograr al menos 100% statement coverage en los Unit Tests de ciaa Firmware.
+</p>
+
+<p>
+Si a alguien le interesó el tema y quiere investigar más, statement coverage es de los coverages más sencillos, para los sistemas críticos se suele utilizar:
+<a href="https://en.wikipedia.org/wiki/Modified_condition/decision_coverage" class="interwiki iw_wp" target="_blank" title="https://en.wikipedia.org/wiki/Modified_condition/decision_coverage" rel="noopener">MC/DC</a> (Modified condition/decision coverage).
+</p>
+
+</div>
+
+<h4 id="corriendo_los_unit_tests">Corriendo los Unit Tests</h4>
+<div class="level4">
+
+<p>
+Para ejecutar todos los unit test de un módulo por ejemplo posix se puede ejecutar:
+</p>
+<pre class="code">make tst_posix</pre>
+
+<p>
+Para ejecutar solo un unit test, por ejemplo para ciaaDevieces.c se puede ejecutar:
+</p>
+<pre class="code">make tst_posix_ciaaDevices</pre>
+
+<p>
+Recuerde que antes de correr los unit test se deben generar los mocks con
+</p>
+<pre class="code">make mocks</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Un ejemplo&quot;,&quot;hid&quot;:&quot;un_ejemplo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1094-3286&quot;} -->
+<h2 class="sectionedit4" id="mocks">Mocks</h2>
+<div class="level2">
+
+<p>
+Ahora, la función que acabamos de testear es muy sencilla, no llama a ninguna función. O sea, se puede probar independientemente de cualquier otro código. Es más la excepción que la regla.
+</p>
+
+<p>
+Un archivo C casi siempre tiene interfaces (funciones) que utiliza de otros archivos .c. Como la idea no es testear todo el software sino el software de un solo archivo, todas las funciones de otros archivos se van a Mockear (Simular) (<a href="https://es.wikipedia.org/wiki/Objeto_simulado" class="interwiki iw_wpes" target="_blank" title="https://es.wikipedia.org/wiki/Objeto_simulado" rel="noopener">Mock en Wikipedia</a>).
+</p>
+
+<p>
+Por ejemplo si implementamos y queremos testear la función ciaaPOSIX_open:
+</p>
+<pre class="code c"><span class="kw2">extern</span> ciaaPOSIX_open<span class="br0">&#40;</span>...<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+&nbsp;
+   <span class="coMULTI">/* code */</span>
+   ciaaDevices_getDevice<span class="br0">&#40;</span>...<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+Como podemos ver la función llama a ciaaDevices_getDevice() que no la implementamos en este archivo (unidad) y por ende no la queremos testear (al menos no ahora). Por ello lo que hacemos es hacer un Mock. La herramienta que se decidió utilizar en ciaaFirmware para hacer los Mocks y testear es <a href="http://throwtheswitch.org/white-papers/ceedling-intro.html" class="urlextern" target="_blank" title="http://throwtheswitch.org/white-papers/ceedling-intro.html" rel="ugc nofollow noopener">Ceedling</a>.
+</p>
+
+<p>
+Ceedling va a crear para cada función que llamamos un Mock, por ejemplo para la siguiente función:
+</p>
+<pre class="code c"><span class="kw4">uint8_t</span> ciaaDevices_getDevice<span class="br0">&#40;</span><span class="kw4">char</span> <span class="sy0">*</span> name<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+el Mock que va a crear serían 3 funciones (en realidad crea más, pero para simplificar el ejemplo):
+</p>
+<pre class="code c"><span class="kw4">int8_t</span> ciaaDevices_getDevice<span class="br0">&#40;</span><span class="kw4">char</span> <span class="sy0">*</span> name<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw4">void</span> ciaaDevices_getDevice_ExpectAndReturn<span class="br0">&#40;</span><span class="kw4">char</span><span class="sy0">*</span> name<span class="sy0">,</span> <span class="kw4">int8_t</span> toReturn<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw4">void</span> ciaaDevices_getDevice_IgnoreAndReturn<span class="br0">&#40;</span><span class="kw4">int8_t</span> toReturn<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+De esta forma cuando testeamos ciaaPOSIX_open() y esta llama a ciaaDevices_getDevice(), no llama realmente a la función ciaaDevices_getDevice() sino a nuestro Mock. Desde nuestro Mock podemos retornar cualquier error que queramos para poder ver como reacciona nuestra función a todo tipo de estímulo.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Mocks&quot;,&quot;hid&quot;:&quot;mocks&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:4,&quot;range&quot;:&quot;3287-5092&quot;} -->
+<h3 class="sectionedit5" id="ejemplo_utilizando_mocks">Ejemplo utilizando Mocks</h3>
+<div class="level3">
+
+<p>
+Por ejemplo podríamos hacer el siguiente test en un archivo tst/tst_ciaaPOSIX_stdio:
+</p>
+<pre class="code c">tst_ciaaPOSIX_openInvalidDevice<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="coMULTI">/* indicamos que cuando alguien llame a
+      ciaaDevices_getDevice la funcion retorne -1 */</span>
+   <span class="coMULTI">/* además verificamos que se llamo con el parametro
+      /test/device1 como nosotros llamamos a open */</span>
+   ciaaDevices_getDevice_ExpectAndReturn<span class="br0">&#40;</span><span class="st0">&quot;/test/device1&quot;</span><span class="sy0">,-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+   <span class="coMULTI">/* si ciaaDevices_getDevice no encuentra el device
+      retorna -1 y por ende tambien lo hace nuestra funcion */</span>
+   TEST_ASSERT_EQUAL_INT<span class="br0">&#40;</span>ciaaPOSIX_open<span class="br0">&#40;</span><span class="st0">&quot;/test/device1&quot;</span><span class="br0">&#41;</span><span class="sy0">,-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+tst_ciaaPOSIX_openCorrectDevice<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="coMULTI">/* indicamos que cuando alguien llame a
+      ciaaDevices_getDevice la funcion retorne 1 */</span>
+   <span class="coMULTI">/* además verificamos que se llamo con el parametro
+      /test/device2 como nosotros llamamos a open */</span>
+   ciaaDevices_getDevice_ExpectAndReturn<span class="br0">&#40;</span><span class="st0">&quot;/test/device2&quot;</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+   <span class="coMULTI">/* si ciaaDevices_getDevice encuentra el device
+      esperamos un file handler valido */</span>
+   TEST_ASSERT_TRUE<span class="br0">&#40;</span>ciaaPOSIX_open<span class="br0">&#40;</span><span class="st0">&quot;/test/device2&quot;</span><span class="br0">&#41;</span><span class="sy0">&gt;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+Como se puede observar, gracias al Mock, podemos testear nuestra funcionalidad, abstrayendo todo el resto del software. Así podemos simular de forma muy sencilla situaciones que serían mucho más complejas de simular en una situación real.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo utilizando Mocks&quot;,&quot;hid&quot;:&quot;ejemplo_utilizando_mocks&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:5,&quot;range&quot;:&quot;5093-6423&quot;} -->
+<h3 class="sectionedit6" id="creando_los_mocks">Creando los Mocks</h3>
+<div class="level3">
+
+<p>
+Para crear los mocks de todos los archivos el Makefile va a buscar todos los archivos .h y generar por cada uno un mock. Esto se realiza con el siguiente comando:
+</p>
+<pre class="code">make mocks</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Creando los Mocks&quot;,&quot;hid&quot;:&quot;creando_los_mocks&quot;,&quot;codeblockOffset&quot;:9,&quot;secid&quot;:6,&quot;range&quot;:&quot;6424-&quot;} --></div>
+</body>
+</html>

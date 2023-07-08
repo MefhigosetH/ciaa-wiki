@@ -1,0 +1,37 @@
+====== Ponchos CIAA ======
+
+{{https://raw.githubusercontent.com/ciaa/Ponchos/master/doc/logo_poncho_hd.png?nolink&150|Logo Ponchos }}
+{{ https://raw.githubusercontent.com/ciaa/Ponchos/master/doc/collage/collage_800x.jpg?nolink&300|}}
+
+###
+Llamamos “Ponchos” a los módulos que se conectan sobre algún procesador de la familia CIAA. El nombre “Poncho” se utiliza entre la comunidad del proyecto CIAA como sinónimo de “Shield” o placa de expansión.
+###
+
+###
+Estos módulos extienden la funcionalidad de alguna CIAA, EDU-CIAA, picoCIAA, etc., agregando el hardware necesario para distintas aplicaciones.
+###
+
+===== Ponchos existentes =====
+Existen varios Ponchos diseñados, que proveen distintas funcionalidades, como por ejemplo Poncho Osciloscopio, Poncho Robot Sumo, Poncho Interfaz de Usuario, Poncho Ethernet, Poncho FPGA, Poncho Biopotenciales, Ponchos educativos, Poncho Celda de Carga, Poncho Detector de Caídas, Poncho Wifi PicoCIAA, Poncho IoT y varios más. El listado completo y detallado de Ponchos puede accederse en [[desarrollo:ciaa:ponchos existentes|este enlace]].
+
+[[desarrollo:ciaa:ponchos existentes|{{ https://raw.githubusercontent.com/ciaa/Ponchos/master/doc/collage/collageh1000x.jpg?nolink&600 }}]]
+ 
+
+===== Desarrollo de nuevos Ponchos =====
+
+Existen varias ayudas y pautas que ahorrarán tiempo al momento de diseñar nuevos Ponchos. Si ud. está interesado en el diseño de un Poncho, consultar la siguiente página: 
+<note> [[desarrollo:ciaa:ponchos nuevos|Desarrollar un nuevo Poncho]] </note>
+
+
+
+===== ¿Cómo empezar? =====
+
+Si quiere visualizar o editar el diseño de los circuitos impresos y los diagramas esquemáticos de las placas entonces instale en su computadora la herramienta abierta multiplataforma [[http://www.kicad-pcb.org|Kicad]] que es la que se utiliza para diseñar las distintas placas de la familia CIAA.
+
+
+
+{{:imagenes:github_hardware_download.png?200 |}} Luego acceda al repositorio en [[https://github.com/ciaa/Ponchos|Github CIAA Ponchos]], seleccione "Clone or Download" y "Download ZIP", descomprima y tendrá una copia local.
+
+En la línea de comandos, para obtener el repositorio localmente es:
+
+   git clone https://github.com/ciaa/Ponchos

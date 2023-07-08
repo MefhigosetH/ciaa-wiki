@@ -1,0 +1,23 @@
+====== Soporte Teclado matricial: Clase Keyboard ======
+
+  import pyb
+  
+  keyboard = pyb.Keyboard(4,4) #4 rows, 4 columns
+  print(keyboard)
+  
+  while True:
+    key = keyboard.get_char()
+    print("key:"+str(key))
+
+El constructor recibe la cantidad de filas y columnas que se sensan. El método "get_char" se quedará esperando que se presione una tecla, se devolverá un byte en donde los 4 bits de más peso corresponden con el número de fila y los 4 bits de menor peso corresponden con el número de columna. También puede utilizarse el método "get_matrix" el cual no es bloqueante y devolverá 0xFF si ninguna tecla es presionada.
+
+Los pines que su utilizan para conectar el teclado son los marcados con los siguientes nombres:
+
+  * T_FIL0
+  * T_FIL1
+  * T_FIL2
+  * T_FIL3
+  * T_COL0
+  * T_COL1
+  * T_COL2
+  * GPIO8 (T_COL_3)

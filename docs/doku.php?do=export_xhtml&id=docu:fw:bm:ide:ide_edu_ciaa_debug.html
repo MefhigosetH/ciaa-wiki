@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:ide:ide_edu_ciaa_debug</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,ide,ide_edu_ciaa_debug"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:ide"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:ide';var JSINFO = {"id":"docu:fw:bm:ide:ide_edu_ciaa_debug","namespace":"docu:fw:bm:ide","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug.html#debug_con_la_placa_edu-ciaa_y_el_entorno_ide">Debug con la placa EDU-CIAA y el Entorno IDE</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug.html#configuracion_del_entorno_ciaa-ide">Configuración del entorno CIAA-IDE</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug.html#compilando_el_proyecto">Compilando el proyecto</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_edu_ciaa_debug.html#configuracion_de_openocd_para_debug">Configuración de OpenOCD para Debug</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+<div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_win_debug" data-wiki-id="docu:fw:bm:ide:ide_win_debug">Debug con Windows </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:woide.html" class="wikilink1" title="docu:fw:bm:woide" data-wiki-id="docu:fw:bm:woide">Trabajando sin IDE </a> →</div></div>
+<h1 class="sectionedit1" id="debug_con_la_placa_edu-ciaa_y_el_entorno_ide">Debug con la placa EDU-CIAA y el Entorno IDE</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debug con la placa EDU-CIAA y el Entorno IDE&quot;,&quot;hid&quot;:&quot;debug_con_la_placa_edu-ciaa_y_el_entorno_ide&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-59&quot;} -->
+<h2 class="sectionedit2" id="configuracion_del_entorno_ciaa-ide">Configuración del entorno CIAA-IDE</h2>
+<div class="level2">
+<p class="divalign-justify">Si estuviste compilando para hacer debug en Windows y ahora quieres probar con la placa EDU-CIAA, lo primero que tienes que hacer es un <strong>Clean Project</strong>. Todos los archivos generados en Builds anteriores, fueron para el CPU de tu PC, y no para el micro controlador de la EDU-CIAA.
+<p>
+Para que el Makefile reconozca que se quiere compilar para la placa EDU-CIAA, debes modificar el archivo Makefile.mine. Los posibles valores de la variable BOARD son:
+</p>
+<ul>
+<li class="level1"><div class="li"> ciaa_sim_ia32           ⇐ Es el valor definido por default para x86</div>
+</li>
+<li class="level1"><div class="li"> ciaa_sim_ia64</div>
+</li>
+<li class="level1"><div class="li"> <strong>edu_ciaa_nxp</strong>        ⇐ Es el que identifica a la placa EDU-CIAA</div>
+</li>
+<li class="level1"><div class="li"> ciaa_nxp</div>
+</li>
+<li class="level1"><div class="li"> ciaa_fsl</div>
+</li>
+<li class="level1"><div class="li"> ciaa_pic</div>
+</li>
+</ul>
+</p><!--divalign-->
+
+<p>
+<br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del entorno CIAA-IDE&quot;,&quot;hid&quot;:&quot;configuracion_del_entorno_ciaa-ide&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;60-772&quot;} -->
+<h2 class="sectionedit3" id="compilando_el_proyecto">Compilando el proyecto</h2>
+<div class="level2">
+<p class="divalign-justify">Una vez configurada la variable de entorno, debes compilar el proyecto. Como podrás ver en la imagen siguiente, la extensión del archivo generado ya no es .exe sino <strong>.axf</strong>. Si esto no es así, vuelve al paso anterior, y verifica no tener errores de tipeo el valor cargado en la variable BOARD. No te recomendamos que cambies el Makefile a mano, si lo hiciste, restáuralo a su versión original, y sólo modifica el archivo Makefile.mine.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;media=docu:fw:bm:ide:buildokeduciaa.png.html" class="media" title="docu:fw:bm:ide:buildokeduciaa.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:buildokeduciaa.png" class="media" loading="lazy" alt="" /></a>
+<br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilando el proyecto&quot;,&quot;hid&quot;:&quot;compilando_el_proyecto&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;773-1302&quot;} -->
+<h2 class="sectionedit4" id="configuracion_de_openocd_para_debug">Configuración de OpenOCD para Debug</h2>
+<div class="level2">
+<p class="divalign-justify">Durante la instalación del CIAA-IDE, además de instalarse los drivers para la conexión de la placa, se han instalado las herramientas para Debug. Se utilizará OpenOCD  para hacer el nexo JTAG-GDB mediante la conexión USB. 
+Lo primero que debemos hacer es abrir la consola cygwin y pararnos en el directorio Firmware:
+<pre class="code">cd /cygdrive/c/Ciaa/Firmware</pre>
+
+<p>
+Luego debemos ejecutar el comando:
+</p>
+<pre class="code">make openocd</pre>
+
+<p>
+Se debería ver como se muestra a continuación:
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;media=docu:fw:bm:ide:makeopenocd.jpg.html" class="media" title="docu:fw:bm:ide:makeopenocd.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:makeopenocd.jpg" class="media" loading="lazy" alt="" /></a>
+</p>
+</p><!--divalign-->
+
+<p>
+No cerrar esta ventana ya que eclipse utilizará el servicio que está corriendo para poder hacer debug en nuestra placa.
+</p>
+<p class="divalign-justify">Finalmente, desde el menu &#039;Run⇒Debug Configurations…&#039; se debe crear una nueva &#039;debug configuration&#039; del tipo &#039;GDB OpenOCD Debugging&#039;. Una vez hecho esto, colocar los siguientes valores:</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;media=docu:fw:bm:ide:debugopenocd.jpg.html" class="media" title="docu:fw:bm:ide:debugopenocd.jpg"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:debugopenocd.jpg" class="media" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug&amp;media=docu:fw:bm:ide:debugopenocd2.png.html" class="media" title="docu:fw:bm:ide:debugopenocd2.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:debugopenocd2.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Si tienes una Placa EDU-CIAA “Virgen”, cuya flash nunca ha sido programada, o si por algún motivo se ha borrado completamente la flash del microcontrolador, es posible que al intentar iniciar una sesión de Debug, el CIAA-IDE te muestre un error. Para poder iniciar la sesion de debug, te recomendamos sigas las instrucciones de la pagina <a href="./doku.php%3Fid=desarrollo:hardware:primeros_pasos.html" class="wikilink1" title="desarrollo:hardware:primeros_pasos" data-wiki-id="desarrollo:hardware:primeros_pasos">Primeros pasos con el Hardware de la CIAA</a>. </p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de OpenOCD para Debug&quot;,&quot;hid&quot;:&quot;configuracion_de_openocd_para_debug&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1303-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_win_debug" data-wiki-id="docu:fw:bm:ide:ide_win_debug">Debug con Windows </a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:ide.html" class="wikilink1" title="docu:fw:bm:ide" data-wiki-id="docu:fw:bm:ide">IDE </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:woide.html" class="wikilink1" title="docu:fw:bm:woide" data-wiki-id="docu:fw:bm:woide">Trabajando sin IDE </a> →</div></div></div>
+</body>
+</html>

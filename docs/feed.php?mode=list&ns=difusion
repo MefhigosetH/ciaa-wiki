@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> difusion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T14:59:37+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:agenda&amp;rev=1429848249&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:premios&amp;rev=1435943860&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:sidebar&amp;rev=1485973100&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:videos_demostraciones&amp;rev=1441825585&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:agenda&amp;rev=1429848249&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T04:04:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>difusion:agenda</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:agenda&amp;rev=1429848249&amp;do=diff</link>
+        <description>Próximos eventos de la CIAA
+
+
+
+----------
+
+Suscribite a la agenda de eventos de la CIAA en Google.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:premios&amp;rev=1435943860&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-03T17:17:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>difusion:premios</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:premios&amp;rev=1435943860&amp;do=diff</link>
+        <description>Premios y Reconocimientos al Proyecto CIAA
+En esta página encontrará todos los premios y reconocimientos que recibió el Proyecto Computadora Industrial Abierta Argentina desde sus inicios.
+Reconocen en la Regional Buenos Aires de la UTN a tres integrantes del Proyecto CIAA</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:sidebar&amp;rev=1485973100&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T18:18:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>difusion:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:sidebar&amp;rev=1485973100&amp;do=diff</link>
+        <description>Acerca de la CIAA
+
+ Inicio
+
+ Origen del proyecto
+
+ Propuesta innovadora
+
+ Coordinación del proyecto
+
+ Grupos de trabajo
+
+ Licencia BSD de la CIAA
+
+
+Vinculación y Prensa
+
+ Red de contactos locales (63)
+
+ Vídeos y Demostraciones
+
+ La CIAA en los Medios
+
+ Gobierno y Entidades
+
+ Visitas a Empresas
+
+ Premios y Reconocimientos
+
+ Agenda de Eventos
+
+
+Industria
+
+ La CIAA en la Industria:
+
+ Robusta y confiable
+
+ Empresas utilizando la CIAA
+
+ Versiones de la CIAA:
+
+ CIAA-Safety NEW 
+
+ CIAA-FSL
+
+ CIAA-INTEL…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:videos_demostraciones&amp;rev=1441825585&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-09T19:06:25+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>difusion:videos_demostraciones</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=difusion:videos_demostraciones&amp;rev=1441825585&amp;do=diff</link>
+        <description>Vídeos y demostraciones de la CIAA
+
+En nuestro canal de YouTube podés ver vídeos y demostraciones de la CIAA en distintas aplicaciones:
+
+	*  [YouTube] /user/proyectociaa 
+
+Cada vez que un nuevo vídeo esté disponible, lo anunciaremos a través de nuestras cuentas en Facebook y Twitter:</description>
+    </item>
+</rdf:RDF>

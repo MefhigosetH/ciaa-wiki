@@ -1,0 +1,77 @@
+====== Instalación OpenOCD ======
+
+
+===== Linux =====
+
+Descargar, descomprimir y compilar OpenOCD:
+
+
+<code bash>
+cd ~/ciaa-ide
+wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+tar -xvjf openocd-0.9.0.tar.bz2
+cd openocd-0.9.0
+./configure --enable-ftdi 
+make
+</code>
+
+Copiar los permisos de OpenOCD en las reglas de udev y reiniciar el servicio:
+<code bash>
+sudo cp contrib/99-openocd.rules /etc/udev/rules.d/
+sudo service udev restart
+</code>
+
+Si ya ha [[repo:uso:git_clone|clonado el repositorio de firmware]], [[repo:conexion:edu_ciaa_nxp|conectar mediante USB DEBUG]]. Si estaba conectada, desconectarla y volver a conectarla. Luego, probar OpenOCD:
+<code bash>
+./src/openocd -f ~/ciaa-ide/workspaces/Firmware/modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg
+</code>
+
+Debería verse lo siguiente:
+<code>
+Open On-Chip Debugger 0.9.0 (2015-05-12-12:27)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect 'jtag'
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints
+</code>
+(ctrl+c para terminar)
+
+===== Windows =====
+
+<note important>PARTE DE ESTO VA A SU PROPIA SECCIÓN "DRIVERS"</note>
+
+Para descargar el OpenOCD compilado y listo para utilizar (actualmente la versión 0.9.0), puede irse a la zona de descargas de la web de [[http://www.freddiechopin.info/en/download|freddiechopin]] o directamente descargarse del siguiente [[http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0|link]]
+
+Al momento de instalar los drivers, debe tenerse en cuenta que funcionará como 2 dispositivos distintos, y por lo tanto cada uno tendrá un driver asociado. Lo primero es instalar los [[http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip|drivers por defecto del fabricante FTDI para puerto virtual (VCP)]]. En el Administrador de Dispositivos deberían aparecer 2 nuevos puertos COM, tal como sigue:
+
+
+
+
+
+{{desarrollo:firmware:FT2232H_FTDI_Devices.png|Captura.}}\\
+
+Luego para el canal A (también aparece como 'Converter A' o 'Interface 0'), debe reemplazarse el driver actual de FTDI por otro llamado WinUSB utilizando la aplicación [[http://zadig.akeo.ie|zadig]] para la versión de Win correspondiente, para que OpenOCD pueda funcionar correctamente. Debe ir al menú 'Options⇒List All Devices', elegir 'USB Serial Converter A' y cambiar el driver nuevo a 'WinUSB', para luego hacer click en 'Reinstall Driver', tal como se ve aquí:
+
+{{desarrollo:firmware:driver_WinUSB_zadig_FT2232H.png|Captura.}}\\
+
+Finalmente 1 de los 2 puertos COM virtuales debería desaparecer, y se crea un dispositivo USB nuevo cuyo driver dejó de ser el de FTDI, quedando todo de la siguiente manera:
+
+{{desarrollo:firmware:driver_WinUSB_DevManager.png|Captura.}}\\
+
+<note important>
+**Nota:** Si Falla Zadig, mostrando el mensaje "The driver installation failed." entonces intente bajando una versión anterior de Zadig en el siguiente link: [[http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download]]
+
+Esta solución fue encontrada en: [[https://github.com/pbatard/libwdi/issues/1]]
+</note>
+
+===== OSX =====
+
+<note important>Completar</note>

@@ -1,0 +1,112 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias ======
+
+{{ :blanco.png?10 | }}
+
+===== ¿Por qué se eligió el Proyecto del Monitor de Barreras Ferroviarias? =====
+
+###
+En la página de [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion|Contexto y Motivación]] se explica por qué se tomó la decisión de hacer el desarrollo e implementación de un sistema ferroviario relacionado con aplicaciones de seguridad. En esa página se explica por qué entre todos los proyectos posibles se eligió al Monitor de Barreras.
+###
+
+###
+La elección del proyecto a realizar fue coordinada por investigadores de la Universidad de Buenos Aires y la Universidad Nacional de Catamarca, quienes consultaron a profesionales de [[http://www.brfsa.com.ar/|Benito Roggio Ferroindustrial]] y a autoridades de la [[http://www.cnrt.gov.ar/institucional|Comisión Nacional de Regulación del Transporte]], y también a expertos certificados en Sistemas Criticos por [[http://www.tuvasi.com/en/trainings-and-workshops/tuev-rheinland-functional-safety-program|TÜV Reinhald]] y a ingenieros con experiencia en el diseño de sistemas ferroviarios en la Unión Europea.
+###
+
+###
+En este marco se propusieron tres posibles proyectos: 
+###
+
+  * **Sistema de hombre vivo**: que consiste en un sistema electrónico que permite detectar si el conductor del ferrocarril está atendiendo adecuadamente a su tarea. [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunsistemadehombrevivo|Ver más información]].
+  * **Controlador de velocidad**: que es un equipo que detiene el ferrocarril si este supera el límite máximo de velocidad establecido. [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesuncontroladordevelocidad|Ver más información]].
+  * **Monitor de barreras**: es un sistema que determina el estado general de la barrera (posición del brazo, temperatura del motor, carga de la batería, etc.). [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias|Ver más información]].
+
+###
+Para decidir cuál de los sistemas propuestos habría de desarrollarse se propuso utilizar un índice que se denominó "PIPE", en correspondencia con las iniciales de cuatro indicadores que fueron evaluados:
+###
+
+  * **P**robabilidad de éxito 
+  * **I**mpacto
+  * **P**lazo para estar operativo
+  * **E**sfuerzo requerido
+
+###
+El índice propuesto implica multiplicar (Probabilidad de éxito) * (Impacto) * (Plazo para estar operativo) * (Esfuerzo requerido) tal como se muestra en la siguiente tabla:
+###
+
+|  | Probabilidad\\ de éxito | Impacto | Plazo\\ para estar\\ operativo | Esfuerzo\\ requerido | Indicador\\ PIPE |
+| Sistema de hombre vivo  | 5 | 9 | 6 | 5 | 1350 |
+| Control de velocidad	  | 4 | 8 | 4 | 3 | 384 |
+| Monitor de barreras     | 7 | 7 | 8 | 7 | 2744 |
+
+###
+Se observa que el Monitor de Barreras es la aplicación que obtiene mayor puntaje. En puntaje en cada uno de los indicadores se obtuvo aplicando los siguientes criterios:
+###
+
+| **Probabilidad de éxito** - Descripción del indicador | Asignación de puntaje ||	
+| Es una medida de cuan factible es que se logre la \\ implementación exitosa del sistema, considerando \\ por ejemplo que esta implementación dependa de la \\ autorización de agentes externos, de la certificación \\ o de cualquier tipo de factor ajeno al equipo de desarrollo | Muy Alta | 9 a 10 |
+| ::: | Alta | 7 a 8 |
+| ::: | Media | 6 a 7 |
+| ::: | Baja | 4 a 5 |
+| ::: | Muy Baja | 1 a 3 |
+
+| **Impacto** - Descripción del indicador | Asignación de puntaje ||						
+| Es una medida de cuan importante es el impacto que \\ se obtendría, en términos de difusión pública o en el \\ ecosistema de los sistemas embebidos, o en cuanto a la \\ posibilidad de ayudar a que más usuarios utilicen la \\ CIAA-SAFETY, o conseguir fondos para fabricar \\ prototipos. | Muy Alto | 9 a 10 |
+| ::: | Alto | 7 a 8 |
+| ::: | Medio | 6 a 7 |
+| ::: | Bajo | 4 a 5 |
+| ::: | Muy Bajo | 1 a 3 |
+
+| **Plazo para estar Operativo** - Descripción del indicador | Asignación de puntaje ||
+| Es una estimación de cuanto tiempo puede demorarse \\ en tener el sistema funcionando en un caso real de \\ aplicación. | 1 a 6 meses | 9 a 10 |
+| ::: | 7 a 12 meses | 7 a 8 |
+| ::: | 12 a 18 meses | 6 a 7 |
+| ::: | 18 a 30 meses | 4 a 5 |
+| ::: | 30 a 48 meses | 1 a 3 |
+
+| **Esfuerzo Requerido** - Descripción del indicador | Asignación de puntaje ||	
+| Es una medida del esfuerzo requerido tanto en horas \\ de trabajo (sean remunearadas u honorarias) y/o \\ construcción de los prototipos, documentación, \\ instalación y pruebas. | Muy Bajo | 9 a 10 |
+| ::: | Bajo | 7 a 8 |
+| ::: | Medio | 6 a 7 |
+| ::: | Alto | 4 a 5 |
+| ::: | Muy Alto| 1 a 3 |
+
+###
+La justificación de cada uno de los puntajes otorgados en cada caso se presenta a continuación:
+###
+
+| **Sistema de hombre vivo** | Puntaje | Justificación |
+| Probabilidad de éxito  | 5       | Requiere aprobación para implementar el sistema |
+| Impacto                | 9       | Porque se logró implementar el sistema en un tren o en otro ámbito (Ej: maquinaria agrícola) |
+| Plazo para estar operativo        | 6       | Se requiere tiempo de instalación a bordo de las formaciones, en tiempos reducidos |
+| Esfuerzo requerido     | 5 | Se requiere tiempo de instalación a bordo de las formaciones, en tiempos reducidos |
+
+
+| **Controlador de velocidad** | Puntaje | Justificación |
+| Probabilidad de éxito	| 4 | Requiere aprobación para implementar el sistema |
+| Impacto | 8 | Porque se logró implementar el sistema en un tren |
+| Plazo operativo | 4 | Se requiere la instalación de TAGs en la vía y equipamiento a bordo en franjas horarias reducidas |
+|Esfuerzo requerido | 3 | Se requiere la instalación de TAGs en la vía y equipamiento a bordo en franjas horarias reducidas |
+
+| **Monitor de barreras** | Puntaje | Justificación |
+| Probabilidad de éxito | 7 | La implementación del sistema no depende de ninguna autorización |
+| Impacto | 7 | Dado que se puede poner en muchos pasos a nivel tendría mucha visibilidad |
+| Plazo operativo | 8 | No es necesario trabajar arriba de los trenes y se hace en cualquier horario |
+| Esfuerzo requerido | 7 | No es necesario trabajar arriba de los trenes y se hace en cualquier horario |
+
+### 
+A su vez, considerando el contexto de trabajo, en el cual se pretenda llegar a desarrollar un Controlador de Barreras en el marco del [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion|Proyecto UBA-PDE Nº23]] se entiende que el desarrollo de un Monitor de Barreras es un paso previo adecuado, ya que para poder controlar el sistema antes es necesario conocer su estado.
+###
+
+###
+Finalmente, es importante resaltar que lo conceptos que se aplicarán en el presente proyecto pueden ser adaptados y utilizados en otros campos de aplicación con niveles de criticidad similares. Justamente, el principal objetivo que se persigue con este proyecto es ganar experiencia en el desarrollo de sistemas para aplicaciones críticas de acuerdo con normas internacionales reconocidas, para luego documentar lo aprendido de modo que pueda ser útil para que otros interesados puedan desarrollar soluciones para las aplicaciones que sean de su interés.
+###
+
+###
+Habiendo decidido en forma justificada qué proyecto desarrollar, se procede a realizar los primeros pasos del Diseño e Implementación del Monitor de Barreras.
+###
+
+{{ :blanco.png?20 | }}
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio|Ir a la página de Inicio del Diseño e Implementación del Monitor de Barreras]] ]
+### 

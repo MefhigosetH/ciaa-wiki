@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:edu-ciaa</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:00:51+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:asignacion_codigos_ponchos&amp;rev=1444274411&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu_ciaa_xilinx&amp;rev=1447288283&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-fsl&amp;rev=1469489956&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-intel&amp;rev=1430920573&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp&amp;rev=1489923725&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho&amp;rev=1444274634&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:formulario_modelo_nuevos_ponchos&amp;rev=1446081311&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:poncho_ui&amp;rev=1485973270&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos_modelos&amp;rev=1446087692&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos&amp;rev=1485973547&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:uso_de_templates_de_kicad&amp;rev=1444274148&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:asignacion_codigos_ponchos&amp;rev=1444274411&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-08T03:20:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:asignacion_codigos_ponchos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:asignacion_codigos_ponchos&amp;rev=1444274411&amp;do=diff</link>
+        <description>Alternativas para discutir:
+
+OPCION1 PARA NUMERACION
+
+Un simple número de orden de tres o cuatro dígitos: 0001, 0002, etc.
+
+OPCION2 PARA NUMERACION
+
+Que además del nro de orden se indiquen con letras algunas de las características. Ejemplo:
+
+	*  000: Tres dígitos para el nro de orden. Es único para cada poncho.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu_ciaa_xilinx&amp;rev=1447288283&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-12T00:31:23+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu_ciaa_xilinx</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu_ciaa_xilinx&amp;rev=1447288283&amp;do=diff</link>
+        <description>EDU-CIAA-xilinx
+
+La placa EDU-CIAA-xilinx surge con la misma filosofía de la EDU-CIAA-nxp y es una plataforma de bajo costo para el aprendizaje de los sistemas embebidos implementados con softcores sobre FPGA.
+Esta plataforma permite la enseñanza, aprendizaje y experimentación en áreas tales como:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-fsl&amp;rev=1469489956&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-25T23:39:16+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-fsl&amp;rev=1469489956&amp;do=diff</link>
+        <description>EDU-CIAA-FSL
+La EDU-CIAA-FSL es una versión de bajo costo de la CIAA-FSL pensada para la enseñanza universitaria, terciaria y secundaria.
+
+
+Bloques funcionales
+
+La EDU-CIAA-FSL fue desarrollada teniendo en cuenta el diseño de la CIAA-FSL y considerando compatibilidad y  bloques funcionales de la EDU-CIAA-NXP.
+Por lo tanto su microcontrolador es</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-intel&amp;rev=1430920573&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-05-06T13:56:13+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-intel</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-intel&amp;rev=1430920573&amp;do=diff</link>
+        <description>EDU-CIAA-INTEL
+
+
+
+Descripción
+
+La EDU-CIAA-INTEL es una plataforma de desarrollo de bajo costo basada en el SoM Edison, cuyas características son:
+
+	*  CPU: Dual-core, dual-threaded Intel® Atom™ CPU at 500 MHz and a 32-bit Intel® Quark™ microcontroller at 100</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp&amp;rev=1489923725&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-03-19T11:42:05+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp&amp;rev=1489923725&amp;do=diff</link>
+        <description>EDU-CIAA-NXP
+La EDU-CIAA-NXP es una versión de bajo costo de la CIAA-NXP pensada para la enseñanza universitaria, terciaria y secundaria.
+
+
+Información adicional sobre el desarrollo de la EDU-CIAA-NXP
+
+	*   Propósito, alcance, objetivos y requerimientos EDU-CIAA-NXP. 
+				*   Desarrolladores, colaboradores y gestión de proyecto de la EDU-CIAA-NXP
+				*  Fotos del proceso de ensamblaje de la EDU-CIAA-NXP
+
+Bloques funcionales
+
+La EDU-CIAA está basada en la CIAA-NXP, por ser la primera versión de l…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho&amp;rev=1444274634&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-08T03:23:54+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho&amp;rev=1444274634&amp;do=diff</link>
+        <description>Especificaciones y recomendaciones para desarrollar un Pocho
+
+Se documenta aquí toda la información necesaria para desarrollar un nuevo Poncho.
+
+Conectores
+
+	*  Las EDU-CIAA utiliza dos conectores de 20×2 , con un paso 100 mils (2,54mm).
+	*  En la EDU-CIAA se recomienda soldar el conector hembra, vertical.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:formulario_modelo_nuevos_ponchos&amp;rev=1446081311&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-29T01:15:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:formulario_modelo_nuevos_ponchos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:formulario_modelo_nuevos_ponchos&amp;rev=1446081311&amp;do=diff</link>
+        <description>DATOS DE ENTRADA DE DISEÑO POCHOS EDU-CIAA
+ NOMBRE DEL PONCHO:  Colocar nombre del Poncho RESPONSABLE DE DISEÑO:  Juan   eMAIL: juan@email.com  SUB-RESPONSABLE:  Pedro  eMAIL:  pedro@email.edu  PARTICIPANTES:  Miguel   eMAIL:  miguel@gmail.com 
+Se deben definir los requerimientos antes de comenzar el trabajo ya que los mismos se convertirán en entradas de diseño contra la cuales luego se podrán evaluar/verificar los resultados obtenidos. Aún aunque se trate de un proyecto final, es aconsejable  …</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:poncho_ui&amp;rev=1485973270&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T18:21:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:poncho_ui</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:poncho_ui&amp;rev=1485973270&amp;do=diff</link>
+        <description>Poncho &quot;Interfaz de Usuario&quot; (compatible con EDU-CIAA-NXP)
+Es el primer Poncho para la EDU-CIAA-NXP desarrollado por Martín de Almeida, Leonel Caraccioli y Eric Pernia.Este módulo permite darle una cara más amigable a la EDU-CIAA, logrando una experiencia de usuario más interactiva. Cuenta con un teclado matricial de</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos_modelos&amp;rev=1446087692&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-29T03:01:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:ponchos_modelos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos_modelos&amp;rev=1446087692&amp;do=diff</link>
+        <description>Ponchos Modelo
+
+Se trata de un conjunto de Ponchos de diferentes tamaños que pueden usarse como TEMPLATES de Kicad, que utilizan bibliotecas que facilitan la creación de un Poncho y con textos instructivos que indican las acciones necesarias para documentar adecuadamente el diseño. 
+Estos ponchos están pensados para colocar SOBRE la EDU-CIAA, pero se pueden adaptar fácilmente para colocarlos debajo (chiripá), ya que son menores las restricciones porque no interesan las ubicaciones de leds y puls…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos&amp;rev=1485973547&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T18:25:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:ponchos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:ponchos&amp;rev=1485973547&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:uso_de_templates_de_kicad&amp;rev=1444274148&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-08T03:15:48+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:uso_de_templates_de_kicad</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:uso_de_templates_de_kicad&amp;rev=1444274148&amp;do=diff</link>
+        <description>Templates de KICAD
+
+Los templates de Kicad permiten iniciar un diseño copiando un diseño de base y cambiando los nombres de archivos según el nuevo proyecto.
+
+En su forma más básica de uso los pasos son los siguientes:
+
+	*  Bajarse los templates (Directorio</description>
+    </item>
+</rdf:RDF>

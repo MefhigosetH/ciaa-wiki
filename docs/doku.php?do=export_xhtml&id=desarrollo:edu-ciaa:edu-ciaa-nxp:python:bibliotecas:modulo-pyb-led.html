@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-led"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_ledsclase_led">Soporte Leds: Clase LED</h1>
+<div class="level1">
+
+<p>
+La clase LED permite la creación de objetos que representan los LEDs que posee la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte Leds: Clase LED&quot;,&quot;hid&quot;:&quot;soporte_ledsclase_led&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-131&quot;} -->
+<h3 class="sectionedit2" id="constructor">Constructor</h3>
+<div class="level3">
+
+<p>
+La clase posee un constructor que recibe un solo argumento, este argumento es el número de LED que controlará.
+</p>
+
+<p>
+Números de leds disponibles: de 1 a 6:
+</p>
+<ul>
+<li class="level1"><div class="li"> 1: Led 1</div>
+</li>
+<li class="level1"><div class="li"> 2: Led 2</div>
+</li>
+<li class="level1"><div class="li"> 3: Led 3</div>
+</li>
+<li class="level1"><div class="li"> 4: Led RGB (Red)</div>
+</li>
+<li class="level1"><div class="li"> 5: Led RGB (Green)</div>
+</li>
+<li class="level1"><div class="li"> 6: Led RGB (Blue)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Constructor&quot;,&quot;hid&quot;:&quot;constructor&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;132-415&quot;} -->
+<h3 class="sectionedit3" id="metodos">Métodos</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> on(): Enciende el LED</div>
+</li>
+<li class="level1"><div class="li"> off(): Apaga el LED</div>
+</li>
+<li class="level1"><div class="li"> toggle(): Invierte el estado del LED</div>
+</li>
+<li class="level1"><div class="li"> value(): Devuelve el estado del LED (True o False)</div>
+</li>
+<li class="level1"><div class="li"> intensity(value): Solo válido para los 3 leds RGB. Recibe como argumento un número de 0 a 15 y configura la intensidad de brillo del LED. Esto permitirá formar diferentes colores.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00e9todos&quot;,&quot;hid&quot;:&quot;metodos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;416-769&quot;} -->
+<h3 class="sectionedit4" id="ejemplo_blinky">Ejemplo Blinky</h3>
+<div class="level3">
+<pre class="code">import pyb
+led1 = pyb.LED(1)
+while True:
+    led1.on()
+    pyb.delay(1000)
+    led1.off()
+    pyb.delay(1000)  </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo Blinky&quot;,&quot;hid&quot;:&quot;ejemplo_blinky&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;770-&quot;} --></div>
+</body>
+</html>

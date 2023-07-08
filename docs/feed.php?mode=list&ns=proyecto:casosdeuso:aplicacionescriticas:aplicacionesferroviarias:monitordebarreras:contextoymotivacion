@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:20:34+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;rev=1473349042&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion&amp;rev=1473347522&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias&amp;rev=1473348951&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias&amp;rev=1473347248&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesuncontroladordevelocidad&amp;rev=1473347559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias&amp;rev=1473347581&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunsistemadehombrevivo&amp;rev=1473347612&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;rev=1473349042&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:37:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;rev=1473349042&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias
+
+[ ]
+
+¿Cuál es el primer paso?
+Habiendo explicado el contexto y motivación en el que surge este proyecto, y habiendo justificado la elección del Monitor de Barreras como el primer desarrollo a realizar, el primer paso para avanzar con el desarrollo de este sistema consiste en elegir que normas se seguirán en su desarrollo.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion&amp;rev=1473347522&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:12:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion&amp;rev=1473347522&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias
+
+[ ]
+
+¿Por qué se eligió el Proyecto del Monitor de Barreras Ferroviarias?
+En la página de Contexto y Motivación se explica por qué se tomó la decisión de hacer el desarrollo e implementación de un sistema ferroviario relacionado con aplicaciones de seguridad. En esa página se explica por qué entre todos los proyectos posibles se eligió al Monitor de Barreras.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias&amp;rev=1473348951&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:35:51+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias&amp;rev=1473348951&amp;do=diff</link>
+        <description>Normativa asociada al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad
+
+
+
+[ ]
+En la República Argentina no existe un cuerpo de normas obligatorias a cumplir para el diseño de sistemas o subsistemas destinados a seguridad funcional electrónica en usos ferroviarios. Por ello se debe recurrir a normas internacionales de referencia, centrándose la atención en dos grandes grupos, las europeas y las norteamericanas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias&amp;rev=1473347248&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:07:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias&amp;rev=1473347248&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias
+
+[ ]
+
+¿Por qué es tan difícil y tiene tanto valor diseñar e implementar un sistema crítico para aplicaciones ferroviarias?
+El mal diseño de un sistema ferroviario puede derivar en accidentes con cientos de victimas fatales y miles de heridos</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesuncontroladordevelocidad&amp;rev=1473347559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:12:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesuncontroladordevelocidad</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesuncontroladordevelocidad&amp;rev=1473347559&amp;do=diff</link>
+        <description>Tecnología de control de velocidad en vehículos de transporte ferroviario
+
+
+
+[ ]
+
+Los circuitos de vía
+La tecnología de control de velocidad en vehículos de transporte ferroviario está basada en circuitos de vía. 
+El circuito de vía como método primario de detección de presencia de trenes fue inventado a finales del siglo XIX y su primera aplicación estuvo basada en tecnología de corriente directa (CD). A través de los años, el progreso continuo de la técnica ha permitido desarrollar circuitos d…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias&amp;rev=1473347581&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:13:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias&amp;rev=1473347581&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias
+
+[ ]
+
+¿En qué consiste un sistema Monitor de Barreras Ferroviarias?
+El sistema de accionamiento de barreras es un mecanismo utilizado para accionar los brazos de barrera colocados en posición horizontal o vertical (brazo BAJO o brazo ALTO). Dicho brazo adopta la horizontal para bloquear el paso a nivel al tránsito automotor al aproximarse un tren y una vez liberado el cruce de la presencia de trenes, se alza nuevamente.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunsistemadehombrevivo&amp;rev=1473347612&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:13:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunsistemadehombrevivo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:queesunsistemadehombrevivo&amp;rev=1473347612&amp;do=diff</link>
+        <description>Sistemas de alerta para la operación de material ferroviario rodante
+
+
+
+[ ]
+
+Sistema de hombre muerto
+El sistema de protección instalado en el material rodante ferroviario denominado “Sistema de Hombre Muerto” es un sistema de seguridad básico y primario que</description>
+    </item>
+</rdf:RDF>

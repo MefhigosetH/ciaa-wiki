@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:ciaa_safety</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:01:07+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:bus_pci&amp;rev=1447422129&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:diseno_y_desarrollo_de_hardware_del_modulo_procesador_safety&amp;rev=1445346289&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales&amp;rev=1474559557&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_cpu&amp;rev=1474407348&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_debugger&amp;rev=1474407882&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_power_supply&amp;rev=1474549662&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware&amp;rev=1474562224&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_can&amp;rev=1447427509&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_usb_host&amp;rev=1447428422&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:regulador_de_tension_y_restablecimiento_del_sistema&amp;rev=1447426158&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:sidebar&amp;rev=1474562288&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:standards&amp;rev=1474408229&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:start&amp;rev=1474471421&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:bus_pci&amp;rev=1447422129&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-13T13:42:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:bus_pci</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:bus_pci&amp;rev=1447422129&amp;do=diff</link>
+        <description>TBC</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:diseno_y_desarrollo_de_hardware_del_modulo_procesador_safety&amp;rev=1445346289&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-20T13:04:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:diseno_y_desarrollo_de_hardware_del_modulo_procesador_safety</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:diseno_y_desarrollo_de_hardware_del_modulo_procesador_safety&amp;rev=1445346289&amp;do=diff</link>
+        <description>TBC</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales&amp;rev=1474559557&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-22T15:52:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:el_bus_pci_y_sus_senales</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:el_bus_pci_y_sus_senales&amp;rev=1474559557&amp;do=diff</link>
+        <description>El bus PCI y sus señales
+
+Respetando la asignación de los pines de alimentación en el mismo orden que hace referencia “The PCI Local Bus Specification Revision 2.2.” las demás señales se distribuyen en el bus de tal manera que en esta primera versión de la CIAA Safety contemple la mayor cantidad de  puertos y periféricos más comunes utilizados en la mayoría de los microcontroladores. De esta manera tratamos de desarrollar un estándar que debe ser respetado en desarrollos futuros. (Sujeto a revis…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_cpu&amp;rev=1474407348&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-20T21:35:48+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:hardware_cpu</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_cpu&amp;rev=1474407348&amp;do=diff</link>
+        <description>CPU
+
+En esta primera versión de la CIAA-Safety el CPU elegido es de la familia MCU RM4x de la firma Texas Instruments que permite desarrollar sistemas para aplicaciones críticas. Esta tecnología ha sido desarrollada para cumplir los requisitos de la norma de seguridad IEC 61508 SIL-3 y es ideal para aplicaciones con requisitos de seguridad específicos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_debugger&amp;rev=1474407882&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-20T21:44:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:hardware_debugger</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_debugger&amp;rev=1474407882&amp;do=diff</link>
+        <description>Interfaz JTAG</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_power_supply&amp;rev=1474549662&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-22T13:07:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:hardware_power_supply</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware_power_supply&amp;rev=1474549662&amp;do=diff</link>
+        <description>Fuente de Alimentación
+
+Uno de los requerimientos de la CIAA-Safety es que se utilizará en ambientes ruidosos y esta deba accionar cargas activas de potencia y recibir señales del mundo real entonces su fuente de alimentación tiene que tener la capacidad de ser muy estable y prácticamente lo menos ruidosa posible (sin ripple). Es por ello que por el momento se va a utilizar una fuente de alimentación del mercado para alimentar al sistema embebido o cualquier pila de factor de forma PCI-104. Es u…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware&amp;rev=1474562224&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-22T16:37:04+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:hardware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:hardware&amp;rev=1474562224&amp;do=diff</link>
+        <description>Hardware de la CIAA-Safety
+
+El diseño de hardware se centrará principalmente en una arquitectura modular básica y de referencia que permita a los usuarios que buscan una solución genérica orientar la plataforma a múltiples aplicaciones de acuerdo a sus requerimientos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_can&amp;rev=1447427509&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-13T15:11:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:interfaz_can</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_can&amp;rev=1447427509&amp;do=diff</link>
+        <description>Interfaz CAN
+
+Descripción
+
+CAN (Controller Area Network) es un protocolo de comunicaciones normalizado (respeta estándares ISO 11898) basado en una topología en bus o red de comunicación de línea diferencial para la transmisión de mensajes (tasas que van de los 125kbp/s hasta 1 Mbp/s) entre múltiples subsistemas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_usb_host&amp;rev=1447428422&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-13T15:27:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:interfaz_usb_host</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:interfaz_usb_host&amp;rev=1447428422&amp;do=diff</link>
+        <description>Interfaz USB
+
+Descripción
+
+Comúnmente llamado USB OTG, USB HOST o USB On-The-Go es una extensión de la norma USB 2.0 que amplía las posibilidades de una conexión USB o permite a dispositivos USB tener mayor flexibilidad en la gestión de la interconexión. El estándar USB (sin la extensión OTG) utiliza siempre una arquitectura maestro/esclavo, esto quiere decir que hay un dispositivo principal que es el maestro, y que es el que controla la configuración y la transferencia de datos en todo momento.…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:regulador_de_tension_y_restablecimiento_del_sistema&amp;rev=1447426158&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-13T14:49:18+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:regulador_de_tension_y_restablecimiento_del_sistema</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:regulador_de_tension_y_restablecimiento_del_sistema&amp;rev=1447426158&amp;do=diff</link>
+        <description>Regulador de tensión
+
+El Bus PCI suministra varios tensiones (3.3V, 5V,+12V,-12V) pero carece de la tensión 1.2V que es lo que requiere el microcontrolador RM4X. Es por ello que para este diseño se emplea el regulador de voltaje LM2831 que funciona con rango de tensiones de entrada de 3V a 5.5V y proporciona una tensión de salida regulada de acuerdo a los valores de los componentes externos. Su característica principal es proporcionar una conversión local (DC-DC) con rápida respuesta transitoria…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:sidebar&amp;rev=1474562288&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-22T16:38:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:sidebar&amp;rev=1474562288&amp;do=diff</link>
+        <description>CIAA - Safety
+
+Estrategia
+
+Resumen
+
+Objetivos
+
+Organización
+
+Planificación del Desarrollo
+
+
+Prototipo
+
+Hardware
+
+Microcontrolador
+
+Factor de forma
+
+Buses
+
+Debugger
+
+Fuente alimentación
+
+Preguntas frecuentes
+
+
+Equipo de trabajo
+
+Laboratorio de Sistemas Embebidos (UBA)
+
+Grupo de Sistemas de Tiempo Real (UNRC)
+
+Universidad Nacional de Catamarca (UNCA)
+
+
+Dominios de Aplicación
+
+Sector aeronáutico
+
+Sector ferroviario
+
+Sector automotríz
+
+Industria de procesos
+
+
+Entregables
+
+Contacto</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:standards&amp;rev=1474408229&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-20T21:50:29+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:standards</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:standards&amp;rev=1474408229&amp;do=diff</link>
+        <description>Estándares relacionados
+
+Estos son los estándares relacionados con el desarrollo de la  CIAA-Safety, en algunos casos son implementaciones específicas de cada ámbito de aplicación según la norma IEC 61508.
+
+Industria ferroviaria
+
+En Europa:
+
+	*  EN 50126 : Especificación y demostración de la confiabilidad, la disponibilidad, la mantenibilidad y la seguridad (RAMS).</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:start&amp;rev=1474471421&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-21T15:23:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_safety:start</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_safety:start&amp;rev=1474471421&amp;do=diff</link>
+        <description>Computadora Industrial Abierta Argentina para Aplicaciones de Seguridad Crítica - CIAA-Safety
+
+[ ]
+
+
+
+[ ]
+
+El proyecto abierto CIAA-Safety, tiene como desafío establecer e impulsar una metodología de desarrollo y una plataforma tecnológica de referencia como un estándar argentino para el desarrollo de sistemas de seguridad crítica.</description>
+    </item>
+</rdf:RDF>

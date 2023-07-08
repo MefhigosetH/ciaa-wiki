@@ -1,0 +1,46 @@
+====== Descargas ======
+
+En esta sección se listan los links para la descarga de [[desarrollo:software-ide|Software-IDE]], [[desarrollo:software-plc|Software-PLC]], [[desarrollo:linux|Linux]] y [[desarrollo:firmware|Firmware]]
+
+===== Releases =====
+
+==== Software CIAA-IDE-Suite ====
+
+  * {{https://github.com/ciaa/Software-IDE/releases/download/v1.2.2/Setup_CIAA_IDE_Suite_v1.2.2.zip|Instalador de CIAA IDE Suite v1.2.2}}
+
+La instalación del CIAA-IDE-Suite incluye [[desarrollo:software-ide|todos los otros items]].
+
+
+==== Software-PLC ====
+
+IDE4PLC versión 0.08 alpha se encuentra disponible para distintas plataformas:
+  * Versión para [[https://www.dropbox.com/s/2c9w0mo9wts8zm5/IDE4PLCv0.0.8alpha-Linux.zip?dl=1|Linux]].
+  * Versión para [[https://www.dropbox.com/s/7kllejwmguokpnp/IDE4PLCv0.0.8alpha.app.zip?dl=1|Mac OS X]].
+  * Versión para [[https://www.dropbox.com/s/f3ta23au2a7hbii/IDE4PLCv0.0.8alpha-Win.zip?dl=1|Windows]] (requiere LPCXpresso IDE).
+
+==== Firmware ====
+
+  * {{https://github.com/ciaa/Firmware/archive/0.5.0.tar.gz|Firmware 0.5.0.tar.gz}}
+  * {{https://github.com/ciaa/Firmware/archive/0.5.0.zip|Firmware 0.5.0.zip}}
+
+===== Fuentes en desarrollo =====
+
+Los siguientes son links al código fuente del proyecto en desarrollo. El uso de los mismos no es recomendable para proyectos, sino únicamente para quienes quieran participar en el desarrollo.
+
+==== Software-IDE ====
+
+  * {{https://github.com/ciaa/Software-IDE|Software-IDE en GitHub}}
+
+==== Software-PLC ====
+
+  * TODO
+
+==== Linux ====
+
+  * [[https://github.com/ciaa/u-boot|U-Boot en GitHub]]
+  * [[https://github.com/ciaa/linux|Linux en GitHub]]
+  * [[https://github.com/ciaa/buildroot|Buildroot en GitHub]]
+
+==== Firmware ====
+
+  * {{https://github.com/ciaa/Firmware|Firmware en GitHub}}

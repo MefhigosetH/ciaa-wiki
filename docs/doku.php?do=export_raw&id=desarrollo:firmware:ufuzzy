@@ -1,0 +1,53 @@
+====== µFuzzy ======
+
+===== Introducción =====
+
+µFuzzy es módulo de [[https://es.wikipedia.org/wiki/L%C3%B3gica_difusa|lógica difusa]] pensado para embebidos de bajo costo, independientemente de su arquitectura. Permite implementar sistemas de control a partir de una serie de reglas en lenguaje natural que describan el comportamiento deseado. A pesar de que en la actualidad existen otras librerías de lógica difusa, esta fue especialmente diseñada pensando en las limitaciones de los sistemas embebidos.
+
+===== Características soportadas =====
+
+^ Métodos de inferencia      | Sugeno               ^
+^ :::                        | Mamdani              |
+^ Funciones de membresía     | trapezoidal          |
+^ :::                        | tabulada             |
+^ T-normas                   | mínimo               |
+^ :::                        | producto algebraico  |
+^ :::                        | diferencia acotada   |
+^ :::                        | producto drástico    |
+^ :::                        | producto de Einstein |
+^ :::                        | producto de Hamacher |
+^ S-normas                   | máximo               |
+^ :::                        | suma algebraica      |
+^ :::                        | suma acotada         |
+^ :::                        | suma drástico        |
+^ :::                        | suma de Einstein     |
+^ :::                        | suma de Hamacher     |
+^ Métodos de defuzzificación | centro de gravedad   |
+^ :::                        | media ponderada      |
+^ Conectivos lógicos         | conjunción           |
+^ :::                        | disyunción           |
+^ :::                        | negación             |
+
+==== Advertencia ====
+
+La versión 0.4 de µFuzzy no soporta reglas con pesos. Esta característica será incluida en la versión 0.5.
+
+===== Diseño =====
+
+Este módulo fue desarrollado con el objetivo de ser compatible con cualquier microcontrolador que pueda programarse en ANSI C. Por estas razones, se tomaron los siguientes recaudos a la hora de desarrollarlo:
+
+  * Está programado en ANSI C, excepto por el uso de enteros de 64 bits, aunque puede deshabilitarse.
+  * No utiliza I/O.
+  * No reserva memoria dinámicamente.
+  * No utiliza operaciones con punto flotante.
+  * No depende de macros propias de ningún compilador.
+  * Sólo depende de <stdint.h>, por usar enteros de tamaño fijo y enteros rápidos.
+
+Por otro lado, por razones de performance, µFuzzy utiliza un formato binario propio denominado CFS para definir las reglas del sistema. Para brindar compatibilidad con el formato FIS de MATLAB que es el más difundido, se desarrolló un conversor por línea de comandos denominado cfsconvert, fácilmente integrable al toolchain, y capaz de generar un archivo CFS o código fuente C.
+
+{{ :desarrollo:firmware:uf_overview.png }}
+
+===== Más información =====
+
+[[http://www.francosalinasmendoza.com/ufuzzy/Trabajo%20de%20Graduacion.pdf|Trabajo de Graduación]]
+{{::uf_especificacion_del_formato_cfs.pdf|Especificación del formato CFS}}

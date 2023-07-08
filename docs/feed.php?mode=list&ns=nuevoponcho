@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> nuevoponcho</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:28:50+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:poncho_ethernet_lan8720a&amp;rev=1446081681&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:ponchos_modelos&amp;rev=1446081345&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:poncho_ethernet_lan8720a&amp;rev=1446081681&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-29T01:21:21+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>nuevoponcho:poncho_ethernet_lan8720a</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:poncho_ethernet_lan8720a&amp;rev=1446081681&amp;do=diff</link>
+        <description>DATOS DE ENTRADA DE DISEÑO POCHOS EDU-CIAA
+ NOMBRE DEL PONCHO:  Ethernet_LAN8720A RESPONSABLE DE DISEÑO:  Ignacio José Zaradnik   eMAIL:izaradnik _AT_ yahoo.com.ar  SUB-RESPONSABLE:  Juan Manuel Reta y Diego Javier Brengi  eMAIL:  jmreta _AT_ bioingenieria.edu.ar diego.brengi _AT_ gmail.com</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:ponchos_modelos&amp;rev=1446081345&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-29T01:15:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>nuevoponcho:ponchos_modelos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=nuevoponcho:ponchos_modelos&amp;rev=1446081345&amp;do=diff</link>
+        <description>DATOS DE ENTRADA DE DISEÑO POCHOS EDU-CIAA
+ NOMBRE DEL PONCHO:  Colocar nombre del Poncho RESPONSABLE DE DISEÑO:  Juan   eMAIL: juan@email.com  SUB-RESPONSABLE:  Pedro  eMAIL:  pedro@email.edu  PARTICIPANTES:  Miguel   eMAIL:  miguel@gmail.com 
+Se deben definir los requerimientos antes de comenzar el trabajo ya que los mismos se convertirán en entradas de diseño contra la cuales luego se podrán evaluar/verificar los resultados obtenidos. Aún aunque se trate de un proyecto final, es aconsejable  …</description>
+    </item>
+</rdf:RDF>

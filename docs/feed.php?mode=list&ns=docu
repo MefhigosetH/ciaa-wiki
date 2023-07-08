@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> docu</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:11:06+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw&amp;rev=1435526174&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:intro&amp;rev=1433357156&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw&amp;rev=1435526174&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-28T21:16:14+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw&amp;rev=1435526174&amp;do=diff</link>
+        <description>Firmware
+El firmware es el programa que se ejecuta en la CPU del microcontrolador. Éste comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. La CIAA tiene tanto la posibilidad de correr</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:intro&amp;rev=1433357156&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-03T18:45:56+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:intro</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:intro&amp;rev=1433357156&amp;do=diff</link>
+        <description>1 Introducción
+En estas páginas encontrará la documentación oficial de la CIAA. La misma está basada en una dokuwiki. 
+¿Qué es la CIAA?
+La CIAA (Computadora Industrial Abierta Argentina) es una plataforma creada para impulsar el desarrollo tecnológico, generar conocimiento, y darle la posibilidad a</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:make</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,make"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:make&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:make.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:make"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:make.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm';var JSINFO = {"id":"docu:fw:bm:make","namespace":"docu:fw:bm","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:make.html#make">Make</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:make.html#root_make">Root Make</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:make.html#module_make">Module Make</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+<div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:estructura.html" class="wikilink1" title="docu:fw:bm:estructura" data-wiki-id="docu:fw:bm:estructura">Estructura de directorios </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:examples.html" class="wikilink1" title="docu:fw:bm:examples" data-wiki-id="docu:fw:bm:examples">Ejemplos </a> →</div></div>
+<h1 class="sectionedit1" id="make">Make</h1>
+<div class="level1">
+<p class="divalign-justify">Para compilar el proyecto se utiliza <a href="http://www.gnu.org/software/make/" class="urlextern" target="_blank" title="http://www.gnu.org/software/make/" rel="ugc nofollow noopener">GNU Make</a>, de manera que la compilación pueda fácilmente ser cambiada mediante un archivo de configuración para distintos arquitecturas, compiladores, etc. según la necesidad del usuario. La estructura fue realizada para poder crear nuevos módulos de forma sencilla.</p><!--divalign-->
+
+<p>
+A quienes utilicen el IDE este cápitulo puede resultar inecesario.
+</p>
+
+<p>
+Desde el root se puede correr el siguiente comando para conocer las opciones:
+</p>
+<pre class="code">make help</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Make&quot;,&quot;hid&quot;:&quot;make&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-548&quot;} -->
+<h2 class="sectionedit2" id="root_make">Root Make</h2>
+<div class="level2">
+<p class="divalign-justify">El Makefile que se encuentra en el en el root al hacer un <strong>git clone</strong> o descargar una release es el root make. <strong>Por lo general no se debe editar este Makefile</strong>. Si cree que debe editar este Makefile contacte <a href="./doku.php%3Fid=desarrollo:firmware:plan_desarrollo_fw.html#equipo_tecnico_a_cargo" class="wikilink1" title="desarrollo:firmware:plan_desarrollo_fw" data-wiki-id="desarrollo:firmware:plan_desarrollo_fw">al responsable del Makefile</a>.</p><!--divalign-->
+
+<p>
+Para seleccionar y configurar las variables del Makefile debe crear su propio <strong>Makefile.mine</strong> copiando el <strong>Makefile.config</strong> en el directorio raiz del firmware, por ejemplo ejecutando:
+</p>
+<pre class="code">cp Makefile.config Makefile.mine</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Root Make&quot;,&quot;hid&quot;:&quot;root_make&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:2,&quot;range&quot;:&quot;549-1124&quot;} -->
+<h3 class="sectionedit3" id="makefilemine">Makefile.mine</h3>
+<div class="level3">
+<p class="divalign-justify">La ventaja de tener un Makefile.mine es que personaliza el Makefile para su entorno de trabajo pero este es ignorado por git al sincronizar con el repositorio. Cada desarrollador o usuario puede configurar su propio Makefile a través del Makefile.mine evitando dos problemas:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> Por error hacer un commit de un Makefile modificado, lo cual le generaría problemas a los otros usuarios que utilizan CIAA-Firmware.</div>
+</li>
+<li class="level1"><div class="li"> Por error sobrescribir el Makefile local al hacer un git pull y perder la configuración. </div>
+</li>
+</ul>
+
+<p>
+En el Makefile.mine se pueden editar y configurar los siguientes parámetros:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>BOARD</strong> es la placa sobre la cual se trabajaca (ciaa_nxp, edu_ciaa_nxp, etc.)</div>
+</li>
+<li class="level1"><div class="li"> <strong>ARCH</strong> indica la arquitectura del hardware para la cual se desea compilar. Ej: x86, cortexM4.</div>
+</li>
+<li class="level1"><div class="li"> <strong>CPUTYPE</strong> indica el tipo de CPU. Ej: none, ia32, ia64, lpc43xx.</div>
+</li>
+<li class="level1"><div class="li"> <strong>CPU</strong> indica la CPU para la que se desea compilar. Ej: none, lpc4337.</div>
+</li>
+<li class="level1"><div class="li"> <strong>COMPILER</strong> es el compilador a utilizar. Ej: gcc.</div>
+</li>
+<li class="level1"><div class="li"> <strong>PROJECT_PATH</strong> es el Path al proyecto a compilar. Ej: examples$(DS)blinking para compliar el ejemplo <strong>blinking</strong></div>
+</li>
+</ul>
+<div class="plugin_note notetip">Sólo necesario setear la variable <strong>BOARD</strong>, y en función de ésta automáticamente se setean <strong>ARCH</strong>, <strong>CPUTYPE</strong>, <strong>CPU</strong>, y <strong>COMPILER</strong>, por lo que no es necesario hacerlo a mano y pueden comentarse estas definiciones mediante <strong>#</strong>.<br/>
+
+La variable <strong>PROJECT_PATH</strong> si utiliza cygwin debe definirse de manera similar a: <br/>
+
+<strong>PROJECT_PATH ?= $(DS)cygdrive$(DS)c$(DS)Temp$(DS)Proyecto1</strong>
+
+</div>
+<p>
+Se utiliza la variable $(DS) para indicar el separador de directorios (de manera automática se usa &#039;/&#039; para linux y &#039;\&#039; para windows). 
+</p>
+
+<p>
+En el mismo Makefile están comentados los valores que pueden tomar cada uno de los parámetros.
+</p>
+<div class="plugin_note notetip">La utilización de un <strong>Makefile.mine</strong> es opcional, también es posible setear las variables deseadas como <strong>BOARD</strong> y <strong>PROJECT_PATH</strong> como variables de entorno utilizando los comandos set (en windows) y export (en linux). De esta misma forma es como por ejemplo el IDE basado en eclipse informa al Makefile que board o proyecto debe ser compilad.
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Makefile.mine&quot;,&quot;hid&quot;:&quot;makefilemine&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:3,&quot;range&quot;:&quot;1125-3269&quot;} -->
+<h3 class="sectionedit4" id="makefile_del_proyecto">Makefile del proyecto</h3>
+<div class="level3">
+<p class="divalign-justify">Cada proyecto tiene también su Makefile. El mismo se encuentra bajo el directorio <strong>mak</strong> en el directorio principal del proyecto o ejemplo. En el ejemplo <strong>examples/blinking</strong> el makefile del ejemplo se encuentra en <strong>examples/blinking/mak</strong> y se llama <strong>Makefile</strong>. Este archivo <strong>solo necesita edición en la variable MODS</strong>, todo el resto es automático si se mantiene la estructura de directorios usada en los ejemplos (src, inc, mak, etc).</p><!--divalign-->
+
+<p>
+Este makefile contiene las siguientes definiciones:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>PROJECT_NAME</strong> el nombre del proyecto, se define automático en base el directorio usado.</div>
+</li>
+<li class="level1"><div class="li"> <strong>INC_FLES</strong> los paths a indicar al compilador para buscar includes files.</div>
+</li>
+<li class="level1"><div class="li"> <strong>SRC_FILES</strong> archivos a compilar ya sean archivos c como c++.</div>
+</li>
+<li class="level1"><div class="li"> <strong>OIL_FILES</strong> configuración del sistema operativo (si es utilizado).</div>
+</li>
+</ul>
+<p class="divalign-justify">Lo más recomendable es comenzar compilando un ejemplo y luego empezar un proyecto basado en el ejemplo más similar.</p><!--divalign-->
+
+</div>
+
+<h4 id="modulos">Módulos</h4>
+<div class="level4">
+<p class="divalign-justify">Cada proyecto incluye en su Makefile los <a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html#modulos" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">módulos</a> a compilar en una variable llamada MODS, por ejemplo:</p><!--divalign-->
+<pre class="code">MODS += modules$(DS)posix \
+        modules$(DS)ciaak \
+        modules$(DS)config \
+        modules$(DS)bsp \
+        modules$(DS)platforms</pre>
+<p class="divalign-justify">Es recomendable utilizar $(DS) en vez de / o \ para mantener la compatibilidad entre sistemas operativos (Linux, Windows, MAC <abbr title="Operating System">OS</abbr>).</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Makefile del proyecto&quot;,&quot;hid&quot;:&quot;makefile_del_proyecto&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:4,&quot;range&quot;:&quot;3270-4727&quot;} -->
+<h2 class="sectionedit5" id="module_make">Module Make</h2>
+<div class="level2">
+<p class="divalign-justify">Esta sección es para quienes quieran desarrollar o extender un módulo del CIAA-Firmware (participar en el desarrollo de la CIAA-Firmware) y no para los que únicamente utilizan el CIAA-Firmware.</p><!--divalign-->
+
+<p>
+Cada <a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html#modulos" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">módulo</a> incluye su directorio <strong>mak</strong> que incluye un Makefile file con las siguientes variables:
+</p>
+<pre class="code"># library
+LIBS += template
+# version
+template_VERSION = 0.8.2
+# library path
+template_PATH = $(ROOT_DIR)$(DS)modules$(DS)template
+# library source path
+template_SRC_PATH = $(template_PATH)$(DS)src
+# library include path
+template_INC_PATH = $(template_PATH)$(DS)inc
+# library source files
+template_SRC_FILES = $(wildcard $(template_SRC_PATH)$(DS)*.c)</pre>
+<p class="divalign-justify">Cada <a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html#modulos" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">módulo</a> se agrega como una librería, para agregar a la variable LIBS en nombre del módulo. A continuación se define la versión del módulo, el path al módulo, el path a los fuentes, el path a los include files y las source files que se desean compilar.</p><!--divalign-->
+
+<p>
+Las siguientes variables son obligatorias y deben ser completadas por todos los módulos:
+</p>
+<ul>
+<li class="level1"><div class="li"> LIBS += modulename</div>
+</li>
+<li class="level1"><div class="li"> modulename_INC_PATH</div>
+</li>
+<li class="level1"><div class="li"> modulename_SRC_FILES</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Module Make&quot;,&quot;hid&quot;:&quot;module_make&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:5,&quot;range&quot;:&quot;4728-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:estructura.html" class="wikilink1" title="docu:fw:bm:estructura" data-wiki-id="docu:fw:bm:estructura">Estructura de directorios </a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:make.html" class="wikilink1" title="docu:fw:bm:make" data-wiki-id="docu:fw:bm:make">start</a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:examples.html" class="wikilink1" title="docu:fw:bm:examples" data-wiki-id="docu:fw:bm:examples">Ejemplos </a> →</div></div></div>
+</body>
+</html>

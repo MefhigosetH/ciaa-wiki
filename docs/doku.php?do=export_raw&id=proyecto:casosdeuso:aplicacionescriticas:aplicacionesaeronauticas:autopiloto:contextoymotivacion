@@ -1,0 +1,15 @@
+====== Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados ======
+
+{{ :blanco.png?10 | }}
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:ciaapilot.png?nolink&300|}}
+
+===== Contexto y motivación =====
+
+En el marco del Proyecto CIAA se busca lograr un acercamiento al desarrollo de soluciones con alto valor agregado y capacitar en estas temáticas a estudiantes, docentes, profesionales e investigadores. Para eso se intenta conseguir un primer acercamiento a las aplicaciones críticas y eventualmente hacer uso de la plataforma [[desarrollo:ciaa_safety:start|CIAA-Safety]] que se encuentra actualmente en desarrollo.
+
+A su vez, existen dos proyectos de investigación acreditados actualmente en curso que están directamente relacionados con el diseño de soluciones electrónicas para aplicaciones en sistemas críticos en el marco de tema:
+
+  * **Proyecto de Desarrollo Tecnológico y Social (PDTS) CIN-CONICET Nº151** “Desarrollo de una Computadora Industrial Abierta Argentina (CIAA) para aplicaciones que requieran de seguridad funcional certificada”, $200.000 (2016/2017).
+  * **Programa y Proyectos de Investigación (PPI) UNRC NºXX** “Sistema de Detección Remota usando Vehículos Aéreos No Tripulados”. $35.000 (2016/2017).
+
+En este contexto durante [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/escuela/|Sexta Escuela para la Enseñanza de los Sistemas Embebidos]] desarrollada del 29 de mayo al 3 de junio de 2016 en la ciudad de Alta Gracia, Provincia de Córdoba, se organizó un curso de Diseño de Sistemas Críticos. En este curso se presentaron los conceptos generales relacionados con el diseño de los sistemas críticos y se seleccionaron proyectos de aplicación en el campo de los sistemas aeronáuticos.

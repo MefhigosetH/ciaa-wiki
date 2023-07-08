@@ -1,0 +1,39 @@
+====== CIAA-FSL: Debugger ======
+
+===== Diagrama Esquemático =====
+
+{{13-jtag.png}}
+
+===== Características =====
+
+  * Interfaz JTAG para debugger externo
+    * Conector SMD: [[http://www.harwin.com/includes/pdfs/M50-3600542_3D.pdf | HARWIN M50-3600542]]
+  * Debugger USB-JTAG con el chip [[http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf | FTDI CHIP FT2232HL]]
+    * Conector micro USB hembra de tipo AB SMT: [[http://www.hirose.co.jp/cataloge_hp/e24200011.pdf | Hirose ZX62-AB-5PA(11)]]
+    * Memoria EEPROM para el FT2232H: [[http://www.atmel.com/Images/doc5193.pdf | ATMEL AT93C46DN-SH-B]]
+    * Diodos TVS para protección contra ESD y transitorios: [[http://www.nxp.com/documents/data_sheet/PRTR5V0U2X.pdf | NXP PRTR5V0U2X,215]]
+    * Choque RF de modo común 90 ohm: [[http://www.bourns.com/pdfs/SRF2012.pdf | Bourns SRF2012-900Y]]
+  * Buffer para desconectar el bus JTAG del FT2232 en caso de utilizar un debugger externo: [[http://www.nxp.com/documents/data_sheet/74HC_HCT244.pdf | NXP 74HC244PW,112]]
+
+===== Descripción =====
+
+  * Tal como se indica en el documento de las [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/11/CIAA-Hardware-v1.1.pdf | características técnicas del hardware de la CIAA]], la CIAA-FSL incluye un conector JTAG para debugging directo y un debugger JTAG USB integrado con el chip FT2232H.
+  * Para la interfaz JTAG USB se utilizó un conector micro USB hembra de tipo AB igual al de la interfaz USB OTG. Además, se incorporaron todas las protecciones para ESD y EMC.
+  * El buffer 74HC244 se puede deshabilitar en el caso de utilizar un debugger externo.
+  * La memoria EEPROM puede ser usada para almacenar la información de los descriptores USB: Vendor ID, Product ID, Serial Number, etc..
+
+===== Referencias =====
+
+  * [[http://cache.freescale.com/files/microcontrollers/doc/ref_manual/K60P144M150SF3RM.pdf?fr=gdc | K60 Sub-Family Reference Manual - Capítulo 9]]
+  * [[http://openocd.sourceforge.net/ | Open On-Chip Debugger]]
+
+===== Datasheets de componentes importantes =====
+
+  * [[http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf | FTDI CHIP FT2232HL]]
+  * [[http://www.nxp.com/documents/data_sheet/74HC_HCT244.pdf | NXP 74HC244PW,112]]
+  * [[http://www.atmel.com/Images/doc5193.pdf | ATMEL AT93C46DN-SH-B]]
+  * [[http://www.nxp.com/documents/data_sheet/PRTR5V0U2X.pdf | NXP PRTR5V0U2X,215]]
+  * [[http://www.bourns.com/pdfs/SRF2012.pdf | Bourns SRF2012-900Y]]
+  * [[http://www.hirose.co.jp/cataloge_hp/e24200011.pdf | Hirose ZX62-AB-5PA(11)]]
+  * [[http://www.harwin.com/includes/pdfs/M50-3600542_3D.pdf | HARWIN M50-3600542]]
+  * [[http://www.silabs.com/Support%20Documents/TechnicalDocs/Si501-2-3.pdf | Silicon Laboratories 501HCA12M0000CAG]]

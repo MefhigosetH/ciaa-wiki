@@ -1,0 +1,109 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 1 =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note>"el requisito 1 de esta fase debe ser el de adquirir, en el contexto de la ejecución RAMS, un entendimiento de:\\
+<fc #ffffff>..</fc>a) el alcance, el contexto y la finalidad del sistema;\\
+<fc #ffffff>..</fc>b) el entorno del sistema, incluidos los:\\
+<fc #ffffff>...</fc>− aspectos físicos;\\
+<fc #ffffff>...</fc>− posibles problemas relacionados con la interfaz del sistema;\\
+<fc #ffffff>...</fc>− aspectos sociales;\\
+<fc #ffffff>...</fc>− aspectos políticos;\\
+<fc #ffffff>...</fc>− aspectos legislativos;\\
+<fc #ffffff>...</fc>− aspectos económicos.\\
+<fc #ffffff>..</fc>c) las implicaciones generales RAMS para el sistema."</note>
+
+###
+De aplicar estos puntos resulta:\\
+###
+
+{{ :blanco.png?20 | }}
+
+=== a) Definición del alcance, el contexto y la finalidad del sistema ===
+###
+**Alcance**: El presente desarrollo pretende establecer un sistema de autocontrol aplicable directamente a cualquier Sistema de accionamiento de barreras en PaN de Ferrocarriles. El sistema deberá monitorear los sistemas, subsistemas y componentes de un sistema de barreras. La información recolectada de cada sensor de cada paso a nivel será integrada a un software de diagnóstico, supervisión y gestión de alarmas que permite la adquisición y evaluación de datos confiables provenientes de cada paso a nivel a supervisar.
+###
+
+### 
+**Contexto:** Se instalara en controles de barrera preexistentes o a ser colocados, que no posean la funcionalidad de monitoreo.  
+###
+
+###
+**Finalidad:** Se espera reducir los riesgos derivados de una falla del sistema de barreras, lograr un monitoreo constante de los parámetros mas significativos del sistema y con ello reducir los tiempos de mantenimiento. Se espera adquirir experiencia en el desarrollo de sistemas críticos.
+###
+
+
+{{ :blanco.png?20 | }}
+
+=== b) El entorno del sistema ===
+
+Se definen los siguientes aspectos del entorno del sistema:
+  * Aspectos físicos: Los equipos suministrados deberán soportar sin sufrir alteraciones de ninguna naturaleza las condiciones de temperatura y humedad que a continuación se especifican:
+
+|LUGAR DE UBICACIÓN|TEMPERATURA °C|HUMEDAD %|
+|Puesto Central de Control|de +10 a +40|de 40 a 90|
+|Estación, Local técnico|de 0 a +50|de 10 a 100|
+|Al aire libre|de -10 a +50|de 10 a 100|
+
+  * Posibles problemas relacionados con la interfaz del sistema: Fallo en transductores. Fallos en sistemas de comunicaciones
+  * Aspectos sociales: El subsistema por sí solo no tiene implicancias sociales
+  * Aspectos políticos: El subsistema por sí solo no tiene implicancias políticas
+  * Aspectos legislativos: No existen aspectos legales en Argentina que regulen el dispositivo que se pretende implementar. Sera aconsejable analizar normativas de sistemas de comunicación en caso de utilizarse enlace de RF para la transmisión de información entre el monitor de barrera y la sala general de control de barreras de la Empresa Ferroviaria.
+  * Aspectos económicos. El proyecto sera llevado a cabo por docentes universitarios, en el marco de un proyecto de investigación que financia el desarrollo. No se observan peligros de índole económico para el desarrollo. 
+
+
+{{ :blanco.png?20 | }}
+
+=== c) Las implicaciones generales RAMS ===
+
+###
+El aseguramiento de la Fiabilidad, Disponibilidad, Mantenibilidad y Seguridad del subsistema permitirán disponer de un método eficaz para la detección rápida de fallas en el sistema de barreras. Este subsistema deberá determinar la fuente de falla durante su operación y mantenimiento. Por su característica y objetivos, el subsistema no es afectado directamente por ninguna actividad humana a excepción del vandalismo, por ello no se incluye detección de fallas de origen humano como ser una operación incorrecta del sistema de barrera.
+###
+
+###
+Los efectos esperados sobre la //calidad del servicio ferroviario// se resumen en la reducción del tiempo de paradas del material rodante por fallas en las barreras en los paso a nivel (PaN). Las implicaciones económicas de esta disminución del tiempo de paradas no pueden ser evaluadas con la información disponible.
+###
+
+###
+Se espera un //beneficio social// intangible pero real debido a la mayor credibilidad en el sistema, esto deberá solucionar o al menos disminuir los comportamientos inadecuado de conductores por desconfianza en el sistema.
+Los principales ahorros se pretende que sea en la reducción del mantenimiento.
+###
+
+  - La **fiabilidad**, entendida como la confianza en que el sistema va a cumplir con su misión, permitirá a los responsables del control ferroviario saber con certeza el estado del sistema de barreras bajo este monitoreo, en lo referente a:
+    * Brazo de barrera roto.
+    * Falla de Semáforo (incluye vandalismo).
+    * Falla de Semáforo de aviso al conductor (incluye vandalismo).
+    * Falla de campana (incluye vandalismo).
+    * Abrigo principal abierto (detección de la totalidad de las puertas).
+    * Abrigo remoto abierto (detección de la totalidad de las puertas y todos los abrigos remotos deberán tener su alarma independiente).
+    * Estado del brazo de barrera (horizontal, oblicuo ó vertical).
+    * Brazo de barrera vertical u oblicuo (90º a 5º) con circuito de operación ocupado.
+    * Brazo de barrera horizontal (0º) con circuito de operación vía libre.
+    * Circuito de operación ocupado por más de 10 minutos.
+    * En caso de tener el PaN más de un mecanismo de barrera, se deberá tener indicación de falla cuando alguno de ellos se encuentre en una posición diferente al resto.
+    * Indicación de carga de batería.
+    * Indicación de estado operativo de los sistemas de comunicaciones.
+    * Software del Monitor de Barrera.
+    * Indicación de que la posición del brazo no se corresponde con la posición esperada.
+  - La **disponibilidad** se basa en la certeza de que el sistema estará disponible durante todo su periodo de operación, minimizándose el tiempo de detención mediante la correcta definición de la disponibilidad operativa.
+  - La **mantenibilidad**, se debe alcanzar mediante el cumplimiento de una política de mantenimiento que permita desempeñar  operaciones correctivas en plazos de tiempo establecido y reduciendo el tiempo medio de reparación.
+  - La **seguridad** o ausencia de riesgo inaceptable, se basa en la reducción de la tasa de peligros, mediante la correcta definición del plan de seguridad y su puesta en práctica en la estructura organizativa, la asignación de responsabilidades y recursos, durante todo el ciclo de vida del sistema.
+
+
+{{ :blanco.png?20 | }}
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2|Ir al Requisito 2 de la Fase de Concepto]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 
+

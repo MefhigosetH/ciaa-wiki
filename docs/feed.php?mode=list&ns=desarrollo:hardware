@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:hardware</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:04:18+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:caracteristicas_hw&amp;rev=1411406027&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:gabinetes&amp;rev=1479587277&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:git&amp;rev=1479580261&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:picociaa&amp;rev=1470752270&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:plan_desarrollo_hw&amp;rev=1425053585&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:primeros_pasos&amp;rev=1460657111&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:caracteristicas_hw&amp;rev=1411406027&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:13:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:caracteristicas_hw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:caracteristicas_hw&amp;rev=1411406027&amp;do=diff</link>
+        <description>Características técnicas del hardware de la CIAA
+
+El documento de características técnicas del hardware de la CIAA está publicado en la página de la ACSE:
+&lt;http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/11/CIAA-Hardware-v1.1.pdf&gt;
+
+Este documento contiene las características originalmente propuestas para el hardware, así como parte del plan de desarrollo de hardware, en lo que respecta a tareas y responsables a cargo.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:gabinetes&amp;rev=1479587277&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T20:27:57+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:gabinetes</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:gabinetes&amp;rev=1479587277&amp;do=diff</link>
+        <description>Gabinetes
+
+EDU-CIAA-NXP</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:git&amp;rev=1479580261&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T18:31:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:git</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:git&amp;rev=1479580261&amp;do=diff</link>
+        <description>Descarga de Archivo comprimido (ZIP File)
+
+Si sólamente queremos descargar la última versión del repositorio, de manera rápida y simple, pero perdiendo todas las ventajas de trabajar con GIT, se puede descargar del  repositorio de hardware en GitHub. un archivo comprimido con todo el contenido:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:picociaa&amp;rev=1470752270&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-09T14:17:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:picociaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:picociaa&amp;rev=1470752270&amp;do=diff</link>
+        <description>picoCIAA
+
+
+
+
+
+Como su nombre lo indica, la característica más relevante de la picoCIAA a simple vista es su tamaño: mide 50.95 por 30.00 mm. En segundo lugar, el formato elegido para la picoCIAA es el de una placa mini PCI Express. Esto permitirá integrarla como</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:plan_desarrollo_hw&amp;rev=1425053585&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-27T16:13:05+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:plan_desarrollo_hw</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:plan_desarrollo_hw&amp;rev=1425053585&amp;do=diff</link>
+        <description>Plan de desarrollo de CIAA-Hardware
+
+Equipo técnico a cargo
+
+Coordinación
+ Nombre                     Organización                     Función                                   Ing. Pablo Ridolfi       FIUBA, UTN-FRBA                    Responsable de Hardware de la CIAA</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:primeros_pasos&amp;rev=1460657111&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-04-14T18:05:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:primeros_pasos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:primeros_pasos&amp;rev=1460657111&amp;do=diff</link>
+        <description>Primeros pasos con el Hardware de la CIAA
+
+Conectando una CIAA-NXP y EDU-CIAA-NXP por primera vez
+
+Recomendamos realizar una primer prueba de hardware conectando tu CIAA a la PC usando la interfaz de Debug (J3 en la EDU-CIAA-NXP, J7 en la CIAA-NXP). Probablemente tu CIAA-NXP no tenga un programa pre-grabado, por lo tanto la memoria del microcontrolador estará totalmente borrada. Por eso la primer sesión de Debugging que realices puede fallar. Si estás usando el CIAA-IDE, verás algo como esto:…</description>
+    </item>
+</rdf:RDF>

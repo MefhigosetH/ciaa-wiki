@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:linux</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:15:09+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:linux_en_ciaa-nxp&amp;rev=1458085952&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:multiprocesamiento_asimetrico&amp;rev=1422448364&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:linux_en_ciaa-nxp&amp;rev=1458085952&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-03-15T23:52:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:linux:linux_en_ciaa-nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:linux_en_ciaa-nxp&amp;rev=1458085952&amp;do=diff</link>
+        <description>Linux corriendo en CIAA-NXP
+
+Cómo cargar Linux en la CIAA-NXP
+
+Prerequisitos
+
+Builroot requiere tener instalados los siguientes tools:
+which
+sed
+make (version 3.81 or any later)
+binutils
+build-essential (only for Debian based systems)
+gcc (version 2.95 or any later)
+g++ (version 2.95 or any later)
+bash
+patch
+gzip
+bzip2
+perl (version 5.8.7 or any later)
+tar
+cpio
+python (version 2.6 or 2.7)
+unzip
+rsync
+wget
+ncurses-dev
+git
+bc</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:multiprocesamiento_asimetrico&amp;rev=1422448364&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-28T12:32:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:linux:multiprocesamiento_asimetrico</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux:multiprocesamiento_asimetrico&amp;rev=1422448364&amp;do=diff</link>
+        <description>Multiprocesamiento asimétrico con Linux en la CIAA
+
+Marco conceptual
+
+Multiprocesamiento simétrico y asimétrico
+
+En un modelo de multiprocesamiento simétrico (SMP) una única imagen del sistema operativo (SO) corre sobre todos los procesadores, encargándose de repartir las tareas entre los mismos y de manejar los recursos.</description>
+    </item>
+</rdf:RDF>

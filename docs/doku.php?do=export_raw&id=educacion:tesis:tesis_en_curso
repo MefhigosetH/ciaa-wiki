@@ -1,0 +1,26 @@
+====== Tesis y Proyectos Finales en curso ======
+
+###
+Ya se encuentran trabajando los **primeros 7 estudiantes** de ingeniería informática, electrónica y carreras afines, que realizan sus trabajos de **Tesis** y **Proyecto Final de Carrera** tomando como plataforma base la CIAA, contribuyendo así al crecimiento del **Proyecto CIAA**.
+###
+
+###
+En el desarrollo de sus trabajos, estos estudiantes cuentan con el asesoramiento de un grupo de profesionales de amplia experiencia en el área de Sistemas Embebidos, que los guían para llevarlos a cabo de forma exitosa.
+###
+
+###
+Asimismo, como parte de esta experiencia, todos están tomando un curso de **Gestión de Proyectos de Ingeniería**, que les brindará las herramientas necesarias para gestionar sus trabajos. 
+###
+
+###
+La fecha propuesta para **finalización** de todos los trabajos es el **15 de diciembre de 2015**.
+###
+
+###
+Los siguientes son los trabajos de **Tesis** y **Proyecto Final de Carrera** que se están desarrollando actualmente:
+###
+
+^ Nombre          ^ Universidad y Carrera ^ Tema elegido ^ Tutor CIAA ^ Tutor Universidad ^
+| [[mailto:ramirojgon@gmail.com|Ramiro Gonzalez]] | FIUBA - Ing. Informática | [[desarrollo:firmware:OSEK-multicore|Extender OSEK para ser un RTOS multicore]] | Mariano Cerdeiro | A definir |
+| [[mailto:e.martinez.vazquez@gmail.com|Ezequiel Martinez Vazquez]] | FIUBA - Ing. Electrónica | [[desarrollo:firmware:modulo_gprs|Módulo GPRS]] | HW: Pablo Ridolfi\\ FW: Mariano Cerdeiro | A definir |
+| [[mailto:ziegler.marcos.b@gmail.com|Marcos Ziegler]] | FIUBA - Ing. Electrónica | [[desarrollo:firmware:filesystem|File System]] | Mariano Cerdeiro | A definir |

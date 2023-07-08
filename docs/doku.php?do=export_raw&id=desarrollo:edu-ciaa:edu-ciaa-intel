@@ -1,0 +1,22 @@
+====== EDU-CIAA-INTEL ======
+{{ :desarrollo:edu-ciaa:20150417_000237.jpg |}}(("EDISON Super Breakout Board" corresponde al nombre original de este hardware. Los archivos de diseño llevan el nombre "EDU-CIAA-INTEL".))
+
+===== Descripción =====
+La EDU-CIAA-INTEL es una plataforma de desarrollo de bajo costo basada en el SoM [[http://www.intel.com/content/www/us/en/do-it-yourself/edison.html|Edison]], cuyas características son:
+  * CPU: Dual-core, dual-threaded Intel® Atom™ CPU at 500 MHz and a 32-bit Intel® Quark™ microcontroller at 100 MHz
+  * RAM: 1 GB LPDDR3 POP memory (2 channel 32bits @ 800MT/sec)
+  * NVM: 4 GB eMMC (v4.51 spec)
+  * Wi-Fi: Broadcom 43340 802.11 a/b/g/n Dual-band (2.4 and 5 GHz) Onboard antenna or external antenna (SKU configurations)
+  * Bluetooth 4.0
+  * 1.8V GPIO, SD Card, UART, SPI, I2C, I2S, USB 2.0
+  * OS: Yocto Poky, Linux kernel 3.10.17
+Su diseño puede considerarse una versión simplificada de la [[desarrollo:hardware:ciaa_intel:ciaa_intel_inicio|CIAA-INTEL]], y tiene las siguientes características:
+  * PCB de doble capa.
+  * Alimentación +5V CC.
+  * Conector para microSD.
+  * Conectores de GPIO con conversores de nivel 1.8 <-> 3.3V.
+  * USB On-The-Go.
+  * USB-Serial para salida de consola (TTY).
+  * Reguladores de 3.3V y 1.8V.
+
+Podrás acceder a los archivos de diseño del PCB en el [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-INTEL|Repositorio de Hardware]].

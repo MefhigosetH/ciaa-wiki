@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="proyecto,casosdeuso,aplicacionescriticas,aplicacionesferroviarias,monitordebarreras,contextoymotivacion,inicio"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio"/>
+<link rel="canonical" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion';var JSINFO = {"id":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio","namespace":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias">Diseño e Implementación de un Monitor de Barreras Ferroviarias</h1>
+<div class="level1">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=10&amp;tok=881b07&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="10" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o e Implementaci\u00f3n de un Monitor de Barreras Ferroviarias&quot;,&quot;hid&quot;:&quot;diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-104&quot;} -->
+<h2 class="sectionedit2" id="cual_es_el_primer_paso">¿Cuál es el primer paso?</h2>
+<div class="level2">
+<p class="divalign-justify">Habiendo explicado el <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion">contexto y motivación</a> en el que surge este proyecto, y habiendo <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion">justificado la elección del Monitor de Barreras como el primer desarrollo a realizar</a>, el primer paso para avanzar con el desarrollo de este sistema consiste en elegir que normas se seguirán en su desarrollo.</p><!--divalign-->
+<p class="divalign-justify">Del análisis de las distintas <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias">normativas asociadas al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad</a>, se determinó que el diseño e implementación de un monitor de barreras ferroviarias se realice utilizando las normas UNE EN 50126 (versión 2005), UNE EN 50128 (versión 2002) y UNE EN 50129 (versión 2005).</p><!--divalign-->
+<p class="divalign-justify">Para encarar el desarrollo del sistema es necesario conocer cuál es el <strong>ciclo de vida</strong> que la norma indica que debe utilizarse. La norma UNE EN 50126 define en su apartado 5.2.2 al ciclo de vida del sistema como “<em>una secuencia de fases, cada una de las cuales contiene tareas que abarcan la vida completa de un sistema desde su concepto inicial hasta la retirada del servicio y la eliminación. El ciclo de vida proporciona una estructura para la planificación, la gestión, el control y la supervisión de todos los aspectos de un sistema, incluido la <strong>RAMS</strong>, a medida que el sistema avanza a través de sus fases, con el fin de entregar el producto adecuado al precio correcto dentro del plazo acordado. El concepto de ciclo de vida es fundamental para la puesta en práctica con éxito de esta norma</em>”.</p><!--divalign-->
+<p class="divalign-justify">El término <strong>RAMS</strong> que utiliza la norma en dicha definición corresponde al acrónimo de las palabras inglesas <em>Reliability</em>, <em>Availability</em>, <em>Maintainability</em> y <em>Safety</em>, que en español corresponden a Fiabilidad, Disponibilidad, Mantenibilidad y Seguridad. Si bien no es el objetivo explicar en esta página estos conceptos, por completitud se reproducen a continuación la definición de cada uno de estos términos de acuerdo a lo que indica la norma UNE EN 50126 en su capítulo 3:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <strong>Fiabilidad</strong> (<em><strong>R</strong>eliability</em>): La probabilidad de que un elemento pueda realizar una función requerida en condiciones determinadas durante un intervalo de tiempo determinado (t1, t2). (IEC 60050-191). </div>
+</li>
+<li class="level1"><div class="li"> <strong>Disponibilidad</strong> (<em><strong>A</strong>vailability</em>): La capacidad que tiene un producto de hallarse en situación de realizar una función requerida en condiciones determinadas en un momento dado o durante un intervalo de tiempo señalado, suponiendo que se faciliten los recursos externos requeridos.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Mantenibilidad</strong> (<em><strong>M</strong>aintainability</em>): La probabilidad de que una acción dada de mantenimiento activo, correspondiente a un elemento en unas condiciones de utilización dadas, pueda ser llevada a cabo en un intervalo establecido de tiempo cuando el mantenimiento se realiza en condiciones establecidas y se utilizan procedimientos y recursos establecidos (IEC 60050-191).</div>
+</li>
+<li class="level1"><div class="li"> <strong>Seguridad</strong> (<em><strong>S</strong>afety</em>): Ausencia de riesgo inaceptable de daño.</div>
+</li>
+</ul>
+<p class="divalign-justify">La norma UNE EN 50126 propone en su sección 5.2 un ciclo de vida para el desarrollo de una aplicación ferroviaria, que está compuesto por las siguientes fases:</p><!--divalign-->
+<ol>
+<li class="level1"><div class="li"> Concepto</div>
+</li>
+<li class="level1"><div class="li"> Definición del sistema y Condiciones de aplicación</div>
+</li>
+<li class="level1"><div class="li"> Análisis de riesgos</div>
+</li>
+<li class="level1"><div class="li"> Requisitos del Sistema</div>
+</li>
+<li class="level1"><div class="li"> Distribución de los Requisitos del Sistema</div>
+</li>
+<li class="level1"><div class="li"> Diseño y Desarrollo</div>
+</li>
+<li class="level1"><div class="li"> Producción</div>
+</li>
+<li class="level1"><div class="li"> Instalación</div>
+</li>
+<li class="level1"><div class="li"> Validación del Sistema (incluyendo Aceptación de seguridad y Puesta en Servicio)</div>
+</li>
+<li class="level1"><div class="li"> Aceptación del Sistema</div>
+</li>
+<li class="level1"><div class="li"> Operación y Mantenimiento</div>
+</li>
+<li class="level1"><div class="li"> Supervisión de Ejecución</div>
+</li>
+<li class="level1"><div class="li"> Modificación, Realimentación</div>
+</li>
+<li class="level1"><div class="li"> Retirada del servicio y Eliminación</div>
+</li>
+</ol>
+<p class="divalign-justify">En este link se puede ver más información sobre las <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias">normativa asociada al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad</a> y en particular a las fases del ciclo de vida que define la normativa UNE EN 50126.</p><!--divalign-->
+<p class="divalign-justify">En consecuencia, el primer paso para el Diseño e Implementación del Monitor de Barreras es comenzar con la Fase 1. Por eso proponemos continuar la lectura en la página dedicada a describir el desarrollo de la Fase de Concepto del Monitor de Barreras.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=20&amp;tok=360f0d&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="20" /></a>
+</p>
+<p class="divalign-justify">[ <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto">Ir a la Página Inicial de la &quot;Fase 1: Concepto&quot;</a> ]</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfCu\u00e1l es el primer paso?&quot;,&quot;hid&quot;:&quot;cual_es_el_primer_paso&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;105-&quot;} --></div>
+</body>
+</html>

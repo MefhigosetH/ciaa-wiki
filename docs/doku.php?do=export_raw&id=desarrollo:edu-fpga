@@ -1,0 +1,227 @@
+====== EDU-CIAA-FPGA ======
+
+===== Cómo navegar por esta página =====
+
+1. Si estás dando tus primeros pasos en el mundo FPGA, podés empezar a leer desde [[http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#que_es_una_fpga|ésta introducción al tema]]
+
+2. Si ya tenés experiencia en FPGA pero querés conocer la plataforma EDU-CIAA-FPGA, podés ir directamente a la [[http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#edu-fpga|introducción al proyecto]]
+
+3. Si ya conocés la plataforma pero querés saber en qué andamos, podés revisar el resumen del [[http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#estado_actual|estado actual del proyecto]]
+
+==== Links de interés ====
+
+ * Wiki con material didáctico e instalación de herramientas: https://bit.ly/EDUFPGAwiki
+
+ * Repositorio abierto de ejemplos: https://gitlab.com/educiaafpga/ejemplos
+
+ * Canal de Youtube: http://bit.ly/EDUFPGAyoutube
+
+ * Repositorio abierto de hardware: https://bit.ly/EDUFPGAHardware
+
+===== ¿Qué es una FPGA? =====
+
+Las FPGA (Field-Programmable Gate Array) son dispositivos semiconductores digitales que pueden reconfigurarse luego de manufacturados, en contraposición a los circuitos integrados ordinarios que están limitados a una función específica impuesta por su diseño. Además, su estructura interna compuesta por bloques lógicos interconectables les provee mayor flexibilidad y poder de procesamiento que los microcontroladores o procesadores convencionales.
+
+Esto permite que los productos implementados con FPGAs posean varias ventajas:
+
+  * Pueden variarse sus capacidades y funcionalidad en campo.
+  * Puede reutilizarse el mismo hardware variando la descripción del circuito implementado
+  * Son muy apropiadas para la implementación de procesamiento en paralelo, a diferencia de los microprocesadores
+  * Pueden utilizarse complementariamente con otros sistemas digitales, por ejemplo, microprocesadores ya sea en la misma pastilla o no
+
+Algunos de los campos de aplicación de la lógica programable son, entre otros:
+
+  * Procesamiento de Señales Digitales (DSP)
+  * Radio Definida por Software (SDR)
+  * Prototipado de circuitos integrados
+  * Diagnostico medico
+  * Instrumentación científica
+  * Procesamiento de audio, vídeo e imágenes
+  * Criptografia
+  * Computación de alto desempeño
+  * Sistemas de comunicaciones
+  * Sistemas espaciales o nucleares de alta confiabilidad
+
+===== ¿Qué problemáticas existen en la enseñanza de FPGA? =====
+
+Dentro de los alcances de la formación del ingeniero electrónico suele estar el aprendizaje de los lenguajes de descripción de hardware (por ejemplo, VHDL, Verilog, etc.) que se utilizan para diseñar y describir hardware digital que luego se sintetizará y se utilizará para configurar las FPGAs.
+
+No obstante, para completar el ciclo de aprendizaje resulta necesario no sólo aprender el lenguaje a través de la implementación y simulación de circuitos, sino instanciarlos efectivamente sobre el hardware para estudiar sus implicancias prácticas.
+
+Actualmente, la enseñanza de lógica programable constituye un área de vacancia en muchas carreras de Ingeniería Electrónica. Se trata de una temática difícil de abordar en niveles iniciales de la carrera, y más aún considerando la falta de herramientas a nivel local (kits de desarrollo a precios asequibles, material didáctico para formación inicial, ejemplos de aplicación documentados, proyectos de colaboración abierta, etc.).
+
+===== ¿Qué es el proyecto EDU-CIAA-FPGA? =====
+
+**EDU-CIAA-FPGA** es una plataforma orientada a la divulgación y enseñanza de las FPGA y los lenguajes de descripción de hardware basada en tres pilares fundamentales:
+
+==== 1. Hardware libre y abierto a la comunidad (EDU-CIAA-FPGA) ====
+
+La **EDU-CIAA-FPGA** o **EDU-FPGA** es una placa diseñada por el Grupo de Investigación y Desarrollo de Sistemas Embebidos (ASE) de la UTN FR Haedo con el objetivo de proveer una herramienta abierta y de bajo costo con la cual cualquier persona pueda dar sus primeros pasos en el uso de FPGAs.
+
+==== 2. Plataforma de ejemplos, documentos y herramientas libres ====
+
+Además, de los recursos de hardware, el proyecto abarca una amplia collección de material didáctico, referencias y herramientas para el desarrollo de proyectos: 
+  - Una [[https://gitlab.com/RamadrianG/wiki---fpga-para-todos/-/wikis/home|Wiki]] con información detallada y ejemplos sobre lenguajes de descripción de hardware (VHDL y Verilog), conceptos básicos de diseño digital (descripción, simulación y síntesis) y uso de herramientas libres para programar la EDU-FPGA.
+  - Un Repositorio de Ejemplos y proyectos de todo tipo, en constante crecimiento y con la documentación correspondiente a cada ejemplo (en preparación a liberarse en el mes de junio de 2020)
+
+==== 3. Red nacional de colaboradores, revisores y usuarios ====
+
+Para llevar adelante este desarrollo se realizó una encuesta entre especialistas, docentes y usuarios de FPGA para conocer sus expectativas, preferencias, sugerencias y opiniones. Además, muchos de estos interesados colaboraron activamente aportando sugerencias y opiniones para el desarrollo de la plataforma. Estos profesionales pertenecen a diferentes universidades, instituciones y empresas:
+
+  * Universidad Tecnológica Nacional (UTN) - Buenos Aires
+  * UTN - Bahía Blanca
+  * UTN - San Nicolás
+  * Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)
+  * Universidad Nacional de San Martín (UNSAM)
+  * Instituto Nacional de Tecnología Industrial (INTI)
+  * Instituto de Investigaciones Científicas y Técnicas para la Defensa (CITEDEF)
+  * Satellogic
+  * Jotatec
+
+==== 4. Desarrolladores ====
+
+La placa y propuesta educativa fue desarrollada integralmente por el Grupo de Aplicaciones en Sistemas Embebidos de la Universidad Tecnológica Nacional Facultad Regional Haedo:
+
+  * **Coordinación general:** Mg. Ing. Facundo Larosa 
+  * **Hardware:** Ing. Martín Heredia 
+  * **Wiki y herramientas:** Ing. Ramiro Ghignone 
+  * **Ejemplos de código:** Sr. Federico Vazquez Saraullo, Sr. Hernán Mendes Gouveia, Sr. Martín Fernández.
+
+====== EDU-FPGA ======
+
+===== Resumen =====
+
+{{desarrollo:edu_fpga:logo_3.png|Logo}}
+
+Como se explicó anteriormente, la placa **EDU-FPGA** fue diseñada con tres objetivos fundamentales en mente: //bajo costo, flexibilidad y facilidad de uso//. Está orientada a la enseñanza en nivel secundario, terciario y universitario, y también para cualquier persona interesada en adentrarse en el mundo FPGA.
+
+===== Bloques funcionales =====
+
+La placa se basa en una FPGA [[http://www.latticesemi.com/iCE40|Lattice iCE40 HX4K]] a la cual se agregaron los minimos componentes necesarios para su funcionamiento y fácil utilización: 
+  - Memoria flash para almacenar la configuración de la placa
+  - Interfaz FTDI para comunicar la placa con la PC mediante USB
+  - Pulsadores y LEDs incorporados para probar ejemplos sencillos sin necesidad de componentes externos
+
+==== Diagrama en bloques de la plataforma ====
+
+{{desarrollo:edu_fpga:bloques.png|Diagrama en Bloques}}
+
+=== Componentes de la placa ===
+
+Como se mencionó antes, la FPGA elegida como núcleo de la plataforma es la [[http://www.latticesemi.com/iCE40|Lattice ICE40 HX4K TQ144]], la cual posee las siguientes especificaciones:
+
+^**Lattice ICE40 HX4K TQ144**    ^**Datos**^
+|Celdas Lógicas                  |3520     |
+|Bloques de Memoria RAM de 4Kbits|RAM 20   |
+|Memoria Total                   |80 Kbit  |
+|Phase Locking Loops (PLL)       |2        |
+|Bloques DSP                     |No       |
+|Pines E/S                       |95       |
+|Pares Diferenciales E/S         |12       |
+|Encapsulado                     |TQ144    |
+
+
+Al igual que la mayor parte de las FGPA, la Lattice ICE40 HX4K carece de memoria no volátil interna para almacenar su configuración. Por lo tanto, es necesario agregar una memoria flash que cumpla esta función. A tal fin, la EDU-FPGA v1.2 posee una memoria flash SPI [[https://www.winbond.com/resource-files/w25x40cl_f%2020140325.pdf|WinBond W25X40CL]] con las siguientes características:
+
+^**WinBond W25X40CL**    ^**Datos**  ^
+|Tensión de Alimentación |2.3 a 3.6 V|
+|Interfaz de Comunicación|SPI        |
+|Frecuencia de Trabajo   |104 MHz    |
+|Capacidad               |4 MBit     |
+
+La interfaz de configuración entre el conector USB que utiliza la placa para conectarse a la PC y la conexión SPI de la memoria flash y la FPGA se implementa a través de un chip FTDI [[https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf|FT2232H]].
+
+Finalmente, se incluyeron dos reguladores lineales de la serie [[https://www.st.com/en/power-management/ld1117.html|LD1117]] para proveer las tensiones de alimentación necesarias para los componentes:
+
+^**Regulador**^**Tensión**^**Alimenta a**                              ^
+|LD1117S12    |1.2 V      |Núcleo de la FPGA                           |
+|LD1117S33    |3.3 V      |E/S de la FPGA, memoria flash, interfaz FTDI|
+
+=== Periféricos y pines de E/S ===
+
+La placa cuenta con un total de **49 pines disponibles de entrada/salida de propósito general** (GPIO)conectados a los 4 bancos de E/S de la FPGA iCE40. Esta gran cantidad de conexiones disponibles le ofrece al usuario innumerables posibilidades, contribuyendo a la flexibilidad y escalabilidad de la plataforma.
+
+Los pines de la FPGA trabajan a **3.3 V** y pueden manejar corrientes de hasta **6mA**. No todos los pines de la FPGA están conectados; aquellos pines accesibles en cada banco son:
+
+^**Banco E/S de la FPGA**^**Pines accesibles**                    ^**Cantidad total**^
+|Banco 0                 |122, 124, 125, 128-130, 134-139, 141-144|16                |
+|Banco 1                 |79-85, 95-99, 104-107                   |16                |
+|Banco 2                 |37                                      |1                 |
+|Banco 3                 |7-12, 15-24                             |16                |
+|                        |**TOTAL**                               |**49**            |
+
+Por otro lado, la placa cuenta con un oscilador de cristal a 12 MHz, 4 pulsadores y 4 luces LEDs que sirven para para agilizar el desarrollo y ensayo de prototipos sin necesidad de conectar componentes adicionales. Estos elementos están conectados a los siguientes pines de la FPGA:
+
+^**Componente**^**Pin de la FPGA**^
+|Cristal 12 MHz|94                |
+|LED Verde     |1                 |
+|LED Rojo      |2                 |
+|LED Amarillo  |3                 |
+|LED Azul      |4                 |
+|Pulsadores    |31, 32, 33 y 34   |
+
+[[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf|Este diagrama]] muestra la placa y su distribución de pines de E/S.
+
+===== Estado actual =====
+
+**LA EDU-CIAA-FPGA v1.2 YA ESTÁ A LA VENTA NUEVAMENTE !!!**
+
+Al igual que la serie anterior, la producción y comercialización de la nueva tanda de placas está a cargo de la empresa [[http://www.outsourcesrl.com/|Outsource SRL]]. Podés comprar tu EDU-CIAA-FPGA a través de MercadoShops en el siguiente link:
+
+[[https://outsource.mercadoshops.com.ar/MLA-1134715781-placa-desarrollo-edu-fpga-lattice-ice40hx4k-_JM]]
+
+---
+
+Se han diseñado y producido dos versiones de la placa, las cuales pueden verse en la siguiente imagen : la **EDU-FPGA v1.0** (//a la izquierda//) y la **EDU-FPGA v1.2** (//a la derecha//).
+
+{{desarrollo:edu_fpga:versiones.jpeg|Versiones}}
+
+Ambas fueron diseñadas por el Grupo de Aplicaciones en Sistemas Embebidos (ASE) de la [[http://www.frh.utn.edu.ar/cms/|Universidad Tecnológica Nacional - Facultad Regional Haedo]]. La versión 1.0 fue fabricada por el Grupo de Soldadura SMD de la misma facultad, mientras que la 1.2 fue fabricada por la empresa [[http://www.outsourcesrl.com/|Outsource]]. Esta última versión incorpora algunas mejoras tales como pulsadores SMD y modelos más recientes de cristal y memoria.
+
+Agradecemos la colaboración y revisión de los ingenieros Juan Manuel Cruz (Grupo Hasar, UTN FRBA, FIUBA), Nicolás Dassieu Blanchet (JOTATEC), Rodrigo Melo (INTI) y Christian Galasso (UTN-FRBB) por las sugerencias, revisión y aportes que realizaron durante todo el proceso de diseño y fabricación de los primeros prototipos.
+
+Vale destacar que los PCB fueron desarrollados en base a las normas [[http://www-eng.lbl.gov/~shuman/NEXT/CURRENT_DESIGN/TP/MATERIALS/IPC-2221A(L).pdf|IPC 2221A]] e [[https://www.ipc.org/TOC/IPC-7351.pdf|IPC 7351]] para mejorar su manufacturabilidad.
+
+El repositorio de Hardware del proyecto puede encontrarse en [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA|este enlace]].
+
+==== Diseño del diagrama esquemático ====
+
+Herramienta usada para el desarrollo (KiCAD), descarga en PDF de: 
+  - [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/schematic.pdf|Esquematico (v1.2)]] 
+  - [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf|Diagrama pinout (v1.2)]]
+
+==== Listado de materiales ====
+
+  * [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/BOM/BOM.ods|Descarga de BOM (v1.2) en formato ods]]
+
+==== Placa de Circuito Impreso ====
+
+  * [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/Gerbers|Gerbers de fabricacion]]
+
+----
+
+==== Gabinete impreso en 3D para la placa ====
+
+En la UTN Facultad Regional Paraná se desarrolló este gabinete impreso 3D que le queda genial ! 
+
+{{https://gitlab.com/labinformatica/edu-ciaa-fpga-case/-/raw/master/foto_02.jpg|Gabinete_3D}}
+
+En [[https://gitlab.com/labinformatica/edu-ciaa-fpga-case|este repo]] se puede acceder a los archivos de diseño.
+
+====== Imágenes de la EDU-FPGA en funcionamiento ======
+
+> Probando pulsadores
+
+{{desarrollo:edu_fpga:prueba_1.gif| Pulsador}}
+
+> Blinky
+
+{{desarrollo:edu_fpga:prueba_2.gif| Blinky}}
+
+> Modulación SPWM trifásica
+
+{{desarrollo:edu_fpga:edufpga_spwm3_1.gif| SPWM}}
+
+----
+
+{{http://www.frh.utn.edu.ar/static/img/logo-utn.jpg| UTN-FRH}}

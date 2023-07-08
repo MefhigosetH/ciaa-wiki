@@ -1,0 +1,33 @@
+====== Soporte GPIOs: Clase Pin ======
+
+La clase Pin permitirá crear objetos que representan las GPIOs de la placa.
+
+===== Constructor =====
+
+La clase posee un constructor que recibe un solo argumento, este argumento es el número de GPIO que controlará.
+
+Números de GPIOs: 0 a 8 (como se indican en la placa)
+
+===== Métodos =====
+
+  * low() : Pone el pin GPIO en un 0 lógico si el mismo estś configurado como salida.
+  * high() : Pone el pin GPIO en un 1 lógico si el mismo estś configurado como salida.
+  * value(): Devuelve el número 0 o 1 según el estado del pin, ya sea si está configurado como entrada o como salida.
+  * init(mode,pull): Configura la GPIO, recibe 1 argumento obligatorio y uno opcional:
+    *  mode: Indica el modo del pin, los valores posibles son Pin.IN: entrada. Pin.OUT_PP: Salida PushPull. Pin.OUT_OD: Salida Open Drain.
+    * pull: Configura las resistencias de pull up/down del pin, los valores posibles son Pin.PULL_NONE: Sin resistencias. Pin.PULL_UP: Se habilita la resistencia de pullup. Pin.PULL_DOWN: Se habilita la resistencia de pulldown.
+
+===== Ejemplo =====
+  
+  p = pyb.Pin(0) #GPIO0
+  p.init(pyb.Pin.OUT_PP,pyb.Pin.PULL_NONE)
+  print(p)
+  
+  while True:
+          p.high()
+          print("value:"+str(p.value()))
+          pyb.delay(1000)
+          p.low()
+          print("value:"+str(p.value()))
+          pyb.delay(1000)
+

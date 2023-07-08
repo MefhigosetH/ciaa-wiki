@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:edu-ciaa:edu-ciaa-nxp:python</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:10:42+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas&amp;rev=1476042358&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;rev=1488033578&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux&amp;rev=1450048630&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx&amp;rev=1450048653&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows&amp;rev=1444783150&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;rev=1484264753&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware&amp;rev=1476560537&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting&amp;rev=1473624859&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas&amp;rev=1476042358&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-10-09T19:45:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas&amp;rev=1476042358&amp;do=diff</link>
+        <description>Bibliotecas Python
+
+El soporte para Python cuenta con una amplia cantidad de caracterísicas del lenguaje Python habilitadas, como lo son el manejo de listas, diccionarios, funciones matemáticas, programación orientada a objetos, bytearray y collections entre otras.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;rev=1488033578&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-25T14:39:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;rev=1488033578&amp;do=diff</link>
+        <description>Comenzar a programar con Micro Python
+
+Para comenzar a programar existen dos opciones, utilizar un programa para interactuar con la consola de python (miniterm, teraterm, etc) o utilizar el IDE desarrollado para escribir un script de python y grabarlo en la placa.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux&amp;rev=1450048630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-13T23:17:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux&amp;rev=1450048630&amp;do=diff</link>
+        <description>Configuración del entorno de desarrollo (Linux)
+
+Utilizaremos Ubuntu en los ejemplos de cómo instalar las herramientas necesarias en nuestro sistema para poder compilar el firmware y grabarlo en la EDU-CIAA.
+
+Instalación del compilador
+
+Primero necesitaremos un compilador para ARM el cual descargaremos del siguiente link:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx&amp;rev=1450048653&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-13T23:17:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx&amp;rev=1450048653&amp;do=diff</link>
+        <description>Configuración del entorno de desarrollo (OSX/MacOS)
+
+Utilizaremos OSX en los ejemplos de cómo instalar las herramientas necesarias en nuestro sistema para poder compilar el firmware y grabarlo en la EDU-CIAA.
+
+Instalador de XCode
+
+XCode debe descargarse desde el App Store. Tener en cuenta que en su versión actual (2015/10) son 3.6GB.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows&amp;rev=1444783150&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-14T00:39:10+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows&amp;rev=1444783150&amp;do=diff</link>
+        <description>Configuración del entorno de desarrollo (Windows)
+
+Se utilizará Vagrant y VirtualBox para emular un sistema operativo Linux. Vagrant es una herramienta que nos permite virtualizar entornos de desarrollo y distribuirlos fácilmente.
+
+La explicación que se ofrece a continuación es válida para sistemas operativos Windows, Linux o IOS.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;rev=1484264753&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-12T23:45:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador&amp;rev=1484264753&amp;do=diff</link>
+        <description>Emulador de EDU-CIAA corriendo MicroPython
+
+Este software emulador, que se instala de forma independiente al IDE, permite simular la placa EDU-CIAA ejecutando el firmware de MicroPython, emulando la mayoría de los periféricos que posee la placa. El emulador se ejecuta desde el IDE, mediante el boton</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware&amp;rev=1476560537&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-10-15T19:42:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware&amp;rev=1476560537&amp;do=diff</link>
+        <description>Grabando el firmware en la placa
+
+El primer paso es grabar el firmware en la EDU-CIAA, para ello necesitamos compilar el proyecto y tener funcionando OpenOCD para poder grabarlo en la placa, la misma la conectaremos por el conector USB-debug.
+
+Configurando entorno de desarrollo</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting&amp;rev=1473624859&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-11T20:14:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting&amp;rev=1473624859&amp;do=diff</link>
+        <description>Troubleshooting
+
+A continuación se plantean una serie de problemas típicos con sus soluciones.
+
+* El script se graba en la placa pero no se ejecuta
+
+Si es posible grabar el script en la placa mediante el IDE y luego al ejecutarlo solo aparece el intérprete de Python y el script nunca se ejecuta, es posible que la FAT dentro de la memoria de programa del microcontrolador este corrupta.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,configuracion_entorno_windows"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_windows","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="configuracion_del_entorno_de_desarrollo_windows">Configuración del entorno de desarrollo (Windows)</h1>
+<div class="level1">
+
+<p>
+Se utilizará Vagrant y VirtualBox para emular un sistema operativo Linux. Vagrant es una herramienta que nos permite virtualizar entornos de desarrollo y distribuirlos fácilmente.
+</p>
+
+<p>
+La explicación que se ofrece a continuación es válida para sistemas operativos Windows, Linux o IOS.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del entorno de desarrollo (Windows)&quot;,&quot;hid&quot;:&quot;configuracion_del_entorno_de_desarrollo_windows&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-354&quot;} -->
+<h2 class="sectionedit2" id="herramientas_a_instalar">Herramientas a instalar</h2>
+<div class="level2">
+<ol>
+<li class="level1"><div class="li"> <a href="https://www.virtualbox.org/wiki/Downloads" class="urlextern" target="_blank" title="https://www.virtualbox.org/wiki/Downloads" rel="ugc nofollow noopener">Virtual Box</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.vagrantup.com/downloads.html" class="urlextern" target="_blank" title="https://www.vagrantup.com/downloads.html" rel="ugc nofollow noopener">Vagrant</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" class="urlextern" target="_blank" title="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" rel="ugc nofollow noopener">Putty</a></div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Herramientas a instalar&quot;,&quot;hid&quot;:&quot;herramientas_a_instalar&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;355-588&quot;} -->
+<h3 class="sectionedit3" id="generacion_de_la_maquina_virtual">Generación de la máquina virtual</h3>
+<div class="level3">
+
+<p>
+Abriremos una consola de Windows: Botón Inicio → cmd → ENTER. Luego crearemos un directorio de trabajo, por ejemplo:
+</p>
+<pre class="code">mkdir educiaa
+cd educiaa</pre>
+
+<p>
+Ahora crearemos una virtual Ubuntu de 32bit utilizando Vagrant:
+</p>
+<pre class="code">vagrant init hashicorp/precise32</pre>
+
+<p>
+Se generará un archivo en el directorio, llamado Vagrantfile, allí se encuentra la configuración de la máquina virtual. Editamos el archivo para configurar la red y la conexión USB con la placa:
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Generaci\u00f3n de la m\u00e1quina virtual&quot;,&quot;hid&quot;:&quot;generacion_de_la_maquina_virtual&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;589-1087&quot;} -->
+<h3 class="sectionedit4" id="configuracion_de_la_red">Configuración de la red</h3>
+<div class="level3">
+
+<p>
+En el archivo Vagrantfile, agregamos la línea para configurar una IP fija:
+</p>
+<pre class="code">config.vm.network &quot;public_network&quot;, ip: &quot;192.168.33.10&quot;</pre>
+
+<p>
+Esta red funcionará bajo eth1, ya que eth0 es una red que utiliza Vagrant para conectarse por SSH.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de la red&quot;,&quot;hid&quot;:&quot;configuracion_de_la_red&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1088-1360&quot;} -->
+<h3 class="sectionedit5" id="configuracion_usb">Configuración USB</h3>
+<div class="level3">
+
+<p>
+Configuraremos la virtual para que se conecte automáticamente el dispositivo con el vendor ID del chip FTDI, para ello agregamos al archivo Vagrantfile lo siguiente:
+</p>
+<pre class="code">config.vm.provider :virtualbox do |vb|
+    vb.customize [&#039;modifyvm&#039;, :id, &#039;--usb&#039;, &#039;on&#039;]
+    vb.customize [&#039;usbfilter&#039;, &#039;add&#039;, &#039;0&#039;, &#039;--target&#039;, :id, &#039;--name&#039;, &#039;FTDI&#039;, &#039;--vendorid&#039;, &#039;0x0403&#039;]
+  end</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n USB&quot;,&quot;hid&quot;:&quot;configuracion_usb&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1361-1764&quot;} -->
+<h3 class="sectionedit6" id="inicio_de_la_maquina_virtual">Inicio de la máquina virtual</h3>
+<div class="level3">
+
+<p>
+Para iniciar la máquina virtual, ejecutamos:
+</p>
+<pre class="code">vagrant up</pre>
+
+<p>
+La primera vez que se ejecute bajará la imagen de la virtual. Al terminar, podemos utilizar Putty para ingresar la IP que fijamos en la virtual y conectarnos con el usuario “vagrant” y el password “vagrant”
+</p>
+
+<p>
+A partir de aquí se podrá seguir la <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux">configuración del entorno de desarrollo (Linux)</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Inicio de la m\u00e1quina virtual&quot;,&quot;hid&quot;:&quot;inicio_de_la_maquina_virtual&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1765-2236&quot;} -->
+<h3 class="sectionedit7" id="alternativa">Alternativa</h3>
+<div class="level3">
+
+<p>
+Existe una máquina virtual en el repositorio de Vagrant con todas las herramientas para compilar para la CIAA instaladas (compilador, OpenOCD y configuración del USB), para utilizar esta máquina virtual y evitarse los pasos de instalación, dirigirse a <a href="https://github.com/ernesto-g/ciaa-vagrant" class="urlextern" target="_blank" title="https://github.com/ernesto-g/ciaa-vagrant" rel="ugc nofollow noopener">https://github.com/ernesto-g/ciaa-vagrant</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Alternativa&quot;,&quot;hid&quot;:&quot;alternativa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2237-&quot;} --></div>
+</body>
+</html>

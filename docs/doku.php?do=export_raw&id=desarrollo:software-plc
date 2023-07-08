@@ -1,0 +1,62 @@
+====== IDE4PLC, el Software-PLC de la CIAA ====== 
+###
+El Software-PLC de la CIAA es el entorno de desarrollo integrado (IDE) industrial que se ejecuta en una PC (Windows / Linux compatible / MAC OS X) que permite:
+###
+  * Codificar a través de los **lenguajes de programación para PLC** definidos por la norma **IEC 61131-3** , el programa que se ejecutará en la plataforma CIAA.
+  * **Compilar **dicho código para la arquitectura del microcontrolador de la plataforma.
+  * **Interactuar con CIAA-Firmware** para la ejecución de los programas.
+  * Visualizar y editar el **mapa de memoria** de la CIAA.
+
+**Importante**: Si usted desea programar la CIAA usando lenguajes C/C++ entonces utilice [[software-ide|Software-IDE]].
+
+
+===== Equipo de coordinación del desarrollo de software =====
+
+^ Función                         ^ Nombre                   ^ Organización     ^ Mail                   ^
+| Responsable de Software-PLC     | Ing. Eric Pernia          | [[http://www.unq.edu.ar/|UNQ]] | <ericpernia@gmail.com> |
+| Sub-responsable de Software-PLC | Dr. Lic. Carlos Lombardi  | [[http://www.unq.edu.ar/|UNQ]]             | <carlombardi@gmail.com> |
+
+
+===== Participar en el desarrollo del Software-PLC =====
+
+Para participar en el desarrollo del Software-PLC le sugerimos unirse al [[https://groups.google.com/forum/#!forum/ciaa-software-plc|Grupo en Google del CIAA-Software-PLC]].
+
+
+===== Plan desarrollo de software =====
+
+^ Fecha       ^ Versión         ^ Boards Soportadas  ^ CIAA-Firmware utilizado ^ Objetivos de la versión ^
+| 16/09/2015  |  Release 1.0.2  | EDU-CIAA-NXP       | Release 0.6.1 | [[desarrollo:software-plc:obj-v1.0.2|Ingresar]] |
+| 20/05/2015  |  Release 1.0.1  | EDU-CIAA-NXP       | Release 0.5.0 | Pequeña modificación |
+| 18/05/2015  |  Release 1.0.0  | EDU-CIAA-NXP       | Release 0.5.0 | [[desarrollo:software-plc:obj-v1.0.0|Ingresar]] |
+===== Implementación =====
+
+###
+El Software-PLC surge en base al desarrollo libre IDE4PLC, elaborado por Eric Pernia como su tesis de grado en la Universidad Nacional de Quilmes. [[http://ide4plc.wordpress.com/|Ver más sobre IDE4PLC]].
+###
+
+IDE4PLC versión 1.0.2 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+  * [[https://github.com/ciaa/IDE4PLC/releases/download/v1.0.2win/IDE4PLCv1.0.2-Win.zip|IDE4PLC versión 1.0.2 para Windows]].
+
+IDE4PLC versión 1.0.1 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+  * [[https://github.com/ciaa/IDE4PLC/releases/download/v1.0.1win/IDE4PLCv1.0.1-Win.zip|IDE4PLC versión 1.0.1 para Windows]].
+
+IDE4PLC versión 1.0.0 para la EDU-CIAA-NXP se encuentra disponible para los Sistemas Operativos:
+  * [[https://www.dropbox.com/s/w5i3q3iebugd4fr/IDE4PLCv1.0.0-Linux.tar.gz?dl=0|IDE4PLC versión 1.0.0 para Linux]].
+  * [[https://www.dropbox.com/s/zaci2zaq2gg7hxn/IDE4PLCv1.0.0-Win.zip?dl=0|IDE4PLC versión 1.0.0 para Windows]].
+
+
+IDE4PLC versión 0.08 alpha para LPCXpresso se encuentra disponible para los Sistemas Operativos:
+  * [[https://www.dropbox.com/s/2c9w0mo9wts8zm5/IDE4PLCv0.0.8alpha-Linux.zip?dl=1|IDE4PLC versión 0.08 alpha para Linux]].
+  * [[https://www.dropbox.com/s/7kllejwmguokpnp/IDE4PLCv0.0.8alpha.app.zip?dl=1|IDE4PLC versión 0.08 alpha para Mac OS X]].
+  * [[https://www.dropbox.com/s/f3ta23au2a7hbii/IDE4PLCv0.0.8alpha-Win.zip?dl=1|IDE4PLC versión 0.08 alpha para Windows]] (requiere LPCXpresso IDE).
+
+Para mayor información sobre las versiones disponibles puede visitar el sitio de IDE4PLC: [[http://ide4plc.wordpress.com/descargas/]]
+
+==== Documentación de IDE4PLC ====
+
+Se encuentra disponible en: [[http://ide4plc.wordpress.com/documentacion/]].
+
+==== Elementos gráficos estándar definidos en IEC 61131-3:2003 soportados en IDE4PLC ====
+
+[[https://ide4plc.files.wordpress.com/2015/08/ide4plc-elementos-grc3a1ficos-sopotados-v1-r0.pdf|Descargar en pdf]].
+

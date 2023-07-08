@@ -1,0 +1,81 @@
+====== Soporte EEPROM interna: Clase EEPROM ======
+
+La clase EEPROM permitirá crear un objeto que representa la memoria EEPROM interna del microcontrolador.
+
+
+===== Constructor =====
+
+El constructor de la clase no recibe parámetros.
+
+===== Métodos =====
+
+La clase EEPROM posee métodos para leer y escribir bytes (8bit) enteros (32bits), números con punto flotante (32bits) y Strings.
+
+  * write_byte(addr,val): Escribe un byte en la dirección indicada y devuelve la cantidad de bytes escritos (1 byte)
+  * write_int(addr,val): Escribe un entero en la dirección indicada y devuelve la cantidad de bytes escritos (4 bytes)
+  * write_float(addr,val): Escribe un float en la dirección indicada y devuelve la cantidad de bytes escritos (4 bytes)
+  * write(val) : Escribe un String a partir de la dirección 0x0000 de la EEPROM
+
+  * read_byte(addr): Lee un byte en la dirección indicada
+  * read_int(addr): Lee un entero desde la dirección indicada
+  * read_float(addr): Lee un float desde la dirección indicada
+  * readall() : Lee un string desde la dirección 0x0000 de la EEPROM
+
+La capacidad de la EEPROM es de 16Kbytes.
+
+
+===== Ejemplo 1 =====
+
+  import pyb
+  eeprom = pyb.EEPROM()
+  
+  # R/W bytes test
+  eeprom.write_byte(0x0000,0x27)
+  eeprom.write_byte(0x0004,0x28)
+  for addr in range (0,16):
+      val = eeprom.read_byte(addr)
+      print(hex(val))
+  
+  # R/W 32bit integers test
+  eeprom.write_int(0x0000,0x11223344)
+  eeprom.write_int(0x0004,0x12345678)
+  val = eeprom.read_int(0x0000)
+  print(hex(val))
+  val = eeprom.read_int(0x0004)
+  print(hex(val))
+  
+  
+  # R/W 64bit doubles test
+  eeprom.write_float(0x0000,3.14)
+  val = eeprom.read_float(0x0000)
+  print(str(val))
+
+
+===== Ejemplo lectura y escritura de un diccionario usando JSON =====
+
+  import pyb
+  import json
+  
+  dic = dict()
+  dic["k1"] = "Hello"
+  dic["k2"] = "World"
+  dic["k3"] = 2016
+  dic["k4"] = 3.14
+  print("Python Dict obj:")
+  print(dic)
+  
+  #write dict in eeprom
+  jsonStr = json.dumps(dic)
+  print("JSON to write:")
+  print(jsonStr)
+  eeprom = pyb.EEPROM()
+  eeprom.write(jsonStr)
+  
+  # read dict from eeprom
+  print("Python Dict obj from EEPROM:")
+  jsonStr = eeprom.readall()
+  dic = json.loads(jsonStr)
+  print(dic)
+
+
+En este ejemplo se crea un diccionario Python y luego se serializa utilizando el módulo json, una vez obtenido el String que representa al diccionario, se graba en la EEPROM mediante el método "write". Para volver a construir el diccionario, se lee el String desde la EEPROM mediante el método "readall" y luego se decodifica mediante el método "loads" del módulo json.

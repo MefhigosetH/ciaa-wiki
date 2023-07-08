@@ -1,0 +1,35 @@
+===== Instalación del Entorno de Desarrollo para Ada en Windows =====
+
+==== Descargar e Instalar GNAT GPL 2017 ====
+
+  - Descargar el archivo exe.
+    - Abrir [[https://libre.adacore.com/download/configurations|https://libre.adacore.com/download/configurations]] en el navegador.
+    - Donde dice **//"Select your platform"//** elegir las opciones **//"ARM ELF format (hosted on Windows)"//** y **//"GNAT GPL 2017"//**.
+    - Desplegar las opciones de  **//"GNAT Ada 2017"//** y tildar la opción **//gnat-gpl-2017-arm-elf-windows-bin.exe//**.
+    - Donde dice **//"Bundle format:"//** elegir la opción **//zip//** y hacer click  en el botón **//Download Selected Files//**. \\ \\ {{ :desarrollo:edu-ciaa:edu-ciaa-nxp:ada:download_gnat_windows.gif }} \\ \\
+  - Ejecutar el instalador. \\ \\ {{ :desarrollo:edu-ciaa:edu-ciaa-nxp:ada:install_gnat_windows.gif }}
+
+==== Descargar, Instalar y Remplazar el Driver FTDI ====
+
+  - Descargar e instalar el [[http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip|driver FTDI]]. \\ \\ {{ :desarrollo:firmware:ft2232h_ftdi_devices.png }} \\
+  - Remplazar el driver FTDI.
+    - Descargar la aplicación [[http://zadig.akeo.ie/downloads/zadig-2.3.exe|Zadig]] y ejecutar.
+    - Del menú //Options// elegir la opción //List All Devices//.
+    - Remplazar el driver del canal A (también puede aparecer como 'Converter A' o 'Interface 0') por el driver //WinUSB//.
+    - Hacer clic en el botón //Replace Driver//. \\ \\ {{ :desarrollo:firmware:driver_winusb_zadig_ft2232h.png }}
+<note important>
+Si Zadig falla con el mensaje //“The driver installation failed."//, intentar utilizando la [[http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download|versión anterior]]. Solución propuesta [[https://github.com/pbatard/libwdi/issues/1|aquí]].
+</note>
+
+[[desarrollo:firmware:instalacion_sw#OpenOCD|Instrucciones detalladas]]
+==== Descargar e Instalar OpenOCD ====
+
+  - Descargar [[http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0|OpenOCD 0.9.0]].
+  - Descomprimir en la ruta deseada, p. ej. //C:\Archivos de Programa (x86)//.
+  - Agregar la carpeta de binarios //openocd-0.9.0\bin// a la variable de entorno //PATH//.
+
+[[desarrollo:firmware:instalacion_sw#OpenOCD|Instrucciones detalladas]]
+
+==== Descargar e Instalar Git ====
+
+Los instaladores de Git para Windows 32bits y 64bits se pueden descargar de [[https://git-scm.com/download/win|aquí]].

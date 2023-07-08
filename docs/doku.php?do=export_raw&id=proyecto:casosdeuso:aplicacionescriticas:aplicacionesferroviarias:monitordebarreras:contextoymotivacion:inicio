@@ -1,0 +1,60 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias ======
+
+{{ :blanco.png?10 | }}
+
+===== ¿Cuál es el primer paso? =====
+
+###
+Habiendo explicado el [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion|contexto y motivación]] en el que surge este proyecto, y habiendo [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion|justificado la elección del Monitor de Barreras como el primer desarrollo a realizar]], el primer paso para avanzar con el desarrollo de este sistema consiste en elegir que normas se seguirán en su desarrollo.
+###
+
+###
+Del análisis de las distintas [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias|normativas asociadas al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad]], se determinó que el diseño e implementación de un monitor de barreras ferroviarias se realice utilizando las normas UNE EN 50126 (versión 2005), UNE EN 50128 (versión 2002) y UNE EN 50129 (versión 2005).
+###
+
+###
+Para encarar el desarrollo del sistema es necesario conocer cuál es el **ciclo de vida** que la norma indica que debe utilizarse. La norma UNE EN 50126 define en su apartado 5.2.2 al ciclo de vida del sistema como "//una secuencia de fases, cada una de las cuales contiene tareas que abarcan la vida completa de un sistema desde su concepto inicial hasta la retirada del servicio y la eliminación. El ciclo de vida proporciona una estructura para la planificación, la gestión, el control y la supervisión de todos los aspectos de un sistema, incluido la **RAMS**, a medida que el sistema avanza a través de sus fases, con el fin de entregar el producto adecuado al precio correcto dentro del plazo acordado. El concepto de ciclo de vida es fundamental para la puesta en práctica con éxito de esta norma//".
+###
+
+###
+El término **RAMS** que utiliza la norma en dicha definición corresponde al acrónimo de las palabras inglesas //Reliability//, //Availability//, //Maintainability// y //Safety//, que en español corresponden a Fiabilidad, Disponibilidad, Mantenibilidad y Seguridad. Si bien no es el objetivo explicar en esta página estos conceptos, por completitud se reproducen a continuación la definición de cada uno de estos términos de acuerdo a lo que indica la norma UNE EN 50126 en su capítulo 3:
+###
+
+  * **Fiabilidad** (//**R**eliability//): La probabilidad de que un elemento pueda realizar una función requerida en condiciones determinadas durante un intervalo de tiempo determinado (t1, t2). (IEC 60050-191). 
+  * **Disponibilidad** (//**A**vailability//): La capacidad que tiene un producto de hallarse en situación de realizar una función requerida en condiciones determinadas en un momento dado o durante un intervalo de tiempo señalado, suponiendo que se faciliten los recursos externos requeridos.
+  * **Mantenibilidad** (//**M**aintainability//): La probabilidad de que una acción dada de mantenimiento activo, correspondiente a un elemento en unas condiciones de utilización dadas, pueda ser llevada a cabo en un intervalo establecido de tiempo cuando el mantenimiento se realiza en condiciones establecidas y se utilizan procedimientos y recursos establecidos (IEC 60050-191).
+  * **Seguridad** (//**S**afety//): Ausencia de riesgo inaceptable de daño.
+
+###
+La norma UNE EN 50126 propone en su sección 5.2 un ciclo de vida para el desarrollo de una aplicación ferroviaria, que está compuesto por las siguientes fases:
+###
+
+  - Concepto
+  - Definición del sistema y Condiciones de aplicación
+  - Análisis de riesgos
+  - Requisitos del Sistema
+  - Distribución de los Requisitos del Sistema
+  - Diseño y Desarrollo
+  - Producción
+  - Instalación
+  - Validación del Sistema (incluyendo Aceptación de seguridad y Puesta en Servicio)
+  - Aceptación del Sistema
+  - Operación y Mantenimiento
+  - Supervisión de Ejecución
+  - Modificación, Realimentación
+  - Retirada del servicio y Eliminación
+
+###
+En este link se puede ver más información sobre las [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:normasferroviarias|normativa asociada al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad]] y en particular a las fases del ciclo de vida que define la normativa UNE EN 50126.
+###
+
+
+###
+En consecuencia, el primer paso para el Diseño e Implementación del Monitor de Barreras es comenzar con la Fase 1. Por eso proponemos continuar la lectura en la página dedicada a describir el desarrollo de la Fase de Concepto del Monitor de Barreras.
+###
+
+{{ :blanco.png?20 | }}
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Ir a la Página Inicial de la "Fase 1: Concepto"]] ]
+### 

@@ -1,0 +1,57 @@
+====== CIAA-FSL: Salida Analógica ======
+
+===== Diagrama Esquemático =====
+
+{{ 12-salida_analogica.png |}}
+
+===== Características =====
+  * 1 Salida analógica configurable como Corriente/Tensión.
+  * Salida de tensión 0-10V (extendido a 10,5V) con impedancia de Carga mínima de 3KOhm.
+  * Transmisor Activo para Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia máx 1KOhm.
+  * Protección contra cortocircuito para salida de tensión.
+  * Protección por diodos de enclavamiento
+  * Optimizado para aprovechar el rango del DAC (12 Bits)
+
+
+===== Descripción =====
+La salida analógica tiene la capacidad de poder funcionar como lazo de
+corriente activo (4-20mA) o como salida de tensión (0-10V), según la posición
+de un jumper.
+Esta versatilidad convierte a la salida analógica de la CIAA en uno de
+sus fuertes para los procesos de automatización.
+
+El circuito ha sido diseñado con una primer etapa no inversora con
+ganancia un poco mayor a 3, incorporando dentro del lazo de realimentación
+un transistor con hFE grande y una R1204 = 2K2 para limitar la corriente de
+corto circuito en modo tensión. De esta manera, en modo tensión la salida
+limita su corriente de corto circuito a unos 10mA, y puede estar cargado
+con una R tan baja como 3Kohm (incluso un poco menor). En el modo de lazo
+de corriente, es necesario el transistor con hFE grande para minimizar la
+diferencia entre Ic e Ie, de manera tal que la corriente por R1201 sea
+prácticamente igual a R1203, actuando de esta manera como un amplificador
+de trasconductancia para la tensión proveniente del DAC. Por último, esta
+corriente sobre R1203 provoca una caida de tensión que excita una nueva
+fuente de trasconductancia en el rail superior, permitiendo trabajar como
+transmisor activo de lazo de corriente (no necesita fuente externa). En
+este caso se utiliza un transistor (Q1202) con una capacidad de disipar potencia
+mayor, dado que ante una RL pequeña debería disipar cerca de 0,5W. Como
+un detalle, se han polarizado 2 diodos en serie para generar un offset del
+rail superior, de manera tal que el último amplficador operacional tenga
+siempre sus entradas lejos del limite dado por la tensión de alimentación.
+Se han utilizado resistencias con muy baja tolerancia (0.1%) y poca variación
+con la temperatura (25ppm) en aquellas que determinan las ganancias de tensión
+ o de transconductancia, logrando obtener una incertidumbre pequeña en las
+respectivas salidas. En la salida se han colocado diodos de enclavamiento
+BAV199 que poseen muy baja corriente inversa para no alterar la salida del
+amplificador operacional.\\
+A fin de comprender cómo seleccionar los componentes de este circuito, para conseguir un menor error en la conversión tensión/corriente, se recomienda revisar este breve informe: {{error_out_an.pdf|Análisis sobre la salida Analógica}} (//En revisión//)
+
+===== Referencias =====
+  * [[http://en.wikipedia.org/wiki/Current_loop%E2%80%8E | Wikipedia, Current Loop 4-20 mA]]
+  * [[http://en.wikipedia.org/wiki/0-10_V_lighting_control | Wikipedia, Lighting Control 0-10V]]
+
+===== Datasheets de componentes importantes =====
+  * Amplificador Operacional: [[http://www.ti.com/lit/ds/symlink/lm158-n.pdf | LM158]]
+  * Transistor NPN: [[http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf | BC817-40]]
+  * Transistor PNP: [[http://www.mouser.com/ds/2/302/PBSS5240X-256509.pdf | PBSS5240X]]
+  * Diodo doble: [[http://www.nxp.com/documents/data_sheet/BAV199.pdf | BAV199]]

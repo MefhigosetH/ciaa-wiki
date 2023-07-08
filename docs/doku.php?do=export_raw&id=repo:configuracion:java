@@ -1,0 +1,110 @@
+Los componentes de java pueden ser de distintos proveedores y versiones y pueden convivir simultáneamente usando la arquitectura de update-alternatives.
+
+Los programas que nos interesan son **java** para ejecutar y **javac**, el compilador. Para ver que versiones hay instaladas, use --list
+
+<code bash>
+update-alternatives --list java
+</code>
+
+Una salida de ejemplo, consistente con los siguientes ejemplos es:
+
+<code>
+/opt/java/jdk1.7.0_71/bin/java
+/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+</code>
+
+Para consultar el compilador:
+
+<code bash>
+update-alternatives --list javac
+</code>
+
+Siendo la salida 
+
+<code>
+/opt/java/jdk1.7.0_71/bin/javac
+/usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+</code>
+
+Si bajamos la nueva versión y la descomprimimos en /opt/java/jdk1.8.0_102, tendríamos que ver algo como
+
+<code bash>
+ls /opt/java/ -1
+</code>
+<code>
+jdk1.7.0_71
+jdk1.8.0_102
+</code>
+
+Hay que instalar las alternativas:
+
+<code bash>
+sudo update-alternatives --install /usr/bin/java java /opt/java/jdk1.8.0_102/jre/bin/java 3
+sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk1.8.0_102/bin/javac 3
+</code>
+
+Siendo el formato: 
+
+<code bash>
+update-alternatives --install EJECUTABLE NOMBRE RUTA_REAL_EJECUTABLE PRIORIDAD
+</code>
+
+Controlar tras instalar que estén y seleccionarlas, primero el **java**:
+
+<code bash>
+sudo update-alternatives --config java
+</code>
+
+Hay que seleccionar con el número la opción deseado si no es la que está actualmente marcada con ** * **
+
+<code>
+There are 3 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      auto mode
+  1            /opt/java/jdk1.7.0_71/bin/java                   1         manual mode
+* 2            /opt/java/jdk1.8.0_102/jre/bin/java              3         manual mode
+  3            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      manual mode
+
+Press enter to keep the current choice[*], or type selection number: 
+</code>
+
+Luego, el compilador, **javac**:
+<code bash>
+sudo update-alternatives --config javac
+</code>
+<code>
+There are 3 choices for the alternative javac (providing /usr/bin/javac).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      auto mode
+  1            /opt/java/jdk1.7.0_71/bin/javac               1         manual mode
+* 2            /opt/java/jdk1.8.0_102/bin/javac              3         manual mode
+  3            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      manual mode
+
+Press enter to keep the current choice[*], or type selection number: 
+</code>
+
+Se puede comprobar que versión está activa con
+
+<code bash>
+java -version
+</code>
+<code>
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+</code>
+
+Tras cambiar a otra versión:
+
+<code bash>
+java -version
+</code>
+<code>
+java version "1.7.0_65"
+OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-0ubuntu0.14.04.1)
+OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
+</code>

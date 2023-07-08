@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:linux</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,linux"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:linux&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=desarrollo"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:linux"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:linux.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo';var JSINFO = {"id":"desarrollo:linux","namespace":"desarrollo","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#linux_en_la_ciaa">Linux en la CIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#como_participar_del_desarrollo">¿Cómo participar del desarrollo?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#linux_en_la_ciaa-nxp">Linux en la CIAA-NXP</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#es_un_microcontrolador_no_deberia_usarse_uclinux">Es un microcontrolador, ¿no debería usarse uClinux ?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#que_diferencia_existe_entre_uclinux_y_linux">¿Qué diferencia existe entre uClinux y Linux?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#por_que_el_port_ciaa_nxp_linux_esta_basado_en_buildroot">¿Por qué el port CIAA NXP Linux está basado en Buildroot?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#entonces_no_hay_forma_de_correr_linux_en_sistemas_con_poca_ram">Entonces, ¿no hay forma de correr Linux en sistemas con poca RAM?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#como_instalar_linux_en_la_ciaa_nxp">¿Cómo instalar Linux en la CIAA NXP?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux.html#donde_estan_en_los_fuentes">¿Dónde están en los fuentes?</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="linux_en_la_ciaa">Linux en la CIAA</h1>
+<div class="level1">
+<p class="divalign-justify">El Proyecto CIAA cuenta con un equipo de desarrollo dedicado a preparar Linux para correr en las distintas versiones de CIAA, empezando por la CIAA-NXP.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux en la CIAA&quot;,&quot;hid&quot;:&quot;linux_en_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-194&quot;} -->
+<h2 class="sectionedit2" id="como_participar_del_desarrollo">¿Cómo participar del desarrollo?</h2>
+<div class="level2">
+<p class="divalign-justify">Sólo es necesario unirse al grupo <a href="https://groups.google.com/forum/#!forum/ciaa-linux" class="urlextern" target="_blank" title="https://groups.google.com/forum/#!forum/ciaa-linux" rel="ugc nofollow noopener">ciaa-linux@googlegroups.com</a>, presentarse y ofrecer su ayuda. ¡Siempre hay cosas para hacer!</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo participar del desarrollo?&quot;,&quot;hid&quot;:&quot;como_participar_del_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;195-434&quot;} -->
+<h2 class="sectionedit3" id="linux_en_la_ciaa-nxp">Linux en la CIAA-NXP</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux en la CIAA-NXP&quot;,&quot;hid&quot;:&quot;linux_en_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;435-468&quot;} -->
+<h3 class="sectionedit4" id="es_posible_correr_linux_en_la_ciaa-nxp">¿Es posible correr Linux en la CIAA-NXP?</h3>
+<div class="level3">
+<p class="divalign-justify">Usualmente los sistemas embebidos Linux, se asocian a poderosos SoC, mucha RAM y mucha memoria de almacenamiento. Si bien Linux es un sistema operativo pesado, debido a su inmensa cantidad de features, también es altamente configurable. Una correcta configuración permite correr un sistema Linux en un microcontrolador como el que utiliza la CIAA-NXP.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfEs posible correr Linux en la CIAA-NXP?&quot;,&quot;hid&quot;:&quot;es_posible_correr_linux_en_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;469-884&quot;} -->
+<h3 class="sectionedit5" id="es_posible_correr_linux_en_la_edu-ciaa-nxp">¿Es posible correr Linux en la EDU-CIAA-NXP ?</h3>
+<div class="level3">
+<p class="divalign-justify">No. La EDU-CIAA carece de suficiente RAM y la flash. Tampoco es factible diseñar un poncho para la EDU-CIAA con estas memorias porque los pines del controlador de memoria no fueron ruteados.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfEs posible correr Linux en la EDU-CIAA-NXP ?&quot;,&quot;hid&quot;:&quot;es_posible_correr_linux_en_la_edu-ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;885-1142&quot;} -->
+<h3 class="sectionedit6" id="es_posible_correr_mi_software_favorito_en_la_ciaa_nxp_linux">¿Es posible correr $mi_software_favorito en la CIAA NXP Linux ?</h3>
+<div class="level3">
+<p class="divalign-justify">Probablemente no. Además de la falta de RAM, la plataforma tiene otras limitaciones inherentes
+a los sistemas sin MMU. Por ejemplo, no hay soporte para un fork() verdadero, y tampoco
+hay soporte para threads.
+<p>
+Esto significa que muchas aplicaciones y librerías (Apache, Python, OpenCV, etc) no están soportadas.
+</p>
+</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfEs posible correr $mi_software_favorito en la CIAA NXP Linux ?&quot;,&quot;hid&quot;:&quot;es_posible_correr_mi_software_favorito_en_la_ciaa_nxp_linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1143-1542&quot;} -->
+<h3 class="sectionedit7" id="alcances_y_limitaciones">Alcances y limitaciones</h3>
+<div class="level3">
+<p class="divalign-justify">La CIAA en su versión NXP tiene disponible un firmware Linux basado en Buildroot. Actualmente, varios periféricos están funcionando y falta probar varios otros. Aunque muchas pruebas restan por hacer, tenemos una idea aproximada de las capacidades del sistema.</p><!--divalign-->
+<p class="divalign-justify">Dado que el sistema Linux+Buildroot está basado completamente en software  <a href="http://en.wikipedia.org/wiki/Vanilla_software" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Vanilla_software" rel="ugc nofollow noopener">vainilla</a> (i.e. sin grandes modificaciones ni parches especiales) tiene todas las posibilidades de cualquier sistema embebido Linux. El limitante no es el software, sino el hardware.</p><!--divalign-->
+<p class="divalign-justify">El sistema es capaz de hacer todo lo que sea posible para un LPC4337 con un CPU Cortex-M4 @ 204 <abbr title="Megahertz">MHz</abbr>, una SDRAM de 8 MiB y una memoria flash de 16 MiB.
+<p>
+Para más información acerca de las limitaciones ver <a href="https://speakerdeck.com/ezequielgarcia/linux" class="urlextern" target="_blank" title="https://speakerdeck.com/ezequielgarcia/linux" rel="ugc nofollow noopener">https://speakerdeck.com/ezequielgarcia/linux</a>
+</p>
+</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Alcances y limitaciones&quot;,&quot;hid&quot;:&quot;alcances_y_limitaciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1543-2425&quot;} -->
+<h3 class="sectionedit8" id="entonces_ya_esta_funcionando">¿Entonces ya está funcionando?</h3>
+<div class="level3">
+
+<p>
+<strong>¡Linux ya está corriendo en la CIAA-NXP!</strong> Enterate de los detalles entrando <a href="./doku.php%3Fid=desarrollo:linux:linux_en_ciaa-nxp.html" class="wikilink1" title="desarrollo:linux:linux_en_ciaa-nxp" data-wiki-id="desarrollo:linux:linux_en_ciaa-nxp">Linux en CIAA-NXP</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfEntonces ya est\u00e1 funcionando?&quot;,&quot;hid&quot;:&quot;entonces_ya_esta_funcionando&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2426-2601&quot;} -->
+<h2 class="sectionedit9" id="es_un_microcontrolador_no_deberia_usarse_uclinux">Es un microcontrolador, ¿no debería usarse uClinux ?</h2>
+<div class="level2">
+
+<p>
+No.
+</p>
+<p class="divalign-justify">La CIAA-NXP no usa ningún componente del proyecto uClinux. Por el contrario, es el <strong>mismo</strong> kernel que corre en laptops, servidores, y demás sistemas. El kernel Linux, y todos los demás paquetes se configuran de manera específica para poder correr en la CIAA-NXP, sin que sea necesario ningún otro tipo de ajuste.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Es un microcontrolador, \u00bfno deber\u00eda usarse uClinux ?&quot;,&quot;hid&quot;:&quot;es_un_microcontrolador_no_deberia_usarse_uclinux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;2602-3003&quot;} -->
+<h2 class="sectionedit10" id="que_diferencia_existe_entre_uclinux_y_linux">¿Qué diferencia existe entre uClinux y Linux?</h2>
+<div class="level2">
+
+<p>
+Si bien la literatura existente utiliza los términos uClinux y Linux en forma ambigua, estos tienen solamente un significado correcto.
+</p>
+
+<p>
+“Linux” es el kernel del sistema, que se puede obtener del sitio web <a href="https://www.kernel.org/" class="urlextern" target="_blank" title="https://www.kernel.org/" rel="ugc nofollow noopener">oficial</a>.
+El kernel Linux es altamente configurable, lo que permite soportar una enorme variedad de sistemas distintos. Desde poderosos servidores a sistemas embebidos muy reducidos, basados en microcontroladores sin MMU, pasando por todo tipo de arquitecturas y plataformas, ya sean ARM, MIPS o soft-cores basados en FPGA.
+</p>
+
+<p>
+“uClinux” es una distribución basada en código fuente. Tiene por objetivo proveer un conjunto completo de paquetes (junto con el Linux kernel) y está orientada a sistemas embebidos sin MMU. Para tal fin, todos los paquetes son modificados con parches ad-hoc para correr de forma óptima en un sistema sin MMU.
+</p>
+
+<p>
+Se puede visitar su sitio web en <a href="http://www.uclinux.org/" class="urlextern" target="_blank" title="http://www.uclinux.org/" rel="ugc nofollow noopener">http://www.uclinux.org/</a>.
+</p>
+
+<p>
+En realidad, la comparación correcta sería entre Buildroot y uClinux, dado que ambas son distribuciones basadas en código fuente.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 diferencia existe entre uClinux y Linux?&quot;,&quot;hid&quot;:&quot;que_diferencia_existe_entre_uclinux_y_linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;3004-4129&quot;} -->
+<h2 class="sectionedit11" id="por_que_el_port_ciaa_nxp_linux_esta_basado_en_buildroot">¿Por qué el port CIAA NXP Linux está basado en Buildroot?</h2>
+<div class="level2">
+
+<p>
+<a href="http://buildroot.org/" class="urlextern" target="_blank" title="http://buildroot.org/" rel="ugc nofollow noopener">Buildroot</a> presenta un número de características ideales para este tipo de port:
+</p>
+<ul>
+<li class="level1"><div class="li"> Es esencialmente un conjunto ordenado de Makefiles, y por lo tanto el repositorio es liviano.</div>
+</li>
+<li class="level1"><div class="li"> Es muy simple de modificar, solamente es necesario conocer el lenguaje <a href="http://www.gnu.org/software/make/" class="urlextern" target="_blank" title="http://www.gnu.org/software/make/" rel="ugc nofollow noopener">Make</a>.</div>
+</li>
+<li class="level1"><div class="li"> Tiene soporte para sistemas sin MMU.</div>
+</li>
+<li class="level1"><div class="li"> Está perfectamente <a href="http://nightly.buildroot.org/manual.html" class="urlextern" target="_blank" title="http://nightly.buildroot.org/manual.html" rel="ugc nofollow noopener">documentado</a>.</div>
+</li>
+<li class="level1"><div class="li"> Tiene un desarrollo muy activo y una comunidad saludable, lo qué significa buen soporte.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfPor qu\u00e9 el port CIAA NXP Linux est\u00e1 basado en Buildroot?&quot;,&quot;hid&quot;:&quot;por_que_el_port_ciaa_nxp_linux_esta_basado_en_buildroot&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;4130-4747&quot;} -->
+<h2 class="sectionedit12" id="entonces_no_hay_forma_de_correr_linux_en_sistemas_con_poca_ram">Entonces, ¿no hay forma de correr Linux en sistemas con poca RAM?</h2>
+<div class="level2">
+
+<p>
+El stack de Linux tradicional, usando el kernel oficial, necesita generalmente bastante RAM.
+Sin embargo, han existido <strong>y existen</strong> esfuerzos para reducir o eliminar este requerimiento.
+</p>
+
+<p>
+En particular ver:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://lwn.net/Articles/597742/" class="urlextern" target="_blank" title="http://lwn.net/Articles/597742/" rel="ugc nofollow noopener"> Linux CAN be made to run small</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://elinux.org/images/5/54/Tom.zanussi-elc2014.pdf" class="urlextern" target="_blank" title="http://elinux.org/images/5/54/Tom.zanussi-elc2014.pdf" rel="ugc nofollow noopener">microYocto and the Internet of Tiny</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://elinux.org/images/c/ca/Spreading.pdf" class="urlextern" target="_blank" title="http://elinux.org/images/c/ca/Spreading.pdf" rel="ugc nofollow noopener">Spreading the disease: Linux on microcontrollers</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://elinux.org/Linux_Tiny" class="urlextern" target="_blank" title="http://elinux.org/Linux_Tiny" rel="ugc nofollow noopener">Linux Tiny</a></div>
+</li>
+</ul>
+
+<p>
+Actualmente, ninguna de estas técnicas han sido aplicadas al sistema CIAA NXP Linux. ¡Cualquiera está invitado a hacer experimentos con esto! (aunque hay que tener en cuenta que este tipo de tareas requiere algo de experiencia).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Entonces, \u00bfno hay forma de correr Linux en sistemas con poca RAM?&quot;,&quot;hid&quot;:&quot;entonces_no_hay_forma_de_correr_linux_en_sistemas_con_poca_ram&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;4748-5588&quot;} -->
+<h2 class="sectionedit13" id="como_instalar_linux_en_la_ciaa_nxp">¿Cómo instalar Linux en la CIAA NXP?</h2>
+<div class="level2">
+
+<p>
+<a href="./doku.php%3Fid=desarrollo:linux:linux_en_ciaa-nxp.html#como_cargar_linux_en_la_ciaa-nxp" class="wikilink1" title="desarrollo:linux:linux_en_ciaa-nxp" data-wiki-id="desarrollo:linux:linux_en_ciaa-nxp">Aquí</a> se encuentra una guía detallada para la compilación y la instalación.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo instalar Linux en la CIAA NXP?&quot;,&quot;hid&quot;:&quot;como_instalar_linux_en_la_ciaa_nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:13,&quot;range&quot;:&quot;5589-5783&quot;} -->
+<h2 class="sectionedit14" id="donde_estan_en_los_fuentes">¿Dónde están en los fuentes?</h2>
+<div class="level2">
+
+<p>
+En el repositorio oficial del proyecto CIAA se encuentran los fuentes que componen las tres piezas del port Linux: <a href="https://github.com/ciaa/u-boot" class="urlextern" target="_blank" title="https://github.com/ciaa/u-boot" rel="ugc nofollow noopener">U-Boot</a>, <a href="https://github.com/ciaa/linux" class="urlextern" target="_blank" title="https://github.com/ciaa/linux" rel="ugc nofollow noopener">Linux</a> y <a href="https://github.com/ciaa/buildroot" class="urlextern" target="_blank" title="https://github.com/ciaa/buildroot" rel="ugc nofollow noopener">Buildroot</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfD\u00f3nde est\u00e1n en los fuentes?&quot;,&quot;hid&quot;:&quot;donde_estan_en_los_fuentes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:14,&quot;range&quot;:&quot;5784-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias ======
+
+{{ :blanco.png?10 | }}
+
+===== ¿En qué consiste un sistema Monitor de Barreras Ferroviarias? =====
+
+###
+El sistema de accionamiento de barreras es un mecanismo utilizado para accionar los brazos de barrera colocados en posición horizontal o vertical (brazo BAJO o brazo ALTO). Dicho brazo adopta la horizontal para bloquear el paso a nivel al tránsito automotor al aproximarse un tren y una vez liberado el cruce de la presencia de trenes, se alza nuevamente.
+###
+
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:barreras.jpg?nolink&400 |}}
+
+###
+El mecanismo pose un dispositivo de contrapeso regulable para permitir el balance del sistema con cualquier longitud y peso de brazo. El brazo de barrera en la posición ALTO, quedara en posición vertical, admitiéndose como máximo una desviación de 5° respecto de aquella, en la posición BAJO, el brazo se hallará horizontal, admitiéndose como máximo una desviación de 1° respecto de aquella, debiendo quedar a 0.95 , +- 0.05m del nivel de la calzada.
+###
+
+###
+Estos sistemas cuentan con un mecanismo de accionamiento de brazo de barrera que podrá ser con accionamiento electromecánico o hidráulico. En ambos casos el sistema cuenta con levas indicadoras de posición ALTO y BAJO.
+###
+
+###
+Si la energía eléctrica normal y auxiliar resultara interrumpida, los brazos deberán adquirir la posición horizontal por acción de la gravedad, pudiendo, alternativamente, iniciar la salida de la posición vertical mediante energía potencial acumulada.
+###
+
+###
+El mecanismo deberá cumplir con su función, con la protección necesaria para evitar daño en el equipo si el movimiento del brazo fuese obstruido por cualquier causa, tanto en el recorrido de ascenso como en el de descenso. Una vez desaparecida la causa de la obstrucción, el restablecimiento del funcionamiento normal deberá ser automático.
+###
+
+###
+Existen casos especiales donde un controlador de barrera puede accionar más de un paso a nivel, en estos casos los monitores se instalan en cada uno de los PaN independientemente del controlador.
+###
+
+###
+El sistema de accionamiento pose además un sistema de señalización por semáforo, tanto para automóviles como para el propio tren, en este último caso para avisarle al conductor la posición de la barrera.
+###
+
+
+{{ :blanco.png?10 | }}
+
+###
+**Ir a la página** dónde se presenta la [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion|justificación de la elección del proyecto del Monitor de Barreras]].
+###
+
+###
+**Ir a la página** dónde se presenta el [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion|contexto y motivación del proyecto del Monitor de Barreras]].
+###

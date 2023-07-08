@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:caracteristicas_fw</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,caracteristicas_fw"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:caracteristicas_fw&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:caracteristicas_fw.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:caracteristicas_fw"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:caracteristicas_fw.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:caracteristicas_fw","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:caracteristicas_fw.html#requerimientos_del_ciaa-firmware">Requerimientos del CIAA-Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:caracteristicas_fw.html#ciaa-firmware_v020">CIAA-Firmware v0.2.0</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:caracteristicas_fw.html#ciaa-firmware_v030">CIAA-Firmware v0.3.0</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:caracteristicas_fw.html#ciaa-firmware_v100">CIAA-Firmware v1.0.0</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="requerimientos_del_ciaa-firmware">Requerimientos del CIAA-Firmware</h1>
+<div class="level1">
+<p class="divalign-justify">En esta sección se presentan los requerimientos propuestos para cada versión de CIAA-Firmware. En todos los casos, los requerimientos se dividen en tres categorías:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> Requerimientos Funcionales.</div>
+</li>
+<li class="level1"><div class="li"> Requerimientos de la Arquitectura del Firmware.</div>
+</li>
+<li class="level1"><div class="li"> Requerimientos de Codificación y Testing.</div>
+</li>
+</ul>
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos del CIAA-Firmware&quot;,&quot;hid&quot;:&quot;requerimientos_del_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-362&quot;} -->
+<h2 class="sectionedit2" id="ciaa-firmware_v020">CIAA-Firmware v0.2.0</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-Firmware v0.2.0&quot;,&quot;hid&quot;:&quot;ciaa-firmware_v020&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;363-396&quot;} -->
+<h3 class="sectionedit3" id="requerimientos_funcionales">Requerimientos Funcionales</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_002</strong> Proveer conectividad MODBUS <abbr title="American Standard Code for Information Interchange">ASCII</abbr> a través del bus <strong>Serial</strong>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>FW_FUNC_004</strong> Implementar las siguientes funcionalidades de MODBUS:</div>
+<ul>
+<li class="level2"><div class="li"> <strong>FW_FUNC_005</strong> 0x03 Read Holding Registers.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_FUNC_006</strong> 0x04 Read Input Registers.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_FUNC_007</strong> 0x06 Write Single Register.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_FUNC_008</strong> 0x10 Write Multiple registers.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos Funcionales&quot;,&quot;hid&quot;:&quot;requerimientos_funcionales&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;397-798&quot;} -->
+<h3 class="sectionedit4" id="requerimientos_a_la_arquitectura_de_firmware">Requerimientos a la Arquitectura de Firmware</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>FW_ARQ_005</strong> Permitir el reuso de la mayor cantidad posible de código entre 2 arquitecturas.</div>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>FW_ARQ_006</strong> Software dividido en 4 capas:</div>
+<ul>
+<li class="level3"><div class="li"> <strong>FW_ARQ_007</strong> <a href="./doku.php%3Fid=desarrollo:firmware:firmware_layers.html" class="wikilink1" title="desarrollo:firmware:firmware_layers" data-wiki-id="desarrollo:firmware:firmware_layers">Aplicación</a>.</div>
+</li>
+<li class="level3"><div class="li"> <strong>FW_ARQ_008</strong> <a href="./doku.php%3Fid=desarrollo:firmware:firmware_layers.html" class="wikilink1" title="desarrollo:firmware:firmware_layers" data-wiki-id="desarrollo:firmware:firmware_layers">Service Layer</a>.</div>
+</li>
+<li class="level3"><div class="li"> <strong>FW_ARQ_009</strong> <a href="./doku.php%3Fid=desarrollo:firmware:firmware_layers.html" class="wikilink1" title="desarrollo:firmware:firmware_layers" data-wiki-id="desarrollo:firmware:firmware_layers">Interface Layer</a>.</div>
+</li>
+<li class="level3"><div class="li"> <strong>FW_ARQ_010</strong> <a href="./doku.php%3Fid=desarrollo:firmware:firmware_layers.html" class="wikilink1" title="desarrollo:firmware:firmware_layers" data-wiki-id="desarrollo:firmware:firmware_layers">Driver Layer</a>.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_ARQ_011</strong> Proveer un <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a> (Real Time Operating System).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_ARQ_013</strong> Proveer una interfaz al usuario que desee programar sobre el ciaaFirmware.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos a la Arquitectura de Firmware&quot;,&quot;hid&quot;:&quot;requerimientos_a_la_arquitectura_de_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;799-1407&quot;} -->
+<h3 class="sectionedit5" id="requerimientos_de_codificacion_y_testing">Requerimientos de Codificación y Testing</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>FW_SW_001</strong> El código del Firmware de la CIAA debe ser verificado mediante ejecución de tests.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_SW_002</strong> El código debe ser testeado en <a href="./doku.php%3Fid=desarrollo:firmware:unit_tests.html" class="wikilink1" title="desarrollo:firmware:unit_tests" data-wiki-id="desarrollo:firmware:unit_tests">Unit Tests o Pruebas Unitarias</a> en la PC.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_SW_004</strong> El código debe estar basado en las <a href="./doku.php%3Fid=desarrollo:firmware:fw_coding_guidelines.html" class="wikilink1" title="desarrollo:firmware:fw_coding_guidelines" data-wiki-id="desarrollo:firmware:fw_coding_guidelines">CIAA-Firmware Coding Guidelines</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_SW_005</strong> El código debe estar basado en los <a href="https://github.com/ciaa/Firmware/tree/master/modules/template" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/master/modules/template" rel="ugc nofollow noopener">ciaaFirmware Templates</a>.</div>
+</li>
+</ul>
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos de Codificaci\u00f3n y Testing&quot;,&quot;hid&quot;:&quot;requerimientos_de_codificacion_y_testing&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1408-1935&quot;} -->
+<h2 class="sectionedit6" id="ciaa-firmware_v030">CIAA-Firmware v0.3.0</h2>
+<div class="level2">
+
+<p>
+<em>Nota: Sección en construcción.</em>
+</p>
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-Firmware v0.3.0&quot;,&quot;hid&quot;:&quot;ciaa-firmware_v030&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1936-2012&quot;} -->
+<h2 class="sectionedit7" id="ciaa-firmware_v100">CIAA-Firmware v1.0.0</h2>
+<div class="level2">
+
+<p>
+A los requerimientos ya propuestos para la versión 0.2.0 del CIAA-Firmware, la versión 1.0.0 incorporará los siguientes requerimientos.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-Firmware v1.0.0&quot;,&quot;hid&quot;:&quot;ciaa-firmware_v100&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2013-2186&quot;} -->
+<h3 class="sectionedit8" id="requerimientos_funcionales1">Requerimientos Funcionales</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_003</strong> Proveer conectividad MODBUS TCP a través del bus <strong>Ethernet</strong>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>FW_FUNC_009</strong> Proveer las siguientes capacidades:</div>
+<ul>
+<li class="level2"><div class="li"> <strong>FW_FUNC_010</strong> <strong>Cargar programas</strong> escritos en lenguaje <strong>Ladder</strong>.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_FUNC_011</strong> <strong>Ejecutar programas</strong> escritos en lenguaje <strong>Ladder</strong>.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_FUNC_012</strong> <strong>Depurar paso a paso programas</strong> escritos en lenguaje <strong>Ladder</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_013</strong> Proveer la misma funcionalidad en <strong>todas las plataformas de hardware</strong> de la CIAA.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_014</strong> Se deberá implementar las capas de transporte MODBUS Serial (<abbr title="American Standard Code for Information Interchange">ASCII</abbr> y RTU) y MODBUS TCP independientes de la capa de aplicación MODBUS.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_016</strong> La capa de transporte MODBUS RTU debe identificar el inicio y fin de una trama de acuerdo a las especificaiones detalladas en la sección 2.5.1.1 del documento <a href="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" rel="ugc nofollow noopener">Modbus over Serial Line</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_017</strong> Implementar la capa de aplicación MODBBUS Slave independiente de la capa de enlace o transporte a utilizar.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_FUNC_018</strong> Implementar la capa de aplicación MODBBUS Master independiente de la capa de enlace o transporte a utilizar.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos Funcionales&quot;,&quot;hid&quot;:&quot;requerimientos_funcionales1&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2187-3401&quot;} -->
+<h3 class="sectionedit9" id="requerimientos_a_la_arquitectura_de_firmware1">Requerimientos a la Arquitectura de Firmware</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> <strong>FW_ARQ_001</strong> Permitir portar el Firmware a diversas arquitecturas:</div>
+<ul>
+<li class="level2"><div class="li"> <strong>FW_ARQ_002</strong> Makefile para multi arquitectura.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_ARQ_003</strong> Reglas para compilar por arquitectura.</div>
+</li>
+<li class="level2"><div class="li"> <strong>FW_ARQ_004</strong> Programar en C99.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>FW_ARQ_012</strong> Proveer una interfaz POSIX Like para el manejo de dispositivos.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos a la Arquitectura de Firmware&quot;,&quot;hid&quot;:&quot;requerimientos_a_la_arquitectura_de_firmware1&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3402-3770&quot;} -->
+<h3 class="sectionedit10" id="requerimientos_de_codificacion_y_testing1">Requerimientos de Codificación y Testing</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>FW_SW_003</strong> Con las Pruebas Unitarias se debe alcanzar el 100% de <a href="./doku.php%3Fid=desarrollo:firmware:coverage.html" class="wikilink1" title="desarrollo:firmware:coverage" data-wiki-id="desarrollo:firmware:coverage">Statement Coverage</a>.</div>
+</li>
+</ul>
+<hr />
+
+<p>
+El primer documento de características técnicas del Firmware de la CIAA se publicó el 23/12/2013 en la página de la ACSE:
+<a href="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/12/CIAA-Firmware-v1.0.pdf" class="urlextern" target="_blank" title="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/12/CIAA-Firmware-v1.0.pdf" rel="ugc nofollow noopener">http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/12/CIAA-Firmware-v1.0.pdf</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos de Codificaci\u00f3n y Testing&quot;,&quot;hid&quot;:&quot;requerimientos_de_codificacion_y_testing1&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;3771-&quot;} --></div>
+</body>
+</html>

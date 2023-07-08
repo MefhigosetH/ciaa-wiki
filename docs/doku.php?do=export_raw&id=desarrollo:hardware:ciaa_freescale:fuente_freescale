@@ -1,0 +1,44 @@
+====== CIAA-FSL: Fuente de Alimentación ======
+
+===== Diagrama Esquemático =====
+
+{{11-fuente.png}}
+
+===== Características =====
+
+  * Rango de tensión de entrada típico: 12VDC a 30VDC
+  * Fuente Switching para reducción a 5V/3A.
+  * Fuente lineal de 3.3V/1A, a partir de los 5V
+  * Fuente filtrada de 3.3V para conversores ADC
+  * Protección de polaridad en la entrada
+  * Protección de sobre-corrientes
+  * Protección contra transitorios
+  * Protección por sobre-temperatura
+  * LED testigo de encendido
+  * Alimentación de 5V vía USB-DEBUG y USB-OTG.  
+
+===== Descripción =====
+
+La fuente de alimentación de la CIAA (v1.0) fue concebida para lograr el compromiso entre un alto rendimiento y un amplio rango de tensión de entrada. Por tal razón se optó por una fuente switching con topología reductora (buck o step-down) para obtener una primer tensión de 5V con capacidad de 3A, regulados a partir de un rango típico de entre 12VDC y 30VDC. Se utilizó el circuito integrado monolótico LM2596, que cumple con estos requisitos dando la ventaja de tener compensación interna, tensión de salida fija en 5V, protección térmica, frecuencia de trabajo de 150 KHz (moderadamente alta, lo cual reduce el tamaño del inductor). Se le han adicionado al circuito recomendado por el fabricante, una serie de protecciones adicionales para garantiar la robustez del diseño, a saber:
+
+  * Diodo para protección de polaridad en la entrada
+  * Polyswitch (TH1101) para limitar las sobre-corrientes
+  * Supresor de transitorios (D1107).
+
+Se ha colocado un regulador lineal NCP1117ST33 con salida de 3.3V-1A, a partir de fuente switching de 5V. Se optó por este tipo de fuente para alimentar la lógica principal por sus bondades de bajo ruido y buena regulación. Finalmente se ha realizado un filtrado adicional sobre esta fuente de 3.3V para contar una tensión libre de ruido de alta frecuencia para alimentar los circuitos analógicos de la CIAA, principalmente los ADC.
+
+A su vez, puede alimentarse toda la lógica de 5V mediante los 2 conectores USB de la placa. Se dispone de un diodo en serie a la alimentación por USB, para que no influya al comportamiento de la fuente switching cuando esta funcione y viceverza.
+
+Por otro lado, también se dispone de la pila para mantener el estado del RTC interno del microcontrolador.
+
+===== Referencias =====
+
+  * [[http://es.wikipedia.org/wiki/Fuente_conmutada | Wikipedia, Fuente conmutada]]
+  * [[http://es.wikipedia.org/wiki/Regulador_de_tensi%C3%B3n | Wikipedia, Regulador de Tensión]]
+  
+===== Datasheets de componentes importantes =====
+
+  * Especificación de [[http://www.ti.com/lit/ds/symlink/lm2596.pdf | LM2596]]
+  * Especificación de [[http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF | NCP1117ST33]]
+
+  

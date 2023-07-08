@@ -1,0 +1,23 @@
+====== Primeros pasos con el Hardware de la CIAA ======
+===== Conectando una CIAA-NXP y EDU-CIAA-NXP por primera vez =====
+Recomendamos realizar una primer prueba de hardware conectando tu CIAA a la PC usando la interfaz de Debug (J3 en la EDU-CIAA-NXP, J7 en la CIAA-NXP). Probablemente tu CIAA-NXP no tenga un programa pre-grabado, por lo tanto la memoria del microcontrolador estará totalmente borrada. Por eso la primer sesión de Debugging que realices puede fallar. Si estás usando el CIAA-IDE, verás algo como esto:
+{{ :desarrollo:hardware:ciaa-nxp-error.png |}}
+Estamos buscando el origen de esta falla, pero por ahora el workaround es simple:
+  * Cancelá la sesión de debug cliqueando el botón Stop (Terminate).
+  * Desenchufá el cable USB de manera que la CIAA se apague.
+  * Enchufá nuevamente el cable. Deberías ver que la CIAA se programó. Por ejemplo, si estabas intentando bajar el ejemplo 'blinking', ahora alguno de los LEDs de la CIAA debería destellar.
+  * Comenzá nuevamente la sesión de debug, que esta vez debería funcionar correctamente. Verás algo como esto:
+{{ :desarrollo:hardware:ciaa-nxp-ok.png |}}
+Otra solución posible sin usar el CIAA-IDE, es la siguiente (si usás Windows, recordá usar la consola de Cygwin):
+  * Abrir una consola, navegar hasta la carpeta donde está el repositorio de Firmware y ejecutar el comando ''make openocd'' (ATENCION: este paso está descontinuado. En versiones más recientes del firmware, sólo hay que hacer el paso siguiente que ya incluye el openocd).
+  * Abrir otra consola, navegar hasta la carpeta donde está el repositorio de Firmware y ejecutar el comando ''make download'' (puede que sea necesario compilar antes el firmware para obtener el ejecutable .axf). 
+  * Luego verás mensajes similares a los siguientes en ambas consolas:
+{{:desarrollo:hardware:make_openocd.png|}}{{ :desarrollo:hardware:make_download.png|}}
+  * Desenchufá la CIAA y volvé a enchufarla. Luego deberías poder iniciar la sesión de debug sin problemas.
+===== Conectando una CIAA-FSL y EDU-CIAA-FSL por primera vez =====
+En el caso de la CIAA-FSL detectamos que algunas versiones de OpenOCD pueden tener archivos de inicialización del microcontrolador en directorios equivocados. En la consola aparece un error como éste:
+''Runtime Error: embedded:startup.tcl:47: Can't find target/k60.cfg'' \\ 
+Para solucionarlo, hacen falta que los siguientes archivos estén dentro de la carpeta target que se encuentra en la misma ruta del ejecutable:
+  * k60.cfg
+  * swj-dp.tcl
+En algunas instalaciones de OpenOCD 0.8.0, dichos archivos vinieron dentro de la carpeta ''openocd-0.8.0/tcl/target''.

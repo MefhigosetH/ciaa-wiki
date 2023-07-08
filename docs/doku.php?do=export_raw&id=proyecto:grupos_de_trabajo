@@ -1,0 +1,52 @@
+====== Grupos de Trabajo de la CIAA ======
+
+Los siguientes son los distintos grupos que realizan tareas relacionadas con el Proyecto CIAA:
+
+{{ :Mapa_Involucrados.png?500 | Grupos de Trabajo}}
+
+^ Grupo                           ^ Área del Proyecto      ^ Ubicación                   ^
+| [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|{{ :acse.jpg?230 }}]]  [[http://www.cadieel.org.ar/esp/index.php|{{ :CADIEEL logos02-01.jpg?120 }}]] | Coordinación General | Ciudad de Buenos Aires |
+| :::                             | Vinculación y Difusión | :::                         |
+| [[http://www.adox.com.ar/|{{ :adox_1.png?120 }}]] | Hardware CIAA-NXP | Ituzaingó, Buenos Aires |
+| [[http://www.arrowar.com/iweb/|{{ :arrow.png?120 }}]] | Hardware CIAA-NXP | Ciudad de Buenos Aires |
+| [[http://asembli.com/|{{ :Asembli.PNG?140 }}]] | Hardware CIAA-FSL | Ciudad de Buenos Aires |
+| [[http://www.assisi.com.ar/|{{ :Assisi.png?140 }}]] | Hardware CIAA-NXP | Ciudad de Buenos Aires |
+| [[http://www.chillemihnos.com.ar/|{{ :chillemi.png?80 }}]] | Gabinete | Bernal, Buenos Aires |
+| [[http://www.dai-ichi.com.ar/|{{ :logo_dai_ichi.png?200 }}]] | Hardware CIAA-NXP | Ciudad de Buenos Aires |
+| [[http://www.debtech.com.ar/|{{ :debtech_1.png?100 }}]] | Software-PLC | Ciudad de Buenos Aires |
+| [[http://www.diec.uns.edu.ar/|{{ :Logo_DIEC_vertical.png?70 }}]]| Continous Integration | Bahía Blanca, Buenos Aires|
+| [[http://www.elemon.com.ar/elemon/|{{ :Elemon.png?160 }}]]| Hardware CIAA-PIC | Ciudad de Buenos Aires |
+| [[http://www.emtech.com.ar/|{{ :emtech.png?160 }}]] | Hardware CIAA-NXP | Bariloche, Río Negro   |
+| :::                                                | Software-IDE	 | :::                    |
+| :::                                                | Sistema     	 | :::                    |
+| :::                                                | Linux             | :::                    |
+| [[http://web.fceia.unr.edu.ar/|{{ :FCEIA.png?120 }}]] | Firmware Modbus   | Rosario, Santa Fe      |
+| [[http://www.fi.uba.ar/|{{ :logo_FIUBA.png?130 }}]] | Coordinación General | Ciudad de Buenos Aires |
+| :::                                                | Microelectrónica     | :::                    |
+| [[http://www.globallogic.com.ar/|{{ :GlobalLogic.png?140 }}]] | Vinculación | Ciudad de Buenos Aires |
+| [[http://www.grupoalaska.com.ar|{{ :GrupoAlaska_logo.png?110 }}]] | Gabinete | Ciudad de Buenos Aires |
+| [[http://www.ing.unrc.edu.ar/grupos/gstr/|{{ :GSTR.png?80 }}]] | Firmware | Río Cuarto, Córdoba | 
+| [[http://inarci.com/|{{ :inarci_logo.png?120 }}]] | Hardware CIAA-NXP | Ciudad de Buenos Aires |
+| [[http://www.inti.gob.ar/electronicaeinformatica/|{{ :INTI-EeI.png?180 }}]] | Pruebas Funcionales | San Martín, Buenos Aires |
+| [[http://www.inti.gob.ar/microynanoelectronica/cmnb.htm|{{ :inti-cmnb.png?180 }}]] [[http://www.electrocomponentes.com/|{{ :Electrocomponentes.png?120 }}]]| Hardware CIAA-FSL| San Martín, Buenos Aires|
+| :::                                                | EDU-CIAA            | :::                    |
+| [[http://www.mayerpcb.com/|{{ :Mayer.png?180 }}]] | Hardware CIAA-FSL | Florida, Buenos Aires |
+| [[http://www.nablaenergia.com.ar/|{{ :NablaEnergia.png?180 }}]] | Hardware CIAA-PIC | Ciudad de Buenos Aires |
+| [[http://www.suremptec.com/|{{ :SUR_horizontal_res-media.png?120 }}]] | Sistema | Ciudad de Buenos Aires |
+| [[http://www.trimaker.com/|{{ :Logo Trimaker.png?140 }}]] | Gabinete | Ciudad de Buenos Aires |
+| [[https://www.unaj.edu.ar/|{{ :UNAJ.png?170 }}]] | Hardware | Florencio Varela, Buenos Aires |
+| [[http://www.unca.edu.ar/|{{ :UNCA.png?70 }}]] | Software-PLC | Catamarca, Catamarca |
+| :::                            | Sist. CRM (Customer Relationship Management) | ::: |
+| [[http://www.uncoma.edu.ar/|{{ :UNCOMA.png?70 }}]] | EDU-CIAA | Neuquén, Neuquén |
+| [[http://www.uner.edu.ar/|{{ :logo_UNER.png?80 }}]] | EDU-CIAA | Paraná, Entre Ríos |
+| [[http://www.unlp.edu.ar/|{{ :UNLP.png?80 }}]] | EDU-CIAA | La Plata, Buenos Aires |
+| [[http://www.unt.edu.ar/|{{ :UNT.png?100 }}]] | Firmware | San Miguel de Tucumán, Tucumán |
+| [[http://www.unq.edu.ar/|{{ :logoUNQ.png?120 }}]] | Software-PLC | Quilmes, Buenos Aires |
+| [[http://www.frba.utn.edu.ar/|{{ :logo_utn_frba.png?160 }}]] [[http://www.numetron.com.ar/|{{ :LogoNumetron_Normal.png?150 }}]] | Hardware CIAA-NXP      | Ciudad de Buenos Aires      |
+| :::                             | Firmware               | :::                         |
+| :::                             | IDE Eclipse y toolchain| :::                         |
+| :::                             | Microelectrónica       | :::                         |
+| [[http://www.vanguardiasur.com.ar|{{ :vanguardiasur-logo.png?180 }}]] | Linux | Rosario, Santa Fe  |
+| {{ :logo_vortex.png?60 |Vortex Technologies}}     | Hardware CIAA-FSL   | Mar del Plata, Buenos Aires |
+\\
+{{page>proyecto:coordinacion&nofooter}}

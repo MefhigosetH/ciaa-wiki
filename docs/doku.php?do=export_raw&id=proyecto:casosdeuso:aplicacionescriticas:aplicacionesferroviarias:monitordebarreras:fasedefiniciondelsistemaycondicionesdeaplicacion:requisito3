@@ -1,0 +1,27 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 3 =====
+
+###
+La norma UNE EN 50126 indica que:
+###
+
+<note>el requisito 3 de esta fase debe ser el de establecer la política general RAMS para el sistema, incluidos los requisitos del concepto de seguridad, y la política de la Autoridad Ferroviaria para resolver cualesquiera conflictos que surjan entre “disponibilidad” y “seguridad”.</note>
+
+###
+La política general RAMS para el sistema está establecida en el documento “Políticas RAMS” que forma parte de las Entregas de la presente fase de Definición del sistema y condiciones de aplicación. Se refiere al lector a dicha sección para tener precisiones respecto a este requisito.
+###
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion:requisito4|Ir al Requisito 4 de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Volver a la Página Inicial de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 

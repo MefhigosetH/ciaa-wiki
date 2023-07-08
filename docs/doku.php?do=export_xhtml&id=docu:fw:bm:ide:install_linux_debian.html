@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:ide:install_linux_debian</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,ide,install_linux_debian"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:ide:install_linux_debian&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:ide"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:ide:install_linux_debian"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:ide:install_linux_debian.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:ide';var JSINFO = {"id":"docu:fw:bm:ide:install_linux_debian","namespace":"docu:fw:bm:ide","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html#paso_a_pasociaa-ide_en_debian_con_una_edu-ciaa-nxp">Paso a paso: CIAA-IDE en Debian con una EDU-CIAA-NXP</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html#requisitos">Requisitos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html#configuracion_de_las_herramientas_por_linea_de_comandos">Configuración de las herramientas por línea de comandos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html#configuracion_de_eclipse">Configuración de Eclipse</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:install_linux_debian.html#script_automatizado">Script automatizado</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="paso_a_pasociaa-ide_en_debian_con_una_edu-ciaa-nxp">Paso a paso: CIAA-IDE en Debian con una EDU-CIAA-NXP</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Paso a paso: CIAA-IDE en Debian con una EDU-CIAA-NXP&quot;,&quot;hid&quot;:&quot;paso_a_pasociaa-ide_en_debian_con_una_edu-ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-68&quot;} -->
+<h2 class="sectionedit2" id="requisitos">Requisitos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Una <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp">EDU-CIAA-NXP</a>.</div>
+</li>
+<li class="level1"><div class="li"> Ubuntu 14.04 o posterior.</div>
+</li>
+<li class="level1"><div class="li"> Al menos 1GB de espacio libre en el home del usuario (<code>/home/$USER</code>).</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requisitos&quot;,&quot;hid&quot;:&quot;requisitos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;69-256&quot;} -->
+<h2 class="sectionedit3" id="configuracion_de_las_herramientas_por_linea_de_comandos">Configuración de las herramientas por línea de comandos</h2>
+<div class="level2">
+
+<p>
+1) Instalar paquetes adicionales:<br/>
+
+<strong>64-bits</strong>
+</p>
+<pre class="code">sudo apt-get install php5-cli libftdi-dev libusb-1.0-0-dev git git-gui libgtk2.0-0:i386 libxtst6:i386 libpangox-1.0-0:i386 libpangoxft-1.0-0:i386 libidn11:i386 libglu1-mesa:i386 libncurses5:i386 libudev1:i386 libusb-1.0:i386 libusb-0.1:i386 gtk2-engines-murrine:i386 libnss3-1d:i386 libwebkitgtk-1.0-0 gtkterm</pre>
+
+<p>
+<strong>32-bits</strong>
+</p>
+<pre class="code">sudo apt-get install php5-cli libftdi-dev libusb-1.0-0-dev git git-gui libgtk2.0-0 libxtst6 libpangox-1.0-0 libpangoxft-1.0-0 libidn11 libglu1-mesa libncurses5 libudev1 libusb-1.0 libusb-0.1 gtk2-engines-murrine libnss3-1d libwebkitgtk-1.0-0 gtkterm</pre>
+
+<p>
+Puede que en 32-bits indique que algunos paquetes ya están instalados.
+</p>
+
+<p>
+2) Agregar el usuario al grupo dialout (para acceder a puertos serie con gtkterm):
+</p>
+<pre class="code">sudo adduser $USER dialout</pre>
+
+<p>
+3) Crear una carpeta ciaa-ide en el home del usuario e ingresar a la misma.
+</p>
+<pre class="code">mkdir ciaa-ide
+cd ciaa-ide</pre>
+
+<p>
+4) Descargar toolchain y descomprimir.
+</p>
+<pre class="code">wget https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q1-update/+download/gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2
+tar -xjvf gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2</pre>
+
+<p>
+5) Descargar, descomprimir y compilar OpenOCD:
+</p>
+<pre class="code">wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+tar -xvjf openocd-0.9.0.tar.bz2
+cd openocd-0.9.0
+./configure --enable-ftdi 
+make
+sudo make install
+sudo ldconfig -v</pre>
+
+<p>
+6) Clonar repositorio de Firmware:
+</p>
+<pre class="code">cd $HOME/ciaa-ide/ # $HOME es la variable de entorno que apunta al directorio home del usuario, por ejemplo &quot;/home/luis&quot;
+git clone --recursive https://github.com/ciaa/Firmware.git</pre>
+
+<p>
+7) Copiar los permisos de OpenOCD en las reglas de udev y reiniciar el servicio:
+</p>
+<pre class="code">sudo cp openocd-0.9.0/contrib/99-openocd.rules /etc/udev/rules.d/
+sudo service udev restart</pre>
+
+<p>
+8) Conectar CIAA mediante USB DBG (si estaba conectada, desconectarla y volver a conectarla) y probar OpenOCD:
+</p>
+<pre class="code">./openocd-0.9.0/src/openocd -f Firmware/modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg</pre>
+
+<p>
+Debería verse lo siguiente:
+</p>
+<pre class="code">Open On-Chip Debugger 0.9.0 (2015-05-12-12:27)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect &#039;jtag&#039;
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints</pre>
+
+<p>
+(ctrl+c para terminar)
+</p>
+
+<p>
+9) Crear <code>Makefile.mine</code>:
+</p>
+<pre class="code">cd Firmware
+cp Makefile.config Makefile.mine</pre>
+
+<p>
+10) Editar Makefile.mine indicando que compilaremos para una EDU-CIAA-NXP:
+</p>
+<pre class="code">nano Makefile.mine</pre>
+
+<p>
+Reemplazar la línea 
+</p>
+<pre class="code">	BOARD          ?= ciaa_sim_ia32</pre>
+
+<p>
+por
+</p>
+<pre class="code">	BOARD          ?= edu_ciaa_nxp</pre>
+
+<p>
+y para evitar los warnings de LPCOpen, agregar una línea debajo de la anterior con el siguiente texto:
+</p>
+<pre class="code">	CFLAGS	+= -Wno-unused-function</pre>
+
+<p>
+11) Agregar toolchain y openocd al PATH:
+</p>
+<pre class="code">export PATH=$PATH:$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/bin:$HOME/ciaa-ide/openocd-0.9.0/src</pre>
+
+<p>
+12) Compilar:
+</p>
+<pre class="code">make clean
+make generate
+make</pre>
+
+<p>
+Si todo anduvo bien la compilación finaliza con este mensaje:
+</p>
+<pre class="code">===============================================================================
+Linking file: ./out/bin/blinking.axf
+ 
+arm-none-eabi-gcc ./out/obj/blinking.o ./out/obj/crp.o -Xlinker --start-group  ./out/lib/posix.a  ./out/lib/ciaak.a  ./out/lib/drivers.a  ./out/lib/ext_drivers.a  ./out/lib/rtos.a  ./out/lib/libs.a  ./out/lib/ext_base.a -Xlinker --end-group -o ./out/bin/blinking.axf   -fno-builtin -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Xlinker -Map=&quot;./out/bin/blinking.map&quot; -nostdlib -T &quot;externals/base/cortexM4/lpc43xx/linker/ciaa_lpc4337.ld&quot;
+ 
+===============================================================================
+Post Building blinking
+ 
+arm-none-eabi-objcopy -v -O binary ./out/bin/blinking.axf ./out/bin/blinking.bin
+copy from `./out/bin/blinking.axf&#039; [elf32-littlearm] to `./out/bin/blinking.bin&#039; [binary]</pre>
+
+<p>
+13) Ya estamos en condiciones de probar la comunicación con el hardware programando el MCU con el ejemplo <code>blinking</code>:
+</p>
+<pre class="code">make download</pre>
+
+<p>
+Salida de la consola:
+</p>
+<pre class="code">===============================================================================
+Starting OpenOCD and downloading...
+ 
+openocd -f ./modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg -c &quot;init&quot; -c &quot;halt&quot; -c &quot;flash write_image erase unlock ./out/bin/blinking.bin 0x1A000000 bin&quot; -c &quot;reset run&quot; -c &quot;shutdown&quot;
+Open On-Chip Debugger 0.9.0 (2015-02-13-09:19)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect &#039;jtag&#039;
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x21000000 pc: 0x10407bf8 msp: 0x10089f60
+auto erase enabled
+auto unlock enabled
+Warn : Verification will fail since checksum in image (0x00000000) to be written to flash is different from calculated vector checksum (0x53ff4386).
+Warn : To remove this warning modify build tools on developer PC to inject correct LPC vector checksum.
+wrote 327680 bytes from file ./out/bin/blinking.bin in 4.918178s (65.065 KiB/s)
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+shutdown command invoked</pre>
+
+<p>
+Presionar el pulsador de reset de la CIAA, luego debería verse un LED destellando.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de las herramientas por l\u00ednea de comandos&quot;,&quot;hid&quot;:&quot;configuracion_de_las_herramientas_por_linea_de_comandos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;257-6883&quot;} -->
+<h2 class="sectionedit4" id="configuracion_de_eclipse">Configuración de Eclipse</h2>
+<div class="level2">
+
+<p>
+1) Descargar y descomprimir Eclipse C/C++:
+</p>
+
+<p>
+<strong>64-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz</code> desde <a href="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz" class="urlextern" target="_blank" title="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz" rel="ugc nofollow noopener">https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir:</div>
+</li>
+</ul>
+<pre class="code">cd $HOME/ciaa-ide
+tar -xzvf eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz</pre>
+
+<p>
+<strong>32-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>eclipse-cpp-luna-SR2-linux-gtk.tar.gz</code> desde <a href="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk.tar.gz" class="urlextern" target="_blank" title="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk.tar.gz" rel="ugc nofollow noopener">https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk.tar.gz</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir:</div>
+</li>
+</ul>
+<pre class="code">cd $HOME/ciaa-ide
+tar -xzvf eclipse-cpp-luna-SR2-linux-gtk.tar.gz</pre>
+
+<p>
+2) Descargar y descomprimir Java Runtime Environment (JRE) para Linux:
+</p>
+
+<p>
+<strong>64-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>jre-7u79-linux-x64.tar.gz</code> desde <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" class="urlextern" target="_blank" title="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" rel="ugc nofollow noopener">http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir dentro de Eclipse:</div>
+</li>
+</ul>
+<pre class="code">cd $HOME/ciaa-ide/eclipse
+tar -xzvf ../jre-7u79-linux-x64.tar.gz
+mv jre1.7.0_79/ jre/</pre>
+
+<p>
+<strong>32-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>jre-7u79-linux-i586.tar.gz</code> desde <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" class="urlextern" target="_blank" title="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" rel="ugc nofollow noopener">http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir dentro de Eclipse:</div>
+</li>
+</ul>
+<pre class="code">cd $HOME/ciaa-ide/eclipse
+tar -xzvf ../jre-7u79-linux-i586.tar.gz
+mv jre1.7.0_79/ jre/</pre>
+
+<p>
+3) Crear un script de inicialización del IDE:
+</p>
+<pre class="code">cd $HOME/ciaa-ide
+nano ciaa-ide # archivo nuevo</pre>
+<ul>
+<li class="level1"><div class="li"> Ingresar el siguiente texto:</div>
+</li>
+</ul>
+<pre class="code">#!/bin/sh
+export PATH=$PATH:$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/bin:$HOME/ciaa-ide/openocd-0.9.0/src
+./eclipse/eclipse -data $HOME/ciaa-ide/workspace/ &amp;</pre>
+<ul>
+<li class="level1"><div class="li"> Agregar permisos de ejecución:</div>
+</li>
+</ul>
+<pre class="code">chmod +x ciaa-ide</pre>
+<ul>
+<li class="level1"><div class="li"> Ejecutar:</div>
+</li>
+</ul>
+<pre class="code">./ciaa-ide</pre>
+
+<p>
+4) Instalar plug-ins GNU ARM Eclipse y eGIT.
+</p>
+<ul>
+<li class="level1"><div class="li"> Update sites:</div>
+</li>
+</ul>
+
+<p>
+<a href="http://gnuarmeclipse.sourceforge.net/updates" class="urlextern" target="_blank" title="http://gnuarmeclipse.sourceforge.net/updates" rel="ugc nofollow noopener">http://gnuarmeclipse.sourceforge.net/updates</a> (si este plug-in trae problemas, ver <a href="http://gnuarmeclipse.livius.net/blog/plugins-install/" class="urlextern" target="_blank" title="http://gnuarmeclipse.livius.net/blog/plugins-install/" rel="ugc nofollow noopener">este enlace</a>).<br/>
+
+<a href="http://download.eclipse.org/egit/updates" class="urlextern" target="_blank" title="http://download.eclipse.org/egit/updates" rel="ugc nofollow noopener">http://download.eclipse.org/egit/updates</a> (puede que no sea necesario instalar este plug-in, ya viene instalado en las últimas versiones de Eclipse).
+</p>
+<ul>
+<li class="level1"><div class="li"> En Eclipse, ir a Help → Install new Software…</div>
+</li>
+<li class="level1"><div class="li"> Ingresar un <abbr title="Uniform Resource Locator">URL</abbr> por vez y seguir los pasos.</div>
+</li>
+<li class="level1"><div class="li"> Eclipse se reiniciará una vez por cada plug-in instalado.</div>
+</li>
+</ul>
+
+<p>
+5) Importar Firmware en Eclipse:
+</p>
+<ul>
+<li class="level1"><div class="li"> File → New → Makefile Project with Existing Code</div>
+</li>
+<li class="level1"><div class="li"> En Existing Code Location, navegar a <code>$HOME/ciaa-ide/Firmware</code>. Click a Finish. Aparecerá un proyecto nuevo de nombre “Firmware”.</div>
+</li>
+</ul>
+
+<p>
+6) Configurar Firmware en Eclipse:
+</p>
+<ul>
+<li class="level1"><div class="li"> Ir a las propiedades de Firmware (clic derecho → Properties).</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ Build, pestaña Behavior.</div>
+</li>
+<li class="level1"><div class="li"> En la opción Build (Incremental build) borrar la palabra <code>all</code>.</div>
+</li>
+<li class="level1"><div class="li"> En la opción Clean escribir <code>clean_generate</code>.</div>
+</li>
+<li class="level1"><div class="li"> Click en Apply. Esto evita que se recompile todo cada vez, y con cada “Clean” se generan los archivos del RTOS.</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ Build &gt; Environment. Agregar la variable <code>BOARD</code> con valor <code>edu_ciaa_nxp</code>. Click en <code>Add…</code>, Name: <code>BOARD</code>, Value: <code>edu_ciaa_nxp</code>.</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ General, Paths and Symbols.</div>
+</li>
+<li class="level1"><div class="li"> En la sección Languages, elegir GNU C.</div>
+</li>
+<li class="level1"><div class="li"> Click en <code>Add…</code>, click en <code>File System…</code></div>
+</li>
+<li class="level1"><div class="li"> Navegar a la ruta <code>$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include</code></div>
+</li>
+<li class="level1"><div class="li"> Click en <code>Ok</code> (esto no afecta la compilación, es para que Eclipse parsee los headers estándar y no aparezcan errores de tipos no encontrados).</div>
+</li>
+</ul>
+
+<p>
+7) Compilar: ctrl+B. La consola debería mostrar el mismo resultado que el paso 13:
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:install_linux_debian&amp;media=docu:fw:bm:ide:consola.png.html" class="media" title="docu:fw:bm:ide:consola.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:consola.png" class="mediacenter" loading="lazy" title="Consola de Eclipse" alt="Consola de Eclipse" /></a>
+8) Configurar debugging:
+</p>
+<ul>
+<li class="level1"><div class="li"> Run → Debug configurations…</div>
+</li>
+<li class="level1"><div class="li"> Doble click a GDB OpenOCD Debugging</div>
+</li>
+<li class="level1"><div class="li"> Pestaña Main → C/C++ Application, “Browse…” a <code>$HOME/ciaa-ide/Firmware/out/bin/blinking.axf</code></div>
+</li>
+<li class="level1"><div class="li"> Pestaña Debugger → “Start OpenOCD locally” debe estar activado.</div>
+</li>
+<li class="level1"><div class="li"> Executable: <code>openocd</code></div>
+</li>
+<li class="level1"><div class="li"> Config options: <code>-f $HOME/ciaa-ide/Firmware/modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg</code></div>
+</li>
+</ul>
+<div class="plugin_note noteimportant">OJO!!! En este caso reemplazar $HOME por la ruta (por ejemplo, <code>/home/luis</code>).
+</div><ul>
+<li class="level1"><div class="li"> Sección “GDB Client Setup”, campo Executable: arm-none-eabi-gdb</div>
+</li>
+<li class="level1"><div class="li"> Click en Apply, luego en Debug…</div>
+</li>
+<li class="level1"><div class="li"> Debería abrirse la perspectiva Debug y detenerse en la primer sentencia de la función main().</div>
+</li>
+<li class="level1"><div class="li"> Si se está usando una EDU-CIAA con la memoria flash borrada, puede que falle al iniciar el debugging. Ver <a href="./doku.php%3Fid=desarrollo:hardware:primeros_pasos.html" class="wikilink1" title="desarrollo:hardware:primeros_pasos" data-wiki-id="desarrollo:hardware:primeros_pasos">Primeros pasos con el hardware de la CIAA</a>.</div>
+</li>
+</ul>
+
+<p>
+9) Disfrutar de tu CIAA-IDE <img src="lib/images/smileys/smile.svg" class="icon smiley" alt=":-)" />
+</p>
+
+<p>
+10) <em>Opcional</em>: Cambiar el splash screen de Eclipse por uno con el logo de la CIAA:
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:install_linux_debian&amp;media=docu:fw:bm:ide:splash.png.html" class="media" title="docu:fw:bm:ide:splash.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:splash.png" class="mediacenter" loading="lazy" title="Splash CIAA-IDE" alt="Splash CIAA-IDE" /></a>
+</p>
+<pre class="code">cd $HOME/ciaa-ide
+wget http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=docu:fw:bm:ide:splash.bmp.tar.gz -O splash.bmp.tar.gz
+cd eclipse/plugins/org.eclipse.platform_4.4.2.v20150204-1700/
+mv splash.bmp splash.bmp.old # guardamos splash predeterminado
+tar -xzvf ../../../splash.bmp.tar.gz</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de Eclipse&quot;,&quot;hid&quot;:&quot;configuracion_de_eclipse&quot;,&quot;codeblockOffset&quot;:20,&quot;secid&quot;:4,&quot;range&quot;:&quot;6884-12116&quot;} -->
+<h2 class="sectionedit5" id="script_automatizado">Script automatizado</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:ciaa_ide_setup.sh.tar.gz" class="media mediafile mf_gz" title="docu:fw:bm:ide:ciaa_ide_setup.sh.tar.gz (2.4 KB)">Aquí</a> podrás descargar un script de shell que automatiza la descarga y configuración de las herramientas, según los pasos anteriores. Aún deberás realizar manualmente los pasos 8 a 13 de la primer sección (que corresponden a las pruebas de hardware) y 4 a 8 de la segunda (configuración dentro de Eclipse). <strong>Aviso: Este script no está totalmente probado!</strong>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Script automatizado&quot;,&quot;hid&quot;:&quot;script_automatizado&quot;,&quot;codeblockOffset&quot;:29,&quot;secid&quot;:5,&quot;range&quot;:&quot;12117-&quot;} --></div>
+</body>
+</html>

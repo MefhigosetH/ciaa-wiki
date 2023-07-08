@@ -1,0 +1,61 @@
+====== Normativa asociada al diseño de sistemas electrónicos para aplicaciones ferroviarias de seguridad ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+###
+En la República Argentina no existe un cuerpo de normas obligatorias a cumplir para el diseño de sistemas o subsistemas destinados a seguridad funcional electrónica en usos ferroviarios. Por ello se debe recurrir a normas internacionales de referencia, centrándose la atención en dos grandes grupos, las europeas y las norteamericanas.
+###
+
+{{ :blanco.png?10 | }}
+
+###
+**Las normas europeas**, denominadas "EN" (Normas Europeas), son emitidas por el CENELEC (//Comité Européen de Normalisation Electrotechnique//, en español Comité Europeo de Normalización Electrotécnica).
+###
+
+###
+Las principales normas europeas a considerar en el diseño de un sistema electrónico para aplicaciones ferroviarias que requieran de seguridad funcional son las siguientes:
+###
+
+  * EN 50126 : Especificación y demostración de la confiabilidad, la disponibilidad, la mantenibilidad y la seguridad (RAMS).
+  * EN 50128 : Sistemas de comunicación, señalización y procesamiento. Software para sistemas de control y protección de ferrocarril.
+  * EN 50129 : Sistemas de comunicación, señalización y procesamiento. Sistemas electrónicos relacionados con la seguridad para la señalización.
+  * EN 50121: Serie sobre Compatibilidad Electromagnética.
+  * EN 50124 : Coordinación de aislamiento. 
+    * Parte 1: Requisitos fundamentales. Distancias en el aire y líneas de fuga para cualquier equipo eléctrico y electrónico. 
+    * Parte 2: Sobretensiones y protecciones asociadas.
+  * EN 50155 : Equipos electrónicos utilizados sobre material rodante.
+  * EN 50125 : Condiciones ambientales para el equipo.
+    * Parte 1: Material rodante y equipos embarcados.
+    * Parte 3: Equipos para telecomunicaciones y señalización.
+
+{{ :blanco.png?10 | }}
+
+###
+**Las normas norteamericanas** responden a un conjunto que abarca tanto normas IEEE (//Institute of Electrical and Electronics Engineers//, en español Instituto de Ingenieros Eléctricos y Electrónicos) y MIL STD (normas militares), como recomendaciones de la AREMA (//American Railway Engineering and Maintenance-of-Way Association//, en español Asociación Americana para el Mantenimiento de Vías y la Ingeniería Ferroviaria) y regulaciones de la FRA (//Federal Railroad Administration//, en español Administración Federal de Vías Ferreas).
+###
+
+###
+Las principales normas a considerar en el diseño de un sistema electrónico para aplicaciones ferroviarias que requieran de seguridad funcional en el territorio de los Estados Unidos son las siguientes:
+###
+
+  * FRA: Compendio de Regulaciones, título 49 - Parte 236: Reglas, Normas e Instrucciones para la instalación, inspección, mantenimiento y reparación de sistemas, dispositivos y aparatos de señalamiento y de control de trenes.
+  * AREMA : Manual de Prácticas Recomendadas para Comunicaciones y Señalamiento.
+  * IEEE 730: Norma para el aseguramiento de la calidad del software.
+  * IEEE 8XX : Norma y Prácticas Recomendadas para prueba y configuración de software y especificación de requerimientos.
+  * IEEE 1012 : Norma para verificación y validación de software.
+  * IEEE 10XX : Norma y Prácticas Recomendadas para el diseño y manejo de proyectos de software.
+  * IEEE 1483 : Norma para la verificación de funciones vitales en sistemas utilizados en control de tránsito ferroviario basados en procesadores.
+  * IEEE 1558 : Norma para la documentación de software para equipamiento y sistemas ferroviarios.
+  * MIL STD 882C : Prácticas del Ministerio de Defensa para sistemas de seguridad, Actividades a la medida de los sistemas de seguridad por "Task".
+    * Task 101/102: Programación de sistemas de seguridad.
+    * Task 103/104/105/107: Manejo de contratistas, Revisión y Auditorías, Grupos de Trabajo en Seguridad, Progresos en Seguridad.
+    * Task 201/202/203/204/205/206/207: PHL / PHA / Requisitos de Seguridad / SSHA /SHA / OSHA / Evaluación de Riesgos de Salud.
+    * Task 301/302/303: Evaluación de Seguridad / Prueba y Evaluación de Seguridad / Revisión de Seguridad, Informes de Problemas a  cambiar, Desviaciones.
+    * Task 401/402: Verificación de Seguridad / Cumplimientos de Seguridad
+
+{{ :blanco.png?10 | }}
+
+###
+Se recomienda seguir la lectura en la [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio|página dedicada a explicar cuál es el primer paso de un sistema ferroviario]] y seguir con los vínculos que se indican al pie de esa página.
+###

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:firmware:functional_tests</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:27:45+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:perifericos&amp;rev=1426784398&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:testslave&amp;rev=1442970661&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:perifericos&amp;rev=1426784398&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-19T16:59:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:functional_tests:perifericos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:perifericos&amp;rev=1426784398&amp;do=diff</link>
+        <description>Listado de perifericos que se desean testear:
+
+	*  Pins de salidas
+	*  Pins de entrada
+	*  Reles
+	*  PWMs
+	*  ADC
+	*  DAC
+	*  Buses
+		*  CAN?
+		*  Modbus (desde la PC con un adaptador?)
+		*  Ethernet (desde la PC no es necesario una placa)
+
+	*  Otros periféricos</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:testslave&amp;rev=1442970661&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-23T01:11:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware:functional_tests:testslave</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:functional_tests:testslave&amp;rev=1442970661&amp;do=diff</link>
+        <description>Aplicación testslave
+
+Resumen
+
+La aplicación testslave permite al usuario acceder a todos los dispositivos mediante la escritura y lectura en diferentes direcciones Holding Registers de Modbus. Estas direcciones permiten especificar el path del dispositivo, los argumentos a utilizar en las funciones ioctl(), read() y write(), y ver los resultados obtenidos.</description>
+    </item>
+</rdf:RDF>

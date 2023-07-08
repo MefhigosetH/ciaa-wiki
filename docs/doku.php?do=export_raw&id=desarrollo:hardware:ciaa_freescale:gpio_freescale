@@ -1,0 +1,16 @@
+====== CIAA-FSL: GPIO ======
+
+===== Diagrama Esquemático =====
+
+{{06-gpio.png}}
+
+===== Características =====
+
+  * Conector GPIO 
+    * 16 pines GPIO disponibles con protección contra ESD y sobre impulsos.
+    * 3.3V con limite de corriente a 0.35A
+    * 5V con limite de corriente a 1A
+    * 24V con limite de corriente a 1A
+  * Puerto I²C auxiliar
+  * Puerto Uart/SPI auxiliar
+  * 4 canales analógicos auxiliares (0-3.3VDC)

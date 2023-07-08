@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:modbus:modbus_design</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,modbus,modbus_design"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:modbus:modbus_design&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:modbus"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:modbus:modbus_design"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:modbus:modbus_design.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:modbus';var JSINFO = {"id":"desarrollo:modbus:modbus_design","namespace":"desarrollo:modbus","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#diseno_del_modulo_modbus">Diseño del módulo MODBUS</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#resumen">Resumen</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#documentos_aplicables_y_de_referencia">Documentos aplicables y de referencia</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#terminos_definiciones_y_abreviaturas">Términos, definiciones y abreviaturas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#descripcion_general_de_modbus">Descripción general de MODBUS</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#descripcion_detallada_de_los_modulos">Descripción detallada de los módulos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:modbus:modbus_design.html#matrices_de_trazabilidad">Matrices de trazabilidad</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="diseno_del_modulo_modbus">Diseño del módulo MODBUS</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o del m\u00f3dulo MODBUS&quot;,&quot;hid&quot;:&quot;diseno_del_modulo_modbus&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-42&quot;} -->
+<h2 class="sectionedit2" id="resumen">Resumen</h2>
+<div class="level2">
+
+<p>
+Este documento tiene por objetivo definir la estructura del módulo MODBUS tal que permita al usuario configurar los componentes de aplicación que se deseen utilizar (slaves y/o masters), configurar los canales de transmisión (<abbr title="American Standard Code for Information Interchange">ASCII</abbr>, RTU y/o TCP) y establecer el flujo de mensaje entre estos a través de la configuración de un componente denominado “gateway”.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resumen&quot;,&quot;hid&quot;:&quot;resumen&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;43-432&quot;} -->
+<h2 class="sectionedit3" id="documentos_aplicables_y_de_referencia">Documentos aplicables y de referencia</h2>
+<div class="level2">
+<div class="table sectionedit4"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">ID </th><th class="col1 leftalign"> Título                                                              </th><th class="col2 leftalign"> Autor               </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 1 </td><td class="col1 leftalign"> <a href="http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf" rel="ugc nofollow noopener">MODBUS Application Protocol Specification V1.1b</a>                     </td><td class="col2"> Modbus Organization </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 2 </td><td class="col1"> <a href="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" rel="ugc nofollow noopener">MODBUS over serial line specification and implementation guide V1.0</a> </td><td class="col2"> Modbus Organization </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 3 </td><td class="col1"> <a href="http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf" rel="ugc nofollow noopener"> MODBUS Messaging on TCP/IP Implementation Guide V1.0b</a></td><td class="col2"> Modbus Organization </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:4,&quot;range&quot;:&quot;484-1072&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Documentos aplicables y de referencia&quot;,&quot;hid&quot;:&quot;documentos_aplicables_y_de_referencia&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;433-1074&quot;} -->
+<h2 class="sectionedit5" id="terminos_definiciones_y_abreviaturas">Términos, definiciones y abreviaturas</h2>
+<div class="level2">
+<div class="table sectionedit6"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Acrónimos       </th><th class="col1 leftalign"> Descripción     </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> PDU </td><td class="col1 leftalign"> Unidad de Datos de Protocolo  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> ADU </td><td class="col1"> Unidad de Datos de Aplicación </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> RTU </td><td class="col1 leftalign"> Unidad Terminal Remota        </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:6,&quot;range&quot;:&quot;1127-1287&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;T\u00e9rminos, definiciones y abreviaturas&quot;,&quot;hid&quot;:&quot;terminos_definiciones_y_abreviaturas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1075-1289&quot;} -->
+<h2 class="sectionedit7" id="descripcion_general_de_modbus">Descripción general de MODBUS</h2>
+<div class="level2">
+
+<p>
+Modbus es un protocolo del tipo Master/Slave, donde pueden utilizarse diferentes tipos de de formatos para enviar los mensajes a través del canal de transmisión.
+</p>
+
+<p>
+A nivel de aplicación podemos tener rol de Master, Slave o ambos. A nivel de transporte, los formatos más comunes son: MODBUS <abbr title="American Standard Code for Information Interchange">ASCII</abbr>, MODBUS RTU y MODBUS TCP.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n general de MODBUS&quot;,&quot;hid&quot;:&quot;descripcion_general_de_modbus&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1290-1660&quot;} -->
+<h3 class="sectionedit8" id="arquitectura_estatica">Arquitectura estática</h3>
+<div class="level3">
+
+<p>
+Las especificaciones se dividen en cuatro componentes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Los dos primeros (ciaaModbus_slave y ciaaModbus_master) corresponden a la implementación del protocolo a nivel de aplicación según el documento: <a href="http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf" rel="ugc nofollow noopener">MODBUS Application Protocol Specification V1.1b</a></div>
+</li>
+<li class="level1"><div class="li"> El tercer componente (ciaaModbus_transport) corresponde a la implementación del protocolo a nivel de transporte según los documentos: <a href="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf" rel="ugc nofollow noopener">MODBUS over serial line specification and implementation guide V1.0</a> y <a href="http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf" class="urlextern" target="_blank" title="http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf" rel="ugc nofollow noopener"> MODBUS Messaging on TCP/IP Implementation Guide V1.0b</a></div>
+</li>
+<li class="level1"><div class="li"> El cuarto componente, denominado ciaaModbus_gateway es el encargado de gestionar el intercambio de mensaje entre los componentes anteriores.</div>
+</li>
+</ul>
+
+<p>
+Modbus, puede ser utilizado como Slave, Master o Master-Slave, Esto quiere decir que según la necesidad de la aplicación, se pueden inicializar los componentes que se deseen. También puede utilizarse como conversor de protocolos, por ejemplo Modbus-<abbr title="American Standard Code for Information Interchange">ASCII</abbr> a Modbus-TCP. 
+La aplicación sólo debe inicializar los distintos componentes que se deseen utilizar, configurar el gateway y finalmente llamar a la función ciaaModbus_gatewayMainTask() periódicamente para ejecutar las tareas del (los) gateway(s).
+</p>
+
+<p>
+Para el accesos a los distintos periféricos, Modbus utiliza la funciones ciaaPOSIX_read() y ciaaPOSIX_write() con los file descriptors que pasan en la inicialización de cada componente.
+</p>
+
+<p>
+Para coordinar el accesos concurrente de diferentes tareas, Modbus utiliza las funciones GetResource(MODBUSR) y ReleaseResource(MODBUSR) del sistema operativo.
+</p>
+
+<p>
+Finalmente, Modbus Master utiliza las funciones WaitEvent(MODBUSE) y ClearEvent(MODBUSE) para bloquear la tarea, hasta que finalice la comunicación (en caso de no utilizar callback).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura est\u00e1tica&quot;,&quot;hid&quot;:&quot;arquitectura_estatica&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;1661-3616&quot;} -->
+<h3 class="sectionedit9" id="arquitectura_dinamica">Arquitectura dinámica</h3>
+<div class="level3">
+
+<p>
+<em>&lt;Descripción de la arquitectura dinámica. Descripción de las decisiones de diseño tomadas para satisfacer con las restricciones de tiempo real.&gt;</em>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura din\u00e1mica&quot;,&quot;hid&quot;:&quot;arquitectura_dinamica&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3617-3805&quot;} -->
+<h3 class="sectionedit10" id="comportamiento">Comportamiento</h3>
+<div class="level3">
+
+<p>
+<em>&lt;Descripción del comportamiento del módulo.&gt;</em>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comportamiento&quot;,&quot;hid&quot;:&quot;comportamiento&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;3806-3884&quot;} -->
+<h3 class="sectionedit11" id="interfaces_externas">Interfaces externas</h3>
+<div class="level3">
+
+<p>
+<em>&lt;Descripción de las interfaces externas, basada en un diagrama en bloques del sistema.&gt;</em>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interfaces externas&quot;,&quot;hid&quot;:&quot;interfaces_externas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;3885-4010&quot;} -->
+<h2 class="sectionedit12" id="descripcion_detallada_de_los_modulos">Descripción detallada de los módulos</h2>
+<div class="level2">
+
+<p>
+<em>&lt;Descripción detallada de cada componente de MODBUS. La descripción debería hacerse siguiendo una organización jerárquica, e identificando cada módulo en términos de:</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>&lt;Identificador único del componente&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Tipo: Clasificación del componente&gt; </em></div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Requerimientos de modbus asociados&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Función&gt; </em></div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Subordinados&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Dependencias&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Interfaces&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Recursos necesarios&gt;</em> </div>
+</li>
+<li class="level1"><div class="li"> <em>&lt;Datos: Descripción de la estructura de los datos internos, por ejemplo, en términos de nombre, tipo, dimensión, relación con otros elementos, rango de valores posibles, valores iniciales.&gt;</em> </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n detallada de los m\u00f3dulos&quot;,&quot;hid&quot;:&quot;descripcion_detallada_de_los_modulos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;4011-4714&quot;} -->
+<h3 class="sectionedit13" id="ciaamodbus_slave">ciaaModbus_slave</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="idciaamodbus_slave">ID: ciaaModbus_slave</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="tipo">Tipo</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="requerimientos">Requerimientos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="funcion">Función</h5>
+<div class="level5">
+
+<p>
+Este módulo es el encargado de proveer los servicios descriptos en ModbusApplicationProtocol. Para esto, se analizan las PDUs recibidas, y se invocan a las funciones “call backs” de la aplicación que ejecutan cada una de las funciones posibles del protocolo.
+</p>
+
+</div>
+
+<h5 id="subordinados">Subordinados</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="dependencias">Dependencias</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="interfaces">Interfaces</h5>
+<div class="level5">
+<pre class="code c"><span class="kw2">extern</span> <span class="kw4">int32_t</span> ciaaModbus_slaveOpen<span class="br0">&#40;</span>
+      ciaaModbus_slaveCmd_type <span class="sy0">*</span>cmd<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">extern</span> <span class="kw4">int32_t</span> ciaaModbus_slaveClose<span class="br0">&#40;</span>
+      <span class="kw4">int32_t</span> hModbusSlave<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h5 id="recursos">Recursos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="datos">Datos</h5>
+<div class="level5">
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">uint16_t</span> <span class="br0">&#40;</span><span class="sy0">*</span>modbusSlave_processFuncMultipleRead<span class="br0">&#41;</span><span class="br0">&#40;</span>
+      <span class="kw4">uint16_t</span> start<span class="sy0">,</span>
+      <span class="kw4">uint16_t</span> quantity<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> exceptioncode<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> buf
+      <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">void</span> <span class="br0">&#40;</span><span class="sy0">*</span>modbusSlave_processFuncSingleWrite<span class="br0">&#41;</span><span class="br0">&#40;</span>
+      <span class="kw4">uint16_t</span> start<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> exceptioncode<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> buf
+      <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">void</span> <span class="br0">&#40;</span><span class="sy0">*</span>modbusSlave_processFuncMultipleWrite<span class="br0">&#41;</span><span class="br0">&#40;</span>
+      <span class="kw4">uint16_t</span> start<span class="sy0">,</span>
+      <span class="kw4">uint16_t</span> quantity<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> bytecount<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> exceptioncode<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> buf
+      <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">void</span> <span class="br0">&#40;</span><span class="sy0">*</span>modbusSlave_processFuncMultipleReadWrite<span class="br0">&#41;</span><span class="br0">&#40;</span>
+      <span class="kw4">uint16_t</span> readStart<span class="sy0">,</span>
+      <span class="kw4">uint16_t</span> readQuantity<span class="sy0">,</span>
+      <span class="kw4">uint16_t</span> writeStart<span class="sy0">,</span>
+      <span class="kw4">uint16_t</span> writeQuantity<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> writeByteCount<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> exceptioncode<span class="sy0">,</span>
+      <span class="kw4">uint8_t</span> <span class="sy0">*</span> buf
+      <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">struct</span>
+<span class="br0">&#123;</span>
+   modbusSlave_processFuncMultipleRead       cmd0x01ReadCoils<span class="sy0">;</span>
+   modbusSlave_processFuncMultipleRead       cmd0x02ReadDiscrteInputs<span class="sy0">;</span>
+   modbusSlave_processFuncMultipleRead       cmd0x03ReadHoldingReg<span class="sy0">;</span>
+   modbusSlave_processFuncMultipleRead       cmd0x04ReadInputReg<span class="sy0">;</span>
+&nbsp;
+   modbusSlave_processFuncSingleWrite        cmd0x05WriteSingleCoil<span class="sy0">;</span>
+   modbusSlave_processFuncSingleWrite        cmd0x06WriteSingleRegister<span class="sy0">;</span>
+&nbsp;
+   modbusSlave_processFuncMultipleWrite      cmd0x0FWriteMultipleCoils<span class="sy0">;</span>
+   modbusSlave_processFuncMultipleWrite      cmd0x10WriteMultipleReg<span class="sy0">;</span>
+   modbusSlave_processFuncMultipleReadWrite  cmd0x17ReadWriteMultipleReg<span class="sy0">;</span>
+&nbsp;
+<span class="br0">&#125;</span>ciaaModbus_slaveCmd_type<span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ciaaModbus_slave&quot;,&quot;hid&quot;:&quot;ciaamodbus_slave&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:13,&quot;range&quot;:&quot;4715-6853&quot;} -->
+<h3 class="sectionedit14" id="ciaamodbus_master">ciaaModbus_master</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="idciaamodbus_master">ID: ciaaModbus_master</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="tipo1">Tipo</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="requerimientos1">Requerimientos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="funcion1">Función</h5>
+<div class="level5">
+
+<p>
+Este módulo permite al programa de aplicación, invocar los servicios descriptos en ModbusApplicationProtocol para que sean ejecutados en un slave deseado. El slave es identificado a través del número de identificación. 
+</p>
+
+</div>
+
+<h5 id="subordinados1">Subordinados</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="dependencias1">Dependencias</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="interfaces1">Interfaces</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="recursos1">Recursos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="datos1">Datos</h5>
+<div class="level5">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ciaaModbus_master&quot;,&quot;hid&quot;:&quot;ciaamodbus_master&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:14,&quot;range&quot;:&quot;6854-7274&quot;} -->
+<h3 class="sectionedit15" id="ciaamodbus_transport">ciaaModbus_transport</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="idciaamodbus_transport">ID: ciaaModbus_transport</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="tipo2">Tipo</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="requerimientos2">Requerimientos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="funcion2">Función</h5>
+<div class="level5">
+
+<p>
+En este módulo se configuran los diferente formatos de transporte y se vinculan con un dispositivo o socket a travez del “file handler” indicado para que se envíen y reciban los mensajes a través de un medio físico determinado. Los formatos de transporte son: MODBUS <abbr title="American Standard Code for Information Interchange">ASCII</abbr>, MODBUS RTU y MODBUS TCP. Los dos primeros utilizan puertos series y el tercero utiliza conexiones TCP. 
+</p>
+
+</div>
+
+<h5 id="subordinados2">Subordinados</h5>
+<div class="level5">
+
+<p>
+ciaaModbus_ascii
+ciaaModbus_rtu
+ciaaModbus_tcp
+</p>
+
+</div>
+
+<h5 id="dependencias2">Dependencias</h5>
+<div class="level5">
+
+<p>
+ciaaModbus_ascii
+ciaaModbus_rtu
+ciaaModbus_tcp
+</p>
+
+</div>
+
+<h5 id="interfaces2">Interfaces</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="recursos2">Recursos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="datos2">Datos</h5>
+<div class="level5">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ciaaModbus_transport&quot;,&quot;hid&quot;:&quot;ciaamodbus_transport&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:15,&quot;range&quot;:&quot;7275-7956&quot;} -->
+<h3 class="sectionedit16" id="ciaamodbus_gateway">ciaaModbus_gateway</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="idciaamodbus_gateway">ID: ciaaModbus_gateway</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="tipo3">Tipo</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="requerimientos3">Requerimientos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="funcion3">Función</h5>
+<div class="level5">
+
+<p>
+Finalmente esté módulo es el encargado de direccionar los mensajes entrantes a los diferentes slaves que podemos instanciar. Los mensajes “entrantes” pueden venir desde un master externo o desde un master internos. Al arribar, se lee el número de identificación para buscar el destinatario de ese mensaje según la configuración establecida. Si no se encuentra coincidencia, se descarta el mensaje.
+</p>
+
+</div>
+
+<h5 id="subordinados3">Subordinados</h5>
+<div class="level5">
+
+<p>
+ciaaModbus_slave
+ciaaModbus_master
+ciaaModbus_transport
+</p>
+
+</div>
+
+<h5 id="dependencias3">Dependencias</h5>
+<div class="level5">
+
+<p>
+ciaaModbus_slave
+ciaaModbus_master
+ciaaModbus_transport
+</p>
+
+</div>
+
+<h5 id="interfaces3">Interfaces</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="recursos3">Recursos</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="datos3">Datos</h5>
+<div class="level5">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ciaaModbus_gateway&quot;,&quot;hid&quot;:&quot;ciaamodbus_gateway&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:16,&quot;range&quot;:&quot;7957-8674&quot;} -->
+<h2 class="sectionedit17" id="matrices_de_trazabilidad">Matrices de trazabilidad</h2>
+<div class="level2">
+
+<p>
+<em>&lt;Matrices de trazabilidad que demuestren que todos los requerimientos propuestos para MODBUS son cubiertos por los módulos propuestos en el presente diseño, y que todos los módulos que se proponen contribuyen a cubrir al menos alguno de los requerimientos de MODBUS.&gt;</em>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Matrices de trazabilidad&quot;,&quot;hid&quot;:&quot;matrices_de_trazabilidad&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:17,&quot;range&quot;:&quot;8675-&quot;} --></div>
+</body>
+</html>

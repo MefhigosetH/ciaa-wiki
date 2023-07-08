@@ -1,0 +1,25 @@
+====== Preguntas frecuentes acerca del prototipo CIAA-Safety======
+
+**¿La CIAA Safety está certificada?**
+
+El proyecto contempla el desarrollo de un prototipo CIAA Safety certificable, no certificado. ¿Qué significa esto? que el prototipo va a contar con todos los aspectos básicos para llevar adelante el proceso de certificación de acuerdo al ámbito en el que se va a aplicar.
+Por ejemplo, si se va a utilizar para la industria y se necesita certificar SIL3 de acuerdo con IEC 61508, el prototipo va a ser probado de manera voluntaria y cumplir con los requerimientos esenciales.
+Para ello se seleccionó un MCU certificado SIL3: [[http://example.com|Ver certificación TÜV SÜD para TMS570LS12x]]
+
+
+**¿El MCU TMS570 tiene poca Memoria RAM?**
+
+La familia de MCU TI Hercules TMS570 tiene relativamente poca memoria RAM. Lamentablemente el encapsulado seleccionado (TMS570LS12x) no dispone de controlador EMC o EMIF para ampliarla, pero se considera que esta primera versión debe cumplir con el objetivo de atender o resolver aplicaciones críticas sencillas, próximas versiones incorporarán esas características. Además debido a esta limitación de memoria se aclara que no se considera ejecutar un sistema operativo como GNU/Linux debido a que no es aplicable a entornos críticos.
+
+**¿Por qué utilizar ARM Cortex R4 y no un ARM Cortex R5?**
+
+Los procesadores ARM Cortex R5 son similares a los ARM Cortex R4 con un pipeline mejorado, tienen mejores características, mejores buses para multiproceso, más caché, etc. ¡Pero por el momento son BGA! que no quita que en un futuro se puedan emplear o que podamos indagar con este formato. Uno de los posibles casos de uso de la CIAA Safety son aplicaciones aeronáuticas y en este dominio emplear un BGA tiene sus inconvenientes. Uno de estos inconvenientes es la “dilatación térmica”, las bolas de soldadura de estos componentes no son muy flexibles. Al igual que todos los dispositivos de montaje superficial, hay flexión, debido a una diferencia en el Coeficiente de Dilatación Térmica entre el sustrato PCB y BGA (estrés térmico), o la flexión y la vibración (tensión mecánica) puede que las uniones soldadas se fracturen.
+
+Fuente: 
+http://www.od-lambda.com/2010/01/soldadura-smd-y-bga.html
+
+En definitiva una de las causas (entre otros) de estas roturas se producen por cambios de temperatura bruscos y recordemos que cuando un avión vuela sufre cambio de temperaturas y vibraciones en lapsos de tiempos muy cortos. Por lo anterior no se considera la tecnología BGA para este prototipo. 
+
+**¿La CIAA-Safety podrá conectarse a otras CIAA?**
+
+La CIAA-Safety podrá conectarse a otras CIAA a través de sus periféricos de comunicaciones (Ethernet, CAN, etc) no compartiendo el mismo lugar físico y también podrá conectarse en una misma estructura siempre y cuando estas estén diseñadas con él o una variación del factor de forma PC/104. Por ejemplo la CIAA ACC que aunque sus conectores sean del tipo PCIe-104, tendrá conectividad a través del Modulo de Expansión o Conexión en el cual contemple ambos conectores (PCI y PCIe).

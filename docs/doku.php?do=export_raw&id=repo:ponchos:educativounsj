@@ -1,0 +1,11 @@
+==== Poncho Educativo de la UNSJ ====
+{{https://raw.githubusercontent.com/ciaa/Ponchos/master/Educativo_UNSJ/doc/EducativoUNSJ.jpg?150 }} 
+  
+  * **Descripción:** Display LCD de 16x2, Teclado, Buzzer, RS232 y potenciómetro para el A/D. También posee varios conectores simples para otras interfaces como SPI e I2C. 
+  * **Autor:** Leandro Gustavo Sarmiento de UNSJ
+  * **URL PONCHO:** https://github.com/ciaa/Ponchos/tree/master/Educativo_UNSJ
+  * **Wiki:** [[:desarrollo:ponchos:EducativoUNSJ| Poncho Educativo de la UNSJ]]
+\\
+|<fc #008080>**EDU-CIAA**</fc>|
+
+| **Diagrama Esquemático** | **Circuito Impreso** | **Fabricación** | <fc #777777>Funcionando</fc> |

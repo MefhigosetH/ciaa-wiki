@@ -1,0 +1,23 @@
+====== La CIAA en la Industria del Agro ======
+###
+Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en la **Industria del Agro**.
+###
+----
+
+===== Sistema dosificador de siembra de precisión =====
+{{ sembradora.png?220|Sembradora}}
+###
+Los estudiantes de la carrera de Ingeniería Electrónica de la UBA Gustavo Marek y Uriel Dubniewski están desarrollando un **Sistema dosificador de siembra de precisión**, en el marco de la materia final "Trabajo Profesional de Ingeniería Electrónica".
+###
+
+###
+Este desarrollo está orientado al sector Agropecuario, de manera de abastecer con el Kit dosificador a las fábricas de sembradoras del país, las cuales actualmente utilizan sistemas hidráulicos y neumáticos para dicho fin.
+###
+
+El sistema busca tener las siguientes prestaciones:
+  * Controlador de velocidad/rpm de cada motor, según el sensado del avance de la maquinaria.
+  * Variación de distancia lineal entre semillas de acuerdo al tipo y terreno.
+  * Monitoreo de cada línea de siembra.
+  * Apagado/encendido de cada línea de siembra de manera independiente.
+  * Control inalámbrico y local de los sistemas.
+  * Información y alarmas por fallas o falta de semillas.

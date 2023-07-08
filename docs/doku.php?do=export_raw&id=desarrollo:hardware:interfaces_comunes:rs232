@@ -1,0 +1,21 @@
+====== Interfaz RS232 ======
+===== Diagrama esquemático=====
+{{ desarrollo:hardware:rs232.png |}}
+===== Características =====
+  * Basado en el estándar EIA/TIA-232.
+  * Data Rate máximo mayor a 250Kbps.
+  * Protección contra descargas electrostáticas (ESD).
+  * Filtrado con Bead de Ferrite.
+  * Control de Flujo por Hardware RTS/CTS
+  * Salida por conector DB9
+
+===== Descripción =====
+Dada la enorme difusión que tiene el estándar de comunicaciones conocido como RS-232, éste es ampliamente utilizado hoy día ya sea para dispositivos industriales como de consumo en general. Es por ello que la CIAA lo ha incorporado entre sus alternativas de comunicación, permitiendo con su clásica conexión DB9 comunicarse con una enorme cantidad de dispositivos.
+
+El proyecto está basado en el driver [[http://www.st.com/web/en/resource/technical/document/datasheet/CD00002950.pdf|ST3232E]] que cumple con el estándar EIA/TIA-232. Al mismo se le han adicionado beads de ferrite para aumentar su inmunidad al ruido de alta frecuencia, y se ha optado por dar soporte para control de flujo por hardware (RTS/CTS).
+
+===== Bibliografía =====
+  * [[wpes>RS-232|Wikipedia, RS232]] 
+
+===== Especificación de los componentes =====
+  * Driver RS232: [[http://www.st.com/web/en/resource/technical/document/datasheet/CD00002950.pdf|ST3232E]].

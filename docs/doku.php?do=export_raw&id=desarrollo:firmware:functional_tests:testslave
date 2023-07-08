@@ -1,0 +1,82 @@
+====== Aplicación testslave ======
+
+===== Resumen =====
+La aplicación testslave permite al usuario acceder a todos los dispositivos mediante la escritura y lectura en diferentes direcciones Holding Registers de Modbus. Estas direcciones permiten especificar el path del dispositivo, los argumentos a utilizar en las funciones ioctl(), read() y write(), y ver los resultados obtenidos.
+
+===== Términos, definiciones y abreviaturas =====
+  * Holding Register: Tipo de dato para confeccionar un mapa de direcciones. Cada dirección contiene un dato de 16 bits.
+  * HR_string: string almacenado en una o más direcciones Modbus. Dado que las direcciones Modbus son de 16 bits los string siempre tienen longitud par. Además los mismo no terminan en el caracter '\0', dado que se conoce de antemana cuál es la longitud máxima. Cuando el largo un string sea menor al tamaño disponible, siempre se deben completar los caracteres disponibles con el valor 0x00. Los caracteres dentro de una dirección modbus se almacenan de la siguiente manera: 
+    * parte alta: primer caracter
+    * parte baja: segundo caracter
+  * HR_version3: version dada por tres dígitos:
+    * primer dirección: major version
+    * segunda dirección: minor version
+    * tercera dirección: patch version
+  * HR_int8_t o HR_uint8_t: Entero de 8 contenido en la parte baja del holding register, la parte alta debe ser completada con el bit de sino.
+  * HR_int16_t o HR_uint16_t: Entero de 16 en formato bigendian
+  * HR_int32_t o HR_uint32_t: Entero de 32 en formato bigendian, almacenado en 2 holding registers. No se permite acceder a los holding registers de manera individual.
+
+
+===== Mapa Modbus =====
+
+El mapa Modbus Holding Registers se divide en diferentes secciones según los datos que se pueden acceder.
+
+^ Número de rango ^ Rango ^ Título ^ Descripción ^
+| 1 | 0 a 199 | Información general | Se encuentra información del modelo de placa, versión de Firmware y submódulos, etc |
+| 2 | 200 a 399 | Ejecución de comandos | Direcciones para indicar la ejecución de un comando determinado |
+| 3 | 400 a 499 | Parámetros | Direcciones para inicializar los parámetros utilizados en los diferentes comandos que se pueden ejecutar |
+| 4 | 500 a 2499 | Intercambio de datos | Área de memoria para intercambio de datos.|
+
+==== Información general ====
+
+^ Inicio ^ Longitud ^ Tipo ^ r/w ^ Rango de valores ^ Descripción ^
+| 0 | 10 | HR_string | r | a-z A-Z 0-9 . : - _ / | Nombre de la placa |
+| 50 | 3 | HR_version3 | r | 0.0.0 - 65535.65535.65535 | Versión de testslave |
+| 53 | 3 | HR_version3 | r | 0.0.0 - 65535.65535.65535 | Versión de firmware |
+| 56 | 3 | HR_version3 | r | 0.0.0 - 65535.65535.65535 | Versión de RTOS |
+| 59 | 3 | HR_version3 | r | 0.0.0 - 65535.65535.65535 | Versión de Modbus |
+
+==== Ejecución de comandos ====
+En este sector del mapa modbus se encuentran direcciones que al escribir determinados valores, el programa ejecuta cierta acción. Para verificar el fin de dicha acción se debe leer la dirección correspondiente.
+
+^ Inicio ^ Longitud ^ Tipo ^ r/w ^ Rango de valores ^ Descripción ^
+| 200 | 1 | HR_int16_t | r/w | 0 - x | w 10 - ejecutar open() |
+|::: |::: |::: |::: |::: | w 11 - ejecutar close() |
+|::: |::: |::: |::: |::: | w 12 - ejecutar read() |
+|::: |::: |::: |::: |::: | w 13 - ejecutar write() |
+|::: |::: |::: |::: |::: | w 14 - ejecutar ioctl() |
+|::: |::: |::: |::: |::: | w 15 - ejecutar lseek() |
+|::: |::: |::: |::: |::: | r 0 - si la ejecución finalizó |
+|::: |::: |::: |::: |::: | r !=0 - si la ejecución no finalizó. El valor leído coincide con el la operación que se está ejecutando |
+
+==== Parámetros ====
+En este sector se encuentran diferentes parámetros que son utilizados por los comandos descriptos en el sector anterior.
+
+^ Inicio ^ Longitud ^ Tipo ^ r/w ^ Rango de valores ^ Descripción ^
+| 400 | 20 | HR_string | r/w | a-z A-Z 0-9 . : - _ / | parámetro **path** de la función open() |
+| 420 | 1 | HR_uint8_t | r/w | 0 - 0xFF | parámetro **oflag** de la función open() |
+| 421 | 2 | HR_int32_t | r | 0 - 0xFFFFFFFF | valor de **retorno** de las funciones open(), close(), ioctl() read(), write() |
+| 423 | 2 | HR_int32_t | r/w | 0 - 0xFFFFFFFF | parámetro **fildes** de las funciones close(), ioctl(), read() write() |
+| 425 | 2 | HR_int32_t | r/w | 0 - 0xFFFFFFFF | parámetro **request** de las funciones ioctl()|
+| 427 | 2 | HR_int32_t | r/w | 0 - 0xFFFFFFFF | parámetro **param** de las funciones ioctl()|
+| 429 | 2 | HR_int32_t | r/w | 0 - 0xFFFFFFFF | parámetro **nbyte** de las funciones read() y write()|
+| 431 | 2 | HR_int32_t | r/w | 0 - 0xFFFFFFFF | parámetro **offset** de la función ioctl()|
+| 433 | 2 | HR_uint8_t | r/w | 0 - 0xFF | parámetro **whence** de la función ioctl()|
+
+
+
+
+
+==== Intercambio de datos ====
+
+El área de intercambio de datos no es más que un buffer para leer y escribir datos. Este se utiliza en las operaciones read() y write().
+La longitud del buffer depende de la plataforma en la que se corra la aplicación, debido a la memoria disponible en el microcontrolador, por este motivo de debe leer la dirección 500 para conocer este valor y no superar el límite real del buffer.
+
+^ Inicio ^ Longitud ^ Tipo ^ r/w ^ Rango de valores ^ Descripción ^
+| 500 | 2 | HR_uint32_t | r | 0 - 0xFFFFFFFF | longitud del buffer utilizado en write() y read()|
+| 502 | depende del valor leído en la dirección 500 | HR_uint16_t | r/w | 0 - 0xFFFF | buffer para intercambio de datos. Utilizado como buffer en la funciones read() y write()|
+
+
+===== Casos de uso =====
+
+

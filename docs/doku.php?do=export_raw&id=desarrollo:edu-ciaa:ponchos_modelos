@@ -1,0 +1,71 @@
+=====Ponchos Modelo=====
+
+Se trata de un conjunto de Ponchos de diferentes tamaños que pueden usarse como [[Uso de Templates de Kicad|TEMPLATES de Kicad]], que utilizan bibliotecas que facilitan la creación de un Poncho y con textos instructivos que indican las acciones necesarias para documentar adecuadamente el diseño. 
+Estos ponchos están pensados para colocar SOBRE la EDU-CIAA, pero se pueden adaptar fácilmente para colocarlos debajo (chiripá), ya que son menores las restricciones porque no interesan las ubicaciones de leds y pulsadores. Ver el  [[nuevoponcho:​Ponchos Modelos| Formulario de requerimientos de los Ponchos Modelo]] para información sobre la motivación y aspectos del desarrollo de estos modelos.
+
+
+Para acceder a los Ponchos modelo ver dentro del directorio modelos del github de Ponchos:
+
+   git clone https://github.com/ciaa/Ponchos
+   cd ponchos/modelos
+   
+Los Ponchos modelos utilizan las Bibliotecas de Kicad que están en:
+
+  * **kicad/libPonchos:** Símbolos de utilidad para hacer un poncho nuevo, como por ejemplo logos y conector de poncho.
+  * **kicad/Poncho_Esqueleto.pretty:** Módulos de PCB (Footprints o huellas) de utilidad para hacer un poncho nuevo. Por ejemplo el conector de ponchos, plantillas para posicionar con respecto a la edu-ciaa, logos, etc.
+  * **kicad/libModelos:** Símbolos que se usaron en los modelos pero que son de propósitos generales.
+  * **kicad/Poncho_Modelos.pretty:** Módulos que se usaron en los modelos pero que son de propósitos generales.
+
+
+
+===Poncho Grande===
+
+{{ :desarrollo:edu-ciaa:pgrande3.png?direct&200|}}
+Es un poncho que utiliza los 4 agujeros de fijación y cubre la mayor parte de la EDU_CIAA. Posee simplemente un área de prototipado. Está ubicado en el siguiente directorio:
+  modelos/Poncho_Grande
+
+Para realizar el contorno y dejar los LEDS, pulsadores y reset descubiertos se utilizó la Plantilla kicad/Poncho_Esqueleto.pretty/Plantilla_EDU-CIAA.kicad_mod.
+
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+
+
+===Poncho Mediano===
+
+{{ :desarrollo:edu-ciaa:poncho_mediano.png?direct&300|}}
+Este template se puede tomar como base para crear un Poncho que utiliza ambos conectores, dos agujeros de la EDU-CIAA y dos agujeros adicionales para soporte. Se colocan agujeros adicionales para poder visualizar los LEDs de la EDU-CIAA.
+
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+
+Está ubicado en el siguiente directorio:
+  modelos/Poncho_Mediano
+
+===Poncho Chico===
+
+{{ :desarrollo:edu-ciaa:ponchof.png?direct&200|}}
+Es un poncho que utiliza ambos conectores de la EDU_CIAA pero no utiliza los agujeros de fijación. Posee simplemente un par de conectores. Utiliza en el esquemático un símbolo multiparte para el conector de expansión, el cual está organizado por funcionalidad. El diseño está ubicado en el siguiente directorio:
+  modelos/Poncho_Chico
+{{ :desarrollo:edu-ciaa:ponchob.png?direct&200|}}
+
+Para realizar el contorno y dejar los LEDS, pulsadores  descubiertos se utilizó la Plantilla kicad/Poncho_Esqueleto.pretty/Plantilla_EDU-CIAA.kicad_mod.
+
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+
+===Poncho Izquierdo===
+{{:desarrollo:edu-ciaa:poncho_izq.png?direct&300 |}}
+Este template se puede tomar como base para crear un Poncho que utiliza solo el conector izquierdo (P2) de la EDU-CIAA para sujeción. Se colocan agujeros para visualizar los LEDs que estan debajo en la EDU-CIAA.
+
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+
+Está ubicado en el siguiente directorio:
+  modelos/Poncho_Izquierdo
+
+===Poncho Derecho===
+
+{{ :desarrollo:edu-ciaa:poncho_der.png?direct&300|}}
+Este template se puede tomar como base para crear un Poncho que utiliza solo el conector derecho (P1) de la EDU-CIAA para sujeción. Se colocan agujeros para visualizar los LEDs que estan debajo en la EDU-CIAA.
+
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+
+Está ubicado en el siguiente directorio:
+  modelos/Poncho_Derecho
+

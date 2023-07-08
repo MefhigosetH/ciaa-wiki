@@ -1,0 +1,35 @@
+====== Soporte Leds: Clase LED ======
+
+
+La clase LED permite la creación de objetos que representan los LEDs que posee la placa.
+
+==== Constructor ====
+
+La clase posee un constructor que recibe un solo argumento, este argumento es el número de LED que controlará.
+
+Números de leds disponibles: de 1 a 6:
+  * 1: Led 1
+  * 2: Led 2
+  * 3: Led 3
+  * 4: Led RGB (Red)
+  * 5: Led RGB (Green)
+  * 6: Led RGB (Blue)
+
+
+==== Métodos ====
+
+  * on(): Enciende el LED
+  * off(): Apaga el LED
+  * toggle(): Invierte el estado del LED
+  * value(): Devuelve el estado del LED (True o False)
+  * intensity(value): Solo válido para los 3 leds RGB. Recibe como argumento un número de 0 a 15 y configura la intensidad de brillo del LED. Esto permitirá formar diferentes colores.
+
+==== Ejemplo Blinky ====
+
+  import pyb
+  led1 = pyb.LED(1)
+  while True:
+      led1.on()
+      pyb.delay(1000)
+      led1.off()
+      pyb.delay(1000)  

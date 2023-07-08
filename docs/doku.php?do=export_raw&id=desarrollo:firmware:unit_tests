@@ -1,0 +1,157 @@
+====== Unit Tests o Pruebas Unitarias ======
+
+Esta página explica la estrategia de prueba (testing) de Unit Testing del firmware de la CIAA.
+
+La finalidad de los Unit Tests es que el programador pueda verificar de forma sencilla las funciones que acaba de programar. Hasta se puede hacer la práctica interesante de primero escribir los Unit Tests y luego la funcionalidad.
+
+Por cada archivo C se desean testear todas las funciones **externas** con Unit Tests, no las funciones **internas** (las cuales son definidas con el prefijo static). Las funciones internas, de existir, deben ser testeadas de forma indirecta utilizando las funciones externas.
+
+Puede encontrar más información sobre [[wpes>Prueba_unitaria|Unit Testing]] en Wikipedia.
+
+===== Cómo testear =====
+
+Cada Módulo de ciaaFirmware contiene un directorio llamado **tst**, en este se encuentran los unit tests. Por cada archivo C hay un archivo con el mismo nombre del archivo .c a testear y el prefijo **tst_**.
+
+Como herramienta de ayuda para testear se va a utilizar [[http://www.throwtheswitch.org/ceedling|Ceedling]].
+
+==== Un ejemplo ====
+
+Por ejemplo si implementamos una función que suma dos números de 16 bits y retorna un número de 16 bits todos con signo y no sabemos si estamos en una arquitectura de 16 o 32 bits implementamos la siguiente función:
+
+<code c>
+int16_t sum16bits(int16_t const a, int16_t const b) {
+   int16_t ret;
+   if (((int32_t)((int32_t)a+(int32_t)b)) > (int32_t)INT16_MAX) {
+      ret = INT16_MAX;
+   } else if (((int32_t)((int32_t)a+(int32_t)b)) < (int32_t)INT16_MIN) {
+      ret = INT16_MIN;
+   } else {
+     ret = a + b;
+   }
+   
+   return ret;
+}
+</code>
+
+La función se encuentra por ejemplo en un archivo sum.c. En el subdirectorio tst creamos un archivo llamado tst_sum.c. El mismo contiene un código similar al anterior y tiene como finalidad probar la función que acabamos de escribir:
+
+<code c>
+tst_sumNormal() {
+   int16_t ret;
+   ret = sum16bits(-10, -20);
+   TEST_ASSERT_EQUAL_INT(-30, ret);
+}
+
+tst_sumOverflow() {
+   int16_t ret;
+   ret = sum16bits(20000, 25000);
+   TEST_ASSERT_EQUAL_INT(INT16_MAX, ret);
+}
+
+tst_sumUnderflow() {
+   int16_t ret;
+   ret = sum16bits(-10000, -30000);
+   TEST_ASSERT_EQUAL_INT(INT16_MIN, ret);
+}
+</code>
+
+En este ejemplo tenemos una función sum16bits que tiene 3 paths (caminos) y en cada test testeamos uno. El resultado es que no probamos todas las opciones posibles (no testeamos por ejemplo si 4 + 2 = 6), pero al menos todos las declaraciones y sentencias del C. Esto es denominado 100% statement coverage. La meta es lograr al menos 100% statement coverage en los Unit Tests de ciaa Firmware.
+
+Si a alguien le interesó el tema y quiere investigar más, statement coverage es de los coverages más sencillos, para los sistemas críticos se suele utilizar:
+[[wp>Modified_condition/decision_coverage|MC/DC]] (Modified condition/decision coverage).
+
+=== Corriendo los Unit Tests ===
+
+Para ejecutar todos los unit test de un módulo por ejemplo posix se puede ejecutar:
+
+<code>
+make tst_posix
+</code>
+
+Para ejecutar solo un unit test, por ejemplo para ciaaDevieces.c se puede ejecutar:
+
+<code>
+make tst_posix_ciaaDevices
+</code>
+
+Recuerde que antes de correr los unit test se deben generar los mocks con
+
+<code>
+make mocks
+</code>
+
+===== Mocks =====
+
+Ahora, la función que acabamos de testear es muy sencilla, no llama a ninguna función. O sea, se puede probar independientemente de cualquier otro código. Es más la excepción que la regla.
+
+Un archivo C casi siempre tiene interfaces (funciones) que utiliza de otros archivos .c. Como la idea no es testear todo el software sino el software de un solo archivo, todas las funciones de otros archivos se van a Mockear (Simular) ([[wpes>Objeto_simulado|Mock en Wikipedia]]).
+
+Por ejemplo si implementamos y queremos testear la función ciaaPOSIX_open:
+
+<code c>
+extern ciaaPOSIX_open(...)
+{
+
+   /* code */
+   ciaaDevices_getDevice(...);
+}
+</code>
+
+Como podemos ver la función llama a ciaaDevices_getDevice() que no la implementamos en este archivo (unidad) y por ende no la queremos testear (al menos no ahora). Por ello lo que hacemos es hacer un Mock. La herramienta que se decidió utilizar en ciaaFirmware para hacer los Mocks y testear es [[http://throwtheswitch.org/white-papers/ceedling-intro.html|Ceedling]].
+
+Ceedling va a crear para cada función que llamamos un Mock, por ejemplo para la siguiente función:
+
+<code c>
+uint8_t ciaaDevices_getDevice(char * name);
+</code>
+
+el Mock que va a crear serían 3 funciones (en realidad crea más, pero para simplificar el ejemplo):
+
+<code c>
+int8_t ciaaDevices_getDevice(char * name);
+void ciaaDevices_getDevice_ExpectAndReturn(char* name, int8_t toReturn);
+void ciaaDevices_getDevice_IgnoreAndReturn(int8_t toReturn);
+</code>
+
+De esta forma cuando testeamos ciaaPOSIX_open() y esta llama a ciaaDevices_getDevice(), no llama realmente a la función ciaaDevices_getDevice() sino a nuestro Mock. Desde nuestro Mock podemos retornar cualquier error que queramos para poder ver como reacciona nuestra función a todo tipo de estímulo.
+
+==== Ejemplo utilizando Mocks ====
+
+Por ejemplo podríamos hacer el siguiente test en un archivo tst/tst_ciaaPOSIX_stdio:
+
+<code c>
+tst_ciaaPOSIX_openInvalidDevice() {
+   /* indicamos que cuando alguien llame a
+      ciaaDevices_getDevice la funcion retorne -1 */
+   /* además verificamos que se llamo con el parametro
+      /test/device1 como nosotros llamamos a open */
+   ciaaDevices_getDevice_ExpectAndReturn("/test/device1",-1);
+   
+   /* si ciaaDevices_getDevice no encuentra el device
+      retorna -1 y por ende tambien lo hace nuestra funcion */
+   TEST_ASSERT_EQUAL_INT(ciaaPOSIX_open("/test/device1"),-1);
+}
+
+tst_ciaaPOSIX_openCorrectDevice() {
+   /* indicamos que cuando alguien llame a
+      ciaaDevices_getDevice la funcion retorne 1 */
+   /* además verificamos que se llamo con el parametro
+      /test/device2 como nosotros llamamos a open */
+   ciaaDevices_getDevice_ExpectAndReturn("/test/device2", 1);
+   
+   /* si ciaaDevices_getDevice encuentra el device
+      esperamos un file handler valido */
+   TEST_ASSERT_TRUE(ciaaPOSIX_open("/test/device2")>0);
+}
+</code>
+
+Como se puede observar, gracias al Mock, podemos testear nuestra funcionalidad, abstrayendo todo el resto del software. Así podemos simular de forma muy sencilla situaciones que serían mucho más complejas de simular en una situación real.
+
+==== Creando los Mocks ====
+
+Para crear los mocks de todos los archivos el Makefile va a buscar todos los archivos .h y generar por cada uno un mock. Esto se realiza con el siguiente comando:
+
+<code>
+make mocks
+</code>
+

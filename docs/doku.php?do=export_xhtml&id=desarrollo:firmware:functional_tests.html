@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:functional_tests</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,functional_tests"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:functional_tests&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:functional_tests.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:functional_tests"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:functional_tests.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:functional_tests","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="functional_tests_o_pruebas_funcionales">Functional Tests (o Pruebas Funcionales)</h2>
+<div class="level2">
+<p class="divalign-justify">A diferencia de los <a href="./doku.php%3Fid=desarrollo:firmware:unit_tests.html" class="wikilink1" title="desarrollo:firmware:unit_tests" data-wiki-id="desarrollo:firmware:unit_tests">Unit Tests (o Pruebas Unitarias)</a> los test Funcionales corren en el Hardware y son llevados a cabo desde una computadora (de ahora en mas <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests:testmaster.html" class="wikilink2" title="desarrollo:firmware:functional_tests:testmaster" rel="nofollow" data-wiki-id="desarrollo:firmware:functional_tests:testmaster">testmaster</a>) desde la que se estimula y se testea el ciaaFirmware corriendo en el HW. La finalidad de los Test Funcionales son validar la integración y los requerimientos del ciaaFirmware en su conjunto.</p><!--divalign-->
+<p class="divalign-justify">Para poder realizar la estimulación, el HW corre un ciaaFirmware con una aplicación especificada denominada <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests:testslave.html" class="wikilink1" title="desarrollo:firmware:functional_tests:testslave" data-wiki-id="desarrollo:firmware:functional_tests:testslave">testslave</a>. Esta aplicación recibe los comandos enviados desde el <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests:testmaster.html" class="wikilink2" title="desarrollo:firmware:functional_tests:testmaster" rel="nofollow" data-wiki-id="desarrollo:firmware:functional_tests:testmaster">testmaster</a> (computadora) y realiza operaciones definidas.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Functional Tests (o Pruebas Funcionales)&quot;,&quot;hid&quot;:&quot;functional_tests_o_pruebas_funcionales&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-837&quot;} -->
+<h3 class="sectionedit2" id="configuracion_de_testeo">Configuración de testeo</h3>
+<div class="level3">
+
+<p>
+La siguiente figura muestra la configuración utilizada para testear el ciaaFirmware.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:functional_tests&amp;media=desarrollo:firmware:test_funcional_y_de_integracion.png.html" class="media" title="desarrollo:firmware:test_funcional_y_de_integracion.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:test_funcional_y_de_integracion.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+lo que en la realidad se ve similar a:
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:20140805_120331.jpg" class="media" title="desarrollo:firmware:20140805_120331.jpg"><img src="lib/exe/fetch.php%3Fw=600&amp;tok=ef330f&amp;media=desarrollo:firmware:20140805_120331.jpg" class="media" loading="lazy" alt="" width="600" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de testeo&quot;,&quot;hid&quot;:&quot;configuracion_de_testeo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;838-1079&quot;} -->
+<h3 class="sectionedit3" id="testeando_un_puerto">Testeando un Puerto</h3>
+<div class="level3">
+<p class="divalign-justify">Por ejemplo, desde el testmaster pedimos que el HW abra o cierre un relé. El testmaster envía por MODBUS un comando para la testslave. La testslave recibe este pedido y lo lleva a cabo, en este caso cerrar o abrir el relé. Desde el testmaster se puede confirmar mediante una <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests:placa_i_o.html" class="wikilink2" title="desarrollo:firmware:functional_tests:placa_i_o" rel="nofollow" data-wiki-id="desarrollo:firmware:functional_tests:placa_i_o">placa I/O</a> si la operación fue llevada a cabo de forma correcta.</p><!--divalign-->
+
+<p>
+Las pruebas funcionales a la versión liberada (release 0.2.0) se están realizando sobre el banco de prueba que se muestra en la siguiente imagen:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:functional_tests&amp;media=desarrollo:firmware:bancopruebasfuncionales.jpg.html" class="media" title="desarrollo:firmware:bancopruebasfuncionales.jpg"><img src="lib/exe/fetch.php%3Fw=600&amp;tok=8ae05d&amp;media=desarrollo:firmware:bancopruebasfuncionales.jpg" class="media" loading="lazy" alt="" width="600" /></a>
+</p>
+
+<p>
+La aplicación que corre en PC (Test Application) va enviando distintos comandos a la CIAA utilizando el protocolo MODBUS, y obtiene el resultado de la acción solicitada leyendo por línea serie la información desde la IO Board.
+Con esta aplicación se prevé hacer distintas pruebas funcionales, como ser:
+</p>
+<ul>
+<li class="level1"><div class="li"> Acciones previstas</div>
+</li>
+<li class="level1"><div class="li"> Solicitudes erróneas</div>
+</li>
+<li class="level1"><div class="li"> Mediciones de velocidad de respuesta, carga aceptable, etc.</div>
+</li>
+</ul>
+
+<p>
+Toda esta información se guarda en archivo para su posterior análisis
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Testeando un Puerto&quot;,&quot;hid&quot;:&quot;testeando_un_puerto&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1080-&quot;} --></div>
+</body>
+</html>

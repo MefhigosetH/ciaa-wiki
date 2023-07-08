@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:ciaa_nxp:validacion</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,ciaa_nxp,validacion"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:ciaa_nxp:validacion&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware:ciaa_nxp"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:ciaa_nxp:validacion.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:ciaa_nxp:validacion"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:ciaa_nxp:validacion.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware:ciaa_nxp';var JSINFO = {"id":"desarrollo:hardware:ciaa_nxp:validacion","namespace":"desarrollo:hardware:ciaa_nxp","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+
+
+<h1 class="sectionedit1" id="validacion_de_la_ciaa-nxp">Validación de la CIAA-NXP</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Validaci\u00f3n de la CIAA-NXP&quot;,&quot;hid&quot;:&quot;validacion_de_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;11-52&quot;} -->
+<h2 class="sectionedit2" id="tablero_de_ensayos">Tablero de ensayos</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa_nxp:test-ciaa-nxp.png" class="media" title="desarrollo:hardware:ciaa_nxp:test-ciaa-nxp.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa_nxp:test-ciaa-nxp.png" class="mediacenter" loading="lazy" alt="" /></a>
+Se conecta la CIAA en un tablero eléctrico alimentándola con una fuente switching de 24Vdc 35W y se conectan diferentes cargas en las salidas de la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tablero de ensayos&quot;,&quot;hid&quot;:&quot;tablero_de_ensayos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;53-304&quot;} -->
+<h3 class="sectionedit3" id="cargas_inductivas_de_24vdc_en_las_salidas_a_rele">Cargas inductivas de 24Vdc en las salidas a relé</h3>
+<div class="level3">
+
+<p>
+Se procedió a conectar 4 relés de 24Vdc 200mW con diodo de protección incorporado en las cuatro salidas a relé de la CIAA. El ensayo consistió en activar y desactivar cada relé con períodos diferentes (800ms, 900ms, 1000ms y 1100ms respectivamente) mientras se verifica el correcto funcionamiento de una conexión TCP al puerto 7 (echo).
+Para determinar que el ensayo fue satisfactorio, se corrió durante 8 horas verificando el correcto funcionamiento.
+A continuación se puede ver el esquema de conexión del ensayo:
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:ciaa_nxp:validacion&amp;media=desarrollo:hardware:ciaa_nxp:reles24v.png.html" class="media" title="desarrollo:hardware:ciaa_nxp:reles24v.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=c54a61&amp;media=desarrollo:hardware:ciaa_nxp:reles24v.png" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Cargas inductivas de 24Vdc en las salidas a rel\u00e9&quot;,&quot;hid&quot;:&quot;cargas_inductivas_de_24vdc_en_las_salidas_a_rele&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;305-915&quot;} -->
+<h3 class="sectionedit4" id="cargas_inductivas_de_220vac_en_las_salidas_a_rele">Cargas inductivas de 220Vac en las salidas a relé</h3>
+<div class="level3">
+
+<p>
+Se procedió a conectar 4 relés de 220Vac 900mW con filtro RC en las cuatro salidas a relé de la CIAA. El ensayo consistió en activar y desactivar cada relé con períodos diferentes (800ms, 900ms, 1000ms y 1100ms respectivamente) mientras se verifica el correcto funcionamiento de una conexión TCP al puerto 7 (echo).
+Para determinar que el ensayo fue satisfactorio, se corrió durante 8 horas verificando el correcto funcionamiento.
+El filtro RC está construido con un capacitor poliéster de 1uF 400V en serie con una resistencia de carbón de 47 ohm 2W.
+A continuación se puede ver el esquema de conexión del ensayo:
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:ciaa_nxp:validacion&amp;media=desarrollo:hardware:ciaa_nxp:reles220v.png.html" class="media" title="desarrollo:hardware:ciaa_nxp:reles220v.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=98a51b&amp;media=desarrollo:hardware:ciaa_nxp:reles220v.png" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+<strong>Importante:</strong> Este es un ensayo de stress. Por cuestiones de seguridad no se deben conectar cargas cuya alimentación supere los 24V en esta versión de hardware.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Cargas inductivas de 220Vac en las salidas a rel\u00e9&quot;,&quot;hid&quot;:&quot;cargas_inductivas_de_220vac_en_las_salidas_a_rele&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;916-&quot;} --></div>
+</body>
+</html>

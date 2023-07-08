@@ -1,0 +1,46 @@
+====== Debug con Windows ======
+===== Debug Configuration =====
+###
+Tanto el entorno CIAA-IDE como el Firmware, esta preparado para iniciar los primeros pasos sin necesidad de tener la placa EDU-CIAA, o con la posibilidad de hacer debug del software desarrollado, sin ésta.
+Para que el Win Debug funcione es necesario realizar la siguiente configuración. En principio debemos decirle al IDE donde se encuentra el ejecutable que genera el Makefile nuestro. Para esto Hacemos Click derecho sobre el proyecto 'Debug As⇒Debug Configurations ...'.
+###
+
+{{:docu:fw:bm:ide:configdebug.png|}}
+
+###
+El .exe que genera el makefile queda almacenado en la carpeta c:\CIAA\Firmware\out\bin\
+###
+
+{{ :docu:fw:bm:ide:path_to_exe.png |}}
+
+###
+Aplicamos los cambios y presionamos en **Debug**.
+###
+\\
+===== Posibles Errores =====
+###
+Es posible que el IDE nos informe que no puede encontrar el Código Fuente, para solucionar esto es necesario crear un Path Mapping que convierta el estilo de Path de CygWin al formato Windows.
+###
+
+{{:docu:fw:bm:ide:errorpathmapping.png|}}
+
+===== Agregando Path Mapping =====
+
+###
+Seleccionamos en **Edit Source Look Up Path** donde esta el error y luego en la ventana emergente **Add**
+###
+{{:docu:fw:bm:ide:lookuppathadd.png|}}
+###
+Seleccionamos **Path Mapping** y **Ok**. Se abrirá una nueva ventana donde deberemos mapear el directorio.
+###
+{{:docu:fw:bm:ide:pathmapping.png|}}
+###
+Colocamos las dos formas del Path y un nombre
+###
+{{:docu:fw:bm:ide:pathmappingname.png|}}
+###
+Finalmente, si volvemos a compilar y hacer Debug, podremos hacerlo sin ningún inconveniente.
+###
+{{:docu:fw:bm:ide:debugokwin.png|}}
+
+<- docu:fw:bm:ide:ide_primeros_pasos|Primeros Pasos ^ docu:fw:bm:ide|IDE ^ docu:fw:bm:ide:ide_edu_ciaa_debug|Debug con la placa EDU-CIAA y el Entorno IDE ->

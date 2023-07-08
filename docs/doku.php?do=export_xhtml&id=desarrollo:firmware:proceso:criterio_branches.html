@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:proceso:criterio_branches</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,proceso,criterio_branches"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:proceso:criterio_branches&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware:proceso"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:proceso:criterio_branches"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:proceso:criterio_branches.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware:proceso';var JSINFO = {"id":"desarrollo:firmware:proceso:criterio_branches","namespace":"desarrollo:firmware:proceso","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#criterio_para_manejo_de_branches">Criterio para manejo de branches</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#branch_master">Branch master</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#branch_para_desarrollar_nuevas_funcionalidades">Branch para desarrollar nuevas funcionalidades</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#branch_para_releases">Branch para releases</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#branch_para_mejoras_en_codigo">Branch para mejoras en código</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso:criterio_branches.html#branch_para_agregar_nuevas_herramientas">Branch para agregar nuevas herramientas</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="criterio_para_manejo_de_branches">Criterio para manejo de branches</h1>
+<div class="level1">
+
+<p>
+En el Firmware de la CIAA tenemos un branch llamado master y diferentes branches para desarrollar nuevas funcionalidad, mantener releases, etc. El criterio se describe a continuación:
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Criterio para manejo de branches&quot;,&quot;hid&quot;:&quot;criterio_para_manejo_de_branches&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-234&quot;} -->
+<h2 class="sectionedit2" id="branch_master">Branch master</h2>
+<div class="level2">
+
+<p>
+Este es el branch principal, siempre se trata de que en este branch, el código compile y todos los test corran correctamente.
+Podemos hacer commits a este branch si se cumplen las siguientes condiciones:
+</p>
+<ul>
+<li class="level1"><div class="li"> se va a desarrollar una funcionalidad y es seguro que se termina de implementar antes de la siguiente release, y</div>
+</li>
+<li class="level1"><div class="li"> es seguro que no afecta a otros desarrolladores</div>
+</li>
+</ul>
+
+<p>
+En caso de que alguna de estas condiciones no se cumpla se debe trabajar en un branch.
+</p>
+<div class="plugin_note notetip">Este criterio aplica tanto para el repositorio de Firmware como para cualquiera de los submódulos. Y debe respetarse el mismo nombre de branch para todos los repositorios en donde se hagan los commits.
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Branch master&quot;,&quot;hid&quot;:&quot;branch_master&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;235-943&quot;} -->
+<h2 class="sectionedit3" id="branch_para_desarrollar_nuevas_funcionalidades">Branch para desarrollar nuevas funcionalidades</h2>
+<div class="level2">
+
+<p>
+En caso de tener que trabajar en un branch para desarrollar una nueva funcionalidad, debemos nombrar al mismo con el siguiente formato:
+</p>
+<pre class="code">feature/&lt;nombreDeNuevaFunc&gt;</pre>
+
+<p>
+Por ejemplo:
+</p>
+<pre class="code">feature/i2c
+feature/oilx
+feature/xxx</pre>
+
+<p>
+Una vez finalizo el desarrollo, se realiza el pull request en github para efectuar un review antes del merge al master.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Branch para desarrollar nuevas funcionalidades&quot;,&quot;hid&quot;:&quot;branch_para_desarrollar_nuevas_funcionalidades&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;944-1367&quot;} -->
+<h2 class="sectionedit4" id="branch_para_releases">Branch para releases</h2>
+<div class="level2">
+
+<p>
+Cada vez que se realiza una release cuyo último dígito es cero, se coloca el tag correspondiente en el branch master, por ejemplo: 0.6.0.
+En caso de encontrar un error se debe crear un branch para realizar las correcciones necesarias y poder hacer la release correspondiente, por ejemplo 0.6.1.
+El nombre debe tener el formato:
+</p>
+<pre class="code">release/&lt;a.b.x&gt;</pre>
+
+<p>
+Por ejemplo:
+</p>
+<pre class="code">release/0.5.x
+release/0.6.x</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Branch para releases&quot;,&quot;hid&quot;:&quot;branch_para_releases&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:4,&quot;range&quot;:&quot;1368-1818&quot;} -->
+<h2 class="sectionedit5" id="branch_para_mejoras_en_codigo">Branch para mejoras en código</h2>
+<div class="level2">
+
+<p>
+Estos branch se crean para mejorar el código ya implementado. No deben agregar ni quitar funcionalidades.
+El nombre debe tener el formato:
+</p>
+<pre class="code">improvement/&lt;name&gt;</pre>
+
+<p>
+Por ejemplo:
+</p>
+<pre class="code">improvement/nxp_dio</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Branch para mejoras en c\u00f3digo&quot;,&quot;hid&quot;:&quot;branch_para_mejoras_en_codigo&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:5,&quot;range&quot;:&quot;1819-2084&quot;} -->
+<h2 class="sectionedit6" id="branch_para_agregar_nuevas_herramientas">Branch para agregar nuevas herramientas</h2>
+<div class="level2">
+
+<p>
+Son branches de funcionalidades nuevas o similar donde se agregan nuevas herramientas.
+El nombre debe tener el formato:
+</p>
+<pre class="code">tool/&lt;nombreDeTool&gt;</pre>
+
+<p>
+Por ejemplo:
+</p>
+<pre class="code">tool/coverity_scan
+tool/splint</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Branch para agregar nuevas herramientas&quot;,&quot;hid&quot;:&quot;branch_para_agregar_nuevas_herramientas&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:6,&quot;range&quot;:&quot;2085-&quot;} --></div>
+</body>
+</html>

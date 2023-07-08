@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,especificaciones_y_recomendaciones_para_desarrollar_un_pocho"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa';var JSINFO = {"id":"desarrollo:edu-ciaa:especificaciones_y_recomendaciones_para_desarrollar_un_pocho","namespace":"desarrollo:edu-ciaa","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="especificaciones_y_recomendaciones_para_desarrollar_un_pocho">Especificaciones y recomendaciones para desarrollar un Pocho</h2>
+<div class="level2">
+
+<p>
+Se documenta aquí toda la información necesaria para desarrollar un nuevo Poncho.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Especificaciones y recomendaciones para desarrollar un Pocho&quot;,&quot;hid&quot;:&quot;especificaciones_y_recomendaciones_para_desarrollar_un_pocho&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-157&quot;} -->
+<h3 class="sectionedit2" id="conectores">Conectores</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Las EDU-CIAA utiliza dos conectores de 20&times;2 , con un paso 100 mils (2,54mm).</div>
+</li>
+<li class="level1"><div class="li"> En la EDU-CIAA se recomienda soldar el conector hembra, vertical.</div>
+</li>
+<li class="level1"><div class="li"> En los ponchos se recomienda soldar los pines machos.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conectores&quot;,&quot;hid&quot;:&quot;conectores&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;158-386&quot;} -->
+<h3 class="sectionedit3" id="identificacion_de_conectores">Identificación de conectores</h3>
+<div class="level3">
+
+<p>
+Las EDU-CIAA poseen dos conectores de expansión denominados P1 y P2.
+</p>
+<div class="table sectionedit4"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="6">  P1  </th>
+	</tr>
+	<tr class="row1">
+		<th class="col0">Pin EDU-CIAA</th><th class="col1">Nombre Largo</th><th class="col2">N. Corto</th><th class="col3"> Pin Poncho</th><th class="col4">Tipo de Pin</th><th class="col5">Descripción</th>
+	</tr>
+	</thead>
+	<tr class="row2">
+		<td class="col0 leftalign"> 1          </td><td class="col1 leftalign">RESET       </td><td class="col2 centeralign">  RST   </td><td class="col3 centeralign">  1        </td><td class="col4 leftalign">INPUT       </td><td class="col5"> Es el reset del microprocesador, se activa conectándolo a tierra.</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 2          </td><td class="col1 leftalign"> +5V    </td><td class="col2 centeralign">  +5V     </td><td class="col3 centeralign">  2        </td><td class="col4 leftalign"> Power out    </td><td class="col5"> Son los 5V internos de la CIAA.</td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> 3          </td><td class="col1 leftalign">ISP       </td><td class="col2 centeralign">  ISP   </td><td class="col3 centeralign">  3        </td><td class="col4 leftalign">INPUT       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> 4          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign"> GND    </td><td class="col3 centeralign">  4        </td><td class="col4 leftalign"> Power out  </td><td class="col5"> Tierra digital. </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> 5          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  5        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> 6          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  6        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> 7          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  7        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> 8          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  8        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> 9          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  9        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> 10          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  10        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> 11          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  11        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> 12          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  12        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"> 13         </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  13        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"> 14          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  14        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 leftalign"> 15          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  15        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> 16          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  16        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0 leftalign"> 17          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  17        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0 leftalign"> 18          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  18        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"> 19          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  19        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign"> 20          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  20        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0 leftalign"> 21          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  21        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0 leftalign"> 22          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  22        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0 leftalign"> 23          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  23        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0 leftalign"> 24          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  24        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row26">
+		<td class="col0 leftalign"> 25          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  25        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row27">
+		<td class="col0 leftalign"> 26          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  26        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row28">
+		<td class="col0 leftalign"> 27          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  27        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row29">
+		<td class="col0 leftalign"> 28          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  28        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row30">
+		<td class="col0 leftalign"> 29          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  29        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row31">
+		<td class="col0 leftalign"> 30          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  30        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row32">
+		<td class="col0 leftalign"> 31          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  31        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row33">
+		<td class="col0 leftalign"> 32          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  32        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row34">
+		<td class="col0 leftalign"> 33         </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  33        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row35">
+		<td class="col0 leftalign"> 34         </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  34        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row36">
+		<td class="col0 leftalign"> 35          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  35        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row37">
+		<td class="col0 leftalign"> 36          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  36        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row38">
+		<td class="col0 leftalign"> 37          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  37        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row39">
+		<td class="col0 leftalign"> 38          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  38        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row40">
+		<td class="col0 leftalign"> 39          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  39        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row41">
+		<td class="col0 leftalign"> 40          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  40        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:4,&quot;range&quot;:&quot;496-3059&quot;} --><div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="6">  P2  </th>
+	</tr>
+	<tr class="row1">
+		<th class="col0">Pin EDU-CIAA</th><th class="col1">Nombre Largo</th><th class="col2">N. Corto</th><th class="col3"> Pin Poncho</th><th class="col4">Tipo de Pin</th><th class="col5">Descripción</th>
+	</tr>
+	</thead>
+	<tr class="row2">
+		<td class="col0 leftalign"> 1          </td><td class="col1 leftalign">+3.3V       </td><td class="col2 centeralign">  3.3   </td><td class="col3 centeralign">  41        </td><td class="col4 leftalign">Power out  </td><td class="col5"> Son los 3.3V internos de la CIAA.</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 2          </td><td class="col1 leftalign">+5V         </td><td class="col2 centeralign">  +5V   </td><td class="col3 centeralign">  42        </td><td class="col4 leftalign">Power out    </td><td class="col5"> Son los 5V internos de la CIAA. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> 3          </td><td class="col1 leftalign">GPIO_GND    </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  43        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> 4          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  44        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> 5          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  45        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> 6          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  46        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> 7          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  47        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> 8          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  48        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> 9          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  49        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> 10          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  50        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> 11          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  51        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> 12          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  52        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"> 13          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  53        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"> 14          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  54        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 leftalign"> 15          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  55        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> 16          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  56        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0 leftalign"> 17          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  57        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0 leftalign"> 18          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  58        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"> 19          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  59        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign"> 20          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  60        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0 leftalign"> 21          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  61        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0 leftalign"> 22          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  62        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0 leftalign"> 23          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  63        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0 leftalign"> 24          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  64        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row26">
+		<td class="col0 leftalign"> 25          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  65        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row27">
+		<td class="col0 leftalign"> 26          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  66        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row28">
+		<td class="col0 leftalign"> 27          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  67        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row29">
+		<td class="col0 leftalign"> 28          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  68        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row30">
+		<td class="col0 leftalign"> 29          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  69        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row31">
+		<td class="col0 leftalign"> 30          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  70        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row32">
+		<td class="col0 leftalign"> 31          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  71        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row33">
+		<td class="col0 leftalign"> 32          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  72        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row34">
+		<td class="col0 leftalign"> 33          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  73        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row35">
+		<td class="col0 leftalign"> 34          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  74        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row36">
+		<td class="col0 leftalign"> 35          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  75        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row37">
+		<td class="col0 leftalign"> 36          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  76        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row38">
+		<td class="col0 leftalign"> 37          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  77        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row39">
+		<td class="col0 leftalign"> 38          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  78        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row40">
+		<td class="col0 leftalign"> 39          </td><td class="col1 leftalign">GPIO_GND  </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  79        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+	<tr class="row41">
+		<td class="col0 leftalign"> 40          </td><td class="col1 leftalign">          </td><td class="col2 leftalign">        </td><td class="col3 centeralign">  80        </td><td class="col4 leftalign">       </td><td class="col5"> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:5,&quot;range&quot;:&quot;3062-5581&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Identificaci\u00f3n de conectores&quot;,&quot;hid&quot;:&quot;identificacion_de_conectores&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;387-&quot;} --></div>
+</body>
+</html>

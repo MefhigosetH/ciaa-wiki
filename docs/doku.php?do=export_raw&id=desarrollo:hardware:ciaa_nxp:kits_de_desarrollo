@@ -1,0 +1,29 @@
+====== Kits de desarrollo de la CIAA-NXP ======
+
+A continuación encontrarás información sobre los kits de desarrollo que se usaron para diseñar el esquemático de la CIAA-NXP y hacer las primeras pruebas de firmware.
+
+  - [[http://shop.ngxtechnologies.com/product_info.php?products_id=104|NGX Xplorer - LPC4337]] ([[http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&KeyWords=om13027|DK]], [[http://ar.mouser.com/ProductDetail/NXP/OM13027598/?qs=%2fha2pyFaduiDT%2fwPe9SvTdy4EQe6fW%252bsCeqnj9QD7hw%3d|Mouser]]) aprox. US$76.-
+{{ desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio:xplorer.png |NGX Xplorer}}
+Hoy en día este kit se envía con un LPC4337, el mismo microcontrolador de la CIAA-NXP, aunque en la CIAA utiliza el LQFP144 y este kit trae el BGA100. El mismo tiene un pinout similar a los kits [[http://www.lpcware.com/lpcxpresso|LPCXpresso]], y es compatible con el IDE del mismo nombre.
+Tiene en común con la CIAA:
+  * La interfaz Ethernet.
+  * La memoria Flash qSPI.
+  * Las interfaces USB.
+No posee ninguna de las interfaces o I/O industriales que tiene la CIAA.
+  - [[http://www.hitex.com/index.php?id=3212|Hitex LPC4300 Evaluation Board]] ([[http://www.digikey.com/product-detail/es/OM13031,598/568-8537-ND/2790698|DK]], [[http://ar.mouser.com/ProductDetail/NXP-Semiconductors/OM13031598/?qs=v3HA%252bRzKb3enYSyiZdfWRA==|Mouser]]) aprox. US$340.-
+{{ desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio:hitex.png |Hitex LPC4300 Evaluation Board}}
+Tiene un LPC4350, "hermano mayor" del LPC4337. Tienen periféricos similares, pero el 4350 tiene controlador LCD (noten el conector HDMI en la esquina superior derecha). El código escrito para el LPC4350 tiene que asegurar el uso de los periféricos disponibles en el LPC4337. El 4350 tampoco tiene flash interna, por eso la placa trae varias flash externas.
+Tiene en común con la CIAA:
+  * Memoria SDRAM.
+  * Memoria Flash qSPI.
+  * Interfaces USB.
+  * Interfaz CAN.
+  * Interfaz RS232.
+No posee ninguna de las interfaces o I/O industriales que tiene la CIAA.\\
+\\
+Las pruebas de firmware se vienen haciendo con el IDE LPCXpresso. Hay ejemplos de código para ambos kits en sus respectivos sitios web citados arriba. Para poder conectarse a estos microcontroladores con LPCXpresso, es necesario un LPC-Link. Pueden obtenerse de un stick LPCXpresso o se puede comprar el [[http://www.nxp.com/demoboard/OM13054.html|LPC-Link 2]] ([[http://www.digikey.com/product-detail/en/OM13054,598/568-10930-ND/4437858|DK]], [[http://ar.mouser.com/ProductDetail/NXP/OM13054UL/?qs=%2fha2pyFadugsYeIIMLWEtcqcKDoSG9Se3woOQ%2fdBD0E%3d|Mouser]]) aprox. US$20.-
+{{ desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio:link2.png |LPC-Link 2}}
+
+La ventaja de comprar un LPC-Link 2 es que, a diferencia del LPC-Link integrado a los sticks, es dual-protocol (SWD y JTAG). Conectándose al LPC43xx vía JTAG, se puede debugguear ambos cores (M4 y M0) en simultáneo, porque ambos están en la misma cadena JTAG. En cambio, si se usa SWD, solo puede conectarse al M4 directamente. Sería posible debugguear al M0 en forma indirecta, por ejemplo, enviando datos del M0 al M4 para que la envíe por la interfaz de Debug SWD.
+
+Al LPC-Link 2 también [[http://www.lpcware.com/lpclink2-config-tool|se le puede bajar una imagen de firmware Segger J-Link]], lo que permite usarlo también con IDEs como [[http://www.keil.com/arm/mdk.asp|Keil]] o [[http://www.iar.com/Products/IAR-Embedded-Workbench/ARM/|IAR]].

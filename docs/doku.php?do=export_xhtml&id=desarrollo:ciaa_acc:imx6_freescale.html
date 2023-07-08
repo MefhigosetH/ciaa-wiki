@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_acc:imx6_freescale</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_acc,imx6_freescale"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_acc:imx6_freescale&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_acc"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:imx6_freescale.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_acc:imx6_freescale"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_acc:imx6_freescale.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_acc';var JSINFO = {"id":"desarrollo:ciaa_acc:imx6_freescale","namespace":"desarrollo:ciaa_acc","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="propuesta_para_la_utilizacion_de_un_soc_imx6">Propuesta para la utilización de un SoC iMX6</h2>
+<div class="level2">
+
+<p>
+Se estudia y se analiza la alternativa iMX6, estudiando los dispositivos disponibles dentro de la familia, los aspectos que pueden favorecer el desarrollo  y los objetivos asociados a la CIAA-ACC.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Propuesta para la utilizaci\u00f3n de un SoC iMX6&quot;,&quot;hid&quot;:&quot;propuesta_para_la_utilizacion_de_un_soc_imx6&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-254&quot;} -->
+<h3 class="sectionedit2" id="familia">Familia</h3>
+<div class="level3">
+
+<p>
+Breve resumen de la familia y selección para el análisis posterior.
+</p>
+<ul>
+<li class="level1"><div class="li"> <abbr title="Uniform Resource Locator">URL</abbr> Principañ: <a href="http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&amp;cof=0&amp;am=0" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&amp;cof=0&amp;am=0" rel="ugc nofollow noopener"> Familia iMX6 de Freescale</a></div>
+</li>
+<li class="level1 node"><div class="li"> Dispositivos y características principales: </div>
+<ul>
+<li class="level2"><div class="li"> Ver <a href="http://cache.freescale.com/files/32bit/doc/brochure/FLYRIMXPRDCMPR.pdf" class="urlextern" target="_blank" title="http://cache.freescale.com/files/32bit/doc/brochure/FLYRIMXPRDCMPR.pdf" rel="ugc nofollow noopener">http://cache.freescale.com/files/32bit/doc/brochure/FLYRIMXPRDCMPR.pdf</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.freescale.com/webapp/search/parametricExcel.sp?load=taxoPara&amp;aType=OP&amp;c=c380_c127_c126" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/search/parametricExcel.sp?load=taxoPara&amp;aType=OP&amp;c=c380_c127_c126" rel="ugc nofollow noopener"> Planilla de cálculo para selección</a> </div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Selección del candidato si se usa un iMX6 (preliminar):</div>
+<ul>
+<li class="level2"><div class="li"> <strong>i.MX6 UltraLite</strong>: Descartado  por el micro Cortex-A7@528 <abbr title="Megahertz">MHz</abbr></div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 SoloLite</strong>: Descartado por el pitch de 0.5, solamente rango commercial y por tener aceleración de video por SW.</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 SoloX</strong>: Descartado por  tener aceleración de video por SW. Nota: tiene un cortex A9 + Cortex M4. </div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 Solo</strong>: Tiene un solo núcleo. (Objetivo de proyecto)</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 DualLite</strong>: No tiene SATA (Evaluar importancia del SATA). Posee menores características de Hw gráfico que el Dual(shaders, 2D engine) (Objetivo de proyecto)</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 Dual</strong>: Posible alternativa, pero el quad posee mayor capacidad de cómputo (Objetivo de proyecto).</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 Quad</strong>: Posible alternativa, pero la línea plus tiene mejores características de aceleración gráfica (+shaders y +layers).</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 DualPlus</strong>: Candidato. (pero aún no esta a la venta?) (El quadplus es más acorde a los objetivos del proyecto)</div>
+</li>
+<li class="level2"><div class="li"> <strong>i.MX6 QuadPlus</strong>: Candidato (con mayor capacidad de cómputo que el Dual/DualPlus pero aún no esta a la venta?).</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Dispositivo seleccionado para esta alternativa: i.MX6 Quad (y si se consigue el QuadPlus?)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Familia&quot;,&quot;hid&quot;:&quot;familia&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;255-1979&quot;} -->
+<h3 class="sectionedit3" id="datos_generales">Datos generales</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Procesador: ARM </div>
+</li>
+<li class="level1"><div class="li"> Tipo: Cortex-A9</div>
+</li>
+<li class="level1"><div class="li"> Nro de cores: 4  (1, 2 o 4 Depende del modelo)</div>
+</li>
+<li class="level1"><div class="li"> Máxima frecuencia de trabajo: 1.0 a  1.2 <abbr title="Gigahertz">GHz</abbr></div>
+</li>
+<li class="level1"><div class="li"> Memoria: LP-DDR2, DDR3/LV-DDR3 400/533 <abbr title="Megahertz">MHz</abbr></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Datos generales&quot;,&quot;hid&quot;:&quot;datos_generales&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1980-2194&quot;} -->
+<h3 class="sectionedit4" id="perifericos_de_interes">Periféricos de interés</h3>
+<div class="level3">
+
+<p>
+Falta definir periféricos importantes de la CIAA-ACC.
+</p>
+<ul>
+<li class="level1"><div class="li"> Aceleración gráfica:</div>
+</li>
+<li class="level1"><div class="li"> HDMI:</div>
+</li>
+<li class="level1"><div class="li"> MIPI CSI:</div>
+</li>
+<li class="level1"><div class="li"> Ethernet:</div>
+</li>
+<li class="level1"><div class="li"> USB:</div>
+</li>
+<li class="level1"><div class="li"> SATA:</div>
+</li>
+<li class="level1"><div class="li"> PCIe:</div>
+</li>
+<li class="level1"><div class="li"> LVDS:</div>
+</li>
+<li class="level1"><div class="li"> CAN:</div>
+</li>
+<li class="level1"><div class="li"> ADC:</div>
+</li>
+<li class="level1"><div class="li"> RS232:</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Perif\u00e9ricos de inter\u00e9s&quot;,&quot;hid&quot;:&quot;perifericos_de_interes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;2195-2428&quot;} -->
+<h3 class="sectionedit5" id="informacion_tecnica_disponible">Información técnica disponible</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> Hojas de datos completas: Poseen en general esquemáticos, gerbers y archvivos de diseño.</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&amp;cof=0&amp;am=0" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&amp;cof=0&amp;am=0" rel="ugc nofollow noopener">http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES&amp;cof=0&amp;am=0</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Notas de aplicación para el layout:</div>
+</li>
+<li class="level1 node"><div class="li"> Diseños de referencia: </div>
+<ul>
+<li class="level3"><div class="li"> <a href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREPLAT" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREPLAT" rel="ugc nofollow noopener"> Sabre Platform for Smart Devices </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREBRD" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREBRD" rel="ugc nofollow noopener"> Sabre Smart Devices </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREAUTO" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=RDIMX6SABREAUTO" rel="ugc nofollow noopener"> Sabre for Automotive Infotainment </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=IMX6SLEVK" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=IMX6SLEVK" rel="ugc nofollow noopener"> IMX6SLEVK: i.MX 6SoloLite Evaluation Kit </a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Disponible sin NDA?: SI.</div>
+</li>
+<li class="level1"><div class="li"> Otras: Perfiles de temp, ejemplos, diseños adicionales, etc.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Informaci\u00f3n t\u00e9cnica disponible&quot;,&quot;hid&quot;:&quot;informacion_tecnica_disponible&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2429-3316&quot;} -->
+<h3 class="sectionedit6" id="compra_de_chips">Compra de chips</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Distribuidor en Argentina: <a href="http://www.electrocomponentes.com/" class="urlextern" target="_blank" title="http://www.electrocomponentes.com/" rel="ugc nofollow noopener"> Electrocomponentes</a></div>
+</li>
+<li class="level1"><div class="li"> Distribuidor en el exterior:  <a href="http://www.digikey.com/product-search/en/integrated-circuits-ics/embedded-microprocessors/2556260?k=imx6" class="urlextern" target="_blank" title="http://www.digikey.com/product-search/en/integrated-circuits-ics/embedded-microprocessors/2556260?k=imx6" rel="ugc nofollow noopener"> Digikey, productos iMX6</a></div>
+</li>
+<li class="level1"><div class="li"> Precio unitario: 25 a 82 USD </div>
+</li>
+<li class="level1"><div class="li"> Precio por cantidades:</div>
+</li>
+<li class="level1"><div class="li"> Soporte técnico y asistencia:</div>
+</li>
+<li class="level1"><div class="li"> ITAR (International Traffic in Arms Regulations): No posee. Investigar los de grado industrial.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compra de chips&quot;,&quot;hid&quot;:&quot;compra_de_chips&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3317-3798&quot;} -->
+<h3 class="sectionedit7" id="partes">Partes</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> IMX6DQAEC: i.MX 6Dual/6Quad Automotive and Infotainment Applications Processors - Data Sheet</div>
+<ul>
+<li class="level2"><div class="li"> MCIMX6Q6AVT10AC</div>
+</li>
+<li class="level2"><div class="li"> MCIMX6Q6AVT10ACR</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> IMX6DQIEC: i.MX 6Dual/6Quad Applications Processors for Industrial Products - Data Sheet</div>
+<ul>
+<li class="level2"><div class="li"> MCIMX6Q7CVT08AC</div>
+</li>
+<li class="level2"><div class="li"> MCIMX6Q7CVT08AD</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Falta analizar…
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Partes&quot;,&quot;hid&quot;:&quot;partes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;3799-4117&quot;} -->
+<h3 class="sectionedit8" id="encapsulados">Encapsulados</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Encapsulado de mayor pitch posible:  FCPBGA 21 x 21 mm, 0.8 mm pitch,  25 x 25 Ball Matrix, 624 balls.</div>
+</li>
+<li class="level1"><div class="li"> PoP: Posee pitch de 0.5 mm y es solo consumer.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Encapsulados&quot;,&quot;hid&quot;:&quot;encapsulados&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;4118-4299&quot;} -->
+<h3 class="sectionedit9" id="software">Software</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Port de Linux:</div>
+</li>
+<li class="level1"><div class="li"> Toolchain:</div>
+</li>
+<li class="level1"><div class="li"> Licencias Toolchain:</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Software&quot;,&quot;hid&quot;:&quot;software&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;4300-4378&quot;} -->
+<h3 class="sectionedit10" id="ventajas_y_desventajas_frente_a_otras_soluciones">Ventajas y Desventajas Frente a otras soluciones</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="ventajas">Ventajas</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Disponibilidad de numerosos diseños de referencia.</div>
+</li>
+<li class="level1"><div class="li"> Disponibilidad de toda la documentación (sin firmar NDA).</div>
+</li>
+<li class="level1"><div class="li"> Representante de Freescale en Argentina (Electrocomponentes). </div>
+</li>
+<li class="level1"><div class="li"> Frente a la familia Zynq, el tener GPU y PCIe por hardware es otra ventaja.</div>
+</li>
+<li class="level1"><div class="li"> Precio bajo por ser un producto muy popular a nivel mundial.</div>
+</li>
+<li class="level1"><div class="li"> Herramientas gratuitas y libres.</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="desventajas">Desventajas</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Ya existen en el mercado numerosos productos con estos micros y a muy buen precio.</div>
+</li>
+<li class="level1"><div class="li"> Algunos periféricos del iMX6 son muy limitados, como por ejemplo el PCIe x1.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ventajas y Desventajas Frente a otras soluciones&quot;,&quot;hid&quot;:&quot;ventajas_y_desventajas_frente_a_otras_soluciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;4379-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+====== Requerimientos del CIAA-Firmware ======
+
+###
+En esta sección se presentan los requerimientos propuestos para cada versión de CIAA-Firmware. En todos los casos, los requerimientos se dividen en tres categorías:
+###
+  * Requerimientos Funcionales.
+  * Requerimientos de la Arquitectura del Firmware.
+  * Requerimientos de Codificación y Testing.
+
+
+----
+===== CIAA-Firmware v0.2.0 =====
+
+==== Requerimientos Funcionales ====
+
+  * **FW_FUNC_002** Proveer conectividad MODBUS ASCII a través del bus **Serial**.
+
+  * **FW_FUNC_004** Implementar las siguientes funcionalidades de MODBUS:
+    * **FW_FUNC_005** 0x03 Read Holding Registers.
+    * **FW_FUNC_006** 0x04 Read Input Registers.
+    * **FW_FUNC_007** 0x06 Write Single Register.
+    * **FW_FUNC_008** 0x10 Write Multiple registers.
+
+
+==== Requerimientos a la Arquitectura de Firmware ====
+
+  * **FW_ARQ_005** Permitir el reuso de la mayor cantidad posible de código entre 2 arquitecturas.
+
+  * **FW_ARQ_006** Software dividido en 4 capas:
+      * **FW_ARQ_007** [[firmware layers|Aplicación]].
+      * **FW_ARQ_008** [[firmware layers|Service Layer]].
+      * **FW_ARQ_009** [[firmware layers|Interface Layer]].
+      * **FW_ARQ_010** [[firmware layers|Driver Layer]].
+
+  * **FW_ARQ_011** Proveer un [[RTOS|RTOS]] (Real Time Operating System).
+
+  * **FW_ARQ_013** Proveer una interfaz al usuario que desee programar sobre el ciaaFirmware.
+
+
+==== Requerimientos de Codificación y Testing ====
+
+  * **FW_SW_001** El código del Firmware de la CIAA debe ser verificado mediante ejecución de tests.
+
+  * **FW_SW_002** El código debe ser testeado en [[unit_tests|Unit Tests o Pruebas Unitarias]] en la PC.
+
+  * **FW_SW_004** El código debe estar basado en las [[fw_coding_guidelines|CIAA-Firmware Coding Guidelines]].
+
+  * **FW_SW_005** El código debe estar basado en los [[https://github.com/ciaa/Firmware/tree/master/modules/template|ciaaFirmware Templates]].
+
+
+----
+===== CIAA-Firmware v0.3.0 =====
+
+//Nota: Sección en construcción.//
+
+----
+===== CIAA-Firmware v1.0.0 =====
+
+A los requerimientos ya propuestos para la versión 0.2.0 del CIAA-Firmware, la versión 1.0.0 incorporará los siguientes requerimientos.
+
+==== Requerimientos Funcionales ====
+
+  * **FW_FUNC_003** Proveer conectividad MODBUS TCP a través del bus **Ethernet**.
+
+  * **FW_FUNC_009** Proveer las siguientes capacidades:
+    * **FW_FUNC_010** **Cargar programas** escritos en lenguaje **Ladder**.
+    * **FW_FUNC_011** **Ejecutar programas** escritos en lenguaje **Ladder**.
+    * **FW_FUNC_012** **Depurar paso a paso programas** escritos en lenguaje **Ladder**.
+
+  * **FW_FUNC_013** Proveer la misma funcionalidad en **todas las plataformas de hardware** de la CIAA.
+
+  * **FW_FUNC_014** Se deberá implementar las capas de transporte MODBUS Serial (ASCII y RTU) y MODBUS TCP independientes de la capa de aplicación MODBUS.
+
+  * **FW_FUNC_016** La capa de transporte MODBUS RTU debe identificar el inicio y fin de una trama de acuerdo a las especificaiones detalladas en la sección 2.5.1.1 del documento [[http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf|Modbus over Serial Line]].
+
+  * **FW_FUNC_017** Implementar la capa de aplicación MODBBUS Slave independiente de la capa de enlace o transporte a utilizar.
+
+  * **FW_FUNC_018** Implementar la capa de aplicación MODBBUS Master independiente de la capa de enlace o transporte a utilizar.
+
+==== Requerimientos a la Arquitectura de Firmware ====
+
+  * **FW_ARQ_001** Permitir portar el Firmware a diversas arquitecturas:
+    * **FW_ARQ_002** Makefile para multi arquitectura.
+    * **FW_ARQ_003** Reglas para compilar por arquitectura.
+    * **FW_ARQ_004** Programar en C99.
+
+  * **FW_ARQ_012** Proveer una interfaz POSIX Like para el manejo de dispositivos.
+
+
+==== Requerimientos de Codificación y Testing ====
+
+    * **FW_SW_003** Con las Pruebas Unitarias se debe alcanzar el 100% de [[Coverage|Statement Coverage]].
+
+
+
+----
+El primer documento de características técnicas del Firmware de la CIAA se publicó el 23/12/2013 en la página de la ACSE:
+http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/files/2013/12/CIAA-Firmware-v1.0.pdf

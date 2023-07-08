@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:01:57+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_nucleo_fsl&amp;rev=1533240854&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa-z3r0&amp;rev=1521668951&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:compatibilidad_electromagnetica&amp;rev=1418739342&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:descargas&amp;rev=1442611720&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga&amp;rev=1680267755&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:emulador&amp;rev=1421862291&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware&amp;rev=1462137488&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:gabinete&amp;rev=1447347360&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware&amp;rev=1485972244&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux&amp;rev=1458086657&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:microelectronica&amp;rev=1467298985&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:modbus&amp;rev=1411406495&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:sistema&amp;rev=1469466813&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-ide&amp;rev=1437748475&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-plc&amp;rev=1442447854&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:testing&amp;rev=1429704082&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_nucleo_fsl&amp;rev=1533240854&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-08-02T20:14:14+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_nucleo_fsl</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_nucleo_fsl&amp;rev=1533240854&amp;do=diff</link>
+        <description>CIAA-NUCLEO-FSL
+La CIAA-NUCLEO-FSL es una versión minimalista y modular de la  CIAA-FSL pensada como módulo de procesamiento para aplicaciones de bajo costo que requieran una conexión Ethernet. Posee conectores de expansión tipo pinera simple para poder agregarle fácilmente electrónica adicional específica de cada aplicación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa-z3r0&amp;rev=1521668951&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-21T21:49:11+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa-z3r0</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa-z3r0&amp;rev=1521668951&amp;do=diff</link>
+        <description>CIAA-Z3R0
+
+La CIAA-Z3R0 es una plataforma de bajo costo pensada para la enseñanza desde la primaria hasta la universidad y para el entusiasta de los sistemas embebidos.
+
+
+
+La CIAA-Z3R0 es ideal para aplicaciones de bajo consumo y proyectos de robótica educativa ya que está diseñada para ser integrada como componente en un diseño mayor debido a su reducido tamaño, permitiendo ser conectada mediante tiras de pines o soldada a través de su borde de agujeros parra montaje</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:compatibilidad_electromagnetica&amp;rev=1418739342&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-12-16T14:15:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:compatibilidad_electromagnetica</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:compatibilidad_electromagnetica&amp;rev=1418739342&amp;do=diff</link>
+        <description>Compatibilidad Electromagnética
+
+Las normas técnicas internacionales definen a la Compatibilidad Electromagnética (EMC) como: 
+“la aptitud de un aparato o un sistema para funcionar en forma satisfactoria en su entorno electromagnético sin introducir perturbaciones electromagnéticas intolerables para todo lo que se encuentra en dicho entorno, y a la vez funcionar satisfactoriamente bajo perturbaciones electromagnéticas provenientes de un entorno electromagnético.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:descargas&amp;rev=1442611720&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-18T21:28:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:descargas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:descargas&amp;rev=1442611720&amp;do=diff</link>
+        <description>Descargas
+
+En esta sección se listan los links para la descarga de Software-IDE, Software-PLC, Linux y Firmware
+
+Releases
+
+Software CIAA-IDE-Suite
+
+	*  [Instalador de CIAA IDE Suite v1.2.2]
+
+La instalación del CIAA-IDE-Suite incluye todos los otros items.
+
+Software-PLC
+
+IDE4PLC versión 0.08 alpha se encuentra disponible para distintas plataformas:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga&amp;rev=1680267755&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-03-31T13:02:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:edu-fpga</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga&amp;rev=1680267755&amp;do=diff</link>
+        <description>EDU-CIAA-FPGA
+
+Cómo navegar por esta página
+
+1. Si estás dando tus primeros pasos en el mundo FPGA, podés empezar a leer desde ésta introducción al tema
+
+2. Si ya tenés experiencia en FPGA pero querés conocer la plataforma EDU-CIAA-FPGA, podés ir directamente a la introducción al proyecto
+
+3. Si ya conocés la plataforma pero querés saber en qué andamos, podés revisar el resumen del</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:emulador&amp;rev=1421862291&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-01-21T17:44:51+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:emulador</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:emulador&amp;rev=1421862291&amp;do=diff</link>
+        <description>Emulación de la CIAA utilizando Qemu.
+
+Página en construcción.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware&amp;rev=1462137488&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-05-01T21:18:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:firmware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware&amp;rev=1462137488&amp;do=diff</link>
+        <description>CIAA-Firmware
+El firmware es el programa que se ejecuta en la CPU del microcontrolador. Éste comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:gabinete&amp;rev=1447347360&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-12T16:56:00+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:gabinete</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:gabinete&amp;rev=1447347360&amp;do=diff</link>
+        <description>Gabinete
+
+Equipo Técnico a cargo
+ Función                             Nombre           Organización                         Responsable del diseño              Manuel Saintotte       &lt;http://www.grupoalaska.com.ar&gt;    Colaboración en diseño (versión FreeCAD)     Alamon Diego Fernando</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware&amp;rev=1485972244&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-01T18:04:04+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware&amp;rev=1485972244&amp;do=diff</link>
+        <description>Hardware de la CIAA
+
+Como cualquier otra computadora, la plataforma CIAA consta de una plaqueta electrónica y componentes físicos a los cuales llamamos “hardware”. Dependiendo del uso se diseñan y construyen distintos modelos de hardware de la CIAA, que son los que se muestran a continuación:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux&amp;rev=1458086657&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-03-16T00:04:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:linux</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:linux&amp;rev=1458086657&amp;do=diff</link>
+        <description>Linux en la CIAA
+El Proyecto CIAA cuenta con un equipo de desarrollo dedicado a preparar Linux para correr en las distintas versiones de CIAA, empezando por la CIAA-NXP.
+¿Cómo participar del desarrollo?
+Sólo es necesario unirse al grupo ciaa-linux@googlegroups.com, presentarse y ofrecer su ayuda. ¡Siempre hay cosas para hacer!</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:microelectronica&amp;rev=1467298985&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-30T15:03:05+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:microelectronica</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:microelectronica&amp;rev=1467298985&amp;do=diff</link>
+        <description>CIAA-Microelectrónica
+
+Objetivos
+La misión del área de desarrollo CIAA-Microelectrónica es fomentar el diseño de circuitos integrados y mostrar su potencial aplicación en la industria argentina. Además, se busca generar un ámbito para el debate sobre potenciales aportes que la microelectrónica podría ofrecer a los sectores industriales</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:modbus&amp;rev=1411406495&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:21:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:modbus</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:modbus&amp;rev=1411406495&amp;do=diff</link>
+        <description>Modbus
+
+Esta página contiene la información relevante a la utilización del Modbas. Relevante tanto para Firmware como para Software.
+
+La CIAA utiliza los comandos:
+
+	*  0x04 Read Input Registers
+	*  0x10 Write Multiple registers
+	*  0x17 Read/Write Multiple registers</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:sistema&amp;rev=1469466813&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-25T17:13:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:sistema</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:sistema&amp;rev=1469466813&amp;do=diff</link>
+        <description>Ingeniería de Sistema de la CIAA
+
+/* Comentario interno */
+El área de Ingeniería de Sistema del Proyecto CIAA tiene la tarea de mantener articuladas las distintas áreas y recursos de desarrollo, de modo que el resultado sea un producto consistente, y que se verifique el cumplimiento de los requerimientos y planificaciones pre-establecidas para el proyecto.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-ide&amp;rev=1437748475&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-24T14:34:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:software-ide</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-ide&amp;rev=1437748475&amp;do=diff</link>
+        <description>Software-IDE de la CIAA
+El CIAA-Software-IDE es el entorno de desarrollo del CIAA-Firmware. En su versión más completa, se ofrece un instalador llamado CIAA-IDE-Suite con el cual podrán de forma sencilla instalar y configurar automáticamente la totalidad de las herramientas necesarias para trabajar con la CIAA, incluyendo otras herramientas además del Firmware como ser IDE4PLC.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-plc&amp;rev=1442447854&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-16T23:57:34+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:software-plc</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:software-plc&amp;rev=1442447854&amp;do=diff</link>
+        <description>IDE4PLC, el Software-PLC de la CIAA
+El Software-PLC de la CIAA es el entorno de desarrollo integrado (IDE) industrial que se ejecuta en una PC (Windows / Linux compatible / MAC OS X) que permite:
+	*  Codificar a través de los lenguajes de programación para PLC</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:testing&amp;rev=1429704082&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-22T12:01:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:testing</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:testing&amp;rev=1429704082&amp;do=diff</link>
+        <description>Testing de la CIAA
+
+Nota: Página en construcción.
+Las actividades de testing sobre la CIAA tienen como propósito verificar y validar no solo el diseño del hardware, sino también el cumplimiento de distintas normativas aplicables a los sistemas embebidos usados en entornos industriales.</description>
+    </item>
+</rdf:RDF>

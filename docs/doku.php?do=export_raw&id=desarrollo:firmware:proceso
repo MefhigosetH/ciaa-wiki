@@ -1,0 +1,37 @@
+===== Change Management =====
+
+Hoy estamos utilizando la funcionalidad de [[https://github.com/ciaa/Firmware/issues|Issues en Github]] para llevar un track de los cambios.
+
+===== Configuration Management =====
+
+Se lleva a cabo en GitHub: [[https://github.com/ciaa/Firmware]]. Una introducción a Git se puede encontrar en: [[desarrollo:firmware:git]]
+
+==== Realizando cambios en el repositorio ====
+
+Cuando realice cambios en el repo tenga en cuenta que alguien realizara un review de los cambios y cuanto más fácil sea ralizarlo antes serán aceptados los cambios por ello:
+
+  * si trabaja sobre un branch para un tema especifico NO modifique otras cosas. Por ejemplo si trabaja en un nuevo driver de adc y encunetra un problema en el make, no lo cambie en este branch. Se debe realizar otro para tal fin.
+  * cuando escribe el código no utilice mágia: operaciones con números, pocos comentarios, otro style guide, sigua siempre las Coding Guidelines del proyecto.
+  * si trabaja mucho tiempo en el branch puede que le resulte interesante hacer un rebase o un merge del master al branch de trabajo.
+  * si trabaja en el master debe siempre procurar que el código corra, ya que otros desarrolladores se basan en el master para trabajar.
+
+===== Desarrollo de nuevas funcionalidades y mejoras ===== 
+
+No es recomendable y se pide evitar commits en el master. Por cada tarea a desarrollar se debe crear un branch. Para saber cuándo trabajar sobre branches y cómo nombrarlos hacer [[desarrollo:firmware:proceso:criterio_branches|clic aquí]].
+
+===== Continuous Integration ======
+
+El Firmware cuenta con un Jenkins donde se testean automáticamente todos los commits.
+
+Tenemos 3 CIs:
+  * http://ciaa1.uns.edu.ar/jenkins/
+  * https://travis-ci.org/ciaa/Firmware
+  * https://drone.io/github.com/ciaa/Firmware/latest
+
+===== Reviews =====
+
+Hoy en día los reviews son realizados en GitHub. No es la mejor opción por ello estamos trabajando en una solución basada en Gerrit+Jenkins. Esperamos la misma este funcionando en 3.2016
+
+===== Releases ======
+
+Antes de realizar una release se realizará un [[desarrollo:firmware:code_freeze|Code-Freeze]].

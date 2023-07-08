@@ -1,0 +1,70 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Ver Fase siguiente]] ]
+
+###
+La información correspondiente a esta fase se puede visualizar en **{{:proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fase_de_concepto_del_diseno_e_implementacion_del_monitor_de_barreras_1.0.pdf|en este pdf}}** y también se puede visualizar online en los links que se presentan a continuación.
+###
+
+{{ :blanco.png?10 | }}
+
+===== Introducción =====
+
+###
+La norma UNE EN 50126 define los Objetivos, las Entradas, los Requisitos, las Entregas y la Verificación para cada una de las fases del ciclo de vida. En esta página se aborda la aplicación de estos puntos a la Fase de Concepto del Diseño e Implementación del Monitor de Barreras. 
+### 
+
+{{ :blanco.png?10 | }}
+
+===== Objetivos =====
+
+###
+La Norma UNE EN 50126 establece para esta fase el siguiente objetivo, que no debe perderse de vista al considerar las Entradas, Requisitos, Entregas y Verificación que se presentan a continuación:
+###
+
+<note>"el objetivo de esta fase debe ser el de desarrollar un nivel de comprensión del sistema suficiente para permitir que todas las tareas siguientes del ciclo de vida RAMS se cumplan satisfactoriamente".</note>
+
+
+{{ :blanco.png?10 | }}
+
+
+===== Entradas =====
+
+Las entradas que se han considerado en la fase de Concepto del Monitor de Barreras se presentan en [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entradas|esta página]].
+
+{{ :blanco.png?10 | }}
+
+===== Requisitos =====
+
+###
+Los requisitos indicados por la Norma UNE EN 50126 para la fase de concepto son cinco y se describen en las siguientes páginas:
+###
+
+
+  * El **requisito 1** referido al contexto de la ejecución RAMS (alcance, contexto, finalidad, entorno, implicaciones, etc.) se presenta en  [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1| esta página]]. 
+  * El **requisito 2** referido a las implicancias RAMS se presenta en [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2|esta página]]. 
+  * El **requisito 3** referido a las fuentes de peligros que pudieran afectar el rendimiento RAMS del sistema se presenta en [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3| esta página]]. 
+  * El **requisito 4** referido a obtener determinada información relevante se presenta en [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4|esta página]]. 
+  * El **requisito 5** referido a definir el alcance de los requisitos de gestión para sucesivas tareas RAMS del ciclo de vida del sistema se presenta en [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito5|esta página]]. 
+
+
+{{ :blanco.png?10 | }}
+
+===== Entregas =====
+
+Las entregas de acuerdo a lo establecido para la fase de Concepto por la norma UNE EN 50126 correspondientes a la Fase de Concepto del Diseño e Implementación del Monitor de Barreras se presentan en  [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas|esta página]].
+
+{{ :blanco.png?10 | }}
+
+===== Verificación =====
+
+###
+La verificación de acuerdo con lo indicado por la norma UNE EN 50126 para la fase de Concepto del Diseño e Implementación del Monitor de Barreras se presenta en  [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion|esta página]].
+###
+
+{{ :blanco.png?10 | }}
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Ver Fase siguiente]] ]
+

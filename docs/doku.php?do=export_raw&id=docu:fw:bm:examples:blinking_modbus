@@ -1,0 +1,73 @@
+====== Blinking Modbus ======
+
+En el Firmware de la CIAA tenemos dos ejemplos de uso del protocolo Modbus, blinking_modbus_slave y blinking_modbus_master. Estos están armados de manera tal que si programamos una placa con el ejemplo slave, otra con con el master y las interconectamos a través del la uart 0 (RS485), el estado de las entradas de la primera se verá reflejado en las salidas de la segunda y viceversa.
+Ambos ejemplos transportan los mensajes por el puerto serie conforme al formato Modbus ASCII a una velocidad de 115200 baudios, 8 bits de datos, sin paridad y 1 bit de stop.
+
+===== Blinkin Modbus Slave =====
+
+En este ejemplo, se puede ver el uso de Modbus en modo slave, comunicando los mensajes en formato ASCII. 
+
+==== Descripción de tareas ====
+
+=== InitTask ===
+Es la tarea encargada de inicalizar el kernel de la CIAA, abrir los dispositivos utilizado y los distintos componentes del Stack Modbus. Además configura la alarma ActivateModbusTask para que sea activada luego de 100 ticks (100 milisegundos) y con una periodicidad de 5 ticks (5 milisegundos).
+Es importate aclarar que es la primera en ejecutarse y luego no vuelve a ejecutarse más.
+
+=== ModbusSlave ===
+Se encarga de atender las tareas del Stack Modbus. Para esto se llama a la función ciaaModbus_gatewayMainTask() pasando como argumento el handler del gateway utilizado.
+
+==== Comandos Modbus ====
+
+Los comandos que se pueden ejecutar son 0x03 Read Holding Registers y 0x10 Write Multiple Registers.
+En ambos casos el stack Modbus ejecuta el call back correspondiente pasando los siguientes argumentos:
+
+<code>
+static uint16_t cmd0x03ReadHoldingReg(
+       uint16_t start,
+       uint16_t quantity,
+       uint8_t * exceptioncode,
+       uint8_t * buf
+       );
+</code>
+
+start: dirección de inicio para comenzar a leer registros (este valor es recibido desde el master)
+quantity: cantidad de registros consecutivos que se desean leer (este valor es recibido desde el master)
+exceptioncode: código de excepción en caso de producirse un error (debe ser escrito por el slave)
+buf: valores de los registros leídos (debe ser escrito por el slave)
+retorno: cantidad de registros leídos (debe coincidir con quantity). En caso de producirse un error, retornar -1
+
+<code>
+static void cmd0x10WriteMultipleReg(
+      uint16_t start,
+      uint16_t quantity,
+      uint8_t bytecount,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );
+</code>
+
+start: dirección de inicio para comenzar a escribir registros (este valor es recibido desde el master)
+quantity: cantidad de registros consecutivos que se desean escribir (este valor es recibido desde el master)
+bytecount: cantidad de bytes que se van a escribir (este valor es recibido desde el master)
+exceptioncode: código de excepción en caso de producirse un error (debe ser escrito por el slave)
+buf: valores a escribir en registros (es recibido desde el master)
+
+<note tip>Estas callback no deben bloquearse ya que son ejecutadas desde la tarea ModbusSlave.</note>
+
+===== Blinkin Modbus Master =====
+
+En este ejemplo, se puede ver el uso de Modbus en modo master, comunicando los mensajes en formato ASCII. 
+
+==== Descripción de tareas ====
+
+=== InitTask ===
+Es la tarea encargada de inicalizar el kernel de la CIAA, abrir los dispositivos utilizado y los distintos componentes del Stack Modbus. Además configura dos alarmas:
+  * ActivateModbusTask: Utilizada para activar la tarea que atiende el Stack Modbus. Se activada luego de 5 ticks (5 milisegundos) y con una periodicidad de 5 ticks (5 milisegundos).
+  * AlarmCallBackPollingSlave: Utilizada para ejecutar el call back CallBackActivatePollingSlave. Esta función activar la tarea PollingSlave si se encuentra suspendida. Se activada luego de 5 ticks (5 milisegundos) y con una periodicidad de 100 ticks (100 milisegundos).
+Es importate aclarar que es la primera en ejecutarse y luego no vuelve a ejecutarse más.
+
+=== ModbusMaster ===
+Se encarga de atender las tareas del Stack Modbus. Para esto se llama a la función ciaaModbus_gatewayMainTask() pasando como argumento el handler del gateway utilizado.
+
+=== PollingSlave ===
+Esta tarea ejecuta las funciones 0x03 y 0x10 sobre el slave, la primera es para leer el estado de las entradas y la segunda es para escribir las salidas.

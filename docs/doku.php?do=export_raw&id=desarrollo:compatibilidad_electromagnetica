@@ -1,0 +1,18 @@
+====== Compatibilidad Electromagnética ======
+Las normas técnicas internacionales definen a la Compatibilidad Electromagnética (EMC) como: \\ "la aptitud de un aparato o un sistema para funcionar en forma satisfactoria en su entorno electromagnético sin introducir perturbaciones electromagnéticas intolerables para todo lo que se encuentra en dicho entorno, y a la vez funcionar satisfactoriamente bajo perturbaciones electromagnéticas provenientes de un entorno electromagnético."\\ 
+;#;
+**<fc #4682b4>EMC = EMI + EMS</fc>**
+;#;
+La compatibilidad electromagnética incluye el estudio de dos fenómenos:
+
+===== Emisión o Interferencia Electromagnética (EMI) =====
+
+
+Califica las perturbaciones asociadas a un aparato y/o sistema. Estas perturbaciones se pueden manifestar en forma radiada y/o conducida. Los ensayos se llevan a cabo para determinar los límites máximos fijados en las normas, que no deben ser superados.
+El objetivo del diseño bajo norma contribuye a un uso racional del espectro radioeléctrico y a no perturbar a otros dispositivos.
+
+===== Inmunidad o Susceptibilidad Electromagnética (EMS) =====
+
+
+Califica la aptitud de un aparato y/o sistema de funcionar correctamente dentro del entorno electromagnético, para el cual ha sido diseñado.
+Las perturbaciones de dicho entorno, pueden producirse tanto en forma radiada como conducida. Las normas contemplan distintos grados de severidad de acuerdo con los diferentes tipos de entornos, y definen los criterios de aceptación para el correcto funcionamiento, para distintos tipos y clases de dispositivo.

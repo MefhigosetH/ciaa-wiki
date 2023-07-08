@@ -1,0 +1,9 @@
+====== Porting (Portabilidad) ======
+
+La portabilidad es el proceso de adaptación de software para que un programa pueda ser utilizado en diferentes entornos o plataformas de hardware.
+
+Para el caso particular de la CIAA, los ports son las arquitecturas destino sobre la cual corre el RTOS.
+Para cada port, es necesario escribir algunas rutinas de código que dependen sí o sí del hardware, como por ejemplo el cambio de contexto, los handlers de ISRs.
+
+http://en.wikipedia.org/wiki/Porting
+

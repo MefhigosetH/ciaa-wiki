@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-uart"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html#soporte_uart_y_rs485clase_uart">Soporte UART y RS485: Clase UART</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html#constructor">Constructor</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html#metodos">Métodos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html#ejemplo_1_envio_y_recepcion_en_modo_byte">Ejemplo 1, envío y recepción en modo byte</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart.html#ejemplo_2_envio_y_recepcion_en_modo_trama">Ejemplo 2, envío y recepción en modo trama</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="soporte_uart_y_rs485clase_uart">Soporte UART y RS485: Clase UART</h1>
+<div class="level1">
+
+<p>
+La clase UART permitirá crear objetos que representan los módulos UART y RS845 de la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte UART y RS485: Clase UART&quot;,&quot;hid&quot;:&quot;soporte_uart_y_rs485clase_uart&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-143&quot;} -->
+<h2 class="sectionedit2" id="constructor">Constructor</h2>
+<div class="level2">
+
+<p>
+La clase posee un constructor que recibe como argumento el número de UART que controlará. Los valores posibles son
+</p>
+<ul>
+<li class="level1"><div class="li"> 0: RS485</div>
+</li>
+<li class="level1"><div class="li"> 3: UART  </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Constructor&quot;,&quot;hid&quot;:&quot;constructor&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;144-315&quot;} -->
+<h2 class="sectionedit3" id="metodos">Métodos</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> init(): Recibe la configuración de la UART, la cual consta de 1 argumento obligatorio(baudrate) y 9 opcionales:</div>
+<ul>
+<li class="level2"><div class="li"> baudrate : Obligatorio. Define la velocidad de comunicación</div>
+</li>
+<li class="level2"><div class="li"> bits: Solo se soporta el valor 8</div>
+</li>
+<li class="level2"><div class="li"> parity: Indica la paridad: None: sin paridad. 1: Impar. 2: Par. 3: F1. 4: F2</div>
+</li>
+<li class="level2"><div class="li"> stop: Indica la cantidad de bits de stop (1 o 2)</div>
+</li>
+<li class="level2"><div class="li"> timeout: En el modo recepción por paquete, indica el tiempo que debe pasar para que se reconozca la recepción de una trama. Indicado en ms</div>
+</li>
+<li class="level2"><div class="li"> timeout_char: Tiempo entre envio de bytes indicado en ms.</div>
+</li>
+<li class="level2"><div class="li"> read_buf_len: En el modo recepción por paquete, tamaño del buffer de recepción. (Max 2048)</div>
+</li>
+<li class="level2"><div class="li"> packet_mode: Indica si la recepcíon será por byte o por trama. True: Por trama. False: Por byte.</div>
+</li>
+<li class="level2"><div class="li"> packet_end_char: En el modo recepción por paquete, espera este valor para detectar un fin de trama.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> write(buff): Envía una trama por la UART. buff puede ser un bytearray o un string.</div>
+</li>
+<li class="level1"><div class="li"> writechar(ch): Envía un caracter por la UART</div>
+</li>
+<li class="level1"><div class="li"> get_baudrate(): Devuelve el baudrate configurado</div>
+</li>
+<li class="level1"><div class="li"> any(): Devuelve True si se recibió un byte/trama</div>
+</li>
+<li class="level1"><div class="li"> readchar(): Espera el tiempo “timeout” para leer un byte recibido. En el caso de que no haya nada para recibir, devuelve -1, de lo contrario devuelve el byte recibido.</div>
+</li>
+<li class="level1"><div class="li"> read([nBytes]): Espera el tiempo “timeout” y devuelve un bytearray con los datos recibidos. En forma opcional se puede indicar un máximo de bytes a recibir.</div>
+</li>
+<li class="level1"><div class="li"> readall(): Espera el tiempo “timeout” y devuelve un bytearray con los datos recibidos.</div>
+</li>
+<li class="level1"><div class="li"> readinto(buf[, nbytes]): Espera el tiempo “timeout” y carga los datos recibidos en el objeto bytearray pasado como primer argumento, el forma opcional se puede indicar un máximo.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00e9todos&quot;,&quot;hid&quot;:&quot;metodos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;316-2077&quot;} -->
+<h2 class="sectionedit4" id="ejemplo_1_envio_y_recepcion_en_modo_byte">Ejemplo 1, envío y recepción en modo byte</h2>
+<div class="level2">
+<pre class="code">import pyb
+uart = pyb.UART(3)
+uart.init(115200,bits=8, parity=None, stop=1,timeout=500, timeout_char=1, read_buf_len=64)
+uart.write(&quot;Hola mundo&quot;)
+while True:
+        if uart.any():
+                print(&quot;hay data:&quot;)
+                data = uart.readall()
+                print(data)</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo 1, env\u00edo y recepci\u00f3n en modo byte&quot;,&quot;hid&quot;:&quot;ejemplo_1_envio_y_recepcion_en_modo_byte&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;2078-2435&quot;} -->
+<h2 class="sectionedit5" id="ejemplo_2_envio_y_recepcion_en_modo_trama">Ejemplo 2, envío y recepción en modo trama</h2>
+<div class="level2">
+
+<p>
+Se agregó un modo de recepcion por “paquete” en donde la trama que llega se almacena en un buffer interno y luego el metodo “any()” devuelve True. Utilizando el metodo “readall()” se obtiene la trama completa. Para habilitar la recepcion por paquete se deben agregar el argumento “packet_mode” en True al final del metodo “init()”.
+</p>
+<pre class="code">uart.init(115200,bits=8, parity=None, stop=1,timeout=200, timeout_char=1, read_buf_len=64,packet_mode=True)</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo 2, env\u00edo y recepci\u00f3n en modo trama&quot;,&quot;hid&quot;:&quot;ejemplo_2_envio_y_recepcion_en_modo_trama&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2436-&quot;} --></div>
+</body>
+</html>

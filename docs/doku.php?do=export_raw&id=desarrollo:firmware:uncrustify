@@ -1,0 +1,8 @@
+===== Uncrustify =====
+
+Uncrustify es una herramienta que sirve para chequear el formato del código y que ha sido considerada para aplicar la [[http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:fw_coding_guidelines|guía de estilo]]
+
+
+Dado que no se ha usado, se ha retirado del master, pero se puede recuperar de [[https://github.com/ciaa/Firmware/tree/release/1.0.x/modules/tools/Uncrustify]]
+
+ Mas información sobre [[http://uncrustify.sourceforge.net/|Uncrustify]].

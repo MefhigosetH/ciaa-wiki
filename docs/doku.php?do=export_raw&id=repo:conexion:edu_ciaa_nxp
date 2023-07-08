@@ -1,0 +1,7 @@
+====Conexión edu-ciaa-nxp a PC por USB====
+
+{{page>repo:conexion:edu_ciaa_nxp_intro&noheader&nofooter}}
+
+{{page>repo:conexion:edu_ciaa_nxp_uart&nofooter}}
+
+{{page>repo:conexion:edu_ciaa_nxp_otg&nofooter}}

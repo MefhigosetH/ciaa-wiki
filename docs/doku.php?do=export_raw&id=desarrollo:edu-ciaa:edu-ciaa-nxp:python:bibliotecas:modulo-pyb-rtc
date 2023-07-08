@@ -1,0 +1,82 @@
+====== Soporte RTC: Clase RTC ======
+
+  import pyb
+  rtc = pyb.RTC()
+  
+  # (year, month, day, weekday, hours, minutes, seconds)
+  #newDt = [2015,12,31,0,18,16,0]
+  #rtc.datetime(newDt)
+  
+  while True:
+      now = rtc.datetime()
+      print(now)   
+      pyb.delay(1000)
+
+
+El método "datetime" lee o setea los valores de fecha y hora del modulo RTC. Si no se le pasan argumentos, el método devolverá una tupla de 7 valores con la fecha y hora actual. Si se la pasa una tupla igual como argumento, esos valores se cargan en el modulo RTC. El formato de la tupla es: 
+
+(year, month, day, weekday, hours, minutes, seconds)
+
+El campo "weekday" toma los valores de 0 a 6 El modulo RTC continua funcionando después de un reset del CPU y si se alimenta al mismo con una batería, el RTC seguirá funcionando inclusive sin la alimentación principal del CPU.
+
+Ejemplo de calibración:
+  import pyb
+  rtc = pyb.RTC()
+  rtc.calibration(0)
+  newDt = [2015,12,31,0,18,16,0]
+  rtc.datetime(newDt)
+
+El método "calibration" ajusta de forma periódica el contador del módulo RTC los valores permitidos son -131072 to 131072. 
+Leer http://www.nxp.com/documents/user_manual/UM10503.pdf para información detallada del procedimiento de calibración. Luego de la calibración se debe setear una fecha y hora.
+
+Ejemplo uso de registros de backup:
+  import pyb
+  rtc = pyb.RTC()
+  
+  #rtc.write_bkp_reg(0,27)
+  #rtc.write_bkp_reg(32,28)
+  #rtc.write_bkp_reg(63,29)
+  
+  while True:
+      print(rtc.read_bkp_reg(0))
+      print(rtc.read_bkp_reg(32))
+      print(rtc.read_bkp_reg(63))
+      pyb.delay(1000)
+
+Existen 64 registros de 32bits que mantendrán sus valores a pesar de que se reinicie el CPU y si se alimenta al mismo con una batería, se mantendrán los valores inclusive sin la alimentación principal del CPU.
+
+El método "write_bkp_reg" tiene como argumento la dirección del registro (0 a 63) y el valor de 32bit a escribir. El método "read_bkp_reg" tiene como argumento la dirección del registro (0 a 63) y devolverá el valor que se encuentra en el mismo.
+
+Ejemplo uso de alarma:
+  import pyb
+  rtc = pyb.RTC()
+  
+  newDt = [2015,12,31,0,20,15,0]
+  rtc.datetime(newDt)
+  
+  def rtcCallback(rtc):
+      print("Alarm int!")
+  
+  alarmDt = [2015,12,31,0,20,16,10]
+  rtc.alarm_datetime(alarmDt,pyb.RTC.MASK_SEC | pyb.RTC.MASK_MIN)
+  rtc.callback(rtcCallback)
+  
+  print("alarm:")
+  print(rtc.alarm_datetime())
+
+
+En este ejemplo se define una función (rtcCallback) que se ejecutará cuando se cumpla la fecha de la alarma. Mediante el método "alarm_datetime" se configura (o lee) la fecha de la alarma con la misma tupla de 7 valores usada para configurar la fecha y hora actual, y como segundo argumento se le pasa la mascara de la alarma la cual se construye con las constantes:
+
+  * pyb.RTC.MASK_SEC : Se chequea el campo de segundos en la comparación.
+  * pyb.RTC.MASK_MIN : Se chequea el campo de minutos en la comparación.
+  * pyb.RTC.MASK_HR : Se chequea el campo de horas en la comparación.
+  * pyb.RTC.MASK_DAY : Se chequea el campo de día en la comparación.
+  * pyb.RTC.MASK_MON : Se chequea el campo de mes en la comparación.
+  * pyb.RTC.MASK_YR : Se chequea el campo de año en la comparación.
+  * pyb.RTC.MASK_DOW : Se chequea el campo de día de la semana en la comparación.
+
+Mediante el método "callback" se setea la función que se ejecutara cuando se produzca la alarma. En el ejemplo se construye la máscara con segundos y minutos, por lo que la alarma se producirá cada hora, a los 16 minutos y 10 segundos.
+
+Para deshabilitar la alarma puede ejecutarse el método "alarm_disable".
+
+

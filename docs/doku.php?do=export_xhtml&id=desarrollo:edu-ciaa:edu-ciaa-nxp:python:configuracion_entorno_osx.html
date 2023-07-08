@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,configuracion_entorno_osx"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#configuracion_del_entorno_de_desarrollo_osx_macos">Configuración del entorno de desarrollo (OSX/MacOS)</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#instalador_de_xcode">Instalador de XCode</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#instalacion_de_homebrew">Instalación de Homebrew</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#notas_para_osx_el_capitan">Notas para OSX El Capitan</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#instalacion_del_compilador">Instalación del compilador</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#instalacion_openocd">Instalación OpenOCD</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#conflictos_entre_openocd_y_driver_ftdi_del_sistema_operativo">Conflictos entre OpenOCD y driver FTDI del sistema operativo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_osx.html#conexion_serial_con_el_dispositivo">Conexión serial con el dispositivo</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="configuracion_del_entorno_de_desarrollo_osx_macos">Configuración del entorno de desarrollo (OSX/MacOS)</h1>
+<div class="level1">
+
+<p>
+Utilizaremos OSX en los ejemplos de cómo instalar las herramientas necesarias en nuestro sistema para poder compilar el firmware y grabarlo en la EDU-CIAA.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del entorno de desarrollo (OSX\/MacOS)&quot;,&quot;hid&quot;:&quot;configuracion_del_entorno_de_desarrollo_osx_macos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-226&quot;} -->
+<h2 class="sectionedit2" id="instalador_de_xcode">Instalador de XCode</h2>
+<div class="level2">
+
+<p>
+XCode debe descargarse desde el App Store. Tener en cuenta que en su versión actual (2015/10) son 3.6GB.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalador de XCode&quot;,&quot;hid&quot;:&quot;instalador_de_xcode&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;227-368&quot;} -->
+<h2 class="sectionedit3" id="instalacion_de_homebrew">Instalación de Homebrew</h2>
+<div class="level2">
+
+<p>
+Homebrew es un administrador de paquetes para OSX. Para instalarlo se debe ejecutar la siguiente instrucción en una ventana de la aplicación Terminal:
+</p>
+<pre class="code">  ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+  </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n de Homebrew&quot;,&quot;hid&quot;:&quot;instalacion_de_homebrew&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;369-660&quot;} -->
+<h2 class="sectionedit4" id="notas_para_osx_el_capitan">Notas para OSX El Capitan</h2>
+<div class="level2">
+
+<p>
+El software instalado por Homebew reside en el directorio /usr/local. Este directorio no existe al momento de la instalación del sistema y no podrá ser creado en El Capitan debido a SIP (System Integrity Protection).
+</p>
+
+<p>
+Para desactivar SIP, en el arranque del sistema presionar las teclas Comando y R al mismo tiempo hasta que aparezca el logo de la manzana. Una vez en la pantalla de recuperación, acceder al menú Utilidades → Terminal y ejecutar:
+</p>
+<pre class="code">  csrutil disable --without debug
+  </pre>
+
+<p>
+Reintentar la instalación de curl.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Notas para OSX El Capitan&quot;,&quot;hid&quot;:&quot;notas_para_osx_el_capitan&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;661-1232&quot;} -->
+<h2 class="sectionedit5" id="instalacion_del_compilador">Instalación del compilador</h2>
+<div class="level2">
+
+<p>
+Primero necesitaremos un compilador para ARM:
+</p>
+<pre class="code">  brew install gcc-arm-none-eabi</pre>
+
+<p>
+Comprobamos que la versión del compilador sea 4.8.4
+</p>
+<pre class="code">$ arm-none-eabi-gcc --version</pre>
+
+<p>
+Deberá aparecer la leyenda:
+</p>
+
+<p>
+<code>arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140725 (release) [ARM/embedded-4_8-branch revision 213147]
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</code>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n del compilador&quot;,&quot;hid&quot;:&quot;instalacion_del_compilador&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1233-1804&quot;} -->
+<h2 class="sectionedit6" id="instalacion_openocd">Instalación OpenOCD</h2>
+<div class="level2">
+
+<p>
+Para instalarlo:
+</p>
+<pre class="code">  brew install openocd</pre>
+
+<p>
+Para comprobar que la herramienta esté instalada, ejecutamos:
+</p>
+<pre class="code">$ openocd --version   </pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n OpenOCD&quot;,&quot;hid&quot;:&quot;instalacion_openocd&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1805-1972&quot;} -->
+<h2 class="sectionedit7" id="conflictos_entre_openocd_y_driver_ftdi_del_sistema_operativo">Conflictos entre OpenOCD y driver FTDI del sistema operativo</h2>
+<div class="level2">
+
+<p>
+Apple incluye en su sistema operativo un driver para los conversores seriales FTDI que no es compatible con OpenOCD. Para poder grabar la placa, es necesario descargar el controlador, ejecutar `make donwload` y luego volver a cargar el controlador:
+</p>
+<pre class="code">  sudo kextunload -b com.apple.driver.AppleUSBFTDI
+  make download
+  sudo kextload -b com.apple.driver.AppleUSBFTDI
+  </pre>
+
+<p>
+Si se desea automatizar esta tarea, se puede abrir el archivo Makefile de la carpeta ciaa-nxp e insertar esas líneas alrededor del comando openocd:
+</p>
+<pre class="code">@sudo kextunload -b com.apple.driver.AppleUSBFTDI || echo &quot;Sin descarga&quot;
+@openocd -f ciaa-nxp.cfg \
+	-c &quot;init&quot; \
+	-c &quot;halt 0&quot; \
+	-c &quot;flash write_image erase unlock $^ 0x1A000000 bin&quot; \
+	-c &quot;reset run&quot; \
+	-c &quot;shutdown&quot;
+@echo &quot;Reloading KEXT for FTDI access&quot;
+@sudo kextload -b com.apple.driver.AppleUSBFTDI || echo &quot;Falla al cargar&quot;</pre>
+
+<p>
+La contraseña del usuario será requerida para realizar las acciones de load/unload.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conflictos entre OpenOCD y driver FTDI del sistema operativo&quot;,&quot;hid&quot;:&quot;conflictos_entre_openocd_y_driver_ftdi_del_sistema_operativo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1973-3006&quot;} -->
+<h2 class="sectionedit8" id="conexion_serial_con_el_dispositivo">Conexión serial con el dispositivo</h2>
+<div class="level2">
+
+<p>
+Los ejemplos de CIAA utilizan el paquete pyserial para comunicación, para instalarlo en OSX:
+</p>
+<pre class="code">  
+  brew install python
+  pip install pyserial
+  </pre>
+
+<p>
+Una vez instalado, el comando para la comunicación es:
+</p>
+<pre class="code">  miniterm.py -p /dev/cu.usbserial-141B -b 115200</pre>
+
+<p>
+Ahora podremos grabar el firmware en la placa, siguiendo las instrucciones en <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware">Grabando el firmware en la placa</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conexi\u00f3n serial con el dispositivo&quot;,&quot;hid&quot;:&quot;conexion_serial_con_el_dispositivo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;3007-&quot;} --></div>
+</body>
+</html>

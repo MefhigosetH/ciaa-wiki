@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="proyecto,casosdeuso,aplicacionescriticas,aplicacionesferroviarias,monitordebarreras,faseconcepto,requisito3"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3"/>
+<link rel="canonical" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto';var JSINFO = {"id":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3","namespace":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias_-_fase_1_14concepto">Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto</h1>
+<div class="level1">
+
+
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=10&amp;tok=881b07&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="10" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o e Implementaci\u00f3n de un Monitor de Barreras Ferroviarias - Fase 1\/14: Concepto&quot;,&quot;hid&quot;:&quot;diseno_e_implementacion_de_un_monitor_de_barreras_ferroviarias_-_fase_1_14concepto&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-137&quot;} -->
+<h2 class="sectionedit2" id="requisito_3">Requisito 3</h2>
+<div class="level2">
+<p class="divalign-justify">La norma UNE EN 50126 indica que:</p><!--divalign-->
+<div class="plugin_note noteclassic">“el resultado de este requerimiento debe ser el de identificar fuentes de peligros que pudieran afectar el rendimiento RAMS del sistema, incluidas: <br/>
+
+&lt;fc #ffffff&gt;..&lt;/fc&gt;− la interacción con otros sistemas;<br/>
+
+&lt;fc #ffffff&gt;..&lt;/fc&gt;− la interacción con seres humanos.”
+</div><p class="divalign-justify">En consecuencia resulta:</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=20&amp;tok=360f0d&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="20" /></a>
+</p>
+
+</div>
+
+<h4 id="a_interaccion_con_seres_humanos">a) Interacción con seres humanos</h4>
+<div class="level4">
+
+<p>
+El sistema, en su operación normal,  resulta totalmente autonomo y no tiene interacción con humanos, excepto por situaciones tales como a) Consultas de un operador de barreras sobre el estado del sistema o b) Un técnico de mantenimiento que conecta una PC u otro dispositivo para descargar datos estadísticos de la actividad del sistema de barreras almacenados en la memoria del monitor, reparar el sistema o reemplazar una batería.
+</p>
+
+<p>
+Sin embargo, hay que considerar que posiblemente el equipo estará alojado dentro del armario de control de la barrera o agarrado al poste, y por lo tanto puede surgir una interacción cuando un técnico realice mantenimiento de la barrera, como por ejemplo, cambio de luces en la cruz de San Andrés, lubricación de partes móviles del mecanismo de barrera, regulación del brazo de barrera luego de cambio de madera, entre otros. En consecuencia, el equipo debería ser lo suficientemente seguro para el técnico y robusto para prevenir roturas.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=20&amp;tok=360f0d&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="20" /></a>
+</p>
+
+</div>
+
+<h4 id="b_interaccion_con_otros_sistemas">b) Interacción con otros sistemas</h4>
+<div class="level4">
+
+<p>
+Provienen de la conectividad del sistema con la central de monitoreo general de barreras. Esta interacción se lleva a cabo mediante mensajes de voz o SMS por la red GPRS o Ethernet o por fibra óptica o por cualquier enlace que disponga la red de ferrocarriles para datos ON LINE.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=20&amp;tok=360f0d&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="20" /></a>
+</p>
+<p class="divalign-justify">A su vez, las fuentes de peligros que afectan el rendimiento RAMS del sistema han sido clasificadas en internas y externas:</p><!--divalign-->
+
+<p>
+<em class="u">Internas</em>:
+</p>
+<ul>
+<li class="level1"><div class="li"> Falla en la determinación de peligros potenciales o actuales que se pueden presentar.</div>
+</li>
+<li class="level1"><div class="li"> Error en la determinación de cómo los peligros potenciales o actuales pueden ser controlados.</div>
+</li>
+<li class="level1"><div class="li"> Fallas en la instrucción de como hacer operaciones en la mejor y más segura manera o forma.</div>
+</li>
+<li class="level1"><div class="li"> Falta de compromiso del empleado en el proceso de seguridad.</div>
+</li>
+</ul>
+
+<p>
+<em class="u">Externas</em>:
+</p>
+<ul>
+<li class="level1"><div class="li"> Fallas en el sistema de barreras sobre el que deberá funcionar el Monitor de Barreras.</div>
+</li>
+<li class="level1"><div class="li"> Fallas en el sistema de suministro de energía eléctrica que alimenta el Monitor de Barreras.</div>
+</li>
+<li class="level1"><div class="li"> Fallas en el sistema de comunicaciones que provee de conectividad al Monitor de Barreras.</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=20&amp;tok=360f0d&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="20" /></a>
+</p>
+<p class="divalign-justify">[ <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4">Ir al Requisito 4 de la Fase de Concepto</a> ]</p><!--divalign-->
+<p class="divalign-justify">[ <a href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto.html" class="wikilink1" title="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto" data-wiki-id="proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto">Volver a la Página Inicial de la Fase de Concepto</a> ]</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requisito 3&quot;,&quot;hid&quot;:&quot;requisito_3&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;138-&quot;} --></div>
+</body>
+</html>

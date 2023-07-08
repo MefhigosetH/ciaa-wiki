@@ -1,0 +1,282 @@
+====== Generador de archivo OIL ======
+
+<note important>
+En construcción</note>
+
+===== Qué es OIL?  (Por si no está en otro lado) =====
+
+
+*) xxx
+El propósito del generador es producir archivos de encabezados .h y .c a partir de unos templates de C con php embebido que se ejectua según unos archivos configuración .oil y .oilx.
+
+
+
+===== Arquitectura =====
+
+Diagrama de clases
+
+
+  +---+
+  |Log|
+  +---+
+    ^
+    |  
+  +------------+          +------+
+  |OilGenerator|--------->|Helper|
+  +------------+          +------+  
+    |       |
+    |       v
+    |    +---------+       +---------+
+    |    |OilConfig|------>|OilParser|
+    |    +---------+       +---------+
+    |
+    |   +------------+
+    +-->|OutputWriter|
+        +------------+
+               A                                    (A = Herencia) 
+               |                                    (^v<> = Uso o composición)
+        +------+-------+       
+        |              |
+  +----------+   +------------+
+  |FileWriter|   |StdoutWriter|
+  +----------+   +------------+
+  
+
+Diagrama de componentes
+
+
+   +-----------+          +----------+          +-------------+
+   |+------------+        |+-----------+        |+--------------+
+   ||+-------------+      ||+------------+      ||+---------------+
+   +||  configs    |      +||  helpers   |      +||   templates   |
+    +|(.oil|.olix) |       +|   (.php)   |       +|(.c.php|.h.php)|
+     +-------------+        +------------+        +---------------+
+           |                     |                     |
+           +----------------+    |   +-----------------+
+                            |    |   |
+                            v    v   v
+  +--------------+        +------------+
+  | command line |------->| generator  |
+  | options and  |        +------------+
+  | defines      |               |
+  +--------------+               v 
+                           +----------+
+                           |+-----------+
+                           +|+------------+
+                            +|  salidas   |
+                             |  (.h|.c)   |
+                             +------------+
+
+===== Detalles =====
+
+generator.php contruye el objeto OilGenerator dándole un tipo de salida.
+
+OilGenerator procesa los argumentos, verifica la existencia de las entradas y salidas, carga los helpers declarados, parsea los oil/oilx e incluye cada template, que utilizando los métodos disponibles genera cada archivo objetivo, según estas reglas de nombres (completar)
+
+===== Interrelación de templates =====
+
+La implementación original permitía la comunicación directa entre templates, o sea, estos se cargaban en el mismo scope. 
+
+   clase OilGenerator
+       metodo run()                           \
+           para cada template en templates    |
+               activar buffer de salida       + scope original
+               evaluar template               |
+               salvar buffer de salida        /   
+
+
+Según #386 y la cadena "Consulta acerca de aislación de templates de OilGenerator", la nueva implementación encapsulará las llamadas impidiendo efectos colaterales entre templates.
+
+
+   clase OilGenerator
+       metodo run()
+           para cada template en templates
+               activar buffer de salida
+               llamada a metodo de objeto encapsulador   
+                   evaluar template                      } scope actual
+               salvar buffer de salida              
+
+Si hubiera necesidad concreta de que haya alguna comunicación, implementaremos algún mecanismo explícito.
+
+
+Con respecto a la invocación de helpers hay permanentes y efímeros. Los primeros son los cargados por linea de comando disponibles para todos los templates. Los efímeros los que se cargan en cada template.
+
+
+Carga efímera de Helper con invocación en el template:
+
+<code php>
+$this->loadHelper("modules/rtos/gen/ginc/HelperX.php");
+</code>
+
+Carga permanente por linea de comando:
+
+<code bash>
+-H modules/rtos/gen/ginc/HelperX.php
+</code>
+
+La inclusión de helpers brinda acceso a los métodos de un objeto Helper:
+
+<code php>
+$this->helper->multicore->getLocalList("/OSEK", "TASK");
+</code>
+
+Aún no está definido el comportamiento ante múltiples cargas del mismo Helper. El resultado es que cada carga pisa a la anterior y podría ser el comportamiento final deseado. Veremos.
+
+Para la migración hay que estar atentos a la aparición en el log de mensajes de warning o error referidos a variables indefinidas como $os, $priority y $tasks. Se soluciona copiando del template anterior que funcione y tenga las llamadas tipo 
+
+<code php>
+$tasks = $this->helper->multicore->getLocalList("/OSEK", "TASK");
+</code>
+
+Por ahora hay que repetir en cada template todas las llamadas. Si surge un patrón de uso, veremos de refactorizar.
+
+Por el momento no nos preocuparemos por la falta de performance de esta solución, ya que no es una operación frecuente.
+
+===== Ciclo de vida de un Helper =====
+
+El ciclo sería primero definir las funciones propias de un template en el mismo. Si hay oportunidad de reutilización, va a un Helper local al módulo o proyecto. Si su utilidad es transversal, pasaría a ... la carpeta de Helpers del generador o alguna ubicación común a definir.
+
+TODO: los Helpers deben proveer un método de ayuda e implementar en algún lado que ante ... --help-helpers se exploren los Helpers y se muestre esa ayuda. Esto implica que debe existir la clase AbstractHelper.
+
+===== Opciones =====
+
+Las opciones se pueden consultar con 
+<code bash>
+php modules/rtos/generator/generator.php --help
+
+php generator.php [-l] [-h] [--cmdline] \
+     [-b path]\
+     [-Ddef[=definition]] \
+     -c <CONFIG_1> [<CONFIG_N>] \
+     -o <OUTPUTDIR> \
+     -t <TEMPLATE_1> [<TEMPLATE_N>] \
+     -[ -H <HELPER_1> [HELPER_N]]
+   
+     -c   indicate the configuration input files
+     -o   output directory
+     -t   indicates the templates to be processed
+  optional parameters:
+     -b   relative base path (default "/templates/")
+     -H   load helpers
+     -h   display this help
+     -l   displays a short license overview
+     -D   defines
+     --cmdline print the command line
+</code>
+
+  
+StdoutWriter existe a fines de testeo y si mal no recuerdo, no funciona bien por el hecho de estar usando ob_*.
+
+=== Elección del lenguaje ===
+
+Se ha elegido php por que aunque es un lenguaje completo, está pensado para templating. Se pudo haber usado django, twig o similares, pero en esos casos había que incorporar un lenguaje y un sistema de templating.
+
+Los programas php estaban pensados originalmente para intercalar código con el formato html, al igual que jsp (no?). Esto viene muy bien pues permite escribir archivos .h o .c con partes estáticas y resolver mediante código las partes dinámicas, provenientes de los .oil con ayuda de los helpers.
+
+
+
+Una particularidad muy especial es que existen funciones de buffering (ob_*) para manipular el stdout, lo que permite intercalar código C estático con el código embebido en php con extrema sencillez.
+
+Estas piezas de código, se ejecutan en el contexto de una llamada a un método de un objeto OilGenerator, que previamente ha cargado la configuración y mediante una serie de métodos disponibles xxxxx
+
+
+
+===== Testing =====
+Se está utilizando test unitario con phpunit y funcional con shunit...
+
+
+===== ¿Cómo hago para... =====
+
+
+
+
+==== ... hacer un template? =====
+
+Copiar el ejemplo para tener la licencia
+
+El template consta de dos partes intercaladas, las estáticas y las dinámicas
+
+Las estáticas son las que van de modo incondicional y fijo, como la licencia.
+
+Las dinámicas son las que dependen de distintos factores variables como:
+  * Configuración OIL
+  * Defines pasados por linea de comando
+
+Lo contenidos dinámicos pueden ser tan sencillos como mostrar un define:
+
+<? 
+
+la ... de un componente
+
+...
+
+
+o la ...
+
+...
+
+Los loops tienen contadores implícitos que se pueden aprovechar para simplificar el código.
+
+<code php>
+foreach ($coleccion as $contador=>$elemento) {
+   print("elemento: " . $elemento->nombre . " posición: " . $contador);
+}
+</code>
+
+producirá:
+
+<code>
+elemento nombreUno posición: 0
+elemento nombreDos posición: 1
+elemento nombreTres posición: 2
+</code>
+
+y es equivalente a:
+
+<code php>
+$contador = 0;
+foreach ($coleccion as $elemento) {
+   print("elemento: " . $elemento->nombre . " posición: " . $contador++);
+}
+</code>
+
+o tambien a
+
+<code php>
+for($contador = 0; $contador < $coleccion.size(); $contador++) {
+   print("elemento: " . $elemento->nombre . " posición: " . $contador++);
+}
+</code>
+
+
+
+
+
+
+Los recursos disponibles en el contexto del template son
+  * log
+  * config
+  * helper
+
+y se acceden mediante <code php>$this-></code>
+
+en particular, la clase Log provée:
+
+<code php>
+$this->log->info($msg);
+$this->log->warn($msg);
+$this->log->error($msg);
+</code>
+
+En caso de cancelar, por ahora hay que tirar una excepción usando la OilGeneratorException
+
+<code php>
+throw new OilGeneratorException($msg, $exitCode);
+</code>
+
+
+
+==== ... para utilizar unos templates con algunos config y algunos con otros? ====
+
+<note important>ver si es un escenario factible y reformular</note>
+

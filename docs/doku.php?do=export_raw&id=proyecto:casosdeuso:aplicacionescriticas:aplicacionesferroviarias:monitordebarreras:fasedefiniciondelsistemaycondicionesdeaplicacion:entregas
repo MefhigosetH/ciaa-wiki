@@ -1,0 +1,36 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Entregas =====
+
+###
+La norma UNE EN 50126 establece que:
+###
+
+<note>
+<fc #ffffff>...</fc> - "Los resultados de esta fase deben documentarse, así como cualquier  supuesto y justificación realizada durante la fase \\
+<fc #ffffff>...</fc> - En las entregas se debe incluir la Política RAMS correspondiente al sistema \\
+<fc #ffffff>...</fc> - En las entregas se debe incluir el Plan de Seguridad correspondiente al sistema. Debe tratar todos los aspectos del sistema, subsistema y componentes, incluyendo hardware y software (Ver EN 50128 para el caso del software) \\
+<fc #ffffff>...</fc> - Las entregas de esta fase forman aporte clave de información para las restantes fases del ciclo de vida."
+</note>
+
+
+###
+Como resultado del trabajo realizado en esta fase se entregan dos documentos:
+###
+  * [[https://drive.google.com/open?id=1yK_NtMM_hnIxtfcH0OMz_xfrGx32LMkXINeizhdlCKw|Plan de Seguridad]]
+  * [[https://drive.google.com/open?id=1XdhCxpmclMSLnCMTHLq1Wkb4V5drS9IWN5K78xnE5Oc|Políticas RAMS]]
+
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion:verificacion|Ir a la Verificacion de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Volver a la Página Inicial de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 

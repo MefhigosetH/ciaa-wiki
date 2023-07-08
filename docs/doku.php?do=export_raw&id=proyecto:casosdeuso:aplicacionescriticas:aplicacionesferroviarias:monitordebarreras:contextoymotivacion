@@ -1,0 +1,40 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias ======
+
+{{ :blanco.png?10 | }}
+
+===== Contexto y motivación =====
+
+###
+En el marco del Proyecto CIAA se busca lograr un acercamiento al desarrollo de soluciones con alto valor agregado y capacitar en estas temáticas a estudiantes, docentes, profesionales e investigadores. Para eso se intenta conseguir un primer acercamiento a las aplicaciones críticas y eventualmente hacer uso de la plataforma [[desarrollo:ciaa_safety:start|CIAA-Safety]] que se encuentra actualmente en desarrollo. 
+###
+
+###
+A su vez, existen dos proyectos de investigación acreditados actualmente en curso que están directamente relacionados con el diseño de soluciones electrónicas para aplicaciones en sistemas críticos:
+###
+
+  * **Proyecto de Desarrollo Tecnológico y Social (PDTS) CIN-CONICET Nº151** “Desarrollo de una Computadora Industrial Abierta Argentina (CIAA) para aplicaciones que requieran de seguridad funcional certificada”, $200.000 (2016/2017).
+  * **Proyecto Desarrollo Estratégico (PDE) UBA Nº23** “Controlador electrónico para barreras automáticas ferroviarias con nivel de integridad de seguridad certificable hasta SIL4”. $75.000 (2016/2017).
+
+###
+En relación con el Proyecto UBA-PDE Nº23 se optó por realizar un primer proyecto relativamente simple en el área de  las aplicaciones ferroviarias con el fin de alcanzar los siguientes objetivos:
+###
+
+  * **Aprendizaje**: adquirir los conocimientos y experiencias de nivel básico e intermedio en relación con las aplicaciones ferroviarias de seguridad crítica.
+  * **Educativos**: presentar un caso de estudio de acceso libre y gratuito que sirva para formar a estudiantes y docentes en las metodologías propias del desarrollo de sistemas críticos.
+  * **Vinculación**: establecer relaciones con empresas, organismos e instituciones ligadas al sector ferroviario a partir del abordaje de un caso concreto de aplicación.
+
+
+###
+En este contexto durante la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/escuela/|Sexta Escuela para la Enseñanza de los Sistemas Embebidos]] desarrollada del 29 de mayo al 3 de junio de 2016 en la ciudad de Alta Gracia, Provincia de Córdoba, se organizó un curso de Diseño de Sistemas Críticos. En este curso se presentaron los conceptos generales relacionados con el diseño de los sistemas críticos y se eligió un primer proyecto de aplicación en el campo de los sistemas ferroviarios: el Diseño e Implementación de un Monitor de Barreras. 
+###
+
+###
+Se sugiere continuar la lectura en alguna de las siguientes páginas:
+###
+
+  * [[..:monitordebarreras:contextoymotivacion:porquetienetantovalorunsistemacriticoparaaplicacionesferroviarias|¿Por qué es tan difícil y valioso diseñar e implementar un sistema crítico para aplicaciones ferroviarias y qué metodologías de trabajo se recomiendan?]]
+  * [[..:monitordebarreras:contextoymotivacion:justificacionelección|¿Por qué se eligió el Proyecto del Monitor de Barreras Ferroviarias?]]
+  * [[..:monitordebarreras:contextoymotivacion:queesunmonitordebarrerasferroviarias|¿En qué consiste un sistema Monitor de Barreras Ferroviarias?]]
+  * [[..:monitordebarreras:contextoymotivacion:inicio|¿Cuál es el primer paso para realizar el diseño e implementación de un Monitor de Barreras Ferroviarias?]]
+
+{{ :blanco.png?10 | }}

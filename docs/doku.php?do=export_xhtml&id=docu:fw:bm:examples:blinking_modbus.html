@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:examples:blinking_modbus</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,examples,blinking_modbus"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:examples:blinking_modbus&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:examples"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:examples:blinking_modbus.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:examples:blinking_modbus"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:examples:blinking_modbus.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:examples';var JSINFO = {"id":"docu:fw:bm:examples:blinking_modbus","namespace":"docu:fw:bm:examples","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:examples:blinking_modbus.html#blinking_modbus">Blinking Modbus</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:examples:blinking_modbus.html#blinkin_modbus_slave">Blinkin Modbus Slave</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:examples:blinking_modbus.html#blinkin_modbus_master">Blinkin Modbus Master</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="blinking_modbus">Blinking Modbus</h1>
+<div class="level1">
+
+<p>
+En el Firmware de la CIAA tenemos dos ejemplos de uso del protocolo Modbus, blinking_modbus_slave y blinking_modbus_master. Estos están armados de manera tal que si programamos una placa con el ejemplo slave, otra con con el master y las interconectamos a través del la uart 0 (RS485), el estado de las entradas de la primera se verá reflejado en las salidas de la segunda y viceversa.
+Ambos ejemplos transportan los mensajes por el puerto serie conforme al formato Modbus <abbr title="American Standard Code for Information Interchange">ASCII</abbr> a una velocidad de 115200 baudios, 8 bits de datos, sin paridad y 1 bit de stop.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Blinking Modbus&quot;,&quot;hid&quot;:&quot;blinking_modbus&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-595&quot;} -->
+<h2 class="sectionedit2" id="blinkin_modbus_slave">Blinkin Modbus Slave</h2>
+<div class="level2">
+
+<p>
+En este ejemplo, se puede ver el uso de Modbus en modo slave, comunicando los mensajes en formato <abbr title="American Standard Code for Information Interchange">ASCII</abbr>. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Blinkin Modbus Slave&quot;,&quot;hid&quot;:&quot;blinkin_modbus_slave&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;596-736&quot;} -->
+<h3 class="sectionedit3" id="descripcion_de_tareas">Descripción de tareas</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="inittask">InitTask</h4>
+<div class="level4">
+
+<p>
+Es la tarea encargada de inicalizar el kernel de la CIAA, abrir los dispositivos utilizado y los distintos componentes del Stack Modbus. Además configura la alarma ActivateModbusTask para que sea activada luego de 100 ticks (100 milisegundos) y con una periodicidad de 5 ticks (5 milisegundos).
+Es importate aclarar que es la primera en ejecutarse y luego no vuelve a ejecutarse más.
+</p>
+
+</div>
+
+<h4 id="modbusslave">ModbusSlave</h4>
+<div class="level4">
+
+<p>
+Se encarga de atender las tareas del Stack Modbus. Para esto se llama a la función ciaaModbus_gatewayMainTask() pasando como argumento el handler del gateway utilizado.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n de tareas&quot;,&quot;hid&quot;:&quot;descripcion_de_tareas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;737-1365&quot;} -->
+<h3 class="sectionedit4" id="comandos_modbus">Comandos Modbus</h3>
+<div class="level3">
+
+<p>
+Los comandos que se pueden ejecutar son 0x03 Read Holding Registers y 0x10 Write Multiple Registers.
+En ambos casos el stack Modbus ejecuta el call back correspondiente pasando los siguientes argumentos:
+</p>
+<pre class="code">static uint16_t cmd0x03ReadHoldingReg(
+       uint16_t start,
+       uint16_t quantity,
+       uint8_t * exceptioncode,
+       uint8_t * buf
+       );</pre>
+
+<p>
+start: dirección de inicio para comenzar a leer registros (este valor es recibido desde el master)
+quantity: cantidad de registros consecutivos que se desean leer (este valor es recibido desde el master)
+exceptioncode: código de excepción en caso de producirse un error (debe ser escrito por el slave)
+buf: valores de los registros leídos (debe ser escrito por el slave)
+retorno: cantidad de registros leídos (debe coincidir con quantity). En caso de producirse un error, retornar -1
+</p>
+<pre class="code">static void cmd0x10WriteMultipleReg(
+      uint16_t start,
+      uint16_t quantity,
+      uint8_t bytecount,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );</pre>
+
+<p>
+start: dirección de inicio para comenzar a escribir registros (este valor es recibido desde el master)
+quantity: cantidad de registros consecutivos que se desean escribir (este valor es recibido desde el master)
+bytecount: cantidad de bytes que se van a escribir (este valor es recibido desde el master)
+exceptioncode: código de excepción en caso de producirse un error (debe ser escrito por el slave)
+buf: valores a escribir en registros (es recibido desde el master)
+</p>
+<div class="plugin_note notetip">Estas callback no deben bloquearse ya que son ejecutadas desde la tarea ModbusSlave.
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comandos Modbus&quot;,&quot;hid&quot;:&quot;comandos_modbus&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1366-3015&quot;} -->
+<h2 class="sectionedit5" id="blinkin_modbus_master">Blinkin Modbus Master</h2>
+<div class="level2">
+
+<p>
+En este ejemplo, se puede ver el uso de Modbus en modo master, comunicando los mensajes en formato <abbr title="American Standard Code for Information Interchange">ASCII</abbr>. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Blinkin Modbus Master&quot;,&quot;hid&quot;:&quot;blinkin_modbus_master&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:5,&quot;range&quot;:&quot;3016-3158&quot;} -->
+<h3 class="sectionedit6" id="descripcion_de_tareas1">Descripción de tareas</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="inittask1">InitTask</h4>
+<div class="level4">
+
+<p>
+Es la tarea encargada de inicalizar el kernel de la CIAA, abrir los dispositivos utilizado y los distintos componentes del Stack Modbus. Además configura dos alarmas:
+</p>
+<ul>
+<li class="level1"><div class="li"> ActivateModbusTask: Utilizada para activar la tarea que atiende el Stack Modbus. Se activada luego de 5 ticks (5 milisegundos) y con una periodicidad de 5 ticks (5 milisegundos).</div>
+</li>
+<li class="level1"><div class="li"> AlarmCallBackPollingSlave: Utilizada para ejecutar el call back CallBackActivatePollingSlave. Esta función activar la tarea PollingSlave si se encuentra suspendida. Se activada luego de 5 ticks (5 milisegundos) y con una periodicidad de 100 ticks (100 milisegundos).</div>
+</li>
+</ul>
+
+<p>
+Es importate aclarar que es la primera en ejecutarse y luego no vuelve a ejecutarse más.
+</p>
+
+</div>
+
+<h4 id="modbusmaster">ModbusMaster</h4>
+<div class="level4">
+
+<p>
+Se encarga de atender las tareas del Stack Modbus. Para esto se llama a la función ciaaModbus_gatewayMainTask() pasando como argumento el handler del gateway utilizado.
+</p>
+
+</div>
+
+<h4 id="pollingslave">PollingSlave</h4>
+<div class="level4">
+
+<p>
+Esta tarea ejecuta las funciones 0x03 y 0x10 sobre el slave, la primera es para leer el estado de las entradas y la segunda es para escribir las salidas.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Descripci\u00f3n de tareas&quot;,&quot;hid&quot;:&quot;descripcion_de_tareas1&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:6,&quot;range&quot;:&quot;3159-&quot;} --></div>
+</body>
+</html>

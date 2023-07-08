@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:filesystem</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,filesystem"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:filesystem&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:filesystem.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:filesystem"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:filesystem.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:filesystem","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="file_system_de_la_ciaa">File System de la CIAA</h1>
+<div class="level1">
+
+<p>
+El <em>File System</em> (en español sistema de archivos) es en general una capa de abstracción por software con la cual podemos manipular datos, algunas veces dentro de una memoria periférica. Un <em>File System</em> (de ahora en más se abreviara como <strong>FS</strong>) provee un modelo dónde nuestros datos se ven representados por archivos y estos se organizan dentro de carpetas. 
+</p>
+
+<p>
+En una primera instancia el <strong>FS</strong> estructura la información de manera de poder acceder de forma transparente a ella desde nuestra aplicación. Las aplicaciones industriales requieren de la posibilidad de almacenar datos de forma persistente localmente, por motivos diversos. El <strong>FS</strong> se encarga de proveernos una manera simple de trabajar con nuestros datos. Vale destacar que la tarea más importante del <strong>FS</strong> es la estructuración de nuestra información, por lo que se pueden utilizar un <strong>FS</strong> sin que estos trabajen directamente sobre un medio de almacenamiento. Este es un punto importante, puesto que se suele asociar la idea de un <strong>FS</strong> estrictamente con una unidad de disco (pensando en una PC), sin embargo este <em>matrimonio</em> no necesariamente se celebra la mayoría de las veces.
+</p>
+
+<p>
+En el caso del <em>firmware</em> de la <strong>CIAA</strong>, se implementará una capa de abstracción aún más arriba del <strong>FS</strong> que se llama <strong>VFS</strong> y hace referencia a un <em>Virtual FileSystem Switch</em> (en español conmutador de sistema de archivos virtual). La función del <strong>VFS</strong> es otorgar una interfaz uniforme. Los <strong>FS</strong> tiene un interfaz concreta según el medio en el que trabaja la estructuración de la información, entonces un <strong>FS</strong> pude trabajar sobre una memoria periférica mientras que otro puede trabajar sobre una red. En este caso, el <strong>VFS</strong> permite acceder de forma homogénea a la información que administran los diferentes <strong>FS</strong> sin necesidad de que la aplicación conozca el <strong>FS</strong> en concreto.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:filesystem&amp;media=desarrollo:firmware:vfs-layer.png.html" class="media" title="desarrollo:firmware:vfs-layer.png"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=f93283&amp;media=desarrollo:firmware:vfs-layer.png" class="mediaright" loading="lazy" alt="" width="400" /></a>
+Para aclarar ideas, podemos enfocarnos en la imagen de la derecha. Sí imaginamos estos conceptos como capas, podemos observar el orden de ellas en la imagen. Cabe aclarar que la capa del <strong>FS</strong>, estaría compuesta por varios componentes que serían los <strong>FS</strong> en concreto según el <em>medio</em> en el que trabaja, o sea, podemos pensar en estos componentes como <em>módulos</em>. Este acercamiento nos permite definir de manera precisa responsabilidades: 
+</p>
+<ul>
+<li class="level1"><div class="li"> System call interface: APIs para las aplicaciones.</div>
+</li>
+<li class="level1"><div class="li"> Virtual FileSystem Switch: Mantiene un registro de los archivos abiertos, puntos de montaje, etc.</div>
+</li>
+<li class="level1"><div class="li"> File System: Comprende como se implementa efectivamente el sistema de archivo. Puede capturar y almacenar los datos para un archivo, obtiene el contenido de un directorio, crear y borra tanto archivos como directorios. </div>
+</li>
+<li class="level1"><div class="li"> Disk driver and buffer cache: Módulo que efectivamente lee y escribe el medio.</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

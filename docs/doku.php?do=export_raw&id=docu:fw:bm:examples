@@ -1,0 +1,20 @@
+====== Ejemplos ======
+
+El Firmware cuenta con varios ejemplos los cuales se encuentran en la carpeta **examples** y pueden ser utilizados como base para iniciar cualquier proyecto.
+
+En la release 0.6.1 de Firmware hay 8 ejemplos que pueden ser utilizados para comenzar. En esta sección se explican únicamente algunos de ellos.
+
+Cualquiera de los ejemplos puede ser copiado y utilizado de base para nuevos proyectos. Por ejemplo con el siguiente comando:
+
+<code>
+cp -r examples/blinking projects/my_proyect
+</code>
+
+Y adaptando el Makefile.mine indicado
+
+  * PROJECT_PATH = projects/my_project
+
+La carpeta project es ignorada por el git del Firmware. Te recomendamos inicializar tu propio repositorio para mantener el código de tu proyecto versionado :-).
+
+
+

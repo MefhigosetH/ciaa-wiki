@@ -1,0 +1,48 @@
+====== La CIAA en Automatización Industrial ======
+
+###
+Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en procesos de **Automatización Industrial**.
+###
+
+----
+
+===== Controlador de limpieza de filtros de aire =====
+
+[[http://www.hitec.com.ar/|{{ HITEC.png?200}}]]
+
+###
+La empresa [[http://www.hitec.com.ar/|Hitec S.R.L.]] está desarrollando el control para automatizar un sistema de limpieza de filtrado de aire, que forma parte de un [[http://cronimo.com/div_equipamiento/productos_multicota.html|sistema de recubrimiento de comprimidos]].
+###
+
+{{limpieza_filtros_hitec.png?200 |Unidad de tratamiento de aire}}
+
+###
+Actualmente el control de este proceso y de otros más se realiza por medio de una PC industrial ubicada en el tablero, lo que obliga a realizar el cableado desde el mismo hasta el banco de filtros. Se propone dividir este esquema, dedicando unidades exclusivas a las diferentes partes de control, lo cual facilitaría las tareas de instalación. Así, la CIAA se utilizaría exclusivamente para la automatización de la limpieza de los filtros de aire de salida, manteniendo sólo un enlace de comunicaciones con la PC, tanto para ser programada como para enviarle el estado de las alarmas.
+###
+
+{{ HITEC_sistema_automatizacion.png?200|Control de limpieza de filtros de aire}}
+###
+**¿Cómo funciona la automatización?**: Cuando se detecta que la señal de presión diferencial ∆P supera un cierto límite H se activa una rutina de limpieza, mediante la cual se van activando las salidas digitales de a una por vez, a cierto período de tiempo hasta que ∆P cae a un valor aceptable L. Si ∆P alcanza un valor muy alto HH se activa una alarma. Todos estos límites (HH, H y L) son funciones del caudal C que está circulando.
+###
+
+
+----
+
+===== Control de un compresor industrial =====
+
+[[http://www.dmdcompresores.com.ar/dmd-compresores/|{{ DMD.png?140}}]]
+
+###
+[[http://www.dmdcompresores.com.ar/dmd-compresores/|DMD Compresores]] se encuentra desarrollando una solución de automatización basada en la CIAA. En una primera etapa la CIAA se utilizará para reemplazar lógicas cableadas. En siguientes etapas se planea la incorporación de funciones de diagnóstico, operación, alarmas y optimización, propias de soluciones basadas en PLCs.
+###
+
+###
+La empresa valora de la CIAA su versatilidad y desearía también incorporar a futuro lógicas correspondientes a etapas externas al compresor, tales como la etapa de secado.
+###
+
+{{..DMD_Compresor_2.jpg?230 |DMD}}
+
+###
+**¿Cómo funciona el control?**: La lógica principal de funcionamiento es un lazo cerrado que controla la velocidad del compresor a tornillo. Las restantes lógicas definen el funcionamiento de arranque/parada a través de señales digitales tanto de entrada/salida (por ejemplo pulsadores de marcha/parada, control de ventilación) y señales analógicas de entrada (por ejemplo temperaturas del compresor o ambiente).
+###
+----

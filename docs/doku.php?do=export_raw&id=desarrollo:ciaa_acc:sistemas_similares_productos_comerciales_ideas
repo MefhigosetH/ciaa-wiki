@@ -1,0 +1,48 @@
+====== Diseños de referencia ======
+
+A continuación se listan algunos productos para tener como referencia.
+
+===== Zynq para Arduino =====
+[[https://hackaday.io/project/6633-arduino-compatible-zynq-shield | Arduino Compatible Zynq Shield]]
+
+===== Single Board Computer con Zynq =====
+Proyecto Open Hardware, están disponibles los esquemáticos y más información. La más económica cuesta USD 99.
+
+[[https://www.parallella.org/board | Parallela Board]]
+
+===== Zedboard =====
+
+Kit de desarrollo completo, es una placa única con todas las interfaces disponibles, cuesta USD 495.
+
+[[http://zedboard.org/product/zedboard | Zedboard]].[[http://www.digikey.com/product-detail/en/410-248P-KIT/1286-1043-ND/4840855 | Zedboard Link Digikey]]
+
+Otro producto de Zedboard.org es un SoM con Zynq llamado PicoZed. Los precios varían entre USD 249 y USD 425.
+
+[[http://zedboard.org/product/picozed | PicoZed]].[[http://zedboard.org/buy|Precios PicoZed]] 
+
+===== ZYBO Development Board =====
+Kit de desarrollo de Digilent, cuesta USD 189.
+
+[[http://digilentinc.com/Products/Detail.cfm?NavPath=2,400,1198&Prod=ZYBO | ZYBO]]. [[http://www.digikey.com/product-detail/en/410-279P-KIT/1286-1044-ND/4840864|ZYBO Link Digikey]]
+
+===== PCIe/104 Single Board Computer con Zynq =====
+[[http://www.sundance.technology/som-cariers/pc104-boards/emc%C2%B2-dp-carrier/ | EMC2-Z7015]]
+
+===== SoM SMARC con Zynq =====
+Consulté a la empresa y me dijeron que todavía no está a la venta.
+
+[[http://www.fpga.sx/system-on-a-chip-sxom-k7.html | SXoM-K7]]
+
+===== SoM Zynq Bora Xpress =====
+SoM italiano de la empresa Dave Embedded Systems, tiene tres conectores de alta velocidad. 
+
+[[http://www.dave.eu/products/som/xilinx/zynq-XC7Z015-XC7Z030_bora-xpress|Zynq Bora Xpress]]
+
+===== SoM Zynq Z-7030 =====
+SoM alemán de la empresa Trenz Electronic, cuesta EUR 379. Sólo trae memoria RAM y nada más. 
+
+[[http://shop.trenz-electronic.de/en/TE0715-03-30-1C-Xilinx-Zynq-Z-7030-SoC-Micromodule-XC7Z030-1SBG485C-com.-temp.-range|Xilinx Zynq Z-7030 SoC Micromodule]]
+
+Para usarlo hay que comprar la carrier también, que cuesta EUR 149 adicionales:
+
+[[http://shop.trenz-electronic.de/en/TE0703-04-TE0703-Carrier-Board-for-TE0720-Zynq-SoC-Micromodule|TE0703 - Carrier Board for TE0720 Zynq SoC Micromodule]]

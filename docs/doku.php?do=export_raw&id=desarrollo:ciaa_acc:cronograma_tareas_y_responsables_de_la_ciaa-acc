@@ -1,0 +1,30 @@
+====Responsables que figuran en la primera presentación del PICT====
+
+^  Rol ^ Responsable ^ 
+| Investigador Responsable | Ariel Lutenberg | 
+| Grupo Colaborador - Personal Técnico | Alejandro Furfaro |  
+| Grupo Colaborador - Personal Técnico | Pablo Ridolfi |
+| Grupo Colaborador - Personal Técnico | Juan Cecconi |
+| Grupo Colaborador - Personal Técnico | Guillermo Güichal |
+
+====Responsables de la ejecución del proyecto====
+
+^  Área   ^ Responsable |
+| Director general de proyecto | Ariel Lutenberg | 
+| Coordinación del proyecto en INTI | Noelia Scotti | 
+| Diseño de Hardware | Diego Alamon | 
+| Diseño de Software| Martín Ribelotta, Guillermo Güichal y Leandro Echevarría  |
+| Revisión de Hardware | Martín Ribelotta |
+| Colaboración en el diseño de Hardware y pruebas iniciales | Rodrigo Melo y Bruno Valinoti |
+
+
+====Cronograma propuesto====
+
+===Año 1===
+^ Actividad ^M01^M02^M03^M04^M05^M06^M07^M08^M09^M10^M11^M12^  
+| Diseño de Arquitectura    |X|X|X|X| | | | | | | | |  
+| Diseño de Hardware        | | |X|X|X|X|X|X| | | | |  
+| Diseño de Firmware        | | |X|X|X|X|X|X|X|X|X|X|  
+| Simulaciones y tests      | | |X|X|X|X|X|X|X|X|X|X|  
+| Construcción de prototipo | | | | | | | | |X|X|X|X|  
+| Publicación de resultados | | | | | | | | |X| | |X|  

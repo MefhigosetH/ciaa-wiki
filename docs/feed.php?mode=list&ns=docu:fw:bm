@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> docu:fw:bm</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:11:40+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:estructura&amp;rev=1428841918&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:examples&amp;rev=1441480940&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide&amp;rev=1428779155&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:make&amp;rev=1428845056&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:project&amp;rev=1441475322&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:woide&amp;rev=1428841855&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:estructura&amp;rev=1428841918&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-12T12:31:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:estructura</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:estructura&amp;rev=1428841918&amp;do=diff</link>
+        <description>Estructura de directorios
+El CIAA-Firmware está construido de forma modular. Para la mayoria de los usuarios puede que alcance saber que existe un directorio de ejemplos (examples). Esta página es para aquellos que quieran conocer un poco más en detalle la estructura del Firmware.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:examples&amp;rev=1441480940&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-05T19:22:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:examples</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:examples&amp;rev=1441480940&amp;do=diff</link>
+        <description>Ejemplos
+
+El Firmware cuenta con varios ejemplos los cuales se encuentran en la carpeta examples y pueden ser utilizados como base para iniciar cualquier proyecto.
+
+En la release 0.6.1 de Firmware hay 8 ejemplos que pueden ser utilizados para comenzar. En esta sección se explican únicamente algunos de ellos.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide&amp;rev=1428779155&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-11T19:05:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:ide</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:ide&amp;rev=1428779155&amp;do=diff</link>
+        <description>IDE
+
+El IDE le provee al desarrollador de Firmware (programador en C/C++) la posibilidad de trabjar en un ambiente amigable y plug&amp;play. Todos los tools necesarios para poder desarrollar aplicaciones en el Firmware serán instaladas de forma automática, esto incluye:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:make&amp;rev=1428845056&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-12T13:24:16+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:make</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:make&amp;rev=1428845056&amp;do=diff</link>
+        <description>Make
+Para compilar el proyecto se utiliza GNU Make, de manera que la compilación pueda fácilmente ser cambiada mediante un archivo de configuración para distintos arquitecturas, compiladores, etc. según la necesidad del usuario. La estructura fue realizada para poder crear nuevos módulos de forma sencilla.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:project&amp;rev=1441475322&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-05T17:48:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:project</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:project&amp;rev=1441475322&amp;do=diff</link>
+        <description>Mi primer proyecto
+
+En el enlace que está a continuación podrás descargar un documento que explica los pasos a seguir para crear tu primer proyecto usando el Firmware de la CIAA.
+
+[Instrucciones para crear mi primer proyecto]</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:woide&amp;rev=1428841855&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-12T12:30:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:woide</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:woide&amp;rev=1428841855&amp;do=diff</link>
+        <description>Trabajando sin IDE
+
+El Firmware ofrece un IDE para poder trabajar de forma comoda y amigable, sin embargo para usuarios experimentados que prefieren utilizar otro editor de texto en vez de eclipse pueden hacer uso otros tools. Esto es posible gracias a que el entorno de desarrollo y el Firmware no son un mismo producto sino 2 interconectados a travez del makefile.</description>
+    </item>
+</rdf:RDF>

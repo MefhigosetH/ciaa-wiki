@@ -1,0 +1,24 @@
+==== El bus PCI y sus señales ====
+
+Respetando la asignación de los pines de alimentación en el mismo orden que hace referencia “The PCI Local Bus Specification Revision 2.2.” las demás señales se distribuyen en el bus de tal manera que en esta primera versión de la CIAA Safety contemple la mayor cantidad de  puertos y periféricos más comunes utilizados en la mayoría de los microcontroladores. De esta manera tratamos de desarrollar un estándar que debe ser respetado en desarrollos futuros. (Sujeto a revisión)
+
+De acuerdo a la disponibilidad de funcionalidades que presenta el seleccionado microcontrolador (Ver [[hardware_cpu|CPU]]), el bus PCI quedaría de la siguiente manera:
+
+{{ :desarrollo:ciaa_safety:propuesta_pci-104.png |}}
+
+Como puede observarse en esta disposición de señales, el bus PCI contempla:
+
+
+  * **Alimentación** (GND, 3.3V, 5V, +12V, -12V, VI/O)
+  * **USB** (VBUS, D+, D-) 
+  * **UART1** (LINRX, LINTX): estos pines aceptan la función de GPIO
+  * **UART2** (SCIRX, SCITX): estos pines aceptan la función de GPIO
+  * **CAN1** (CAN1-STB, CAN1RX, CAN1TX)
+  * **CAN2** (CAN2-STB, CAN2RX, CAN2TX)
+  * **I2C** (I2C_SCL, I2C_SDA): estos pines aceptan la función de GPIO
+  * **ETHERNET** (ETH_TXP, ETH_TXN, ETH_RXP, ETH_RXN)
+  * **ADC** (ADREFHI, ADREFLO, AD1IN[0], AD1IN[1], AD1IN[2], AD1IN[3], AD1IN[4], AD1IN[5], AD1IN[6], AD1IN[7], AD1IN[8], AD1IN[9], AD1IN[10], AD1IN[11], AD1IN[12], AD1IN[13], AD1IN[14], AD1IN[15], AD1IN[16], AD1IN[17], AD1IN[18], AD1IN[19])
+  * **GPIO** (GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO15, GPIO16, GPIO17, GPIO18, GPIO19)
+  * **RESTABLECIOMIENTO Y CONTROL** ( NERROR, WARMRST, POWRST)
+
+

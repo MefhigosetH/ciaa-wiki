@@ -1,0 +1,67 @@
+====== Configuración del entorno de desarrollo (Linux) ======
+
+Utilizaremos Ubuntu en los ejemplos de cómo instalar las herramientas necesarias en nuestro sistema para poder compilar el firmware y grabarlo en la EDU-CIAA.
+
+===== Instalación del compilador =====
+
+Primero necesitaremos un compilador para ARM el cual descargaremos del siguiente link: [[https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2|arm-none-eabi-gcc para Linux]] o accediendo al sitio [[https://launchpad.net/gcc-arm-embedded|https://launchpad.net/gcc-arm-embedded]].
+
+<note important>Todos los comandos deberán ejecutarse como root</note>
+
+Una vez obtenido el archivo tar.bz2, lo descomprimimos y agregamos al PATH del sistema la ruta donde se encuentran los binarios del compilador:
+
+  $ su ("sudo su" en Ubuntu, para ser usuario root)
+  $ wget https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2
+  $ mv gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2 /opt/
+  $ cd /opt
+  $ tar jxf gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2
+  $ rm gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2
+   
+Para agregar el compilador al PATH, editamos el archivo .bashrc el cual contiene un script que se ejecutará cuando ingresemos a la terminal con el usuario root.
+
+  $ nano /root/.bashrc
+
+Al final del archivo agregamos:
+
+  $ export PATH=$PATH:/opt/gcc-arm-none-eabi-4_8-2014q2/bin/
+
+Abrimos otra consola y nos logueamos como root (sudo su en Ubuntu) y verificamos que el compilador se encuentra en el PATH escribiendo:
+
+  $ arm-none-eabi-gcc --version
+
+Deberá aparecer la leyenda:
+
+''arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.''
+
+===== Instalación de openOCD =====
+
+Comenzaremos instalando el driver para el chip FTDI que posee la placa:
+
+  $ aptitude install libftdi-dev
+  $ aptitude install libusb-1.0-0-dev
+  
+Para bajar y compilar OpenOCD:
+
+Primero instalamos los paquetes necesarios para compilar:
+
+  $ aptitude install pkg-config
+  $ aptitude install build-essential
+
+Bajamos OpenOCD, lo compilamos e instalamos:
+
+  $ cd ~
+  $ wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+  $ tar -xvjf openocd-0.9.0.tar.bz2
+  $ cd openocd-0.9.0
+  $ ./configure --enable-ftdi 
+  $ make
+  $ make install
+  
+Para comprobar que la herramienta este instalada, ejecutamos:
+
+  $ openocd --version   
+
+Ahora podremos grabar el firmware en la placa, siguiendo las instrucciones en [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:grabar_firmware|Grabando el firmware en la placa]]

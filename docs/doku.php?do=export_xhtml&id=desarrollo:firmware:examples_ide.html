@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:examples_ide</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,examples_ide"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:examples_ide&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:examples_ide"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:examples_ide.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:examples_ide","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#eclipsecrear_un_proyecto_a_partir_de_firmware-examples">Eclipse: crear un proyecto a partir de &#039;Firmware-Examples&#039;</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#variables_globales_del_ide">Variables Globales del IDE</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#nuevo_proyecto_a_partir_de_makefile_con_codigo">Nuevo proyecto a partir de &#039;makefile con código&#039;</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#configuracion_del_makefile">Configuración del Makefile</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#indexar_archivos_fuente">Indexar archivos fuente</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:examples_ide.html#configuracion_de_openocd_para_debug">Configuración de OpenOCD para Debug</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="eclipsecrear_un_proyecto_a_partir_de_firmware-examples">Eclipse: crear un proyecto a partir de &#039;Firmware-Examples&#039;</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Eclipse: crear un proyecto a partir de &#039;Firmware-Examples&#039;&quot;,&quot;hid&quot;:&quot;eclipsecrear_un_proyecto_a_partir_de_firmware-examples&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-74&quot;} -->
+<h2 class="sectionedit2" id="variables_globales_del_ide">Variables Globales del IDE</h2>
+<div class="level2">
+<p class="divalign-justify">Para simplificar el trabajo con proyectos, deben agregarse las siguientes variables globales al Eclipse que permitirán tener los principales paths almacenados en dichas variables. Algunos paths ya se han agregado en la variable de entorno PATH, con lo cual este paso en alguna de estas variables podría ser innecesario pero clarifica la configuración. Esto se hace desde el menú &#039;Windows⇒Preferences&#039; tal como se muestra a continuación, donde se crearon las siguientes variables:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <strong>arm_none_eabi_gdb_path</strong>: Path al debugger GNU-ARM</div>
+</li>
+<li class="level1"><div class="li"> <strong>CIAA_Firmware_path</strong>: Path a la carpeta del repositorio local</div>
+</li>
+<li class="level1"><div class="li"> <strong>openocd_cfg_path</strong>: Path al archivo de configuración usado en OpenOCD para la CIAA</div>
+</li>
+<li class="level1"><div class="li"> <strong>openocd_path</strong>: Path la herramienta OpenOCD usada para debug</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_examples_string_substitution.png.html" class="media" title="desarrollo:firmware:ide_examples_string_substitution.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_examples_string_substitution.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Variables Globales del IDE&quot;,&quot;hid&quot;:&quot;variables_globales_del_ide&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;75-945&quot;} -->
+<h2 class="sectionedit3" id="nuevo_proyecto_a_partir_de_makefile_con_codigo">Nuevo proyecto a partir de &#039;makefile con código&#039;</h2>
+<div class="level2">
+<p class="divalign-justify">Para crear un proyecto partiendo de los ejemplos que se incluyen dentro del Firmware (directorio &#039;examples&#039;), típicamente se va a crear un workspace nuevo que podría colocarse dentro de &#039;C:\CIAA\Eclipse&#039;.</p><!--divalign-->
+<p class="divalign-justify">En este workspace se creará el primer proyecto, a partir del menú &#039;File⇒New⇒Makefile Project with Existing code&#039;, dado que tenemos nuestro código y también nuestro Makefile, y no necesitamos utilizar uno generado por Eclipse.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_examples_new_project.png.html" class="media" title="desarrollo:firmware:ide_examples_new_project.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_examples_new_project.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+<p class="divalign-justify">Luego, debe elegirse el proyecto deseado dentro de la carpeta &#039;examples&#039;, dejando las opciones por defecto (toolchain &#039;none&#039; dado que esto lo configura nuestro Makefile)</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_examples_existing_code.png.html" class="media" title="desarrollo:firmware:ide_examples_existing_code.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_examples_existing_code.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+<p class="divalign-justify">Para que el Makefile del proyecto sepa que proyecto compilar, debemos incorporar una variable de entorno que nos indique el path al mismo. Seleccionando en el workspace nuestro proyecto, y a continuación del menú &#039;Project⇒Properties&#039;, agregamos la variable &#039;PROJECT_PATH&#039; tal como sigue:</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_project_env_var.png.html" class="media" title="desarrollo:firmware:ide_project_env_var.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_project_env_var.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+<strong>Nota: originalmente el nombre de la variable era PROJECT, por claridad ha sido renombrado a PROJECT_PATH, pero aun no se ha actualizado esta captura de pantalla :)</strong>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Nuevo proyecto a partir de &#039;makefile con c\u00f3digo&#039;&quot;,&quot;hid&quot;:&quot;nuevo_proyecto_a_partir_de_makefile_con_codigo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;946-2246&quot;} -->
+<h2 class="sectionedit4" id="configuracion_del_makefile">Configuración del Makefile</h2>
+<div class="level2">
+<p class="divalign-justify">Dado que el Proyecto CIAA tiene su propio Makefile, hay que indicarle al IDE cómo manejarse con él, puesto que no queremos que genere un Makefile automáticamente. Principalmente se le indica por línea de comando al &#039;make&#039; que cambie de directorio de trabajo al utilizado para el repositorio, y además qué comando es necesario para hacer un &#039;clean&#039; o un &#039;Build&#039; incremental. Particularmente, se utiliza &#039;clean_generate&#039; para borrar los archivos objeto y luego volver a generar los archivos fuentes del RTOS-OSEK. En caso de trabajar sin RTOS-OSEK, sólo hace falta usar el comando &#039;clean&#039;.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_makefile_settings.png.html" class="media" title="desarrollo:firmware:ide_makefile_settings.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_makefile_settings.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_makefile_behaviour.png.html" class="media" title="desarrollo:firmware:ide_makefile_behaviour.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_makefile_behaviour.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n del Makefile&quot;,&quot;hid&quot;:&quot;configuracion_del_makefile&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;2247-2975&quot;} -->
+<h2 class="sectionedit5" id="indexar_archivos_fuente">Indexar archivos fuente</h2>
+<div class="level2">
+<p class="divalign-justify">Para que el IDE pueda Indexar los archivos fuentes, de manera que el usuario rápidamente pueda ver la información contextual relacionada con variables o funciones (tooltips), o incluso buscar rápidamente con &#039;ctrl + click izquierdo&#039; para ir a la declaración del texto seleccionado, se le debe indicar dónde residen los mismos. Es importante incorporar los siguientes directorios mediante &#039;Link Folder&#039; como se muestra a continuación:</p><!--divalign-->
+<ul>
+<li class="level1"><div class="li"> <strong>Firmware\modules</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Firmware\externals\platforms</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>Firmware\out\gen</strong>                        ⇐ Sólo si el RTOS es generado por el make como OSEK</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_paths_and_symbols.png.html" class="media" title="desarrollo:firmware:ide_paths_and_symbols.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_paths_and_symbols.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Indexar archivos fuente&quot;,&quot;hid&quot;:&quot;indexar_archivos_fuente&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2976-3668&quot;} -->
+<h2 class="sectionedit6" id="configuracion_de_openocd_para_debug">Configuración de OpenOCD para Debug</h2>
+<div class="level2">
+<p class="divalign-justify">Como se ha mencionado al instalar las herramientas para Debug, se utilizará OpenOCD  para hacer el nexo JTAG-GDB mediante la conexión USB. Así, desde el menu &#039;Run⇒Debug Configurations…&#039; se debe crear una nueva &#039;debug configuration&#039; del tipo &#039;GDB OpenOCD Debugging&#039; (siempre que se tenga instalado el plug-in GNU-ARM como se indicó al instalar el firmware). Una vez hecho esto, colocar los siguientes valores:</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_openocd_main.png.html" class="media" title="desarrollo:firmware:ide_openocd_main.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_openocd_main.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_openocd_debug.png.html" class="media" title="desarrollo:firmware:ide_openocd_debug.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_openocd_debug.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:examples_ide&amp;media=desarrollo:firmware:ide_openocd_startup.png.html" class="media" title="desarrollo:firmware:ide_openocd_startup.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ide_openocd_startup.png" class="media" loading="lazy" title="Captura." alt="Captura." /></a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de OpenOCD para Debug&quot;,&quot;hid&quot;:&quot;configuracion_de_openocd_para_debug&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3669-&quot;} --></div>
+</body>
+</html>

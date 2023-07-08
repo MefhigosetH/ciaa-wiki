@@ -1,0 +1,64 @@
+====== EDU-CIAA-xilinx ======
+
+
+La placa EDU-CIAA-xilinx surge con la misma filosofía de la EDU-CIAA-nxp y es una plataforma de bajo costo para el aprendizaje de los sistemas embebidos implementados con softcores sobre FPGA.
+Esta plataforma permite la enseñanza, aprendizaje y experimentación en áreas tales como: 
+
+  * Procesamiento de señal
+  * Comunicaciones digitales
+  * Procesamiento de imágenes
+  * Visión por computadora
+
+===== Objetivos =====
+
+  * Ser una placa de bajo costo para el aprendizaje del uso de FPGA y sus aplicaciones.
+  * Contribuir a la difusión de las tecnologías y aplicaciones asociadas a las FPGA, particularmente los sistemas embebidos basados en softcores.
+  * Diseño OpenHardware: los diagramas esquemáticos, archivos pcb, la implementación de referencia de un sistema embebido basado en softcore y toda la documentación asociada son públicos. 
+  * Base y aprendizaje para futuras plataformas ciaa-safety y ciaa-acc (Alta Capacidad de Computo).
+
+===== Diagrama en bloques =====
+
+
+{{ :desarrollo:edu-ciaa:diagramabloques.jpg?nolink&700 |}}
+
+===== Especificaciones funcionales =====
+
+  * Memoria no volátil para configuración de la FPGA
+  * FPGA y memoria no volátil de configuración programables mediante puerto USB y/o JTAG
+  * Oscilador de 50 MHz 
+  * Alimentación: +5Vdc externos o puerto USB, consumo máximo 500mA
+  * Dimensiones similares a la EDU-CIAA-nxp
+  * I/O Digital en pines de paso 100 mils (Bancos 14,15 y 34)
+  * Memoria DDR2 de 256 MB
+
+
+===== Especificaciones no funcionales =====
+
+  * Costo aproximado U$S 150 unitario en lotes de 10 placas. 
+  * Utilizable con herramientas de desarrollo gratuitas y de libre acceso.
+  * Implementación de referencia de un sistema embebido basado en softcore.
+  * Procesador softcore y modulos ipcore gratuitos y de acceso libre.
+
+===== Subproyectos =====
+
+
+La plataforma EDU-CIAA-Xilinx se divide en 3 subproyectos relativamente independientes, las características y conocimientos deseables para participar en cada suproyecto son:
+  * Hardware: placa de circuito impreso con la FPGA, memoria no volatil y demas componentes. Requiere experiencia en el uso y diseño con FPGA. Es un proyecto exclusivamente de hardware (SCH+PCB). ({{ :desarrollo:edu-ciaa:educiaaxeschematics.pdf|Diagramas Esquematicos}} y {{ :desarrollo:edu-ciaa:educiaaxbom.pdf|BOM}})
+  
+    
+ 
+  * Diseño de Referencia: Sistema embebido basado en softcore implementado con un procesador y modulos de acceso libre y gratuito. Requiere conocimientos de sistemas embebidos, de FPGA, y algo de experiencia en su uso. Es un proyecto utilizando HDLs (VHDL/Verilog) y software (lenguaje C)
+
+  * Programador JTAG: Hardware y software necesarios para configurar la FPGA y la memoria no volatil. Se integra a las herramientas de Xilinx mediante el protocolo [[http://www.xilinx.com/products/intellectual-property/xvc.html|XVC]]. Requiere experiencia en sistemas embebidos, aunque no necesariamente experiencia previa con FPGA. Es un proyecto de software que permite configurar la FPGA y programar la memoria en los sistemas operativos Windows y Linux utilizando directamente las herramientas de Xilinx.
+
+Si bien estos subproyectos deben mantener cierta coherencia entre ellos, es posible desarrollarlos de manera independiente. 
+
+El desarrollo del proyecto se realiza a traves de la lista [[https://groups.google.com/forum/?hl=es-419#!forum/ciaa-hardware|ciaa-hardware]]. Las personas interesadas en participar en este proyecto pueden contactarse a través de dicha lista. 
+
+
+
+
+
+
+
+

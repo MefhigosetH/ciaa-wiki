@@ -1,0 +1,13 @@
+====== Versiones de la CIAA ======
+
+La CIAA es la primera iniciativa a nivel mundial que cumple con las características de ser industrial, abierta y estar basada en procesadores de distintas marcas.
+
+Actualmente está disponible la primera versión, que es la [[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|CIAA-NXP]], que puede ser adquirida a las distintas [[proyecto:comprar|empresas que la comercializan]].
+
+A su vez un equipo de trabajo conformado por alrededor de 100 personas está elaborando otras versiones de la plataforma, que tienen distinto grado de avance: [[desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio|CIAA-FSL]], [[desarrollo:ciaa_acc:ciaa_acc_inicio|CIAA-ACC]],[[desarrollo:ciaa_safety:start|CIAA-Safety]], [[desarrollo:hardware:ciaa_intel:ciaa_intel_inicio|CIAA-INTEL]] y  [[desarrollo:hardware:ciaa_pic:ciaa_pic_inicio|CIAA-PIC]].
+
+Al mismo tiempo están abiertas las puertas para crear otras versiones de la plataforma a medida que aparezcan interesados.
+
+La CIAA está soportada por una comunidad de más de 4.000 desarrolladores de sistemas embebidos ([[https://groups.google.com/group/embebidos32/subscribe|embebidos32@]]) y por más de 50 universidades de todo el país, articuladas en la Red Universitaria de Sistemas Embebidos ([[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse|RUSE]]) del CONFEDI.
+
+Por todas estas razones la CIAA es una plataforma adecuada para ser utilizada en aplicaciones profesionales, contando con amplio soporte y con diferentes alternativas de implementación que son compatibles entre sí, lo que minimiza riesgos tecnológicos, logísticos y económicos, y brinda un contexto adecuado para el desarrollo tecnológico. 

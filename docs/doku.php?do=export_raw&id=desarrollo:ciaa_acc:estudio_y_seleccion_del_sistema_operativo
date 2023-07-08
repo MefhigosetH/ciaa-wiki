@@ -1,0 +1,69 @@
+=====Selección del sistema operativo=====
+Según los objetivos de proyecto se plantea el:
+
+* Análisis, selección e implementación de sistemas operativos compatibles con entornos de 
+tipo Linux, que sean acordes a sistemas industriales de tiempo real. 
+
+
+El área de firmware incluirá como su principal tarea asociada el análisis y elección de los sistemas 
+operativos. El uso del plural se debe a que seguramente el sistema estará basado en una 
+arquitectura asimétrica, siguiendo las tendencias actuales para el desarrollo de este tipo de 
+sistemas, dónde frecuentemente se encuentra al menos un procesador más pequeño que realiza 
+tareas críticas de tiempo real, que son indispensables en muchos procesos industriales, junto con 
+otro procesador más grande, que realiza las tareas más pesadas, pero que muchas veces no son 
+necesariamente de tiempo real. De este modo la selección, configuración e implementación de los 
+sistemas operativos resulta en una tarea crítica y muy compleja, ya que deben diseñarse los 
+mecanismos de comunicación y articulación entre ellos. 
+
+=====Estudio del Sistema Operativo (SO) a utilizar ======
+ 
+===FreeRTOS===
+Debe tenerse en cuenta qué se entiende por Real Time. Por ejemplo, FreeRTOS, un Sistema 
+Operativo de Tiempo Real (RTOS) de libre distribución y muy utilizado en sistemas embebidos de 
+aplicaciones académicas e industriales, dice ser RT cuando en realidad implementa un scheduler 
+cuyo algoritmo es muy inferior en performance a SCHED_DEADLINE o al mismísimo SCHED_RR 
+(Round­Robin, política Soft RT para sistemas de propósito general) presente en el núcleo de Linux 
+desde sus orígenes. 
+
+=== RTAI (Real Time Application Interface)===
+Consiste en un scheduler Hard Real­Time (RT), en  el cual un SO de propósito general (por ejemplo, Linux) se ejecuta como una tarea de bajo  nivel, es decir, Soft Real­Time. A su vez el scheduler permite ejecutar tareas Hard RT al estar mucho más integrado al hardware. 
+Es la opción clásica, actualmente existe integrada a núcleos Intel x86, por lo cual es 
+necesario portarla a ARM Cortex­A, el procesador objetivo de la plataforma propuesta. 
+
+
+===Low Latency Linux Patch=== 
+Varios parches que bajan la latencia de las interrupciones y las 
+secciones criticas del núcleo. A fin de cuentas consiste en una solución Soft RT. 
+
+Los parches para baja latencia de Linux, aparte de no ser Hard RT, rompen muchas 
+interfaces del SO al punto que muchos binarios de espacio de usuario presentan errores o 
+directamente no funcionan. 
+
+===SCHED_DEADLINE===
+Consiste en una política de scheduling de procesos denominada 
+Earilest Deadline First (EDF) en el cual se eligen los algoritmos de menor duración para 
+ser ejecutados primero. Esta política asegura un comportamiento Hard RT. 
+ 
+SCHED_DEADLINE es la mejor opción actualmente pero requiere la última versión del kernel 
+Linux (3.14 o posterior). Esto asegura que las tareas en DEADLINE se ejecutan con prioridad 
+superior a cualquier otra cosa. 
+
+=== Notas ===
+
+A su vez debe considerarse que al disponer de una Unidad de Manejo de Memoria (MMU), un 
+Translation Lookaside Buffer (TLB, encargado de vincular direcciones de memoria lógica y 
+memoria física) y memoria Caché como componentes intermediarios entre el procesador principal 
+y la memoria principal, existe indefectiblemente indeterminación en tiempos de ejecución debido a 
+estas características de hardware, sin mencionar las capacidades de ejecución especulativa de 
+los procesadores como el Cortex­A9 o similares. 
+ 
+Existen formas de lidiar con estas indeterminaciones para asegurar comportamiento Hard 
+Real­Time: Cache­line­lock, TLB flushing, TLB­locking etc. pero de por sí las arquitecturas con la 
+MMU activada a fin de dar soporte a cualquier SO no puede considerarse bajo ningún punto de 
+vista un procesador determinístico. 
+ 
+Debido a estas cuestiones es necesario utilizar o diseñar un nuevo Sistema Operativo de Tiempo 
+Real específicamente orientado a un procesador no­determinístico, en el cual las tareas más 
+críticas sean en realidad ejecutadas por un subsistema diseñado para responder en forma 
+determinística. La sección siguiente describe en detalle el hardware que mejor se adapta a esta 
+solución. 

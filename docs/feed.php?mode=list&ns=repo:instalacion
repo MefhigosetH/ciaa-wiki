@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> repo:instalacion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:29:09+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:cygwin&amp;rev=1470877368&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:debug&amp;rev=1471474762&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:dependencias&amp;rev=1479574356&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:eclipse&amp;rev=1479575649&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:editores&amp;rev=1467487610&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:firmata4ciaa&amp;rev=1471475055&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:java&amp;rev=1469999322&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:openocd&amp;rev=1479573956&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:terminales&amp;rev=1469921907&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:toolchain_arm&amp;rev=1469988121&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:cygwin&amp;rev=1470877368&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-11T01:02:48+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:cygwin</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:cygwin&amp;rev=1470877368&amp;do=diff</link>
+        <description>Cygwin
+
+Instalando Cygwin y sus paquetes
+
+Para compilar (gcc), para el Make y otras utilidades, deberá bajar cygwin. Por compatibilidad entre todos los sistemas recomendamos instalar Cygwin de 32 bits (setup-x86.exe) y luego seguir los siguientes pasos.
+
+	*  Instalar típicamente con la siguinte configuración en el instalador:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:debug&amp;rev=1471474762&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T22:59:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:debug</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:debug&amp;rev=1471474762&amp;do=diff</link>
+        <description>OpenOCD con Eclipse
+
+Linux
+
+
+Windows
+
+OSX
+
+OpenOCD con linea de comando
+
+Linux
+
+
+La instalación del debugger está incluida en la instalación del toolchain ARM e implica la de openOCD
+
+DDD
+
+
+Para instalar ddd use el mecanismo habitual:
+
+
+sudo apt-get install ddd
+
+
+Windows</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:dependencias&amp;rev=1479574356&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T16:52:36+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:dependencias</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:dependencias&amp;rev=1479574356&amp;do=diff</link>
+        <description>Instalación dependencias
+
+64-bits
+
+
+sudo apt-get install php5-cli libftdi-dev libusb-1.0-0-dev git git-gui libgtk2.0-0:i386 libxtst6:i386 libpangox-1.0-0:i386 libpangoxft-1.0-0:i386 libidn11:i386 libglu1-mesa:i386 libncurses5:i386 libudev1:i386 libusb-1.0:i386 libusb-0.1:i386 gtk2-engines-murrine:i386 libnss3-1d:i386 libwebkitgtk-1.0-0 gtkterm</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:eclipse&amp;rev=1479575649&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T17:14:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:eclipse</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:eclipse&amp;rev=1479575649&amp;do=diff</link>
+        <description>Instalación Eclipse
+
+Linux
+
+Descargar y descomprimir Eclipse C/C++:
+
+64-bits
+
+
+	*  Descargar el archivo eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz desde &lt;https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz&gt;
+	*  Descomprimir:
+
+cd $HOME/ciaa-ide
+tar -xzvf $HOME/Downloads/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:editores&amp;rev=1467487610&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-02T19:26:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:editores</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:editores&amp;rev=1467487610&amp;do=diff</link>
+        <description>Configuración editores para las coding guidelines
+
+Eclipse
+
+	*  windows
+	*  preferences
+	*  general
+	*  editors
+	*  text editors
+		*  displayed tab width: 3
+		*  insert spaces for tabs
+		*  show whitespace characters (opcional)
+
+
+	*  windows
+	*  preferences</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:firmata4ciaa&amp;rev=1471475055&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T23:04:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:firmata4ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:firmata4ciaa&amp;rev=1471475055&amp;do=diff</link>
+        <description>Instalación Firmata4CIAA
+
+Se debe primero clonar el repositorio:
+
+
+
+y luego...
+
+y....</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:java&amp;rev=1469999322&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T21:08:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:java</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:java&amp;rev=1469999322&amp;do=diff</link>
+        <description>Instalación de java
+
+Por lo general, la instalación de java consiste en dos componentes: la JRE (Java Runtime Environment), necesaria para ejecutar los programas y la JDK (Java Development Kit) para compilarlos. Estos componentes pueden ser provistos por al menos Oracle, IBM u OpenJDK. Los que se sabe que funcionan para las diversas actividades de la CIAA son los de Oracle.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:openocd&amp;rev=1479573956&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-19T16:45:56+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:openocd</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:openocd&amp;rev=1479573956&amp;do=diff</link>
+        <description>Instalación OpenOCD
+
+Linux
+
+Descargar, descomprimir y compilar OpenOCD:
+
+
+cd ~/ciaa-ide
+wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+tar -xvjf openocd-0.9.0.tar.bz2
+cd openocd-0.9.0
+./configure --enable-ftdi 
+make</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:terminales&amp;rev=1469921907&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-30T23:38:27+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:terminales</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:terminales&amp;rev=1469921907&amp;do=diff</link>
+        <description>Comunicación por terminal
+
+Para comunicarse con programas en la placa desde una PC, es necesario contar con algún programa de terminal.
+
+Baudrate puede ser 115200, 9600 o alguna otra velocidad que dependerá del programa en la placa.
+
+Linux
+
+El puerto de conexión suele ser /dev/ttyUSB1 o /dev/ttyUSB2</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:toolchain_arm&amp;rev=1469988121&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T18:02:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:instalacion:toolchain_arm</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:instalacion:toolchain_arm&amp;rev=1469988121&amp;do=diff</link>
+        <description>Instalación Toolchain ARM
+
+Linux
+
+Descargar el compilador y descomprimir
+
+
+cd ~/ciaa-ide/bin
+wget https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q1-update/+download/gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2
+tar -xjvf gcc-arm-none-eabi-4_9-2015q1-20150306-linux.tar.bz2</description>
+    </item>
+</rdf:RDF>

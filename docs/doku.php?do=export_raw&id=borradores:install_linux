@@ -1,0 +1,157 @@
+====== Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP ======
+
+===== Requisitos =====
+  * Una [[desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA-NXP]].
+  * Ubuntu 14.04 o posterior.
+  * Al menos 1GB de espacio libre en el home del usuario (''/home/$USER'').
+===== Configuración de las herramientas por línea de comandos =====
+
+{{page>repo:instalacion:dependencias&noheader&nofooter}}
+=====Toolchain=====
+
+{{page>repo:descripcion:toolchain_arm&noheader&nofooter}}
+{{page>repo:instalacion:toolchain_arm#linux&noheader&nofooter}}
+
+
+=====Clonar repo=====
+Clonar repositorio de Firmware:
+<code>cd $HOME/ciaa-ide/ # $HOME es la variable de entorno que apunta al directorio home del usuario, por ejemplo "/home/luis"
+git clone --recursive https://github.com/ciaa/Firmware.git</code>
+
+=====OpenOCD=====
+{{page>repo:descripcion:openocd&noheader&nofooter}}
+{{page>repo:instalacion:openocd#linux&noheader&nofooter}}
+
+=====Configuración compilación=====
+9) Crear ''Makefile.mine'':
+<code>cd Firmware
+cp Makefile.config Makefile.mine</code>
+10) Editar Makefile.mine indicando que compilaremos para una EDU-CIAA-NXP:
+<code>nano Makefile.mine</code>
+Reemplazar la línea 
+<code>	BOARD          ?= ciaa_sim_ia32</code>
+por
+<code>	BOARD          ?= edu_ciaa_nxp</code>
+y para evitar los warnings de LPCOpen, agregar una línea debajo de la anterior con el siguiente texto:
+<code>	CFLAGS	+= -Wno-unused-function</code>
+11) Agregar toolchain y openocd al PATH:
+<code>export PATH=$PATH:$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/bin:$HOME/ciaa-ide/openocd-0.9.0/src</code>
+
+=====Compilar y descargar=====
+12) Compilar:
+<code>make clean
+make generate
+make</code>
+Si todo anduvo bien la compilación finaliza con este mensaje:
+<code>===============================================================================
+Linking file: ./out/bin/blinking.axf
+ 
+arm-none-eabi-gcc ./out/obj/blinking.o ./out/obj/crp.o -Xlinker --start-group  ./out/lib/posix.a  ./out/lib/ciaak.a  ./out/lib/drivers.a  ./out/lib/ext_drivers.a  ./out/lib/rtos.a  ./out/lib/libs.a  ./out/lib/ext_base.a -Xlinker --end-group -o ./out/bin/blinking.axf   -fno-builtin -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Xlinker -Map="./out/bin/blinking.map" -nostdlib -T "externals/base/cortexM4/lpc43xx/linker/ciaa_lpc4337.ld"
+ 
+===============================================================================
+Post Building blinking
+ 
+arm-none-eabi-objcopy -v -O binary ./out/bin/blinking.axf ./out/bin/blinking.bin
+copy from `./out/bin/blinking.axf' [elf32-littlearm] to `./out/bin/blinking.bin' [binary]</code>
+
+13) Ya estamos en condiciones de probar la comunicación con el hardware programando el MCU con el ejemplo ''blinking'':
+<code>make download</code>
+Salida de la consola:
+<code>===============================================================================
+Starting OpenOCD and downloading...
+ 
+openocd -f ./modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg -c "init" -c "halt" -c "flash write_image erase unlock ./out/bin/blinking.bin 0x1A000000 bin" -c "reset run" -c "shutdown"
+Open On-Chip Debugger 0.9.0 (2015-02-13-09:19)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect 'jtag'
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x21000000 pc: 0x10407bf8 msp: 0x10089f60
+auto erase enabled
+auto unlock enabled
+Warn : Verification will fail since checksum in image (0x00000000) to be written to flash is different from calculated vector checksum (0x53ff4386).
+Warn : To remove this warning modify build tools on developer PC to inject correct LPC vector checksum.
+wrote 327680 bytes from file ./out/bin/blinking.bin in 4.918178s (65.065 KiB/s)
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+shutdown command invoked</code>
+
+
+Presionar el pulsador de reset de la CIAA, luego debería verse un LED destellando.
+
+===== Eclipse =====
+
+Puede ser necesario [[repo:instalacion:java|instalar java]] para poder utilizar eclipse
+
+{{page>repo:instalacion:eclipse#linux&noheader&nofooter}}
+
+
+=====Plugins=====
+4) Instalar plug-ins GNU ARM Eclipse y eGIT.
+  * Update sites:
+http://gnuarmeclipse.sourceforge.net/updates (si este plug-in trae problemas, ver [[http://gnuarmeclipse.livius.net/blog/plugins-install/|este enlace]]).\\
+http://download.eclipse.org/egit/updates (puede que no sea necesario instalar este plug-in, ya viene instalado en las últimas versiones de Eclipse).
+  * En Eclipse, ir a Help -> Install new Software...
+  * Ingresar un URL por vez y seguir los pasos.
+  * Eclipse se reiniciará una vez por cada plug-in instalado.
+5) Importar Firmware en Eclipse:
+  * File -> New -> Makefile Project with Existing Code
+  * En Existing Code Location, navegar a ''$HOME/ciaa-ide/Firmware''. Click a Finish. Aparecerá un proyecto nuevo de nombre "Firmware".
+
+
+=====Configuración para el proyecto=====
+6) Configurar Firmware en Eclipse:
+  * Ir a las propiedades de Firmware (clic derecho -> Properties).
+  * Navegar a C/C++ Build, pestaña Behavior.
+  * En la opción Build (Incremental build) borrar la palabra ''all''.
+  * En la opción Clean escribir ''clean_generate''.
+  * Click en Apply. Esto evita que se recompile todo cada vez, y con cada "Clean" se generan los archivos del RTOS.
+  * Navegar a C/C++ Build > Environment. Agregar la variable ''BOARD'' con valor ''edu_ciaa_nxp''. Click en ''Add...'', Name: ''BOARD'', Value: ''edu_ciaa_nxp''.
+  * Navegar a C/C++ General, Paths and Symbols.
+  * En la sección Languages, elegir GNU C.
+  * Click en ''Add...'', click en ''File System...''
+  * Navegar a la ruta ''$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include''
+  * Click en ''Ok'' (esto no afecta la compilación, es para que Eclipse parsee los headers estándar y no aparezcan errores de tipos no encontrados).
+7) Compilar: ctrl+B. La consola debería mostrar el mismo resultado que el paso 13:
+{{ :docu:fw:bm:ide:consola.png |Consola de Eclipse}}
+
+
+=====Debugger=====
+8) Configurar debugging:
+  * Run -> Debug configurations...
+  * Doble click a GDB OpenOCD Debugging
+  * Pestaña Main -> C/C++ Application, "Browse..." a ''$HOME/ciaa-ide/Firmware/out/bin/blinking.axf''
+  * Pestaña Debugger -> "Start OpenOCD locally" debe estar activado.
+  * Executable: ''openocd''
+  * Config options: ''-f $HOME/ciaa-ide/Firmware/modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg''
+<note important>OJO!!! En este caso reemplazar $HOME por la ruta (por ejemplo, ''/home/luis'').</note>
+  * Sección "GDB Client Setup", campo Executable: arm-none-eabi-gdb
+  * Click en Apply, luego en Debug...
+  * Debería abrirse la perspectiva Debug y detenerse en la primer sentencia de la función main().
+  * Si se está usando una EDU-CIAA con la memoria flash borrada, puede que falle al iniciar el debugging. Ver [[desarrollo:hardware:primeros_pasos|Primeros pasos con el hardware de la CIAA]].
+
+9) Disfrutar de tu CIAA-IDE :-)
+
+10) //Opcional//: Cambiar el splash screen de Eclipse por uno con el logo de la CIAA:
+{{ :docu:fw:bm:ide:splash.png |Splash CIAA-IDE}}
+<code>cd $HOME/ciaa-ide
+wget http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=docu:fw:bm:ide:splash.bmp.tar.gz -O splash.bmp.tar.gz
+cd eclipse/plugins/org.eclipse.platform_4.4.2.v20150204-1700/
+mv splash.bmp splash.bmp.old # guardamos splash predeterminado
+tar -xzvf ../../../splash.bmp.tar.gz</code>
+
+===== Script automatizado =====
+{{:docu:fw:bm:ide:ciaa_ide_setup.sh.tar.gz|Aquí}} podrás descargar un script de shell que automatiza la descarga y configuración de las herramientas, según los pasos anteriores. Aún deberás realizar manualmente los pasos 8 a 13 de la primer sección (que corresponden a las pruebas de hardware) y 4 a 8 de la segunda (configuración dentro de Eclipse). **Aviso: Este script no está totalmente probado!**
+

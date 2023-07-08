@@ -1,0 +1,25 @@
+====== IDE4PLC versión 1.0.0 ====== 
+
+===== Objetivos para la versión 1.0.0 del IDE4PLC =====
+
+###
+Los objetivos para la versión 1.0.0 del IDE4PLC son:
+###
+
+  * Fecha de relelease 18/05/2015.
+  * Tener una única tarea de OSEK de usuario que dispare una única POU Programa, editable en lenguaje Ladder, con un único segmento que puede ser de cualquier tamaño.
+  * Que esté definida por defecto la placa EDU-CIAA-NXP como board a programar.
+  * La grilla de variables de la POU programa permitirá editar, agregar y eliminar las variables Internas (VAR o VAR_TEMP). Las variables de Interfaz estarán fijas representando las teclas y pulsadores de la EDU-CIAA-NXP como I/O digitales (VAR_INPUT, VAR_OUTPUT).
+  * La generación de código C integrará al CIAA Firmware, en particular los módulos Posix y OSEK. Se integrará la parte fija del firmware de plc mediante la creación de un módulo del CIAA-Firmware llamado "plc" (ubicado en Firmware/modules/plc) y un proyecto de aplicación "plc_application" (ubicado en Firmware/out/gen/application) con el proyecto de usuario generado desde IDE4PLC que utilice a los módulos citados.
+  * Tipos de datos soportados: BOOL, INT y TIME (para F, FB y variables).
+
+
+===== Imágenes del nuevo diseño de GUI =====
+
+{{:desarrollo:software-plc:ide4plc_gui_-_nueva_-_01.png?nolink&600|}}
+
+{{:desarrollo:software-plc:ide4plc_gui_-_nueva_-_02.png?nolink&600|}}
+
+{{:desarrollo:software-plc:ide4plc_gui_-_nueva_-_03.png?nolink&600|}}
+
+{{:desarrollo:software-plc:ide4plc_gui_-_nueva_-_04.png?nolink&600|}}

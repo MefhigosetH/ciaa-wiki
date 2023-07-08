@@ -1,0 +1,35 @@
+=====Templates de KICAD=====
+
+Los templates de Kicad permiten iniciar un diseño copiando un diseño de base y cambiando los nombres de archivos según el nuevo proyecto.
+
+En su forma más básica de uso los pasos son los siguientes:
+
+  - Bajarse los templates (Directorio "modelos" del repositorio de Ponchos). Se recomienda instarlos en los directorios de Templates del sistema para no sobreescribirlos por error.
+  - Abrir Kicad y seleccionar en el administrador de proyectos "New Project" -> "New Project From Template" (CTRL-T).
+  - Ingresar la ubicación y el nombre del proyecto nuevo.
+  - Se abre el diálogo para elegir el template. Seleccionar el directorio modelos.
+  - Seleccionar el template de poncho deseado.
+
+^ Abrir Proyecto usando template. {{ :desarrollo:edu-ciaa:screen1.jpg?direct&200|}}^
+^ Ingresar  el nombre y ubicación del nuevo proyecto. {{ :desarrollo:edu-ciaa:screen2.jpg?direct&200|}}^
+^ Se abre el díalogo de los templates del sistema. {{ :desarrollo:edu-ciaa:screen3.jpg?direct&200|}}^
+^ Seleccionar User Templates. También se puede ingresar un directorio arbitrario. {{ :desarrollo:edu-ciaa:screen4.jpg?direct&200|}}^
+^ Seleccionar el Template deseado. {{ :desarrollo:edu-ciaa:screen5.jpg?direct&200|}}^
+
+===Instalación de Templates de usuario===
+Existe un directorio predefinido a nivel usuario para colocar los Templates propios. 
+En sistema Linux este directorio es:
+  ${HOME}/kicad/template
+  
+===Instalación de Templates a nivel de sistema===
+Se pueden instalar los templates a nivel de sistema para que sean accesibles por todos los usuarios.
+En el caso de los sistemas Linux, dependerá de la ruta de instalación de Kicad o de la distribución.
+Algunas de las opciones son:
+  /usr/share/kicad/template/
+  /usr/local/share/kicad/template/
+  
+
+
+
+
+

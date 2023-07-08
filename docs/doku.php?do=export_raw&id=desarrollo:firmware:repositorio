@@ -1,0 +1,152 @@
+====== Primeros Pasos con Gerrit ======
+
+===== Introducción =====
+
+###
+Este documento pretende ser una breve guía para comenzar a utilizar Git y Gerrit.
+###
+Git es una herramienta que tiene por objetivo el control de versiones del código fuente. La misma permite ir guardando cada versión del código de forma tal de poder volver atrás en el código y determinar exactamente los cambios entre una versión y otra. Esta herramienta permite ademas que varios programadores trabajen simultáneamente
+en distintas partes del código, permitiendo el intercambio simple de los cambios entre los desarrolladores
+Gerrit es una extension de Git y tiene por funciona principal establecer un mecanismo de revisión de los cambios en el código antes de la publicación de los mismo. De esta solo llega al repositorio final código que ha sido probado y revisado.
+
+El proyecto utiliza GitHub.com como proveedor de git y gerrithub.io como proveedor de gerrit.
+===== Creación de la cuenta =====
+
+Para comenzar a utiilizar GerritHub accedemos a la dirección //[[|https://review.gerrithub.io/static/intro.html]]// con lo que veremos la primera pantalla del proceso de alta de un nuevo usuario que se muestra a continuación
+
+{{:desarrollo:firmware:gerrit:start.png|Inicio del proceso de alta de un nuevo usuario start}}
+
+En la misma obtenemos un resumen de los pasos que debemos completar para la creación del usuario de GerritHub. Para continuar presionamos el botón verde que se encuentra en la esquina superior izquierda con la leyenda GitHbu Sing-in, y al hacer clic en el mismo nos lleva a una segunda pantalla que corresponde a la pantalla de login de GitHub que se muestra a continuación
+
+{{:desarrollo:firmware:gerrit:login.png|Login en el sitio de GitHub login}}
+
+En la misma deberemos completar nuestro nombre de usuario y contraseña de la cuenta de GitHub y continuar con el boton gris con la leyenda Sign In que se encuentra debajo del campo de password. Puede suceder que nuestro navegador ya tenga la información de nuestra cuenta de GitHub almacenada y en este caso esta pantalla no se muestra y avanzaremos automáticamente a la siguiente pantalla
+
+{{:desarrollo:firmware:gerrit:account.png| account}}
+
+En la misma nos pide confirmar los datos de nuestra cuenta en Gerrit, los cuales se completan automáticamente a partir de la información de nuestra cuenta de GitHub. Una vez que la información de esta pantalla es correcta avanzamos con el botón verde de la izquierda superior derecha con la leyenda Next, lo que nos llevara a la pantalla que se muestra en la figura
+
+{{:desarrollo:firmware:gerrit:repository.png| repository}}
+
+En la misma se nos pide que seleccionemos un repositorio de GitHub para clonar en Gerrit. En la lista de selección desplegable completamos CIAA y dejamos los tildes en todas las listas de los submodulos. A continuacion avanzamos con el botón verde de la izquierda superior derecha con la leyenda Next, lo que inicia el proceso de clonación del repositorio de GitHub en Gerrit. Cuando el proceso se complete veremos la pantalla que se muestra en la figura
+
+{{:desarrollo:firmware:gerrit:cloned.png| cloned}}
+
+En esta pantalla avanzamos una vez mas con el botón verde de la izquierda superior derecha con la leyenda Next, con lo que se inicia el proceso de importar los Pull Requets pendientes del repositorio que se acaba de clonar. Al terminar el proceso veremos una pantalla que se muestra en la figura
+
+{{:desarrollo:firmware:gerrit:pulls.png| pulls}}
+
+En esta pantalla avanzamos una vez mas con el botón verde de la izquierda superior derecha con la leyenda Next, con lo que se inicia el proceso de importar. Al terminar el proceso veremos el //[[https://review.gerrithub.io/#/dashboard/self|dashboard]]//, la pantalla con la que habitualmente iniciaremos nuestras actividades en GerritHub que se muestra a continuación
+
+{{:desarrollo:firmware:gerrit:home.png| home}}
+
+===== Configuracion del acceso =====
+
+Para poder enviar los cambios al servidor pueden utilizarse dos protocolos: //https// o //ssh//. En caso de optar por el protocolo //https// es necesario definir una clave en nuestro prefil de usuario de GerritHub y si vamos a utilizar el protocolo //ssh// es necesario generar un certificado y cargar la parte publica del mismo en nuestro perfil de GerritHub. A continuación se detallan los pasos a seguir para ambas opciones
+
+==== Generación de la Clave para https ====
+
+Para generar una clave https para nuestro usuario GerritHub debemos acceder al //[[https://review.gerrithub.io/#/dashboard/self|dashboard]]// y ingresar a los //settings// de nuestra cuenta como se muestra en la figura a continuación
+
+{{:desarrollo:firmware:gerrit:profile.png| profile}}
+
+Con lo cual accedemos a la configuracion de nuestra cuenta en GerritHub, a continuación seleccionamos la sexta opción del menú de la izquierda que dice **HTTP Password**, con lo cual accedemos a la pantalla que se muestra a continuación
+
+{{:desarrollo:firmware:gerrit:http.png| http}}
+
+En esta pantalla presionamos el boton **Generate Password** para generar una clave aleatoria. GerritHub no nos permite fijar una clave arbitraria sino que la misma debe ser generada al azar obligatoriamente. Esta clave deberá ser ingresada al momento de hacer un envío al servidor, para evitar el ingreso de esta clave larga y completa la mejor opción es incluir el nombre de usuario y la password al momento de hacer el clonado del repositorio, de esta forma queda almacenada permanentemente en nuestra copia local. Esto tiene como desventaja que cualquier persona con acceso a la copia local puede hacer cambios en el repositorio usando nuestra cuenta.
+
+==== Generacion del certificado ssh ====
+
+=== Linux ===
+
+Para generar un certificado SSH simplemente abrimos una terminal y escribimos el siguiente comando:
+
+<code>
+ssh-keygen
+</code>
+Después de informarnos que estamos por generar una nuevo certificado RSA nos pedirá el nombre del archivo de donde almacenará el certificado. Por defecto utiliza un archivo llamado **id_rsa** dentro de la carpeta **.ssh** en el directorio del usuario. A continuación nos pedirá una clave para proteger el acceso al archivo que contiene la parte privada del certificado. Es conveniente definir una clave y no dejarla en blanco. Finalmente nos confirmará la creación de los dos archivos de los certificados. El archivo ''%%~/.ssh/id_rsa%%'' es la parte privada y no debe ser publicada, mientras que el archivo ''%%~/.ssh/id_rsa.pub%%'' es la parte publica y puede ser distribuida sin problemas. Puede ser que este proceso ya haya sido realizado antes, en cuyo caso no es necesario generar un nuevo certificado sino que podemos usar el existente.
+
+==== Windows ====
+
+En primer lugar aclaro que no he probado este proceso personalmente, y que el mismo una traduccion y sintesis del articulo //[[http://guides.beanstalkapp.com/version-control/git-on-windows.html|Working with GIT on Windows]]//, en el mismo se presentan varias alternativas pero nosotros solo vamos a seguir la que requiere la instalación de la menor cantidad de herramientas adicionales. Para esto y partiendo del supuesto que ya tenemos Git instalado, abrimos una terminal Bash de Git y seguimos un procedimiento muy parecido al de Linux, por lo que es recomendable leer el apartado anterior antes de continuar ingresando el siguiente comando
+
+<code>
+ssh-keygen -t rsa
+</code>
+Igual que en Linux nos pedirá la confirmación del nombre de archivo para el certificado una clave de acceso al mismo. Al terminar tendremos tambien dos archivos: ''%%id_rsa%%'' es la parte privada y ''%%id_rsa.pub%%'' es la parte publica. Estos archivos podremos encontrarlos en ''%%C:\Users\username\.ssh\%%'' o en ''%%C:\Documents and Settings\username\.ssh\%%'' según la version de Windows que se este utilizando.
+
+==== Configuracion en GerritHub ====
+
+Para que el servidor reconozca nuestra identidad es necesario informarle la parte publica del certificadoen nuestra cuenta de usuario. Para ello debemos acceder al //[[https://review.gerrithub.io/#/dashboard/self|dashboard]]// y ingresar a los //settings// de nuestra cuenta como se muestra en la figura a continuación
+
+{{:desarrollo:firmware:gerrit:profile.png| profile}}
+
+Con lo cual accedemos a la configuracion de nuestra cuenta en GerritHub, a continuación seleccionamos la qinta opción del menú de la izquierda que dice **SSH Public Keys**, con lo cual accedemos a la pantalla que se muestra a continuación
+
+{{:desarrollo:firmware:gerrit:ssh.png| ssh}}
+
+Ahora debemos abrir con un editor de textos el archivo ''%%id_rsa.pub%%'' que contiene la parte publica de nuestro certificado, seleccionar todo el texto y copiarlo, a continuacion lo pegamos en el area de texto con el titulo **Add SSH Publick Key** y presionamos el boton **Add**, con lo cual la pantalla cambia y nos nuestra una lista de las claves ingresadas.
+
+===== El entorno de trabajo =====
+
+La primera parte del trabajo se realiza utilizando un client git como veniamos haciendo. La única diferencia es que el origen del repositorio será el servidor de GerritHub en lugar del servidor de GitHub. Si estamos empezando y todavía no tenemos una copia local del repositorio entonces la debemos clonar con el siguiente comando
+
+<code>
+git clone --recusive https://usuario:password@review.gerrithub.io/ciaa/Firmware
+</code>
+El mismo utiliza el protocolo //https//, si preferimos utilizar //ssh// entonces el comando será
+
+<code>
+git clone --recusive ssh://usuario@review.gerrithub.io:29418/ciaa/Firmware
+</code>
+Si por el contrario ya tenemos una copia local del repositorio en nuestra maquina podemos cambiar el servidor ogigen de la copia utilizando el siguiente comando
+
+<code>
+git remote set-url origin https://usuario:password@review.gerrithub.io/ciaa/Firmware
+</code>
+Nuevamente si preferimos utilizar //ssh// en luagr de //https// el comando sera el siguiente
+
+<code>
+git remote set-url origin ssh://usuario@review.gerrithub.io:29418/ciaa/Firmware
+</code>
+Es importante remarcar que si es la primera vez que nos conectamos al servidor se nos pedirá confirmar la clave de encriptacion utilizada por el //ssh// del servidor, para lo cual nos mostrara el hash RSA. Nosotros deberiamos controlar que dicho hash corresponde al que aparece en la pagina donde cargamos la parte publica del nuestro servidor antes de continuar. Una vez que aceptamos el mensaje esa clave se agrega a la lista de servidores conocidos por nuestro cliente //ssh// y no nos vuelve a preguntar por la identidad del mismo Continuando con el entorno git, es recomendable que antes de comenzar a trabajar ingresemos nuestros datos para que los cambias que hagamos queden correctamente identificados. Para eloo tuilizamos llos comandos para configurar el nombre de usuario y el correo.
+
+<code>
+git config user.name "Esteban Volentini"
+git config user.email evolentini@gmail.com
+</code>
+Estos comandos configuran estos datos unicamente para el repositorio de la CIAA, y deben ser ingresados cada vez que se haga una nueva copia local del repositorio con el comando clone. Ahora por fin estamos en condiciones de empezar a programar, con lo cual abrimos nuestro editor de texto o el IDE y comenzamos a trabajar.
+
+Una vez que terminamos entonces podemos hacer una revision de los cambios que hicimos con el comando
+
+<code>
+git diff
+</code>
+El cual nos mostrará una pantalla similiar a la que se muestra a continuacion
+
+{{:desarrollo:firmware:gerrit:diff.png| diff}}
+
+En la mismas se pueden ver cada uno de los bloques cambiados, el cual empieza con una cantidad de lineas en color blanco que corresponden a lineas que no sufrieron cambios, seguidas de lineas en color rojo que corresponden a las lineas suprimidas y lineas en color verde que son las lineas agregadas. Como puede notarse un cambio dentro de una linea de codigo implica la eliminacion de la linea original y la creacion de una nueva linea.
+
+Si estamos de acuerdo con todos los cambios entonces es el momento de confirmarlos. Para ello utilizaremos el comando
+
+<code>
+git commit -a -m "\#235 use result value of fseek functions"
+</code>
+donde el parametro -a indica que queremos confirmar todos los cambios realizados, incluyendo los archivos eliminados y los archivos creados ademas de los cambios en los archivos existentes. El parametro -m nos permite ingresar un texto para explicar los cambios realizados. Dentro del proyecto CIAA utilizamos el sistema de Issues para documentar los cambios que se realizan, por lo tanto en todos los commits debemos ingresar un comentario que inicia con # continuado del numero del Issue que motiva los cambios y con un texto breve que describa los cambios realizados, de preferencia en idioma ingles.
+
+Ahora estamos en condiciones de enviar los cambios al servidor de GerritHub para su revision Para ello utlizamos el siguiente comando
+
+<code>
+git push origin HEAD:refs/for/master
+</code>
+En esta linea es clave la ultima parte donde ref/for/master le indica al servidor de Gerrit que es un cambio sujeto a revision y que esta destinado a la rama master. Una vez completo el envío al servidor ingresamos una vez mas al //[[https://review.gerrithub.io/#/dashboard/self|dashboard]]// de GerritHub y obtenemos la siguiente pantalla
+
+{{:desarrollo:firmware:gerrit:changes.png| changes}}
+
+En la misma podemos ver que aparecen los cambios que enviamos para iniciar el proceso de revision.
+
+===== Revision de Codigo =====
+
+===== Publicación en GitHub =====

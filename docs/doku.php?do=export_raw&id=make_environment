@@ -1,0 +1,97 @@
+====== Make ======
+
+###
+Para compilar el proyecto se utiliza [[http://www.gnu.org/software/make/|GNU Make]], de manera que la compilación pueda fácilmente ser cambiada mediante un archivo de configuración para distintos arquitecturas, compiladores, etc. según la necesidad del usuario. La estructura fue realizada para poder crear nuevos [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] de forma sencilla.
+###
+
+Desde el root se puede correr el siguiente comando para conocer las opciones:
+<code>
+make help
+</code>
+
+===== Root Make =====
+###
+El Makefile que se encuentra en el en el root al hacer un git clone o descargar una release es el root make. **Por lo general no se debe editar este Makefile**. Si cree que debe editar este Makefile contacte [[desarrollo:firmware:plan_desarrollo_fw#equipo_tecnico_a_cargo|al responsable del Makefile]].
+###
+
+Para seleccionar y configurar las variables del Makefile debe crear su propio Makefile.mine.
+
+==== Makefile.mine ====
+###
+La ventaja de tener un Makefile.mine es que personaliza el Makefile para su entorno de trabajo pero este es ignorado por git al sincronizar con el repositorio. Cada desarrollador o usuario puede configurar su propio Makefile a través del Makefile.mine evitando dos problemas:
+###
+
+  * Por error hacer un commit de un Makefile modificado, lo cual le generaría problemas a los otros usuarios que utilizan CIAA-Firmware.
+  * Por error sobrescribir el Makefile local al hacer un git pull y perder la configuración. 
+
+En el Makefile.mine se pueden editar y configurar los siguientes parámetros:
+  * **ARCH** indica la arquitectura del hardware para la cual se desea compilar. Ej: x86, cortexM4.
+  * **CPUTYPE** indica el tipo de CPU. Ej: none, ia32, ia64, lpc43xx.
+  * **CPU** indica la CPU para la que se desea compilar. Ej: none, lpc4337.
+  * **COMPILER** es el compilador a utilizar. Ej: gcc.
+  * **BOARD** es la placa sobre la cual se trabajaca (CIAA-NXP, EDU-CIAA-NXP, etc.)
+  * **PROJECT** es el Path al proyecto a compilar. Ej: examples$(DS)blinking_base.
+
+Se utiliza la variable $(DS) para indicar el separador de directorios (de manera automática se usa '/' para linux y '\' para windows). 
+
+En el mismo Makefile aparecen al comienzo comentarios donde se indican los valores que pueden tomar estos parámetros.
+
+==== Makefile del proyecto ====
+###
+Cada proyecto tiene también su Makefile. El mismo se encuentra bajo el directorio **mak** en el directorio principal del proyecto o ejemplo. En el ejemplo **examples/blinking** el makefile del ejemplo se encuentra en **examples/blinking/mak** y se llama **Makefile**.
+###
+
+Este makefile contiene las siguientes definiciones:
+  * **project** el nombre del proyecto y por ende nombre del ejecutable.
+  * **$(project)_PATH** es el directorio del proyecto.
+  * **INCLUDE** los paths a indicar al compilador para buscar includes files.
+  * **SRC_FILES** archivos a compilar ya sean archivos c como c++.
+  * **OIL_FILES** configuración del sistema operativo (si es utilizado).
+
+###
+Lo más recomendable es comenzar compilando un ejemplo y luego empezar un proyecto basado en el ejemplo más similar.
+###
+
+=== Módulos ===
+###
+Cada proyecto incluye en su Makefile los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] a compilar en una variable llamada MODS, por ejemplo:
+###
+<code>
+MODS += modules$(DS)posix \
+        modules$(DS)ciaak \
+        modules$(DS)config \
+        modules$(DS)bsp \
+        modules$(DS)platforms
+</code>
+
+###
+Es recomendable utilizar $(DS) en vez de / o \ para mantener la compatibilidad entre sistemas operativos (Linux, Windows, MAC OS).
+###
+
+===== Module Make =====
+###
+Esta sección es para quienes quieran desarrollar o extender un módulo del CIAA-Firmware (participar en el desarrollo de la CIAA-Firmware) y no para los que únicamente utilizan el CIAA-Firmware.
+###
+
+Cada [[desarrollo:firmware:arq_estatica_fw#modulos|módulo]] incluye su directorio **mak** que incluye un Makefile file con las siguientes variables:
+
+<code>
+LIBS += template
+# library path
+template_PATH = $(ROOT_DIR)$(DS)modules$(DS)template
+# library source path
+template_SRC_PATH = $(template_PATH)$(DS)src
+# library include path
+template_INC_PATH = $(template_PATH)$(DS)inc
+# library source files
+template_SRC_FILES = $(wildcard $(template_SRC_PATH)$(DS)*.c)
+</code>
+
+###
+Cada [[desarrollo:firmware:arq_estatica_fw#modulos|módulo]] se agrega como una librería, para agregar a la variable LIBS en nombre del módulo. A continuación se define el path del módulo, el path a los source files, el path a los include files y las source files que se desean compilar.
+###
+
+Las siguientes variables son obligatorias y deben ser completadas por todos los módulos:
+  * LIBS += modulename
+  * modulename_INC_PATH
+  * modulename_SRC_FILES

@@ -1,0 +1,33 @@
+~~NOTOC~~
+====== Fuente de Alimentación ======
+
+===== Diagrama esquemático =====
+{{ :desarrollo:hardware:fuente.png?direct |}}
+
+===== Descripción =====
+La fuente de alimentación de la CIAA (v1.0) fue concebida para lograr el compromiso entre un alto rendimiento y un amplio rango de tensión de entrada. Por tal razón se optó por una fuente switching con topología reductora (buck o step-down) para obtener una primer tensión de 5V con capacidad de 3A, regulados a partir de un rango típico de entre 12VDC y 30VDC. Se utilizó el circuito integrado monolítico [[http://www.ti.com/lit/ds/symlink/lm2596.pdf|LM2596]], que cumple con estos requisitos dando la ventaja de tener compensación interna, tesión de salida fija en 5V, protección térmica, frecuencia de trabajo de 150 KHz (moderadamente alta, lo cual reduce el tamaño del inductor).
+Se le han adicionado al circuito recomendado por el fabricante una serie de protecciones adicionales para garantiar la robustez del diseño, a saber:\\
+  * Diodo para protección de polaridad en la entrada
+  * Polyswitch para limitar las sobre-corrientes
+  * Supresor de transitorios
+Se ha colocado un regulador lineal [[http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF|NCV1117ST33]] con salida de 3.3V-1A a partir de fuente de switching de 5V, debido a la poca eficiencia energética que este tipo de fuentes presenta. Se optó por este tipo de fuente para alimentar la lógica principal por sus bondades de bajo ruido y buena regulación.
+Finalmente se ha realizado un filtrado adicional sobre esta fuente de 3.3V para contar con una versión apta para alimentar los circuitos analógicos de la CIAA, principalmente los ADC. 
+
+===== Características =====
+
+  * Rango de tensión de entrada típico: 12VDC a 30VDC
+  * Fuente de Switching para reducción a 5V-3A
+  * Fuente lineal de 3.3V-1A a partir de los 5V
+  * Fuente filtrada de 3.3V para conversores ADC
+  * Protección de polaridad en la entrada
+  * Protección de sobre-corrientes
+  * Protección contra transitorios
+  * Protección por sobre-temperatura
+  * LED testigo de encendido
+  * Alimentación de gran parte de sus funcionalidades por USB
+
+===== Bibliografía adicional =====
+  * [[http://es.wikipedia.org/wiki/Fuente_conmutada|Wikipedia, Fuente conmutada]]
+  * [[http://es.wikipedia.org/wiki/Regulador_de_tensi%C3%B3n|Wikipedia, Regulador de Tensión]]
+  * [[http://www.ti.com/lit/ds/symlink/lm2596.pdf|Especificación de LM2596]] 
+  * [[http://www.onsemi.com/pub/Collateral/NCP1117-D.PDF|Especificación de NCV1117ST33]]

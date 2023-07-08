@@ -1,0 +1,11 @@
+==== Poncho  PLC====
+{{https://raw.githubusercontent.com/ciaa/Ponchos/master/Poncho%20PLC/doc/plc.jpg?200 }} 
+  
+  * **Descripción:** Agrega Etradas optiacopladas y salidas de relé, además de un display LCD para implementar un PLC.
+  * **Autor:**  Mariano Bustos - E.E.S.T. N°5, Jorge Osio.
+  * **URL PONCHO:** https://github.com/ciaa/Ponchos/tree/master/Poncho%20PLC
+  * **Wiki:** [[:desarrollo:ponchos:plc|Poncho PLC]]
+\\
+|<fc #008080>**EDU-CIAA**</fc>|
+
+| **Diagrama Esquemático** | **Circuito Impreso** | **Fabricación** | <fc #777777>Funcionando</fc> |

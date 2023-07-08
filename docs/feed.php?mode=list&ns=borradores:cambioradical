@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> borradores:cambioradical</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:22:12+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:landingpage&amp;rev=1471906237&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:sidebar&amp;rev=1471957913&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:start&amp;rev=1471956429&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:landingpage&amp;rev=1471906237&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-22T22:50:37+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:cambioradical:landingpage</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:landingpage&amp;rev=1471906237&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:sidebar&amp;rev=1471957913&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-23T13:11:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:cambioradical:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:sidebar&amp;rev=1471957913&amp;do=diff</link>
+        <description>¿Qué es el Proyecto CIAA?
+
+Aplicaciones de la CIAA
+
+Cómo comprar una CIAA
+
+Cómo programar una CIAA
+
+Cursos y capacitación
+
+Quiénes hacen el Proyecto CIAA
+
+Contactate con el Proyecto CIAA
+
+Sumate al Proyecto CIAA</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:start&amp;rev=1471956429&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-23T12:47:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>borradores:cambioradical:start</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=borradores:cambioradical:start&amp;rev=1471956429&amp;do=diff</link>
+        <description>Computadora Industrial Abierta Argentina (CIAA)
+
+[Videos CIAA]
+El Proyecto CIAA nació en 2013 como una iniciativa conjunta entre el sector académico y el  industrial, representados por la ACSE y  CADIEEL, respectivamente.
+Objetivos del proyecto
+
+	*  Impulsar el desarrollo tecnológico nacional, a partir de sumar valor agregado al trabajo y a los productos y servicios, mediante el uso de sistemas electrónicos, en el marco de la vinculación de las instituciones educativas y el sistema científico-te…</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,2 @@
+=== CIAA-NXP ===
+{{:desarrollo:hardware:ciaa_nxp:foto.png?direct&200 |}} La primer CIAA en ser diseñada, probada y producida en serie. Pensada para utilizarse en (pero no limitada a) equipos de automatización industrial. Se alimenta con 24V (CC). Tiene entradas digitales optoacopladas, entradas analógicas configurables 0-10V o 0-20mA, salidas digitales open-drain y relé, salida analógica configurable 0-10V o 0-20mA, interfaces de comunicación RS232, RS485, CAN, Ethernet y USB-OTG. Basada en el microcontrolador LPC4337.

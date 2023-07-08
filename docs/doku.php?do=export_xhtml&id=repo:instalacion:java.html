@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>repo:instalacion:java</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="repo,instalacion,java"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=repo:instalacion:java&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=repo:instalacion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=repo:instalacion:java.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=repo:instalacion:java"/>
+<link rel="canonical" href="./doku.php%3Fid=repo:instalacion:java.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='repo:instalacion';var JSINFO = {"id":"repo:instalacion:java","namespace":"repo:instalacion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="instalacion_de_java">Instalación de java</h2>
+<div class="level2">
+
+<p>
+Por lo general, la instalación de java consiste en dos componentes: la JRE (Java Runtime Environment), necesaria para ejecutar los programas y la JDK (Java Development Kit) para compilarlos. Estos componentes pueden ser provistos por al menos Oracle, IBM u OpenJDK. Los que se sabe que funcionan para las diversas actividades de la CIAA son los de Oracle.
+</p>
+
+<p>
+Hay dos contextos de uso de java. Uno, para ejecutar eclipse-cdt, preparado para C/C++, que sólo requiere la JRE (versión 1.7 SE) y otro para ejecutar eclipse-automotive y compilar el código java que es utilizará en la placa que requiere la JDK (versión 1.8 SE).
+</p>
+
+<p>
+En caso de bajar la JDK, esta incluye la JRE.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n de java&quot;,&quot;hid&quot;:&quot;instalacion_de_java&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-709&quot;} -->
+<h3 class="sectionedit2" id="linux">Linux</h3>
+<div class="level3">
+
+<p>
+Se puede instalar en la carpeta de Eclipse o <a href="./doku.php%3Fid=repo:configuracion:java.html" class="wikilink1" title="repo:configuracion:java" data-wiki-id="repo:configuracion:java">para todo el sistema</a>
+</p>
+
+<p>
+<strong>64-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>jre-7u79-linux-x64.tar.gz</code> desde <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" class="urlextern" target="_blank" title="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" rel="ugc nofollow noopener">http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir dentro de Eclipse:</div>
+</li>
+</ul>
+<pre class="code bash"><span class="kw3">cd</span> <span class="re1">$HOME</span><span class="sy0">/</span>ciaa-ide<span class="sy0">/</span>eclipse-cdt
+<span class="kw2">tar</span> <span class="re5">-xzvf</span> ..<span class="sy0">/</span>jre-7u79-linux-x64.tar.gz
+<span class="kw2">mv</span> jre1.7.0_79<span class="sy0">/</span> jre<span class="sy0">/</span></pre>
+
+<p>
+<strong>32-bits</strong><br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Descargar el archivo <code>jre-7u79-linux-i586.tar.gz</code> desde <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" class="urlextern" target="_blank" title="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html" rel="ugc nofollow noopener">http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html</a> y moverlo a la carpeta <code>$HOME/ciaa-ide</code>.</div>
+</li>
+<li class="level1"><div class="li"> Descomprimir dentro de Eclipse:</div>
+</li>
+</ul>
+<pre class="code">cd $HOME/ciaa-ide/eclipse-cdt
+tar -xzvf ../jre-7u79-linux-i586.tar.gz
+mv jre1.7.0_79/ jre/</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;hid&quot;:&quot;linux&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;710-1516&quot;} -->
+<h3 class="sectionedit3" id="windows">Windows</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Windows&quot;,&quot;hid&quot;:&quot;windows&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:3,&quot;range&quot;:&quot;1517-1536&quot;} -->
+<h3 class="sectionedit4" id="mac">Mac</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Mac&quot;,&quot;hid&quot;:&quot;mac&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:4,&quot;range&quot;:&quot;1537-&quot;} --></div>
+</body>
+</html>

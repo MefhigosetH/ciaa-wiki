@@ -1,0 +1,394 @@
+?????? FAQ (Preguntas Frecuentes) ??????
+
+//Nota: Esta página se encuentra en construcción.//
+
+????? Fundamentos de la CIAA ?????
+
+???? ¿Qué es la CIAA? ????
+
+???? ¿Qué significa que la CIAA sea Industrial? ????
+[[industria|Ver más]].
+
+???? ¿Qué significa que la CIAA sea Abierta? ????
+
+???? ¿Qué significa que la CIAA sea Argentina? ????
+
+???? ¿En qué se diferencia la CIAA de un PLC? ????
+
+???? ¿En qué se diferencia la CIAA de placas como Arduino o Raspberry? ????
+
+???? ¿Existe una versión educativa de la CIAA? ????
+
+
+----
+
+????? Sumarse al Proyecto CIAA ?????
+
+???? ¿Cómo me puedo sumar al equipo de desarrollo de la CIAA? ????
+
+???? ¿Cómo me puedo sumar al equipo de auspiciantes del proyecto CIAA? ????
+
+
+----
+
+????? Uso de la CIAA ?????
+
+???? ¿Dónde puedo obtener una CIAA? ????
+
+???? ¿Qué necesito para armar mi propia CIAA? ????
+
+???? ¿Dónde puedo aprender a usar la CIAA? ????
+[[desarrollo:firmware:user_manual|Manual del usuario del CIAA-Firmware]].
+
+???? ¿Puedo usar la CIAA como parte de un desarrollo propio? ????
+###
+**Sí**.  Un usuario o empresa cualquiera puede adquirir una CIAA o bajarse los fuentes y armarse una, y luego usarla en el desarrollo de sus propios proyectos. Tanto los productos de hardware y firmware de la CIAA, así como todos los archivos fuentes creados para su diseño, deben conservar la autoría y condiciones de la [[proyecto:licencia_ciaa|Licencia BSD de la CIAA]].
+###
+
+???? ¿Puedo modificar la CIAA? ????
+###
+**Sí**.  Un usuario o empresa cualquiera puede bajarse los archivos fuentes del hardware o firmware de la CIAA, y modificarlos para luego usarlos en el desarrollo de su propios proyectos. Todos los archivos fuentes de la CIAA que se utilicen, con o sin modificaciones, deben conservar con la autoría y condiciones de la [[proyecto:licencia_ciaa|Licencia BSD de la CIAA]].
+###
+
+???? ¿Puedo comercializar desarrollos basados en la CIAA? ????
+###
+**Sí**.  Un usuario o empresa cualquiera puede utilizar y comercializar como parte de sus propios desarrollos los productos de hardware y firmware de la CIAA, con o sin modificaciones. Todos los archivos fuentes de la CIAA que se utilicen, con o sin modificaciones, deben conservar con la autoría y condiciones de la [[proyecto:licencia_ciaa|Licencia BSD de la CIAA]].
+###
+
+???? ¿Puedo incluir el nombre y logo de la CIAA en desarrollos basados en la CIAA? ????
+[[proyecto:licencia_ciaa|Ver más sobre la Licencia BSD de la CIAA]].
+
+???? ¿Qué productos se han desarrollado con la CIAA para la industria? ????
+[[industria:ciaa_en_empresas|Industrias utilizando la CIAA]].
+
+
+----
+
+????? CIAA-Hardware ?????
+
+???? ¿Qué es el CIAA-Hardware? ????
+###
+El CIAA-Hardware comprende los componentes físicos de la computadora industrial, dispositivos electrónicos, características eléctricas e interfaces de comunicación.
+###
+
+???? ¿Qué versiones de CIAA-Hardware están disponibles? ????
+
+???? ¿Cómo hago para desarrollar una nueva versión de CIAA-Hardware? ????
+
+???? ¿Para qué sirve el jumper JP15 en la CIAA-NXP o su equivalente JP5 en la EDU-CIAA-NXP? ????
+###
+Es utilizado para forzar la reprogramación de la CIAA evitando que arranque desde la flash. Ver más abajo [[#como_hago_para_reprogramar_la_ciaa-nxp_cuando_no_responde|¿Cómo hago para reprogramar la CIAA-NXP o EDU-CIAA-NXP cuando no responde?]].
+###
+
+
+----
+
+????? CIAA-Firmware ?????
+
+???? ¿Qué es el CIAA-Firmware? ????
+###
+El CIAA-Firmware es el programa que se ejecuta en la CPU del microcontrolador de la CIAA, que comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación.
+###
+
+???? ¿Dónde puedo obtener el CIAA-Firmware? ????
+Todo el código desarrollado para el CIAA-Firmware se mantiene en un repositorio de GitHub: https://github.com/ciaa/Firmware \\
+Si nunca usó GitHub puede empezar leyendo el siguiente [[desarrollo:firmware:git|Tutorial de GitHub]].
+
+???? ¿Dónde puedo aprender a usar el CIAA-Firmware? ????
+
+???? ¿El mismo Firmware sirve para todas las versiones de Hardware? ????
+
+???? ¿Puedo usar otro Firmware para mi placa CIAA? ????
+
+???? ¿Cómo puedo saber las cosas que puedo hacer con el make del firmware? ????
+###
+En una consola (linux o cygwin en windows) al posicionarse sobre la carpeta de firmware, hacer:
+<code>
+make help
+</code>
+###
+
+???? ¿Qué hago si tengo errores al compilar? ????
+###
+Verificar que el [[docu:fw:bm:make|makefile.mine]] esté correctamente configurado, y revisar la información que arroja en una consola (linux o cygwin en windows) al posicionarse sobre la carpeta de firmware y hacer:
+<code>
+make info
+</code>
+###
+
+???? ¿Quisiera eliminar el firmware 'flasheado' en mi CIAA...como hago? ????
+###
+Teniendo el [[docu:fw:bm:make|makefile.mine]] correctamente configurado, en una consola (linux o cygwin en windows) al posicionarse sobre la carpeta de firmware, hacer:
+<code>
+make erase
+</code>
+###
+
+???? ¿Como hago para compilar mi ejemplor de firmware y 'flasheado' en la CIAA? ????
+###
+Para hacer una prueba rápida por consola (linux o cygwin en windows), hay que posicionarse sobre la carpeta de firmware, teniendo previamente configurado el [[docu:fw:bm:make|makefile.mine]], y hacer:
+<code>
+make all  ☞  Compila todo el proyecto
+make download  ☞  Abre el openocd, y graba el .axf en la CIAA
+</code>
+###
+
+???? ¿Si hago un cambio menor, debo recompilar todo de nuevo? ????
+###
+Generalmente no. Sólo hace falta compilar aquello que cambia. Si lo que se modifica es parte de nuestro proyecto, alcanza con haber hecho al menos una vez en una consola:
+<code>
+make all  ☞  Borra todo lo existente, genera el RTOS y Compila todo el proyecto
+</code>
+o
+<code>
+make clean_generate  ☞  Borra todo lo existente y genera el RTOS
+</code>
+
+Para luego sólo ser necesario hacer en cada cambio:
+<code>
+make ☞  Compilación incremental...sólo compila los cambios
+</code>
+Sólamente será necesario volver a generar el RTOS y recompilar todo, si se hacen cambios en el .OIL que configura el RTOS o en algún módulo de base del firmware.
+###
+
+
+???? ¿Cómo hago para reprogramar la CIAA-NXP o EDU-CIAA-NXP cuando no responde? ????
+###
+Puede pasar (no es algo común) que ante un Firmware muy inestable la CIAA-NXP no pueda ser reprogramada mediante el OpenOCD como se hace normalmente. Bajo esta situación anormal, se puede forzar que el arranque NO sea desde la memoria flash (debido a la inestabilidad del firmware actual), sino que el procesador queda en espera de recibir el boot externamente. Esto se logra cerrando el jumper JP15 en la CIAA-NXP o JP5 en la EDU-CIAA-NXP, y luego se procede a reprogramar le CIAA-NXP con el OpenOCD de manera normal. Una vez reprogramada nuevamente con un firmware estable, puede abrirse el jumper para que el procesador arranque normalmente desde la memoria Flash. Los pasos en detalle serían:
+  * Asegurate que la CIAA esté desenchufada.
+  * Puentear el JP correspondiente (de manera permanente con estaño o momentaneo con algo metálico).
+  * Conectar la CIAA (manteniendo el puente cerrado).
+  * Soltar JP (si se hizo con algo metálico de manera momentanea).
+  * Ejecutar parado en el raíz del Firmware, el comando 'make erase'
+  * Desenchufar la CIAA y soltar JP (si se hizo con estaño).
+Si todo anduvo bien, se debería ver al final de la consola un texto similar a:"erased sectors 0 through 14 on flash bank 0 in 0.120510s"
+###
+???? ¿Por qué CIAA-Firmware utiliza OSEK-OS como RTOS? ????
+###
+OSEK-OS fue creado por la industria automotriz, pero esa no es la razón para utilizarlo en CIAA-Firmware. La ventaja de OSEK-OS es que es un **estándar** y por ende existen muchas implementaciones. Hay implementaciones open source y cerradas, las hay con QM hasta SIL 3. Además de que hay muchas empresas que proveen soporte.
+###
+###
+Al ser un estándar **abierto**, quien quiera es libre de usar el estándar, implementarlo, venderlo, comprarlo, etc. OSEK-OS nos genera la libertad de no dependencia.
+###
+???? El RTOS no compila y dice que falta un archivo *_Cfg.h ????
+###
+Estos archivos son generados en base a la configuración OIL. Debe recordar de correr
+<code>
+make generate
+</code>
+o en su defecto con un clean previo haciendo
+<code>
+make clean_generate
+</code>
+para que estos archivos sean generados.
+###
+???? Dice que operand type mismatch for `jmp' ????
+###
+
+Si aparece 
+
+./modules/rtos/src/Schedule.c: Assembler messages:
+
+./modules/rtos/src/Schedule.c:169: Error: operand type mismatch for `jmp'
+
+es porque estás compilando a 32 bits en una arquitectura de 64, tenés que corregir en Makefile.mine, que no está versionado y lo conseguís copiandolo de Makefile.config y modifican de
+
+BOARD          ?= ciaa_sim_ia32
+
+a
+
+BOARD          ?= ciaa_sim_ia64
+
+###
+???? Error al debuggear????
+###
+
+gdb dice:
+
+<code>
+warning: Architecture rejected target-supplied description
+
+warning: Cannot convert floating-point register value to non-floating-point type.
+
+value has been optimized out
+
+0x00000000 in ?? ()
+</code>
+
+openocd dice:
+
+<code>
+undefined debug reason 7 - target needs reset
+</code>
+
+Lo que está ocurriendo es que no coincide la arquitectura. Debiste haber usado **arm-none-eabi-gdb** o **gdb-multiarch**
+
+###
+???? PHP Fatal error: Uncaught Error: Call to undefined function split() in Firmware/modules/rtos/generator ????
+###
+
+Esto es por tener instalado php 7 y estar usando algún branch donde se usa split() en lugar de explode(). En particular al usar release/1.0.x con nuevas distribuciones como Ubuntu 16.04
+
+El siguiente comando corrige el código y es compatible con php 5.x
+
+<code>
+sed -i modules/rtos/generator/oilParser.php -e "s/split/explode/"
+</code>
+
+
+
+
+
+###
+???? ¿Qué es OIL? ????
+###
+OIL es OSEK Implementation Language, es un lenguaje de configuración para indicar al RTOS cuántas tareas hay, qué prioridades tienen, etc. Es parte del estándar. Normalmente, se encuentra el archivo .oil dentro de la carpeta 'etc' del proyecto.
+
+
+###
+???? ¿Mi aplicación debe usar funciones para formatear cadenas como printf y sprintf, que no están implementadas aún en ciaaPOSIX_stdio, cómo lo resuelvo? ????
+###
+
+Incluir stdio.h pero en tu Makefile.mine agregá lo siguiente
+
+<code>
+LFLAGS += -lc -lrdimon
+</code>
+
+###
+[[desarrollo:firmware:rtos|Ver más sobre el RTOS utilizado]].\\
+[[desarrollo:firmware:rtos:faq|Ver más preguntas sobre el RTOS]].
+
+
+
+
+???? ¿Cuál branch de los módulos del Firmware corresponden a los releases, en particular 1.0.0? ????
+###
+En github hay una solapa donde hay **branches** y **tags**. Si en **tags** seleccionás el release y entrás en la carpeta **modules**, vas a ver que commit del módulo corresponde. Por ejemplo, para 1.0.0:
+
+rtos@fdb5b7ba160d60d3065ebcf7cdc2de3464c3f115
+
+modbus@05cec18fd210ff8f10f6d9689aff0def7d7bf11f
+
+Luego te parás en cada módulo y ejecutás el git checkout correspondiente:
+
+<code>
+cd modules/rtos
+git checkout fdb5b7ba160d60d3065ebcf7cdc2de3464c3f115
+cd -
+cd modules/modbus
+git checkout 05cec18fd210ff8f10f6d9689aff0def7d7bf11f
+</code>
+###
+
+???? Error al instalar OpenOCD ????
+
+###
+Si te aparece el siguiente error
+<code>
+=== configuring in jimtcl (/home/invap/ciaa-ide/openocd-0.9.0/jimtcl)
+configure: running /bin/bash ./configure.gnu --disable-option-checking '--prefix=/usr/local'  '--enable-ftdi' --cache-file=/dev/null --srcdir=.
+application-specific initialization failed: Can't find a usable init.tcl in the following directories: 
+    /tmp/pabuild/tcl8.5.14/lib/tcl8.5 /opt/Xilinx/SDK/2015.2/bin/unwrapped/lib/tcl8.5 /opt/Xilinx/SDK/2015.2/bin/lib/tcl8.5 /opt/Xilinx/SDK/2015.2/bin/unwrapped/library /opt/Xilinx/SDK/2015.2/bin/library /opt/Xilinx/SDK/2015.2/bin/tcl8.5.14/library /opt/Xilinx/SDK/2015.2/tcl8.5.14/library
+
+
+This probably means that Tcl wasn't installed properly.
+
+invalid command name "clock"
+    while executing
+"clock millis"
+    invoked from within
+"set autosetup(start) [clock millis]"
+    (file "/home/invap/ciaa-ide/openocd-0.9.0/jimtcl/autosetup/autosetup" line 937)
+configure: error: ./configure.gnu failed for jimtcl
+</code>
+
+No está aún del todo confirmado pero puede ser que se arregle cambiando en openocd-0.9.0/jimtcl/autosetup/autosetup donde dice
+
+<code>
+set autosetup(start) [clock millis]
+</code>
+
+por
+
+<code>
+set autosetup(start) clock
+</code>
+
+
+###
+
+----
+
+????? Linux en la CIAA ?????
+
+
+----
+
+????? CIAA-Software-IDE ?????
+
+???? ¿Qué es el CIAA-Software-IDE? ????
+###
+El CIAA-Software-IDE es el entorno de desarrollo del CIAA-Firmware, que permite programar la CIAA usando lenguajes C/C++. El CIAA-Software-IDE ofrece a los desarrolladores un instalador con el cual podrán de forma sencilla instalar y configurar automáticamente la gran mayoría de las herramientas necesarias para trabajar con la CIAA.
+###
+
+???? ¿Dónde puedo obtener el CIAA-Software-IDE? ????
+Puede descargar la versión más completa del [[desarrollo:descargas|CIAA-IDE-Suite]].
+
+????  Problemas al instalar los Plug-In GNU-ARM-OpenOCD para eclipse en linux ????
+
+Si al intentar descargar el plug-in de OpenODC nos aparece el siguiente error: **"Cannot complete the install because one or more required items could not be found"**, puede ser que la versión de eclipse no sea la actual,y este plug-in no funciona para versiones viejas. 
+En la versión eclipse Kepler 4.3.2 funciona correctamente y el link de descarga es el siguiente:
+
+ https://eclipse.org/downloads/packages/release/Kepler/SR2
+
+???? Al intentar debugear con OpenOCD usando el Eclipse figura el error: Cannot run program "C:\CIAA\cyqwin\usr\local\openocd\bin\openocd.exe": Launching failed ????
+
+El IDE no encuentra el ejecutable del debugger OpenOCD, verificar que ${openocd_path}/${openocd_executable} esté apuntando al mismo. Este problema puede darse al utilizar una versión no actualizada del IDE, se recomienda instalar la última versión de la [[desarrollo:descargas|CIAA-IDE-Suite]].
+
+???? Al intentar debugear con OpenOCD usando el Eclipse figura en la consola el error: "Error: unable to open ftdi device with vid xxxx, pid xxxx" ????
+
+Al trabajar en windows, asegurarse de reemplazar el driver del FTDI con la aplicación Zadig, como se indica en 
+[[desarrollo:firmware:instalacion_sw#openocd|aqui]]
+
+
+???? Falla al intentar reemplazar el driver con Zadig ????
+
+Si Falla Zadig, mostrando el mensaje "The driver installation failed." entonces intente bajando una versión anterior de Zadig en el siguiente link: [[http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download]]
+
+----
+
+????? CIAA-Software-PLC ?????
+
+???? ¿Qué es el CIAA-Software-PLC? ?????
+
+
+----
+
+????? EDU-CIAA ?????
+
+???? ¿Qué es la EDU-CIAA? ?????
+
+???? ¿Cómo puedo traer la EDU-CIAA a mi Escuela o Universidad? ????
+
+
+----
+
+????? Microelectrónica ?????
+
+???? ¿Cómo conecto componentes de 5v a las interfaces de 3.3v? ????
+
+????? Paquete tecnológico ?????
+
+???? ¿Cómo generar los archivos de coordenadas X-Y de una plaqueta con kicad? ????
+
+Es el archivo que Protel y DXP llaman de pick and place
+
+En pcbnew vas a File > Fabrication Outputs > Footprint Position File, te genera dos archivos, uno por cada lado del PCB.
+
+???? ¿Cómo muevo una carpeta entre repositorios? ????
+
+Falta depurar, pero esto más o menos sirve: https://github.com/ciaa/Firmware/pull/416
+
+Es como se ha movido una carpeta de Firmware/modules/rtos, que es un subproyecto, a Firmware
+

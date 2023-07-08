@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=desarrollo"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo';var JSINFO = {"id":"desarrollo:firmware","namespace":"desarrollo","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#ciaa-firmware">CIAA-Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#plan_de_desarrollo">Plan de desarrollo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#proceso_de_desarrollo">Proceso de Desarrollo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#requerimientos">Requerimientos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#diseno">Diseño</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#implementacion">Implementación</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware.html#verificacion_y_validacion">Verificación y Validación</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="ciaa-firmware">CIAA-Firmware</h1>
+<div class="level1">
+<p class="divalign-justify">El <strong>firmware</strong> es el programa que <strong>se ejecuta en la CPU del microcontrolador</strong>. Éste comprende los <a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html#modulos" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">módulos</a> de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. </p><!--divalign-->
+
+<p>
+El Firmware utiliza:
+</p>
+<ul>
+<li class="level1"><div class="li"> El estándar <strong>OSEK-<abbr title="Operating System">OS</abbr></strong> como <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a> (Sistema Operativo de Tiempo Real).</div>
+</li>
+<li class="level1"><div class="li"> El estándar <strong>POSIX</strong>, que describe un conjunto de interfaces de aplicación adaptables a una gran variedad de implementaciones de sistemas operativos. El <strong>POSIX</strong> de la CIAA es un <strong>POSIX</strong> Like.</div>
+</li>
+<li class="level1"><div class="li"> Implementa <strong>MODBUS</strong> como protocolo de comunicaciones.</div>
+</li>
+</ul>
+
+<p>
+En las siguientes secciones podrá interiorizarse en la documentación del desarrollo del CIAA-Firmware.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CIAA-Firmware&quot;,&quot;hid&quot;:&quot;ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-935&quot;} -->
+<h3 class="sectionedit2" id="como_comenzar_a_utilizar_el_ciaa_firmware">¿Cómo comenzar a utilizar el CIAA Firmware?</h3>
+<div class="level3">
+<p class="divalign-justify">Si quiere utilizar el CIAA-Firmware le recomendamos comenzar a leer el <a href="./doku.php%3Fid=desarrollo:firmware:user_manual.html" class="wikilink1" title="desarrollo:firmware:user_manual" data-wiki-id="desarrollo:firmware:user_manual">manual de usuario</a> y las subpáginas.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo comenzar a utilizar el CIAA Firmware?&quot;,&quot;hid&quot;:&quot;como_comenzar_a_utilizar_el_ciaa_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;936-1146&quot;} -->
+<h3 class="sectionedit3" id="como_participar_del_desarrollo_del_ciaa-firmware">¿Cómo participar del desarrollo del CIAA-Firmware?</h3>
+<div class="level3">
+<p class="divalign-justify">Si es nuevo en el proyecto y quiere participar del desarrollo del Firmware le recomendamos que lea la siguiente página: <a href="./doku.php%3Fid=desarrollo:firmware:participar.html" class="wikilink1" title="desarrollo:firmware:participar" data-wiki-id="desarrollo:firmware:participar">Cómo participar en el grupo de Firmware</a>.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo participar del desarrollo del CIAA-Firmware?&quot;,&quot;hid&quot;:&quot;como_participar_del_desarrollo_del_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1147-1418&quot;} -->
+<h2 class="sectionedit4" id="plan_de_desarrollo">Plan de desarrollo</h2>
+<div class="level2">
+
+<p>
+En el <a href="./doku.php%3Fid=desarrollo:firmware:plan_desarrollo_fw.html" class="wikilink1" title="desarrollo:firmware:plan_desarrollo_fw" data-wiki-id="desarrollo:firmware:plan_desarrollo_fw">Plan de desarrollo del firmware</a> encontrará la definición de:
+</p>
+<ul>
+<li class="level1"><div class="li"> Cronograma general de releases (versiones del CIAA-Firmware).</div>
+</li>
+<li class="level2"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:plan_desarrollo_fw.html#equipo_tecnico_a_cargo" class="wikilink1" title="desarrollo:firmware:plan_desarrollo_fw" data-wiki-id="desarrollo:firmware:plan_desarrollo_fw">Equipo técnico a cargo</a>.</div>
+</li>
+<li class="level2"><div class="li"> Componentes a desarrollar y responsables a cargo.</div>
+</li>
+<li class="level2"><div class="li"> Estándares utilizados.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plan de desarrollo&quot;,&quot;hid&quot;:&quot;plan_de_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1419-1797&quot;} -->
+<h2 class="sectionedit5" id="proceso_de_desarrollo">Proceso de Desarrollo</h2>
+<div class="level2">
+
+<p>
+La siguiente página describe el <a href="./doku.php%3Fid=desarrollo:firmware:proceso.html" class="wikilink1" title="desarrollo:firmware:proceso" data-wiki-id="desarrollo:firmware:proceso">Proceso de Desarrollo del Firmware</a> de la CIAA.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Proceso de Desarrollo&quot;,&quot;hid&quot;:&quot;proceso_de_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1798-1936&quot;} -->
+<h2 class="sectionedit6" id="requerimientos">Requerimientos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:caracteristicas_fw.html" class="wikilink1" title="desarrollo:firmware:caracteristicas_fw" data-wiki-id="desarrollo:firmware:caracteristicas_fw">Requerimientos del CIAA-Firmware</a>: Documento de requerimientos propuestos para el desarrollo del Firmware de la CIAA.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requerimientos&quot;,&quot;hid&quot;:&quot;requerimientos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1937-2121&quot;} -->
+<h2 class="sectionedit7" id="diseno">Diseño</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a>: Sistema operativo elegido para el CIAA-Firmware.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html" class="wikilink1" title="desarrollo:firmware:arq_estatica_fw" data-wiki-id="desarrollo:firmware:arq_estatica_fw">Arquitectura estática</a>: Módulos que conforman el firmware.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:arq_dinamica.html" class="wikilink1" title="desarrollo:firmware:arq_dinamica" data-wiki-id="desarrollo:firmware:arq_dinamica">Arquitectura dinámica</a>: Comportamiento en el tiempo del firmware.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:modbus:modbus_design.html" class="wikilink1" title="desarrollo:modbus:modbus_design" data-wiki-id="desarrollo:modbus:modbus_design">MODBUS</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:estructura_de_directorios.html" class="wikilink1" title="desarrollo:firmware:estructura_de_directorios" data-wiki-id="desarrollo:firmware:estructura_de_directorios">Estructura de directorios</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><a href="./doku.php%3Fid=desarrollo:firmware:generador.html" class="wikilink1" title="desarrollo:firmware:generador" data-wiki-id="desarrollo:firmware:generador">Generador de archivos OIL</a>.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o&quot;,&quot;hid&quot;:&quot;diseno&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2122-2592&quot;} -->
+<h2 class="sectionedit8" id="implementacion">Implementación</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:codigo.html" class="wikilink1" title="desarrollo:firmware:codigo" data-wiki-id="desarrollo:firmware:codigo">Código fuente</a>: Acceso al repositorio de código desarrollado. Información necesaria para entender el código y compilarlo.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:repositorio.html" class="wikilink1" title="desarrollo:firmware:repositorio" data-wiki-id="desarrollo:firmware:repositorio">Repositorio</a>: Guia para la configuración de las herramientas Git y Gerrit para contribuir en el desarrollo del código.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html" class="wikilink1" title="desarrollo:firmware:instalacion_sw" data-wiki-id="desarrollo:firmware:instalacion_sw">Manual de instalación del firmware</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:primer_compile.html" class="wikilink1" title="desarrollo:firmware:primer_compile" data-wiki-id="desarrollo:firmware:primer_compile">Compilando por primera vez</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Guía de estilo de codificación: Les recomendamos leer la sección <a href="./doku.php%3Fid=desarrollo:firmware:fw_coding_guidelines.html" class="wikilink1" title="desarrollo:firmware:fw_coding_guidelines" data-wiki-id="desarrollo:firmware:fw_coding_guidelines">CIAA Firmware Coding Guidelines</a> para interiorizarse de las reglas y recomendaciones a cumplir para aportar código al proyecto.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Implementaci\u00f3n&quot;,&quot;hid&quot;:&quot;implementacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2593-3330&quot;} -->
+<h2 class="sectionedit9" id="verificacion_y_validacion">Verificación y Validación</h2>
+<div class="level2">
+<p class="divalign-justify">Como parte del desarrollo del Firmware de la CIAA se ejecutan también procesos de Verificación y de Validación.</p><!--divalign-->
+
+<p>
+La <strong>Verificación</strong> del CIAA-Firmware se realiza en tres etapas de testing:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:unit_tests.html" class="wikilink1" title="desarrollo:firmware:unit_tests" data-wiki-id="desarrollo:firmware:unit_tests">Unit Tests (o Pruebas Unitarias)</a>: Pruebas realizadas en PC, donde se testea sólo un archivo C por test.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Module Tests (o Pruebas de Módulo): Pruebas realizadas en PC, donde se testea un módulo de firmware.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests.html" class="wikilink1" title="desarrollo:firmware:functional_tests" data-wiki-id="desarrollo:firmware:functional_tests">Functional Tests (o Pruebas Funcionales)</a>: Pruebas realizadas sobre el hardware, donde se testea todo el firmware.</div>
+</li>
+</ul>
+<p class="divalign-justify">La <strong>Validación</strong> se realiza sobre cada versión del CIAA-Firmware, una vez que éstas se terminan de desarrollar. Para validar cada versión se ejecuta un conjunto de ensayos sobre el hardware, mediante los que se busca demostrar el cumplimiento de todos los <a href="./doku.php%3Fid=desarrollo:firmware:caracteristicas_fw.html" class="wikilink1" title="desarrollo:firmware:caracteristicas_fw" data-wiki-id="desarrollo:firmware:caracteristicas_fw">requerimientos</a> propuestos para esa versión de firmware. Estos ensayos pueden ser funcionales, de stress, negativos, entre otros.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Verificaci\u00f3n y Validaci\u00f3n&quot;,&quot;hid&quot;:&quot;verificacion_y_validacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3331-&quot;} --></div>
+</body>
+</html>

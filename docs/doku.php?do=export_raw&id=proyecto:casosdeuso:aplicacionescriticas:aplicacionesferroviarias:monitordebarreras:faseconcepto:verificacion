@@ -1,0 +1,111 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Verificación =====
+
+###
+La norma UNE EN 50126 indica que:
+###
+
+<note>"las tareas de verificación que se deben emprender dentro de esta fase son: \\
+<fc #ffffff>..</fc> a) evaluación de la idoneidad de la información y, cuando proceda, de los datos y otras estadísticas utilizadas como información aportada para tareas RAMS dentro de esta fase; \\
+<fc #ffffff>..</fc> b) evaluación de la idoneidad de la declaración de entorno del sistema definida en el Requisito 1; \\
+<fc #ffffff>..</fc> c) evaluación de la integridad de la relación de fuentes de peligros definida en el Requisito 3; \\
+<fc #ffffff>..</fc> d) evaluación de la idoneidad de los métodos, herramientas y técnicas utilizadas en la fase; \\
+<fc #ffffff>..</fc> e) evaluación de la competencia de todo el personal que desempeñe tareas en la fase."</note>
+
+
+###
+Para realizar la verificación se propone enviar el documento completo de la Fase 1 a diferentes evaluadores, estableciendo una modalidad del tipo “Peer Review” (revisión de pares), con una planilla en la que se identifica cada comentario a cada documento como un RID (“Review Item Discrepancy”) con un identificador único, que luego son revisados por los autores de los documentos para ser contestados.
+###
+
+###
+El documento a ser emitido por cada revisor tendrá un nombre de archivo que refleje que se trata de la verificación de determinada fase, en determinada versión del documento, hecha por determinado revisor, en determinada fecha. Por ejemplo, si la Fase 1 en su versión 1.0 es revisada por el señor Juan Perez el día 5 de septiembre del año 2016 entonces el nombre del archivo será “Verif-Fase1-1.0-JP-05-09-2016”.
+###
+
+###
+El revisor emitirá primeramente una opinión global que puede ser sólo una de las siguientes tres opciones:
+###
+
+  * El documento no requiere de cambios para ser aceptado.
+  * El documento requiere de cambios menores para ser aceptado.
+  * El documento requiere de cambios mayores para ser aceptado.
+
+###
+El revisor emitirá luego una evaluación específica por cada uno de los siguientes ítems:\\
+<fc #ffffff>..</fc> a) Evaluación de la idoneidad de la información y, cuando proceda, de los datos y otras estadísticas utilizadas como información aportada para tareas RAMS dentro de esta fase.\\
+<fc #ffffff>..</fc> b) Evaluación de la idoneidad de la declaración de entorno del sistema definida en el Requisito 1. \\
+<fc #ffffff>..</fc> c) Evaluación de la integridad de la relación de fuentes de peligros definida en el Requisito 3. \\
+<fc #ffffff>..</fc> d) Evaluación de la idoneidad de los métodos, herramientas y técnicas utilizadas en la fase. \\
+<fc #ffffff>..</fc> e) Evaluación de la competencia de todo el personal que desempeñó tareas en la fase.\\
+\\
+Y para cada uno de estos ítems el revisor indicará alguna de las siguientes opiniones:
+###
+
+  * Lo relacionado con este Item ha sido adecuadamente realizado.
+  * Se requiere de cambios menores en lo relacionado con este ítem.
+  * Se requiere de cambios mayores en lo relacionado con este ítem.
+
+###
+Y dispondrá además de un párrafo de formato libre para justificar lo indicado.
+###
+
+###
+El revisor emitirá luego emitirá un listado de observaciones identificando cada una de ellas de acuerdo con el nombre del archivo y el agregado de un número correlativo. Por ejemplo, continuando con el ejemplo mencionado en el párrafo anterior, la identificación de las observaciones sería la siguiente:
+###
+
+  * Verif-Fase1-1.0-JP-05-09-2016-Obs-1: En el párrafo 2.2.4 se recomienda incluir tal y tal norma internacional.
+  * Verif-Fase1-1.0-JP-05-09-2016-Obs-2: No queda claro el criterio adoptado en relación con el Requisito 2. Se recomienda establecer claramente tal y tal cosa.
+  * Verif-Fase1-1.0-JP-05-09-2016-Obs-3: En el párrafo 3.1.8 se considera que es inadecuado el rango de temperaturas indicado. Se sugiere considerar tal rango.
+
+###
+Finalmente el revisor hará una evaluación global del trabajo realizado, con un formato libre, en un espacio dedicado a tal fin.
+###
+
+###
+Luego, para cada una de las revisiones los autores deberán emitir un documento indicando su respuesta a cada una de las observaciones recibidas. 
+###
+
+###
+Primeramente, en relación con cada uno de los ítems indicados en el párrafo 5.6 los autores podrán emitir una respuesta en formato libre en relación con las observaciones de cada revisor.
+###
+
+###
+A continuación, seguirán las respuestas a cada una de las observaciones recibidas. Continuando con el el ejemplo mencionado, el documento llevará por nombre “Verif-Fase1-1.0-JP-05-09-2016-Resp” y la identificación de las respuestas a cada una de las observaciones será presentada por ejemplo de la siguiente forma:
+###
+
+  * Verif-Fase1-1.0-JP-05-09-2016-Resp-1: Se acepta la recomendación respecto a incluir en el párrafo 2.2.4 tal y tal norma internacional.
+  * Verif-Fase1-1.0-JP-05-09-2016-Resp-2: El criterio adoptado en relación con el Requisito 2 es tal y tal. Esto se ha incluido  en el párrafo 3.2.9 en la versión 1.1 del documento.
+  * Verif-Fase1-1.0-JP-05-09-2016-Resp-3: El rango de temperatura indicado en el párrafo 3.1.8 se ha tomado de tal lado, por lo que se considera adecuado el rango de temperaturas adoptado en la versión 1.0 del documento.
+
+###
+Los autores además deberán hacer una devolución de la evaluación global emitida por cada revisor, en la cual podrán seguir un formato libre.
+###
+
+###
+Finalmente, los autores deberán preparar una nueva versión del documento, siguiendo una numeración del versionado correlativa, la cual deberá ser enviada a los mismos revisores de la versión precedente, y también podrá ser enviada a cualquier otro revisor que se considere oportuno.
+###
+
+{{ :blanco.png?20 | }}
+
+###
+Se adjuntan a continuación enlaces a los documentos que servirán de referencia de formato para realizar las verificaciones de esta fase.
+###
+
+{{:proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verif-fase1-1.0-jp-05-09-2016.pdf|}}
+
+{{:proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verif-fase1-1.0-jp-05-09-2016-resp.pdf|}}
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Continuar con la Fase de Definición del Sistema y Condiciones de Aplicación]] ]
+### 
+ 
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 

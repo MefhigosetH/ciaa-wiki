@@ -1,0 +1,5 @@
+====== Callback ======
+
+Una callback es una función que es utilizada para notificar la ocurrencia de un evento. Para ver información de [[http://es.wikipedia.org/wiki/Callback_%28inform%C3%A1tica%29|Callback en Wiki]].
+
+En ciaaFirmware y sistemas embebidos es un mecanismo muy utilizado para informar sobre notificaciones en el momento en que eventos ocurren. Por ejemplo cuando datos son recibidos, enviados, un pin de entrada tiene un flanco, etc, etc.

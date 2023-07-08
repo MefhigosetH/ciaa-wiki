@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:arq_estatica_fw</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,arq_estatica_fw"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:arq_estatica_fw"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:arq_estatica_fw.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:arq_estatica_fw","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html#arquitectura_estatica_del_ciaa-firmware">Arquitectura estática del CIAA-Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html#modulos">Módulos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html#capas">Capas</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="arquitectura_estatica_del_ciaa-firmware">Arquitectura estática del CIAA-Firmware</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura est\u00e1tica del CIAA-Firmware&quot;,&quot;hid&quot;:&quot;arquitectura_estatica_del_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-56&quot;} -->
+<h2 class="sectionedit2" id="modulos">Módulos</h2>
+<div class="level2">
+<p class="divalign-justify">El CIAA-Firmware está dividido en módulos. Un módulo es un conjunto de archivos .h/.c y Makefiles, que implementa una funcionalidad específica. Cada módulo contiene una relativa gran cantidad de llamadas dentro del mismo, pero mantiene acotadas las dependencias a otros módulos, y de ser posible no tiene dependencias de otros módulos.</p><!--divalign-->
+<p class="divalign-justify">Todos los módulos que componen el CIAA-Firmware se encuentran dentro del  <a href="https://github.com/ciaa/Firmware/tree/master/modules" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/master/modules" rel="ugc nofollow noopener">directorio modules del repositorio de GitHub</a>.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00f3dulos&quot;,&quot;hid&quot;:&quot;modulos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;57-617&quot;} -->
+<h2 class="sectionedit3" id="capas">Capas</h2>
+<div class="level2">
+
+<p>
+Los <a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html#modulos" title="desarrollo:firmware:arq_estatica_fw ↵" class="wikilink1">módulos</a> del CIAA-Firmware están separados en 4 capas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Aplicación</div>
+</li>
+<li class="level1"><div class="li"> Servicios</div>
+</li>
+<li class="level1"><div class="li"> Interfaz</div>
+</li>
+<li class="level1"><div class="li"> Drivers</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="aplicacion">Aplicación</h4>
+<div class="level4">
+<p class="divalign-justify">No es en sí parte del Firmware sino la aplicación en sí misma que utiliza el Firmware. Una aplicación podría ser la Aplicación Ladder, que de estar cargada transforma la CIAA en un PLC.</p><!--divalign-->
+
+</div>
+
+<h4 id="servicios">Servicios</h4>
+<div class="level4">
+
+<p>
+Esta capa de software provee a la <strong>Aplicación</strong> interfaces estandarizadas a ella.
+</p>
+
+</div>
+
+<h4 id="interfaz">Interfaz</h4>
+<div class="level4">
+<p class="divalign-justify">Abstrae la funcionalidad de los drivers para la capa de <strong>Servicios</strong>. A su vez, implementa toda la funcionalidad posible para dejar la implementación de los drivers a su mínima expresión, permitiendo la mayor re utilización posible entre dos hardwares incompatibles.</p><!--divalign-->
+
+</div>
+
+<h4 id="drivers">Drivers</h4>
+<div class="level4">
+<p class="divalign-justify">Esta capa implementa todos los drivers de la CIAA. Es la única capa que depende del hardware. Es desarrollada de forma de minimizar su funcionalidad. Toda funcionalidad adicional debe estar implementada en la capa de <strong>Interfaz</strong>.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Capas&quot;,&quot;hid&quot;:&quot;capas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;618-1647&quot;} -->
+<h3 class="sectionedit4" id="diagrama_de_la_estructura_del_firmware">Diagrama de la estructura del Firmware</h3>
+<div class="level3">
+
+<p>
+El siguiente diagrama muestra la estructura del CIAA-Firmware:
+<a href="lib/exe/detail.php%3Fid=desarrollo:firmware:arq_estatica_fw&amp;media=desarrollo:firmware:ciaafirmware.png.html" class="media" title="desarrollo:firmware:ciaafirmware.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:ciaafirmware.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+El diagrama intenta seguir una estructura UNIX like pero no 100% compatible.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama de la estructura del Firmware&quot;,&quot;hid&quot;:&quot;diagrama_de_la_estructura_del_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1648-1864&quot;} -->
+<h3 class="sectionedit5" id="acceso_a_dispositivos">Acceso a dispositivos</h3>
+<div class="level3">
+
+<p>
+El acceso a dispositivos está pensado de forma similar a POSIX, con las siguientes funciones:
+</p>
+<ul>
+<li class="level1"><div class="li"> ciaaPOSIX_open</div>
+</li>
+<li class="level1"><div class="li"> ciaaPOSIX_close</div>
+</li>
+<li class="level1"><div class="li"> ciaaPOSIX_read</div>
+</li>
+<li class="level1"><div class="li"> ciaaPOSIX_write</div>
+</li>
+<li class="level1"><div class="li"> ciaaPOSIX_ioctl</div>
+</li>
+<li class="level1"><div class="li"> ciaaPOSIX_lseek</div>
+</li>
+</ul>
+
+<p>
+Para permitir esta funcionalidad se implementarán los siguientes <a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:arq_estatica_fw.html#modulos" title="desarrollo:firmware:arq_estatica_fw ↵" class="wikilink1">módulos</a> en el Firmware:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> servicios</div>
+<ul>
+<li class="level2"><div class="li"> ciaaPOSIX_stdio</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> interfaz</div>
+<ul>
+<li class="level2"><div class="li"> ciaaDevices</div>
+</li>
+<li class="level2"><div class="li"> ciaaSerialDevices</div>
+</li>
+<li class="level2"><div class="li"> ciaaBlockDevices</div>
+</li>
+<li class="level2"><div class="li"> ciaaModbus</div>
+</li>
+<li class="level2"><div class="li"> ciaaGpio</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> drivers</div>
+<ul>
+<li class="level2"><div class="li"> ciaaDriverUart</div>
+</li>
+<li class="level2"><div class="li"> ciaaSocket</div>
+</li>
+<li class="level2"><div class="li"> ciaaDriverFlash</div>
+</li>
+<li class="level2"><div class="li"> ciaaDriverGpio</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acceso a dispositivos&quot;,&quot;hid&quot;:&quot;acceso_a_dispositivos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1865-&quot;} --></div>
+</body>
+</html>

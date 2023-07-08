@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:plan_desarrollo_fw</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,plan_desarrollo_fw"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:plan_desarrollo_fw&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:plan_desarrollo_fw"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:plan_desarrollo_fw.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:plan_desarrollo_fw","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#plan_de_desarrollo_del_ciaa-firmware">Plan de desarrollo del CIAA-Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#tipos_de_releases">Tipos de Releases</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#versionamiento_de_los_releases_y_de_cada_modulo">Versionamiento de los releases y de cada módulo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#cronograma_general">Cronograma general</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#equipo_tecnico_a_cargo">Equipo técnico a cargo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:plan_desarrollo_fw.html#componentes_a_desarrollar_y_responsables_a_cargo">Componentes a desarrollar y responsables a cargo</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="plan_de_desarrollo_del_ciaa-firmware">Plan de desarrollo del CIAA-Firmware</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plan de desarrollo del CIAA-Firmware&quot;,&quot;hid&quot;:&quot;plan_de_desarrollo_del_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-52&quot;} -->
+<h2 class="sectionedit2" id="tipos_de_releases">Tipos de Releases</h2>
+<div class="level2">
+
+<p>
+El firmware de la CIAA realiza 3 releases anualmente en los meses de abril, agosto y diciembre. Existen dos tipos de releases denominados <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> y <a href="./doku.php%3Fid=desarrollo:firmware:lts.html" class="wikilink1" title="desarrollo:firmware:lts" data-wiki-id="desarrollo:firmware:lts">LTS</a>:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> se realizarán <a href="./doku.php%3Fid=desarrollo:firmware:bug.html" class="wikilink1" title="desarrollo:firmware:bug" data-wiki-id="desarrollo:firmware:bug">bugfixes</a> hasta el siguiente release ya sea éste <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> o <a href="./doku.php%3Fid=desarrollo:firmware:lts.html" class="wikilink1" title="desarrollo:firmware:lts" data-wiki-id="desarrollo:firmware:lts">LTS</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:lts.html" class="wikilink1" title="desarrollo:firmware:lts" data-wiki-id="desarrollo:firmware:lts">LTS</a> se realizarán <a href="./doku.php%3Fid=desarrollo:firmware:bug.html" class="wikilink1" title="desarrollo:firmware:bug" data-wiki-id="desarrollo:firmware:bug">bugfixes</a> hasta 18 meses después del release.</div>
+</li>
+</ul>
+<p class="divalign-justify"><a href="./doku.php%3Fid=desarrollo:firmware:bug.html" class="wikilink1" title="desarrollo:firmware:bug" data-wiki-id="desarrollo:firmware:bug">Bugfixes</a> se realizan únicamente de los módulos de Firmware con versiones iguales o superiores a 1.0.0. No se implementarán nuevas funcionalidades, únicamente <a href="./doku.php%3Fid=desarrollo:firmware:bug.html" class="wikilink1" title="desarrollo:firmware:bug" data-wiki-id="desarrollo:firmware:bug">bugfixes</a>.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tipos de Releases&quot;,&quot;hid&quot;:&quot;tipos_de_releases&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;53-846&quot;} -->
+<h2 class="sectionedit3" id="versionamiento_de_los_releases_y_de_cada_modulo">Versionamiento de los releases y de cada módulo</h2>
+<div class="level2">
+<p class="divalign-justify">La versión está formada por 3 números: major, minor, patch. Los mismos tienen diferente significado dependiendo si se trata de un módulo del Firmware o un release del Firmware. En una versión 1.2.3 el major es 1, el minor 2 y el patch 3.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Versionamiento de los releases y de cada m\u00f3dulo&quot;,&quot;hid&quot;:&quot;versionamiento_de_los_releases_y_de_cada_modulo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;847-1159&quot;} -->
+<h3 class="sectionedit4" id="versionamiento_de_los_releases_de_ciaa-firmware">Versionamiento de los releases de CIAA-Firmware</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> major: indica en qué versión LTS se basa esta release.</div>
+</li>
+<li class="level1"><div class="li"> minor: si es 0 se trata de un LTS release, en caso contrario es un STS.</div>
+</li>
+<li class="level1"><div class="li"> patch: es el número de bugfix para esta LTS o STS release.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Versionamiento de los releases de CIAA-Firmware&quot;,&quot;hid&quot;:&quot;versionamiento_de_los_releases_de_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1160-1420&quot;} -->
+<h3 class="sectionedit5" id="versionamiento_de_cada_modulo_de_ciaa-firmware">Versionamiento de cada módulo de CIAA-Firmware</h3>
+<div class="level3">
+
+<p>
+Los módulos de Firmware son versionados según <a href="http://semver.org/" class="urlextern" target="_blank" title="http://semver.org/" rel="ugc nofollow noopener">Versionamiento Semántico</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Versionamiento de cada m\u00f3dulo de CIAA-Firmware&quot;,&quot;hid&quot;:&quot;versionamiento_de_cada_modulo_de_ciaa-firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1421-1579&quot;} -->
+<h2 class="sectionedit6" id="cronograma_general">Cronograma general</h2>
+<div class="level2">
+
+<p>
+La siguiente tabla indica los próximos releases del CIAA-Firmware:
+</p>
+<div class="table sectionedit7"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Release </th><th class="col1 leftalign"> Fecha      </th><th class="col2"> Soporte hasta </th><th class="col3 leftalign"> Descripción                                                            </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> 0.1.0   </td><td class="col1"> 30.06.2014 </td><td class="col2"> </td><td class="col3"> Pre versión de CIAA-Firmware. Firmware aún no funcional, liberado sólo con el objetivo de verificar el release process. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 0.2.0   </td><td class="col1"> 08.08.2014 </td><td class="col2"> </td><td class="col3"> Primer versión oficial de CIAA-Firmware. Chequeada con CIAA-NXP 1.0.0. <a href="https://github.com/ciaa/Firmware/releases/tag/0.2.0" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/releases/tag/0.2.0" rel="ugc nofollow noopener">Ver Release Notes</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:0.3.0.html" class="wikilink1" title="desarrollo:firmware:0.3.0" data-wiki-id="desarrollo:firmware:0.3.0">0.3.0</a>   </td><td class="col1"> 13.12.2014 </td><td class="col2"> </td><td class="col3"> Versión de CIAA-Firmware. <a href="https://github.com/ciaa/Firmware/releases/tag/0.3.0" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/releases/tag/0.3.0" rel="ugc nofollow noopener">Ver Release Notes</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:0.4.0.html" class="wikilink1" title="desarrollo:firmware:0.4.0" data-wiki-id="desarrollo:firmware:0.4.0">0.4.0</a>   </td><td class="col1"> 10.04.2015 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> 6.8.2015 </td><td class="col3"> FreeOSEK 1.0.0 <br/>
+BlockDevices Alpha </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:0.5.0.html" class="wikilink1" title="desarrollo:firmware:0.5.0" data-wiki-id="desarrollo:firmware:0.5.0">0.5.0</a>   </td><td class="col1"> 07.08.2015 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> 10.12.2015 </td><td class="col3"> ModBus 1.0.0 <br/>
+IL Virtual Machine alpha </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:1.0.0.html" class="wikilink2" title="desarrollo:firmware:1.0.0" rel="nofollow" data-wiki-id="desarrollo:firmware:1.0.0">1.0.0</a>   </td><td class="col1"> 11.12.2015 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:lts.html" class="wikilink1" title="desarrollo:firmware:lts" data-wiki-id="desarrollo:firmware:lts">LTS</a> 10.6.2017 </td><td class="col3"> Stack USB Alpha <br/>
+FreeOSEK multicore Alpha <br/>
+File System Alpha</td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:1.1.0.html" class="wikilink2" title="desarrollo:firmware:1.1.0" rel="nofollow" data-wiki-id="desarrollo:firmware:1.1.0">1.1.0</a>   </td><td class="col1"> 8.4.2016 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> 4.8.2016 </td><td class="col3"> Versión de CIAA-Firmware. </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:1.2.0.html" class="wikilink2" title="desarrollo:firmware:1.2.0" rel="nofollow" data-wiki-id="desarrollo:firmware:1.2.0">1.2.0</a>   </td><td class="col1"> 5.8.2016 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:sts.html" class="wikilink1" title="desarrollo:firmware:sts" data-wiki-id="desarrollo:firmware:sts">STS</a> 10.6.2016 </td><td class="col3"> Versión de CIAA-Firmware. </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:2.0.0.html" class="wikilink2" title="desarrollo:firmware:2.0.0" rel="nofollow" data-wiki-id="desarrollo:firmware:2.0.0">2.0.0</a>   </td><td class="col1"> 9.12.2016 </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:lts.html" class="wikilink1" title="desarrollo:firmware:lts" data-wiki-id="desarrollo:firmware:lts">LTS</a> 8.6.2018 </td><td class="col3"> Versión de CIAA-Firmware. </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:7,&quot;range&quot;:&quot;1681-3104&quot;} -->
+<p>
+Para más información sobre las versiones de CIAA-Firmware puede visitar el <a href="https://github.com/ciaa/Firmware" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware" rel="ugc nofollow noopener">repositorio en GitHub</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Cronograma general&quot;,&quot;hid&quot;:&quot;cronograma_general&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1580-3243&quot;} -->
+<h2 class="sectionedit8" id="equipo_tecnico_a_cargo">Equipo técnico a cargo</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Equipo t\u00e9cnico a cargo&quot;,&quot;hid&quot;:&quot;equipo_tecnico_a_cargo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;3244-3280&quot;} -->
+<h3 class="sectionedit9" id="coordinacion">Coordinación</h3>
+<div class="level3">
+<div class="table sectionedit10"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Nombre                  </th><th class="col1 leftalign"> Organización                                </th><th class="col2 leftalign"> Función                                </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Ing. Mariano Cerdeiro   </td><td class="col1 leftalign"> UTN-FRBA                                    </td><td class="col2 leftalign"> Responsable de Firmware de la CIAA     </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Ing. Gustavo Muro       </td><td class="col1"> Dpto. de Sistemas e Informática - FCEIA-UNR </td><td class="col2"> Sub-responsable de Firmware de la CIAA </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:10,&quot;range&quot;:&quot;3305-3652&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Coordinaci\u00f3n&quot;,&quot;hid&quot;:&quot;coordinacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;3281-3653&quot;} -->
+<h3 class="sectionedit11" id="desarrollo">Desarrollo</h3>
+<div class="level3">
+<div class="table sectionedit12"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Nombre                 </th><th class="col1 leftalign"> Organización     </th><th class="col2"> Tareas a cargo </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign" rowspan="3"> Ing. Mariano Cerdeiro  </td><td class="col1 leftalign" rowspan="3"> UTN-FRBA         </td><td class="col2 leftalign"> Desarrollo de <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a> - <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port Linux</a>                </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Desarrollo de ciaaDevices - ciaaDevices                             </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Desarrollo de <a href="doku.php%3Fid=make_environment.html" class="wikilink1" title="make_environment" data-wiki-id="make_environment">Make Environment</a>                </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign" rowspan="2"> Ing. Pablo Ridolfi     </td><td class="col1" rowspan="2"> FIUBA - UTN-FRBA </td><td class="col2 leftalign"> Desarrollo de <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a>                                         </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> Desarrollo de <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a> - <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port CIAA-NXP</a>             </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign" rowspan="2"> Ing. Juan Cecconi      </td><td class="col1" rowspan="2"> UTN-FRBA, Numetron S.R.L.</td><td class="col2 leftalign"> Desarrollo de <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">RTOS</a> - <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port Windows</a>      </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html#windows" class="wikilink1" title="desarrollo:firmware:instalacion_sw" data-wiki-id="desarrollo:firmware:instalacion_sw">Windows Environment</a>                      </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0" rowspan="2"> Ing. Esteban Volentini </td><td class="col1" rowspan="2"> Lab. de Microntroladores FACET-UNT </td><td class="col2 leftalign"> Desarrollo de <a href="./doku.php%3Fid=desarrollo:firmware:bootloader.html" class="wikilink1" title="desarrollo:firmware:bootloader" data-wiki-id="desarrollo:firmware:bootloader">Bootloader</a>           </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> Desarrollo de ciaaDevices - ciaaFlashDevices                        </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> Ing. Gustavo Muro </td><td class="col1"> Dpto. de Sistemas e Informática - FCEIA-UNR </td><td class="col2"> Desarrollo de ciaaDevices - ciaaModbusDevices </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Ing. Alejandro Permingeat </td><td class="col1 leftalign">               </td><td class="col2 leftalign"> Desarrollo de ciaaDrivers - k60                                     </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> Dario Baliña           </td><td class="col1 leftalign">                  </td><td class="col2 leftalign"> Desarrollo de ciaaDrivers - k60                                     </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> Sebastián Rossi        </td><td class="col1 leftalign">                  </td><td class="col2 leftalign"> ciaaIsoBus                                                          </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> Ing. Gustavo Ramoscelli </td><td class="col1 leftalign"> DIEC-UNS        </td><td class="col2 leftalign"> Continuous Integration (system/servers)                             </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> Jaime Andres Aranguren Cardona </td><td class="col1 leftalign">          </td><td class="col2 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:uncrustify.html" class="wikilink1" title="desarrollo:firmware:uncrustify" data-wiki-id="desarrollo:firmware:uncrustify">Style Guide Checker/ Uncrustify</a>                      </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> Ing. Eric Pernia </td><td class="col1"> UNQ </td><td class="col2"> Desarrollo del módulo de Funciones de PLC. Implementa el lenguaje IL de PLC como funciones de C y corresponde a la parte fija del Firmware de IDE4PLC </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:12,&quot;range&quot;:&quot;3675-5662&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Desarrollo&quot;,&quot;hid&quot;:&quot;desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;3654-5665&quot;} -->
+<h2 class="sectionedit13" id="componentes_a_desarrollar_y_responsables_a_cargo">Componentes a desarrollar y responsables a cargo</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Componentes a desarrollar y responsables a cargo&quot;,&quot;hid&quot;:&quot;componentes_a_desarrollar_y_responsables_a_cargo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:13,&quot;range&quot;:&quot;5666-5727&quot;} -->
+<h3 class="sectionedit14" id="aplicaciones">Aplicaciones</h3>
+<div class="level3">
+<div class="table sectionedit15"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Módulo   </th><th class="col1 leftalign"> Sub-módulo       </th><th class="col2 leftalign"> Descripción       </th><th class="col3 leftalign"> Responsable                        </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests.html" class="wikilink1" title="desarrollo:firmware:functional_tests" data-wiki-id="desarrollo:firmware:functional_tests">ciaaTestApplication</a> </td><td class="col1"> - </td><td class="col2"> Permite testear el ciaaFirmware </td><td class="col3"> &lt;fc #9400d3&gt;<strong>Pendiente</strong>&lt;/fc&gt; </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> ciaaFlasher </td><td class="col1"> - </td><td class="col2"> Permite programar programas Ladders  desde la <a href="./doku.php%3Fid=desarrollo:software-plc.html" class="wikilink1" title="desarrollo:software-plc" data-wiki-id="desarrollo:software-plc">ciaaSoftware</a> </td><td class="col3"> &lt;fc #9400d3&gt;<strong>Pendiente</strong>&lt;/fc&gt; </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:15,&quot;range&quot;:&quot;5752-6101&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Aplicaciones&quot;,&quot;hid&quot;:&quot;aplicaciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:14,&quot;range&quot;:&quot;5728-6102&quot;} -->
+<h3 class="sectionedit16" id="firmware">Firmware</h3>
+<div class="level3">
+<div class="table sectionedit17"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Módulo      </th><th class="col1 centeralign">  Sub-módulo      </th><th class="col2 centeralign">  Descripción   </th><th class="col3 centeralign">  Responsable   </th><th class="col4 centeralign">  Organización  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">rtos</a> </td><td class="col1"> - </td><td class="col2"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">Sistema Operativo</a> </td><td class="col3"> Ing. Pablo Ridolfi </td><td class="col4"> UTN-FRBA </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">rtos</a> </td><td class="col1"> <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port Linux</a> </td><td class="col2"> Portabilidad a Linux </td><td class="col3"> Ing. Mariano Cerdeiro </td><td class="col4"> UTN-FRBA </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">rtos</a> </td><td class="col1"> <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port Windows</a> </td><td class="col2"> Portabilidad a Windows </td><td class="col3"> Ing. Juan Cecconi </td><td class="col4"> UTN-FRBA </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">rtos</a> </td><td class="col1"> <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port CIAA-NXP</a></td><td class="col2"> Portabilidad a CIAA-NXP </td><td class="col3"> Ing. Pablo Ridolfi </td><td class="col4"> UTN-FRBA </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="wikilink1" title="desarrollo:firmware:rtos" data-wiki-id="desarrollo:firmware:rtos">rtos</a> </td><td class="col1"> <a href="./doku.php%3Fid=desarrollo:firmware:porting.html" class="wikilink1" title="desarrollo:firmware:porting" data-wiki-id="desarrollo:firmware:porting">Port CIAA-FSL</a></td><td class="col2"> Portabilidad a CIAA-FSL </td><td class="col3"> </td><td class="col4"> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:bootloader.html" class="wikilink1" title="desarrollo:firmware:bootloader" data-wiki-id="desarrollo:firmware:bootloader">Bootloader</a> </td><td class="col1"> - </td><td class="col2"> Updates on site </td><td class="col3"> Ing. Esteban Volentini </td><td class="col4"> Lab. de Microntroladores FACET-UNT </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign" rowspan="2"> ciaaPOSIX   </td><td class="col1 leftalign"> ciaaPOSIX_stdio     </td><td class="col2"> POSIX Standard IO Services</td><td class="col3"> Ing. Mariano Cerdeiro </td><td class="col4 leftalign"> UTN-FRBA                                    </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> ciaaPOSIX_stdlib    </td><td class="col1"> - </td><td class="col2 leftalign"> -                     </td><td class="col3 leftalign">                                             </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0" rowspan="6"> ciaaDevices </td><td class="col1 leftalign"> ciaaDevices         </td><td class="col2"> - </td><td class="col3"> Ing. Mariano Cerdeiro </td><td class="col4 leftalign"> UTN-FRBA                                    </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> ciaaSerialDevices   </td><td class="col1"> - </td><td class="col2"> Ing. Mariano Cerdeiro </td><td class="col3 leftalign"> UTN-FRBA                                    </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> ciaaBlockDevices    </td><td class="col1"> - </td><td class="col2"> Ing. Mariano Cerdeiro </td><td class="col3 leftalign"> UTN-FRBA                                    </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> ciaaModbusDevices   </td><td class="col1"> - </td><td class="col2 leftalign"> Ing. Gustavo Muro     </td><td class="col3"> Dpto. de Sistemas e Informática - FCEIA-UNR </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> ciaaGpioDevices     </td><td class="col1"> - </td><td class="col2 leftalign">                       </td><td class="col3 leftalign">                                             </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"> ciaaFlashDevices    </td><td class="col1"> - </td><td class="col2"> Ing. Esteban Volentini</td><td class="col3 leftalign"> Lab. de Microntroladores FACET-UNT          </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> ciaaDrivers </td><td class="col1 leftalign"> lcp4337             </td><td class="col2"> - </td><td class="col3 leftalign">                       </td><td class="col4 leftalign">                                             </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> ciaaDrivers </td><td class="col1 leftalign"> k60                 </td><td class="col2"> - </td><td class="col3"> ﻿Alejandro Permingeat, Dario Baliña </td><td class="col4 leftalign">                            </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> ciaaIsoBus  </td><td class="col1 leftalign">                     </td><td class="col2"> - </td><td class="col3"> Sebastián Rossi </td><td class="col4"> </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:17,&quot;range&quot;:&quot;6123-8005&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Firmware&quot;,&quot;hid&quot;:&quot;firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:16,&quot;range&quot;:&quot;6103-8006&quot;} -->
+<h3 class="sectionedit18" id="tooling">Tooling</h3>
+<div class="level3">
+<div class="table sectionedit19"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Módulo  </th><th class="col1 centeralign">  Descripción  </th><th class="col2 centeralign">  Responsable  </th><th class="col3 centeralign">  Organización  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> <a href="doku.php%3Fid=make_environment.html" class="wikilink1" title="make_environment" data-wiki-id="make_environment">Make Environment</a>                                </td><td class="col1"> - </td><td class="col2"> Ing. Mariano Cerdeiro </td><td class="col3 leftalign"> UTN-FRBA  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html#windows" class="wikilink1" title="desarrollo:firmware:instalacion_sw" data-wiki-id="desarrollo:firmware:instalacion_sw">Windows Environment</a></td><td class="col1"> Funcionamiento del CIAA Firmware en Windows </td><td class="col2"> Ing. Juan Cecconi </td><td class="col3 leftalign"> UTN-FRBA  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Continuous Integration (system/servers)    </td><td class="col1"> - </td><td class="col2"> Ing. Gustavo Ramoscelli </td><td class="col3"> DIEC-UNS </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> Continuous Integration (scripts)   </td><td class="col1"> - </td><td class="col2 leftalign">  </td><td class="col3 leftalign">  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> <a href="./doku.php%3Fid=desarrollo:firmware:unit_tests.html" class="wikilink1" title="desarrollo:firmware:unit_tests" data-wiki-id="desarrollo:firmware:unit_tests">Unit Tests o Pruebas Unitarias</a> </td><td class="col1"> - </td><td class="col2"> - </td><td class="col3 leftalign">  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:functional_tests.html" class="wikilink1" title="desarrollo:firmware:functional_tests" data-wiki-id="desarrollo:firmware:functional_tests">Test Funcional</a>           </td><td class="col1"> - </td><td class="col2"> - </td><td class="col3 leftalign">  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> <a href="./doku.php%3Fid=desarrollo:firmware:uncrustify.html" class="wikilink1" title="desarrollo:firmware:uncrustify" data-wiki-id="desarrollo:firmware:uncrustify">Style Guide Checker/ Uncrustify</a>                     </td><td class="col1"> Verificación del formato de código </td><td class="col2"> Jaime Andres Aranguren Cardona </td><td class="col3 leftalign">  </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table5&quot;,&quot;secid&quot;:19,&quot;range&quot;:&quot;8027-8738&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tooling&quot;,&quot;hid&quot;:&quot;tooling&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:18,&quot;range&quot;:&quot;8007-&quot;} --></div>
+</body>
+</html>

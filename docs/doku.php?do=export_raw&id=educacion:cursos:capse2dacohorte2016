@@ -1,0 +1,141 @@
+====== 2da Cohorte del 2016 de los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE) ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+###
+Los cursos están **orientados al público con o sin experiencia previa**, interesado en aprender a trabajar con sistemas embebidos. El objetivo es abordar en forma gradual temas cada vez más desafiantes, hasta lograr implementar aplicaciones electrónicas digitales basadas en microcontroladores. 
+###
+
+###
+Para eso los cursos están organizados en tres niveles, que se ofrecen tanto en **modalidad presencial o a distancia**, pudiendo comenzar por el Nivel 1 o el Nivel 2:
+
+   * Nivel 1 (**Inicial**): Pensado para quién nunca programó un sistema embebido. Los temas se introducen utilizando programación en bloques mediante [[https://www.youtube.com/watch?v=6_0EqIbTlkk|Snap]], la EDU-CIAA y un kit de sensores, motores, LEDs y teclados.    
+   * Nivel 2 (**Básico**): Se organiza en dos cursos, uno donde se explica cómo pasar al Lenguaje C lo aprendido en Snap, mediante ejercicios con la EDU-CIAA, y otro dónde se enseña una metodología de trabajo ordenada y se la utiliza para planificar un proyecto electrónico de interés personal.
+   * Nivel 3 (**Aplicaciones**): Organizado en dos cursos; uno dónde se usa la EDU-CIAA con memorias SD, puertos USB, WiFi, etc. y otro dónde se introduce la Programación Orientada a Objetos con Java y Microphyton, el diseño de plaquetas con KiCad y la programación en Ladder en IDE4PLC.
+
+###
+
+###
+El Nivel 1 es ideal para que se capaciten docentes y estudiantes de escuela secundaria o universitarios, o personal de la industria sin experiencia o con experiencia limitada en programación, o que hace mucho tiempo que no programan y quieren refrescar los temas con la ayuda de docentes expertos.
+###
+
+###
+En los Niveles 2 y 3 se profundiza el aprendizaje, y se pueden sumar otros participantes con mayor experiencia, tanto de la industria como de la academia, que quieran aprender a programar microcontroladores de 32 bits en Lenguaje C y hacer proyectos con la plataforma CIAA o EDU-CIAA.
+###
+
+<note tip>Se recomienda a quienes quieran cursar solamente los Niveles 2 y 3 que para reservar su vacante aprovechen la opción con descuento por pago anticipado en 6 cuotas que figura en la tabla al pie de esta página y que incluye los Niveles 1, 2 y 3. De esa forma por el mismo importe total podrán cursar además el Nivel 1, u obsequiarlo a quién deseen que curse en su lugar, y además se estarán asegurando su vacante para los Niveles 2 y 3.</note>
+
+{{ :blanco.png?10 | }}
+===== Fechas y cursos de los Niveles 1, 2 y 3 =====
+
+###
+La propuesta de cursos para los meses de julio-noviembre de 2016 (//"2da cohorte del 2016"//) es la siguiente:
+###
+
+^ Nivel                     ^ Curso                                               ^ Contenido ^
+| Nivel 1\\ (Julio 2016)    | 1. Introducción a la Programación de Microcontroladores | [[https://goo.gl/fJTbHS|Ver Programa y Material]] |
+| Nivel 2\\ (Ago-Sep 2016)  | 2. Programación de Microcontroladores en Lenguaje C (I) | [[https://goo.gl/fJTbHS|Ver Programa y Material]] |
+| :::                       | 3. Gestión de Proyectos e Ingeniería de Software    | :::                    |
+| Nivel 3\\ (Oct-Nov 2016)  | 4. Programación de Microcontroladores en Lenguaje C (II) | [[https://goo.gl/fJTbHS|Ver Programa y Material]] |
+| :::                       | 5. Paquete Tecnológico del Proyecto CIAA            | :::                    |
+
+{{ :blanco.png?10 | }}
+
+
+===== Días, horarios y modalidades de cursada =====
+
+###
+**En cada Nivel hay dos clases por semana de 3 horas cada una**. En el Nivel 1 ambas clases corresponden al curso "1. Introducción a la Programación de Microcontroladores", mientras que en los Niveles 2 y 3 se dedica una clase de 3 horas por semana a cada uno de los dos cursos correspondientes.
+###
+
+###
+Todos los cursos se ofrecen en dos modalidades distintas:
+  * **Modalidad presencial**: se dicta en la sede de [[http://www.cadieel.org.ar/|CADIEEL]], Av. Córdoba 950, 4to piso, Ciudad Autónoma de Buenos Aires.
+  * **Modalidad a distancia**: se dicta en forma online mediante reuniones entre los participantes y los docentes utilizando la plataforma [[https://www.youtube.com/embed/7Fu2j5q6udY?rel=0&wmode=transparent&cc_lang_pref=es&cc_load_policy=1|Teamviewer]].
+
+###
+
+###
+**Los horarios de los turnos** propuestos para la 2da cohorte de 2016, sujetos a alcanzar el cupo mínimo de participantes en cada uno de ellos, son los siguientes:
+###
+
+**Modalidad presencial**
+
+^ Nº Turno  ^ Horario                              ^
+|    P1     | Lunes y miércoles de 19 a 22hs       |
+|    P2     | Martes y jueves de 19 a 22hs         | 
+|    P3     | Viernes de 10 a 13hs y de 14 a 17hs  |
+|    P4     | Sábado de 10 a 13hs y 14 a 17hs      |
+
+**Modalidad a distancia**
+
+^ Nº Turno   ^ Horario                              ^
+|    AD1     | Lunes y miércoles de 19 a 22hs       |
+|    AD2     | Martes y jueves de 19 a 22hs          **(últimas vacantes)** | 
+|    AD3     | Viernes de 10 a 13hs y de 14 a 17hs  |
+|    AD4     | Sábado de 10 a 13hs y 14 a 17hs       **(últimas vacantes)** | 
+
+
+###
+Los contenidos y organización de los cursos están a cargo de la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|ACSE]], y los docentes en su mayoría se desempeñan en la [[http://laboratorios.fi.uba.ar/lse/especializacion.html|Carrera de Especialización en Sistemas Embebidos de la UBA]].
+###
+
+<note tip> Se recomienda que los alumnos de los cursos en modalidad presencial participen de las clases en CADIEEL con su propia notebook, de modo de que los docentes los puedan ayudar a instalar las herramientas en ellas, para que así luego puedan hacer prácticas sin inconvenientes fuera del horario de clases. </note>
+
+{{ :blanco.png?10 | }}
+
+===== Aranceles y forma de pago =====
+
+###
+El pago es mediante transferencia bancaria de acuerdo con las siguiente opciones:
+###
+
+^ Opción ^ Arancel ^ Fecha de vencimiento ^ Fecha límite de inscripción ^
+| 5 cursos de los \\ Niveles 1, 2 y 3 \\ con descuento por \\ pago anticipado | 6 cuotas de \\ $1.000 c/u | Cuota 1/6 - 10 de junio de 2016 \\ Cuota 2/6 - 10 de julio de 2016 \\ Cuota 3/6 - 10 de agosto de 2016 \\ Cuota 4/6 - 10 de septiembre de 2016 \\ Cuota 5/6 - 10 de octubre de 2016 \\ Cuota 6/6 - 10 de noviembre de 2016 | 10 de junio de 2016 |
+| 5 cursos de los \\ Niveles 1, 2 y 3 | 5 cuotas de \\ $1.500 c/u | Cuota 1/5 - 1 de julio de 2016 \\ Cuota 2/5 - 10 de agosto de 2016 \\ Cuota 3/5 - 10 de septiembre de 2016 \\ Cuota 4/5 - 10 de octubre de 2016 \\ Cuota 5/5 - 10 de noviembre de 2016 | 20 de junio de 2016 |
+| 4 cursos de los \\ Niveles 2 y 3 | 4 cuotas de \\ $1.500 c/u | Cuota 1/4 - 1 de agosto de 2016 \\ Cuota 2/4 - 10 de septiembre de 2016 \\ Cuota 3/4 - 10 de octubre de 2016 \\ Cuota 4/4 - 10 de noviembre de 2016 | 20 de julio de 2016 |
+| Precio de cada \\ curso individual | $1.800 por \\ cada curso | Se paga antes de comenzar \\ cada curso, según corresponda: \\ Nivel 1 - 1 de julio de 2016 \\ Nivel 2 - 1 de agosto de 2016 \\ Nivel 3 - 1 de octubre de 2016 | \\ \\ 20 de junio de 2016 \\ 20 de julio de 2016 \\ 20 de septiembre de 2016  |
+
+{{ :blanco.png?10 | }}
+
+===== Inscripción =====
+
+/*
+###
+La inscripción se realiza online, mediante [[https://goo.gl/SNcXp4|este formulario web]], hasta agotar las vacantes disponibles. A cada inscripto se le enviará un correo confirmando el turno asignado y los datos para realizar los pagos.
+###
+*/
+
+###
+Ante cualquier consulta o inquietud escribir a [[cursosembebidos@gmail.com|cursosembebidos@gmail.com]]
+###
+
+{{ :blanco.png?10 | }}
+
+===== Organizan: =====
+
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:blanco.png?25}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:acse.jpg?260}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{:blanco.png?50}}]]
+[[http://www.cadieel.org.ar/|{{:blanco.png?100}}]]
+[[http://www.cadieel.org.ar/|{{:cadieel_logos02-01.jpg?150}}]]
+[[http://www.cadieel.org.ar/|{{:blanco.png?25}}]]
+
+===== Auspiciante Diamante: =====
+
+[[http://www.electrocomponentes.com/|{{:blanco.png?80}}]]
+[[http://www.electrocomponentes.com/|{{:blanco.png?80}}]]
+[[http://www.electrocomponentes.com/|{{:blanco.png?80}}]]
+[[http://www.electrocomponentes.com/|{{:electrocomponentes.png?150}}]]
+[[http://www.electrocomponentes.com/|{{:blanco.png?35}}]]
+
+===== Auspiciante Oro: =====
+
+[[http://www.asembli.com/|{{:blanco.png?80}}]]
+[[http://www.asembli.com/|{{:blanco.png?80}}]]
+[[http://www.asembli.com/|{{:blanco.png?60}}]]
+[[http://www.asembli.com/|{{:asembli.png?180}}]]
+[[http://www.asembli.com/|{{:blanco.png?5}}]]
+
+{{ :blanco.png?10 | }}

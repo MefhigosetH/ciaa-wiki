@@ -1,0 +1,37 @@
+
+===== Lenguajes de programación =====
+
+Como cualquier otra computadora, la CIAA usa programas para cumplir con sus funciones y esos programas se escriben numerosos lenguajes.
+
+Como cualquier otra computadora, una placa CIAA ejecuta programas a los cuales llamamos “software” o "firmware" y se pueden escribir de distintas maneras y en numerosos lenguajes.
+
+
+
+Los distintos modelos de la CIAA se pueden programar en los siguientes lenguajes:
+
+
+{{page>repo:descripcion:lenguaje_c&nofooter}}
+-----
+{{page>repo:descripcion:lenguaje_ladder&nofooter}}
+-----
+{{page>repo:descripcion:lenguaje_micropython&nofooter}}
+-----
+{{page>repo:descripcion:lenguaje_snap&nofooter}}
+-----
+{{page>repo:descripcion:lenguaje_java&nofooter}}
+----
+
+==== Sistemas operativos ====
+
+La CIAA puede ser programada desde los principales sistemas operativos: linux, windows, mac...
+
+
+===== ¿Cómo empezar? =====
+
+Si quiere comenzar a programar, siga estas instrucciones bla, bla bla
+
+Luego instale {{link local instalación|git}} y acceda al repositorio en [[https://github.com/ciaa/Firmware/tree/release/1.0.x|Github]] y {{link local instrucciones|siga las instrucciones}} para obtener los archivos.
+
+
+
+Finalmente, si quiere colaborar y participar con el diseño de software del Proyecto CIAA subscríbase al [[https://groups.google.com/forum/#!forum/ciaa-firmware| foro de discusión pública y abierta de Firmware ]] , donde se proponen, discuten y arman grupos de trabajo para el diseño de los nuevos modelos. {{link local instrucciones| Instrucciones para subscribirse}}

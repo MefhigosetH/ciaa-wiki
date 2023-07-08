@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> educacion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:00:44+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos&amp;rev=1485883325&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis&amp;rev=1456542781&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos&amp;rev=1485883325&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-01-31T17:22:05+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:cursos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:cursos&amp;rev=1485883325&amp;do=diff</link>
+        <description>Cursos y material de estudio
+En torno a las distintas áreas del Proyecto CIAA se ofrecen cursos presenciales o a distancia para ayudar a la formación de los interesados, la mayoría de los cuales están contenidos dentro de la propuesta de los Cursos Abiertos de Programación de Sistemas Embebidos (CAPSE)
+y cuyo contenido está disponible online.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis&amp;rev=1456542781&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-27T03:13:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion:tesis</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion:tesis&amp;rev=1456542781&amp;do=diff</link>
+        <description>Tesis y Proyectos Finales
+Como parte del desarrollo del Proyecto CIAA, proponemos a estudiantes de Ingeniería Informática, Electrónica o carreras afines, que quieran realizar su Tesis, Trabajo final de carrera, o Práctica profesional en el área de Sistemas Embebidos</description>
+    </item>
+</rdf:RDF>

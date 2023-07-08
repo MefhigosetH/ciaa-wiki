@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:21:06+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:concepto_pdf&amp;rev=1472647775&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entradas&amp;rev=1472569520&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas&amp;rev=1472570103&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1&amp;rev=1472746518&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2&amp;rev=1472569784&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;rev=1472737208&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4&amp;rev=1472569929&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito5&amp;rev=1472570019&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion&amp;rev=1473423854&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:concepto_pdf&amp;rev=1472647775&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-31T12:49:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:concepto_pdf</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:concepto_pdf&amp;rev=1472647775&amp;do=diff</link>
+        <description>Monitor de Barreras - Documento de Concepto</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entradas&amp;rev=1472569520&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-30T15:05:20+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entradas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entradas&amp;rev=1472569520&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Entradas
+La norma UNE EN 50126 indica:En consecuencia las entradas que se han considerado en la fase de Concepto del Monitor de Barreras son las que se presentan a continuación, dónde el orden no indica el nivel de importancia.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas&amp;rev=1472570103&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-30T15:15:03+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas&amp;rev=1472570103&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Entregas
+La norma UNE EN 50126 establece que:“”La norma indica además que:“”En consecuencia se establece la estructura de Gestión para las fases 2, 3 y 4 del Ciclo de Vida, que corresponden  a las fases de Definición del sistema y Condiciones de aplicación, Análisis de riesgos y Requisitos del Sistema es la que se describe a continuación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1&amp;rev=1472746518&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-01T16:15:18+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1&amp;rev=1472746518&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Requisito 1
+La norma UNE EN 50126 indica:“
+
+
+
+
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+”De aplicar estos puntos resulta:
+
+[ ]
+
+a) Definición del alcance, el contexto y la finalidad del sistema</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2&amp;rev=1472569784&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-30T15:09:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito2&amp;rev=1472569784&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Requisito 2
+La norma UNE EN 50126 indica:“
+
+
+
+”En consecuencia resulta: a) Implicaciones RAMS en el análisis financiero: El presente proyecto es desarrollado por docentes universitarios en el marco de sus horas de trabajo dedicadas a la investigación aplicada. A su vez, aún si el presente desarrollo se concluye en forma exitosa de acuerdo a su concepción actual será solamente un caso de estudio que al me…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;rev=1472737208&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-01T13:40:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito3&amp;rev=1472737208&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Requisito 3
+La norma UNE EN 50126 indica que:“
+
+
+
+”En consecuencia resulta:
+[ ]
+
+a) Interacción con seres humanos
+
+El sistema, en su operación normal,  resulta totalmente autonomo y no tiene interacción con humanos, excepto por situaciones tales como a) Consultas de un operador de barreras sobre el estado del sistema o b) Un técnico de mantenimiento que conecta una PC u otro dispositivo para descargar da…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4&amp;rev=1472569929&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-30T15:12:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4&amp;rev=1472569929&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Requisito 4
+La norma UNE EN 50126 indica que:
+
+
+
+
+
+
+
+En consecuencia resulta:
+[ ]
+
+a) Anteriores requisitos RAMS y rendimiento RAMS de sistemas similares
+Se investigó la existencia de sistemas similares de monitores de barreras diseñados e implementados en la República Argentina con anterioridad al presente proyecto.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito5&amp;rev=1472570019&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-30T15:13:39+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito5</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito5&amp;rev=1472570019&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Requisito 5
+La norma UNE EN 50126 indica:“”Se establece entonces que todos los participantes de cualquier fase del ciclo de vida deben realizar todas las actividades de gestión de procesos RAMS según las siguientes normas:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion&amp;rev=1473423854&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-09T12:24:14+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion&amp;rev=1473423854&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ ]
+
+Verificación
+La norma UNE EN 50126 indica que:“
+
+
+
+
+
+
+
+
+
+”Para realizar la verificación se propone enviar el documento completo de la Fase 1 a diferentes evaluadores, estableciendo una modalidad del tipo “Peer Review” (revisión de pares), con una planilla en la que se identifica cada comentario a cada documento como un RID (“Review Item Discrepancy”) con un identificador único, que luego son revisados po…</description>
+    </item>
+</rdf:RDF>

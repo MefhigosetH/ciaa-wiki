@@ -1,0 +1,30 @@
+====== CIAA-FSL: Entradas Digitales ======
+
+===== Diagrama Esquemático =====
+
+{{07-entradas_digitales.png}}
+
+===== Características =====
+
+  * 8 entradas digitales opto-aisladas bipolares.
+  * Rango de tensión de entrada asegurado 12VDC a 30VDC.
+  * LED testigo en cada entrada.
+  * Protección contra polaridad invertida o tensiones negativas
+
+===== Descripción =====
+
+Por lo general todas las aplicaciones requien en algún momento de entradas digitales hacia el controlador, es por ello que la CIAA implementa 8 entradas digitales optoaisladas, dando además la seguridad del aislamiento galvánico con el mundo exterior. Cuenta con protecciones adicionales y un LED testigo para cada una de ellas. Las entradas tienen conexión por bornera y cierran en un único borne común a todas.
+
+El circuito de referencia fue relevado del PLC Twido TWDLCAA10DRF de Schneider. Se han ajustado los valores de los componentes de forma que cumpla con las especificaciones de la CIAA, según se indica en la tabla que acompaña al esquemático.
+
+Puede notarse también que se utiliza un opto-acoplador que toma al uno lógico con cualquier polaridad, dado que posee dos diodos emisores en contraposición. Esto permite ahorrarse el diodo externo de protección de polaridad y permite utilizar a la entrada con lógica negativa, es decir, donde el común es el terminal positivo de la fuente externa.
+
+===== Referencias =====
+
+  * [[http://es.wikipedia.org/wiki/Entrada/salida | Wikipedia, Entradas/Salidas]]
+  * [[http://es.wikipedia.org/wiki/Optoacoplador | Wikipedia, Optoacoplador]]
+  * [[http://www.elmatik.ee/info/kasutusjuhendid/TWIDO%20Hardware%20Reference%20Guide%20V2.5.pdf | PLC Twido, Schneider]]
+
+===== Datasheets de componentes importantes =====
+
+  * Optoacoplador: [[http://www.toshiba-components.com/docs/opto/TLP290-4_en_datasheet.pdf | TLP290-4]]

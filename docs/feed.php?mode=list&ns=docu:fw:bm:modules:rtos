@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> docu:fw:bm:modules:rtos</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:12:58+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:modules:rtos:tst&amp;rev=1439325893&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:modules:rtos:tst&amp;rev=1439325893&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-08-11T20:44:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>docu:fw:bm:modules:rtos:tst</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=docu:fw:bm:modules:rtos:tst&amp;rev=1439325893&amp;do=diff</link>
+        <description>Testeo de OSEK
+
+OSEK-VDX especifica, además del sistema operativo, un test para verificar que el mismo es conforme a las especificaciones.
+
+Bajo www.osek-vdx.org se pueden encontrar los siguientes 3 documentos:
+
+	*  OSEK/VDX Conformance Testing Methodology: explica la metodología de testeo
+	*  OSEK/VDX Operating System Test Plan: define el plan de pruebas (los test cases)</description>
+    </item>
+</rdf:RDF>

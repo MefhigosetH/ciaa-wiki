@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:ponchos_modelos</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,ponchos_modelos"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:ponchos_modelos&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:ponchos_modelos.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:ponchos_modelos"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:ponchos_modelos.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa';var JSINFO = {"id":"desarrollo:edu-ciaa:ponchos_modelos","namespace":"desarrollo:edu-ciaa","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h2 class="sectionedit1" id="ponchos_modelo">Ponchos Modelo</h2>
+<div class="level2">
+
+<p>
+Se trata de un conjunto de Ponchos de diferentes tamaños que pueden usarse como <a href="./doku.php%3Fid=desarrollo:edu-ciaa:uso_de_templates_de_kicad.html" class="wikilink1" title="desarrollo:edu-ciaa:uso_de_templates_de_kicad" data-wiki-id="desarrollo:edu-ciaa:uso_de_templates_de_kicad">TEMPLATES de Kicad</a>, que utilizan bibliotecas que facilitan la creación de un Poncho y con textos instructivos que indican las acciones necesarias para documentar adecuadamente el diseño. 
+Estos ponchos están pensados para colocar SOBRE la EDU-CIAA, pero se pueden adaptar fácilmente para colocarlos debajo (chiripá), ya que son menores las restricciones porque no interesan las ubicaciones de leds y pulsadores. Ver el  <a href="./doku.php%3Fid=nuevoponcho:​ponchos_modelos.html" class="wikilink2" title="nuevoponcho:​ponchos_modelos" rel="nofollow" data-wiki-id="nuevoponcho:​ponchos_modelos"> Formulario de requerimientos de los Ponchos Modelo</a> para información sobre la motivación y aspectos del desarrollo de estos modelos.
+</p>
+
+<p>
+Para acceder a los Ponchos modelo ver dentro del directorio modelos del github de Ponchos:
+</p>
+<pre class="code"> git clone https://github.com/ciaa/Ponchos
+ cd ponchos/modelos
+ </pre>
+
+<p>
+Los Ponchos modelos utilizan las Bibliotecas de Kicad que están en:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>kicad/libPonchos:</strong> Símbolos de utilidad para hacer un poncho nuevo, como por ejemplo logos y conector de poncho.</div>
+</li>
+<li class="level1"><div class="li"> <strong>kicad/Poncho_Esqueleto.pretty:</strong> Módulos de PCB (Footprints o huellas) de utilidad para hacer un poncho nuevo. Por ejemplo el conector de ponchos, plantillas para posicionar con respecto a la edu-ciaa, logos, etc.</div>
+</li>
+<li class="level1"><div class="li"> <strong>kicad/libModelos:</strong> Símbolos que se usaron en los modelos pero que son de propósitos generales.</div>
+</li>
+<li class="level1"><div class="li"> <strong>kicad/Poncho_Modelos.pretty:</strong> Módulos que se usaron en los modelos pero que son de propósitos generales.</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="poncho_grande">Poncho Grande</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:pgrande3.png" class="media" title="desarrollo:edu-ciaa:pgrande3.png"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=03d0de&amp;media=desarrollo:edu-ciaa:pgrande3.png" class="mediaright" loading="lazy" alt="" width="200" /></a>
+Es un poncho que utiliza los 4 agujeros de fijación y cubre la mayor parte de la EDU_CIAA. Posee simplemente un área de prototipado. Está ubicado en el siguiente directorio:
+</p>
+<pre class="code">modelos/Poncho_Grande</pre>
+
+<p>
+Para realizar el contorno y dejar los LEDS, pulsadores y reset descubiertos se utilizó la Plantilla kicad/Poncho_Esqueleto.pretty/Plantilla_EDU-CIAA.kicad_mod.
+</p>
+
+<p>
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+</p>
+
+</div>
+
+<h4 id="poncho_mediano">Poncho Mediano</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:poncho_mediano.png" class="media" title="desarrollo:edu-ciaa:poncho_mediano.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=5abf21&amp;media=desarrollo:edu-ciaa:poncho_mediano.png" class="mediaright" loading="lazy" alt="" width="300" /></a>
+Este template se puede tomar como base para crear un Poncho que utiliza ambos conectores, dos agujeros de la EDU-CIAA y dos agujeros adicionales para soporte. Se colocan agujeros adicionales para poder visualizar los LEDs de la EDU-CIAA.
+</p>
+
+<p>
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+</p>
+
+<p>
+Está ubicado en el siguiente directorio:
+</p>
+<pre class="code">modelos/Poncho_Mediano</pre>
+
+</div>
+
+<h4 id="poncho_chico">Poncho Chico</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:ponchof.png" class="media" title="desarrollo:edu-ciaa:ponchof.png"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=07512b&amp;media=desarrollo:edu-ciaa:ponchof.png" class="mediaright" loading="lazy" alt="" width="200" /></a>
+Es un poncho que utiliza ambos conectores de la EDU_CIAA pero no utiliza los agujeros de fijación. Posee simplemente un par de conectores. Utiliza en el esquemático un símbolo multiparte para el conector de expansión, el cual está organizado por funcionalidad. El diseño está ubicado en el siguiente directorio:
+</p>
+<pre class="code">modelos/Poncho_Chico</pre>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:ponchob.png" class="media" title="desarrollo:edu-ciaa:ponchob.png"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=1e4258&amp;media=desarrollo:edu-ciaa:ponchob.png" class="mediaright" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+Para realizar el contorno y dejar los LEDS, pulsadores  descubiertos se utilizó la Plantilla kicad/Poncho_Esqueleto.pretty/Plantilla_EDU-CIAA.kicad_mod.
+</p>
+
+<p>
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+</p>
+
+</div>
+
+<h4 id="poncho_izquierdo">Poncho Izquierdo</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:poncho_izq.png" class="media" title="desarrollo:edu-ciaa:poncho_izq.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=4e6612&amp;media=desarrollo:edu-ciaa:poncho_izq.png" class="medialeft" loading="lazy" alt="" width="300" /></a>
+Este template se puede tomar como base para crear un Poncho que utiliza solo el conector izquierdo (P2) de la EDU-CIAA para sujeción. Se colocan agujeros para visualizar los LEDs que estan debajo en la EDU-CIAA.
+</p>
+
+<p>
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+</p>
+
+<p>
+Está ubicado en el siguiente directorio:
+</p>
+<pre class="code">modelos/Poncho_Izquierdo</pre>
+
+</div>
+
+<h4 id="poncho_derecho">Poncho Derecho</h4>
+<div class="level4">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:poncho_der.png" class="media" title="desarrollo:edu-ciaa:poncho_der.png"><img src="lib/exe/fetch.php%3Fw=300&amp;tok=6c0864&amp;media=desarrollo:edu-ciaa:poncho_der.png" class="mediaright" loading="lazy" alt="" width="300" /></a>
+Este template se puede tomar como base para crear un Poncho que utiliza solo el conector derecho (P1) de la EDU-CIAA para sujeción. Se colocan agujeros para visualizar los LEDs que estan debajo en la EDU-CIAA.
+</p>
+
+<p>
+Realizado con la Version: (2015-08-26 BZR 6128)-product release de Kicad.
+</p>
+
+<p>
+Está ubicado en el siguiente directorio:
+</p>
+<pre class="code">modelos/Poncho_Derecho</pre>
+
+</div>
+</div>
+</body>
+</html>

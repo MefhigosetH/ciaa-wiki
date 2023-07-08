@@ -1,0 +1,610 @@
+
+
+/*
+Description
+
+Indem Sie diese Seite bearbeiten, können Sie neue Events hinzufügen oder entfernen.
+
+Sie können hier auch das Aussehen und die verschiedenen Bänder konfigurieren.
+
+Diese Timeline kann als Vorlage für andere Timelines dienen.
+configuration
+
+*/
+
+      var tl;
+
+      function onLoad() {
+
+          var eventSource = new Timeline.DefaultEventSource(0);
+
+          var theme = Timeline.ClassicTheme.create();
+
+          theme.event.bubble.width = 320;
+
+          theme.autoWidth = false; // Set the Timeline's "width" automatically.
+
+                                   // Set autoWidth on the Timeline's first band's theme,
+
+                                   // will affect all bands.
+
+          theme.timeline_start = new Date(Date.UTC(2008, 0, 1));
+
+          theme.timeline_stop  = new Date(Date.UTC(2015, 0, 1));
+
+          var d = Timeline.DateTime.parseIso8601DateTime("2010-01-10");
+
+/*
+Die Bänder
+
+Hier werden die verschiedenen Bänder definiert.
+
+Sie könner Bänder hinzufügen oder entfernen.
+
+*/
+
+           var bandInfos = [
+
+              Timeline.createBandInfo({
+
+                  width:          "80%", 
+
+                  intervalUnit:   Timeline.DateTime.DAY, 
+
+				timeZone:       +1,
+
+                  intervalPixels: 60,
+
+                  eventSource:    eventSource,
+
+                  date:           d,
+
+                  theme:          theme
+
+              }),
+
+              Timeline.createBandInfo({
+
+                  width:          "10%", 
+
+                  intervalUnit:   Timeline.DateTime.MONTH, 
+
+                  intervalPixels: 90,
+
+                  eventSource:    eventSource,
+
+               //   date:           d,
+
+                  theme:          theme,
+
+                  layout:         'overview'  // original, overview, detailed
+
+              }),
+
+			Timeline.createBandInfo({
+
+                  width:          "10%", 
+
+                  intervalUnit:   Timeline.DateTime.YEAR, 
+
+                  intervalPixels: 250,
+
+                  eventSource:    eventSource,
+
+               //   date:           d,
+
+                  theme:          theme,
+
+                  layout:         'overview'  // original, overview, detailed
+
+              })
+
+          ];
+
+		bandInfos[1].syncWith = 0;
+
+		bandInfos[2].syncWith = 1;
+
+		bandInfos[1].highlight = true;
+
+          bandInfos[2].highlight = true;
+
+         var url = '.';
+
+          tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
+
+          eventSource.loadJSON(timeline_data, url);
+
+          setupFilterHighlightControls(document.getElementById("controls"), tl, [0,1,2], theme);
+
+      }
+
+         function centerTimeline(day) {
+
+         tl.getBand(0).setCenterVisibleDate(Timeline.DateTime.parseGregorianDateTime(day));
+
+         }
+
+/*
+Sonstige Einstellungen
+
+*/
+
+      var resizeTimerID = null;
+
+      function onResize() {
+
+          if (resizeTimerID == null) {
+
+              resizeTimerID = window.setTimeout(function() {
+
+                  resizeTimerID = null;
+
+                  tl.layout();
+
+              }, 500);
+
+          }
+
+      }
+
+      function centerSimileAjax(date) {
+
+      tl.getBand(0).setCenterVisibleDate(SimileAjax.DateTime.parseGregorianDateTime("11/01/2010"));
+
+      }
+
+      function setupFilterHighlightControls(div, timeline, bandIndices, theme) {
+
+      var table = document.createElement("table");
+
+      var tr = table.insertRow(0);
+
+      var td = tr.insertCell(0);
+
+      td.innerHTML = "Filter:";
+
+      td = tr.insertCell(1);
+
+      td.innerHTML = "Highlight:";
+
+      var handler = function(elmt, evt, target) {
+
+      onKeyPress(timeline, bandIndices, table);
+
+      };
+
+      tr = table.insertRow(1);
+
+      tr.style.verticalAlign = "top";
+
+      td = tr.insertCell(0);
+
+      var input = document.createElement("input");
+
+      input.type = "text";
+
+      SimileAjax.DOM.registerEvent(input, "keypress", handler);
+
+      td.appendChild(input);
+
+      for (var i = 0; i < theme.event.highlightColors.length; i++) {
+
+      td = tr.insertCell(i + 1);
+
+      input = document.createElement("input");
+
+      input.type = "text";
+
+      SimileAjax.DOM.registerEvent(input, "keypress", handler);
+
+      td.appendChild(input);
+
+      var divColor = document.createElement("div");
+
+      divColor.style.height = "0.5em";
+
+      divColor.style.background = theme.event.highlightColors[i];
+
+      td.appendChild(divColor);
+
+      }
+
+      td = tr.insertCell(tr.cells.length);
+
+      var button = document.createElement("button");
+
+      button.innerHTML = "Clear All";
+
+      SimileAjax.DOM.registerEvent(button, "click", function() {
+
+      clearAll(timeline, bandIndices, table);
+
+      });
+
+      td.appendChild(button);
+
+      div.appendChild(table);
+
+      }
+
+      var timerID = null;
+
+      function onKeyPress(timeline, bandIndices, table) {
+
+      if (timerID != null) {
+
+      window.clearTimeout(timerID);
+
+      }
+
+      timerID = window.setTimeout(function() {
+
+      performFiltering(timeline, bandIndices, table);
+
+      }, 300);
+
+      }
+
+      function cleanString(s) {
+
+      return s.replace(/^\s+/, '').replace(/\s+$/, '');
+
+      }
+
+      function performFiltering(timeline, bandIndices, table) {
+
+      timerID = null;
+
+      var tr = table.rows[1];
+
+      var text = cleanString(tr.cells[0].firstChild.value);
+
+      var filterMatcher = null;
+
+      if (text.length > 0) {
+
+      var regex = new RegExp(text, "i");
+
+      filterMatcher = function(evt) {
+
+          return regex.test(evt.getText()) || regex.test(evt.getDescription());
+
+      };
+
+      }
+
+      var regexes = [];
+
+      var hasHighlights = false;
+
+      for (var x = 1; x < tr.cells.length - 1; x++) {
+
+      var input = tr.cells[x].firstChild;
+
+      var text2 = cleanString(input.value);
+
+      if (text2.length > 0) {
+
+          hasHighlights = true;
+
+          regexes.push(new RegExp(text2, "i"));
+
+      } else {
+
+          regexes.push(null);
+
+      }
+
+      }
+
+      var highlightMatcher = hasHighlights ? function(evt) {
+
+      var text = evt.getText();
+
+      var description = evt.getDescription();
+
+      for (var x = 0; x < regexes.length; x++) {
+
+      var regex = regexes[x];
+
+      if (regex != null && (regex.test(text) || regex.test(description))) {
+
+      return x;
+
+      }
+
+      }
+
+      return -1;
+
+      } : null;
+
+      for (var i = 0; i < bandIndices.length; i++) {
+
+      var bandIndex = bandIndices[i];
+
+      timeline.getBand(bandIndex).getEventPainter().setFilterMatcher(filterMatcher);
+
+      timeline.getBand(bandIndex).getEventPainter().setHighlightMatcher(highlightMatcher);
+
+      }
+
+      timeline.paint();
+
+      }
+
+      function themeSwitch(){
+
+      var timeline = document.getElementById('tl');		
+
+      timeline.className = (timeline.className.indexOf('dark-theme') != -1) ? timeline.className.replace('dark-theme', '') : timeline.className += ' dark-theme';
+
+      }
+
+      function clearAll(timeline, bandIndices, table) {
+
+      var tr = table.rows[1];
+
+      for (var x = 0; x < tr.cells.length - 1; x++) {
+
+      tr.cells[x].firstChild.value = "";
+
+      }
+
+      for (var i = 0; i < bandIndices.length; i++) {
+
+      var bandIndex = bandIndices[i];
+
+      timeline.getBand(bandIndex).getEventPainter().setFilterMatcher(null);
+
+      timeline.getBand(bandIndex).getEventPainter().setHighlightMatcher(null);
+
+      }
+
+      timeline.paint();
+
+      }
+
+/*
+Hier die Events festlegen
+
+*/
+
+       var path_pictures = './lib/plugins/tline/timeline_ajax/images/';
+
+       var timeline_data = {  // save as a global variable
+
+      'dateTimeFormat': 'iso8601',
+
+      'wikiSection': "WIKI",
+
+      'events' : [
+
+      {'start': "2010-01-01" ,
+
+      'title': 'TUX-WIKI',
+
+      'icon' : path_pictures + 'green-circle.png',
+
+      'description': 'Das Neue Wiki ist online',
+
+      'image': 'http://www.tandem-projekt.de/img/Kreiser.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-05 10:30" ,
+
+      'title': 'Beispiel 1',
+
+      'icon' : path_pictures + 'blue-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t3.gstatic.com/images?q=tbn:pe8L-b0UYjxwPM:http://www.cutenotcute.com/wordpress/wp-content/uploads/2009/01/mickey-mouse-c.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-05 10:30" ,
+
+      'title': 'Beispiel 2',
+
+      'icon' : path_pictures + 'red-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t1.gstatic.com/images?q=tbn:mDgFDWKB7-oRXM:http://www.sonnennews.de/wordpress/wp-content/uploads/2008/09/dagobert-duck.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-05" ,
+
+      'end': "2010-01-09" ,
+
+      'title': 'Beispiel 3',
+
+      'isDuration' : false,
+
+      'color' : 'green',
+
+      'textColor' : 'green',
+
+      'icon' : path_pictures + 'red-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t3.gstatic.com/images?q=tbn:SG_niUBY1GE63M:http://disney-clipart.com/toy-story/gif/potato-head.gif',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-07" ,
+
+      'end': "2010-01-11" ,
+
+      'title': 'Beispiel 4',
+
+      'isDuration' : true,
+
+      'color' : 'green',
+
+      'textColor' : 'green',
+
+      'icon' : path_pictures + 'yellow-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://www.tellurian.de/blog/media/blue_Dragon.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-07" ,
+
+      'end': "2010-01-11" ,
+
+      'title': 'Beispiel 5',
+
+      'isDuration' : true,
+
+      'color' : 'green',
+
+      'textColor' : 'green',
+
+      'icon' : path_pictures + 'green-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t0.gstatic.com/images?q=tbn:5fKAZLMjoPZ3QM:http://i-love-disney.com/disney-gallery/albums/Clipart/lion-king/clipart/simba/CUB14.gif',
+
+      'link': 'http://www.tux-tips.de',
+
+      'tapeImage': path_pictures + 'blue_stripes.png',
+
+      'tapeRepeat': 'repeat-x',
+
+      'caption': "This is the event's caption attribute.",
+
+      'classname': 'hot_event' 
+
+      },
+
+      {'start': "2010-01-07" ,
+
+      'end': "2010-01-11" ,
+
+      'title': 'Beispiel 6',
+
+      'isDuration' : false,
+
+      'textColor' : 'red',
+
+      'icon' : path_pictures + 'blue-circle.png',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t1.gstatic.com/images?q=tbn:LKQZFu-tRfee6M:http://disney-clipart.com/incredibles/gif/disney-incredibles-bob.gif',
+
+      'link': 'http://www.tux-tips.de',
+
+      'tapeImage': path_pictures + 'blue_stripes.png',
+
+      'tapeRepeat': 'repeat-x'},
+
+      {'start': "2010-04-06 18:30" ,
+
+      'title': 'Happy Birthday',
+
+      'icon' : path_pictures + 'blue-circle.png',
+
+      'description': 'Mein Geburtstag',
+
+      'image': 'http://www.crystal-reflections.com/animation/birth.gif',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-15 18:30" ,
+
+      'title': 'MEETING',
+
+      'icon' : path_pictures + 'blue-circle.png',
+
+      'textColor' : 'blue',
+
+      'description': 'Wichtiges Meeting',
+
+      'image': path_pictures + ':icons:meeting.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+      {'start': "2010-01-10 18:30" ,
+
+      'title': 'Freizeit',
+
+      'icon' : path_pictures + 'black-circle.png',
+
+      'textColor' : 'blue',
+
+      'description': 'Wichtiges Meeting',
+
+      'image': path_pictures + ':icons:gaim.png',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+     {'start': "2010-01-13" ,
+
+     'end': "2010-01-17" ,
+
+     'title': 'URLAUB',
+
+     'isDuration' : false,
+
+     'color' : 'green',
+
+     'textColor' : 'violet',
+
+     'icon' : path_pictures + 'blue-circle.png',
+
+     'tapeImage': path_pictures + 'black_arrows.png' ,
+
+     'description': 'Urlaub',
+
+     'image': 'http://t3.gstatic.com/images?q=tbn:SG_niUBY1GE63M:http://disney-clipart.com/toy-story/gif/potato-head.gif',
+
+     'link': 'http://www.tux-tips.de'
+
+     },
+
+      {'start': "2010-01-07 08:30" ,
+
+      'title': 'Beispiel 7',
+
+      'icon' : path_pictures + 'green-circle.png',
+
+      'textColor' : 'blue',
+
+      'description': 'Hier ein Beispiel',
+
+      'image': 'http://t0.gstatic.com/images?q=tbn:xyzU9Xbi1T6xBM:http://www.bkk-braun-gillette.de/content/fragezeichen2.jpg',
+
+      'link': 'http://www.tux-tips.de'
+
+      },
+
+]
+
+}

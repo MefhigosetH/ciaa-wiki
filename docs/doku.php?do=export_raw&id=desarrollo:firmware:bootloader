@@ -1,0 +1,133 @@
+====== Bootloader ======
+
+===== Introducción =====
+
+==== ¿Qué es el “bootloader”? ====
+###
+El bootloader es un conjunto de utilidades que permite la actualización del firmware de la CIAA por parte de un cliente en un entorno de producción, sin necesidad de disponer de herramientas especiales como una interface de depuración y eventualmente sin tener acceso al código fuente del sistema.
+###
+
+==== ¿Cómo funciona el bootloader? ====
+###
+El bootloader tiene la capacidad de recibir una imagen del firmware que se quiere actualizar y grabarla en la Flash ROM del procesador. Para ello el desarrollador compila la imagen firmware, la prepara y la distribuye. El cliente recibe la imagen preparada del firmware y mediante una PC aplica dicha imagen a la CIAA que tiene instalada en el equipo.
+###
+
+==== ¿Cómo está formado el bootloader? ====
+###
+El bootloader está formado por dos partes básicas: un conjunto de aplicaciones que corren en una PC, y una conjunto de tareas y rutinas que se ejecutan en la CIAA.
+###
+
+Las aplicaciones que se ejecutan en una PC son dos:
+  * Utilidad de preparación de la imagen.
+  * Utilidad de aplicación de la imagen.
+
+###
+Estas herramientas se utilizan normalmente en dos computadoras distintas, la primera en la computadora del desarrollador y la segunda en la computadora del cliente en el sitio donde esta instalada la CIAA que se quiere actualizar.
+###
+
+Por otra parte en la CIAA se ejecutan las siguientes tareas:
+  * Secuencia de arranque.
+  * Recepción de la imagen de binaria.
+  * Procesamiento de la imagen recibida.
+  * Grabación de la imagen en la memoria Flash.
+
+###
+La forma en que estas tareas se ensamblan entre sí y con el firmware principal de CIAA puede configurarse para obtener distintos modos de operación.
+###
+
+===== Arquitectura del bootloader =====
+
+{{ :desarrollo:firmware:arquitectura_booloader.png?nolink |}}
+
+###
+Para la implementación inicial del bootloader se optó por un proceso de grabación On Fly. Para ello la memoria Flash se divide en tres partes: una parte muy pequeña que contiene un Bootmanager, una segunda fracción donde se ubica el programa de Bootloader y el resto de la memoria queda disponible para el MainFirmware.
+###
+
+###
+En el funcionamiento normal de la CIAA el Bootmanager toma el control durante el arranque, lo transfiere al Main Firmware y este es el que opera el equipo. Cuando se requiere una actualización, mediante una bandera se indica al Bootmanager que transfiera el control al Bootloader, quien se encarga únicamente de actualizar la imagen del Main Firmware. Para ello el Bootloader borra el área de memoria ocupada por el Main Firmware y la escribe con la imagen enviada por la PC del cliente.
+###
+
+###
+Si por algún problema no se puede completar la actualización del Main Firmware, el Bootmanager seguirá transfiriendo el control al Bootloader hasta que la actualización pueda completarse. De esta forma nos aseguramos de que el equipo no quede inoperable.
+###
+
+###
+Para la eventual actualización del Bootloader será necesario un proceso indirecto: en un primer paso se actualizará el Main Firmware por uno especial destinado únicamente a la actualización del Bootloader, con este Main Firmware corriendo se procederá a la actualización del Bootloader, y una vez completa la actualización del mismo se volverá al Main Firmware original.
+###
+
+==== ¿Qué tareas tiene cada parte del bootloader? ====
+
+  * **CIAA Firmware Image Preparation Utility (cfip)**: Es una utilidad que se ejecuta en la PC del desarrollador y tiene siguientes funciones básicas:
+    * Preparación de la imagen: indicando a qué hardware corresponde y para qué modo de operación está compilado.
+    * Encriptación de la imagen: existe la opción de encriptar la imagen de firmware que se quiere distribuir para evitar las duplicaciones indebidas. En ese caso esta utilidad es la encargada de encriptar la imagen antes de la distribución.
+    * Firma de la imagen: para asegurarse de que la imagen no es alterada, ya sea en forma deliberada o por un error en las comunicaciones, la ultima etapa de la preparación consiste en la aplicación de una firma digital por parte del desarrollador.
+
+  * **CIAA Firmware Image Distribution utility (cfid)**: Es una utilidad que ejecuta en la PC del cliente y tiene las siguientes funciones básicas:
+    * Verificación de la imagen: la primera responsabilidad de la utilidad de la PC es asegurarse la proveniencia de la imagen que se quiere grabar, comprobando que la misma no fue alterada en ninguna forma.
+    * Verificación del destino: la segunda responsabilidad de la utilidad es recuperar información del hardware al que se le enviará la imagen para ver si la misma puede aplicarse en dicho equipo.
+    * Transmisión de la imagen: una vez que la imagen es aceptada como válida entonces la misma se divide en paquetes y se envía a la CIAA verificando la correcta recepción de la misma.
+
+  * **Bootloader**: Es un programa completo para la CIAA formado por una versión reducida del sistema operativo OSEK y del updater, y una colección de rutinas preparadas para la actualización del firmware principal de la CIAA. En el sistema oprerativo OSEK se requieren, además de los servicios básicos, los siguientes controladores:
+    * Serial Driver: controlador del puerto serial del equipo que es utilizado como capa física del protocolo ModBus.
+    * ModBus Driver: se utiliza el protocolo ModBus como capa de transporte para el intercambio de mensajes entre el Update Protocol y la utilidad de cfid de la PC del cliente.
+    * Flash Driver: implementa las primitivas para el borrado y la escritura en flash dependientes del procesador utilizado.
+
+  * **Updater**: Se pueden identificar las siguientes funciones:
+    * Update Protocol: es el responsable de la recepción de los mensajes de actualización de flash y también es el encargado de la generación de los mensajes de respuesta a dicha utilidad.
+    * Desencription: es la etapa encargada de la desencriptación de la imagen, si es que la misma fuera encriptada.
+    * Update Services: es la encargada del proceso general de actualización, como así también del control de errores en el proceso.
+
+  * **Bootmanager**: Es la rutina que toma el control en el arranque de la CIAA y tiene como función principal determinar si se cede el control al Bootloader o bien al Main Firmware.
+
+
+===== Comentarios =====
+
+  * Para el desarrollo de las herramientas para la PC se plantea el esquema habitual de Linux: desarrollar los programas para que utilicen la línea de comandos y eventualmente en un futuro desarrollar una interface gráfica que simplifique el uso de la misma.
+
+  * El desarrollo de las herramientas para la PC se plantea en C++, dando prioridad a los sistemas POSIX y dejando el sistema Windows para una segunda etapa.
+
+  * La secuencia de arranque soportaría varios desencadenadores para determinar a quién debe ceder el control. Los propuestos hasta el momento son:
+    * Un condición física como un botón o una llave.
+    * Un paquete especial del protocolo ModBus.
+    * Una verificación CRC de las imágenes en memoria.
+    * Una tabla con marcas específicas para esta decisión.
+
+  *  Se podrá configurar qué desencadenadores se utilizarán realmente en la secuencia de arranque mediante directivas al compilador, para poder por ejemplo desactivar el chequeo de CRC y obtener un arranque mas rápido.
+
+  * La secuencia de arranque no podrá actualizarse en sitio, la única posibilidad de actualización será mediante una interface de depuración.
+
+  * Se plantea incluir en el proceso de grabación del bootloader una restricción de las zonas que el mismo está autorizado a escribir, para de esta forma garantizar la integridad de la secuencia de arranque y del firmware en ejecución, evitando que un error de comunicaciones o una grabación fallida deje al sistema en un estado del cual no pueda recuperarse.
+
+  * Si el procesador incluye máscaras de protección para evitar la grabación de determinadas zonas de Flash, se utilizaran las mismas además del mecanismo antes descripto para asegurar la integridad de las zonas criticas de memoria.
+
+  * Se propone desarrollar primero la forma de trabajo On Fly sin características adicionales como la encriptación o compresión. En este modo de trabajo es menor el trabajo compilación y pre procesamiento de la imagen.
+
+  * En la primera versión se propone cambiar el proceso de firma de la imagen por un simple CRC para verificar que la imagen no es alterada.
+
+
+===== Operación con doble imagen =====
+
+==== Arquitectura ====
+###
+Durante la etapa de discusión sobre la forma de implementación del bootloader hubo sugerencias respecto a una forma alternativa de trabajo con dos imágenes de Main Firmware simultáneas en memoria. A continuación se encuentra la forma propuesta para la implementacion de este esquema de trabajo utilizando básicamente los mismo módulos de software.
+###
+{{ :desarrollo:firmware:bootloader_doble_imagen.png?nolink |}}
+
+###
+En este modo de operación la memoria Flash se divide en tres partes: una parte muy pequeña contiene a la secuencia de arranque, y el resto de la memoria se divide en dos partes iguales. En cada parte se puede grabar una versión independiente del firmware completo de la CIAA. Cualquiera de estas imágenes es operable, pero una de ellas tiene preferencia sobre la otra y es la que se ejecuta en condiciones normales (Normalmente corresponde a la versión actualizada mas recientemente). Eventualmente se puede indicar a la secuencia de arranque que ejecute la imagen alternativa en lugar de la normal. Este cambio en la preferencia en la imagen puede ser por única vez o permanente. De esta forma en caso de un error en la actualización es posible volver a la imagen previa en una forma rápida y simple, aumentando de esta manera la disponibilidad del equipo.
+###
+
+###
+En este modo de operación las rutinas de bootloader se incorporan al firmware como una tarea mas del sistema operativo. Por seguridad el bootloader de cada área solo esta autorizado a grabar el área contraria, de forma tal que no sea posible dañar la imagen en ejecución durante el proceso de actualización.
+###
+
+==== Ventajas ====
+  * La principal ventaja de este modo de operación es la disponibilidad, ya que permite una posible vuelta atrás si no puede aplicarse correctamente la nueva imagen o si la misma no responde en la forma esperada. 
+
+==== Desventajas ====
+  * La principal desventaja de este modo de operación es el aprovechamiento de la Flash, ya que para el firmware solo queda disponible un poco menos de la mitad de la flash del procesador.
+  * Una desventaja adicional para garantizar seguridad y para resolver las referencias el firmware debe ser compilado para el Area A o para el Area B.
+
+==== Observaciones ====
+  * Cabe aclarar que no es de esperar que la imagen presente problemas durante la grabación de la misma ya que es verificada antes del envío por la PC y antes de la grabación de la misma, siendo mas probable que se deba a errores de programación en el firmware en sí mismo.
+  * Podría existir una alternativa  para evitar la compilación en las zonas A o B agregando en el procesamiento inicial de la imagen de firmware los marcadores de qué cambios realizar en la imagen al instalarla en la zona A o B.

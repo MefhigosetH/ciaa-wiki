@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:proceso</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,proceso"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:proceso&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:proceso"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:proceso.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:proceso","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#change_management">Change Management</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#configuration_management">Configuration Management</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#desarrollo_de_nuevas_funcionalidades_y_mejoras">Desarrollo de nuevas funcionalidades y mejoras</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#continuous_integration">Continuous Integration</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#reviews">Reviews</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:proceso.html#releases">Releases</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h2 class="sectionedit1" id="change_management">Change Management</h2>
+<div class="level2">
+
+<p>
+Hoy estamos utilizando la funcionalidad de <a href="https://github.com/ciaa/Firmware/issues" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/issues" rel="ugc nofollow noopener">Issues en Github</a> para llevar un track de los cambios.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Change Management&quot;,&quot;hid&quot;:&quot;change_management&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-173&quot;} -->
+<h2 class="sectionedit2" id="configuration_management">Configuration Management</h2>
+<div class="level2">
+
+<p>
+Se lleva a cabo en GitHub: <a href="https://github.com/ciaa/Firmware" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware" rel="ugc nofollow noopener">https://github.com/ciaa/Firmware</a>. Una introducción a Git se puede encontrar en: <a href="./doku.php%3Fid=desarrollo:firmware:git.html" class="wikilink1" title="desarrollo:firmware:git" data-wiki-id="desarrollo:firmware:git">git</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuration Management&quot;,&quot;hid&quot;:&quot;configuration_management&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;174-352&quot;} -->
+<h3 class="sectionedit3" id="realizando_cambios_en_el_repositorio">Realizando cambios en el repositorio</h3>
+<div class="level3">
+
+<p>
+Cuando realice cambios en el repo tenga en cuenta que alguien realizara un review de los cambios y cuanto más fácil sea ralizarlo antes serán aceptados los cambios por ello:
+</p>
+<ul>
+<li class="level1"><div class="li"> si trabaja sobre un branch para un tema especifico NO modifique otras cosas. Por ejemplo si trabaja en un nuevo driver de adc y encunetra un problema en el make, no lo cambie en este branch. Se debe realizar otro para tal fin.</div>
+</li>
+<li class="level1"><div class="li"> cuando escribe el código no utilice mágia: operaciones con números, pocos comentarios, otro style guide, sigua siempre las Coding Guidelines del proyecto.</div>
+</li>
+<li class="level1"><div class="li"> si trabaja mucho tiempo en el branch puede que le resulte interesante hacer un rebase o un merge del master al branch de trabajo.</div>
+</li>
+<li class="level1"><div class="li"> si trabaja en el master debe siempre procurar que el código corra, ya que otros desarrolladores se basan en el master para trabajar.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Realizando cambios en el repositorio&quot;,&quot;hid&quot;:&quot;realizando_cambios_en_el_repositorio&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;353-1244&quot;} -->
+<h2 class="sectionedit4" id="desarrollo_de_nuevas_funcionalidades_y_mejoras">Desarrollo de nuevas funcionalidades y mejoras</h2>
+<div class="level2">
+
+<p>
+No es recomendable y se pide evitar commits en el master. Por cada tarea a desarrollar se debe crear un branch. Para saber cuándo trabajar sobre branches y cómo nombrarlos hacer <a href="./doku.php%3Fid=desarrollo:firmware:proceso:criterio_branches.html" class="wikilink1" title="desarrollo:firmware:proceso:criterio_branches" data-wiki-id="desarrollo:firmware:proceso:criterio_branches">clic aquí</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Desarrollo de nuevas funcionalidades y mejoras&quot;,&quot;hid&quot;:&quot;desarrollo_de_nuevas_funcionalidades_y_mejoras&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1245-1548&quot;} -->
+<h2 class="sectionedit5" id="continuous_integration">Continuous Integration</h2>
+<div class="level2">
+
+<p>
+El Firmware cuenta con un Jenkins donde se testean automáticamente todos los commits.
+</p>
+
+<p>
+Tenemos 3 CIs:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://ciaa1.uns.edu.ar/jenkins/" class="urlextern" target="_blank" title="http://ciaa1.uns.edu.ar/jenkins/" rel="ugc nofollow noopener">http://ciaa1.uns.edu.ar/jenkins/</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://travis-ci.org/ciaa/Firmware" class="urlextern" target="_blank" title="https://travis-ci.org/ciaa/Firmware" rel="ugc nofollow noopener">https://travis-ci.org/ciaa/Firmware</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://drone.io/github.com/ciaa/Firmware/latest" class="urlextern" target="_blank" title="https://drone.io/github.com/ciaa/Firmware/latest" rel="ugc nofollow noopener">https://drone.io/github.com/ciaa/Firmware/latest</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Continuous Integration&quot;,&quot;hid&quot;:&quot;continuous_integration&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1549-1819&quot;} -->
+<h2 class="sectionedit6" id="reviews">Reviews</h2>
+<div class="level2">
+
+<p>
+Hoy en día los reviews son realizados en GitHub. No es la mejor opción por ello estamos trabajando en una solución basada en Gerrit+Jenkins. Esperamos la misma este funcionando en 3.2016
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Reviews&quot;,&quot;hid&quot;:&quot;reviews&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1820-2031&quot;} -->
+<h2 class="sectionedit7" id="releases">Releases</h2>
+<div class="level2">
+
+<p>
+Antes de realizar una release se realizará un <a href="./doku.php%3Fid=desarrollo:firmware:code_freeze.html" class="wikilink1" title="desarrollo:firmware:code_freeze" data-wiki-id="desarrollo:firmware:code_freeze">Code-Freeze</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Releases&quot;,&quot;hid&quot;:&quot;releases&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2032-&quot;} --></div>
+</body>
+</html>

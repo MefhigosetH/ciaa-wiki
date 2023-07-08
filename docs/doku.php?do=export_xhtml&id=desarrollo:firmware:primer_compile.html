@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:primer_compile</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,primer_compile"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:primer_compile&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:primer_compile.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:primer_compile"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:primer_compile.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:primer_compile","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="compilando_por_primera_vez">Compilando por primera vez</h1>
+<div class="level1">
+
+<p>
+El CIAA Firmware utiliza <a href="http://de.wikipedia.org/wiki/GNU_Make" class="urlextern" target="_blank" title="http://de.wikipedia.org/wiki/GNU_Make" rel="ugc nofollow noopener">GNU Make</a> para compilar. Hay que perderle el miedo a la linea de comandos y al Make. :)
+</p>
+
+<p>
+Por supuesto antes de poder compilar deben haber instalado los tools necesarios:<a href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html" class="wikilink1" title="desarrollo:firmware:instalacion_sw" data-wiki-id="desarrollo:firmware:instalacion_sw">Instalación del Firmware</a>
+</p>
+
+<p>
+Les recomendamos leer <a href="./doku.php%3Fid=docu:fw:bm:make.html" class="wikilink1" title="docu:fw:bm:make" data-wiki-id="docu:fw:bm:make">Make</a>, y por ejemplo utilizar los siguientes comandos, cuando esté parado en el directorio raiz del firmware (donde esté el makefile principal del proyecto):
+</p>
+<pre class="code">make help       ☜ FUNDAMENTAL: ayuda del makefile del Proyecto CIAA, lista los comandos principales
+make info       ☜ informacón sobre la configuración actual para make
+make clean      ☜ Borra todos los archivos generados durante la compilación, tests, etc
+make generate   ☜ generacion del RTOS, típicamente para ejemplos que usen OSEK previo a compilar
+make            ☜ Compilar incrementalmente el proyecto según seteos en Makefile.mine, y las dependencias ya generadas
+make all        ☜ Hace un make clean, generate y compila
+make info_&lt;mod&gt; ☜ información sobre alguno de los módulos de CIAA Firmware</pre>
+
+<p>
+Para quienes quieran trabajar y desarrollar nuevos módulos de CIAA Firmware pueden ser además interesantes los siguientes comandos:
+</p>
+<pre class="code">make mocks      ☜ generación de los [[versiones:v1_0:firmware:unit_tests|mocks]]
+make tst_&lt;mod&gt;  ☜ testea el módulo de CIAA Firmware indicado</pre>
+
+</div>
+</div>
+</body>
+</html>

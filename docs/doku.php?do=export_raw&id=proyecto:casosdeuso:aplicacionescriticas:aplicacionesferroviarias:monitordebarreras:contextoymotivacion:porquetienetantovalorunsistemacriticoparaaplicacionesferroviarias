@@ -1,0 +1,101 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias ======
+
+{{ :blanco.png?10 | }}
+
+===== ¿Por qué es tan difícil y tiene tanto valor diseñar e implementar un sistema crítico para aplicaciones ferroviarias? =====
+
+###
+**El mal diseño de un sistema ferroviario puede derivar en accidentes con cientos de victimas fatales y miles de heridos**. Algunos ejemplos correspondientes a la República Argentina pueden verse en [[https://es.wikipedia.org/wiki/Categor%C3%ADa:Accidentes_ferroviarios_en_Argentina|Wikipedia]] y son los siguientes:
+###
+
+| Ciudad             | Año  | Fallecidos | Heridos  | Descripción    | Evitable mediante \\ seguridad electrónica |
+| Altamirano         | 1964 | 34         | S/D      | Choque de trenes | Evitable |
+| Alpatacal          | 1927 | 30         | S/D      | Choque de trenes | Evitable |
+| Benavídez          | 1970 | 236        | 400      | Choque de trenes | Evitable |
+| Brandsen           | 1981 | 34         | 74       | Choque de trenes | Evitable |
+| Buenos Aires       | 1949 | 18         | 80       | Choque de trenes | Evitable |
+| Buenos Aires       | 1958 | 22         | 100      | Choque de trenes | Evitable |
+| Castelar           | 2013 | 3          | 315      | Choque de trenes | Evitable |
+| Comodoro Rivadavia | 1953 | 36         | 65       | Descarrilamiento | Evitable |
+| Estación La Cruz   | 1947 | 18         | 48       | Choque con ganado | No |
+| Dolores            | 2008 | 18         | 65       | Choque con ómnibus | No |
+| Flores             | 2011 | 11         | 228      | Choque con ómnibus | Evitable |
+| Iturbe             | 1945 | 36         | 50       | Descarrilamiento | Evitable |
+| Once               | 2012 | 51         | 702      | Choque con fin de vía | Evitable |
+| Once               | 2013 | 0          | 105      | Choque con fin de vía | Evitable |
+| Quilmes            | 1982 | 20         | 70       | Choque de trenes | Evitable |
+| Río Luján          | 1975 | 32         | 50       | Choque de trenes | Evitable |
+| Sa Pereira         | 1978 | 55         | 56       | Choque con camión | No |
+| San Miguel         | 2011 | 5          | 120      | Choque de trenes | Evitable |
+| Villa Soldati      | 1969 | 42         | 82       | Choque con ómnibus | No |
+
+###
+Del estudio de estos accidentes se concluye que de haber existido un adecuado sistema de seguridad el 80% de ellos se hubieran evitado.
+###
+
+###
+Este misma conclusión aplica a los [[https://es.wikipedia.org/wiki/Categor%C3%ADa:Accidentes_ferroviarios|accidentes más importantes que se han registrado a nivel internacional]]. Algunos de [[http://www.teinteresa.es/mundo/mayores-tragedias-ferroviarias-historia_0_650937018.html|estos accidentes registran cientos de víctimas fatales cada uno]].
+###
+
+###
+Otra característica que se observa es que cada uno de los accidentes tiene magnitudes considerables. Por ejemplo,  [[http://www.telam.com.ar/notas/201605/146184-monoxido-de-carbono-muerte-intoxicacion-calefactores-braseros-gas.html|los accidentes por inhalación de monoxido de carbono en Argentina causan más de 200 victimas fatales cada año]] y cientos de heridos, pero estos accidentes rara vez involucran a más de 5 personas. Con esto no se pretende hacer un juicio de valor respecto a qué tipo de accidente es más relevante, sino entender las particularidades de los accidentes ferroviarios. 
+###
+
+###
+Esta característica relativa a la magnitud individual que puede alcanzar un accidente ferroviario está ligada al concepto de "riesgo". Por ejemplo, la norma ferroviaria UNE EN 50126 que se introducirá a continuación, define en su apartado 3.34 al riesgo como "La tasa probable de ocurrencia de un peligro que ocasione daño, y el grado de severidad de dicho daño". Se observa la mención a la severidad del daño.
+###
+
+###
+En este sentido la norma también habla del concepto de "gravedad de las consecuencias" y en la sección 4 presenta la siguiente tabla:
+###
+
+| Nivel de Gravedad | Consecuencia para las Personas\\ o el Medio Ambiente | Consecuencia para el Servicio |
+| Catastrófico      | Víctimas mortales y / o múltiples\\ heridas graves y /o daños |                       |
+| Crítico           | Una sola víctima mortal y / o herida\\ grave y/o daños señalados al\\ medio ambiente | Pérdida de un sistema principal |
+| Mínimo            | Heridas menores y / o peligro\\ señalada al medio ambiente | Daño grave a sistema o sistemas |
+| Insignificante    | Posible herida menor                        | Daño menor al sistema pero\\ importantes al medio ambiente |
+
+###
+No se pretende profundizar en este aspecto, pero sí dejar sentada la idea de que los sistemas ferroviarios mal diseñados, operados o mantenidos pueden ocasionar accidentes de nivel de gravedad catastrófico.
+###
+
+###
+Dicho todo esto, se entiende la importancia de desarrollar adecuadamente los sistemas críticos para la seguridad de los sistemas ferroviarios, porque su mal diseño, operación o mantenimiento puede causar tragedias enormes.
+###
+
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:accidente-ferroviario.jpg?nolink&400 |}}
+
+###
+Para minimizar la posibilidad de ocurrencia de estos accidentes existen normas que además de clasificar los riesgos asociados a los sistemas ferroviarios, establecen los criterios y metodologías para desarrollar sistemas con la fiabilidad, disponibilidad, mantenibilidad y seguridad (RAMS) necesarias para aplicaciones con este nivel de criticidad. 
+###
+
+###
+Algunas de las más utilizadas son las normas de la comunidad europea para aplicaciones ferroviarias, como por ejemplo la serie EN 50126, EN 50128, EN 50129, etc. que se describen brevemente en esta página: [[[documentacion:normas:normasferroviarias|Normas Ferroviarias]]
+###
+
+###
+Los sistemas ferroviarios desarrollados y certificados bajo esas normas tienen un enorme valor. Por ejemplo, un sistema controlador automático de barreras para un paso a nivel puede costar en la actualidad hasta 200.000 dólares, según sus características y las dificultades que implique su instalación.
+###
+
+###
+En la República Argetina existen más de 13.000 cruces ferroviarios con Pasos A Nivel (PAN). Sólo el 3% de estos PAN cuenta con un sistema automático de control de barreras, mientras que el 7%  es  accionado  manualmente.  El  restante 90% no cuenta con ningún mecanismo de control de la seguridad. 
+###
+
+###
+Esta situación se agrava porque ninguna empresa argentina fabrica los componentes básicos (sistema de detección de trenes, controlador de barreras y mecanismos de accionamiento), para los que la normativa exige elevados niveles de integridad en la seguridad. En consecuencia una parte significativa del precio de instalación  de  una  barrera  automática, corresponde a componentes importados. Se observa entonces que la instalación de las barreras automáticas necesarias demandaría importaciones por cientos de millones de dólares.
+###
+
+###
+De esta manera se comprende la dificultad y el valor que tiene el diseño e implementación de sistemas críticos de seguridad para los ferroviarios.
+###
+
+###
+Se recomienda continuar la lectura en la página que describe cuál es el paso inicial para realizar el diseño e implementación de un Monitor de Barreras Ferroviarias.
+###
+
+
+{{ :blanco.png?20 | }}
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:inicio|Ir a la página de Inicio del Diseño e Implementación del Monitor de Barreras]] ]
+### 

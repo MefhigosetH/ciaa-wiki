@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:hardware:ciaa_nxp</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:00:28+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio&amp;rev=1467837227&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ethernet_nxp&amp;rev=1467829915&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:kits_de_desarrollo&amp;rev=1411522083&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:memorias_nv_nxp&amp;rev=1411683515&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:validacion&amp;rev=1467831492&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio&amp;rev=1467837227&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-06T20:33:47+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio&amp;rev=1467837227&amp;do=diff</link>
+        <description>CIAA-NXP
+
+[ CIAA-NXP v1.0]
+
+La CIAA-NXP es la primer CIAA en ser diseñada, probada y producida en serie. Pensada para utilizarse en (pero no limitada a) equipos de automatización industrial. Se alimenta con 24V (CC). Tiene entradas digitales optoacopladas, entradas analógicas configurables 0-10V o 0-20mA, salidas digitales open-drain y relé, salida analógica configurable 0-10V o 0-20mA, interfaces de comunicación RS232, RS485, CAN, Ethernet y USB-OTG. Basada en el microcontrolador LPC4337.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ethernet_nxp&amp;rev=1467829915&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-06T18:31:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_nxp:ethernet_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:ethernet_nxp&amp;rev=1467829915&amp;do=diff</link>
+        <description>CIAA-NXP: Ethernet
+
+Descripción
+Dada la enorme difusión y robustez que tiene el standard IEEE-802.3 y sus derivados, conocido generalmente como Ethernet , éste es ampliamente utilizado en enorme cantidad de equipos electrónicos en todas las áreas. Es por ello que la CIAA versión NXP lo ha incorporado entre sus alternativas de comunicación, permitiendo mediante su salida en conector RJ45 formar parte de una red de cableado estructurado. Las posibilidades que abre este tipo de conectividad son eno…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:kits_de_desarrollo&amp;rev=1411522083&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-24T01:28:03+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_nxp:kits_de_desarrollo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:kits_de_desarrollo&amp;rev=1411522083&amp;do=diff</link>
+        <description>Kits de desarrollo de la CIAA-NXP
+
+A continuación encontrarás información sobre los kits de desarrollo que se usaron para diseñar el esquemático de la CIAA-NXP y hacer las primeras pruebas de firmware.
+
+	*  NGX Xplorer - LPC4337 (DK, Mouser) aprox. US$76.-
+
+[NGX Xplorer]
+Hoy en día este kit se envía con un LPC4337, el mismo microcontrolador de la CIAA-NXP, aunque en la CIAA utiliza el LQFP144 y este kit trae el BGA100. El mismo tiene un pinout similar a los kits</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:memorias_nv_nxp&amp;rev=1411683515&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T22:18:35+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_nxp:memorias_nv_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:memorias_nv_nxp&amp;rev=1411683515&amp;do=diff</link>
+        <description>CIAA-NXP: Memorias No Volátiles
+
+Descripción
+
+Las memorias no volátiles externas cumplen las siguientes funciones:
+
+	*  24AA1025. EEPROM I2C 1 Mbit, 400 kHz. Almacenamiento de propósito general, datos de calibración del usuario, etc.
+
+	*  24AA025E48. EEPROM I2C 2 kbit, 400 kHz. Unique Node Address EUI-48 para implementación de MAC-Address. Almacenamiento de propósito general.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:validacion&amp;rev=1467831492&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-06T18:58:12+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_nxp:validacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_nxp:validacion&amp;rev=1467831492&amp;do=diff</link>
+        <description>Validación de la CIAA-NXP
+
+Tablero de ensayos
+
+
+Se conecta la CIAA en un tablero eléctrico alimentándola con una fuente switching de 24Vdc 35W y se conectan diferentes cargas en las salidas de la placa.
+
+Cargas inductivas de 24Vdc en las salidas a relé</description>
+    </item>
+</rdf:RDF>

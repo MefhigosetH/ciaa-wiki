@@ -1,0 +1,82 @@
+====== Factor de forma ======
+
+Las opciones para el factor de forma son diversas y cada una presenta sus ventajas y desventajas en lo que respecta a: modularidad, flexibilidad, posibilidad de expansión, posibilidad de integración con otros productos comerciales, etc.
+A continuación se listan las principales opciones analizadas.
+
+===== Placa única o SBC (Single Board Computer) =====
+
+==== Ventajas ====
+  * Diseño simple y más rápido.
+  * Diseño a medida, sin la necesidad de ajustarse a ninguna normativa ni factor de forma.
+==== Desventajas ====
+  * No es expandible ni modular.
+ 
+===== Formato SoM + Carrier =====
+
+Existen numerosas posibilidades, entre ellas:
+  * [[http://www.edm-standard.org | Estándar EDM]]
+  * [[http://www.sget.org/standards.html | Estándar Qseven]]
+  * [[http://www.sget.org/standards.html | Estándar SMARC]]
+  * SoM + Carrier con factor de forma, conector y distribución de pines a medida
+
+==== Ventajas ====
+  * Diseño modular, puede diseñarse un SoM para diferentes carriers según la necesidad del usuario y también pueden diseñarse diferentes SoMs en distintas etapas y reutilizar los diseños de las carriers.
+  * En caso de utilizar alguno de los estándares como Qseven o SMARC, puede separarse el diseño en etapas y utilizar SoMs o Carriers comerciales para las etapas de desarrollo (o para la implementación definitiva, según lo que necesite el usuario). 
+==== Desventajas ====
+  * No es expandible (aunque sí lo sería en caso de diseñar una carrier con posibilidad de conectar 2, 3 ó 4 SoMs, lo cual no es habitual en el mercado, pero es una posibilidad para nosotros).
+
+===== Formato PCIe-104 =====
+
+Es un estándar para sistemas embebidos que define el factor de forma y los buses y conectores a utilizar.
+
+[[http://pc104.org/hardware-specifications/pcie104/ | PCIe-104]]
+
+==== Ventajas ====
+  * Diseño modular y expandible. 
+  * Pueden stackearse otras placas comerciales con el diseño propio (fuentes, periféricos, etc.)
+  * Puede obtenerse un procesamiento múltiple realmente apropiado para High Performance Computing si se conectan por ejemplo un Host + 4 Devices.
+  * Puede diseñarse solamente el Device y adquirir un Host comercial (o a la inversa).
+==== Desventajas ====
+  * Si se quiere compatibilidad con los productos comerciales hay que estudiar y respetar hasta el último detalle del estándar.
+  * Al utilizar PCIe como mecanismo de interconexión entre los procesadores de las diferentes placas, no queda otra opción que lidiar con las dificultades de esta tecnología (más que nada en el caso de diseñar un Device con Zynq donde se contará con el IP core de PCIe "cerrado").
+
+===== Selección final del factor de forma =====
+
+Para la selección del factor de forma se tuvieron en cuenta las opiniones de los desarrolladores de las listas CIAA-Hardware y CIAA-Firmware. Se dieron discusiones muy enriquecedoras ya que las opciones que se consideraron son variadas y muy diferentes entre sí.
+
+Los factores que se consideraron como más relevantes son:
+  * Modularidad y escalabilidad para interconectar varias placas entre sí.
+  * Performance.
+  * Conectividad con la CIAA-Safety.
+  * Estandarización. Se ponderaron los diseños estándar vs. otros diseños más innovadores como la carrier para 4 SoMs.
+  * Fácil interconexión con otros productos comerciales. Por ejemplo, fuentes de alimentación, placas con periféricos, placas con procesadores, etc.
+
+Los siguientes factores NO se consideraron como decisivos:
+  * Costo.
+  * Tiempo de desarrollo.
+  * Complejidad del desarrollo (riesgo).
+
+Al considerarse el factor escalabilidad como muy importante para una aplicación de Alta Capacidad de Cómputo, quedan descartadas las opciones de Placa Única y SoM + Carrier. Para poder interconectar varios procesadores en paralelo, es necesario un estándar como el de la familia PC-104, donde es posible tener un Host y varios Devices. Adicionalmente, esta opción aporta estandarización y la posibilidad de interconexión con productos comerciales. 
+
+Se analizaron los estándares de la **familia PC-104** debido a que el equipo de la CIAA-Safety ya estaba analizando este factor de forma. Dentro de este grupo de estándares se seleccionó a **PCIe-104** por ser el más moderno y el más adecuado para el hardware seleccionado por sus interfaces de alta velocidad.
+
+Se podría haber seleccionado el estándar PCI-104 Express (versión anterior del PCIe-104), para poder conectar la CIAA-ACC con la CIAA-Safety, pero al tener esta última una disposición propietaria de señales en el conector PCI (USB, ETH,SPI, etc.), fue desestimada la idea ya que se quiere hacer un producto que cumpla estrictamente con la especificación. De todos modos, podrán conectarse ambas placas utilizando una fuente de alimentación PC104 que tenga ambos conectores (PCI y PCIe), por ejemplo [[http://www.rtd.com/PC104/UM/power/atx104Express.htm|Fuente PCI-104 Express]]. En este caso, la comunicación se tendrá que realizar con un cable externo utilizando alguna de las interfaces (SPI, Ethernet, USB, etc).
+
+Otra opción que se consideró fue la de usar el estándar PCIe-104 pero incorporando el concepto de SoM, es decir, diseñando dos placas: un SoM con el procesador Zynq y las memorias, y una carrier con formato PC-104 con los periféricos. Por supuesto que esta opción es más versátil todavía, pero conlleva un esfuerzo adicional que es diseñar dos PCBs multicapa en vez de uno (la carrier no puede diseñarse en dos capas por las exigencias de los periféricos). Aunque el tiempo de desarrollo no es uno de los factores decisivos para el proyecto, en este caso sí lo fue y por eso se descartó la opción PCIe-104 con SoM. 
+
+==== Ventajas de PCIe-104 ====
+
+La selección de este factor de forma permite utilizar la placa de diferentes maneras. Si se diseña la CIAA para que pueda funcionar en forma independiente, con una entrada de alimentación propia, las posibilidades se amplían. Además, optando por diseñar un Device PCIe-104 en vez de un Host existe la posibilidad de interconectar varias CIAAs entre sí por PCIe. Para esto último será necesario un Host PCIe-104 que en un principio tendremos que comprar, pero que más adelante podrá ser diseñado por la comunidad CIAA. Es importante remarcar que el diseño será un Device porque los puertos PCIe, USB y SATA irán shifteados, NO será un Host.
+
+{{ :desarrollo:ciaa_acc:ciaa_acc_stack.png?nolink&300 |}}
+
+Entonces las opciones de uso de la CIAA-ACC serán:
+
+  * Stand alone: Utilizar la CIAA-ACC sola, sin conectar nada en el bus PCIe (tendrá su propio jack de power, RJ45 para Gb Ethernet, MicroUSB OTG, HDMI, etc).
+  * Varias placas iguales: Conectar varias CIAA-ACC entre sí compartiendo la alimentación por el bus PCIe-104 pero realizando la conexión de datos a través de Gbit Ethernet usando un switch externo.
+  * Un host PCIe-104 y hasta 4 CIAA-ACC: El conector Onebank del bus PCIe/104 prevee 4 links PCIe de 1x independientes. Cada una de las CIAA-ACC puede comunicarse con el host mediante uno de estos links. Esta configuración se lograría poniendo el host abajo de todo (placa basada en ARM, INTEL, etc.) y arriba las sucesivas CIAA-ACC. 
+  * CIAA-ACC conectada a una CIAA-Safety: Conectar la CIAA-ACC con la CIAA-Safety usando una fuente PCI-104 Express.  La conexión de datos se haría por SPI mediante un conector adicional, ya que es un bus que no genera ningún overhead (a diferencia de USB o Ethernet).
+  * Conectar a la CIAA-ACC cualquier placa comercial que cumpla con la especificación PCIe-104.
+  * Uso de la CIAA-ACC aprovechando las interfaces de alta velocidad del FPGA: En la CIAA-ACC estaría provisto un conector FMC-LPC/HPC en uno de los laterales. Esto permitiría agregar una placa adicional para adquisición de datos o la función que se desee (en la imagen es la placa con los dos conectores SMA). Esta opción se podría utilizar en cualquiera de las configuraciones mencionadas anteriormente, ya que no interferiría en el stack. 
+  
+

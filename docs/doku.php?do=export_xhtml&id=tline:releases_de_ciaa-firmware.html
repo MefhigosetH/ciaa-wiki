@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>tline:releases_de_ciaa-firmware</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="tline,releases_de_ciaa-firmware"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=tline:releases_de_ciaa-firmware&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=tline"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=tline:releases_de_ciaa-firmware.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=tline:releases_de_ciaa-firmware"/>
+<link rel="canonical" href="./doku.php%3Fid=tline:releases_de_ciaa-firmware.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='tline';var JSINFO = {"id":"tline:releases_de_ciaa-firmware","namespace":"tline","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<p>
+/*
+Description
+</p>
+
+<p>
+Indem Sie diese Seite bearbeiten, können Sie neue Events hinzufügen oder entfernen.
+</p>
+
+<p>
+Sie können hier auch das Aussehen und die verschiedenen Bänder konfigurieren.
+</p>
+
+<p>
+Diese Timeline kann als Vorlage für andere Timelines dienen.
+configuration
+</p>
+
+<p>
+*/
+</p>
+<pre class="code">    var tl;</pre>
+<pre class="code">    function onLoad() {</pre>
+<pre class="code">        var eventSource = new Timeline.DefaultEventSource(0);</pre>
+<pre class="code">        var theme = Timeline.ClassicTheme.create();</pre>
+<pre class="code">        theme.event.bubble.width = 320;</pre>
+<pre class="code">        theme.autoWidth = false; // Set the Timeline&#039;s &quot;width&quot; automatically.</pre>
+<pre class="code">                                 // Set autoWidth on the Timeline&#039;s first band&#039;s theme,</pre>
+<pre class="code">                                 // will affect all bands.</pre>
+<pre class="code">        theme.timeline_start = new Date(Date.UTC(2008, 0, 1));</pre>
+<pre class="code">        theme.timeline_stop  = new Date(Date.UTC(2015, 0, 1));</pre>
+<pre class="code">        var d = Timeline.DateTime.parseIso8601DateTime(&quot;2010-01-10&quot;);</pre>
+
+<p>
+/*
+Die Bänder
+</p>
+
+<p>
+Hier werden die verschiedenen Bänder definiert.
+</p>
+
+<p>
+Sie könner Bänder hinzufügen oder entfernen.
+</p>
+
+<p>
+*/
+</p>
+<pre class="code">         var bandInfos = [</pre>
+<pre class="code">            Timeline.createBandInfo({</pre>
+<pre class="code">                width:          &quot;80%&quot;, </pre>
+<pre class="code">                intervalUnit:   Timeline.DateTime.DAY, </pre>
+<pre class="code">			timeZone:       +1,</pre>
+<pre class="code">                intervalPixels: 60,</pre>
+<pre class="code">                eventSource:    eventSource,</pre>
+<pre class="code">                date:           d,</pre>
+<pre class="code">                theme:          theme</pre>
+<pre class="code">            }),</pre>
+<pre class="code">            Timeline.createBandInfo({</pre>
+<pre class="code">                width:          &quot;10%&quot;, </pre>
+<pre class="code">                intervalUnit:   Timeline.DateTime.MONTH, </pre>
+<pre class="code">                intervalPixels: 90,</pre>
+<pre class="code">                eventSource:    eventSource,</pre>
+<pre class="code">             //   date:           d,</pre>
+<pre class="code">                theme:          theme,</pre>
+<pre class="code">                layout:         &#039;overview&#039;  // original, overview, detailed</pre>
+<pre class="code">            }),</pre>
+<pre class="code">		Timeline.createBandInfo({</pre>
+<pre class="code">                width:          &quot;10%&quot;, </pre>
+<pre class="code">                intervalUnit:   Timeline.DateTime.YEAR, </pre>
+<pre class="code">                intervalPixels: 250,</pre>
+<pre class="code">                eventSource:    eventSource,</pre>
+<pre class="code">             //   date:           d,</pre>
+<pre class="code">                theme:          theme,</pre>
+<pre class="code">                layout:         &#039;overview&#039;  // original, overview, detailed</pre>
+<pre class="code">            })</pre>
+<pre class="code">        ];</pre>
+<pre class="code">	bandInfos[1].syncWith = 0;</pre>
+<pre class="code">	bandInfos[2].syncWith = 1;</pre>
+<pre class="code">	bandInfos[1].highlight = true;</pre>
+<pre class="code">        bandInfos[2].highlight = true;</pre>
+<pre class="code">       var url = &#039;.&#039;;</pre>
+<pre class="code">        tl = Timeline.create(document.getElementById(&quot;tl&quot;), bandInfos, Timeline.HORIZONTAL);</pre>
+<pre class="code">        eventSource.loadJSON(timeline_data, url);</pre>
+<pre class="code">        setupFilterHighlightControls(document.getElementById(&quot;controls&quot;), tl, [0,1,2], theme);</pre>
+<pre class="code">    }</pre>
+<pre class="code">       function centerTimeline(day) {</pre>
+<pre class="code">       tl.getBand(0).setCenterVisibleDate(Timeline.DateTime.parseGregorianDateTime(day));</pre>
+<pre class="code">       }</pre>
+
+<p>
+/*
+Sonstige Einstellungen
+</p>
+
+<p>
+*/
+</p>
+<pre class="code">    var resizeTimerID = null;</pre>
+<pre class="code">    function onResize() {</pre>
+<pre class="code">        if (resizeTimerID == null) {</pre>
+<pre class="code">            resizeTimerID = window.setTimeout(function() {</pre>
+<pre class="code">                resizeTimerID = null;</pre>
+<pre class="code">                tl.layout();</pre>
+<pre class="code">            }, 500);</pre>
+<pre class="code">        }</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function centerSimileAjax(date) {</pre>
+<pre class="code">    tl.getBand(0).setCenterVisibleDate(SimileAjax.DateTime.parseGregorianDateTime(&quot;11/01/2010&quot;));</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function setupFilterHighlightControls(div, timeline, bandIndices, theme) {</pre>
+<pre class="code">    var table = document.createElement(&quot;table&quot;);</pre>
+<pre class="code">    var tr = table.insertRow(0);</pre>
+<pre class="code">    var td = tr.insertCell(0);</pre>
+<pre class="code">    td.innerHTML = &quot;Filter:&quot;;</pre>
+<pre class="code">    td = tr.insertCell(1);</pre>
+<pre class="code">    td.innerHTML = &quot;Highlight:&quot;;</pre>
+<pre class="code">    var handler = function(elmt, evt, target) {</pre>
+<pre class="code">    onKeyPress(timeline, bandIndices, table);</pre>
+<pre class="code">    };</pre>
+<pre class="code">    tr = table.insertRow(1);</pre>
+<pre class="code">    tr.style.verticalAlign = &quot;top&quot;;</pre>
+<pre class="code">    td = tr.insertCell(0);</pre>
+<pre class="code">    var input = document.createElement(&quot;input&quot;);</pre>
+<pre class="code">    input.type = &quot;text&quot;;</pre>
+<pre class="code">    SimileAjax.DOM.registerEvent(input, &quot;keypress&quot;, handler);</pre>
+<pre class="code">    td.appendChild(input);</pre>
+<pre class="code">    for (var i = 0; i &lt; theme.event.highlightColors.length; i++) {</pre>
+<pre class="code">    td = tr.insertCell(i + 1);</pre>
+<pre class="code">    input = document.createElement(&quot;input&quot;);</pre>
+<pre class="code">    input.type = &quot;text&quot;;</pre>
+<pre class="code">    SimileAjax.DOM.registerEvent(input, &quot;keypress&quot;, handler);</pre>
+<pre class="code">    td.appendChild(input);</pre>
+<pre class="code">    var divColor = document.createElement(&quot;div&quot;);</pre>
+<pre class="code">    divColor.style.height = &quot;0.5em&quot;;</pre>
+<pre class="code">    divColor.style.background = theme.event.highlightColors[i];</pre>
+<pre class="code">    td.appendChild(divColor);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    td = tr.insertCell(tr.cells.length);</pre>
+<pre class="code">    var button = document.createElement(&quot;button&quot;);</pre>
+<pre class="code">    button.innerHTML = &quot;Clear All&quot;;</pre>
+<pre class="code">    SimileAjax.DOM.registerEvent(button, &quot;click&quot;, function() {</pre>
+<pre class="code">    clearAll(timeline, bandIndices, table);</pre>
+<pre class="code">    });</pre>
+<pre class="code">    td.appendChild(button);</pre>
+<pre class="code">    div.appendChild(table);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    var timerID = null;</pre>
+<pre class="code">    function onKeyPress(timeline, bandIndices, table) {</pre>
+<pre class="code">    if (timerID != null) {</pre>
+<pre class="code">    window.clearTimeout(timerID);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    timerID = window.setTimeout(function() {</pre>
+<pre class="code">    performFiltering(timeline, bandIndices, table);</pre>
+<pre class="code">    }, 300);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function cleanString(s) {</pre>
+<pre class="code">    return s.replace(/^\s+/, &#039;&#039;).replace(/\s+$/, &#039;&#039;);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function performFiltering(timeline, bandIndices, table) {</pre>
+<pre class="code">    timerID = null;</pre>
+<pre class="code">    var tr = table.rows[1];</pre>
+<pre class="code">    var text = cleanString(tr.cells[0].firstChild.value);</pre>
+<pre class="code">    var filterMatcher = null;</pre>
+<pre class="code">    if (text.length &gt; 0) {</pre>
+<pre class="code">    var regex = new RegExp(text, &quot;i&quot;);</pre>
+<pre class="code">    filterMatcher = function(evt) {</pre>
+<pre class="code">        return regex.test(evt.getText()) || regex.test(evt.getDescription());</pre>
+<pre class="code">    };</pre>
+<pre class="code">    }</pre>
+<pre class="code">    var regexes = [];</pre>
+<pre class="code">    var hasHighlights = false;</pre>
+<pre class="code">    for (var x = 1; x &lt; tr.cells.length - 1; x++) {</pre>
+<pre class="code">    var input = tr.cells[x].firstChild;</pre>
+<pre class="code">    var text2 = cleanString(input.value);</pre>
+<pre class="code">    if (text2.length &gt; 0) {</pre>
+<pre class="code">        hasHighlights = true;</pre>
+<pre class="code">        regexes.push(new RegExp(text2, &quot;i&quot;));</pre>
+<pre class="code">    } else {</pre>
+<pre class="code">        regexes.push(null);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    }</pre>
+<pre class="code">    var highlightMatcher = hasHighlights ? function(evt) {</pre>
+<pre class="code">    var text = evt.getText();</pre>
+<pre class="code">    var description = evt.getDescription();</pre>
+<pre class="code">    for (var x = 0; x &lt; regexes.length; x++) {</pre>
+<pre class="code">    var regex = regexes[x];</pre>
+<pre class="code">    if (regex != null &amp;&amp; (regex.test(text) || regex.test(description))) {</pre>
+<pre class="code">    return x;</pre>
+<pre class="code">    }</pre>
+<pre class="code">    }</pre>
+<pre class="code">    return -1;</pre>
+<pre class="code">    } : null;</pre>
+<pre class="code">    for (var i = 0; i &lt; bandIndices.length; i++) {</pre>
+<pre class="code">    var bandIndex = bandIndices[i];</pre>
+<pre class="code">    timeline.getBand(bandIndex).getEventPainter().setFilterMatcher(filterMatcher);</pre>
+<pre class="code">    timeline.getBand(bandIndex).getEventPainter().setHighlightMatcher(highlightMatcher);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    timeline.paint();</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function themeSwitch(){</pre>
+<pre class="code">    var timeline = document.getElementById(&#039;tl&#039;);		</pre>
+<pre class="code">    timeline.className = (timeline.className.indexOf(&#039;dark-theme&#039;) != -1) ? timeline.className.replace(&#039;dark-theme&#039;, &#039;&#039;) : timeline.className += &#039; dark-theme&#039;;</pre>
+<pre class="code">    }</pre>
+<pre class="code">    function clearAll(timeline, bandIndices, table) {</pre>
+<pre class="code">    var tr = table.rows[1];</pre>
+<pre class="code">    for (var x = 0; x &lt; tr.cells.length - 1; x++) {</pre>
+<pre class="code">    tr.cells[x].firstChild.value = &quot;&quot;;</pre>
+<pre class="code">    }</pre>
+<pre class="code">    for (var i = 0; i &lt; bandIndices.length; i++) {</pre>
+<pre class="code">    var bandIndex = bandIndices[i];</pre>
+<pre class="code">    timeline.getBand(bandIndex).getEventPainter().setFilterMatcher(null);</pre>
+<pre class="code">    timeline.getBand(bandIndex).getEventPainter().setHighlightMatcher(null);</pre>
+<pre class="code">    }</pre>
+<pre class="code">    timeline.paint();</pre>
+<pre class="code">    }</pre>
+
+<p>
+/*
+Hier die Events festlegen
+</p>
+
+<p>
+*/
+</p>
+<pre class="code">     var path_pictures = &#039;./lib/plugins/tline/timeline_ajax/images/&#039;;</pre>
+<pre class="code">     var timeline_data = {  // save as a global variable</pre>
+<pre class="code">    &#039;dateTimeFormat&#039;: &#039;iso8601&#039;,</pre>
+<pre class="code">    &#039;wikiSection&#039;: &quot;WIKI&quot;,</pre>
+<pre class="code">    &#039;events&#039; : [</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-01&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;TUX-WIKI&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;green-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Das Neue Wiki ist online&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://www.tandem-projekt.de/img/Kreiser.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-05 10:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 1&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;blue-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t3.gstatic.com/images?q=tbn:pe8L-b0UYjxwPM:http://www.cutenotcute.com/wordpress/wp-content/uploads/2009/01/mickey-mouse-c.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-05 10:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 2&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;red-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t1.gstatic.com/images?q=tbn:mDgFDWKB7-oRXM:http://www.sonnennews.de/wordpress/wp-content/uploads/2008/09/dagobert-duck.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-05&quot; ,</pre>
+<pre class="code">    &#039;end&#039;: &quot;2010-01-09&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 3&#039;,</pre>
+<pre class="code">    &#039;isDuration&#039; : false,</pre>
+<pre class="code">    &#039;color&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;red-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t3.gstatic.com/images?q=tbn:SG_niUBY1GE63M:http://disney-clipart.com/toy-story/gif/potato-head.gif&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-07&quot; ,</pre>
+<pre class="code">    &#039;end&#039;: &quot;2010-01-11&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 4&#039;,</pre>
+<pre class="code">    &#039;isDuration&#039; : true,</pre>
+<pre class="code">    &#039;color&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;yellow-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://www.tellurian.de/blog/media/blue_Dragon.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-07&quot; ,</pre>
+<pre class="code">    &#039;end&#039;: &quot;2010-01-11&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 5&#039;,</pre>
+<pre class="code">    &#039;isDuration&#039; : true,</pre>
+<pre class="code">    &#039;color&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;green&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;green-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t0.gstatic.com/images?q=tbn:5fKAZLMjoPZ3QM:http://i-love-disney.com/disney-gallery/albums/Clipart/lion-king/clipart/simba/CUB14.gif&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;,</pre>
+<pre class="code">    &#039;tapeImage&#039;: path_pictures + &#039;blue_stripes.png&#039;,</pre>
+<pre class="code">    &#039;tapeRepeat&#039;: &#039;repeat-x&#039;,</pre>
+<pre class="code">    &#039;caption&#039;: &quot;This is the event&#039;s caption attribute.&quot;,</pre>
+<pre class="code">    &#039;classname&#039;: &#039;hot_event&#039; </pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-07&quot; ,</pre>
+<pre class="code">    &#039;end&#039;: &quot;2010-01-11&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 6&#039;,</pre>
+<pre class="code">    &#039;isDuration&#039; : false,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;red&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;blue-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t1.gstatic.com/images?q=tbn:LKQZFu-tRfee6M:http://disney-clipart.com/incredibles/gif/disney-incredibles-bob.gif&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;,</pre>
+<pre class="code">    &#039;tapeImage&#039;: path_pictures + &#039;blue_stripes.png&#039;,</pre>
+<pre class="code">    &#039;tapeRepeat&#039;: &#039;repeat-x&#039;},</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-04-06 18:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Happy Birthday&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;blue-circle.png&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Mein Geburtstag&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://www.crystal-reflections.com/animation/birth.gif&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-15 18:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;MEETING&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;blue-circle.png&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;blue&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Wichtiges Meeting&#039;,</pre>
+<pre class="code">    &#039;image&#039;: path_pictures + &#039;:icons:meeting.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-10 18:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Freizeit&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;black-circle.png&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;blue&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Wichtiges Meeting&#039;,</pre>
+<pre class="code">    &#039;image&#039;: path_pictures + &#039;:icons:gaim.png&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+<pre class="code">   {&#039;start&#039;: &quot;2010-01-13&quot; ,</pre>
+<pre class="code">   &#039;end&#039;: &quot;2010-01-17&quot; ,</pre>
+<pre class="code">   &#039;title&#039;: &#039;URLAUB&#039;,</pre>
+<pre class="code">   &#039;isDuration&#039; : false,</pre>
+<pre class="code">   &#039;color&#039; : &#039;green&#039;,</pre>
+<pre class="code">   &#039;textColor&#039; : &#039;violet&#039;,</pre>
+<pre class="code">   &#039;icon&#039; : path_pictures + &#039;blue-circle.png&#039;,</pre>
+<pre class="code">   &#039;tapeImage&#039;: path_pictures + &#039;black_arrows.png&#039; ,</pre>
+<pre class="code">   &#039;description&#039;: &#039;Urlaub&#039;,</pre>
+<pre class="code">   &#039;image&#039;: &#039;http://t3.gstatic.com/images?q=tbn:SG_niUBY1GE63M:http://disney-clipart.com/toy-story/gif/potato-head.gif&#039;,</pre>
+<pre class="code">   &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">   },</pre>
+<pre class="code">    {&#039;start&#039;: &quot;2010-01-07 08:30&quot; ,</pre>
+<pre class="code">    &#039;title&#039;: &#039;Beispiel 7&#039;,</pre>
+<pre class="code">    &#039;icon&#039; : path_pictures + &#039;green-circle.png&#039;,</pre>
+<pre class="code">    &#039;textColor&#039; : &#039;blue&#039;,</pre>
+<pre class="code">    &#039;description&#039;: &#039;Hier ein Beispiel&#039;,</pre>
+<pre class="code">    &#039;image&#039;: &#039;http://t0.gstatic.com/images?q=tbn:xyzU9Xbi1T6xBM:http://www.bkk-braun-gillette.de/content/fragezeichen2.jpg&#039;,</pre>
+<pre class="code">    &#039;link&#039;: &#039;http://www.tux-tips.de&#039;</pre>
+<pre class="code">    },</pre>
+
+<p>
+]
+</p>
+
+<p>
+}
+</p>
+</div>
+</body>
+</html>

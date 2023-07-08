@@ -1,0 +1,63 @@
+====== Criterio para manejo de branches ======
+
+En el Firmware de la CIAA tenemos un branch llamado master y diferentes branches para desarrollar nuevas funcionalidad, mantener releases, etc. El criterio se describe a continuación:
+
+===== Branch master =====
+Este es el branch principal, siempre se trata de que en este branch, el código compile y todos los test corran correctamente.
+Podemos hacer commits a este branch si se cumplen las siguientes condiciones:
+  * se va a desarrollar una funcionalidad y es seguro que se termina de implementar antes de la siguiente release, y
+  * es seguro que no afecta a otros desarrolladores
+En caso de que alguna de estas condiciones no se cumpla se debe trabajar en un branch.
+
+<note tip>Este criterio aplica tanto para el repositorio de Firmware como para cualquiera de los submódulos. Y debe respetarse el mismo nombre de branch para todos los repositorios en donde se hagan los commits.</note>
+
+===== Branch para desarrollar nuevas funcionalidades =====
+En caso de tener que trabajar en un branch para desarrollar una nueva funcionalidad, debemos nombrar al mismo con el siguiente formato:
+<code>
+feature/<nombreDeNuevaFunc>
+</code>
+Por ejemplo:
+<code>
+feature/i2c
+feature/oilx
+feature/xxx
+</code>
+Una vez finalizo el desarrollo, se realiza el pull request en github para efectuar un review antes del merge al master.
+
+===== Branch para releases =====
+Cada vez que se realiza una release cuyo último dígito es cero, se coloca el tag correspondiente en el branch master, por ejemplo: 0.6.0.
+En caso de encontrar un error se debe crear un branch para realizar las correcciones necesarias y poder hacer la release correspondiente, por ejemplo 0.6.1.
+El nombre debe tener el formato:
+<code>
+release/<a.b.x>
+</code>
+Por ejemplo:
+<code>
+release/0.5.x
+release/0.6.x
+</code>
+
+===== Branch para mejoras en código =====
+Estos branch se crean para mejorar el código ya implementado. No deben agregar ni quitar funcionalidades.
+El nombre debe tener el formato:
+<code>
+improvement/<name>
+</code>
+Por ejemplo:
+<code>
+improvement/nxp_dio
+</code>
+
+===== Branch para agregar nuevas herramientas =====
+Son branches de funcionalidades nuevas o similar donde se agregan nuevas herramientas.
+El nombre debe tener el formato:
+<code>
+tool/<nombreDeTool>
+</code>
+Por ejemplo:
+<code>
+tool/coverity_scan
+tool/splint
+</code>
+
+

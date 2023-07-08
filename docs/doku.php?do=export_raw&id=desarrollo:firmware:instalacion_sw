@@ -1,0 +1,125 @@
+====== Instalación del Firmware ======
+
+Una vez terminada la primera versión de Firmware esta página contendrá las instrucciones para instalar el Firmware y poder compilarlo.
+
+Entre tanto puede acceder al código fuente en GIT, vea la instrucciones en [[codigo|Código Fuente]]
+
+===== Windows =====
+
+**Evite instalar los tools o hacer el git clone en directorios con espacios**. Los espacios son un problema que todavia no resolvimos.
+
+{{page>repo:instalacion:cygwin&nofooter}}
+===== Compilador ARM-GCC =====
+
+Para compilar para el procesador ARM (por ejemplo para la CIAA-NXP será el LPC4337), debe instalarse el compilador  [[https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-win32.exe|arm-none-eabi-gcc para Windows]], o accediendo a al sitio https://launchpad.net/gcc-arm-embedded
+.Para simplificar el proceso de compilación, es recomendable durante la instalación activar la opción que incluye el path del compilador en la variable de entorno PATH. Caso contrario hay que hacerlo manualmente desde el Panel de Control⇒Sistema⇒Variables de Entorno, típicamente agregando: "C:\Archivos de programa\GNU Tools ARM Embedded\4.8 2014q2\bin" o el path correspondiente a la instalación.
+Puede verificarse que el PATH está incluido, abriendo una consola de windows (cmd) tal como se mencionó anteriormente.
+
+
+===== OpenOCD =====
+
+El hardware de la CIAA viene provisto con el chip FT2232H, que se encarga de hacer un puente entre la interfase JTAG del microcontrolador y el USB que conecta a la PC en el puerto USB dedicado al debug. La herramienta de código abierto [[http://openocd.sourceforge.net/|OpenOCD (On-Chip Debugger)]] es la encargada de manejar el chip FT2232H por el USB y a la vez todo lo referido al JTAG. Luego el debugger (GDB) utilizado en nuestro IDE-Eclipse puede hacer su tarea simplemente conectándose el puerto 3333 (TCP) que el OpenOCD tiene en escucha esperando la conexión.
+
+Para descargar el OpenOCD compilado y listo para utilizar (actualmente la versión 0.9.0), puede irse a la zona de descargas de la web de [[http://www.freddiechopin.info/en/download|freddiechopin]] o directamente descargarse del siguiente [[http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0|link]]
+
+Además, debe tenerse en cuenta que el chip FT2232H posee 2 canales de comunicación independientes (A y B) pero que ambos salen por el mismo USB, es decir, la PC verá 2 dispositivos distintos (en realidad uno compuesto). Uno será el que conecta al JTAG manejado por OpenOCD como fue mencionado, y el otro se verá como un puerto virtual COM. Este último puede servir principalmente para debug.
+
+Al momento de instalar los drivers, debe tenerse en cuenta que funcionará como 2 dispositivos distintos, y por lo tanto cada uno tendrá un driver asociado. Lo primero es instalar los [[http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.zip|drivers por defecto del fabricante FTDI para puerto virtual (VCP)]]. En el Administrador de Dispositivos deberían aparecer 2 nuevos puertos COM, tal como sigue:
+
+{{FT2232H_FTDI_Devices.png|Captura.}}\\
+
+Luego para el canal A (también aparece como 'Converter A' o 'Interface 0'), debe reemplazarse el driver actual de FTDI por otro llamado WinUSB utilizando la aplicación [[http://zadig.akeo.ie|zadig]] para la versión de Win correspondiente, para que OpenOCD pueda funcionar correctamente. Debe ir al menú 'Options⇒List All Devices', elegir 'USB Serial Converter A' y cambiar el driver nuevo a 'WinUSB', para luego hacer click en 'Reinstall Driver', tal como se ve aquí:
+
+{{driver_WinUSB_zadig_FT2232H.png|Captura.}}\\
+
+Finalmente 1 de los 2 puertos COM virtuales debería desaparecer, y se crea un dispositivo USB nuevo cuyo driver dejó de ser el de FTDI, quedando todo de la siguiente manera:
+
+{{driver_WinUSB_DevManager.png|Captura.}}\\
+
+<note important>
+**Nota:** Si Falla Zadig, mostrando el mensaje "The driver installation failed." entonces intente bajando una versión anterior de Zadig en el siguiente link: [[http://sourceforge.net/projects/libwdi/files/zadig/zadig_v2.0.1.154.7z/download]]
+
+Esta solución fue encontrada en: [[https://github.com/pbatard/libwdi/issues/1]]
+</note>
+
+
+===== IDE - Eclipse =====
+
+El IDE utilizado para codificar el Firmware en 'C' es [[http://www.eclipse.org/cdt/|Eclipse CDT (C/C++)]]. La versión utilizada actualmente puede descargarse de acá: [[http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2|CDT 8.3.0 for Eclipse Kepler SR2]] (se han encontrado problemas con la versión más reciente de Eclipse 'Luna-R' usado con el plug-in para para GNU-ARM-OpenOCD, por lo tanto a la fecha no es recomendable su uso)
+
+===== Plug-In GNU-ARM-OpenOCD para Eclipse =====
+
+Además debe instalarse el plug-in para GNU-ARM-OpenOCD, desde el menú 'Help⇒Install New Software...", agregando en el sitio de descarga para la instalación la siguiente dirección: **%%http://gnuarmeclipse.sourceforge.net/updates%%**, tal como se muestra a continuación:
+
+{{Eclipse_Plugin_ARM.png|Captura.}}\\
+
+
+===== Linux =====
+
+La mayor parte de las herramientas se encuentran instaladas por defecto en este caso.
+==== Cygwin ====
+Desde luego en Linux no hace falta instalarlo! ;-)
+
+==== Compilador ARM-GCC ====
+
+Para compilar para el procesador ARM (por ejemplo para la CIAA-NXP será el LPC4337), debe instalarse el compilador  [[https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/gcc-arm-none-eabi-4_8-2014q2-20140609-linux.tar.bz2|arm-none-eabi-gcc para Linux]], o accediendo a al sitio https://launchpad.net/gcc-arm-embedded
+Para simplificar el proceso de compilación, es recomendable incluir el path del compilador en la variable de entorno PATH. Puede verificarse que el PATH está incluido, abriendo una consola y tecleando './arm-none-eabi-gcc --version' para ver que lo encuentra y en tal caso nos mostrará la versión del mismo.
+==== PHP ====
+
+En este caso sólo hace falta instalar la versión de línea de comando (CLI), por lo que en consola debemos hacer:
+<code>
+sudo apt-get install php5-cli
+</code>
+
+==== OpenOCD ====
+
+Para utilizar OpenOCD en Linux debemos compilarlo configurándolo para que funcione con el chip FT2232.
+Si estamos en un sistema operativo de 64 bits (ej: Ubuntu 64-bits), es necesario instalar primero las siguientes librerías (para 32 bits saltear este paso)
+<code>
+sudo apt-get install libgtk2.0-0:i386 libxtst6:i386 libpangox-1.0-0:i386 libpangoxft-1.0-0:i386 libidn11:i386 libglu1-mesa:i386 libncurses5:i386 libudev1:i386 libusb-1.0:i386 libusb-0.1:i386 gtk2-engines-murrine:i386 libnss3-1d:i386 libwebkitgtk-1.0-0
+</code>
+
+Ahora si, para 32/64-bits continuamos con el mismo procedimiento. Lo primero que debemos hacer es instalar el driver necesario para el chip FT2232 y el paquete libusb:
+<code>
+sudo apt-get install libftdi-dev
+sudo apt-get install libusb-1.0-0-dev
+</code>
+
+Antes de compilar el openocd necesitamos instalar el siguiente paquete:
+<code>
+sudo apt-get install pkg-config
+</code>
+
+Ahora vamos a configurar e instalar OpenOCD.  Utilizaremos la versión 0.9.0.
+Para descargar y descomprimir los archivos fuente:
+<code>
+wget http://ufpr.dl.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.bz2
+tar -xvjf openocd-0.9.0.tar.bz2
+</code>
+Finalmente compilamos OpenOCD para que funcione con nuestro chip FT2232:
+<code>
+cd openocd-0.9.0
+./configure --enable-ftdi 
+make
+sudo make install
+</code>
+Para utilizarlo debemos ejecutar:
+<code>
+openocd -f <archidodeconfiguración>
+</code>
+Por ejemplo:
+<code>
+openocd -f CIAA/Firmware/modules/tools/openocd/cfg/ciaa-nxp.cfg
+</code>
+
+Además, debe tenerse en cuenta que el chip FT2232H posee 2 canales de comunicación independientes (A y B) pero que ambos salen por el mismo USB, es decir, la PC verá 2 dispositivos distintos (en realidad uno compuesto). Uno será el que conecta al JTAG manejado por OpenOCD como fue mencionado, y el otro se verá como un puerto serie por USB. Este puerto debería encontrarse en '/dev/ttyUSB', y puede servir para principalmente para debug.
+==== IDE - Eclipse ====
+
+El IDE utilizado para codificar el Firmware en 'C' es [[http://www.eclipse.org/cdt/|Eclipse CDT (C/C++)]]. La versión utilizada actualmente puede descargarse de acá: [[http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2|CDT 8.3.0 for Eclipse Kepler SR2]] (se han encontrado problemas con la versión más reciente de Eclipse 'Luna-R' usado con el plug-in para para GNU-ARM-OpenOCD, por lo tanto a la fecha no es recomendable su uso). Notese que la versión utilizada requiere tener instalado Java, ante cualquier inconveniente hay que verificar que el mismo se encuentre instalado.
+
+==== Plug-In GNU-ARM-OpenOCD para Eclipse ====
+
+Además debe instalarse el plug-in para GNU-ARM-OpenOCD, desde el menú 'Help⇒Install New Software...", agregando en el sitio de descarga para la instalación la siguiente dirección: **%%http://gnuarmeclipse.sourceforge.net/updates%%**, tal como se muestra a continuación:
+
+{{Eclipse_Plugin_ARM.png|Captura.}}\\
+

@@ -1,0 +1,94 @@
+====== Testing de la CIAA ======
+
+//Nota: Página en construcción.//
+
+###
+Las actividades de testing sobre la CIAA tienen como propósito verificar y validar no solo el diseño del hardware, sino también el cumplimiento de distintas normativas aplicables a los sistemas embebidos usados en entornos industriales.
+###
+###
+Si bien estas normas son aplicables de acuerdo con el producto o dispositivo final en el cual se encontrará la CIAA, se llevarán adelante un conjunto de ensayos tipo que forman un núcleo común en varios de los posibles ámbitos de utilización de la CIAA. Los ensayos previstos abarcan:
+###
+  * [[compatibilidad electromagnética|Ensayos de compatibilidad electromagnética]].
+  * Ensayos mecánicos.
+  * Ensayos ambientales.
+
+###
+A continuación se encuentra un descripción de los principales estándares considerados para el testing de la CIAA, con el detalle de los ensayos definidos en cada uno.
+###
+
+===== IEC 61000: Electromagnetic Compatibility (EMC) ====
+###
+Las normas técnicas internacionales definen a la Compatibilidad Electromagnética (EMC) como: \\ "la aptitud de un aparato o un sistema para funcionar en forma satisfactoria en su entorno electromagnético sin introducir perturbaciones electromagnéticas intolerables para todo lo que se encuentra en dicho entorno, y a la vez funcionar satisfactoriamente bajo perturbaciones electromagnéticas provenientes de un entorno electromagnético." ((http://www.inti.gob.ar/electronicaeinformatica/emc/ce.htm))
+###
+;#;
+**<fc #4682b4>EMC = EMI + EMS</fc>**
+;#;
+
+###
+La Compatibilidad Electromagnética (EMC) comprende dos partes, la Emisión o Interferencia Electromagnética (EMI) y la Inmunidad o Susceptibilidad Electromagnética (EMS).
+###
+
+==== IEC 61000-4 ====
+
+  * 2 - Inmunidad a descargas electrostáticas.
+  * 3 - Inmunidad a campos electromagnéticos radiados (en cámara semianecoica).
+  * 4 - Inmunidad a ráfagas de pulsos y transitorios eléctricos rápidos.
+  * 5 - Inmunidad a sobretensiones.
+  * 6 - Inmunidad a perturbaciones conducidas, inducidas por campos de RF.
+  * 8 - Inmunidad a los campos electromagnéticos a frecuencia de red
+  * 11 - Inmunidad a caídas de tensión, interrupciones cortas y variaciones de tensión.
+  * 13 - Inmunidad a armónicos e interarmónicos en la alimentación.
+
+
+===== IEC 61131: Programmable Logic Controllers (PLC) =====
+
+==== IEC 61131-2 ====
+###
+El estándar internacional IEC 61131 dedicado a controladores programables (PLCs) está conformado por ocho partes, entre las cuales la parte 61131-2 se refiere a los requerimientos que deben cumplir los PLCs (y los periféricos asociados) y a los tests a ejecutar para verificarlos. En dicho documento se definen tres tipos de tests:
+###
+  * **6 De servicio normal**:
+    * 6.1 Climáticos.
+    * 6.2 Resistencia al calor seco y al frío.
+    * 6.3 Mecánicos:
+      * 6.3.1 Vibraciones.
+      * 6.3.2 Shock.
+      * 6.3.3 y 6.3.4 Caída libre (en servicio normal y durante el transporte).
+      * 6.3.5 Conexión/Desconexión de unidades removibles.
+    * 6.4 De puertos de alimentación:
+      * 6.4.1 Entrada de alimentación: 
+        * 6.4.1.1 Rangos de tensión, ripple y frecuencia.
+        * 6.4.1.2 Inmunidad al tercer armónico.
+        * 6.4.1.3 Shut-down repentino.
+        * 6.4.1.4 Start-up.
+      * 6.4.2 Variaciones en la alimentación externa.
+      * 6.4.3 Inapropiada conexión de la alimentación.
+      * 6.4.4 Backup de memoria.
+    * 6.5 Entradas y salidas, digitales y analógicas.
+    * 6.6 Interfaces de comunicación (estos tests se piden pero no son definidos en el estándar).
+    * 6.7 MPU (estos tests se piden pero no son definidos en el estándar).
+    * 6.8 Estaciones remotas.
+    * 6.9 Periféricos (estos tests se piden pero no son definidos en el estándar).
+    * 6.10 Self tests y de diagnóstico (estos tests se piden pero no son definidos en el estándar).
+  * **9 De compatibilidad electromagnética (EMC)**:
+    * 9.3 Medición de interferencia radiada.
+    * 9.4 Medición de interferencia conducida.
+    * 9.5 Descarga electrostática.
+    * 9.6 Campo electromagnético de radiofrecuencia.
+    * 9.7 Campo magnético de frecuencia de red.
+    * 9.8 Ráfagas transitorias
+    * 9.9 Sobretensiones de alta energía.
+    * 9.10 Interferencia de radiofrecuencia conducida.
+    * 9.11 Onda oscilatoria amortiguada.
+    * 9.12 Interrupciones y caídas de tensión.
+  * **12 De seguridad**:
+    * 12.1 Tests mecánicos relacionados a la seguridad.
+    * 12.2 Tests eléctricos relacionados a la seguridad.
+    * 12.3 Condición de falla singular.
+    * 12.4 Circuitos de potencia limitada.
+###
+En todos los casos los tests son de calificación y no tienen por objetivo verificar la forma en que los PLCs son usados, es decir, los test podrían no verificar la capacidad del PLC de cumplir los requerimientos del sistema programado en él. Por este motivo, cuando sea necesario los tests propuestos en el estándar 61131-2 deberán ser complementados con tests especiales.
+###
+
+Los tests deben ejecutarse bajo las siguientes condiciones generales:
+{{ Condiciones_generales_tests.png?500 |Condiciones generales}}
+ 

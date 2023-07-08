@@ -1,0 +1,47 @@
+====== Primeros Pasos ======
+===== Proyecto Blinking =====
+###
+Para abrir el código fuente del proyecto, debemos ir al menú 'File⇒New⇒Makefile Project with Existing code', dado que tenemos nuestro código y también nuestro Makefile, y no necesitamos utilizar uno generado por Eclipse. Si no instaló el Firmware junto al entorno CIAA-IDE, tiene 2 opciones, o lo descarga desde la web siguiendo las instrucciones en [[desarrollo:firmware:codigo|Código Fuente]], o vuelve a ejecutar el [[docu:fw:bm:ide:install|Instalador del Software-IDE de la CIAA]] y en la ventana de componentes, selecciona unicamente el item Firmware-x.y.z.
+###
+{{ :docu:fw:bm:ide:primeros_pasos:makefile_project_with_existing_code.png | Makefile Project with Existing Code}}
+
+###
+Luego, debe elegirse la carpeta Firmware, dejando las opciones por defecto (toolchain 'none' dado que esto lo configura nuestro Makefile)
+###
+
+{{:docu:fw:bm:ide:primeros_pasos:new_project.jpg|}}
+
+ ===== Configuración del Proyecto =====
+### 
+Una vez creado el proyecto, nos encontraremos con un entorno como el que se presenta a continuación. 
+###
+
+{{:docu:fw:bm:ide:primeros_pasos:ciaaide.png|}}
+
+###
+Para que el IDE ademas pueda indexar las definiciones propias de posix, es necesario agregar los Includes del gcc.
+###
+==== GNU C ====
+
+  * **C:\CIAA\cygwin\usr\arm-none-eabi\arm-none-eabi\include**
+{{:docu:fw:bm:ide:settingideposix.jpg|}}
+{{:docu:fw:bm:ide:settingideposix2.jpg|}}
+  
+ ===== Configuración del Makefile =====
+###
+Dado que el Proyecto CIAA tiene su propio Makefile, hay que indicarle al IDE cómo manejarse con él, puesto que no queremos que genere un Makefile automáticamente. Principalmente se le indica qué comando es necesario para hacer un 'clean' o un 'Build' incremental. Particularmente, se utiliza 'clean_generate' para borrar los archivos objeto y luego volver a generar los archivos fuentes del RTOS-OSEK. En caso de trabajar sin RTOS-OSEK, sólo hace falta usar el comando 'clean'.
+La primera vez que se compila el proyecto, es necesario hacer un **Clean Project**. Esto ejecutará el comando clean_generate del make, creando todos los archivos necesarios para la compilación con el RTOS.
+###
+Notar que el campo Build esta vacío, esto permite hacer build incrementales.
+###
+{{:docu:fw:bm:ide:settingbuild.jpg|}}
+
+<note important>
+No seleccionar la opción "Enable parallel build" ya que al realizar el clean_generate puede finalizar primero la generación del sistema operativo y luego el clean, borrando los archivos generados.
+</note>
+
+###
+Por último hacemos Build Project y la compilación debería ser exitosa. Para Realizar el **Debug** en el entorno Windows, puede continuar en el siguiente apartado [[docu:fw:bm:ide:ide_win_debug|Debug con Windows]].
+
+
+<- docu:fw:bm:ide:ide_entorno|Configuración del Entorno CIAA-IDE ^ docu:fw:bm:ide|IDE ^ docu:fw:bm:ide:ide_win_debug|Debug con Windows ->

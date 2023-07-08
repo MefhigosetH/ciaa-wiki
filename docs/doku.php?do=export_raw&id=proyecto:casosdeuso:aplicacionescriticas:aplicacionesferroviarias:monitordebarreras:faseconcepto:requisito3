@@ -1,0 +1,61 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 3 =====
+
+###
+La norma UNE EN 50126 indica que:
+###
+
+<note>"el resultado de este requerimiento debe ser el de identificar fuentes de peligros que pudieran afectar el rendimiento RAMS del sistema, incluidas: \\
+<fc #ffffff>..</fc>− la interacción con otros sistemas;\\
+<fc #ffffff>..</fc>− la interacción con seres humanos."</note>
+
+###
+En consecuencia resulta:
+###
+
+{{ :blanco.png?20 | }}
+
+=== a) Interacción con seres humanos ===
+
+El sistema, en su operación normal,  resulta totalmente autonomo y no tiene interacción con humanos, excepto por situaciones tales como a) Consultas de un operador de barreras sobre el estado del sistema o b) Un técnico de mantenimiento que conecta una PC u otro dispositivo para descargar datos estadísticos de la actividad del sistema de barreras almacenados en la memoria del monitor, reparar el sistema o reemplazar una batería.
+
+Sin embargo, hay que considerar que posiblemente el equipo estará alojado dentro del armario de control de la barrera o agarrado al poste, y por lo tanto puede surgir una interacción cuando un técnico realice mantenimiento de la barrera, como por ejemplo, cambio de luces en la cruz de San Andrés, lubricación de partes móviles del mecanismo de barrera, regulación del brazo de barrera luego de cambio de madera, entre otros. En consecuencia, el equipo debería ser lo suficientemente seguro para el técnico y robusto para prevenir roturas.
+
+{{ :blanco.png?20 | }}
+
+=== b) Interacción con otros sistemas ===
+
+Provienen de la conectividad del sistema con la central de monitoreo general de barreras. Esta interacción se lleva a cabo mediante mensajes de voz o SMS por la red GPRS o Ethernet o por fibra óptica o por cualquier enlace que disponga la red de ferrocarriles para datos ON LINE.
+
+
+{{ :blanco.png?20 | }}
+
+###
+A su vez, las fuentes de peligros que afectan el rendimiento RAMS del sistema han sido clasificadas en internas y externas:
+###
+
+__Internas__:
+  * Falla en la determinación de peligros potenciales o actuales que se pueden presentar.
+  * Error en la determinación de cómo los peligros potenciales o actuales pueden ser controlados.
+  * Fallas en la instrucción de como hacer operaciones en la mejor y más segura manera o forma.
+  * Falta de compromiso del empleado en el proceso de seguridad.
+
+__Externas__:
+  * Fallas en el sistema de barreras sobre el que deberá funcionar el Monitor de Barreras.
+  * Fallas en el sistema de suministro de energía eléctrica que alimenta el Monitor de Barreras.
+  * Fallas en el sistema de comunicaciones que provee de conectividad al Monitor de Barreras.
+
+
+{{ :blanco.png?20 | }}
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito4|Ir al Requisito 4 de la Fase de Concepto]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 

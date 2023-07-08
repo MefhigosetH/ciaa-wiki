@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,troubleshooting"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html#troubleshooting">Troubleshooting</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html#el_script_se_graba_en_la_placa_pero_no_se_ejecuta">* El script se graba en la placa pero no se ejecuta</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:troubleshooting.html#la_ventana_de_carga_del_script_indica_error">* La ventana de carga del script indica ERROR</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="troubleshooting">Troubleshooting</h1>
+<div class="level1">
+
+<p>
+A continuación se plantean una serie de problemas típicos con sus soluciones.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Troubleshooting&quot;,&quot;hid&quot;:&quot;troubleshooting&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-112&quot;} -->
+<h2 class="sectionedit2" id="el_script_se_graba_en_la_placa_pero_no_se_ejecuta">* El script se graba en la placa pero no se ejecuta</h2>
+<div class="level2">
+
+<p>
+Si es posible grabar el script en la placa mediante el IDE y luego al ejecutarlo solo aparece el intérprete de Python y el script nunca se ejecuta, es posible que la FAT dentro de la memoria de programa del microcontrolador este corrupta.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;* El script se graba en la placa pero no se ejecuta&quot;,&quot;hid&quot;:&quot;el_script_se_graba_en_la_placa_pero_no_se_ejecuta&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;113-418&quot;} -->
+<h3 class="sectionedit3" id="solucion">Solución</h3>
+<div class="level3">
+
+<p>
+Ejecutar :
+</p>
+<pre class="code">make erase_fs</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soluci\u00f3n&quot;,&quot;hid&quot;:&quot;solucion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;419-468&quot;} -->
+<h2 class="sectionedit4" id="la_ventana_de_carga_del_script_indica_error">* La ventana de carga del script indica ERROR</h2>
+<div class="level2">
+
+<p>
+Es posible que la placa ya tenga un script que imprima datos por la consola constantemente, esto interfiere con el proceso de grabación del script, se debe iniciar primero el proceso de grabación y luego la placa, para ello se utiliza el botón de reset.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;* La ventana de carga del script indica ERROR&quot;,&quot;hid&quot;:&quot;la_ventana_de_carga_del_script_indica_error&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;469-785&quot;} -->
+<h3 class="sectionedit5" id="solucion1">Solución</h3>
+<div class="level3">
+
+<p>
+Asegurarse de presionar el botón de RESET de la placa y luego el botón “Load Script” en el IDE, luego se debe soltar el botón de RESET.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soluci\u00f3n&quot;,&quot;hid&quot;:&quot;solucion1&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;786-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+====== Tecnología de control de velocidad en vehículos de transporte ferroviario  ======
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Los circuitos de vía =====
+
+###
+La tecnología de control de velocidad en vehículos de transporte ferroviario está basada en circuitos de vía. 
+El circuito de vía como método primario de detección de presencia de trenes fue inventado a finales del siglo XIX y su primera aplicación estuvo basada en tecnología de corriente directa (CD). A través de los años, el progreso continuo de la técnica ha permitido desarrollar circuitos de vía de mejores prestaciones con el uso de corriente alterna (CA) y de la modulación de señales, aunque su principio básico de operación aún continúa invariable.
+Como método alternativo se utilizan los contadores de ejes que con su lógica de comprobación integrada pueden
+comparar los resultados del conteo a la entrada y a la salida de una sección de bloqueo para determinar su estado de ocupación (libre u ocupada).
+###
+
+###
+Los circuitos de vía también contribuyen al control de la velocidad de los vehículos ya que las señales eléctricas usadas para la detección de presencia pueden ser transmitidas desde los dispositivos en la vía hacia los equipos abordo para ser utilizadas como comandos de velocidad. El uso de la modulación de señales para este objetivo ha derivado en los llamados “circuitos de vía de corriente codificada”.
+###
+
+###
+Posiblemente, en la historia del desarrollo del transporte ferroviario ningún otro invento, tan simple como el circuito de vía, haya contribuido tanto a la seguridad y al control del tráfico.
+###
+
+{{ :blanco.png?10 | }}
+
+===== El control de la velocidad =====
+
+###
+Las señales utilizadas para el control de la presencia de trenes también pueden ser usadas para la trasmisión de los comandos de velocidad hacia los dispositivos de señalización al lado de la vía y hacia los trenes. De manera
+general, para la transmisión de tales comandos se utilizan los siguientes dos métodos:
+###
+
+  - Circuito de Vía de Corriente Codificada: Usado en circuitos de vía de corriente contínua o alterna cuyas señales se activan o desactivan a una frecuencia dada, lo cual es interpretado por el sistema de abordo como un comando de velocidad.
+  - Circuito de Vía de Codificación Binaria: Usado en circuitos AFTC, en los cuales la frecuencia de la señal cambia por uno de dos valores discretos.
+
+###
+Cualquiera que sea el método que se utilice, los equipos al lado de la vía o a bordo de los trenes detectan las señales presentes en los rieles y decodifican los comandos de velocidad. De esta manera, en caso de producirse un exceso es posible implementar un control de velocidad sobre el tren.
+###
+
+{{ :blanco.png?10 | }}
+
+###
+**Para leer más información sobre este tema** se recomienda el trabajo titulado [[http://www.railwaysignalling.eu/wp-content/uploads/2015/07/circuitos-de-v%C3%ADa-esp.pdf|¿Cómo los Circuitos de Vía Detectan y Protegen a los Trenes?]]
+###
+
+{{ :blanco.png?10 | }}
+
+###
+**Volver a la página** dónde se presenta la [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion:justificacioneleccion|justificación de la elección del proyecto del Monitor de Barreras]].
+###

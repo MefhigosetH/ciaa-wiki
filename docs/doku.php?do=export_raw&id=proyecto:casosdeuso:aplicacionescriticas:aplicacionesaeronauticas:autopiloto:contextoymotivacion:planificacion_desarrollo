@@ -1,0 +1,70 @@
+====== Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados ======
+
+{{ :blanco.png?10 | }}
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:ciaapilot.png?nolink&300|}}
+
+===== Planificación del desarrollo =====
+
+El proyecto Autopiloto está dividido en tres líneas de trabajo interrelacionadas:
+
+  * Desarrollo de CIAAPilot
+  * Ajuste del prototipo CIAA Safety al CIAAPilot 
+  * Certificación del CIAAPilot
+
+==== Desarrollo del CIAAPilot ====
+
+Esta línea de trabajo es la que se ocupa principalmente de los aspectos de desarrollo del autopiloto.
+Está dividido en cuatro sub-líneas de trabajos:
+
+  * Sistema
+  * Hardware
+  * Firmware
+  * Software
+
+=== Sistema ===
+
+Esta línea tiene seis //work packages// (WP). Cada WP tiene un responsable, entradas y salidas (Ver [[https://gstr.ing.unrc.edu.ar/redmine|Redmine]]).
+
+
+  * WP-SYS-01: Requerimientos de sistema autopiloto - funcional (ver RTCA DO-325)
+  * WP-SYS-02: Requerimientos de sistema autopiloto - seguridad (ver SAE ARP 4761)
+  * WP-SYS-03: Diseño del sistema (SAE ARP 4754A)
+  * WP-SYS-04: Gestión de configuración
+  * WP-SYS-05: Verificación & Validación
+  * WP-SYS-06: Condiciones de entorno (bancos de ensayo HIL/SIL)
+
+=== Hardware ===
+
+Esta línea tiene 6 WP (Ver RTCA DO-254).
+
+  * WP-HW-01: Adaptación del Módulo Procesador Safety (MPS)
+  * WP-HW-02: Desarrollo Módulo de Aplicación (MAAero)
+  * WP-HW-03: Desarrollo Módulo Fuente de Alimentación (MFA)
+  * WP-HW-04: Integración
+  * WP-HW-05: Gabinete
+  * WP-HW-06: Ensayos (bajo RTCA DO-160)
+
+=== Firmware ===
+
+Esta línea tiene 3 WP (Ver RTCA DO-178C).
+
+  * WP-FW-01: Porting GNAT GPL for Bare Board ARM a MCU TI Hercules TMS570
+  * WP-FW-02: Desarrollo de drivers
+  * WP-FW-03: Testing MC/DC (Modified Condition/Decision Coverage)
+
+=== Software ===
+
+Esta línea tiene 3 WP (Ver RTCA DO-178C).
+
+  * WP-SW-01: Diseño del Programa Operacional de Vuelo
+  * WP-SW-02: Codificación en SPARK (Ada)
+  * WP-SW-03: Testing MC/DC (Modified Condition/Decision Coverage)
+
+==== Ajuste del prototipo CIAA Safety al CIAAPilot ====
+
+Especificación de interoperabilidad entre IEC 61508 (CIAA Safety) y estándares aeronáuticos (CIAAPilot).
+
+==== Certificación del CIAAPilot====
+
+Procesos de certificación de acuerdo a ANAC y DIGAMC. 
+

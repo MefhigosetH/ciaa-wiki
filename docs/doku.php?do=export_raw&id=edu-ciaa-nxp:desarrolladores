@@ -1,0 +1,36 @@
+===== Equipo de desarrollo de la EDU-CIAA-NXP =====
+
+
+^ Función                                         ^ Nombre                    ^ Unidad Académica ^
+| Coordinador General                             | Mg. Bioing. Eduardo Filomena | UNER             |
+| Responsable de Definición Bloques funcionales   | Ing. Sergio Gallina          | UNCA             |
+| - Colaborador (1)                               | Dr. Ing. Edgardo Ferro       | UNS              |
+| - Colaborador (2)                               | Mg. Bioing. Eduardo Filomena | UNER             |
+| - Colaborador (3)                               | Ing. Gerardo Sager           | UNLP             |
+| Responsable del Diseño del Diagrama Esquemático | Mg. Bioing. Eduardo Filomena | UNER             |
+| - Colaborador (1)                               | Ing. Pablo Ridolfi           | UTN-FRBA         |
+| - Colaborador (2)                               | Ing. Adrián Laiuppa          | UTN-FRBB         |
+| Responsable del Diseño del Circuito Impreso     | Bioing. Gonzalo Cuenca       | UNER             |
+| - Colaborador (1)                               | Mg. Bioing. Eduardo Filomena | UNER             |
+| Responsable del Listado de Materiales (BOM)     | Ing. Ismael Potolicchio      | UNCOMA           |
+| Responsable de Desarrollo del IDE para EDU-CIAA | Ing. Ricardo Maldonado       | UTN-FRLR         |
+| - Colaborador (1)                               | Dr. Ing. Leonardo Ordinez    | UNS              |
+| - Colaborador (2)                               | Ing. Gustavo Ramoscelli      | UNS              |
+| - Colaborador (3)                               | Ing. Gustavo Monte           | UTN-FRN          |
+| Documentación wiki                              | Ing. Diego Brengi            | INTI             |
+
+===== Gestión del proyecto =====
+^ Tarea                                             ^ Inicio   ^ Fin      ^ Estado    ^
+| 0. Propósito, alcance, objetivos y requerimientos | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.1 Definición del propósito                      | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.2 Definición del alcance                        | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.3 Definición de los objetivos                   | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.4 Definición de los requerimientos              | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.5 Propuestas de nombre para la plataforma       | 22/05/14 | 31/05/14 | Cumplido  |
+| 0.6 Votación del nombre de la la plataforma       | 01/06/14 | 07/06/14 | Cumplido  |
+| 1. Definición de bloques funcionales              | 22/05/14 | 31/05/14 | Cumplido  |
+| 2. Diseño del diagrama esquemático                | 01/06/14 | 16/06/14 | Cumplido  |
+| 2.1 Revisión del diagrama esquemático             | 17/06/14 | 23/06/14 | Cumplido  |
+| 3. Realización del listado de materiales (BOM)    | 17/06/14 | 23/06/14 | Cumplido  |
+| 4. Diseño del circuito impreso                    | 24/06/14 | 07/07/14 | Cumplido  |
+| 5. Desarrollo del IDE basado en Eclipse           | 20/05/14 | --/--/14 | En desarrollo |

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:08:17+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;rev=1474408154&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseanalisisderiesgos&amp;rev=1473347768&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto&amp;rev=1473347701&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion&amp;rev=1473463618&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faserequisitosdelsistema&amp;rev=1473348188&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:sidebar&amp;rev=1473348719&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;rev=1474408154&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-20T21:49:14+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:contextoymotivacion&amp;rev=1474408154&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias
+
+[ ]
+
+Contexto y motivación
+En el marco del Proyecto CIAA se busca lograr un acercamiento al desarrollo de soluciones con alto valor agregado y capacitar en estas temáticas a estudiantes, docentes, profesionales e investigadores. Para eso se intenta conseguir un primer acercamiento a las aplicaciones críticas y eventualmente hacer uso de la plataforma</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseanalisisderiesgos&amp;rev=1473347768&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:16:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseanalisisderiesgos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseanalisisderiesgos&amp;rev=1473347768&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 3/14: Análisis de riesgos
+
+[ Ver Página Inicial ] - [ Ver Fase previa ] - [ Ver Fase siguiente ]
+
+[ ]
+
+Introducción
+A Continuación se muestra cómo se adapta el alcance y la aplicación de los requisitos dispuestos por la Norma UNE EN 50126 para cumplir los requisitos específicos del Monitor de Barreras.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto&amp;rev=1473347701&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:15:01+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto&amp;rev=1473347701&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto
+
+
+
+[ Ver Página Inicial ] - [ Ver Fase siguiente ]
+La información correspondiente a esta fase se puede visualizar en [en este pdf] y también se puede visualizar online en los links que se presentan a continuación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion&amp;rev=1473463618&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-09T23:26:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion&amp;rev=1473463618&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación
+
+
+
+[ Ver Página Inicial ] - [ Ver Fase previa ] - [ Ver Fase siguiente ]
+La información correspondiente a esta fase se puede visualizar en [en este pdf] y también se puede visualizar online en los links que se presentan a continuación.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faserequisitosdelsistema&amp;rev=1473348188&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:23:08+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faserequisitosdelsistema</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faserequisitosdelsistema&amp;rev=1473348188&amp;do=diff</link>
+        <description>Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase (4/14): Requisitos del sistema
+
+[ Ver Página Inicial ] - [ Ver Fase previa ] - [ Ver Fase siguiente ]
+
+[ ]
+
+Introducción
+A Continuación se muestra cómo se adapta el alcance y la aplicación de los requisitos dispuestos por la Norma UNE EN 50126 para cumplir los requisitos específicos del Monitor de Barreras.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:sidebar&amp;rev=1473348719&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-08T15:31:59+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:sidebar&amp;rev=1473348719&amp;do=diff</link>
+        <description>Monitor de Barreras
+
+Contexto y Motivación
+
+Contexto y motivación
+
+Por qué tiene tanto valor
+Justificación de la elección
+
+- Controlador de velocidad
+
+-  Monitor de barreras
+
+ - Sistema de hombre vivo
+
+Normas Ferroviarias
+
+Ciclo de vida a utilizar
+
+
+Fase de Concepto (1/14)
+
+Índice
+
+Entradas
+
+Requisito 1
+
+Requisito 2
+
+Requisito 3
+
+Requisito 4
+
+Requisito 5
+
+Entregas
+
+Verificación
+
+
+Fase de Definición del Sistema (2/14)
+
+Índice
+
+Entradas
+
+Requisito 1
+
+Requisito 2
+
+Requisito 3
+
+Requisito 4
+
+Entregas…</description>
+    </item>
+</rdf:RDF>

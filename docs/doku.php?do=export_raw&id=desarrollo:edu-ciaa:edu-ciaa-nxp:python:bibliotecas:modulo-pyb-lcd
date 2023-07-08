@@ -1,0 +1,26 @@
+====== Soporte LCD tipo HD44780U: Clase LCD ======
+
+  import pyb
+  
+  lcd = pyb.LCD(2,0) # 2 lines, dot format:5x8
+  lcd.clear()
+  
+  lcd.write("Test LCD\nEDUCIAA")
+  pyb.delay(1000)
+  
+  lcd.clear()
+  lcd.config_cursor(True,True) #Cursor ON, Blink ON
+  
+  c=0
+  while(True):
+      c=c+1   
+      lcd.goto_xy(0,0)
+      lcd.write("counter:"+str(c))        
+      lcd.goto_xy(10,1)
+      lcd.write(str(c))
+      pyb.delay(1000)
+
+El constructor recibe la cantidad de lineas (1,2,3 o 4) y el formato del caracter (0:5x8 - 1:5x10).
+El cursor se encuentra deshabilitado por defecto, mediante el método "config_cursor" es posible habilitar su visualización y blinking.
+El método "goto_xy" posiciona el cursor en la columna y fila especificada, permitiendo al método "write" escribir desde dicha posición.
+

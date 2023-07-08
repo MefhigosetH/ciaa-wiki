@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title></title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T14:57:51+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_desarrolladores&amp;rev=1503689865&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_pymes&amp;rev=1449206980&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_universidades&amp;rev=1426037475&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion&amp;rev=1427589505&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=faq&amp;rev=1521907577&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=foro&amp;rev=1398885383&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=hackaton&amp;rev=1479495031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria&amp;rev=1429846344&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=make_environment&amp;rev=1426369080&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=sidebar&amp;rev=1591279909&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=start&amp;rev=1496494833&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=todos&amp;rev=1428106956&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=versiones_ciaa&amp;rev=1474411617&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_desarrolladores&amp;rev=1503689865&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-25T19:37:45+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>aportes_desarrolladores</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_desarrolladores&amp;rev=1503689865&amp;do=diff</link>
+        <description>Aportes de desarrolladores
+
+Los siguientes son los desarrolladores que participan del Proyecto CIAA y las tareas que realizan:
+ Grupo              Integrante                            Tareas                             &lt;http://www.sase.com.ar/asociacion-civil-sistemas-embebidos&gt;  &lt;http://www.cadieel.org.ar/esp/index.php&gt;  Ariel Lutenberg (ACSE, FIUBA, CONICET)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_pymes&amp;rev=1449206980&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-04T05:29:40+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>aportes_pymes</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_pymes&amp;rev=1449206980&amp;do=diff</link>
+        <description>Aportes de las PyMEs
+Además de contar con el apoyo de universidades e instituciones de todo el país, el Proyecto CIAA es posible gracias al impulso de decenas de pequeñas y medianas empresas (PyMEs) argentinas, que aportaron trabajo, servicios y productos para el desarrollo de la CIAA:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_universidades&amp;rev=1426037475&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-11T01:31:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>aportes_universidades</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=aportes_universidades&amp;rev=1426037475&amp;do=diff</link>
+        <description>Aportes de las Universidades
+
+Desde sus inicios el Proyecto CIAA contó con la participación de decenas de universidades. Las siguientes son las universidades que concretaron aportes al proyecto:
+   Universidad  Unidad académica  Ciudad  Participación</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion&amp;rev=1427589505&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-29T00:38:25+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>educacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=educacion&amp;rev=1427589505&amp;do=diff</link>
+        <description>CIAA Educación
+
+Los objetivos del grupo ciaa-educacion@ son:
+
+	*  Promover la enseñanza de sistemas embebidos con el fin de impulsar el desarrollo tecnológico nacional y formar para el trabajo a los estudiantes de distintos niveles educativos, desarrollando en ellos las siguientes capacidades:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=faq&amp;rev=1521907577&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-24T16:06:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>faq</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=faq&amp;rev=1521907577&amp;do=diff</link>
+        <description>?????? FAQ (Preguntas Frecuentes) ??????
+
+Nota: Esta página se encuentra en construcción.
+
+????? Fundamentos de la CIAA ?????
+
+???? ¿Qué es la CIAA? ????
+
+???? ¿Qué significa que la CIAA sea Industrial? ????
+Ver más.
+
+???? ¿Qué significa que la CIAA sea Abierta? ????</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=foro&amp;rev=1398885383&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-04-30T19:16:23+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>foro</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=foro&amp;rev=1398885383&amp;do=diff</link>
+        <description>Foro de discusión de la CIAA</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=hackaton&amp;rev=1479495031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-11-18T18:50:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>hackaton</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=hackaton&amp;rev=1479495031&amp;do=diff</link>
+        <description>El primer Hackaton de la CIAA se desarrollara el Sábado 19 de Noviembre de 9 a 21hs.
+
+Temas propuestos para Firmware
+
+	*  Terminar el port de lwIP con OSEK
+	*  Mergear todos los pulls requests (2 en este momento)
+	*  Implementar un modo de trabajo con gerrit y jenkins</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria&amp;rev=1429846344&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-24T03:32:24+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>industria</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=industria&amp;rev=1429846344&amp;do=diff</link>
+        <description>La CIAA una plataforma diferente pensada para la industria
+
+Muchas veces cuando se presenta la CIAA surgen algunas preguntas: ¿es una plataforma de hardware libre al estilo de varias que están en el mercado y la academia? ¿es una versión argentina de placas como Arduino, Raspberry y otras?</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=make_environment&amp;rev=1426369080&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-14T21:38:00+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>make_environment</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=make_environment&amp;rev=1426369080&amp;do=diff</link>
+        <description>Make
+Para compilar el proyecto se utiliza GNU Make, de manera que la compilación pueda fácilmente ser cambiada mediante un archivo de configuración para distintos arquitecturas, compiladores, etc. según la necesidad del usuario. La estructura fue realizada para poder crear nuevos</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=sidebar&amp;rev=1591279909&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2020-06-04T14:11:49+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>sidebar</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=sidebar&amp;rev=1591279909&amp;do=diff</link>
+        <description>Acerca de la CIAA
+
+ Inicio
+
+ Origen del proyecto
+
+ Propuesta innovadora
+
+ Coordinación del proyecto
+
+ Grupos de trabajo
+
+ Licencia BSD de la CIAA
+
+ Aplicaciones de la CIAA
+
+
+Vinculación y Prensa
+
+ Contactos locales (66)
+
+ Vídeos y Demostraciones
+
+ La CIAA en los Medios
+
+ Gobierno y Entidades
+
+ Visitas a Empresas
+
+ Premios y Reconocimientos
+
+ Agenda de Eventos
+
+
+Industria
+
+ Robusta y confiable
+
+ Empresas utilizando la CIAA
+
+ La CIAA para la industria: CIAA-NXP
+
+ Comprar una CIAA-NXP
+
+
+Educación
+
+…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=start&amp;rev=1496494833&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-06-03T13:00:33+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>start</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=start&amp;rev=1496494833&amp;do=diff</link>
+        <description>http://www.proyecto-ciaa.com.ar/
+Computadora Industrial Abierta Argentina (CIAA)
+
+
+
+[ ]
+El Proyecto CIAA nació en 2013 como una iniciativa conjunta entre el sector académico y el  industrial, representados por la ACSE y  CADIEEL, respectivamente.
+Objetivos del proyecto
+
+	*  Impulsar el desarrollo tecnológico nacional, a partir de sumar valor agregado al trabajo y a los productos y servicios, mediante el uso de sistemas electrónicos, en el marco de la vinculación de las instituciones educativas y…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=todos&amp;rev=1428106956&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-04-04T00:22:36+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>todos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=todos&amp;rev=1428106956&amp;do=diff</link>
+        <description>Tareas pendientes de la CIAA
+
+	*  WIKI
+	*  CIAA-NXP</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=versiones_ciaa&amp;rev=1474411617&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-09-20T22:46:57+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>versiones_ciaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=versiones_ciaa&amp;rev=1474411617&amp;do=diff</link>
+        <description>Versiones de la CIAA
+
+La CIAA es la primera iniciativa a nivel mundial que cumple con las características de ser industrial, abierta y estar basada en procesadores de distintas marcas.
+
+Actualmente está disponible la primera versión, que es la CIAA-NXP, que puede ser adquirida a las distintas</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,42 @@
+====== CIAA-FSL: Interfaz USB OTG ======
+
+===== Diagrama Esquemático =====
+
+{{05-usb_otg.png}}
+
+===== Características =====
+
+  * Controladora USB: Compatible con USB 1.1 y 2.0
+  * Velocidad de transferencia: Full Speed (12 Mb/s) / Low Speed (1,5 Mb/s)
+  * Conector micro USB hembra tipo AB SMT: [[http://www.hirose.co.jp/cataloge_hp/e24200011.pdf | Hirose ZX62-AB-5PA(11)]]
+  * Power Switch para control de encendido y limitación de corriente (500 mA): [[http://www.micrel.com/_PDF/mic2025.pdf | Micrel MIC2025-2YM]]
+  * Diodos TVS para protección contra ESD y transitorios: [[http://www.nxp.com/documents/data_sheet/PRTR5V0U2X.pdf | NXP PRTR5V0U2X]] y [[http://www.bourns.com/data/global/pdfs/smaj.pdf | Bourns SMAJ5.0A]]
+  * Choque RF de modo común 90 ohm: [[http://www.bourns.com/pdfs/SRF2012.pdf | Bourns SRF2012-900Y]]
+
+===== Descripción =====
+
+El power switch controla el encendido de la tensión VBUS cuando el puerto funciona como HOST y limita la corriente a 500 mA e informa sobrecorrientes por la salida FAULT FLAG (FLG).
+
+Los ferrites en VBUS y SHIELD disminuyen las emisiones electromagnéticas y tambien las interferencias que pudieran conducirse através del cable USB. Estos ferrites sólo deben soldarse en caso de que el producto no pase los ensayos de compatibilidad electromagnética (EMC). Si los ensayos resultasen positivos deben dejarse resistores de cero ohms en su lugar.
+
+El choque de modo común disminuye la interferencia electromagnética (EMI) y baja el nivel de ruido en las señales USB. Sólo debe usarse si los ensayos de EMI resultasen negativos, ya que degrada las señales.
+
+Los diodos TVS brindan protección contra descargas electrostáticas (ESD), deben ser de baja capacidad y respuesta rápida para no afectar la calidad de las señales. Estos diodos se conectan al chassis USB (CHS_OTG) para desviar las altas corrientes generadas por ESD hacia el conector USB. Sólo deben ser utilizados si los ensayos de ESD resultasen negativos.
+
+===== Referencias =====
+
+  * [[http://www.usb.org/developers/docs/usb20_docs/#usb20spec | Especificación USB 2.0]]
+  * [[http://www.usb.org/developers/docs/hs_usb_pdg_r1_0.pdf | Intel, High Speed USB Platform Design Guidelines]]
+  * [[http://www.nxp.com/documents/application_note/AN10753.pdf | NXP, ESD protection for USB 2.0 interfaces]]
+  * [[http://www.ti.com/lit/an/spraar7a/spraar7a.pdf | Texas Instruments, USB 2.0 Board Design and Layout Guidelines]]
+  * [[https://www.digikey.com/Web%20Export/Supplier%20Content/Tyco_8004/PDF/te-appnote-usb2-usb3-protection.pdf | TE Connectivity, USB 2.0 and USB 3.0 Circuit Protection Considerations for Hard Disc Drives]]
+  * [[http://www.ftdichip.com/Support/Documents/AppNotes/AN_146_USB_Hardware_Design_Guidelines_for_FTDI_ICs.pdf | FTDI Chip, USB Hardware Design Guidelines for FTDI ICs]]
+  * [[http://www.littelfuse.com/~/media/electronics_technical/application_notes/usb/littelfuse_protecting_the_universal_serial_bus_from_over_voltage_and_overcurrent_application_note.pdf | LittelFuse, Protecting the Universal Serial Bus from Over Voltage and Overcurrent Threats]]
+
+===== Datasheets de componentes importantes =====
+
+  * [[http://www.hirose.co.jp/cataloge_hp/e24200011.pdf | Hirose ZX62-AB-5PA(11)]]
+  * [[http://www.micrel.com/_PDF/mic2025.pdf | Micrel MIC2025-2YM]]
+  * [[http://www.nxp.com/documents/data_sheet/PRTR5V0U2X.pdf | NXP PRTR5V0U2X]]
+  * [[http://www.bourns.com/data/global/pdfs/smaj.pdf | Bourns SMAJ5.0A]]
+  * [[http://www.bourns.com/pdfs/SRF2012.pdf | Bourns SRF2012-900Y]]

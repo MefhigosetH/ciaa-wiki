@@ -1,0 +1,90 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 3/14: Análisis de riesgos ======
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Ver Fase previa]] ] - [ [[..:monitordebarreras:faserequisitosdelsistema|Ver Fase siguiente]] ]
+
+{{ :blanco.png?10 | }}
+
+===== Introducción =====
+
+###
+A Continuación se muestra cómo se adapta el alcance y la aplicación de los requisitos dispuestos por la Norma UNE EN 50126 para cumplir los requisitos específicos del Monitor de Barreras. 
+### 
+
+===== Objetivos =====
+
+<fc #ff0000>**Falta Modificar todo lo que sigue a continuación**</fc>
+
+###
+Los objetivos establecidos para esta fase son:
+###
+  - Identificar peligros asociados al sistema
+  - Identificar los acontecimientos que llevan a dichos peligros
+  - Determinar los riesgos asociados a los peligros
+  - Establecer un proceso para la gestión de riesgos según estos se produzcan
+
+===== Entradas =====
+###
+Las entradas para esta fase deben incluir toda la información relevante y, en los casos en que proceda, los datos para cumplir los requisitos de la fase y, en especial, los entregables presentados en la fase 2.
+###
+
+===== Requisitos =====
+El **Requisito 1** de esta fase debe ser el de definir:
+  - Identificar de forma sistematica y dar prioridad a todos los peligros que puedan razonablemente preverse y estén asociados al sistema en su entorno de aplicación, incluidos los peligros derivados de:
+       * El normal funcionamiento del sistema
+       * Las condiciones defectuosas del sistema
+       * El funcionamiento de emergencia del sistema
+       * El uso incorrecto del sistema
+       * La funcionalidad del sistema
+       * Cuestiones relacionadas con el funcionamiento, el mantenimiento y el soporte del sistema
+       * Factores relacionados con la eliminación del sistema
+       * Factores humanos
+       * Cuestiones relacionadas con la higiene en el trabajo
+       * El entorno mecánico
+       * El entorno eléctrico
+       * El entorno natural, incluidos fenómenos tales como nieve, inundaciones, tormentas, lluvia, corrimiento de tierras, etc.
+  - Identificar la secuencia de acontecimientos que conduzcan a los peligros
+  - Evaluar la frecuencia con que sucede cada peligro (ver tabla 2 de la norma)
+  - Evaluar la probable gravedad de las consecuencias de cada peligro (ver table 3 de la norma)
+  - Evaluar el riesgo que para el sistema supone cada peligro
+
+El **Requisito 2** de esta fase debe ser el de determinar y clasificar la aceptabilidad del riesgo asociado a cada peligro identificado, habiendo considerado el riesgo desde el punto de vista de cualesquiera conflictos con los requisitos de disponibilidad y costo del ciclo de vida del sistema.
+
+El **Requisito 3** de esta fase debe ser el de establecer un Registro de Peligros como base para la gestión de los riesgos según estos se produzcan. El registro de Peligros debe ser actualizado en cuanto se produzca un cambio que afecte a cualquier peligro identificado, o cuando se identifique una nueva, durante la totalidad del ciclo de vida. El Registro de Peligros debe incluir detalles de:
+  - El objetivo y el propósito del Registro de Peligros
+  - Cada suceso de peligro y los elementos que contribuyan al mismo
+  - Las probables consecuencias y las frecuencias de la secuencia de sucesos asociados a cada peligro
+  - El riesgo de cada peligro
+  - Los criterios de tolerabilidad de riesgos correspondientes a la aplicación
+  - Las medidas adoptadas para reducir los riesgos a un nivel tolerable o eliminar el riesgo correspondiente a cada suceso de peligro
+  - Un proceso de revisión de la totalerabilidad de los riesgos
+  - Un proceso de revisión de la efectividad de las medidas de reducción de riesgos
+  - Un proceso para informar de riesgos y accidentes a medida que unos y otros se produzcan
+  - Un proceso para la gestión de Riesgos de Peligros
+  - Los límites de cualquier análisis realizado
+  - Cualesquiera suposiciones realizadas durante el análisis
+  - Cualesquiera de los límites de confianza que se apliquen a datos utilizados en el análisis
+  - Los métodos, las herramientas y las técnicas empleadas
+  - El personal que ha intervenido en el proceso y sus capacidades.
+
+
+===== Entregas =====
+###
+Los resultados de esta fase se deben documentar, junto con cualesquiera suposiciones y justificaciones realizadas durante la fase
+Los resultados del análisis de riesgos deben quedar recogidos en el Registro de Peligros
+Las entregas de esta fase son una   de información para sucesivas fases del ciclo de vida.
+###
+
+===== Verificación =====
+
+###
+Las siguientes tareas de verificación deben emprenderse en esta fase:
+###
+  - Evaluación de la idoneidad de la información y, en los casos en que proceda, de los datos y otras estadísticas utilizadas como información aportada para tareas dentro de esta fase
+  - Las entregas de la integridad de la gestión de riesgos
+  - Evaluación de la integridad de la gestión de riesgos
+  - Evaluación de la clasificación de la aceptabilidad de los riesgos
+  - Evaluación de la idoneidad del proceso de Registros de Peligros correspondiente al sistema que se trata
+  - Evaluación de la idoneidad de los métodos, herramientas y técnicas utilizadas en la fase
+  - Evaluación de la competencia de todo el personal que realice tareas en la fase.
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Ver Fase previa]] ] - [ [[..:monitordebarreras:faserequisitosdelsistema|Ver Fase siguiente]] ]

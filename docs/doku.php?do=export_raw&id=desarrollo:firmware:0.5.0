@@ -1,0 +1,14 @@
+Testing 0.4.0
+Indicar
+<fc #008000>PASSED</fc>
+ó
+<fc #ff0000>FAILED</fc>
+
+^ Testeado de ^ commit ^ win ^ mac os ^ linux ^ ciaa-nxp ^ edu-ciaa-nxp ^ ciaa-fls ^ comments ^
+| adc_dac | | | | | | | |
+| blinking | | | | | | | |
+| blinking_echo | | | | | | | |
+| blinking_lwip | | | | | | | |
+| blinking_modbus | | | | | | | |
+| rtos tests | | | | | | | |
+| unit tests | | | | | n.a. | n.a. | |

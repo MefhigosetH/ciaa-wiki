@@ -1,0 +1,64 @@
+====== Multiprocesamiento asimétrico con Linux en la CIAA ======
+
+===== Marco conceptual =====
+
+==== Multiprocesamiento simétrico y asimétrico ====
+
+En un modelo de **multiprocesamiento simétrico (SMP)** una única imagen del sistema operativo (SO) corre sobre todos los procesadores, encargándose de repartir las tareas entre los mismos y de manejar los recursos.
+
+En un modelo de **multiprocesamiento asimétrico (AMP)** cada núcleo corre su propia imagen de kernel, que pueden ser diferentes. Asimismo, no es necesario que los procesadores en cuestión sean iguales, pudiendo presentar distintas arquitecturas, funcionalidades o interfaces.
+
+http://en.wikipedia.org/wiki/Asymmetric_multiprocessing\\
+http://electronicdesign.com/digital-ics/symmetric-multiprocessing-vs-asymmetric-processing\\
+http://rtcmagazine.com/articles/view/100404\\
+http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_VFTF09_AN102
+
+==== Distribuyendo la carga con AMP ====
+
+Una forma de utilizar AMP es preasignar roles determinados en la distribución de la carga, donde un núcleo corre el sistema operativo principal y otro se encarga de realizar ciertas tareas con requerimientos de tiempo real. De esta manera se dice que el primero off-loadea (deriva carga) al segundo.
+
+==== Linux y AMP ====
+
+En el kernel Linux, existe un framework llamado **remoteproc** para asistir en el desarrollo de AMP. El framework permite que diferentes plataformas/arquitecturas puedan controlar (encender, cargar el firmware, apagar) estos procesadores remotos abstrayéndose de las diferencias de hardware.
+
+===== Caso de estudio =====
+
+==== AMP con Linux en la CIAA-NXP ====
+
+La CIAA NXP posee un microcontrolador modelo LPC4337 compuesto por un procesador ARMv7 Cortex-M4 y un coprocesador ARMv7 Cortex-M0. Ambos núcleos tienen acceso al mapa de memoria completo.
+
+El objetivo es la realización de multiprocesamiento asimétrico explotando el núcleo Cortex-M0 mediante la utilización del driver remoteproc desde el kernel Linux, que corre en el núcleo Cortex-M4.
+
+http://www.nxp.com/documents/user_manual/UM10503.pdf
+
+==== Tareas/roadmap ====
+
+  - Explorar el hardware de la CIAA-NXP y el framework remoteproc.
+  - Implementar el driver remoteproc para controlar y off-loadear al Cortex-M0.
+  - Analizar qué firmware/SO correr en el Cortex-M0 y cargarlo.
+  - Realizar ejemplos concretos para determinar y comparar resultados.
+
+===== Investigación =====
+
+==== Sistemas operativos de tiempo real (RTOS) ====
+
+Un sistema de tiempo real es aquel en donde las computaciones se considerarán correctas no solo por el resultado sino también por el tiempo requerido para producirlo.
+
+http://www.versalogic.com/mediacenter/whitepapers/wp_linux_rt.asp\\
+http://bis-linux.com/dwf_waw2013
+
+==== Posibles RTOS para el Cortex-M0 ====
+
+  * FreeRTOS:
+    * http://www.freertos.org/
+    * http://en.wikipedia.org/wiki/FreeRTOS
+  * OSEK-OS:
+    * http://www.osek-vdx.org/
+    * http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos
+  * QP:
+    * http://www.state-machine.com/qp/
+    * http://en.wikipedia.org/wiki/QP_%28framework%29
+  * nOS:
+    * https://github.com/jimtremblay/nOS
+  * uCos:
+    * http://micrium.com/download/micrium_mcb4357_ucos-ii/

@@ -1,0 +1,84 @@
+====== Software-IDE de la CIAA ======
+
+###
+El CIAA-Software-IDE es el entorno de desarrollo del CIAA-Firmware. En su versión más completa, se ofrece un instalador llamado [[desarrollo:descargas|CIAA-IDE-Suite]] con el cual podrán de forma sencilla instalar y configurar automáticamente la totalidad de las herramientas necesarias para trabajar con la CIAA, incluyendo otras herramientas además del Firmware como ser IDE4PLC. 
+###
+
+###
+Además, es la manera más simple de comenzar a trabajar también con la  [[.:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]]. En futuras versiones, se contemplará una versión reducida y más sencilla enfocada a la EDU-CIAA.
+###
+
+###
+Para mas información sobre como instalar y configurar el entorno de CIAA-IDE, remitirse a las paginas [[docu:fw:bm:ide:install|Instalación Software-IDE de la CIAA]] y [[docu:fw:bm:ide:ide_primeros_pasos|Primeros Pasos]]
+###
+===== Equipo de coordinación del desarrollo del Software-IDE =====
+
+^ Función                     ^ Nombre             ^ Organización ^
+| Responsable de CIAA-IDE     | Martín Ribelotta   | EmTech S.A.              |
+| Sub-responsable de CIAA-IDE | Juan Cecconi       | UTN-FRBA, Numetron S.R.L |
+
+
+===== Funcionalidades =====
+
+^ Tool               ^ Tipo               ^ Descripción                                    ^ Instalación ^
+| gcc-arm-none-eabi  | Compiler           | Compilador para ARM (para CIAA-HW/EDU-HW)      | Incluida |
+| gcc                | Compiler           | Compilador para Windows/Linux (para los tests) | Incluida |
+| cygwin             | Entorno Posix like | Multiples tools como perl, gcc, make, gdb, etc | Incluida |
+| git                | Sources            | Control de Versiones        | Incluida |
+| Eclipse CDT (C/C++)| IDE                | Editor/Debugger gráfico     | Incluida |
+| PHP                | Script             | Para la generación del RTOS | Incluida |
+| Firmware           | Sources            | Codigo fuente del Firmware  | Incluida |
+| IDE4PLC            | App                | Programación como PLC       | Incluida |
+| OpenOCD            | Debugger           | On-Chip-Debugger            | Incluida |
+| Drivers FTDI       | Drivers            | Driver JTAG-FT2232H-OpenOCD | *Incluida |
+
+* La instalación de los drivers, puede que sea necesario hacerla manualmente, aunque el instructivo y los archivos necesarios están incluidos en el propio instalador. De todas maneras puede seguir los pasos indicados en la [[desarrollo:firmware:instalacion_sw#openocd|Instalación del Firmware]], en el apartado "OpenOCD (On-Chip Debugger)"
+
+===== Plataformas =====
+
+^ Sistema       ^ 32 Bits ^ 64 Bits ^
+| Windows XP    | x       | x       |
+| Windows Vista | x       | x       |
+| Windows 7     | x       | x       | 
+| Windows 8     | x       | x       |
+
+Para la instalación en Linux, seguir los pasos indicados en la [[desarrollo:firmware:instalacion_sw#linux|Instalación del Firmware]], en el apartado "Linux".
+
+===== Descargar el instalador =====
+
+  * Ir a la zona de descargas: [[desarrollo:descargas|CIAA-IDE-Suite]]
+
+===== Generar el instalador =====
+
+También puede generarse el instalador de forma manual.
+
+###
+Esto es útil en los casos en que se requiera una personalización de su contenido o cuando se dispone de una conexión demasiado lenta para poder descargar el paquete ya creado.
+###
+
+==== Requisitos ====
+
+  * PC con WinVista, Win7, Win8, o WinXP con PowerShell 3.0+ .
+  * Conexión a internet (requiere descargar 1G de paquetes aproximadamente).
+  * 3G de espacio en disco disponible.
+
+==== Procedimiento ====
+
+  - Descargue el {{https://github.com/ciaa/Software-IDE/archive/master.zip|paquete de construcción}} o clone el {{https://github.com/ciaa/Software-IDE|repositorio}} mediante git.
+  - Descomprimir en el directorio raíz de la partición (Ej. C:\, etc.) o acceda a donde clonó el repositorio.
+  - Dentro del directorio **win32** ejecute el script **prepare.bat** \\ (**Nota:** Es preferible ejecutarlo como administrador o estar seguro que se tienen los permisos para leer, escribir y ejecutar archivos en el directorio. Además esté atento a la consola, muchas veces pide continuar presionando una tecla y no siempre avisa de esto, este error se corregirá a la brevedad).
+  - Una vez que termine de ejecutarse, la ventana se cerrará automáticamente.
+  - Ejecute a continuación **make-installer.bat** \\ (**Nota**: Puede tardar varios minutos consumiendo el 100% de la CPU).  Esto debe crear el archivo **Setup_CIAA_Firmware_IDE.exe** en el mismo directorio.
+  - Una vez terminado este paso, puede ejecutar y distribuir el archivo **Setup_CIAA_Firmware_IDE.exe**.
+
+===== Lista de tareas por hacer =====
+
+==== Eclipse ===
+  * Agregar un proyecto template del firmware con opciones de configuración
+  * Agregar templates de módulos nuevos para el firmware
+  * Agregar algún mecanismo de configuración para el firmware
+  * Personalizar el startup/look&feel
+  * Agregar una perspectiva simplificada y amigable
+
+==== Plataformas ====
+  * Añadir soporte para debian/ubuntu.

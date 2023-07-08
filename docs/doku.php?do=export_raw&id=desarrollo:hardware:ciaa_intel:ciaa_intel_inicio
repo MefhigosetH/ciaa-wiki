@@ -1,0 +1,36 @@
+====== CIAA-INTEL ======
+
+La CIAA-INTEL está siendo desarrollada actualmente por el [[http://www2.electron.frba.utn.edu.ar/dplab/|Laboratorio de Procesamiento Digital (DPLab)]] de la [[http://www.frba.utn.edu.ar/|UTN-FRBA]].
+
+Estará basada en el SoM [[http://www.intel.com/content/www/us/en/do-it-yourself/edison.html|Edison]], cuyas características son:
+  * CPU: Dual-core, dual-threaded Intel® Atom™ CPU at 500 MHz and a 32-bit Intel® Quark™ microcontroller at 100 MHz
+  * RAM: 1 GB LPDDR3 POP memory (2 channel 32bits @ 800MT/sec)
+  * NVM: 4 GB eMMC (v4.51 spec)
+  * Wi-Fi: Broadcom 43340 802.11 a/b/g/n Dual-band (2.4 and 5 GHz) Onboard antenna or external antenna (SKU configurations)
+  * Bluetooth 4.0
+  * 1.8V GPIO, SD Card, UART, SPI, I2C, I2S, USB 2.0
+  * OS: Yocto Poky, Linux kernel 3.10.17
+
+===== Diagrama en bloques =====
+{{ :desarrollo:hardware:ciaa_intel:ciaa-intel.png | CIAA-INTEL }}
+===== Características preliminares =====
+  * Fuente de alimentación 8-30V (DC)
+  * 12 entradas optoacopladas 24V
+  * 12 salidas open-drain 0.5A 60V
+  * 4 entradas analógicas 0-10V o 0-20mA
+  * 1 salida analógica 0-10V o 0-20mA
+  * Socket para memoria microSD
+  * RS485/Profibus DP
+  * USB OTG
+  * Consola TTY a través de USB
+  * Expansiones de 3.3V: I2C, I2S, SPI, GPIO
+===== Documentos de referencia =====
+Página principal: [[https://communities.intel.com/community/makers/edison/documentation|Intel® Edison: Software & Documentation]]
+  * [[https://communities.intel.com/servlet/JiveServlet/downloadBody/23139-102-3-27268/edison_PB_331179-001.pdf|Intel® Edison Product Brief]]
+  * [[https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-6-27348/edison-module_HG_331189-002.pdf|Intel® Edison Compute Module Hardware Guide]]
+  * [[https://communities.intel.com/servlet/JiveServlet/downloadBody/23323-102-2-27417/MINI_EDISON_BREAKOUT_HVM_8_26.pdf|Intel® Edison Breakout Board Schematic]]
+  * [[https://communities.intel.com/servlet/JiveServlet/downloadBody/23309-102-2-27413/edison_arduino_hvm_8_26.pdf|Intel® Edison Arduino Board Schematic]]
+===== Diseño =====
+Podés descargar una versión preliminar del esquemático {{:desarrollo:hardware:ciaa_intel:ciaa-intel.pdf|aquí}}.
+
+¿Querés participar del desarrollo? Escribinos a [[dplab-info@electron.frba.utn.edu.ar]].

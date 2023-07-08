@@ -1,0 +1,65 @@
+====== Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados ======
+
+{{ :blanco.png?10 | }}
+{{ :proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:ciaapilot.png?nolink&300|}}
+
+===== Normativa asociada al diseño de sistemas electrónicos para aplicaciones aeronáuticas =====
+
+==== Marco jurídico y autoridad internacional ====
+
+La [[http://www.icao.int/|Organización de Aviación Civil Internacional]] (OACI) (en inglés: International Civil Aviation Organization, ICAO) es una agencia de la Organización de las Naciones Unidas creada en 1944 por el Convenio sobre Aviación Civil Internacional para estudiar los problemas de la aviación civil internacional y promover los reglamentos y normas únicos en la aeronáutica mundial. La dirige un consejo permanente con sede en Montreal (Canadá) Formado por países miembros y Argentina es uno de ellos.
+
+Establece el marco jurídico internacional con 18 anexos técnicos.
+Algunos tienen carácter de norma y son los mínimos de obligado cumplimiento para todos los estados firmantes.
+Otros se articulan como recomendaciones aceptables.
+Posterior a los 18 anexos se incorporó el ANEXO 19 - “Gestión de la Seguridad Operacional”.
+
+Los anexos de la OACI recogen prácticamente todos los aspectos del transporte aéreo y tratan sobre cuestiones técnicas fundamentales para su normalización y regulación.
+
+A los efectos de esta proyecto es aplicable el ANEXO 8 - “Aeronavegabilidad”.
+
+==== Marco jurídico nacional de aviación ====
+
+La Ley N° 17.285, “Código Aeronáutico”, en su Artículo 1° establece que a los efectos de este Código, aeronáutica civil es el conjunto de actividades vinculadas con el empleo de aeronaves públicas y privadas, excluidas las militares. 
+La Ley No 22.520, “Ley de Ministerios”, en su Artículo 19°, inciso 24 establece que es de competencia del Ministerio de Defensa “entender en el registro, habilitación, fiscalización y dirección técnica de los actos y actividades vinculadas a la navegación por agua y aire en cuanto sean de su jurisdicción”.
+
+==== Autoridad nacional de aviación ====
+=== Autoridad de aviación civil ===
+
+La autoridad de aviación civil es una autoridad legal del gobierno de cada país que supervisa la aprobación y regulación de la aviación civil.
+
+En Argentina es la [[http://www.anac.gov.ar/|Administración Nacional de Aviación Civil]] (ANAC), creado en 2009. Depende del Ministerio del Interior y Transporte.
+
+La ANAC regula los siguientes aspectos críticos de la aeronavegabilidad de la aeronave y de su operación:
+  * Condiciones de fabricación y prueba de las aeronaves y equipos
+  * Concesión de licencias de los pilotos e ingenieros de mantenimiento
+  * Concesión de licencias de aeropuertos y las ayudas a la navegación
+  * Normas para el control del tráfico aéreo
+  * Mantenimiento de aeronaves y equipos
+  * Operación de aeronaves y equipos
+
+=== Normativa ===
+
+  * Regulaciones Argentinas de Aviación Civil (RAAC).
+  * Reglamento de Aeronavegabilidad de la República Argentina (DNAR).
+  * Adecuación de las RAAC a LAR.
+
+ NOTA: el RAAC fue confeccionado basado en las FAR.
+
+=== Certificaciones ===
+Para todo lo relacionado a certificaciones se deberá utilizar:
+RAAC - Parte 21 : “Procedimientos para la certificación de productos y partes “
+
+====Autoridad de aviación militar====
+
+La Autoridad Técnica Aeronáutica de la Defensa es la Dirección General de Normalización y Certificación Técnica (DGNCT) del Ministerio de Defensa, con la responsabilidad de dirigir el Sistema de Aeronavegabilidad de la Defensa.
+La Dirección General de Aeronavegabilidad Militar Conjunta (DIGAMC) en el Estado Mayor Conjunto, asesora y asiste a la DGNCT en el cumplimiento de sus funciones.
+
+=== Documentación de gobierno del SADEF ===
+
+  * Publicación Conjunta PC 14-05
+  * Directivas del Reglamento de Aeronavegabilidad Militar (DIRAM).
+  * Directivas de Aeronavegabilidad Militar (DAM).
+  * Circulares de Aeronavegabilidad Militar (CAM).
+  * Ordenes Técnicas Estándar Militar (OTEM).
+  * Ordenes ATAD.

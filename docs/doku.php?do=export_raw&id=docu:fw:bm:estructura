@@ -1,0 +1,100 @@
+====== Estructura de directorios ======
+
+###
+El CIAA-Firmware está construido de forma modular. Para la mayoria de los usuarios puede que alcance saber que existe un directorio de ejemplos (examples). Esta página es para aquellos que quieran conocer un poco más en detalle la estructura del Firmware.
+
+En el directorio principal luego de hacer un [[desarrollo:firmware:git|git clone]] o al bajar una release oficial se pueden encontrar los siguientes Directorios y Archivos:
+###
+
+<code>
+Firmware/
+├── doc
+├── examples                   /* ejemplos de utilización del Firmware */
+│   ├── adc_dac                /* ejemplo de conversor analogico digital */
+│   ├── blinking               /* ejemplo básico que hace parpadear un led */
+│   ├── blinking_echo          /* ejemplo básico que hace echo en el bus serial */
+│   ├── blinking_lwip          /* ejemplo utilizando lwip (ethernet) */
+│   ├── blinking_modbus        /* ejemplo utilizando modbus RS485 (ascii) */
+│   ├── blinking_modbus_master /* ejemplo utilizando modbus master */
+│   └── rtos_example           /* ejemplo de utilización de FreeOSEK */
+├── externals
+│   ├── base                   /* archivos básicos necesarios para compilar/linkear */
+│   ├── ceedling               /* ceedling utilidad para correr los unit test */
+│   ├── drivers                /* drivers para el módulo posix */
+│   ├── lcov                   /* utilidad para analizar el coverage de los unit test */
+│   └── lwip                   /* stack tcpip */
+│
+├── Makefile                   /* makfile principal del proyecto */
+├── Makefile.config            /* plantilla para crear un Makefile.mine propio */
+├── Makefile.mine              /* Makfile con la configuración del usuario */
+│
+├── modules                    /* módulos del Firmware */
+│   ├── base                   /* archivos básicos necesarios para compilar y linkear */
+│   ├── ciaak                  /* kernel de la ciaa */
+│   ├── drivers                /* drivers para posix */
+│   ├── libs                   /* algunas librerias genéricas */
+│   ├── modbus                 /* módulo para manejo de modbus */
+│   ├── plc                    /* módulo de PLC (en desarrollo) */
+│   ├── posix                  /* posix like library */
+│   ├── rtos                   /* RTOS de CIAA-Firmware (FreeOSEK) */
+│   ├── systests               /* utilidad para correr los tests en HW (en desarrollo) */
+│   ├── template               /* template para crear un nuevo módulo */
+│   ├── tools                  /* tools internos de CIAA-Firmware */
+│   └── update                 /* módulo de bootloader (en desarrollo) */
+│
+├── out                        /* archivos generados */
+│   ├── bin                    /* archivo binario (proyecto a ser flasheado) */
+│   ├── gen                    /* archivos generados por el RTOS */
+│   ├── lib                    /* librerias */
+│   ├── obj                    /* object files */
+│   └── ...                    /* ... (para simplificar no se han listado todos los sub directorios) */
+└── README
+</code>
+
+^ Directorio o\\ Archivo ^ Descripción ^
+| .git | Contiene archivos de GIT vinculados al manejo de este repositorio, no son parte en si de CIAA-Firmware. Solo estaran presentes en caso de haber clonado el repositorio. Si bajó una release los archivos no estarán presentes. |
+| .gitignore | ::: |
+| .gitmodules | ::: |
+| doc | Contiene la documentación básica del proyecto somo ser: Rlease Notes, Credits, Página de inicio de Doxygen y algunos diagramas UML |
+| examples | Contiene los ejemplos que se pueden utilizar de base para futuros desarrollos. |
+| externals | Contiene librerías o tools necesarios por CIAA-Firmware pero que no son parte directa de la CIAA y pueden contener otras licencias. |
+| modules | Contiene los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] del CIAA-Firmware. |
+| out | Todos los archivos generados/salida, ya sean librerías, binarios o archivos generados son almacenados en este y sub directorios. |
+| Makefile | Este archivo es el [[:make_environment|makefile principal]] de CIAA-Firmware. |
+| Makefile.config | Contiene un ejemplo de como debería ser Makfile.mine. |
+| Makefile.mine | Es un archivo que el usuario debe crear basandose en Makefile.config. El mismo no se encuentra en el repositorio ni en las releases. Es propio de cada usuario. Debe crearse a partir de una copia de Makefile.config, puede encontrar más información en [[:make_environment|Make]]. |
+
+===== examples (Ejemplos del CIAA-Firmware) =====
+
+###
+Contiene los ejemplos de CIAA-Firmware. A todo aquel que comience a programar utilizando el CIAA-Firmware le recomendamos iniciar el proyecto basado en alguno de nuestros ejemplos.
+###
+
+En la sección TODO (examples) se estudiara cada ejemplo en más detalle.
+
+===== externals (Software y Tools Externos) =====
+
+###
+Este directorio contiene el Software y Tools externos al CIAA-Firmware, que son necesarios para compilar, testear, etc. el Firmware. Tenga en cuenta que el Software y Tools en esta carpeta no son parte de CIAA-Firmware y pueden contener otras licencias.
+###
+
+^ Directorio ^ Descripción ^
+| ceedling | Tool utilizada para los [[unit_tests|Unit Tests o Pruebas Unitarias]] |
+| base     | Fuentes, headers y linker scripts necesarios para poder compilar y linkear el código en la plataforma |
+| drivers  | Drivers provistos por el proveedor del chip, los cuales son luego adaptados al formato de la CIAA. |
+
+===== modules (Módulos de CIAA-Firmware) =====
+
+Contiene los [[desarrollo:firmware:arq_estatica_fw#modulos|módulos]] de software del CIAA-Firmware.
+
+===== out (Archivos de salida) =====
+
+Contiene todos los archivos generados por el CIAA-Firmware:
+
+^ Directorio ^ Descripción ^
+| bin | Contiene el binario del proyecto, es el archivo que se va a correr en la PC o a cargar en el CIAA-Firmware |
+| gen | Archivos generados de [[rtos|OSEK RTOS]] |
+| lib | Por cada Módulo el make genera un archivo .a, osea una libreria |
+| obj | Todos los archivos fuentes son compilados a object files y almacenados en este directorio |
+
+<- docu:fw:bm:woide|Trabajando sin IDE ^ ^ docu:fw:bm:make|Make ->

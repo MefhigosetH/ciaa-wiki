@@ -1,0 +1,34 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 5 =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note>"el requisito 5 de esta fase debe definir el alcance de los requisitos de gestión para sucesivas tareas RAMS del ciclo de vida del sistema".</note>
+
+###
+Se establece entonces que todos los participantes de cualquier fase del ciclo de vida deben realizar todas las actividades de gestión de procesos RAMS según las siguientes normas:
+###
+  * EN 50126 Aplicaciones ferroviarias. Especificación y demostración de la fiabilidad, la disponibilidad, la mantenibilidad y la seguridad.
+  * EN 50128 Aplicaciones ferroviarias. Sistemas de comunicación, señalización y procesamiento. Software para sistemas de control
+  * EN 50129 Aplicaciones ferroviarias. Sistemas de comunicación, señalización y procesamiento. Sistemas electrónicos relacionados con la seguridad para la señalización.
+
+###
+A su vez se establecen como lineamiento general que todos los involucrados tomen conciencia de la importancia de implementar un plan RAMS eficaz, y dispongan de los conocimientos y las competencias específicas para lograrlo. Se considera que para eso es ideal reunir un grupo multidisciplinar con profesionales calificados, lo cual debe estar especificado en los requisitos de gestión para las sucesivas tareas RAMS.
+###
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:entregas|Ir a las Entregas de la Fase de Concepto]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 

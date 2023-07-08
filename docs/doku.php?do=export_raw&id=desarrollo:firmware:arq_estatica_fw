@@ -1,0 +1,74 @@
+====== Arquitectura estática del CIAA-Firmware ======
+
+===== Módulos =====
+
+###
+El CIAA-Firmware está dividido en módulos. Un módulo es un conjunto de archivos .h/.c y Makefiles, que implementa una funcionalidad específica. Cada módulo contiene una relativa gran cantidad de llamadas dentro del mismo, pero mantiene acotadas las dependencias a otros módulos, y de ser posible no tiene dependencias de otros módulos.
+###
+
+###
+Todos los módulos que componen el CIAA-Firmware se encuentran dentro del  [[https://github.com/ciaa/Firmware/tree/master/modules|directorio modules del repositorio de GitHub]].
+###
+
+===== Capas =====
+
+Los [[#modulos|módulos]] del CIAA-Firmware están separados en 4 capas:
+  * Aplicación
+  * Servicios
+  * Interfaz
+  * Drivers
+
+=== Aplicación === 
+###
+No es en sí parte del Firmware sino la aplicación en sí misma que utiliza el Firmware. Una aplicación podría ser la Aplicación Ladder, que de estar cargada transforma la CIAA en un PLC.
+###
+
+=== Servicios ===
+
+Esta capa de software provee a la **Aplicación** interfaces estandarizadas a ella.
+
+=== Interfaz ===
+###
+Abstrae la funcionalidad de los drivers para la capa de **Servicios**. A su vez, implementa toda la funcionalidad posible para dejar la implementación de los drivers a su mínima expresión, permitiendo la mayor re utilización posible entre dos hardwares incompatibles.
+###
+
+=== Drivers ===
+###
+Esta capa implementa todos los drivers de la CIAA. Es la única capa que depende del hardware. Es desarrollada de forma de minimizar su funcionalidad. Toda funcionalidad adicional debe estar implementada en la capa de **Interfaz**.
+###
+
+
+==== Diagrama de la estructura del Firmware ====
+
+El siguiente diagrama muestra la estructura del CIAA-Firmware:
+{{ ciaafirmware.png |}}
+
+El diagrama intenta seguir una estructura UNIX like pero no 100% compatible.
+
+
+==== Acceso a dispositivos ====
+
+El acceso a dispositivos está pensado de forma similar a POSIX, con las siguientes funciones:
+  * ciaaPOSIX_open
+  * ciaaPOSIX_close
+  * ciaaPOSIX_read
+  * ciaaPOSIX_write
+  * ciaaPOSIX_ioctl
+  * ciaaPOSIX_lseek
+
+Para permitir esta funcionalidad se implementarán los siguientes [[#modulos|módulos]] en el Firmware:
+  * servicios
+    * ciaaPOSIX_stdio
+
+  * interfaz
+    * ciaaDevices
+    * ciaaSerialDevices
+    * ciaaBlockDevices
+    * ciaaModbus
+    * ciaaGpio
+
+  * drivers
+    * ciaaDriverUart
+    * ciaaSocket
+    * ciaaDriverFlash
+    * ciaaDriverGpio

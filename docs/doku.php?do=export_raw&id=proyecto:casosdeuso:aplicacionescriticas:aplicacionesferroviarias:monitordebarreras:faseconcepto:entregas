@@ -1,0 +1,95 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Entregas =====
+
+###
+La norma UNE EN 50126 establece que:
+###
+
+<note>"los resultados de esta fase se deben documentar, junto con cualesquiera suposiciones y justificaciones realizadas durante la fase. Esto se considera que se ha realizado adecuadamente en cada uno de los requisitos."</note>
+
+###
+La norma indica además que:
+###
+
+<note>"en las entregas se debe incluir una estructura de gestión adecuada para poner en práctica los requisitos RAMS correspondientes a las fases 2, 3 y 4 del ciclo de vida. Y finalmente menciona que las entregas de esta fase son una aportación clave de información para sucesivas fases del ciclo de vida."</note>
+
+###
+En consecuencia se establece la estructura de Gestión para las fases 2, 3 y 4 del Ciclo de Vida, que corresponden  a las fases de Definición del sistema y Condiciones de aplicación, Análisis de riesgos y Requisitos del Sistema es la que se describe a continuación.
+###
+
+###
+El equipo de trabajo deberá estar conformado por un grupo de profesionales adecuado para la ejecución del proyecto, los cuales deben cumplir con determinados perfiles y sus antecedentes serán objeto de verificación.
+###
+
+###
+Las actividades para llevar adelante el Monitor de Barreras y las políticas RAMS, serán ejecutadas por un equipo conformado por 7 personas, según el detalle de la siguiente tabla, abarcando desde la definición de políticas empresariales hasta la operación y mantenimiento del sistema, según se indica a continuación:
+###
+
+
+|**Nro**|**Profesionales**|**Cant**|**Experiencia requerida**|
+|1|Planeamiento: Director de planeamiento|1|Experiencia especifica mínima de 5 años en servicios de consultoría de diseño|
+|2|Planeamiento: Profesional de especificaciones|1|Ingeniero. Experiencia mínima de 3 años en desarrollo de especificaciones de proyectos electromecánicos|
+|3|Planeamiento: Especialista RAMS|1|Ingeniero. Experiencia mínima de 5 años en materia de elaboración de documentos  RAMS durante todas las fases del proyecto|  
+|4|Diseño: Profesional de diseño de hardware electrónico|1|Ingeniero Electrónico. Experiencia mínima de 5 años en desarrollo de sistemas críticos|
+|5|Diseño: Profesional de diseño de software de sistemas embebidos|1|Ingeniero Electrónico o de sistemas. Experiencia mínima de 5 años en desarrollo de sistemas críticos|
+|6|Operación: Supervisor de operaciones|1|Conocimiento de la operación ferroviaria |			
+|7|Mantenimiento: Supervisor de mantenimiento|1|Conocimiento de técnicas de mantenimiento preventivo y correctivo |			
+
+**Definición de roles y responsabilidades**
+
+__Director de Planeamiento__ 
+  * Define las políticas RAMS requeridas para los sistemas de barreras.  
+__Profesional de especificaciones__ 
+  * Define las características técnicas necesarias para el monitor de barreras. 
+  * Aprobar el equipo que realizará el desarrollo. 
+  * Informar al Director de Planeamiento  sobre la realización de trabajos de muy alto riesgo (VH) que requieran detener el material rodante. 
+  * Definir e implementar la estrategia para el desarrollo, la implementación y el mantenimiento.  
+
+__Especialista en RAMS__
+  * Presentar un plan RAMS para cumplir con las Políticas RAMS. 
+  * Validar el personal que trabajara en el mantenimiento de la seguridad. 
+  * Validar los entregables de cada fase en cuestiones de seguridad.  
+
+__Profesional de Diseño de Hardware__ 
+  * Participar en las reuniones de trabajo del equipo de seguridad
+  * Valorar la implementación de los requisitos de seguridad. 
+  * Informar al especialista en RAMS sobre situaciones o componentes con riesgo intrínseco. 
+  * Verificar que se actualice la base de datos de los inconvenientes detectados y soluciones adoptadas para cumplir con las políticas RAMS.  
+
+__Profesional de Diseño de Software__ 
+  * Participar en las reuniones de trabajo del equipo de seguridad. 
+  * Valorar la implementación de los requisitos de seguridad en el software. 
+  * Informar al especialista en RAMS sobre situaciones con riesgo intrínseco. 
+  * Verificar que se actualice la base de datos de los inconvenientes detectados y soluciones adoptadas para cumplir con las políticas RAMS.  
+
+__Supervisor de Operaciones__ 
+  * Participar en las reuniones de trabajo del equipo de seguridad cuando se lo solicite. 
+  * Es responsable por las evaluaciones de riesgos de todos los trabajos de su área. 
+  * Verificar que se estén aplicando los controles establecidos. 
+  * Debe conocer y dar a conocer el Sistema de seguridad a sus dependientes, asegurando un plan de capacitación adecuado.   
+
+__Supervisor de Mantenimiento__ 
+  * Participar en las reuniones de trabajo del equipo de seguridad cuando se lo solicite. 
+  * Es responsable por las evaluaciones de riesgos de todos los trabajos de su área. 
+  * Verificar que se estén aplicando los controles establecidos. 
+  * Debe conocer y dar a conocer el Sistema de seguridad a sus dependientes, asegurando un plan de capacitación adecuado. 
+  * Mantener un stock de componentes para reparaciones  
+
+
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:verificacion|Ir a la Verificación de la Fase de Concepto]] ]
+### 
+ 
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 
+

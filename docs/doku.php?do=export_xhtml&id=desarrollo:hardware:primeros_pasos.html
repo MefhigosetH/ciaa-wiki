@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:primeros_pasos</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,primeros_pasos"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:primeros_pasos&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:primeros_pasos.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:primeros_pasos"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:primeros_pasos.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware';var JSINFO = {"id":"desarrollo:hardware:primeros_pasos","namespace":"desarrollo:hardware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:primeros_pasos.html#primeros_pasos_con_el_hardware_de_la_ciaa">Primeros pasos con el Hardware de la CIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:primeros_pasos.html#conectando_una_ciaa-nxp_y_edu-ciaa-nxp_por_primera_vez">Conectando una CIAA-NXP y EDU-CIAA-NXP por primera vez</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:primeros_pasos.html#conectando_una_ciaa-fsl_y_edu-ciaa-fsl_por_primera_vez">Conectando una CIAA-FSL y EDU-CIAA-FSL por primera vez</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="primeros_pasos_con_el_hardware_de_la_ciaa">Primeros pasos con el Hardware de la CIAA</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Primeros pasos con el Hardware de la CIAA&quot;,&quot;hid&quot;:&quot;primeros_pasos_con_el_hardware_de_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-56&quot;} -->
+<h2 class="sectionedit2" id="conectando_una_ciaa-nxp_y_edu-ciaa-nxp_por_primera_vez">Conectando una CIAA-NXP y EDU-CIAA-NXP por primera vez</h2>
+<div class="level2">
+
+<p>
+Recomendamos realizar una primer prueba de hardware conectando tu CIAA a la PC usando la interfaz de Debug (J3 en la EDU-CIAA-NXP, J7 en la CIAA-NXP). Probablemente tu CIAA-NXP no tenga un programa pre-grabado, por lo tanto la memoria del microcontrolador estará totalmente borrada. Por eso la primer sesión de Debugging que realices puede fallar. Si estás usando el CIAA-IDE, verás algo como esto:
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:primeros_pasos&amp;media=desarrollo:hardware:ciaa-nxp-error.png.html" class="media" title="desarrollo:hardware:ciaa-nxp-error.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa-nxp-error.png" class="mediacenter" loading="lazy" alt="" /></a>
+Estamos buscando el origen de esta falla, pero por ahora el workaround es simple:
+</p>
+<ul>
+<li class="level1"><div class="li"> Cancelá la sesión de debug cliqueando el botón Stop (Terminate).</div>
+</li>
+<li class="level1"><div class="li"> Desenchufá el cable USB de manera que la CIAA se apague.</div>
+</li>
+<li class="level1"><div class="li"> Enchufá nuevamente el cable. Deberías ver que la CIAA se programó. Por ejemplo, si estabas intentando bajar el ejemplo &#039;blinking&#039;, ahora alguno de los LEDs de la CIAA debería destellar.</div>
+</li>
+<li class="level1"><div class="li"> Comenzá nuevamente la sesión de debug, que esta vez debería funcionar correctamente. Verás algo como esto:</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:primeros_pasos&amp;media=desarrollo:hardware:ciaa-nxp-ok.png.html" class="media" title="desarrollo:hardware:ciaa-nxp-ok.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:ciaa-nxp-ok.png" class="mediacenter" loading="lazy" alt="" /></a>
+Otra solución posible sin usar el CIAA-IDE, es la siguiente (si usás Windows, recordá usar la consola de Cygwin):
+</p>
+<ul>
+<li class="level1"><div class="li"> Abrir una consola, navegar hasta la carpeta donde está el repositorio de Firmware y ejecutar el comando <code>make openocd</code> (ATENCION: este paso está descontinuado. En versiones más recientes del firmware, sólo hay que hacer el paso siguiente que ya incluye el openocd).</div>
+</li>
+<li class="level1"><div class="li"> Abrir otra consola, navegar hasta la carpeta donde está el repositorio de Firmware y ejecutar el comando <code>make download</code> (puede que sea necesario compilar antes el firmware para obtener el ejecutable .axf). </div>
+</li>
+<li class="level1"><div class="li"> Luego verás mensajes similares a los siguientes en ambas consolas:</div>
+</li>
+</ul>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:hardware:primeros_pasos&amp;media=desarrollo:hardware:make_openocd.png.html" class="media" title="desarrollo:hardware:make_openocd.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:make_openocd.png" class="media" loading="lazy" alt="" /></a><a href="lib/exe/detail.php%3Fid=desarrollo:hardware:primeros_pasos&amp;media=desarrollo:hardware:make_download.png.html" class="media" title="desarrollo:hardware:make_download.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:make_download.png" class="mediaright" loading="lazy" alt="" /></a>
+</p>
+<ul>
+<li class="level1"><div class="li"> Desenchufá la CIAA y volvé a enchufarla. Luego deberías poder iniciar la sesión de debug sin problemas.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conectando una CIAA-NXP y EDU-CIAA-NXP por primera vez&quot;,&quot;hid&quot;:&quot;conectando_una_ciaa-nxp_y_edu-ciaa-nxp_por_primera_vez&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;57-2021&quot;} -->
+<h2 class="sectionedit3" id="conectando_una_ciaa-fsl_y_edu-ciaa-fsl_por_primera_vez">Conectando una CIAA-FSL y EDU-CIAA-FSL por primera vez</h2>
+<div class="level2">
+
+<p>
+En el caso de la CIAA-FSL detectamos que algunas versiones de OpenOCD pueden tener archivos de inicialización del microcontrolador en directorios equivocados. En la consola aparece un error como éste:
+<code>Runtime Error: embedded:startup.tcl:47: Can&#039;t find target/k60.cfg</code> <br/>
+
+Para solucionarlo, hacen falta que los siguientes archivos estén dentro de la carpeta target que se encuentra en la misma ruta del ejecutable:
+</p>
+<ul>
+<li class="level1"><div class="li"> k60.cfg</div>
+</li>
+<li class="level1"><div class="li"> swj-dp.tcl</div>
+</li>
+</ul>
+
+<p>
+En algunas instalaciones de OpenOCD 0.8.0, dichos archivos vinieron dentro de la carpeta <code>openocd-0.8.0/tcl/target</code>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conectando una CIAA-FSL y EDU-CIAA-FSL por primera vez&quot;,&quot;hid&quot;:&quot;conectando_una_ciaa-fsl_y_edu-ciaa-fsl_por_primera_vez&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;2022-&quot;} --></div>
+</body>
+</html>

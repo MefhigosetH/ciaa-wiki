@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>docu:fw:bm:modules:rtos:tst []</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,modules,rtos,tst"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:modules:rtos"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:modules:rtos:tst.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:modules:rtos:tst"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:modules:rtos';var JSINFO = {"id":"docu:fw:bm:modules:rtos:tst","namespace":"docu:fw:bm:modules:rtos","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<header id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html#dokuwiki__content">Saltar a contenido</a></li>
+        </ul>
+
+        <h1 class="logo"><a href="index.html"  accesskey="h" title="Home [h]"><img src="lib/exe/fetch.php%3Fmedia=logo.png" width="461" height="91" alt="" /> <span></span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Herramientas de usuario</h3>
+                <ul>
+                    <li class="action login"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=login&amp;sectok=.html" title="Conectarse" rel="nofollow"><span>Conectarse</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Herramientas del sitio</h3>
+            <form action="index.html" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="docu:fw:bm:modules:rtos:tst" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Buscar" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Buscar">Buscar</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://www.proyecto-ciaa.com.ar/devwiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="docu:fw:bm:modules:rtos:tst" /><select name="do" class="edit quickselect" title="Herramientas"><option value="">Herramientas</option><optgroup label="Herramientas de la página"><option value="edit">Ver la fuente de esta página</option><option value="revisions">Revisiones antiguas</option><option value="backlink">Enlaces a esta página</option></optgroup><optgroup label="Herramientas del sitio"><option value="recent">Cambios recientes</option><option value="media">Administrador de Ficheros</option><option value="index">Índice</option></optgroup><optgroup label="Herramientas de usuario"><option value="login">Conectarse</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li class="action recent"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=recent.html" title="Cambios recientes [r]" rel="nofollow" accesskey="r">Cambios recientes</a></li><li class="action media"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=media&amp;ns=docu:fw:bm:modules:rtos.html" title="Administrador de Ficheros" rel="nofollow">Administrador de Ficheros</a></li><li class="action index"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=index.html" title="Índice [x]" rel="nofollow" accesskey="x">Índice</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Traza:</span> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html"  class="breadcrumbs" title="docu:fw:bm:ide:ide_win_debug">ide_win_debug</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug.html"  class="breadcrumbs" title="docu:fw:bm:ide:ide_edu_ciaa_debug">ide_edu_ciaa_debug</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:woide.html"  class="breadcrumbs" title="docu:fw:bm:woide">woide</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:estructura.html"  class="breadcrumbs" title="docu:fw:bm:estructura">estructura</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:make.html"  class="breadcrumbs" title="docu:fw:bm:make">make</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:examples.html"  class="breadcrumbs" title="docu:fw:bm:examples">examples</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:examples:blinking_modbus.html"  class="breadcrumbs" title="docu:fw:bm:examples:blinking_modbus">blinking_modbus</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:project.html"  class="breadcrumbs" title="docu:fw:bm:project">project</a></bdi> <span class="bcsep">•</span> <bdi><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html"  class="breadcrumbs" title="docu:fw:bm:modules:rtos">rtos</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html"  class="breadcrumbs" title="docu:fw:bm:modules:rtos:tst">tst</a></bdi></span></div>
+                    </div>
+    
+    <hr class="a11y" />
+</div></header><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <nav id="dokuwiki__aside" aria-label="Barra lateral"><div class="pad aside include group">
+                    <h3 class="toggle">Barra lateral</h3>
+                    <div class="content"><div class="group">
+                                                                        
+<h3 class="sectionedit1" id="acerca_de_la_ciaa">Acerca de la CIAA</h3>
+<div class="level3">
+
+<p>
+ <a href="index.html" class="wikilink1" title="start" data-wiki-id="start">Inicio</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:origen_ciaa.html" class="wikilink1" title="proyecto:origen_ciaa" data-wiki-id="proyecto:origen_ciaa">Origen del proyecto</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:propuesta_innovadora.html" class="wikilink1" title="proyecto:propuesta_innovadora" data-wiki-id="proyecto:propuesta_innovadora">Propuesta innovadora</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:coordinacion.html" class="wikilink1" title="proyecto:coordinacion" data-wiki-id="proyecto:coordinacion">Coordinación del proyecto</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:grupos_de_trabajo.html" class="wikilink1" title="proyecto:grupos_de_trabajo" data-wiki-id="proyecto:grupos_de_trabajo">Grupos de trabajo</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:licencia_ciaa.html" class="wikilink1" title="proyecto:licencia_ciaa" data-wiki-id="proyecto:licencia_ciaa">Licencia BSD de la CIAA</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:casosdeuso.html" class="wikilink1" title="proyecto:casosdeuso" data-wiki-id="proyecto:casosdeuso">Aplicaciones de la CIAA</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acerca de la CIAA&quot;,&quot;hid&quot;:&quot;acerca_de_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;2-370&quot;} -->
+<h3 class="sectionedit2" id="vinculacion_y_prensa">Vinculación y Prensa</h3>
+<div class="level3">
+
+<p>
+ <a href="./doku.php%3Fid=vinculacion:contactos_locales.html" class="wikilink1" title="vinculacion:contactos_locales" data-wiki-id="vinculacion:contactos_locales">Contactos locales (66)</a><br/>
+
+ <a href="./doku.php%3Fid=difusion:videos_demostraciones.html" class="wikilink1" title="difusion:videos_demostraciones" data-wiki-id="difusion:videos_demostraciones">Vídeos y Demostraciones</a><br/>
+
+ <a href="./doku.php%3Fid=vinculacion:medios.html" class="wikilink1" title="vinculacion:medios" data-wiki-id="vinculacion:medios">La CIAA en los Medios</a><br/>
+
+ <a href="./doku.php%3Fid=vinculacion:gobiernoyentidades.html" class="wikilink1" title="vinculacion:gobiernoyentidades" data-wiki-id="vinculacion:gobiernoyentidades">Gobierno y Entidades</a><br/>
+
+ <a href="./doku.php%3Fid=vinculacion:empresas.html" class="wikilink1" title="vinculacion:empresas" data-wiki-id="vinculacion:empresas">Visitas a Empresas</a><br/>
+
+ <a href="./doku.php%3Fid=difusion:premios.html" class="wikilink1" title="difusion:premios" data-wiki-id="difusion:premios">Premios y Reconocimientos</a><br/>
+
+ <a href="./doku.php%3Fid=difusion:agenda.html" class="wikilink1" title="difusion:agenda" data-wiki-id="difusion:agenda">Agenda de Eventos</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Vinculaci\u00f3n y Prensa&quot;,&quot;hid&quot;:&quot;vinculacion_y_prensa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;371-772&quot;} -->
+<h3 class="sectionedit3" id="industria">Industria</h3>
+<div class="level3">
+
+<p>
+ <a href="doku.php%3Fid=industria.html" class="wikilink1" title="industria" data-wiki-id="industria">Robusta y confiable</a><br/>
+
+ <a href="./doku.php%3Fid=industria:ciaa_en_empresas.html" class="wikilink1" title="industria:ciaa_en_empresas" data-wiki-id="industria:ciaa_en_empresas">Empresas utilizando la CIAA</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio.html" class="wikilink1" title="desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio" data-wiki-id="desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio">La CIAA para la industria: CIAA-NXP</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:comprar.html" class="wikilink1" title="proyecto:comprar" data-wiki-id="proyecto:comprar">Comprar una CIAA-NXP</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Industria&quot;,&quot;hid&quot;:&quot;industria&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;773-1026&quot;} -->
+<h3 class="sectionedit4" id="educacion">Educación</h3>
+<div class="level3">
+
+<p>
+ <a href="doku.php%3Fid=educacion.html" class="wikilink1" title="educacion" data-wiki-id="educacion">La CIAA en la Educación</a><br/>
+
+ <a href="./doku.php%3Fid=educacion:cursos.html" class="wikilink1" title="educacion:cursos" data-wiki-id="educacion:cursos">Cursos y material de estudio</a><br/>
+
+ <a href="./doku.php%3Fid=educacion:tesis.html" class="wikilink1" title="educacion:tesis" data-wiki-id="educacion:tesis">Tesis y Proyectos finales</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp">La CIAA Educativa: EDU-CIAA-NXP</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:ciaa:ponchos.html" class="wikilink1" title="desarrollo:ciaa:ponchos" data-wiki-id="desarrollo:ciaa:ponchos">Ponchos para EDU-CIAA y CIAA</a><br/>
+
+ <a href="./doku.php%3Fid=proyecto:comprar.html" class="wikilink1" title="proyecto:comprar" data-wiki-id="proyecto:comprar">Comprar una EDU-CIAA-NXP</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Educaci\u00f3n&quot;,&quot;hid&quot;:&quot;educacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1027-1374&quot;} -->
+<h3 class="sectionedit5" id="otras_ciaas_en_desarrollo">Otras CIAAs en desarrollo</h3>
+<div class="level3">
+
+<p>
+ <a href="./doku.php%3Fid=desarrollo:ciaa_safety:start.html" class="wikilink1" title="desarrollo:ciaa_safety:start" data-wiki-id="desarrollo:ciaa_safety:start">CIAA-Safety</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:ciaa_acc:ciaa_acc_inicio.html" class="wikilink1" title="desarrollo:ciaa_acc:ciaa_acc_inicio" data-wiki-id="desarrollo:ciaa_acc:ciaa_acc_inicio">CIAA-ACC</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio.html" class="wikilink1" title="desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio" data-wiki-id="desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio">CIAA-FSL</a><br/>
+
+ <a href="doku.php%3Fid=versiones_ciaa.html" class="wikilink1" title="versiones_ciaa" data-wiki-id="versiones_ciaa">Otras CIAAs para la industria</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-fsl.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-fsl" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-fsl">EDU-CIAA-FSL</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-intel.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-intel" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-intel">EDU-CIAA-INTEL</a> <br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu_ciaa_xilinx.html" class="wikilink1" title="desarrollo:edu-ciaa:edu_ciaa_xilinx" data-wiki-id="desarrollo:edu-ciaa:edu_ciaa_xilinx">EDU-CIAA-XILINX</a> <br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-fpga.html" class="wikilink1" title="desarrollo:edu-fpga" data-wiki-id="desarrollo:edu-fpga">EDU-CIAA-FPGA</a> <br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Otras CIAAs en desarrollo&quot;,&quot;hid&quot;:&quot;otras_ciaas_en_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1375-1850&quot;} -->
+<h3 class="sectionedit6" id="programando_la_ciaa_en">Programando la CIAA en</h3>
+<div class="level3">
+
+<p>
+ <a href="./doku.php%3Fid=desarrollo:firmware:user_manual.html" class="wikilink1" title="desarrollo:firmware:user_manual" data-wiki-id="desarrollo:firmware:user_manual">Lenguaje C</a> <br/>
+
+ Lenguaje Java <br/>
+
+ <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python">Lenguaje Python</a> <br/>
+
+ <a href="./doku.php%3Fid=desarrollo:software-plc.html" class="wikilink1" title="desarrollo:software-plc" data-wiki-id="desarrollo:software-plc">Ladder</a> <br/>
+
+ Snap
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Programando la CIAA en&quot;,&quot;hid&quot;:&quot;programando_la_ciaa_en&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1851-2063&quot;} -->
+<h3 class="sectionedit7" id="documentacion">Documentación</h3>
+<div class="level3">
+
+<p>
+ <a href="./doku.php%3Fid=desarrollo:docu:indice.html" class="wikilink1" title="desarrollo:docu:indice" data-wiki-id="desarrollo:docu:indice">Documentación de la CIAA</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:firmware.html" class="wikilink1" title="desarrollo:firmware" data-wiki-id="desarrollo:firmware">Firmware</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:gabinete.html" class="wikilink1" title="desarrollo:gabinete" data-wiki-id="desarrollo:gabinete">Gabinete</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:hardware.html" class="wikilink1" title="desarrollo:hardware" data-wiki-id="desarrollo:hardware">Hardware</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:linux.html" class="wikilink1" title="desarrollo:linux" data-wiki-id="desarrollo:linux">Linux</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:microelectronica.html" class="wikilink1" title="desarrollo:microelectronica" data-wiki-id="desarrollo:microelectronica">Microelectrónica</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:sistema.html" class="wikilink1" title="desarrollo:sistema" data-wiki-id="desarrollo:sistema">Sistema</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:software-ide.html" class="wikilink1" title="desarrollo:software-ide" data-wiki-id="desarrollo:software-ide">Software-IDE</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:software-plc.html" class="wikilink1" title="desarrollo:software-plc" data-wiki-id="desarrollo:software-plc">Software-PLC</a><br/>
+
+ <a href="./doku.php%3Fid=desarrollo:testing.html" class="wikilink1" title="desarrollo:testing" data-wiki-id="desarrollo:testing">Testing</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Documentaci\u00f3n&quot;,&quot;hid&quot;:&quot;documentacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2064-2494&quot;} -->
+<h3 class="sectionedit8" id="aportantes_al_proyecto_ciaa">Aportantes al Proyecto CIAA</h3>
+<div class="level3">
+
+<p>
+ <a href="./doku.php%3Fid=proyecto:aportes_instituciones.html" class="wikilink1" title="proyecto:aportes_instituciones" data-wiki-id="proyecto:aportes_instituciones">Instituciones (4)</a><br/>
+
+ <a href="doku.php%3Fid=aportes_universidades.html" class="wikilink1" title="aportes_universidades" data-wiki-id="aportes_universidades">Universidades (12)</a><br/>
+
+ <a href="doku.php%3Fid=aportes_pymes.html" class="wikilink1" title="aportes_pymes" data-wiki-id="aportes_pymes">Empresas PyME (20)</a><br/>
+
+ <a href="doku.php%3Fid=aportes_desarrolladores.html" class="wikilink1" title="aportes_desarrolladores" data-wiki-id="aportes_desarrolladores">Desarrolladores (62)</a><br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Aportantes al Proyecto CIAA&quot;,&quot;hid&quot;:&quot;aportantes_al_proyecto_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2495-2730&quot;} -->
+<h3 class="sectionedit9" id="comunidad_ciaa">Comunidad CIAA</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Participá de la lista de correos con más de 3000 desarrolladores: <a href="https://groups.google.com/group/embebidos32/subscribe" class="urlextern" target="_blank" title="https://groups.google.com/group/embebidos32/subscribe" rel="ugc nofollow noopener">embebidos32@googlegroups.com</a>.<br/>
+</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Sumate a las 50 universidades que enseñarán embebidos usando la EDU-CIAA: <a href="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse" class="urlextern" target="_blank" title="http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse" rel="ugc nofollow noopener">Red RUSE</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Contactá a los coordinadores del proyecto CIAA: <a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#112;&#114;&#111;&#121;&#101;&#99;&#116;&#111;&#45;&#99;&#105;&#97;&#97;&#46;&#99;&#111;&#109;&#46;&#97;&#114;" class="mail" title="&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#112;&#114;&#111;&#121;&#101;&#99;&#116;&#111;&#45;&#99;&#105;&#97;&#97;&#46;&#99;&#111;&#109;&#46;&#97;&#114;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#112;&#114;&#111;&#121;&#101;&#99;&#116;&#111;&#45;&#99;&#105;&#97;&#97;&#46;&#99;&#111;&#109;&#46;&#97;&#114;</a>.<br/>
+</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Seguinos: <a href="https://www.facebook.com/ProyectoCIAA" class="media" target="_blank" title="https://www.facebook.com/ProyectoCIAA" rel="ugc nofollow noopener"><img src="lib/exe/fetch.php%3Fmedia=fcbk.jpg" class="media" loading="lazy" title="Facebook" alt="Facebook" /></a> <a href="https://twitter.com/proyectociaa" class="media" target="_blank" title="https://twitter.com/proyectociaa" rel="ugc nofollow noopener"><img src="lib/exe/fetch.php%3Fw=30&amp;tok=af6606&amp;media=twitter.png" class="media" loading="lazy" title="Twitter" alt="Twitter" width="30" /></a> <a href="https://www.youtube.com/user/proyectociaa" class="media" target="_blank" title="https://www.youtube.com/user/proyectociaa" rel="ugc nofollow noopener"><img src="lib/exe/fetch.php%3Fmedia=ytlogo.jpg" class="media" loading="lazy" title="YouTube" alt="YouTube" /></a></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="ultimos_cambios_en_la_wiki">Últimos cambios en la wiki</h4>
+<div class="level4">
+
+<p>
+count=5
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comunidad CIAA&quot;,&quot;hid&quot;:&quot;comunidad_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;2731-&quot;} -->                                            </div></div>
+                </div></nav><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <main id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>docu:fw:bm:modules:rtos:tst</span></div>
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html" class="wikilink1" title="docu:fw:bm:modules:rtos" data-wiki-id="docu:fw:bm:modules:rtos">rtos</a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:modules.html" class="wikilink2" title="docu:fw:bm:modules" rel="nofollow" data-wiki-id="docu:fw:bm:modules">..</a> →</div></div>
+<h1 class="sectionedit1" id="testeo_de_osek">Testeo de OSEK</h1>
+<div class="level1">
+
+<p>
+OSEK-VDX especifica, además del sistema operativo, un test para verificar que el mismo es conforme a las especificaciones.
+</p>
+
+<p>
+Bajo <a href="http://www.osek-vdx.org" class="urlextern" target="_blank" title="http://www.osek-vdx.org" rel="ugc nofollow noopener">www.osek-vdx.org</a> se pueden encontrar los siguientes 3 documentos:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/tmeth20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/tmeth20.pdf" rel="ugc nofollow noopener">OSEK/VDX Conformance Testing Methodology</a>: explica la metodología de testeo</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/ostestplan20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/ostestplan20.pdf" rel="ugc nofollow noopener">OSEK/VDX Operating System Test Plan</a>: define el plan de pruebas (los test cases)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://portal.osek-vdx.org/files/pdf/modistarc/ostestproc20.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/modistarc/ostestproc20.pdf" rel="ugc nofollow noopener">OSEK/VDX Operating System Test Procedure</a>: define el procedimiento de como se deben ejecutar los test cases. </div>
+</li>
+</ul>
+
+<p>
+Hay que tener en cuenta que la última especificación de OSEK-VDX <abbr title="Operating System">OS</abbr> es la 2.2.3, sin embargo los documentos de testeo hacen referencia a la versión de OSEK-VDX <abbr title="Operating System">OS</abbr> 2.0 rev 1. Por ello algunos tests no pueden ser llevados a cabo. 
+</p>
+
+</div>
+
+<h3 class="sectionedit2" id="osek_vdx_conformance_testing_methodology">OSEK/VDX Conformance Testing Methodology</h3>
+<div class="level3">
+
+<p>
+Este documento explica la metodología de teste en general de OSEK/VDX (ver todas las partes del estándar). 
+Entre otras cosas explica la configuración utilizada para testear el RTOS. Y que los tests se llevan a cabo utilizando las interfaces globales del RTOS. Se trata de un black box test.
+</p>
+
+<p>
+El test de OSEK-VDX <abbr title="Operating System">OS</abbr> es una aplicación que utiliza el RTOS y verifica que se comporte de una forma determinada.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;media=desarrollo:firmware:rtos:osek_conf_test.png.html" class="media" title="desarrollo:firmware:rtos:osek_conf_test.png"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=d7a83d&amp;media=desarrollo:firmware:rtos:osek_conf_test.png" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+El test del sistema operativo se divide en las siguientes partes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Servicios de administración de tareas (Task management services)</div>
+</li>
+<li class="level1 node"><div class="li"> Servicios de manejo de interrupciones (Interrupt handling services)</div>
+<ul>
+<li class="level2"><div class="li"> Estas interfaces no están más disponibles en OSEK/VDX <abbr title="Operating System">OS</abbr> 2.2.3 y por ello no pueden ser testeadas.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Servicios de administración de recursos (Resource management services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de control de eventos (Event control services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de alarma (Alarm services)</div>
+</li>
+<li class="level1"><div class="li"> Servicios de control de ejecución del sistema operativo (Operating system execution control services)</div>
+</li>
+<li class="level1"><div class="li"> TODO (Hook routines)</div>
+</li>
+</ul>
+
+<p>
+En cada parte se testea el grupo correspondiente de interfaces que el sistema operativo ofrece a tal fin (ver tabla TODO). 
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Type </th><th class="col1"> <abbr title="Operating System">OS</abbr> Interface </th><th class="col2"> Service Call </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" rowspan="6"> Task management services </td><td class="col1"> Transfer task into read state </td><td class="col2"> ActivateTask </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Terminate calling task </td><td class="col1"> TerminateTask </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Terminate calling task and activate succeeding task </td><td class="col1"> ChainTask </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Call scheduler </td><td class="col1"> Schedule </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Get currently active task </td><td class="col1"> GetTaskId </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Get state of a task </td><td class="col1"> GetTaskState </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0" rowspan="2"> Resource management services </td><td class="col1"> Get resource and enter critical section </td><td class="col2"> GetResource </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> Release resource and leave critical section </td><td class="col1"> ReleaseResource </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0" rowspan="4"> Event control services </td><td class="col1"> Set event of extended task </td><td class="col2"> SetEvent </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> Clear Event </td><td class="col1"> ClearEvent </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Get event mask of a task </td><td class="col1"> GetEvent </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> Wait for setting of an event </td><td class="col1"> WaitEvent </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0" rowspan="5"> Alarms services </td><td class="col1"> Read alarm base characteristics </td><td class="col2"> GetAlarmBase </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> Occupy and set relative alarm </td><td class="col1"> SetRelAlarm </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> Occupy and set absolute alarm </td><td class="col1"> GetAbsAlarm </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> Cancel alarm </td><td class="col1"> CancelAlarm </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> Get alarm value </td><td class="col1"> GetAlarm </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0" rowspan="3"> Operating system execution control services </td><td class="col1"> Get current application mode </td><td class="col2"> GetApplicationmode </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> Start operating system </td><td class="col1"> StartOS </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> Shut down operating system </td><td class="col1"> ShutdownOS </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0" rowspan="5"> Hook routines </td><td class="col1"> Called if <abbr title="Operating System">OS</abbr> service returns an error </td><td class="col2"> ErrorHook </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> Called at task switch before entering context of new task </td><td class="col1"> PreTaskHook </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0"> Called at task switch after leaving context of old task </td><td class="col1"> PostTaskHook </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0"> Called after start-up </td><td class="col1"> StartupHook </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0"> Called before shutdown </td><td class="col1"> ShutdownHook </td>
+	</tr>
+</table></div>
+
+<p>
+Dado que OSEK-VDX <abbr title="Operating System">OS</abbr> es un sistema operativo estático y el mismo necesita ser generado, los tests se deben llevar a cabo en múltiples configuraciones. 
+</p>
+
+<p>
+Se testearán las 4 clases de conformidad:
+</p>
+<ul>
+<li class="level1"><div class="li"> BCC1: únicamente tareas básicas, una activación por tarea, una tarea por prioridad (todas las tareas tienen distintas prioridades).</div>
+</li>
+<li class="level1"><div class="li"> BCC2: como BCC1 pero admite múltiples tareas por prioridad y múltiple activación de las tareas.</div>
+</li>
+<li class="level1"><div class="li"> ECC1: como BCC1 y tareas extendidas.</div>
+</li>
+<li class="level1"><div class="li"> ECC2: como BCC2 y tareas extendidas. (NOTA al pie: las tareas extendidas no pueden tener múltiple activación)</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a las clases de conformidad de OSEK-VDX <abbr title="Operating System">OS</abbr> le recomendamos repasar el TODO REF .
+</p>
+
+<p>
+Se testearán los 3 tipos de scheduling:
+</p>
+<ul>
+<li class="level1"><div class="li"> non-preemptive: los cambios de tareas son ejecutados únicamente en puntos de rescheduling definidos en cada interfaz del <abbr title="Operating System">OS</abbr>.</div>
+</li>
+<li class="level1"><div class="li"> full-preemptive: los cambios de tareas pueden ser realizados en cualquier instrucción.</div>
+</li>
+<li class="level1"><div class="li"> mixed-preemptive: dependiendo de la tarea, se utilizan ambos tipos de scheduling.</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a los tipos de scheduling le recomendamos repasar TODO REF.
+</p>
+
+<p>
+Por último se testearán los dos tipos de reporte de error:
+</p>
+<ul>
+<li class="level1"><div class="li"> Standard: los errores definidos estándar son reportados por el sistema operativo.</div>
+</li>
+<li class="level1"><div class="li"> Extended: además de los errores estándares, se realizan y reportan controles extras.</div>
+</li>
+</ul>
+
+<p>
+Para más información respecto a los tipos de errores le recomendamos repasar TODO REF.
+</p>
+
+<p>
+La combinatoria de los tipos de conformidad, los tipos de scheduling y tipos de errores reportados requieren que el sistema operativo sea generado y compilado en un proceso iterativo para poder testear todas las combinaciones definidas en el test.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="osek-vdx_os_test_plan">OSEK-VDX OS Test Plan</h3>
+<div class="level3">
+
+<p>
+Cada test case contiene los siguientes campos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Número de test (Test case No.): indica el número de test case.</div>
+</li>
+<li class="level1"><div class="li"> Sched. policy, Conf. class, Status: indica en que scheduling (full, non, mixed más información en …), en que Configuration. class (BCC1, BCC2, ECC1, ECC2, más información en …) y que tipo de status </div>
+</li>
+<li class="level1"><div class="li"> Action: la acción a ser ejecutada en este testcase.</div>
+</li>
+<li class="level1"><div class="li"> Expected result: el resultado esperado. En el caso de obtenerlo, el test case será positivo en caso contrario habrá fallado.</div>
+</li>
+</ul>
+
+<p>
+El documento especifica:
+</p>
+<ul>
+<li class="level1"><div class="li"> 41 test cases de task management</div>
+</li>
+<li class="level1"><div class="li"> 12 test cases de interrupt processing (NOTA al pie: ISR3 no existe más en OSEK 2.2.3)</div>
+</li>
+<li class="level1"><div class="li"> 26 test cases de event mechanism</div>
+</li>
+<li class="level1"><div class="li"> 16 test cases de resource management</div>
+</li>
+<li class="level1"><div class="li"> 36 test cases de alarms</div>
+</li>
+<li class="level1"><div class="li"> 8 test cases error handling, hook routines and <abbr title="Operating System">OS</abbr> execution control</div>
+</li>
+</ul>
+
+<p>
+Un total de 139 test cases.
+</p>
+
+<p>
+Veamos algunos ejemplos.
+</p>
+
+</div>
+
+<h4 id="task_management_test_case_7">Task Management test case 7</h4>
+<div class="level4">
+<div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Test case No. </th><th class="col1"> Sched. policy Conf. class Status </th><th class="col2"> Action </th><th class="col3"> Expected Result </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" rowspan="3"> 7 </td><td class="col1"> m, f </td><td class="col2" rowspan="3"> Call ActivateTask() from preemptive task on suspended extended task which has higher priority than running task. </td><td class="col3" rowspan="3"> Running task is preempted. Activated task becomes running and its events are cleared. Service returns E_OK </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> E1, E2 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> s, e </td>
+	</tr>
+</table></div>
+
+<p>
+Este test case indica que se debe llamar a ActivateTask de una preemptive task a una tarea extendida suspendida con una prioridad mayor a la de la tarea actual.
+</p>
+
+<p>
+Como resultado la tarea que ejecuta el ActivateTask debe ser interrumpida (preempted) y la tarea extendida deberá ser ejecutada y todos sus eventos colocados a cero. La llamada ActivateTask debe haber retornado E_OK.
+El test case debe ser ejecutado en un sistema mixed y un full preemptive (ref), en ECC1 y ECC2 (ref) y tanto en standard error como con extended errors (ref).
+</p>
+
+<p>
+Para implementar este test se necesita un OSEK configurado con las tareas necesarias, además de poder detectar cuando una tarea es interrumpida y luego recuperar el control. Pero esto ya no es parte de esta especificación sino de procedimiento del test.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="osek_vdx_operating_system_test_procedure">OSEK/VDX Operating System Test Procedure</h3>
+<div class="level3">
+
+<p>
+Finalmente el test procedure describe como se debe ejecutar cada test case especificado en (REF). Para ello especifica secuencias de test por cada tipo (task management, interrupt processing, event mechanism, etc.)
+</p>
+
+<p>
+Por ejemplo la *secuencia 1* de task management ejecutará los test cases: 1, 10, 15, 20, 21, 22, 24, 25, 26, 27, 30, 35, 36, 37, 38, 40 (orden ascendente no el de ejecución). Esta secuencia se ejecutará en todas las conformidades (BCC1, BCC2, ECC1, ECC2), en todos los schedulings (mixed, non, full) y en modo extended.
+</p>
+
+<p>
+También se especifican 2 tareas:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> Tarea 1</div>
+<ul>
+<li class="level2"><div class="li"> nombre: Task1</div>
+</li>
+<li class="level2"><div class="li"> type: basic</div>
+</li>
+<li class="level2"><div class="li"> autostart: yes</div>
+</li>
+<li class="level2"><div class="li"> priority: 1</div>
+</li>
+<li class="level2"><div class="li"> max. acitvation: 1</div>
+</li>
+<li class="level2"><div class="li"> preemptive: non, full</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Tarea 2</div>
+<ul>
+<li class="level2"><div class="li"> nombre: Task2</div>
+</li>
+<li class="level2"><div class="li"> type: basic</div>
+</li>
+<li class="level2"><div class="li"> autostart: no</div>
+</li>
+<li class="level2"><div class="li"> priority: 2</div>
+</li>
+<li class="level2"><div class="li"> max. activations: 2</div>
+</li>
+<li class="level2"><div class="li"> preemptive: non, full</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Y dos interrupciones. Es importante tener en cuenta que las ISR3 no existen más en OSEK/VDX <abbr title="Operating System">OS</abbr> 2.2.3 por lo que todos los tests referentes a ISR3 no podrán ser ejecutados.
+</p>
+
+<p>
+Luego se describe uno a uno los pasos a ser llevados a cabo.
+</p>
+
+<p>
+<img src="lib/exe/fetch.php%3Fw=600&amp;tok=83e458&amp;media=desarrollo:firmware:rtos:testproc01.png" class="mediacenter" loading="lazy" title="Test Sequence 1" alt="Test Sequence 1" width="600" />
+</p>
+
+<p>
+Habilitar las interrupciones. Esto no es parte del test en sí, es más bien una pre condición.
+Luego se deben ejecutar los test cases:
+1, 40 y 24 en el respectivo orden, ….
+</p>
+
+<p>
+De esta forma en el documento de procedimiento de test (REF) son ejecutados los test especificados en el plan del test (ref).
+</p>
+
+<p>
+En total el documento define:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> 15 secuencias de task management</div>
+<ul>
+<li class="level2"><div class="li"> Las cuales se combinan en 130 proyectos (configuraciones).</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 5 secuencias de resource management</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 24 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 4 secuencias de event mechanismus</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 20 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 2 secuencias de error handling</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 16 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> 7 secuencias de alarmas</div>
+<ul>
+<li class="level2"><div class="li"> Los cuales se combinan en 36 proyectos (configuraciones) diferentes.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Lo que hace un total de 226 proyectos (configuraciones) diferentes.
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="corriendo_los_tests_de_conformidad_de_osek_vdx_os_en_la_ciaa-firmware">Corriendo los tests de conformidad de OSEK/VDX OS en la CIAA-Firmware</h2>
+<div class="level2">
+
+<p>
+En la sección anterior se explicaron los documentos que especifican como testear un OSEK/VDX <abbr title="Operating System">OS</abbr> para validar su conformidad.
+</p>
+
+<p>
+Esta sección explica como es testeado el RTOS de la CIAA Firmware.
+</p>
+
+<p>
+Los tests del RTOS se encuentran en:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest" rel="ugc nofollow noopener">https://github.com/ciaa/Firmware/tree/master/modules/rtos/tst/ctest</a></div>
+</li>
+</ul>
+
+<p>
+La abreviatura tst se refiere a test y ctest al test de conformidad (conformance tests).
+Este directorio contiene los siguientes subdirectorios:
+</p>
+<ul>
+<li class="level1"><div class="li"> bin: contiene un script en perl que genera proyectos (por cada tests se genera un proyecto de CIAA-Firmware, ver REF).</div>
+</li>
+<li class="level1"><div class="li"> cfg: archivo para generar las configuraciones de los tests</div>
+</li>
+<li class="level1"><div class="li"> dbg: scripts necesarios para cargar, correr y leer resultados de los tests de forma automatizada.</div>
+</li>
+<li class="level1"><div class="li"> doc: ??? es necesario</div>
+</li>
+<li class="level1"><div class="li"> etc: contiene la pre configuración de cada tests</div>
+</li>
+<li class="level1"><div class="li"> gen: genera algunos macros necesarios para los tests</div>
+</li>
+<li class="level1"><div class="li"> inc: contiene los header files de los tests.</div>
+</li>
+<li class="level1"><div class="li"> mak: makefile para correr los tests.</div>
+</li>
+<li class="level1"><div class="li"> src: el código fuente de la aplicación que ejecuta los tests.</div>
+</li>
+</ul>
+
+<p>
+Una vez que está el <a href="./doku.php%3Fid=docu:fw:bm:make.html" class="wikilink1" title="docu:fw:bm:make" data-wiki-id="docu:fw:bm:make">makefile.mine</a> esté correctamente configurado, en una consola ejecutar el comando:
+</p>
+<pre class="code">make rtostests</pre>
+
+<p>
+y si el <a href="./doku.php%3Fid=docu:fw:bm:make.html" class="wikilink1" title="docu:fw:bm:make" data-wiki-id="docu:fw:bm:make">makefile.mine</a> se configuró para usar una CIAA, conectela a la PC para que se hagan los test del RTOS y en otro consola hacer:
+</p>
+<pre class="code">make openocd</pre>
+
+<p>
+En el caso de correr en la CIAA, los ctest se ejecutan en memoria RAM para no perder ciclos de vida de grabación de la memoria flash de la CIAA.
+</p>
+
+<p>
+A medida que los ctests avancen, en la carpeta &#039;/out/rtos/doc/ctest&#039; irán apareciendo archivos con información de loggeo. En particular &#039;ctestSummary.log&#039; contendrá un resumen de los ctest ejecutados y &#039;ctestfull.log&#039; un loggeo exhaustivo de todo lo ocurrido.
+</p>
+
+<p>
+Cada proyecto (configuración) incluye un archivo de configuración <a href="http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf" class="urlextern" target="_blank" title="http://portal.osek-vdx.org/files/pdf/specs/oil25.pdf" rel="ugc nofollow noopener">OIL</a>, código fuente y un makefile y se encuentra en un directorio diferente.
+</p>
+
+<p>
+La CIAA-Firmware utiliza un <a href="https://github.com/ciaa/Firmware/blob/master/modules/rtos/tst/ctest/bin/ctest.pl" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/blob/master/modules/rtos/tst/ctest/bin/ctest.pl" rel="ugc nofollow noopener">script escrito en perl</a> para llevar a cabo la tarea de testeo en los siguientes pasos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Generar el archivo de configuración del RTOS (archivo OIL) para el tests siguiendo las 4 conformidades y 3 tipos de scheduling, según especifique el test</div>
+</li>
+<li class="level1"><div class="li"> Generar el sistema operativo basado en  OIL del punto 1.</div>
+</li>
+<li class="level1"><div class="li"> Compilar y Linkear la aplicación de testeo con el OSEK generado en el punto 2.</div>
+</li>
+<li class="level1"><div class="li"> Correr la aplicación mediante GDB (en PC o Target).</div>
+</li>
+<li class="level1"><div class="li"> Leer el resultado de los tests</div>
+</li>
+<li class="level1"><div class="li"> Continuar con la siguiente configuración comenzando en el paso 1.</div>
+</li>
+</ul>
+
+</div>
+<div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html" class="wikilink1" title="docu:fw:bm:modules:rtos" data-wiki-id="docu:fw:bm:modules:rtos">rtos</a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos.html" class="wikilink1" title="docu:fw:bm:modules:rtos" data-wiki-id="docu:fw:bm:modules:rtos">rtos</a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:modules.html" class="wikilink2" title="docu:fw:bm:modules" rel="nofollow" data-wiki-id="docu:fw:bm:modules">..</a> →</div></div>
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>docu/fw/bm/modules/rtos/tst.txt</bdi> · Última modificación: 2015/08/11 20:44 por <bdi>jcecconi</bdi></div>
+
+                
+                <hr class="a11y" />
+            </div></main><!-- /content -->
+
+            <!-- PAGE ACTIONS -->
+            <nav id="dokuwiki__pagetools" aria-labelledby="dokuwiki__pagetools__heading">
+                <h3 class="a11y" id="dokuwiki__pagetools__heading">Herramientas de la página</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=edit.html" title="Ver la fuente de esta página [v]" rel="nofollow" accesskey="v"><span>Ver la fuente de esta página</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=revisions.html" title="Revisiones antiguas [o]" rel="nofollow" accesskey="o"><span>Revisiones antiguas</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;do=backlink.html" title="Enlaces a esta página" rel="nofollow"><span>Enlaces a esta página</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="top"><a href="./doku.php%3Fid=docu:fw:bm:modules:rtos:tst.html#dokuwiki__top" title="Volver arriba [t]" rel="nofollow" accesskey="t"><span>Volver arriba</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </nav>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<footer id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="https://www.dokuwiki.org/donate" title="Donate" target="_blank"><img
+            src="lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="https://php.net" title="Powered by PHP" target="_blank"><img
+            src="lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" target="_blank"><img
+            src="lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" target="_blank"><img
+            src="lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="https://dokuwiki.org/" title="Driven by DokuWiki" target="_blank"><img
+            src="lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+            alt="Driven by DokuWiki" /></a>
+    </div>
+
+    </div></footer><!-- /footer -->
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="lib/exe/taskrunner.php%3Fid=docu:fw:bm:modules:rtos:tst&amp;1688828555" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>

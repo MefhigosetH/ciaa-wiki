@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:0.4.0</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,0.4.0"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:0.4.0&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:0.4.0.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:0.4.0"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:0.4.0.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:0.4.0","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="testing_firmware_v040">Testing Firmware v0.4.0</h1>
+<div class="level1">
+
+<p>
+Para cada test se indica:
+</p>
+<ul>
+<li class="level1"><div class="li"> &lt;fc #008000&gt;PASSED&lt;/fc&gt;</div>
+</li>
+<li class="level1"><div class="li"> &lt;fc #ff0000&gt;FAILED&lt;/fc&gt;</div>
+</li>
+<li class="level1"><div class="li"> &lt;fc #ADAB4E&gt;TEÓRICAMENTE OK&lt;/fc&gt;</div>
+</li>
+</ul>
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Testeado de </th><th class="col1"> commit </th><th class="col2"> win </th><th class="col3"> mac os </th><th class="col4"> linux64 </th><th class="col5"> CIAA-NXP </th><th class="col6"> EDU-CIAA-NXP </th><th class="col7"> CIAA-FSL </th><th class="col8"> comments </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> adc_dac </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" rel="ugc nofollow noopener">4d6ad071a9</a> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> blinking </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" rel="ugc nofollow noopener">4d6ad071a9</a> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> blinking_echo </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" rel="ugc nofollow noopener">4d6ad071a9</a> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> blinking_lwip </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #ff0000&gt;FAILED&lt;/fc&gt; COMPILE </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> blinking_modbus </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" rel="ugc nofollow noopener">4d6ad071a9</a> </td><td class="col5"> </td><td class="col6"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> blinking_modbus_master </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" class="urlextern" target="_blank" title="https://github.com/ciaa/Firmware/tree/4d6ad071a97410cf0314fbb8d66465b963c9a67a" rel="ugc nofollow noopener">4d6ad071a9</a> </td><td class="col5"> </td><td class="col6"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> unit tests </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="http://ciaa1.uns.edu.ar/jenkins/job/Unit%20Tests/190/" class="urlextern" target="_blank" title="http://ciaa1.uns.edu.ar/jenkins/job/Unit%20Tests/190/" rel="ugc nofollow noopener">Jenkins</a> </td><td class="col5"> n.a. </td><td class="col6"> n.a. </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> rtos tests </td><td class="col1"> </td><td class="col2"> &lt;fc #ADAB4E&gt;TEÓR. OK&lt;/fc&gt; </td><td class="col3"> &lt;fc #ADAB4E&gt;TEÓR. OK&lt;/fc&gt; </td><td class="col4"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; <a href="http://ciaa1.uns.edu.ar/jenkins/job/RTOS_x64/21/" class="urlextern" target="_blank" title="http://ciaa1.uns.edu.ar/jenkins/job/RTOS_x64/21/" rel="ugc nofollow noopener">Jenkins</a> </td><td class="col5"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; </td><td class="col6"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; </td><td class="col7"> &lt;fc #008000&gt;PASSED&lt;/fc&gt; </td><td class="col8"></td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> DIO Driver </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> </td><td class="col5"> &lt;fc #ADAB4E&gt;TEÓR. OK&lt;/fc&gt; </td><td class="col6"> &lt;fc #008000&gt;WORKS&lt;/fc&gt; </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> ADC Driver </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Serial Driver </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> Modbus </td><td class="col1"> </td><td class="col2"> </td><td class="col3"> </td><td class="col4"> </td><td class="col5"> </td><td class="col6"> </td><td class="col7"> </td><td class="col8"></td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:2,&quot;range&quot;:&quot;161-1654&quot;} -->
+</div>
+</div>
+</body>
+</html>

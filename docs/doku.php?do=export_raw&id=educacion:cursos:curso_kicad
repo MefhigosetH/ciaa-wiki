@@ -1,0 +1,146 @@
+=====Curso KiCad para el diseño de circuitos de mediana complejidad y multicapa=====
+El **Centro de Micro y Nanoelectrónica** del **Instituto Nacional de Tecnología Industrial** (INTI-CMNB) dicta cursos teórico-prácticos sobre el uso de **KiCad para diseño de circuitos de mediana complejidad y multicapa**.
+{{ ::cursokicad_2015_1.jpg?direct&430|}}
+Este curso fue pensado y elaborado en base al requerimiento del proyecto de investigación titulado **“Desarrollo de una Computadora Industrial Abierta Argentina (CIAA) para Aplicaciones Críticas que Requieran de Seguridad Funcional Certificada"** aprobado en la Convocatoria PDTS CIN-CONICET 2014 (Proyectos de Desarrollo Tecnológico y Social). 
+
+-----
+
+=====Primera edición del curso (30/11/2015)=====
+
+  * **Fecha de realización:** 30 de noviembre, 1 y 2 de diciembre de 2015.
+  * **Lugar:** Sede central del INTI, Colectora de General Paz 5445, San Martín, Buenos Aires.
+  * **Centro:** Edificio 42, Centro de Micro y Nanoelectrónica del INTI. Primer piso.
+  * **Duración:** 8hs por día. Duración total de 24 hs.
+  * **Horario:** 9:30 a 18hs.
+  * **Capacitadores:** Diego Brengi, Noelia Scotti y Diego Alamon.
+  * **Modalidad:** Teórico-práctico con ejercicios en computadora.
+  * **Software utilizado**: Kicad 6188 (RC1) y Git-Bash.
+
+====Visitas y colaboraciones====
+{{ ::curso_kicad_2015_2.jpg?direct&200|}}  
+{{ ::curso_kicad_2015_3.jpg?direct&200|}}
+
+  * Por la mañana del primer día nos visitó Ariel Lutenberg para conocer en persona a algunos de los participantes y observar el desarrollo del curso.
+  * Por la tarde del primer día Ignacio Zaradnik de la Universidad Nacional de La Matanza nos ofreció una exposición de aproximadamente dos horas sobre "Resumen de conceptos generales sobre diseño de circuitos impresos".
+  * El tercer día Pablo Ridolfi, en su función de coordinador del proyecto CIAA, realizó una visita, ofreciendo una breve charla comentando las novedades del proyecto CIAA y motivando a realizar aportes al mismo.
+  * También contamos con la presencia de la directora del CMNB, Liliana Fraigi, que dio a los asistentes la bienvenida al INTI y al centro, agradeciendo su interés por la temática.
+
+
+====Participantes====
+
+{{ ::curso_kicad_2015_4.jpg?direct&500 |}}
+
+^Participante PDTS^Filiación^
+| Martín Escobar |  UNRC (Córdoba)|
+| Diego Fusari |  UNRC (Córdoba)|
+| Mauro Martina |  UNER (Entre Ríos)|
+| Christian Mista |  UNER (Entre Ríos)|
+^Participante Becados^Filiación^
+| Gonzalo Cuenca       |   UNER (Entre Ríos)|
+| César Díaz           |  UTN-FRA (Avellaneda)|
+| Ivan Dmytrow         |  Escuela Tecnica N°28 (Buenos Aires)|
+| Matias Leandro Ferraro |     UNCA (Catamarca)|
+| Pablo Martín Gomez   |  UBA (Buenos Aires) |
+| Adrián Laiuppa       |  UTN-FRBB (Bahía Blanca) |
+| Miguel Angel Mainenti|  ADOX S.A. (Ituzaingo) |
+| Santiago Nolasco     |  IUA (Córdoba) |
+| Pablo Daniel Origlia |  NUCLEOELÉCTRICA ARG. S.A. (Hurlingham) |
+| Federico Salguero        |    OBSERVATORIO AGGO (La Plata)|
+| Eduardo Santos           | ELECTROCOMPONENTES S.A. (Buenos Aires) |
+| Pablo Sebastian Sisevich |    AUTOTROL S.A. (Buenos Aires)|
+
+====Presentaciones====
+Las siguientes presentaciones están disponibles para su consulta y uso:
+
+| {{ ::kicad_d1.jpg?direct&200|}} | {{ ::kicad_d2.jpg?direct&200|}} |
+|[[https://github.com/INTI-CMNB/Practicas-Curso-Kicad/blob/master/Materiales/Kicad-Intro-D1.pdf|Presentación  1]]| [[https://github.com/INTI-CMNB/Practicas-Curso-Kicad/blob/master/Materiales/Kicad-Intro-D2.pdf|Presentación  2]] |
+
+
+===Ejercicios modelo===
+|{{  ::curso_kicad_ej2a.jpg?direct&200  |}} | {{  ::curso_kicad_ej2b.jpg?direct&155  |}} |\\
+
+Los ejercicios forman parte del material, poseen licencia BSD y se encuentran en el siguiente repositorio Git:
+
+  $ git clone https://github.com/INTI-CMNB/Curso-KiCad-Intro
+
+===Ejercicios de los participantes ===
+
+{{::curso_kicad_2015_5.jpg?direct&300 |}} \\
+
+El curso posee una fuerte componente práctica, con asistencia permanente de los capacitadores. Para realizar las prácticas en tiempo y forma se les provee a los participantes una serie de archivos. Cada asistente debe tomar estos archivos e incorporarlos en sus diseños. Los diseños realizados por los participantes están disponibles en un repositorio Git-Hub:
+
+
+  $ git clone https://github.com/INTI-CMNB/Practicas-Curso-Kicad
+  
+  * Ver la carpeta Materiales/
+  * Ver la carpeta 2015_12_Ejercicios_Asistentes/
+  
+  
+  
+===Agenda Día 1===
+  * Presentación de KiCad.
+  *Características (ventajas y desventajas).
+  *Vista de las partes principales.
+  *Versiones, compilación, cambios relevantes.
+  *Flujo de archivos.
+  *Resumen de conceptos sobre diseño de PCB.
+  *Ejercicio 1. Flujo de trabajo en KiCad mientras se realiza un circuito mínimo.
+    * Administrador de proyectos.
+    * Editor de esquemáticos.
+    * Archivo netlist y asociación de footprints.
+    * Editor de PCB.
+    * Modificaciones al diseño.
+    * Generación de archivos Gerber.
+    * Visualización de archivos Gerber.
+    * Vista 3D.
+
+===Agenda Día 2===
+  * Introducción a Git e instalación de Git-Bash.
+  * Instalación, configuración y creación de un repositorio.
+  * Concepto de zonas y evolución simple de un archivo y clonar un repo.
+  * Concepto general de fetch y merge.
+  * Ejercicio 2: Profundizando el uso de KiCad. Se realiza un diseño de dos capas pero utilizando funciones más avanzadas de utilidad en circuitos multicapa.
+    * El archivo .gitignore
+    * Estructura de directorios de un proyecto.
+    * Editor de esquemáticos, hojas jerárquicas y etiquetas de jerarquía.
+    * Editor de símbolos, pautas y creación de un símbolo.
+    * El chequeo de reglas eléctricas en el esquemático y power flags.
+    * Etiquetas locales y buses.
+    * Campos adicionales de información de los componentes.
+    * Generación de listado de materiales completo (Plugins).
+    * Asociación de footprints. Problemática. 
+    * Operaciones con bloques en el esquemático.
+    * Editor de footprints. Creación de un componente nuevo.
+    * Editor de PCB. Cambios posteriores de footprints.
+    * Seguimiento con Git y TAGs de Git.
+    * Operaciones con bloques en el editor de PCB.
+    * Ruteo en dos capas.
+    * Áreas de cobre y zonas de exclusión.
+    * Verificaciones.
+    * Modelos 3D. Cómo obtenerlos y cómo aplicarlos prolijamente.
+    * Verificación cruzada de los ejercicios.
+ 
+ 
+===Agenda Día 3===
+  * Mover, renombrar y borrar archivos en Git.
+  * Conflictos en Git y su resolución.
+  * Resumen de comandos Git utilizados y para investigar (ramas, checkout, reset, etc.).
+  * Técnicas de trabajo grupal en un mismo diseño con KiCad.
+  * Ejercicio de Creación de un símbolo multiparte no intercambiable.
+  * Técnicas para símbolos complejos de muchas conexiones.
+  * Documentación: Rótulo y campos de información.
+  * Opciones para las bibliotecas de footprints y formatos soportados.
+  * Pautas para la creación de footprints.
+  * La Graphic Abstraction Layer de KiCad (GAL).
+  * Práctica: Opciones avanzadas del editor de footprint en modo GAL.
+  * Utilización de modos de visualización en modo GAL para diseño.
+  * Opciones de ruteo interactivo en modo GAL.
+  * Conceptos generales de stack-up.
+  * Conceptos generales de impedancia controlada.
+  * Ejemplos de cálculo de impedancia controlada.
+  * Uso de la calculadora de KiCad para impedancia controlada.
+  * Cupones de test.
+  * Práctica: Ruteo de par diferencial, ecualización de longitud y ecualización de fase.
+  * Reportes de taladrado.
+  * Prácticas optativas.
+  * Mención del auto router en KiCad, lectura de pcbs de Eagle y diseños multicapa disponibles realizados en KiCad.

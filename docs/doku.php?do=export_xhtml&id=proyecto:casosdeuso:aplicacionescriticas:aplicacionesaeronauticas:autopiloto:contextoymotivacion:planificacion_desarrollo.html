@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="proyecto,casosdeuso,aplicacionescriticas,aplicacionesaeronauticas,autopiloto,contextoymotivacion,planificacion_desarrollo"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo"/>
+<link rel="canonical" href="./doku.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion';var JSINFO = {"id":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo","namespace":"proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="diseno_e_implementacion_de_un_autopiloto_para_vehiculos_aereos_tripulados_y_no_tripulados">Diseño e Implementación de un Autopiloto para Vehículos Aéreos Tripulados y No Tripulados</h1>
+<div class="level1">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:contextoymotivacion:planificacion_desarrollo&amp;media=blanco.png.html" class="media" title="blanco.png"><img src="lib/exe/fetch.php%3Fw=10&amp;tok=881b07&amp;media=blanco.png" class="mediacenter" loading="lazy" title=" " alt=" " width="10" /></a>
+<img src="lib/exe/fetch.php%3Fw=300&amp;tok=0eff37&amp;media=proyecto:casosdeuso:aplicacionescriticas:aplicacionesaeronauticas:autopiloto:ciaapilot.png" class="mediaright" loading="lazy" alt="" width="300" />
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o e Implementaci\u00f3n de un Autopiloto para Veh\u00edculos A\u00e9reos Tripulados y No Tripulados&quot;,&quot;hid&quot;:&quot;diseno_e_implementacion_de_un_autopiloto_para_vehiculos_aereos_tripulados_y_no_tripulados&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-242&quot;} -->
+<h2 class="sectionedit2" id="planificacion_del_desarrollo">Planificación del desarrollo</h2>
+<div class="level2">
+
+<p>
+El proyecto Autopiloto está dividido en tres líneas de trabajo interrelacionadas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Desarrollo de CIAAPilot</div>
+</li>
+<li class="level1"><div class="li"> Ajuste del prototipo CIAA Safety al CIAAPilot </div>
+</li>
+<li class="level1"><div class="li"> Certificación del CIAAPilot</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Planificaci\u00f3n del desarrollo&quot;,&quot;hid&quot;:&quot;planificacion_del_desarrollo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;243-483&quot;} -->
+<h3 class="sectionedit3" id="desarrollo_del_ciaapilot">Desarrollo del CIAAPilot</h3>
+<div class="level3">
+
+<p>
+Esta línea de trabajo es la que se ocupa principalmente de los aspectos de desarrollo del autopiloto.
+Está dividido en cuatro sub-líneas de trabajos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Sistema</div>
+</li>
+<li class="level1"><div class="li"> Hardware</div>
+</li>
+<li class="level1"><div class="li"> Firmware</div>
+</li>
+<li class="level1"><div class="li"> Software</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="sistema">Sistema</h4>
+<div class="level4">
+
+<p>
+Esta línea tiene seis <em>work packages</em> (WP). Cada WP tiene un responsable, entradas y salidas (Ver <a href="https://gstr.ing.unrc.edu.ar/redmine" class="urlextern" target="_blank" title="https://gstr.ing.unrc.edu.ar/redmine" rel="ugc nofollow noopener">Redmine</a>).
+</p>
+<ul>
+<li class="level1"><div class="li"> WP-SYS-01: Requerimientos de sistema autopiloto - funcional (ver RTCA DO-325)</div>
+</li>
+<li class="level1"><div class="li"> WP-SYS-02: Requerimientos de sistema autopiloto - seguridad (ver SAE ARP 4761)</div>
+</li>
+<li class="level1"><div class="li"> WP-SYS-03: Diseño del sistema (SAE ARP 4754A)</div>
+</li>
+<li class="level1"><div class="li"> WP-SYS-04: Gestión de configuración</div>
+</li>
+<li class="level1"><div class="li"> WP-SYS-05: Verificación &amp; Validación</div>
+</li>
+<li class="level1"><div class="li"> WP-SYS-06: Condiciones de entorno (bancos de ensayo HIL/SIL)</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="hardware">Hardware</h4>
+<div class="level4">
+
+<p>
+Esta línea tiene 6 WP (Ver RTCA DO-254).
+</p>
+<ul>
+<li class="level1"><div class="li"> WP-HW-01: Adaptación del Módulo Procesador Safety (MPS)</div>
+</li>
+<li class="level1"><div class="li"> WP-HW-02: Desarrollo Módulo de Aplicación (MAAero)</div>
+</li>
+<li class="level1"><div class="li"> WP-HW-03: Desarrollo Módulo Fuente de Alimentación (MFA)</div>
+</li>
+<li class="level1"><div class="li"> WP-HW-04: Integración</div>
+</li>
+<li class="level1"><div class="li"> WP-HW-05: Gabinete</div>
+</li>
+<li class="level1"><div class="li"> WP-HW-06: Ensayos (bajo RTCA DO-160)</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="firmware">Firmware</h4>
+<div class="level4">
+
+<p>
+Esta línea tiene 3 WP (Ver RTCA DO-178C).
+</p>
+<ul>
+<li class="level1"><div class="li"> WP-FW-01: Porting GNAT <abbr title="GNU General Public License">GPL</abbr> for Bare Board ARM a MCU TI Hercules TMS570</div>
+</li>
+<li class="level1"><div class="li"> WP-FW-02: Desarrollo de drivers</div>
+</li>
+<li class="level1"><div class="li"> WP-FW-03: Testing MC/DC (Modified Condition/Decision Coverage)</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="software">Software</h4>
+<div class="level4">
+
+<p>
+Esta línea tiene 3 WP (Ver RTCA DO-178C).
+</p>
+<ul>
+<li class="level1"><div class="li"> WP-SW-01: Diseño del Programa Operacional de Vuelo</div>
+</li>
+<li class="level1"><div class="li"> WP-SW-02: Codificación en SPARK (Ada)</div>
+</li>
+<li class="level1"><div class="li"> WP-SW-03: Testing MC/DC (Modified Condition/Decision Coverage)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Desarrollo del CIAAPilot&quot;,&quot;hid&quot;:&quot;desarrollo_del_ciaapilot&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;484-2068&quot;} -->
+<h3 class="sectionedit4" id="ajuste_del_prototipo_ciaa_safety_al_ciaapilot">Ajuste del prototipo CIAA Safety al CIAAPilot</h3>
+<div class="level3">
+
+<p>
+Especificación de interoperabilidad entre IEC 61508 (CIAA Safety) y estándares aeronáuticos (CIAAPilot).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ajuste del prototipo CIAA Safety al CIAAPilot&quot;,&quot;hid&quot;:&quot;ajuste_del_prototipo_ciaa_safety_al_ciaapilot&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;2069-2234&quot;} -->
+<h3 class="sectionedit5" id="certificacion_del_ciaapilot">Certificación del CIAAPilot</h3>
+<div class="level3">
+
+<p>
+Procesos de certificación de acuerdo a ANAC y DIGAMC. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Certificaci\u00f3n del CIAAPilot&quot;,&quot;hid&quot;:&quot;certificacion_del_ciaapilot&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2235-&quot;} --></div>
+</body>
+</html>

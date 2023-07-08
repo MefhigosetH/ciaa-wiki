@@ -1,0 +1,125 @@
+===== Propósito, alcance, objetivos y requerimientos de la EDU-CIAA-NXP =====
+
+====  Propósito ====
+
+Los propósitos de la EDU-CIAA son:
+
+  * Proveer una plataforma de desarrollo moderna y económica basada en la CIAA que sirva a docentes y a estudiantes en los cursos de sistemas embebidos.
+  * Lograr una amplia inserción en el sistema educativo argentino.
+  * Realizar un aporte eficaz al desarrollo de vocaciones tempranas en electrónica, computación e informática.
+  * Demostrar que las universidades argentina son capaces de realizar un desarrollo colaborativo exitoso en el área de los sistemas embebidos, cumpliendo con requerimientos de tiempo y forma.
+
+==== Alcance ====
+
+El alcance del desarrollo de esta primera etapa de la EDU-CIAA es el siguiente:
+
+  * Diseño, fabricación y validación de una primera versión del hardware de la plataforma, basado en el diseño de la CIAA-NXP, pero con menores prestaciones que la CIAA, con el fin de reducir su costo y complejidad.
+  * Diseño, implementación y validación de una primera versión de un entorno de desarrollo integrado (IDE) específico, pensado para que sea accesible a estudiantes que abordan por primera vez este tipo de plataformas. 
+
+==== Objetivos ====
+
+Los siguientes son los objetivos propuestos para la EDU-CIAA:
+
+  * Implementar una versión de bajo costo de la CIAA pensada para la enseñanza Universitaria, Terciaria y Secundaria.
+  * Realizar el desarrollo en forma colaborativa entre los docentes universitarios miembros de la Red RUSE.
+  * Lograr que el costo final sea menor a los 50 dólares por unidad en lotes de fabricación de 100 unidades, considerando los componentes y el circuito impreso.
+  * Desarrollar el circuito impreso en dos capas y en un tamaño igual o menor al de la CIAA.
+  * Contar con 20 prototipos operativos para la fecha de realización del SASE2014 (13/08/2014).
+  * Realizar 10 talleres de formación sobre la EDU-CIAA durante el segundo semestre de 2014.
+  * Alcanzar a 100 docentes de la Red RUSE y a 50 docentes terciarios y secundarios con actividades de capacitación durante el segundo semestre de 2014.
+  * Lograr que la EDU-CIAA se utilice para dar clases universitarias en 30 unidades académicas, 20 escuelas secundarias y 5 escuelas terciarias durante el primer semestre de 2015.
+
+==== Requerimientos ====
+
+Los siguientes son los requerimientos adoptados para la EDU-CIAA:
+
+  * El sistema debe soportar el mismo firmware que la CIAA.
+  * La entorno de desarrollo integrado (IDE) debe ser una versión de más fácil manejo que el IDE de la CIAA.
+  * El sistema debe tener un pulsador de reset.
+  * El sistema debe tener el mismo microcontrolador que alguna de las versiones de la CIAA.
+  * El sistema debe tener un tamaño igual o menor al de la CIAA y estar diseñado en un PCB de dos capas.
+  * El sistema debe poder alimentarse mediante un puerto USB estándar.
+  * El sistema debe poseer un conector USB para programación y depuración desde una PC.
+  * El sistema debe tener conectividad mediante interfaz RS-485.	
+  * El sistema debe poseer conectores de expansión que incluyan los siguientes elementos del microcontrolador:
+    * i) interfaz RMII Ethernet		
+    * ii) Interfaz USB		
+    * iii) Interfaz CAN		
+    * iv)interfaz SPI		
+    * v) interfaz I2C		
+    * vi) salida D/A		
+    * vii) entradas A/D		
+  * El sistema debe tener cuatro Leds (RGB) que sean activados por el microcontrolador.			
+  * El sistema debe tener cuatro pulsadores conectados al microcontrolador.			
+  * El sistema debe tener un display de siete segmentos que sea controlado por el microcontrolador.
+
+==== Definición de módulos a incluir en la plataforma ====
+Aquí se encuentra una tabla detallando las razones por las cuáles se agregaron o quitaron a la EDU-CIAA módulos originalmente disponibles en la CIAA: 
+
+
+^ Módulo           ^  ¿Se incluye? ^ ¿Por qué?          ^ Observaciones                 ^
+| FUENTE           |       Sí  	   | Es mandatorio      | Se alimentará a través de USB |
+| CPU (LPC4337)	   |       Sí	   | Es mandatorio      |                               | 
+| JTAG	           |       Sí      | Para debugging     | Componentes montaje opcional  |
+| SDRAM (8MB)      |       No	   | Uso poco frecuente |                               |	
+| FLASH (4MB)      |       No	   | Uso poco frecuente |                               |		
+| EEPROM           |       No	   | Uso poco frecuente |                               |		
+| Entradas Analóg. |	   Sí	   | Uso habitual       | Sin front-end - pines en CON1 |
+| Salidas Analóg.  |	   Sí	   | Uso habitual       | Sin front-end - pines en CON1 |  
+| Entradas Optoac. |       No	   | Elevado costo      | Pines disponibles en CON1     |
+| Salidas Op.Drain |       No	   | Elevado costo      | Pines disponibles en CON1     |
+| Salidas Relay    |       No	   | Elevado costo      | Pines disponibles en CON1     |
+| RS485	           |       Sí      | Interconexionado   | Muy simple para armar redes   |
+| USB              |       Sí      | Habitual en PCs	|                               |
+| Ethernet         |      "Ní"	   | Elevado costo      | Pines disponibles en CON1     |
+| RS232	           |      "Ní"     | Obsoleto en PCs    | Pines disponibles en CON1     |
+| CAN              |      "Ní"	   | Uso poco frecuente | Pines disponibles en CON1     |		
+| microSD          |       No      | Ausente en LPC4337 |                               | 
+| Expansión SPI	   |       Sí      | Conectividad al uC	| Pines disponibles en CON1     | 
+| Expansión I2C	   |       Sí      | Conectividad al uC	| Pines disponibles en CON1     | 
+| Expansión GPIO   |       Sí      | Conectividad al uC	| Pines disponibles en CON1     | 
+| LEDs RGB x4      |       Sí      | P/práctica básica  |	                        |
+| Pulsadores x4    |       Sí      | P/práctica básica  |	                        |	
+| Int. Vaux 3.3V   |       Sí      | Uso habitual       | Tensión regulada del sistema  |
+| Int. Vaux 5V	   |       Sí      | Uso habitual       | Tensión de entrada al sistema |
+| Int. Vaux 24V	   |       No	   | Ausencia de 24V    |                               | 	
+
+
+==== Propuestas de nombre para la plataforma ====
+
+Entre el 22/05/14 y el 31/05/14 los más de 200 docentes universitarios que participan en la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse|Red RUSE]] propusieron un total de 15 posibles nombres para la versión educativa de la CIAA:
+  * CIAA-KIDS
+  * KIT RUSE1
+  * CIAA-STARTER
+  * CIAA-EDUCATIVA
+  * EDU-CIAA
+  * EDUCA-CIAA
+  * CIAA-Académica
+  * CIAA-INI
+  * CEAA
+  * CIAA-TINY
+  * CIAA-MICRO
+  * CIAA-NANO
+  * CIAA-RUSE
+  * CIAA-SE
+  * CIAA-VA
+
+==== Votación del nombre de la plataforma ====
+
+Entre el 01/06/14 y el 07/06/14 los Representantes Titulares de 45 Unidades Académicas miembros de la  [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse|Red RUSE]] asignaron 0, 1, 2 o 3 puntos a cada uno de los nombres propuestos para la plataforma, resultando de este modo elegido el nombre:
+
+  * **EDU-CIAA: 65 puntos**
+  * CIAA-RUSE: 59 puntos	 
+  * CIAA-EDUCATIVA: 51 puntos
+  * CIAA-Académica: 48 puntos	 
+  * CEAA: 36 puntos
+  * CIAA-NANO: 33 puntos
+  * EDUCA-CIAA: 31 puntos
+  * CIAA-MICRO: 31 puntos	 
+  * CIAA-STARTER: 33 puntos	
+  * CIAA-INI: 29 puntos	
+  * CIAA-SE: 27 puntos	 
+  * CIAA-VA: 22 puntos
+  * CIAA-TINY: 20 puntos	
+  * KIT RUSE1: 18 puntos	
+  * CIAA-KIDS: 11 puntos

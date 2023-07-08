@@ -1,0 +1,182 @@
+====== Tutorial de GIT ======
+
+Quien quiera realmente aprender GIT le recomendamos leer el libro oficial: [[http://git-scm.com/book/en/v2]]
+
+===== Descarga con GIT Shell (consola desde Windows) =====
+Trabajar con GIT implica hacerlo de manera automatizada y facilitar el trabajo colaborativo en el repositorio. Es indispensable si se va a colaborar con el proyecto, y no sólo hacer uso de él. Para hacerlo, se va a proceder a realizar una copia local del repositorio (Clonar), para ello se va a trabajar en una carpeta en 'C:\CIAA' de manera que no quede dentro de "Mis Documentos" (por defecto para GitHub) por los inconvenientes que a veces puede traer el caracter de espacio en los path de compilación.
+
+Para ello abrimos el GIT Shell instalado desde GitHub y hacemos lo siguiente:
+
+<code>
+cd /           ☜ Para ir al root, típicamente C:\
+mkdir CIAA     ☜ Creamos la carpeta CIAA
+cd CIAA        ☜ Accedemos a la carpeta CIAA
+</code>
+Este punto nuestro Path debería ser C:\CIAA>. Pasamos a clonar el repositorio
+<code>
+git clone --recursive https://github.com/ciaa/Firmware.git
+</code>
+
+Es importante no olvidar la opción //recursive//, ya que esta le indica a git que descargue los submódulos del repositorio.
+En caso de que no hayamos incluido la opción //recursive//, debemos ejecutar:
+<code>
+git submodule init
+git submodule update
+</code>
+
+Si todo anduvo bien, a continuación deberíamos ver cómo progresa la descarga del repositorio. Una vez finalizada la descarga podemos ingresar a la carpeta Firmware que se ha creado con la copia local del repositorio.
+ 
+<code>
+cd Firmware
+</code>
+  *Ver el contenido de la carpeta en consola (también ya puede usarse el explorador de windows normal porque está en nuesta PC!) listamos el directorio
+<code>
+ls            ☜ También podría usar el comando dir
+</code>
+
+Si todo anduvo bien veríamos algo como lo siguiente
+{{GIT_Firmware_Clone.png|Captura de los comandos mencionados.}}\\
+
+Por último, si el repositorio se ha actualizado y queremos actualizar también nuestra copia local con estos cambios, hay que hacer un 'pull' del mismo una vez que nos encontremos en el path nuestra copia local, para el ejemplo 'C:\CIAA\Firmware'
+<code>
+git pull
+</code>
+
+Para este ejemplo, como recién acabamos de hacer una copia local el repositorio se encuentra actualizado. Caso contrario se actualizará con los cambios.
+{{GIT_Firmware_Pull.png|Captura de los comandos mencionados.}}\\
+
+Si hicimos algún cambio en la copia local podemos ver los cambios mediante el comando status:
+
+<code>
+git status    ☜ Muestra los cambios en el repositorio
+</code>
+
+Cuando necesitemos volver a sincronizar nuestro repositorio local con el de la CIAA, deberemos hacer nuevamente un 'pull', pero si tenemos cambios hechos que entran en conflicto con la actualización, GIT nos avisará que antes de hacerla que debe indicarse qué se hace con los cambios. Si lo que hicimos fueron solamente pruebas que no importa **perder**, y sólo queremos tener nuevamente la última copia del repositorio descartamos los cambios mediantes el comando 'checkout':
+<code>
+git checkout -f         ☜ Fuerza a descartar los cambios
+</code>
+
+Ahora si podremos hacer un 'pull' del repositorio
+
+===== Descarga con GIT Shell (consola desde Linux) =====
+Antes de hacerlo en Linux debe estar seguro que tiene 'git' instalado en su sistema. De no tenerlo, deberá hacer
+<code>
+sudo apt-get install git    ☜ Descarga e instala 'git'
+</code>
+A continuación puede seguir el procedimiento mencionado para Windows, con las consideraciones del caso para crear/moverse por los directorios.
+
+====== Trabajando con branches ======
+
+El git tiene un branch llamado master que es el principal. Es una buena práctica que el master siempre este listo como para una posible release, por lo que salvo muy pequenios cambios siempre es importante trabajar en un branch.
+
+Para trabajar con branches lo primero es crear una:
+
+<code>
+git branch branchname
+</code>
+
+Luego se pueden listar los branches:
+
+<code>
+server:~/ciaa/Firmware2$ git branch -a
+* block
+  master
+  modbus
+  mybranch
+  new_osek_port
+  osek_mac
+</code>
+
+El * indica el branch actual.
+
+Para cambiar de branches será necesario hacer:
+
+<code>
+git checkout newbranch
+</code>
+
+===== Realizar cambios =====
+
+Es importante no realizar cambios en el master a menos de no estar MUY seguro de lo que uno hace. Por favor hacerlo siempre sobre branches.
+
+Luego de editar uno o más archivos se puede utilizar el siguiente commando para ver el estado rel repoitorio:
+
+<code>
+server:~/ciaa/Firmware2$ git status
+# On branch block
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   modules/posix/inc/ciaaBlockDevices.h
+#	modified:   modules/posix/src/ciaaBlockDevices.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	FLASH.BIN
+no changes added to commit (use "git add" and/or "git commit -a")
+</code>
+
+Para poder subir cambios al repo hay que primero utiliar el comando add
+
+<code>
+git add modules/posix/inc/ciaaBlockDevices.h
+</code>
+
+y luego 
+
+<code>
+git commit -m"#<ticket> commentario"
+</code>
+
+Es una buena práctica no solo indicar un comentario sino el ticket por la cual se realiza el cambio.
+
+para no tener que hacer git add con cada archivo se puede tambien utilizar
+
+<code>
+git add -u
+</code>
+
+Una vez realizados los cambios los mismos se encuentran en el repo pero únicamente en la copia local. Para subir los mismos al servidor se debe utilizar el comando
+
+<code>
+git push
+</code>
+
+en el caso de ser un nuevo branch hay que indicar que uno quiere subirlo al servidor:
+
+<code>
+git push origin branchname
+</code>
+
+====== Trabajar sobre una release ======
+A la hora de llevar a cabo trabajos o proyectos utilizando como plataforma el CIAA-Firmware se recomienda trabajar con la última release y no sobre la rama master del repositorio.
+
+Las releases se identifican con etiquetas o tags. Para conocerlas se debe ejecutar:
+
+<code>
+server:~/ciaa/Firmware$ git tag
+0.0.1
+0.2.0
+0.3.0
+0.3.0-rc1
+0.3.0-rc2
+0.4.0
+0.4.1
+0.5.0
+0.6.0
+0.6.1
+0.7.0-alpha
+1.0.0
+KSKD_1.0.2
+</code>
+
+Suponiendo que la última release correponde al tag 1.0.0 (como sucede en este caso), se procede de la siguiente manera:
+
+<code>
+git checkout tags/1.0.0
+git submodules update
+</code>
+
+Listo! Todo configurado para trabajar sobre la última versión del CIAA-Firmware.

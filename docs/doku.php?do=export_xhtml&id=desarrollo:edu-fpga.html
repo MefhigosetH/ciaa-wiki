@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-fpga</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-fpga"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-fpga&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=desarrollo"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-fpga"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-fpga.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo';var JSINFO = {"id":"desarrollo:edu-fpga","namespace":"desarrollo","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#edu-ciaa-fpga">EDU-CIAA-FPGA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#como_navegar_por_esta_pagina">Cómo navegar por esta página</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#que_es_una_fpga">¿Qué es una FPGA?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#que_problematicas_existen_en_la_ensenanza_de_fpga">¿Qué problemáticas existen en la enseñanza de FPGA?</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#que_es_el_proyecto_edu-ciaa-fpga">¿Qué es el proyecto EDU-CIAA-FPGA?</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#edu-fpga">EDU-FPGA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#resumen">Resumen</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#bloques_funcionales">Bloques funcionales</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#estado_actual">Estado actual</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-fpga.html#imagenes_de_la_edu-fpga_en_funcionamiento">Imágenes de la EDU-FPGA en funcionamiento</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="edu-ciaa-fpga">EDU-CIAA-FPGA</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;EDU-CIAA-FPGA&quot;,&quot;hid&quot;:&quot;edu-ciaa-fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-29&quot;} -->
+<h2 class="sectionedit2" id="como_navegar_por_esta_pagina">Cómo navegar por esta página</h2>
+<div class="level2">
+
+<p>
+1. Si estás dando tus primeros pasos en el mundo FPGA, podés empezar a leer desde <a href="./doku.php%3Fid=desarrollo:edu-fpga.html#que_es_una_fpga" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#que_es_una_fpga" rel="ugc nofollow noopener">ésta introducción al tema</a>
+</p>
+
+<p>
+2. Si ya tenés experiencia en FPGA pero querés conocer la plataforma EDU-CIAA-FPGA, podés ir directamente a la <a href="./doku.php%3Fid=desarrollo:edu-fpga.html#edu-fpga" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#edu-fpga" rel="ugc nofollow noopener">introducción al proyecto</a>
+</p>
+
+<p>
+3. Si ya conocés la plataforma pero querés saber en qué andamos, podés revisar el resumen del <a href="./doku.php%3Fid=desarrollo:edu-fpga.html#estado_actual" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga#estado_actual" rel="ugc nofollow noopener">estado actual del proyecto</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;C\u00f3mo navegar por esta p\u00e1gina&quot;,&quot;hid&quot;:&quot;como_navegar_por_esta_pagina&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;30-720&quot;} -->
+<h3 class="sectionedit3" id="links_de_interes">Links de interés</h3>
+<div class="level3">
+
+<p>
+ * Wiki con material didáctico e instalación de herramientas: <a href="https://bit.ly/EDUFPGAwiki" class="urlextern" target="_blank" title="https://bit.ly/EDUFPGAwiki" rel="ugc nofollow noopener">https://bit.ly/EDUFPGAwiki</a>
+</p>
+
+<p>
+ * Repositorio abierto de ejemplos: <a href="https://gitlab.com/educiaafpga/ejemplos" class="urlextern" target="_blank" title="https://gitlab.com/educiaafpga/ejemplos" rel="ugc nofollow noopener">https://gitlab.com/educiaafpga/ejemplos</a>
+</p>
+
+<p>
+ * Canal de Youtube: <a href="http://bit.ly/EDUFPGAyoutube" class="urlextern" target="_blank" title="http://bit.ly/EDUFPGAyoutube" rel="ugc nofollow noopener">http://bit.ly/EDUFPGAyoutube</a>
+</p>
+
+<p>
+ * Repositorio abierto de hardware: <a href="https://bit.ly/EDUFPGAHardware" class="urlextern" target="_blank" title="https://bit.ly/EDUFPGAHardware" rel="ugc nofollow noopener">https://bit.ly/EDUFPGAHardware</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Links de inter\u00e9s&quot;,&quot;hid&quot;:&quot;links_de_interes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;721-1037&quot;} -->
+<h2 class="sectionedit4" id="que_es_una_fpga">¿Qué es una FPGA?</h2>
+<div class="level2">
+
+<p>
+Las FPGA (Field-Programmable Gate Array) son dispositivos semiconductores digitales que pueden reconfigurarse luego de manufacturados, en contraposición a los circuitos integrados ordinarios que están limitados a una función específica impuesta por su diseño. Además, su estructura interna compuesta por bloques lógicos interconectables les provee mayor flexibilidad y poder de procesamiento que los microcontroladores o procesadores convencionales.
+</p>
+
+<p>
+Esto permite que los productos implementados con FPGAs posean varias ventajas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Pueden variarse sus capacidades y funcionalidad en campo.</div>
+</li>
+<li class="level1"><div class="li"> Puede reutilizarse el mismo hardware variando la descripción del circuito implementado</div>
+</li>
+<li class="level1"><div class="li"> Son muy apropiadas para la implementación de procesamiento en paralelo, a diferencia de los microprocesadores</div>
+</li>
+<li class="level1"><div class="li"> Pueden utilizarse complementariamente con otros sistemas digitales, por ejemplo, microprocesadores ya sea en la misma pastilla o no</div>
+</li>
+</ul>
+
+<p>
+Algunos de los campos de aplicación de la lógica programable son, entre otros:
+</p>
+<ul>
+<li class="level1"><div class="li"> Procesamiento de Señales Digitales (DSP)</div>
+</li>
+<li class="level1"><div class="li"> Radio Definida por Software (SDR)</div>
+</li>
+<li class="level1"><div class="li"> Prototipado de circuitos integrados</div>
+</li>
+<li class="level1"><div class="li"> Diagnostico medico</div>
+</li>
+<li class="level1"><div class="li"> Instrumentación científica</div>
+</li>
+<li class="level1"><div class="li"> Procesamiento de audio, vídeo e imágenes</div>
+</li>
+<li class="level1"><div class="li"> Criptografia</div>
+</li>
+<li class="level1"><div class="li"> Computación de alto desempeño</div>
+</li>
+<li class="level1"><div class="li"> Sistemas de comunicaciones</div>
+</li>
+<li class="level1"><div class="li"> Sistemas espaciales o nucleares de alta confiabilidad</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 es una FPGA?&quot;,&quot;hid&quot;:&quot;que_es_una_fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1038-2466&quot;} -->
+<h2 class="sectionedit5" id="que_problematicas_existen_en_la_ensenanza_de_fpga">¿Qué problemáticas existen en la enseñanza de FPGA?</h2>
+<div class="level2">
+
+<p>
+Dentro de los alcances de la formación del ingeniero electrónico suele estar el aprendizaje de los lenguajes de descripción de hardware (por ejemplo, VHDL, Verilog, etc.) que se utilizan para diseñar y describir hardware digital que luego se sintetizará y se utilizará para configurar las FPGAs.
+</p>
+
+<p>
+No obstante, para completar el ciclo de aprendizaje resulta necesario no sólo aprender el lenguaje a través de la implementación y simulación de circuitos, sino instanciarlos efectivamente sobre el hardware para estudiar sus implicancias prácticas.
+</p>
+
+<p>
+Actualmente, la enseñanza de lógica programable constituye un área de vacancia en muchas carreras de Ingeniería Electrónica. Se trata de una temática difícil de abordar en niveles iniciales de la carrera, y más aún considerando la falta de herramientas a nivel local (kits de desarrollo a precios asequibles, material didáctico para formación inicial, ejemplos de aplicación documentados, proyectos de colaboración abierta, etc.).
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 problem\u00e1ticas existen en la ense\u00f1anza de FPGA?&quot;,&quot;hid&quot;:&quot;que_problematicas_existen_en_la_ensenanza_de_fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2467-3538&quot;} -->
+<h2 class="sectionedit6" id="que_es_el_proyecto_edu-ciaa-fpga">¿Qué es el proyecto EDU-CIAA-FPGA?</h2>
+<div class="level2">
+
+<p>
+<strong>EDU-CIAA-FPGA</strong> es una plataforma orientada a la divulgación y enseñanza de las FPGA y los lenguajes de descripción de hardware basada en tres pilares fundamentales:
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 es el proyecto EDU-CIAA-FPGA?&quot;,&quot;hid&quot;:&quot;que_es_el_proyecto_edu-ciaa-fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3539-3760&quot;} -->
+<h3 class="sectionedit7" id="hardware_libre_y_abierto_a_la_comunidad_edu-ciaa-fpga">1. Hardware libre y abierto a la comunidad (EDU-CIAA-FPGA)</h3>
+<div class="level3">
+
+<p>
+La <strong>EDU-CIAA-FPGA</strong> o <strong>EDU-FPGA</strong> es una placa diseñada por el Grupo de Investigación y Desarrollo de Sistemas Embebidos (ASE) de la UTN FR Haedo con el objetivo de proveer una herramienta abierta y de bajo costo con la cual cualquier persona pueda dar sus primeros pasos en el uso de FPGAs.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;1. Hardware libre y abierto a la comunidad (EDU-CIAA-FPGA)&quot;,&quot;hid&quot;:&quot;hardware_libre_y_abierto_a_la_comunidad_edu-ciaa-fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;3761-4127&quot;} -->
+<h3 class="sectionedit8" id="plataforma_de_ejemplos_documentos_y_herramientas_libres">2. Plataforma de ejemplos, documentos y herramientas libres</h3>
+<div class="level3">
+
+<p>
+Además, de los recursos de hardware, el proyecto abarca una amplia collección de material didáctico, referencias y herramientas para el desarrollo de proyectos:
+</p>
+<ol>
+<li class="level1"><div class="li"> Una <a href="https://gitlab.com/RamadrianG/wiki---fpga-para-todos/-/wikis/home" class="urlextern" target="_blank" title="https://gitlab.com/RamadrianG/wiki---fpga-para-todos/-/wikis/home" rel="ugc nofollow noopener">Wiki</a> con información detallada y ejemplos sobre lenguajes de descripción de hardware (VHDL y Verilog), conceptos básicos de diseño digital (descripción, simulación y síntesis) y uso de herramientas libres para programar la EDU-FPGA.</div>
+</li>
+<li class="level1"><div class="li"> Un Repositorio de Ejemplos y proyectos de todo tipo, en constante crecimiento y con la documentación correspondiente a cada ejemplo (en preparación a liberarse en el mes de junio de 2020)</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;2. Plataforma de ejemplos, documentos y herramientas libres&quot;,&quot;hid&quot;:&quot;plataforma_de_ejemplos_documentos_y_herramientas_libres&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;4128-4876&quot;} -->
+<h3 class="sectionedit9" id="red_nacional_de_colaboradores_revisores_y_usuarios">3. Red nacional de colaboradores, revisores y usuarios</h3>
+<div class="level3">
+
+<p>
+Para llevar adelante este desarrollo se realizó una encuesta entre especialistas, docentes y usuarios de FPGA para conocer sus expectativas, preferencias, sugerencias y opiniones. Además, muchos de estos interesados colaboraron activamente aportando sugerencias y opiniones para el desarrollo de la plataforma. Estos profesionales pertenecen a diferentes universidades, instituciones y empresas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Universidad Tecnológica Nacional (UTN) - Buenos Aires</div>
+</li>
+<li class="level1"><div class="li"> UTN - Bahía Blanca</div>
+</li>
+<li class="level1"><div class="li"> UTN - San Nicolás</div>
+</li>
+<li class="level1"><div class="li"> Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)</div>
+</li>
+<li class="level1"><div class="li"> Universidad Nacional de San Martín (UNSAM)</div>
+</li>
+<li class="level1"><div class="li"> Instituto Nacional de Tecnología Industrial (INTI)</div>
+</li>
+<li class="level1"><div class="li"> Instituto de Investigaciones Científicas y Técnicas para la Defensa (CITEDEF)</div>
+</li>
+<li class="level1"><div class="li"> Satellogic</div>
+</li>
+<li class="level1"><div class="li"> Jotatec</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;3. Red nacional de colaboradores, revisores y usuarios&quot;,&quot;hid&quot;:&quot;red_nacional_de_colaboradores_revisores_y_usuarios&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;4877-5733&quot;} -->
+<h3 class="sectionedit10" id="desarrolladores">4. Desarrolladores</h3>
+<div class="level3">
+
+<p>
+La placa y propuesta educativa fue desarrollada integralmente por el Grupo de Aplicaciones en Sistemas Embebidos de la Universidad Tecnológica Nacional Facultad Regional Haedo:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Coordinación general:</strong> Mg. Ing. Facundo Larosa </div>
+</li>
+<li class="level1"><div class="li"> <strong>Hardware:</strong> Ing. Martín Heredia </div>
+</li>
+<li class="level1"><div class="li"> <strong>Wiki y herramientas:</strong> Ing. Ramiro Ghignone </div>
+</li>
+<li class="level1"><div class="li"> <strong>Ejemplos de código:</strong> Sr. Federico Vazquez Saraullo, Sr. Hernán Mendes Gouveia, Sr. Martín Fernández.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;4. Desarrolladores&quot;,&quot;hid&quot;:&quot;desarrolladores&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;5734-6202&quot;} -->
+<h1 class="sectionedit11" id="edu-fpga">EDU-FPGA</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;EDU-FPGA&quot;,&quot;hid&quot;:&quot;edu-fpga&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;6203-6226&quot;} -->
+<h2 class="sectionedit12" id="resumen">Resumen</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:logo_3.png.html" class="media" title="desarrollo:edu_fpga:logo_3.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:logo_3.png" class="media" loading="lazy" title="Logo" alt="Logo" /></a>
+</p>
+
+<p>
+Como se explicó anteriormente, la placa <strong>EDU-FPGA</strong> fue diseñada con tres objetivos fundamentales en mente: <em>bajo costo, flexibilidad y facilidad de uso</em>. Está orientada a la enseñanza en nivel secundario, terciario y universitario, y también para cualquier persona interesada en adentrarse en el mundo FPGA.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resumen&quot;,&quot;hid&quot;:&quot;resumen&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;6227-6606&quot;} -->
+<h2 class="sectionedit13" id="bloques_funcionales">Bloques funcionales</h2>
+<div class="level2">
+
+<p>
+La placa se basa en una FPGA <a href="http://www.latticesemi.com/iCE40" class="urlextern" target="_blank" title="http://www.latticesemi.com/iCE40" rel="ugc nofollow noopener">Lattice iCE40 HX4K</a> a la cual se agregaron los minimos componentes necesarios para su funcionamiento y fácil utilización:
+</p>
+<ol>
+<li class="level1"><div class="li"> Memoria flash para almacenar la configuración de la placa</div>
+</li>
+<li class="level1"><div class="li"> Interfaz FTDI para comunicar la placa con la PC mediante USB</div>
+</li>
+<li class="level1"><div class="li"> Pulsadores y LEDs incorporados para probar ejemplos sencillos sin necesidad de componentes externos</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bloques funcionales&quot;,&quot;hid&quot;:&quot;bloques_funcionales&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:13,&quot;range&quot;:&quot;6607-7062&quot;} -->
+<h3 class="sectionedit14" id="diagrama_en_bloques_de_la_plataforma">Diagrama en bloques de la plataforma</h3>
+<div class="level3">
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:bloques.png.html" class="media" title="desarrollo:edu_fpga:bloques.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:bloques.png" class="media" loading="lazy" title="Diagrama en Bloques" alt="Diagrama en Bloques" /></a>
+</p>
+
+</div>
+
+<h4 id="componentes_de_la_placa">Componentes de la placa</h4>
+<div class="level4">
+
+<p>
+Como se mencionó antes, la FPGA elegida como núcleo de la plataforma es la <a href="http://www.latticesemi.com/iCE40" class="urlextern" target="_blank" title="http://www.latticesemi.com/iCE40" rel="ugc nofollow noopener">Lattice ICE40 HX4K TQ144</a>, la cual posee las siguientes especificaciones:
+</p>
+<div class="table sectionedit15"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"><strong>Lattice ICE40 HX4K TQ144</strong>    </th><th class="col1"><strong>Datos</strong></th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">Celdas Lógicas                  </td><td class="col1 leftalign">3520     </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">Bloques de Memoria RAM de 4Kbits</td><td class="col1 leftalign">RAM 20   </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">Memoria Total                   </td><td class="col1 leftalign">80 Kbit  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign">Phase Locking Loops (PLL)       </td><td class="col1 leftalign">2        </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign">Bloques DSP                     </td><td class="col1 leftalign">No       </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign">Pines E/S                       </td><td class="col1 leftalign">95       </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign">Pares Diferenciales E/S         </td><td class="col1 leftalign">12       </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign">Encapsulado                     </td><td class="col1 leftalign">TQ144    </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:15,&quot;range&quot;:&quot;7389-7794&quot;} -->
+<p>
+Al igual que la mayor parte de las FGPA, la Lattice ICE40 HX4K carece de memoria no volátil interna para almacenar su configuración. Por lo tanto, es necesario agregar una memoria flash que cumpla esta función. A tal fin, la EDU-FPGA v1.2 posee una memoria flash SPI <a href="https://www.winbond.com/resource-files/w25x40cl_f%2020140325.pdf" class="urlextern" target="_blank" title="https://www.winbond.com/resource-files/w25x40cl_f%2020140325.pdf" rel="ugc nofollow noopener">WinBond W25X40CL</a> con las siguientes características:
+</p>
+<div class="table sectionedit16"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"><strong>WinBond W25X40CL</strong>    </th><th class="col1 leftalign"><strong>Datos</strong>  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">Tensión de Alimentación </td><td class="col1">2.3 a 3.6 V</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">Interfaz de Comunicación</td><td class="col1 leftalign">SPI        </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">Frecuencia de Trabajo   </td><td class="col1 leftalign">104 <abbr title="Megahertz">MHz</abbr>    </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign">Capacidad               </td><td class="col1 leftalign">4 MBit     </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:16,&quot;range&quot;:&quot;8191-8388&quot;} -->
+<p>
+La interfaz de configuración entre el conector USB que utiliza la placa para conectarse a la PC y la conexión SPI de la memoria flash y la FPGA se implementa a través de un chip FTDI <a href="https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" class="urlextern" target="_blank" title="https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" rel="ugc nofollow noopener">FT2232H</a>.
+</p>
+
+<p>
+Finalmente, se incluyeron dos reguladores lineales de la serie <a href="https://www.st.com/en/power-management/ld1117.html" class="urlextern" target="_blank" title="https://www.st.com/en/power-management/ld1117.html" rel="ugc nofollow noopener">LD1117</a> para proveer las tensiones de alimentación necesarias para los componentes:
+</p>
+<div class="table sectionedit17"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"><strong>Regulador</strong></th><th class="col1"><strong>Tensión</strong></th><th class="col2 leftalign"><strong>Alimenta a</strong>                              </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">LD1117S12    </td><td class="col1 leftalign">1.2 V      </td><td class="col2 leftalign">Núcleo de la FPGA                           </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign">LD1117S33    </td><td class="col1 leftalign">3.3 V      </td><td class="col2">E/S de la FPGA, memoria flash, interfaz FTDI</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:17,&quot;range&quot;:&quot;8866-9086&quot;} -->
+</div>
+
+<h4 id="perifericos_y_pines_de_e_s">Periféricos y pines de E/S</h4>
+<div class="level4">
+
+<p>
+La placa cuenta con un total de <strong>49 pines disponibles de entrada/salida de propósito general</strong> (GPIO)conectados a los 4 bancos de E/S de la FPGA iCE40. Esta gran cantidad de conexiones disponibles le ofrece al usuario innumerables posibilidades, contribuyendo a la flexibilidad y escalabilidad de la plataforma.
+</p>
+
+<p>
+Los pines de la FPGA trabajan a <strong>3.3 V</strong> y pueden manejar corrientes de hasta <strong>6mA</strong>. No todos los pines de la FPGA están conectados; aquellos pines accesibles en cada banco son:
+</p>
+<div class="table sectionedit18"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"><strong>Banco E/S de la FPGA</strong></th><th class="col1 leftalign"><strong>Pines accesibles</strong>                    </th><th class="col2"><strong>Cantidad total</strong></th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">Banco 0                 </td><td class="col1">122, 124, 125, 128-130, 134-139, 141-144</td><td class="col2 leftalign">16                </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign">Banco 1                 </td><td class="col1 leftalign">79-85, 95-99, 104-107                   </td><td class="col2 leftalign">16                </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">Banco 2                 </td><td class="col1 leftalign">37                                      </td><td class="col2 leftalign">1                 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign">Banco 3                 </td><td class="col1 leftalign">7-12, 15-24                             </td><td class="col2 leftalign">16                </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign">                        </td><td class="col1 leftalign"><strong>TOTAL</strong>                               </td><td class="col2 leftalign"><strong>49</strong>            </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:18,&quot;range&quot;:&quot;9623-10144&quot;} -->
+<p>
+Por otro lado, la placa cuenta con un oscilador de cristal a 12 <abbr title="Megahertz">MHz</abbr>, 4 pulsadores y 4 luces LEDs que sirven para para agilizar el desarrollo y ensayo de prototipos sin necesidad de conectar componentes adicionales. Estos elementos están conectados a los siguientes pines de la FPGA:
+</p>
+<div class="table sectionedit19"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"><strong>Componente</strong></th><th class="col1"><strong>Pin de la FPGA</strong></th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">Cristal 12 <abbr title="Megahertz">MHz</abbr></td><td class="col1 leftalign">94                </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign">LED Verde     </td><td class="col1 leftalign">1                 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">LED Rojo      </td><td class="col1 leftalign">2                 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign">LED Amarillo  </td><td class="col1 leftalign">3                 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign">LED Azul      </td><td class="col1 leftalign">4                 </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign">Pulsadores    </td><td class="col1 leftalign">31, 32, 33 y 34   </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:19,&quot;range&quot;:&quot;10431-10682&quot;} -->
+<p>
+<a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf" rel="ugc nofollow noopener">Este diagrama</a> muestra la placa y su distribución de pines de E/S.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Diagrama en bloques de la plataforma&quot;,&quot;hid&quot;:&quot;diagrama_en_bloques_de_la_plataforma&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:14,&quot;range&quot;:&quot;7063-10844&quot;} -->
+<h2 class="sectionedit20" id="estado_actual">Estado actual</h2>
+<div class="level2">
+
+<p>
+<strong>LA EDU-CIAA-FPGA v1.2 YA ESTÁ A LA VENTA NUEVAMENTE !!!</strong>
+</p>
+
+<p>
+Al igual que la serie anterior, la producción y comercialización de la nueva tanda de placas está a cargo de la empresa <a href="http://www.outsourcesrl.com/" class="urlextern" target="_blank" title="http://www.outsourcesrl.com/" rel="ugc nofollow noopener">Outsource SRL</a>. Podés comprar tu EDU-CIAA-FPGA a través de MercadoShops en el siguiente link:
+</p>
+
+<p>
+<a href="https://outsource.mercadoshops.com.ar/MLA-1134715781-placa-desarrollo-edu-fpga-lattice-ice40hx4k-_JM" class="urlextern" target="_blank" title="https://outsource.mercadoshops.com.ar/MLA-1134715781-placa-desarrollo-edu-fpga-lattice-ice40hx4k-_JM" rel="ugc nofollow noopener">https://outsource.mercadoshops.com.ar/MLA-1134715781-placa-desarrollo-edu-fpga-lattice-ice40hx4k-_JM</a>
+</p>
+
+<p>
+—
+</p>
+
+<p>
+Se han diseñado y producido dos versiones de la placa, las cuales pueden verse en la siguiente imagen : la <strong>EDU-FPGA v1.0</strong> (<em>a la izquierda</em>) y la <strong>EDU-FPGA v1.2</strong> (<em>a la derecha</em>).
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:versiones.jpeg.html" class="media" title="desarrollo:edu_fpga:versiones.jpeg"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:versiones.jpeg" class="media" loading="lazy" title="Versiones" alt="Versiones" /></a>
+</p>
+
+<p>
+Ambas fueron diseñadas por el Grupo de Aplicaciones en Sistemas Embebidos (ASE) de la <a href="http://www.frh.utn.edu.ar/cms/" class="urlextern" target="_blank" title="http://www.frh.utn.edu.ar/cms/" rel="ugc nofollow noopener">Universidad Tecnológica Nacional - Facultad Regional Haedo</a>. La versión 1.0 fue fabricada por el Grupo de Soldadura SMD de la misma facultad, mientras que la 1.2 fue fabricada por la empresa <a href="http://www.outsourcesrl.com/" class="urlextern" target="_blank" title="http://www.outsourcesrl.com/" rel="ugc nofollow noopener">Outsource</a>. Esta última versión incorpora algunas mejoras tales como pulsadores SMD y modelos más recientes de cristal y memoria.
+</p>
+
+<p>
+Agradecemos la colaboración y revisión de los ingenieros Juan Manuel Cruz (Grupo Hasar, UTN FRBA, FIUBA), Nicolás Dassieu Blanchet (JOTATEC), Rodrigo Melo (INTI) y Christian Galasso (UTN-FRBB) por las sugerencias, revisión y aportes que realizaron durante todo el proceso de diseño y fabricación de los primeros prototipos.
+</p>
+
+<p>
+Vale destacar que los PCB fueron desarrollados en base a las normas <a href="http://www-eng.lbl.gov/~shuman/NEXT/CURRENT_DESIGN/TP/MATERIALS/IPC-2221A(L).pdf" class="urlextern" target="_blank" title="http://www-eng.lbl.gov/~shuman/NEXT/CURRENT_DESIGN/TP/MATERIALS/IPC-2221A(L).pdf" rel="ugc nofollow noopener">IPC 2221A</a> e <a href="https://www.ipc.org/TOC/IPC-7351.pdf" class="urlextern" target="_blank" title="https://www.ipc.org/TOC/IPC-7351.pdf" rel="ugc nofollow noopener">IPC 7351</a> para mejorar su manufacturabilidad.
+</p>
+
+<p>
+El repositorio de Hardware del proyecto puede encontrarse en <a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA" rel="ugc nofollow noopener">este enlace</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Estado actual&quot;,&quot;hid&quot;:&quot;estado_actual&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:20,&quot;range&quot;:&quot;10845-12737&quot;} -->
+<h3 class="sectionedit21" id="diseno_del_diagrama_esquematico">Diseño del diagrama esquemático</h3>
+<div class="level3">
+
+<p>
+Herramienta usada para el desarrollo (KiCAD), descarga en PDF de:
+</p>
+<ol>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/schematic.pdf" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/schematic.pdf" rel="ugc nofollow noopener">Esquematico (v1.2)</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Pinout/Pinout%20EDU%20FPGA.pdf" rel="ugc nofollow noopener">Diagrama pinout (v1.2)</a></div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Dise\u00f1o del diagrama esquem\u00e1tico&quot;,&quot;hid&quot;:&quot;diseno_del_diagrama_esquematico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:21,&quot;range&quot;:&quot;12738-13080&quot;} -->
+<h3 class="sectionedit22" id="listado_de_materiales">Listado de materiales</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/BOM/BOM.ods" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/BOM/BOM.ods" rel="ugc nofollow noopener">Descarga de BOM (v1.2) en formato ods</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Listado de materiales&quot;,&quot;hid&quot;:&quot;listado_de_materiales&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:22,&quot;range&quot;:&quot;13081-13240&quot;} -->
+<h3 class="sectionedit23" id="placa_de_circuito_impreso">Placa de Circuito Impreso</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/Gerbers" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/EDU-FPGA/Schematic/Gerbers" rel="ugc nofollow noopener">Gerbers de fabricacion</a></div>
+</li>
+</ul>
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Placa de Circuito Impreso&quot;,&quot;hid&quot;:&quot;placa_de_circuito_impreso&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:23,&quot;range&quot;:&quot;13241-13391&quot;} -->
+<h3 class="sectionedit24" id="gabinete_impreso_en_3d_para_la_placa">Gabinete impreso en 3D para la placa</h3>
+<div class="level3">
+
+<p>
+En la UTN Facultad Regional Paraná se desarrolló este gabinete impreso 3D que le queda genial ! 
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Ftok=6dd05c&amp;media=https:%252F%252Fgitlab.com%252Flabinformatica%252Fedu-ciaa-fpga-case%252F-%252Fraw%252Fmaster%252Ffoto_02.jpg" class="media" title="https://gitlab.com/labinformatica/edu-ciaa-fpga-case/-/raw/master/foto_02.jpg"><img src="lib/exe/fetch.php%3Ftok=6dd05c&amp;media=https:%252F%252Fgitlab.com%252Flabinformatica%252Fedu-ciaa-fpga-case%252F-%252Fraw%252Fmaster%252Ffoto_02.jpg" class="media" loading="lazy" title="Gabinete_3D" alt="Gabinete_3D" /></a>
+</p>
+
+<p>
+En <a href="https://gitlab.com/labinformatica/edu-ciaa-fpga-case" class="urlextern" target="_blank" title="https://gitlab.com/labinformatica/edu-ciaa-fpga-case" rel="ugc nofollow noopener">este repo</a> se puede acceder a los archivos de diseño.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Gabinete impreso en 3D para la placa&quot;,&quot;hid&quot;:&quot;gabinete_impreso_en_3d_para_la_placa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:24,&quot;range&quot;:&quot;13392-13749&quot;} -->
+<h1 class="sectionedit25" id="imagenes_de_la_edu-fpga_en_funcionamiento">Imágenes de la EDU-FPGA en funcionamiento</h1>
+<div class="level1">
+<blockquote><div class="no">
+ Probando pulsadores</div></blockquote>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:prueba_1.gif.html" class="media" title="desarrollo:edu_fpga:prueba_1.gif"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:prueba_1.gif" class="media" loading="lazy" title=" Pulsador" alt=" Pulsador" /></a>
+</p>
+<blockquote><div class="no">
+ Blinky</div></blockquote>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:prueba_2.gif.html" class="media" title="desarrollo:edu_fpga:prueba_2.gif"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:prueba_2.gif" class="media" loading="lazy" title=" Blinky" alt=" Blinky" /></a>
+</p>
+<blockquote><div class="no">
+ Modulación SPWM trifásica</div></blockquote>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-fpga&amp;media=desarrollo:edu_fpga:edufpga_spwm3_1.gif.html" class="media" title="desarrollo:edu_fpga:edufpga_spwm3_1.gif"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu_fpga:edufpga_spwm3_1.gif" class="media" loading="lazy" title=" SPWM" alt=" SPWM" /></a>
+</p>
+<hr />
+
+<p>
+<a href="lib/exe/fetch.php%3Ftok=498485&amp;media=http:%252F%252Fwww.frh.utn.edu.ar%252Fstatic%252Fimg%252Flogo-utn.jpg" class="media" title="http://www.frh.utn.edu.ar/static/img/logo-utn.jpg"><img src="lib/exe/fetch.php%3Ftok=498485&amp;media=http:%252F%252Fwww.frh.utn.edu.ar%252Fstatic%252Fimg%252Flogo-utn.jpg" class="media" loading="lazy" title=" UTN-FRH" alt=" UTN-FRH" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Im\u00e1genes de la EDU-FPGA en funcionamiento&quot;,&quot;hid&quot;:&quot;imagenes_de_la_edu-fpga_en_funcionamiento&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:25,&quot;range&quot;:&quot;13750-&quot;} --></div>
+</body>
+</html>

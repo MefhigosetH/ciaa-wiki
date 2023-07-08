@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-pwm"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_pwmclase_pwm">Soporte PWM: Clase PWM</h1>
+<div class="level1">
+<pre class="code">import pyb
+
+pyb.PWM.set_frequency(1000)
+
+out0 = pyb.PWM(0)
+out0.duty_cycle(50) # 50%
+print(&quot;Duty cycle :&quot;+str(out0.duty_cycle()))
+
+out1= pyb.PWM(1)
+out1.duty_cycle(25)
+
+out10= pyb.PWM(10)
+out10.duty_cycle(75)
+
+while True:
+        pyb.delay(1000)
+        </pre>
+
+<p>
+Salidas de PWM disponibles: 0 a 10
+</p>
+<ul>
+<li class="level1"><div class="li"> 0: GPIO_2</div>
+</li>
+<li class="level1"><div class="li"> 1: GPIO_8</div>
+</li>
+<li class="level1"><div class="li"> 2: T_FIL1</div>
+</li>
+<li class="level1"><div class="li"> 3: T_FIL2</div>
+</li>
+<li class="level1"><div class="li"> 4: T_FIL3</div>
+</li>
+<li class="level1"><div class="li"> 5: T_COL0</div>
+</li>
+<li class="level1"><div class="li"> 6: T_COL1</div>
+</li>
+<li class="level1"><div class="li"> 7: T_COL2</div>
+</li>
+<li class="level1"><div class="li"> 8: LCD_1</div>
+</li>
+<li class="level1"><div class="li"> 9: LCD_2</div>
+</li>
+<li class="level1"><div class="li"> 10: LCD_3</div>
+</li>
+</ul>
+
+<p>
+La placa posee un solo modulo PWM con 11 salidas asociadas, por esta razon todas las salidas comparten la misma frecuencia, pero tienen un valor de ciclo de actividad independiente.
+</p>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+====== Hardware de la CIAA-Safety ======
+
+El diseño de hardware se centrará principalmente en una arquitectura modular básica y de referencia que permita a los usuarios que buscan una solución genérica orientar la plataforma a múltiples aplicaciones de acuerdo a sus requerimientos.
+
+===== Consideraciones de diseño =====
+
+==== Factor de forma ====
+
+Se define como factor de forma al estándar que especifica algunas características físicas de un sistema. En base a esto se trata de implementar un formato que sea flexible a orientar a la CIAA-Safety para diferentes aplicaciones que requieran evitar errores sistemáticos propios del ambiente en el cual estará expuesta, por ejemplo: industria aeronáutica, ferroviaria, nuclear, medicina, etc. 
+
+La forma designada es el formato PC/104, que es un diseño robusto, compacto y flexible a cada necesidad de implementación, de dimensiones reducidas, que permite conectar un conjunto o pila de módulos a través de uno o varios buses de comunicación. En la siguiente imagen se puede observar una amplia gama de configuraciones de bus.
+
+{{ :desarrollo:ciaa_safety:ciaa_safety_2.png |}}
+
+==== Diseño modular ====
+
+La manera de conexión planteada permite combinar múltiples aplicaciones dentro del mismo sistema dado que cada uno de los módulos cumple una función específica. Por ejemplo el modulo de procesamiento pide algún parámetro de un determinado módulo y este a su vez modifica o realiza alguna actividad en otro modulo conectado al mismo bus de comunicaciones. 
+
+De la variedad de buses de comunicación para nuestro caso se utiliza la serie PCI/104. En la siguiente imagen se puede observar la arquitectura del factor de forma seleccionado.
+
+{{ :desarrollo:ciaa_safety:ciaa_safety_1.png |}}
+
+<note>Un caso de éxito de desarrollar productos electrónicos con estos formatos son los llamados Cubesat. Estos nano-satélites poseen múltiples aplicaciones científicas específicas a costos relativamente bajos en comparación con un satélite de grandes prestaciones.</note>
+
+==== Dimensiones de módulo y bus de comunicación PCI-104 ====
+
+Las dimensiones del factor de forma PCI-104 son idénticas al PC/104, con la particularidad que este formato solamente contiene el conector de bus PCI que consiste en una ristra de 4x30 (120 pines) con paso de 2mm. 
+
+{{ :desarrollo:ciaa_safety:ciaa_safety_3.png |}}
+
+<note>En este documento se especifica los requisitos generales de las funciones básicas de los pines del bus PCI y debe ser utilizado como referencia para el diseño y desarrollo de cualquier modulo que forme parte de la CIAA-Safety v1.0 (Ver [[desarrollo:ciaa_safety:el_bus_pci_y_sus_senales|El bus PCI y sus señales]])</note>
+
+Fuente: 
+http://pc104.org/wp-content/uploads/2015/02/PC104_Plus_v2_32.pdf
+
+==== Módulos ====
+
+El prototipo inicial cuenta con 4 módulos:
+
+  * Módulo Procesador Safety (MPS)
+  * Módulo de Aplicación (MAx)
+  * Módulo de Expansión y Conexión (MEC)
+  * Módulo Fuente de Alimentación (MFA)
+
+==== Módulo Procesador Safety (MPS) ====
+
+La particularidad que debe tener este modulo es que debe contener un micro de alto rendimiento lo suficientemente robusto para procesar con la más baja probabilidad de cometer errores. Para ello se deben utilizar tecnologías que posean mecanismos de seguridad y que proporcionen protección contra funcionamiento o resultados indeseados (//safety//).
+
+=== Aplicaciones ===
+
+  * Automatización industrial
+  * Sistemas de Aviónica
+  * PLC (controladores lógicos programables) seguros
+  * Generación de energía y distribución
+  * Turbinas y molinos de viento
+  * Respiradores y desfibriladores
+  * Bombas de infusión y de insulina
+  * Tratamiento con radiación
+
+=== Diseño de módulo ===
+
+  * El Bus PCI y sus señales
+  * Regulador de tensión y restablecimiento del sistema
+  * hardware_cpu
+  * JTAG / Debugger
+  * Memoria Flash SPI
+  * Interfaz CAN
+  * Interfaz USB HOST
+  * Interfaz Ethernet
+
+==== Módulo de Aplicación (MAx)====
+
+La flexibilidad del concepto de la CIAA-Safety es precisamente desarrollar una o varias aplicaciones de acuerdo a las necesidades de cada usuario. De esta manera los esfuerzos se centran solamente en diseñar el modulo de aplicación de interés y reutilizar las demás partes del sistema.
+
+=== Diseño y desarrollo de aplicaciones ===
+
+  * Propuesta de modulo Aeronáutico (MAAero)
+  * Propuesta de modulo Industrial (MAI)
+  * Propuesta de modulo Aeroespacial (MASpace)
+  * Propuesta de modulo de Telemetría (MATele)
+
+==== Módulo de Expansión y Conexión (MEC) ====
+
+Este modulo es opcional de acuerdo a las necesidades de o a la aplicación particular del sistema. De todas formas este modulo permite dotar a la plataforma con algún elemento adicional o para expandir las capacidades del sistema. Es decir si se necesita encastrar diferentes series del factor de forma PC/104 (Diferentes conectores de comunicación) se hace uso o se diseña un modulo de expansión especifico para poder acoplar o unir en el mismo sistema ambas plataformas.
+Otra utilidad que puede darse, es que se utilice para poder conectar a la CIAA-Safety al mundo exterior con conectores específicos de acuerdo a la aplicación útil en el cual estará enmarcada.
+
+  * Diseño y Desarrollo de modulo de expansión para conexión entre CIAA-Safety y CIAA-ACC (A definir).
+

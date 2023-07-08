@@ -1,0 +1,22 @@
+====== Módulo pyb ======
+
+Este módulo posee las clases que representan los periféricos de hardware de la placa. Creando objetos de estas clases se podrán manejar dichos perifericos.
+
+===== Clases Soportadas =====
+
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-led|LED]] : Permite el uso de los Leds
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-switch|Switch]] : Permite el uso de los pulsadores
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-uart|UART]] : Permite el uso de las dos UARTs
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pin|Pin]] : Permite el uso de las GPIOs
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-adc|ADC]] : Permite el uso de las entradas analógicas
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac|DAC]] : Permite el uso del conversor digital analógico
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-timer|Timers]] : Permite el uso de los timers
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-eeprom|EEPROM]] : Permite el uso de la memoria EEPROM interna del microcontrolador
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-extint|ExtInt]] : Permite usar las GPIOs con interrupciones
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-pwm|PWM]] : Permite el uso de las salidas PWM
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard|Keyboard]] : Configura algunos GPIOs para escanear un teclado matricial
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-lcd|LCD]] : Configura algunos GPIOs para manejar un LCD tipo HD44780U
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-spi|SPI]] : Permite el uso del módulo SPI en modo Master
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-rtc|RTC]] : Permite el uso del módulo RTC y los registros de backup
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-i2c|I2C]] : Permite el uso del módulo I2C en modo Master
+ 

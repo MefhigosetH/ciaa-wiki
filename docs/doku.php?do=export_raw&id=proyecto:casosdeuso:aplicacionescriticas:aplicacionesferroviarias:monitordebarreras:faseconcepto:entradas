@@ -1,0 +1,71 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 1/14: Concepto  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+
+===== Entradas =====
+
+###
+La norma UNE EN 50126 indica:
+###
+
+<note>“las entradas para esta fase deben incluir toda la información relevante y, en los casos en que proceda, los datos necesarios para cumplir los requisitos de la fase; por ejemplo, las declaraciones del alcance y la finalidad correspondientes al proyecto”.</note>
+
+###
+En consecuencia las entradas que se han considerado en la fase de Concepto del Monitor de Barreras son las que se presentan a continuación, dónde el orden no indica el nivel de importancia.
+###
+
+  - **Normativa ferroviaria general vigente en la República Argentina**
+       * [[http://www.cnrt.gob.ar/ley-general-de-ferrocarriles-y-reglamento-general#overlay-context=|Ley N° 2873 y Reglamento General de Ferrocarriles]]
+       * [[http://www.cnrt.gob.ar/pasos-nivel#overlay-context=content/normativaferroviaria|Pasos a Nivel (Resoluc. SETOP 7/81)]]
+       * [[http://www.cnrt.gob.ar/especificaciones-fa#overlay-context=content/normativaferroviaria| Especificaciones F.A.]]
+       * [[http://www.cnrt.gob.ar/conducciones-eléctricas#overlay-context=|Conducciones Eléctricas]]  {{ :blanco.png?30 | }}
+  - **Normativa ferroviaria argentina específica sobre el material rodante**:
+       * [[https://www.cnrt.gob.ar/sites/default/files/GES_0002.pdf|CNRT: GES 002]]
+       * [[http://www.cnrt.gob.ar/normas-fat#overlay-context=|Especificaciones FAT]]
+       * [[http://www.cnrt.gob.ar/planos-nefa#overlay-context=|Planos NEFA]]
+       * [[https://www.cnrt.gob.ar/sites/default/files/Boletin%20TecnicoMR%201%202013%20E3%20SET%202015.pdf|Hombre Vivo]]
+       * [[http://www.cnrt.gob.ar/content/normativa/ferroviaria/ultrasonido#overlay-context=|Ultrasonido]]   {{ :blanco.png?30 | }}
+  - **Normativa ferroviaria argentina específica sobre vías y obras**:
+       * [[http://www.cnrt.gob.ar/normas-de-y-obras#overlay-context=|Normas de Vía y Obras]]
+       * [[http://www.cnrt.gob.ar/galibos#overlay-context=|Galibos]]
+       * [[http://www.cnrt.gob.ar/perfiles-de-rieles#overlay-context=|Perfiles de Rieles]] {{ :blanco.png?30 | }}
+  - **Normas internacionales**
+       * Norma Europea UNE-EN 50126: "Especificación y demostración de RAMS".
+       * Norma Europea UNE-EN 50128: "Software para control y protección del ferrocarril".
+       * Norma Europea UNE-EN 50129: "Sist. electrónicos de seguridad p/ la señalización".
+       * CENELEC UNE EN-50121-4 de Mayo 2007 en aplicaciones ferroviarias. Parte 4: Emisión e inmunidad de los aparatos de señalización y de telecomunicaciones.
+       * Normas IEC 61508-2 Seguridad funcional de los sistemas eléctricos/electrónicos/electrónicos programables relacionados con la seguridad. Parte 2: Requisitos para los sistemas eléctricos/electrónicos/electrónicos programables relacionados con la seguridad
+       * Norma IEC 61511 "Seguridad funcional - sistemas para la industria de procesos instrumentados de seguridad". Prácticas en la ingeniería de sistemas que garanticen la seguridad de un proceso industrial a través del uso de la instrumentación. {{ :blanco.png?30 | }}
+  - **Antecedentes de licitaciones de "Trenes Argentinos"**
+       * Trenes Argentinos. Pliego de especificaciones técnicas - Licitación Pública Nº 32 – ADIF – 2014 “SISTEMA DE BARRERAS AUTOMÁTICAS EN LA LÍNEA BELGRANO SUR” [[http://docplayer.es/4954090-Licitacion-publica-no-32-adif-2014-pliego-de-especificaciones-tecnicas-memoria-descriptiva.html|ver pliego]]
+       * Trenes Argentinos. Pliego de especificaciones técnicas - Licitación Pública Nº 21 – ADIF – 2014 “SISTEMA DE BARRERAS AUTOMÁTICAS EN CHASCOMUS” [[http://www.adifse.com.ar/licitaciones_nuevas/PET%20ADIF%2021-14.pdf|ver pliego]]  {{ :blanco.png?30 | }}
+  - **Recomendaciones para equipos ferroviarios**
+       * AGENCIA FERROVIARIA EUROPEA. Guía de aplicación del diseño y la ejecución de un sistema de gestión de la seguridad en el ferrocarril [[http://www.era.europa.eu/Document-Register/Documents/sms-guide-a-system-approach-1-es.pdf|ver documento]]
+       * European Railway Agency. "Metodo comun de seguridad (MCS) para evaluacion y la valoracion del riesgo. Autores Thierry Breyne; Dragan Jovicic (2009). [[http://www.era.europa.eu/Document-Register/Documents/ERA-2009-0048-00-00-ES.pdf|ver documento]]
+       * Railwaysignalling.eu. "Gestion de los requisitos en sistemas críticos de seguridad" Autor: Maurizio Palumbo.(2015) [[http://www.railwaysignalling.eu/wp-content/uploads/2016/04/gestion-de-los-requisitos-en-sistemas-criticos-de-seguridad.pdf|ver documento]]  {{ :blanco.png?30 | }}
+  - **Especificaciones técnicas de monitor de paso a nivel** 
+       * [[http://asa.transport.nsw.gov.au/sites/default/files/asa/railcorp-legacy/disciplines/signals/tmg-e1261.pdf|TMG E1261 Cerberus Level Crossing Monitor Field Equipment Manual]], empresa estatal RailCorp (Australia).
+       * [[http://asa.transport.nsw.gov.au/sites/default/files/asa/railcorp-legacy/disciplines/signals/spg-1260.pdf|SPG 1260 Level Crossing Monitor]], empresa estatal RailCorp (Australia).
+       * [[http://harvest.com/pdf/Harvest%20RXM%20Product%20Brief.pdf|Level Crossing Monitor]], empresa Harvest Electronics (Nueva Zelanda). {{ :blanco.png?30 | }}
+  - **Especificaciones técnicas de sistemas de paso a nivel** 
+       * [[http://www.icf.com.es/paso-a-nivel/descripcion|Sistema de Protección Paso a Nivel SPN-900]], empresa ICF (España).
+       * [[http://www.scheidt-bachmann.com/en/signalling-systems/level-crossing-system/|Electronical Level Crossing System BUES 2000]], empresa Scheidt-Bachmann (Alemania).
+       * [[http://www.mobility.siemens.com/mobility/global/en/interurban-mobility/rail-solutions/rail-automation/level-crossing-protection-systems/pages/level-crossing-protection-systems.aspx|Level-crossing protection systems]], empresa Siemens (Alemania).
+       * [[http://www.ansaldo-sts.com/sites/ansaldosts.message-asp.com/files/imce/asts_hitachi_lc_solutions_english_092015_lr.pdf|Level Crossing Solutions]], empresa Ansaldo STS SpA (Italia). {{ :blanco.png?30 | }}
+  - **Lectura complementaria**  
+       * David J. Smith; Kenneth G.L. Simpsom."Safety Critical Systems Handbook". ISBN 0080967817 (2010)
+       * RISK SOFTWARE. Metodos para la determinación del SIL objetivo. Victor M. Salinas. www.risksoftware.com.mx
+       * {{:proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:jpa_ponencia_seguridad_personas.pdf|SAFETY COMPETENCIES: Modelo para la gestión del error humano}}, Thales Group. 
+ 
+{{ :blanco.png?20 | }}
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto:requisito1|Ir al Requisito 1 de la Fase de Concepto]] ]
+### 
+ 
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:faseconcepto|Volver a la Página Inicial de la Fase de Concepto]] ]
+### 

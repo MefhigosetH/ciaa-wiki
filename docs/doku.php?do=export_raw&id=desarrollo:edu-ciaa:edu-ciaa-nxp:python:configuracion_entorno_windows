@@ -1,0 +1,54 @@
+====== Configuración del entorno de desarrollo (Windows) ======
+
+Se utilizará Vagrant y VirtualBox para emular un sistema operativo Linux. Vagrant es una herramienta que nos permite virtualizar entornos de desarrollo y distribuirlos fácilmente.
+
+La explicación que se ofrece a continuación es válida para sistemas operativos Windows, Linux o IOS.
+
+===== Herramientas a instalar =====
+  - [[https://www.virtualbox.org/wiki/Downloads|Virtual Box]]
+  - [[https://www.vagrantup.com/downloads.html|Vagrant]]
+  - [[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html|Putty]]
+
+==== Generación de la máquina virtual ====
+
+Abriremos una consola de Windows: Botón Inicio -> cmd -> ENTER. Luego crearemos un directorio de trabajo, por ejemplo:
+
+  mkdir educiaa
+  cd educiaa
+
+Ahora crearemos una virtual Ubuntu de 32bit utilizando Vagrant:
+
+  vagrant init hashicorp/precise32
+
+Se generará un archivo en el directorio, llamado Vagrantfile, allí se encuentra la configuración de la máquina virtual. Editamos el archivo para configurar la red y la conexión USB con la placa:
+
+==== Configuración de la red ====
+
+En el archivo Vagrantfile, agregamos la línea para configurar una IP fija:
+
+  config.vm.network "public_network", ip: "192.168.33.10"
+
+Esta red funcionará bajo eth1, ya que eth0 es una red que utiliza Vagrant para conectarse por SSH.
+
+==== Configuración USB ====
+
+Configuraremos la virtual para que se conecte automáticamente el dispositivo con el vendor ID del chip FTDI, para ello agregamos al archivo Vagrantfile lo siguiente:
+
+  config.vm.provider :virtualbox do |vb|
+      vb.customize ['modifyvm', :id, '--usb', 'on']
+      vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'FTDI', '--vendorid', '0x0403']
+    end
+
+==== Inicio de la máquina virtual ====
+
+Para iniciar la máquina virtual, ejecutamos:
+
+  vagrant up
+
+La primera vez que se ejecute bajará la imagen de la virtual. Al terminar, podemos utilizar Putty para ingresar la IP que fijamos en la virtual y conectarnos con el usuario "vagrant" y el password "vagrant"
+
+A partir de aquí se podrá seguir la [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:configuracion_entorno_linux|configuración del entorno de desarrollo (Linux)]]
+
+
+==== Alternativa ====
+Existe una máquina virtual en el repositorio de Vagrant con todas las herramientas para compilar para la CIAA instaladas (compilador, OpenOCD y configuración del USB), para utilizar esta máquina virtual y evitarse los pasos de instalación, dirigirse a [[https://github.com/ernesto-g/ciaa-vagrant|https://github.com/ernesto-g/ciaa-vagrant]]

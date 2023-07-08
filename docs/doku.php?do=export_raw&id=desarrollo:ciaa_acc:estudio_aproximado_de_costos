@@ -1,0 +1,36 @@
+====== Estudio aproximado de costos ======
+
+A fines de estimar los costos de los componentes electrónicos del PCB, se realizó un listado mínimo de componentes que podría tener la CIAA-ACC con los precios del distribuidor Digikey (FOB USA). 
+
+De la misma manera, y en base a cotizaciones solicitadas con anterioridad para otros PCBs de alta velocidad, se **estimó** el costo de la fabricación del PCB con impedancia controlada (FOB China) y del armado (en Argentina).
+
+{{:desarrollo:ciaa_acc:costos_ciaa_acc.ods|Estimación de costos CIAA-ACC}}
+
+Al final del archivo se puede ver el total FOB, que suma **USD 664 para 10 placas** y **USD 517 para 100 placas**.
+
+Estos números incluyen **fabricación, componentes y armado** y hay que sumarles los costos de los envíos y los aranceles de importación.
+
+El costo unitario final va a ser mayor al de los kits de desarrollo, pero hay que tener en cuenta algunos factores a la hora de realizar comparaciones con otras placas que tienen Zynq7000.
+
+  * La CIAA-ACC no es un kit de desarrollo educativo. Incluirá componentes de rango industrial y todas las protecciones necesarias para que sea robusta. 
+  * Se usará el Zynq XC7Z030-2FBG676I (USD 333), que es muy superior al que tienen las placas comerciales económicas (XC7Z010 o XC7Z020).
+  * La CIAA-ACC contará con una gran cantidad de periféricos y con sus conectores listos para usar (Gigabit Ethernet, micro USB, USB tipo A, micro-SD, HDMI, RS-232, RS-485, CAN, JTAG, etc.), es decir, no requerirá una carrier board para funcionar como otras placas del mercado.
+  * La CIAA-ACC tendrá conectores PCIe/104 (inferior y superior) que permitirán conformar un stack o clúster de varias CIAA-ACC.
+  * La CIAA-ACC se podrá expandir debido a que contará con un conector FMC para agregar, por ejemplo, una placa con conversores AD.
+
+Algunos precios de referencia (ver la sección [[desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas|Diseños de referencia]]):
+
+  * Parallela board: Cuesta USD 99. Tiene el XC7Z010 y tiene solamente un conector Ethernet y una micro SD.
+  * Zybo: Cuesta USD 189. Tiene varios periféricos pero tiene el XC7Z010.
+  * Zedboard: Cuesta USD 495. Tiene todos los periféricos necesarios pero tiene el XC7Z020.
+  * SoM picoZed: El que trae el XC7Z030 sale USD 459. Sólo es un SoM sin ningún conector. Para tener el sistema completo hay que comprar la carrier que sale USD 425 adicionales .
+
+
+
+
+
+
+
+
+
+

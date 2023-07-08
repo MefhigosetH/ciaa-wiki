@@ -1,0 +1,111 @@
+====== Plan de desarrollo del CIAA-Firmware ======
+
+===== Tipos de Releases =====
+
+El firmware de la CIAA realiza 3 releases anualmente en los meses de abril, agosto y diciembre. Existen dos tipos de releases denominados [[desarrollo:firmware:STS|STS]] y [[desarrollo:firmware:LTS|LTS]]:
+  * [[desarrollo:firmware:STS|STS]] se realizarán [[desarrollo:firmware:bug|bugfixes]] hasta el siguiente release ya sea éste [[desarrollo:firmware:STS|STS]] o [[desarrollo:firmware:LTS|LTS]].
+  * [[desarrollo:firmware:LTS|LTS]] se realizarán [[desarrollo:firmware:bug|bugfixes]] hasta 18 meses después del release.
+
+###
+[[desarrollo:firmware:bug|Bugfixes]] se realizan únicamente de los módulos de Firmware con versiones iguales o superiores a 1.0.0. No se implementarán nuevas funcionalidades, únicamente [[desarrollo:firmware:bug|bugfixes]].
+###
+
+===== Versionamiento de los releases y de cada módulo =====
+###
+La versión está formada por 3 números: major, minor, patch. Los mismos tienen diferente significado dependiendo si se trata de un módulo del Firmware o un release del Firmware. En una versión 1.2.3 el major es 1, el minor 2 y el patch 3.
+###
+
+==== Versionamiento de los releases de CIAA-Firmware ====
+
+  * major: indica en qué versión LTS se basa esta release.
+  * minor: si es 0 se trata de un LTS release, en caso contrario es un STS.
+  * patch: es el número de bugfix para esta LTS o STS release.
+
+==== Versionamiento de cada módulo de CIAA-Firmware ====
+
+Los módulos de Firmware son versionados según [[http://semver.org/|Versionamiento Semántico]].
+
+
+===== Cronograma general =====
+
+La siguiente tabla indica los próximos releases del CIAA-Firmware:
+
+^ Release ^ Fecha      ^ Soporte hasta ^ Descripción                                                            ^
+| 0.1.0   | 30.06.2014 | | Pre versión de CIAA-Firmware. Firmware aún no funcional, liberado sólo con el objetivo de verificar el release process. |
+| 0.2.0   | 08.08.2014 | | Primer versión oficial de CIAA-Firmware. Chequeada con CIAA-NXP 1.0.0. [[https://github.com/ciaa/Firmware/releases/tag/0.2.0|Ver Release Notes]] |
+| [[desarrollo:firmware:0.3.0|0.3.0]]   | 13.12.2014 | | Versión de CIAA-Firmware. [[https://github.com/ciaa/Firmware/releases/tag/0.3.0|Ver Release Notes]] |
+| [[desarrollo:firmware:0.4.0|0.4.0]]   | 10.04.2015 | [[desarrollo:firmware:STS|STS]] 6.8.2015 | FreeOSEK 1.0.0 \\ BlockDevices Alpha |
+| [[desarrollo:firmware:0.5.0|0.5.0]]   | 07.08.2015 | [[desarrollo:firmware:STS|STS]] 10.12.2015 | ModBus 1.0.0 \\ IL Virtual Machine alpha |
+| [[desarrollo:firmware:1.0.0|1.0.0]]   | 11.12.2015 | [[desarrollo:firmware:LTS|LTS]] 10.6.2017 | Stack USB Alpha \\ FreeOSEK multicore Alpha \\ File System Alpha|
+| [[desarrollo:firmware:1.1.0|1.1.0]]   | 8.4.2016 | [[desarrollo:firmware:STS|STS]] 4.8.2016 | Versión de CIAA-Firmware. |
+| [[desarrollo:firmware:1.2.0|1.2.0]]   | 5.8.2016 | [[desarrollo:firmware:STS|STS]] 10.6.2016 | Versión de CIAA-Firmware. |
+| [[desarrollo:firmware:2.0.0|2.0.0]]   | 9.12.2016 | [[desarrollo:firmware:LTS|LTS]] 8.6.2018 | Versión de CIAA-Firmware. |
+
+Para más información sobre las versiones de CIAA-Firmware puede visitar el [[https://github.com/ciaa/Firmware|repositorio en GitHub]].
+
+===== Equipo técnico a cargo =====
+
+==== Coordinación ====
+^ Nombre                  ^ Organización                                ^ Función                                ^
+| Ing. Mariano Cerdeiro   | UTN-FRBA                                    | Responsable de Firmware de la CIAA     |
+| Ing. Gustavo Muro       | Dpto. de Sistemas e Informática - FCEIA-UNR | Sub-responsable de Firmware de la CIAA |
+
+==== Desarrollo ====
+^ Nombre                 ^ Organización     ^ Tareas a cargo ^
+| Ing. Mariano Cerdeiro  | UTN-FRBA         | Desarrollo de [[rtos|RTOS]] - [[porting|Port Linux]]                |
+|:::                     |:::               | Desarrollo de ciaaDevices - ciaaDevices                             |
+|:::                     |:::               | Desarrollo de [[:Make Environment|Make Environment]]                |
+| Ing. Pablo Ridolfi     | FIUBA - UTN-FRBA | Desarrollo de [[rtos|RTOS]]                                         |
+|:::                     | :::              | Desarrollo de [[rtos|RTOS]] - [[porting|Port CIAA-NXP]]             |
+| Ing. Juan Cecconi      | UTN-FRBA, Numetron S.R.L.| Desarrollo de [[rtos|RTOS]] - [[porting|Port Windows]]      |
+|:::                     | :::              | [[instalacion_sw#windows|Windows Environment]]                      |
+| Ing. Esteban Volentini | Lab. de Microntroladores FACET-UNT | Desarrollo de [[bootloader|Bootloader]]           |
+|:::                     |:::               | Desarrollo de ciaaDevices - ciaaFlashDevices                        |
+| Ing. Gustavo Muro | Dpto. de Sistemas e Informática - FCEIA-UNR | Desarrollo de ciaaDevices - ciaaModbusDevices |
+| Ing. Alejandro Permingeat |               | Desarrollo de ciaaDrivers - k60                                     |
+| Dario Baliña           |                  | Desarrollo de ciaaDrivers - k60                                     |
+| Sebastián Rossi        |                  | ciaaIsoBus                                                          |
+| Ing. Gustavo Ramoscelli | DIEC-UNS        | Continuous Integration (system/servers)                             |
+| Jaime Andres Aranguren Cardona |          | [[Uncrustify|Style Guide Checker/ Uncrustify]]                      |
+| Ing. Eric Pernia | UNQ | Desarrollo del módulo de Funciones de PLC. Implementa el lenguaje IL de PLC como funciones de C y corresponde a la parte fija del Firmware de IDE4PLC | 
+
+ 
+===== Componentes a desarrollar y responsables a cargo =====
+
+==== Aplicaciones ====
+
+^ Módulo   ^ Sub-módulo       ^ Descripción       ^ Responsable                        ^
+| [[functional_tests|ciaaTestApplication]] | - | Permite testear el ciaaFirmware | <fc #9400d3>**Pendiente**</fc> |
+| ciaaFlasher | - | Permite programar programas Ladders  desde la [[desarrollo:software-plc|ciaaSoftware]] | <fc #9400d3>**Pendiente**</fc> |
+
+==== Firmware ====
+
+^  Módulo      ^  Sub-módulo      ^  Descripción   ^  Responsable   ^  Organización  ^
+| [[rtos|rtos]] | - | [[rtos|Sistema Operativo]] | Ing. Pablo Ridolfi | UTN-FRBA |
+| [[rtos|rtos]] | [[porting|Port Linux]] | Portabilidad a Linux | Ing. Mariano Cerdeiro | UTN-FRBA |
+| [[rtos|rtos]] | [[porting|Port Windows]] | Portabilidad a Windows | Ing. Juan Cecconi | UTN-FRBA |
+| [[rtos|rtos]] | [[porting|Port CIAA-NXP]]| Portabilidad a CIAA-NXP | Ing. Pablo Ridolfi | UTN-FRBA |  
+| [[rtos|rtos]] | [[porting|Port CIAA-FSL]]| Portabilidad a CIAA-FSL | | |  
+| [[bootloader|Bootloader]] | - | Updates on site | Ing. Esteban Volentini | Lab. de Microntroladores FACET-UNT |
+| ciaaPOSIX   | ciaaPOSIX_stdio     | POSIX Standard IO Services| Ing. Mariano Cerdeiro | UTN-FRBA                                    |
+| :::         | ciaaPOSIX_stdlib    | - | -                     |                                             |
+| ciaaDevices | ciaaDevices         | - | Ing. Mariano Cerdeiro | UTN-FRBA                                    |
+| :::         | ciaaSerialDevices   | - | Ing. Mariano Cerdeiro | UTN-FRBA                                    |
+| :::         | ciaaBlockDevices    | - | Ing. Mariano Cerdeiro | UTN-FRBA                                    |
+| :::         | ciaaModbusDevices   | - | Ing. Gustavo Muro     | Dpto. de Sistemas e Informática - FCEIA-UNR |
+| :::         | ciaaGpioDevices     | - |                       |                                             |
+| :::         | ciaaFlashDevices    | - | Ing. Esteban Volentini| Lab. de Microntroladores FACET-UNT          |
+| ciaaDrivers | lcp4337             | - |                       |                                             |
+| ciaaDrivers | k60                 | - | ﻿Alejandro Permingeat, Dario Baliña |                            |
+| ciaaIsoBus  |                     | - | Sebastián Rossi | |
+
+ ==== Tooling ====
+
+^  Módulo  ^  Descripción  ^  Responsable  ^  Organización  ^
+| [[:Make Environment|Make Environment]]                                | - | Ing. Mariano Cerdeiro | UTN-FRBA  |
+| [[instalacion_sw#windows|Windows Environment]]| Funcionamiento del CIAA Firmware en Windows | Ing. Juan Cecconi | UTN-FRBA  |
+| Continuous Integration (system/servers)    | - | Ing. Gustavo Ramoscelli | DIEC-UNS |
+| Continuous Integration (scripts)   | - |  |  |
+| [[unit_tests|Unit Tests o Pruebas Unitarias]] | - | - |  |
+| [[functional_tests|Test Funcional]]           | - | - |  |
+| [[Uncrustify|Style Guide Checker/ Uncrustify]]                     | Verificación del formato de código | Jaime Andres Aranguren Cardona |  |

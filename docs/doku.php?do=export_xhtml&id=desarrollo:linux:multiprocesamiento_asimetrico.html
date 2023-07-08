@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:linux:multiprocesamiento_asimetrico</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,linux,multiprocesamiento_asimetrico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:linux:multiprocesamiento_asimetrico&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:linux"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:multiprocesamiento_asimetrico.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:linux:multiprocesamiento_asimetrico"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:linux:multiprocesamiento_asimetrico.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:linux';var JSINFO = {"id":"desarrollo:linux:multiprocesamiento_asimetrico","namespace":"desarrollo:linux","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:multiprocesamiento_asimetrico.html#multiprocesamiento_asimetrico_con_linux_en_la_ciaa">Multiprocesamiento asimétrico con Linux en la CIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:multiprocesamiento_asimetrico.html#marco_conceptual">Marco conceptual</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:multiprocesamiento_asimetrico.html#caso_de_estudio">Caso de estudio</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:linux:multiprocesamiento_asimetrico.html#investigacion">Investigación</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="multiprocesamiento_asimetrico_con_linux_en_la_ciaa">Multiprocesamiento asimétrico con Linux en la CIAA</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Multiprocesamiento asim\u00e9trico con Linux en la CIAA&quot;,&quot;hid&quot;:&quot;multiprocesamiento_asimetrico_con_linux_en_la_ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-67&quot;} -->
+<h2 class="sectionedit2" id="marco_conceptual">Marco conceptual</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Marco conceptual&quot;,&quot;hid&quot;:&quot;marco_conceptual&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;68-97&quot;} -->
+<h3 class="sectionedit3" id="multiprocesamiento_simetrico_y_asimetrico">Multiprocesamiento simétrico y asimétrico</h3>
+<div class="level3">
+
+<p>
+En un modelo de <strong>multiprocesamiento simétrico (SMP)</strong> una única imagen del sistema operativo (SO) corre sobre todos los procesadores, encargándose de repartir las tareas entre los mismos y de manejar los recursos.
+</p>
+
+<p>
+En un modelo de <strong>multiprocesamiento asimétrico (AMP)</strong> cada núcleo corre su propia imagen de kernel, que pueden ser diferentes. Asimismo, no es necesario que los procesadores en cuestión sean iguales, pudiendo presentar distintas arquitecturas, funcionalidades o interfaces.
+</p>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Asymmetric_multiprocessing" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Asymmetric_multiprocessing" rel="ugc nofollow noopener">http://en.wikipedia.org/wiki/Asymmetric_multiprocessing</a><br/>
+
+<a href="http://electronicdesign.com/digital-ics/symmetric-multiprocessing-vs-asymmetric-processing" class="urlextern" target="_blank" title="http://electronicdesign.com/digital-ics/symmetric-multiprocessing-vs-asymmetric-processing" rel="ugc nofollow noopener">http://electronicdesign.com/digital-ics/symmetric-multiprocessing-vs-asymmetric-processing</a><br/>
+
+<a href="http://rtcmagazine.com/articles/view/100404" class="urlextern" target="_blank" title="http://rtcmagazine.com/articles/view/100404" rel="ugc nofollow noopener">http://rtcmagazine.com/articles/view/100404</a><br/>
+
+<a href="http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_VFTF09_AN102" class="urlextern" target="_blank" title="http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_VFTF09_AN102" rel="ugc nofollow noopener">http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_VFTF09_AN102</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Multiprocesamiento sim\u00e9trico y asim\u00e9trico&quot;,&quot;hid&quot;:&quot;multiprocesamiento_simetrico_y_asimetrico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;98-938&quot;} -->
+<h3 class="sectionedit4" id="distribuyendo_la_carga_con_amp">Distribuyendo la carga con AMP</h3>
+<div class="level3">
+
+<p>
+Una forma de utilizar AMP es preasignar roles determinados en la distribución de la carga, donde un núcleo corre el sistema operativo principal y otro se encarga de realizar ciertas tareas con requerimientos de tiempo real. De esta manera se dice que el primero off-loadea (deriva carga) al segundo.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Distribuyendo la carga con AMP&quot;,&quot;hid&quot;:&quot;distribuyendo_la_carga_con_amp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;939-1283&quot;} -->
+<h3 class="sectionedit5" id="linux_y_amp">Linux y AMP</h3>
+<div class="level3">
+
+<p>
+En el kernel Linux, existe un framework llamado <strong>remoteproc</strong> para asistir en el desarrollo de AMP. El framework permite que diferentes plataformas/arquitecturas puedan controlar (encender, cargar el firmware, apagar) estos procesadores remotos abstrayéndose de las diferencias de hardware.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Linux y AMP&quot;,&quot;hid&quot;:&quot;linux_y_amp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1284-1600&quot;} -->
+<h2 class="sectionedit6" id="caso_de_estudio">Caso de estudio</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caso de estudio&quot;,&quot;hid&quot;:&quot;caso_de_estudio&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1601-1629&quot;} -->
+<h3 class="sectionedit7" id="amp_con_linux_en_la_ciaa-nxp">AMP con Linux en la CIAA-NXP</h3>
+<div class="level3">
+
+<p>
+La CIAA NXP posee un microcontrolador modelo LPC4337 compuesto por un procesador ARMv7 Cortex-M4 y un coprocesador ARMv7 Cortex-M0. Ambos núcleos tienen acceso al mapa de memoria completo.
+</p>
+
+<p>
+El objetivo es la realización de multiprocesamiento asimétrico explotando el núcleo Cortex-M0 mediante la utilización del driver remoteproc desde el kernel Linux, que corre en el núcleo Cortex-M4.
+</p>
+
+<p>
+<a href="http://www.nxp.com/documents/user_manual/UM10503.pdf" class="urlextern" target="_blank" title="http://www.nxp.com/documents/user_manual/UM10503.pdf" rel="ugc nofollow noopener">http://www.nxp.com/documents/user_manual/UM10503.pdf</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;AMP con Linux en la CIAA-NXP&quot;,&quot;hid&quot;:&quot;amp_con_linux_en_la_ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1630-2117&quot;} -->
+<h3 class="sectionedit8" id="tareas_roadmap">Tareas/roadmap</h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li"> Explorar el hardware de la CIAA-NXP y el framework remoteproc.</div>
+</li>
+<li class="level1"><div class="li"> Implementar el driver remoteproc para controlar y off-loadear al Cortex-M0.</div>
+</li>
+<li class="level1"><div class="li"> Analizar qué firmware/SO correr en el Cortex-M0 y cargarlo.</div>
+</li>
+<li class="level1"><div class="li"> Realizar ejemplos concretos para determinar y comparar resultados.</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tareas\/roadmap&quot;,&quot;hid&quot;:&quot;tareas_roadmap&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;2118-2427&quot;} -->
+<h2 class="sectionedit9" id="investigacion">Investigación</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Investigaci\u00f3n&quot;,&quot;hid&quot;:&quot;investigacion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;2428-2455&quot;} -->
+<h3 class="sectionedit10" id="sistemas_operativos_de_tiempo_real_rtos">Sistemas operativos de tiempo real (RTOS)</h3>
+<div class="level3">
+
+<p>
+Un sistema de tiempo real es aquel en donde las computaciones se considerarán correctas no solo por el resultado sino también por el tiempo requerido para producirlo.
+</p>
+
+<p>
+<a href="http://www.versalogic.com/mediacenter/whitepapers/wp_linux_rt.asp" class="urlextern" target="_blank" title="http://www.versalogic.com/mediacenter/whitepapers/wp_linux_rt.asp" rel="ugc nofollow noopener">http://www.versalogic.com/mediacenter/whitepapers/wp_linux_rt.asp</a><br/>
+
+<a href="http://bis-linux.com/dwf_waw2013" class="urlextern" target="_blank" title="http://bis-linux.com/dwf_waw2013" rel="ugc nofollow noopener">http://bis-linux.com/dwf_waw2013</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sistemas operativos de tiempo real (RTOS)&quot;,&quot;hid&quot;:&quot;sistemas_operativos_de_tiempo_real_rtos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;2456-2780&quot;} -->
+<h3 class="sectionedit11" id="posibles_rtos_para_el_cortex-m0">Posibles RTOS para el Cortex-M0</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> FreeRTOS:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.freertos.org/" class="urlextern" target="_blank" title="http://www.freertos.org/" rel="ugc nofollow noopener">http://www.freertos.org/</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://en.wikipedia.org/wiki/FreeRTOS" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/FreeRTOS" rel="ugc nofollow noopener">http://en.wikipedia.org/wiki/FreeRTOS</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> OSEK-<abbr title="Operating System">OS</abbr>:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.osek-vdx.org/" class="urlextern" target="_blank" title="http://www.osek-vdx.org/" rel="ugc nofollow noopener">http://www.osek-vdx.org/</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:rtos.html" class="urlextern" target="_blank" title="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos" rel="ugc nofollow noopener">http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:firmware:rtos</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> QP:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.state-machine.com/qp/" class="urlextern" target="_blank" title="http://www.state-machine.com/qp/" rel="ugc nofollow noopener">http://www.state-machine.com/qp/</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://en.wikipedia.org/wiki/QP_%28framework%29" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/QP_%28framework%29" rel="ugc nofollow noopener">http://en.wikipedia.org/wiki/QP_%28framework%29</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> nOS:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="https://github.com/jimtremblay/nOS" class="urlextern" target="_blank" title="https://github.com/jimtremblay/nOS" rel="ugc nofollow noopener">https://github.com/jimtremblay/nOS</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> uCos:</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://micrium.com/download/micrium_mcb4357_ucos-ii/" class="urlextern" target="_blank" title="http://micrium.com/download/micrium_mcb4357_ucos-ii/" rel="ugc nofollow noopener">http://micrium.com/download/micrium_mcb4357_ucos-ii/</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Posibles RTOS para el Cortex-M0&quot;,&quot;hid&quot;:&quot;posibles_rtos_para_el_cortex-m0&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;2781-&quot;} --></div>
+</body>
+</html>

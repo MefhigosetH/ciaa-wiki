@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:hardware:picociaa</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,hardware,picociaa"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:hardware:picociaa&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:hardware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:hardware:picociaa"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:hardware:picociaa.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:hardware';var JSINFO = {"id":"desarrollo:hardware:picociaa","namespace":"desarrollo:hardware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html#picociaa">picoCIAA</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html#caracteristicas_tecnicas">Características Técnicas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html#aplicaciones">Aplicaciones</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html#repositorios">Repositorios</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:hardware:picociaa.html#empresa_auspiciante">Empresa Auspiciante</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="picociaa">picoCIAA</h1>
+<div class="level1">
+
+<p>
+<img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:picociaa13.png" class="media" loading="lazy" alt="" />
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:pc_moneda.3.png" class="media" title="desarrollo:hardware:pc_moneda.3.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:hardware:pc_moneda.3.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+Como su nombre lo indica, la característica más relevante de la picoCIAA a simple vista es su tamaño: mide 50.95 por 30.00 mm. En segundo lugar, el formato elegido para la picoCIAA es el de una placa mini PCI Express. Esto permitirá integrarla como “Real-Time plug-in” a una SBC industrial o cualquier sistema que disponga de esta interfaz para sumarle funcionalidad, interfaces y firmware de tiempo real, y todas las demás ventajas del Proyecto CIAA.
+</p>
+
+<p>
+En caso de no disponer de puerto PCI Express, o para usarla con la PC, también tiene el conector USB de programación y debug (P1) como el resto de las CIAAs.
+Hablando de la programación y debug, se eligió en este caso la interfaz <a href="https://github.com/Armstart-com/IBDAP-CMSIS-DAP" class="urlextern" target="_blank" title="https://github.com/Armstart-com/IBDAP-CMSIS-DAP" rel="ugc nofollow noopener">IBDAP-CMSIS-DAP</a> basada en LPC11U35, conectada a un microcontrolador LPC54102 (dual-core Cortex-M4F y Cortex-M0+). Dicha interfaz es compatible con OpenOCD y por lo tanto con el CIAA-IDE.
+</p>
+
+<p>
+Esta iniciativa surgió originalmente con el objetivo de desarrollar una placa mini PCI Express programable e integrable a sistemas embebidos de propósito general, donde a veces no es tan sencillo disponer de aplicaciones de bajo nivel y manejo de dispositivos en tiempo real. 
+</p>
+
+<p>
+La picoCIAA será presentada oficialmente durante el <a href="http://www.sase.com.ar/2016/" class="urlextern" target="_blank" title="http://www.sase.com.ar/2016/" rel="ugc nofollow noopener">SASE 2016</a> que se realizará en la Facultad de ingeniería de la UBA los días 10, 11 y 12 de Agosto de 2016 donde se realizarán charlas y talleres hands-on sobre la plataforma.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;picoCIAA&quot;,&quot;hid&quot;:&quot;picociaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-1603&quot;} -->
+<h2 class="sectionedit2" id="caracteristicas_tecnicas">Características Técnicas</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Formato PCI Express Full-mini. Integrable a Single Board Computers industriales para dotarlas de un subsistema Real-Time.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Caracter\u00edsticas T\u00e9cnicas&quot;,&quot;hid&quot;:&quot;caracteristicas_tecnicas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;1604-1768&quot;} -->
+<h3 class="sectionedit3" id="cpu_principallpc54102">CPU principal: LPC54102</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Dual-core asimétrico Cortex-M4F/Cortex-M0+</div>
+</li>
+<li class="level1"><div class="li"> 100MHz clock</div>
+</li>
+<li class="level1"><div class="li"> 512kB memoria Flash</div>
+</li>
+<li class="level1"><div class="li"> 104kB memoria SRAM</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CPU principal: LPC54102&quot;,&quot;hid&quot;:&quot;cpu_principallpc54102&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1769-1914&quot;} -->
+<h3 class="sectionedit4" id="cpu_auxiliarlpc11u35">CPU auxiliar: LPC11U35</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Cortex-M0@50MHz</div>
+</li>
+<li class="level1"><div class="li"> Interfaz de programación y debug del CPU principal, pero puede reprogramarse para agregar funcionalidad.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;CPU auxiliar: LPC11U35&quot;,&quot;hid&quot;:&quot;cpu_auxiliarlpc11u35&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1915-2077&quot;} -->
+<h2 class="sectionedit5" id="aplicaciones">Aplicaciones</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Sensorización</div>
+</li>
+<li class="level1"><div class="li"> Versatilidad de protocolos y conectividad (IoT)</div>
+</li>
+<li class="level1"><div class="li"> Mejora de la respuesta Real-Time de un sistema existente</div>
+</li>
+<li class="level1"><div class="li"> Proyectos de educación técnica de nivel medio, terciario y universitario</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Aplicaciones&quot;,&quot;hid&quot;:&quot;aplicaciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2078-2313&quot;} -->
+<h2 class="sectionedit6" id="repositorios">Repositorios</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Hardware: <a href="https://github.com/ciaa/Hardware/tree/master/PCB/pico" class="urlextern" target="_blank" title="https://github.com/ciaa/Hardware/tree/master/PCB/pico" rel="ugc nofollow noopener">https://github.com/ciaa/Hardware/tree/master/PCB/pico</a></div>
+</li>
+<li class="level1"><div class="li"> Firmware CMSIS-DAP: <a href="https://github.com/pridolfi/cmsis_dap_cdc" class="urlextern" target="_blank" title="https://github.com/pridolfi/cmsis_dap_cdc" rel="ugc nofollow noopener">https://github.com/pridolfi/cmsis_dap_cdc</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Repositorios&quot;,&quot;hid&quot;:&quot;repositorios&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;2314-2480&quot;} -->
+<h2 class="sectionedit7" id="empresa_auspiciante">Empresa Auspiciante</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.vicda.com.ar/site/" class="urlextern" target="_blank" title="http://www.vicda.com.ar/site/" rel="ugc nofollow noopener">VICDA Argentina</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Empresa Auspiciante&quot;,&quot;hid&quot;:&quot;empresa_auspiciante&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;2481-&quot;} --></div>
+</body>
+</html>

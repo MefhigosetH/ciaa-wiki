@@ -1,0 +1,11 @@
+====== Bibliotecas Python ======
+
+El soporte para Python cuenta con una amplia cantidad de caracterísicas del lenguaje Python habilitadas, como lo son el manejo de listas, diccionarios, funciones matemáticas, programación orientada a objetos, bytearray y collections entre otras.
+
+  * Soporte de hardware: [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb|Módulo pyb]]
+  * Soporte fecha y hora: [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-utime|Módulo utime]]
+  * Soporte protocolo Modbus: [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-modbus|Módulo ModBus]]
+  * Soporte JSON: [[https://docs.python.org/2/library/json.html|Módulo json]]
+  * Soporte funciones matemáticas: [[https://docs.python.org/2/library/math.html|Módulo math]] 
+
+  

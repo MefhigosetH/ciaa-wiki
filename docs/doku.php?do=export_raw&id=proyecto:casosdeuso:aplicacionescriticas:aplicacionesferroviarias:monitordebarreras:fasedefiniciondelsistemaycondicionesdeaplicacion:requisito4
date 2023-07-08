@@ -1,0 +1,57 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase 2/14: Definición del sistema y condiciones de aplicación  =====
+
+~~NOTOC~~
+
+{{ :blanco.png?10 | }}
+
+===== Requisito 4 =====
+
+###
+La norma UNE EN 50126 indica que:
+###
+
+<note>
+el requisito 4 de esta fase debe ser el de establecer el Plan de Seguridad del sistema. Dicho plan debe acordarse con la Autoridad Ferroviaria y con la industria ferroviaria y debe ponerse en práctica, examinarse y mantenerse durante todo el ciclo de vida del sistema. El plan de seguridad debería incluir:\\
+<fc #ffffff>..</fc> a) La política y estrategia encaminada al logro de la seguridad \\
+<fc #ffffff>..</fc> b) El alcance del plan \\
+<fc #ffffff>..</fc> c) Una descripción del sistema \\
+<fc #ffffff>..</fc> d) Detalle de las funciones, responsabilidades, competencias y relaciones de los organismos que desarrollan tareas dentro del ciclo de vida \\
+<fc #ffffff>..</fc> e) La descripción del ciclo de vida del sistema y las tareas de seguridad que hayan de realizarse dentro del ciclo de vida junto con cualesquiera dependencias. \\
+<fc #ffffff>..</fc> f) Los procesos de análisis de seguridad, ingeniería y evaluación que hayan de aplicarse durante el ciclo de vida, incluidos los procesos destinados a: \\
+<fc #ffffff>...</fc> - Garantizar el nivel adecuado de independencia del personal en las tareas, en proporción con el riesgo del sistema \\
+<fc #ffffff>...</fc> - La identificación y el análisis de peligros \\
+<fc #ffffff>...</fc> - Los criterios de tolerancia a los riesgos \\
+<fc #ffffff>...</fc> - El establecimiento y revisión actual de la idoneidad de los requisitos de seguridad \\
+<fc #ffffff>...</fc> - El diseño del sistema \\
+<fc #ffffff>...</fc> - Verificación y validación \\
+<fc #ffffff>...</fc> - La evaluación de seguridad encaminada a lograr la adecuación del proceso de gestión y el plan de seguridad \\
+<fc #ffffff>...</fc> - La evaluación de seguridad encaminada a lograr la adecuación entre los análisis de seguridad de subsistemas y sistemas \\
+<fc #ffffff>..</fc> g) Detalles de todos los entregables del ciclo de vida relacionados con la seguridad, incluidas: \\
+<fc #ffffff>...</fc> - La documentación \\
+<fc #ffffff>...</fc> - El hardware \\
+<fc #ffffff>...</fc> - El software \\
+<fc #ffffff>..</fc> h) Un proceso para elaborar casos de seguridad del sistema \\
+<fc #ffffff>..</fc> i) Un proceso para la aprobación de seguridad  del sistema \\
+<fc #ffffff>..</fc> j) Un proceso para la aprobación de seguridad de modificaciones del sistema \\
+<fc #ffffff>..</fc> k) Un proceso para analizar el funcionamiento de la operación y el mantenimiento con el fin de garantizar que la seguridad conseguida se ajuste a los requisitos. \\
+<fc #ffffff>..</fc> l)  Un proceso para el mantenimiento de documentación relacionada con la seguridad, incluido un registro de peligros. \\
+<fc #ffffff>..</fc> m) Interfaces con otros programas y planes relacionados \\
+<fc #ffffff>..</fc> n) Restricciones y supuestos realizados en el plan \\
+<fc #ffffff>..</fc> o) Disposiciones tomadas para la gestión de subcontratistas. \\
+<fc #ffffff>..</fc> p) Requisitos para las auditorias periódicas, de seguridad, la evaluación de seguridad y el examen de seguridad durante todo el ciclo de vida.
+</note>
+
+###
+El plan de seguridad del sistema está establecido en el documento “Plan de Seguridad” que forma parte de las Entregas de la presente fase de Definición del sistema y condiciones de aplicación. Se refiere al lector a dicha sección para tener precisiones respecto a este requisito.
+###
+
+{{ :blanco.png?20 | }}
+
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion:entregas|Ir a las Entregas de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+  
+###
+[ [[proyecto:casosdeuso:aplicacionescriticas:aplicacionesferroviarias:monitordebarreras:fasedefiniciondelsistemaycondicionesdeaplicacion|Volver a la Página Inicial de la Fase de Definición del sistema y condiciones de aplicación]] ]
+### 
+

@@ -1,0 +1,10 @@
+====== Salidas a Relé ======
+===== Esquemático =====
+{{ desarrollo:hardware:salrele.png |}}
+===== Características =====
+  * 4 Salidas con Relay  DPDT
+  * Seleccionables NA / NC por 4 bornera, mediante switch en PCB
+  * Capacidad de corriente para carga resistiva: 0,50A @ 125 VAC, 2A @ 30 VDC
+  * LED testigo en cada salida.
+  * Protección contra sobre-corriente de fuente
+

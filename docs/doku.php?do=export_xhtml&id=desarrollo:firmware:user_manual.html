@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:user_manual</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,user_manual"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:user_manual&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:user_manual"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:user_manual.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:user_manual","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#manual_del_usuario_de_ciaa_firmware">Manual del Usuario de CIAA Firmware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#instalacion_de_ciaa_firmware">Instalación de CIAA Firmware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#preparando_el_ide-eclipse_para_un_ejemplo_con_ciaa_firmware">Preparando el IDE-Eclipse para un ejemplo con CIAA Firmware</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#makefile">Makefile</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#compilando">Compilando</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#debugging">Debugging</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:user_manual.html#visual_studio_code">Visual Studio Code</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="manual_del_usuario_de_ciaa_firmware">Manual del Usuario de CIAA Firmware</h1>
+<div class="level1">
+
+<p>
+Esta página hace de Manual del Usuario del CIAA Firmware. Es para aquellos desarrolladores que quieran utilizar CIAA Firmware para sus proyectos.
+</p>
+
+<p>
+Se sugiere también suscribirse a la lista de correos <a href="https://groups.google.com/forum/#!forum/ciaa-firmware" class="urlextern" target="_blank" title="https://groups.google.com/forum/#!forum/ciaa-firmware" rel="ugc nofollow noopener">ciaa-firmware@googlegroups.com</a> dónde podrá conocer las novedades sobre el desarrollo y hacer consultas.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Manual del Usuario de CIAA Firmware&quot;,&quot;hid&quot;:&quot;manual_del_usuario_de_ciaa_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-418&quot;} -->
+<h2 class="sectionedit2" id="instalacion_de_ciaa_firmware">Instalación de CIAA Firmware</h2>
+<div class="level2">
+
+<p>
+Lo primero que necesitará será instalar Firmware de la CIAA, para ello puede leer:<br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:instalacion_sw.html" class="wikilink1" title="desarrollo:firmware:instalacion_sw" data-wiki-id="desarrollo:firmware:instalacion_sw">Instalación de CIAA Firmware</a>.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n de CIAA Firmware&quot;,&quot;hid&quot;:&quot;instalacion_de_ciaa_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;419-604&quot;} -->
+<h2 class="sectionedit3" id="preparando_el_ide-eclipse_para_un_ejemplo_con_ciaa_firmware">Preparando el IDE-Eclipse para un ejemplo con CIAA Firmware</h2>
+<div class="level2">
+
+<p>
+Una vez que tenemos las herramientos instaladas, puede configurar el IDE-Eclipse para empezar a probar alguno de los ejemplos, para ellos puede leer: <br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=desarrollo:firmware:examples_ide.html" class="wikilink1" title="desarrollo:firmware:examples_ide" data-wiki-id="desarrollo:firmware:examples_ide">Eclipse: crear un proyecto a partir de &#039;Firmware-Examples&#039;</a>.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Preparando el IDE-Eclipse para un ejemplo con CIAA Firmware&quot;,&quot;hid&quot;:&quot;preparando_el_ide-eclipse_para_un_ejemplo_con_ciaa_firmware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;605-911&quot;} -->
+<h2 class="sectionedit4" id="makefile">Makefile</h2>
+<div class="level2">
+
+<p>
+Una vez instalado el CIAA Firmware deberán entender como funciona el <a href="doku.php%3Fid=make_environment.html" class="wikilink1" title="make_environment" data-wiki-id="make_environment">Make</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Makefile&quot;,&quot;hid&quot;:&quot;makefile&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;912-1032&quot;} -->
+<h2 class="sectionedit5" id="compilando">Compilando</h2>
+<div class="level2">
+
+<p>
+<a href="./doku.php%3Fid=desarrollo:firmware:primer_compile.html" class="wikilink1" title="desarrollo:firmware:primer_compile" data-wiki-id="desarrollo:firmware:primer_compile">Compilando por primera vez</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilando&quot;,&quot;hid&quot;:&quot;compilando&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;1033-1102&quot;} -->
+<h2 class="sectionedit6" id="debugging">Debugging</h2>
+<div class="level2">
+
+<p>
+Luego de haber podido compilar pueden realizar el debugging. Si ha compilado para Windows o Linux lo puede hacer directamente, en caso de haber compilado para un CIAA-HW puede utilizar <a href="./doku.php%3Fid=desarrollo:firmware:openocd.html" class="wikilink1" title="desarrollo:firmware:openocd" data-wiki-id="desarrollo:firmware:openocd">OpenOCD</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debugging&quot;,&quot;hid&quot;:&quot;debugging&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1103-1331&quot;} -->
+<h2 class="sectionedit7" id="visual_studio_code">Visual Studio Code</h2>
+<div class="level2">
+
+<p>
+Es posible compilar y depurar los proyecto desarrollador dentro de CIAA Firmware también pueden ser depurados <a href="./doku.php%3Fid=desarrollo:firmware:vscode.html" class="wikilink1" title="desarrollo:firmware:vscode" data-wiki-id="desarrollo:firmware:vscode">VSCode</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Visual Studio Code&quot;,&quot;hid&quot;:&quot;visual_studio_code&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;1332-&quot;} --></div>
+</body>
+</html>

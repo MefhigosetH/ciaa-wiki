@@ -1,0 +1,19 @@
+===== Test Code Coverage =====
+
+###
+El término se refiere a la cantidad del software que ha sido testeado. Los tools utilizados para medir el test coverage modifican el software de tal forma de verificar si una instrucción ha sido ejecutada o no.
+###
+
+Tipos de Coverage:
+  * **Statement Coverage**: todas las instrucciónes fueron ejecutadas al menos 1 vez.
+  * **Line Coverage**: todas las lineas de código fueron ejecutadas al menos 1 vez.
+  * **Path Coverage**: todos los posibles caminos fueron ejecutados al menos 1 vez.
+  * **Modified condition/decision coverage**: utilizado en sistemas críticos. Más información: [[http://en.wikipedia.org/wiki/Modified_condition/decision_coverage|MC/DC en Wikipedia]].
+
+###
+El Firmware de la CIAA deberá cumplir **100% de Statement Coverage**, es decir, todas las instrucciones deberán ser ejecutadas al menos una vez durante los tests.
+###
+
+###
+Si está interesado en saber cómo realizamos los tests para el Firmware de la CIAA, visite [[unit_tests|Unit Tests o Pruebas Unitarias]].
+###

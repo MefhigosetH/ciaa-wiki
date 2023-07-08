@@ -1,0 +1,89 @@
+====== Aportes de desarrolladores ======
+
+Los siguientes son los desarrolladores que participan del Proyecto CIAA y las tareas que realizan:
+
+
+^ Grupo             ^ Integrante                           ^ Tareas                            ^
+| [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|{{ acse.jpg?230 }}]]  [[http://www.cadieel.org.ar/esp/index.php|{{ CADIEEL logos02-01.jpg?120 }}]] | Ariel Lutenberg (ACSE, FIUBA, CONICET) | Coordinación General       |
+| :::               | Javier Viqueira (CADIEEL, ADOX)      | Responsable Vinculación           |
+| :::               | Julieta Pando (CADIEEL)              | Vinculación y Difusión            |
+| :::               | Gerardo Cadierno (CADIEEL)           | Difusión                          |
+| [[http://www.adox.com.ar/|{{ adox_1.png?120 }}]] | Jorge Fiszman | Diseño PCB CIAA-NXP: Ethernet, USB, microSD, CAN, RS232, RS485. |
+| [[http://www.arrowar.com/iweb/|{{ arrow.png?120 }}]] | Daniel Di Lella | Componentes maqueta CIAA-NXP |
+| [[http://asembli.com/|{{ Asembli.PNG?140 }}]] | Gaston Lagoa | Montaje de circuitos impresos CIAA-FSL |
+| [[http://www.assisi.com.ar/|{{ {{Assisi.png?140 }}]] | Dante Starkloff | Diseño Hardware CIAA-NXP |
+| [[http://www.chillemihnos.com.ar/|{{ chillemi.png?80 }}]] | | Gabinete |
+| [[http://www.dai-ichi.com.ar/|{{ logo_dai_ichi.png?200 }}]] | Enrique R. Shoji | Ingeniería de manufactura de PCB CIAA-NXP |
+| [[http://www.debtech.com.ar/|{{ debtech_1.png?100 }}]]|Ezequiel Espósito| Servidor web y herramientas de gestión|
+| [[http://www.diec.uns.edu.ar/|{{ Logo_DIEC_vertical.png?70 }}]]| Gustavo Ramoscelli | Continous Integration |	
+| [[http://www.elemon.com.ar/elemon/|{{ Elemon.png?160 }}]]| Hernan Rodriguez | Responsable Hardware CIAA-PIC |
+| :::                                                      | :::         | Diseño Hardware CIAA-PIC |
+| [[http://www.emtech.com.ar/|{{emtech.png?150}}]] | Mauro Koenig      | Diseño PCB CIAA-NXP      |
+| :::                                              | Martin Ribelotta  | Responsable Software-IDE |
+| :::                                              | :::               | Subresponsable Linux     |
+| :::                                              | Guillermo Güichal | Subresponsable Sistema   |
+| [[http://web.fceia.unr.edu.ar/|{{ FCEIA.png?120 }}]] | Gustavo Muro (UNR) | Subresponsable Firmware |
+| :::                                                  | :::                | Firmware Modbus         |
+| [[http://www.fi.uba.ar/|{{ logo_FIUBA.png?130 }}]] | Ariel Lutenberg (ACSE, FIUBA, CONICET) | Coordinación General |
+| :::               | Mariano García Inza (FIUBA)          | Responsable Microelectrónica      |
+| :::               | Martín Carrá (FIUBA)                 | Diseño esquemático LDO            |
+| :::               | Ezequiel Rubinsztain (FIUBA)         | Diseño esquemático LDO            |
+| :::               | Ignacio Lesser (FIUBA)               | Diseño físico (layout) LDO        |
+| :::               | Leonardo Giaccone (FIUBA)            | Diseño físico (layout) LDO        |
+| :::               | Sebastián Carbonetto (FIUBA)         | Diseño físico (layout) LDO        |
+| :::               | Gabriel Sanca (FIUBA)                | Revisión LDO                      |
+| [[http://www.globallogic.com.ar/|{{ GlobalLogic.png?140 }}]] | Juan Caracoche | Diseño portada Mercado Electrónico. |
+| :::               | ::: | Diseño y desarrollo página web de inicio. |
+| [[http://www.grupoalaska.com.ar|{{ GrupoAlaska_logo.png?110 }}]]| Manuel Saintotte  | Responsable Gabinete |
+| [[http://www.ing.unrc.edu.ar/grupos/gstr/|{{ GSTR.png?80 }}]] | Gustavo Rodriguez | Porting de OSEK a Cortex R |
+| :::                                                           | Martín Marcos | Porting de OSEK a Cortex R |
+| [[http://inarci.com/|{{ inarci_logo.png?120 }}]] | Juan Pablo Laurino | PCBs maquetas y prototipos CIAA-NXP |
+| [[http://www.inti.gob.ar/electronicaeinformatica/|{{ INTI-EeI.png?180 }}]] | Gustavo Alessandrini | Pruebas Funcionales Firmware |
+| :::               | Fernando Beunza                      | Pruebas Funcionales Firmware                  |
+| :::               | Sebastián Barillaro	           | Pruebas Funcionales y Desarrollo Tester en PC |
+| [[http://www.inti.gob.ar/microynanoelectronica/cmnb.htm|{{ inti-cmnb.png?160 }}]] [[http://www.electrocomponentes.com/|{{ Electrocomponentes.png?120 }}]] | Ignacio Zaradnik (Electrocomponentes) | Subresponsable CIAA-FSL|
+| :::               | Eduardo Santo (Electrocomponentes)   | Hardware CIAA-FSL                 |
+| :::               | Diego Brengi (INTI)                  | Hardware CIAA-FSL                 |
+| :::               | Hernán Ledesma (INTI)                | Hardware CIAA-FSL                 |
+| :::               | Diego Alamon (INTI)                  | Hardware CIAA-FSL                 |
+| :::               | Matías Parra Visentín (INTI)         | Hardware CIAA-FSL                 |
+| :::               | David Caruso (INTI)                  | Hardware CIAA-FSL                 |
+| :::               | :::                                  | Revisión EDU-CIAA-NXP             |
+| :::               | Noelia Scotti (INTI)                 | Hardware CIAA-FSL                 |
+| :::               | :::                                  | Revisión EDU-CIAA-NXP             |	
+| [[http://www.mayerpcb.com/|{{ Mayer.png?180 }}]]| Marcos Mayer       | Ingeniería de manufactura de PCB CIAA-FSL|
+| [[http://www.nablaenergia.com.ar/|{{ NablaEnergia.png?180 }}]] | Hernan Rodriguez | Diseño Hardware CIAA-PIC |
+| [[http://www.suremptec.com/|{{ SUR_horizontal_res-media.png?100 }}]]| Paola Pezoimburu | Responsable Sistema|
+| [[http://www.trimaker.com/|{{ Logo Trimaker.png?140 }}]] | Karen Antorveza | Impresión 1 gabinete CIAA |
+| [[https://www.unaj.edu.ar/|{{ UNAJ.png?170 }}]] | Jorge Osio | Hardware CIAA-NXP |
+| [[http://www.unca.edu.ar/|{{ UNCA.png?70 }}]] | Juan Pablo Moreno | Subresponsable Software-PLC |
+| :::                                      | ::: | Sistema CRM (Customer Relationship Management)|
+| [[http://www.uncoma.edu.ar/|{{ UNCOMA.png?70 }}]] | Ismael Potolicchio | EDU-CIAA (BOM)        |
+| [[http://www.uner.edu.ar/|{{ logo_UNER.png?80 }}]] | Eduardo Filomena | Responsable EDU-CIAA   |
+| :::                                                | Gonzalo Cuenca   | Ruteo EDU-CIAA-NXP     |
+| [[http://www.unlp.edu.ar/|{{ UNLP.png?80 }}]] | Gerardo Sager | Definición de bloques funcionales EDU-CIAA |
+| :::                                           | :::          | Colaboración en esquemáticos y PCB EDU-CIAA |
+| [[http://www.unt.edu.ar/|{{ UNT.png?100 }}]] | Daniel Cohen      | Firmware: Diseño del Bootloader.       |
+| :::                                          | Esteban Volentini | Firmware: Diseño del Bootloader.       |
+| :::                                          | Franco Salinas    | Firmware: Programación del Bootloader. |
+| [[http://www.unq.edu.ar/|{{ logoUNQ.png?120 }}]] | Eric Pernia | Responsable Software-PLC. |
+| :::                                          | Carlos Lombardi    | Sub-responsable Software-PLC. |
+| [[http://www.frba.utn.edu.ar/|{{ logo_utn_frba.png?160 }}]] | Pablo Ridolfi (UTN-FRBA) | Responsable Hardware            |
+| :::               | :::                                  | Integración Esquemáticos CIAA-NXP |
+| :::               | :::                                  | Porting OSEK a Cortex-M4          |
+| :::               | :::                                  | Device Drivers CIAA-NXP           |
+| :::               | Mariano Cerdeiro (UTN-FRBA)	   | Responsable Firmware              |
+| :::               | :::                                  | Implementación de OSEK            |
+| :::               | :::                                  | Diseño librerías POSIX            |
+| :::               | :::                                  | Herramientas de software          |
+| :::               | Octavio Alpago (FIUBA , UTN-FRBA)    | Revisión LDO                      |
+| :::               | Sebastián Pazos (UTN-FRBA)           | Revisión LDO                      |
+| [[http://www.frba.utn.edu.ar/|{{ logo_utn_frba.png?160 }}]] [[http://www.numetron.com.ar/|{{ LogoNumetron_Normal.png?150 }}]] | Juan Cecconi (UTN-FRBA, Numetron)    | Subresponsable CIAA-NXP           |
+| :::               | :::                                  | Subresponsable CIAA-IDE v1.0      |
+| :::               | :::                                  | Diseño y Simulaciones             |
+| :::               | :::                                  | IDE Eclipse y toolchain           |
+| :::               | :::                                  | Debug server CIAA-NXP             |
+| [[http://www.vanguardiasur.com.ar|{{ vanguardiasur-logo.png?180 }}]] | Ezequiel García | Responsable Linux     |
+| {{ logo_vortex.png?60 |Vortex Technologies}} | Darío Sebastián Baliña | Hardware CIAA-FSL      |
+| | Carlos Pantelides | Generador del RTOS |
+| ::: | ::: | Reestructuración de la Documentación del Proyecto |

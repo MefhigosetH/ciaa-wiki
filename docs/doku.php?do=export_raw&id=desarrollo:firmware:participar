@@ -1,0 +1,25 @@
+====== Participar en el desarrollo de Firmware ======
+
+¡Bienvenido al equipo de desarrollo de Firmware! 
+
+Esta página es para aquellos que estén interesados en comenzar a participar en el Grupo de Firmware.
+
+===== Dónde empezar =====
+
+Bueno, lo mejor es ir leyendo la [[desarrollo:firmware|Wiki de Firmware]] y sus links.
+
+Conocer las [[fw_coding_guidelines|CIAA Firmware Coding Guidelines]].
+
+===== Bajar los fuentes =====
+
+Los fuentes están en [[codigo|Git Hub]].
+
+===== Comunicación =====
+
+Para la comunicación utilizamos el [[https://groups.google.com/forum/#!forum/ciaa-firmware|Grupo de Google CIAA-Firmware]] al que lo invitamos a sumarse.
+
+===== En qué puedo ayudar =====
+
+Hay muchos temas en los que necesitamos ayuda, en la wiki encontrará una [[plan_desarrollo_fw|lista de temas y responsables]] donde todavía faltan completar muchos casilleros.
+
+No dude en contactarnos a través de la lista de correo. Hay más temas en los que necesitamos participantes.

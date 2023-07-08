@@ -1,0 +1,52 @@
+====== 1 Introducción ======
+###
+En estas páginas encontrará la documentación oficial de la **CIAA**. La misma está basada en una [[https://www.dokuwiki.org/|dokuwiki]]. 
+###
+
+===== ¿Qué es la CIAA? =====
+
+###
+La **CIAA** (Computadora Industrial Abierta Argentina) es una plataforma creada para impulsar el desarrollo tecnológico, generar conocimiento, y darle la posibilidad a **PyMEs** de poder basar sus trabajos en una plataforma testeada y con la mayor cantidad de funcionalidades posible. Reduciendo así el tiempo y la inversión necesaria para poder llegar a un producto final. 
+###
+
+===== Mejorando la WIKI =====
+###
+Si encuentra errores y quiere ayudarnos a mejorar esta documentación escribanos a [[mailto:contacto@proyecto-ciaa.com.ar|contacto@proyecto-ciaa.com.ar]] y le crearemos un usuario.
+###
+
+===== Soporte =====
+###
+Siempre recomendamos empezar leyendo esta documentación. De no encontrar respuesta a sus preguntas, se puede buscar en el historial de los foros de desarrollo:
+###
+  * [[https://groups.google.com/forum/#!forum/ciaa-ide|CIAA-Software-IDE]]
+  * [[https://groups.google.com/forum/#!forum/ciaa-hardware|CIAA-Hardware]]
+  * [[https://groups.google.com/forum/#!forum/ciaa-firmware|CIAA-Firmware]]
+  * [[https://groups.google.com/forum/#!forum/ciaa-linux|CIAA-Linux]]
+  * [[https://groups.google.com/forum/#!forum/ciaa-software-plc|CIAA-Software-PLC]]
+  * [[https://groups.google.com/forum/#!forum/educiaa|EDU-CIAA]]
+
+O suscribirse a los mismos y hacer las preguntas al foro.
+
+===== Estructura de la documentación ====
+
+La documentación está dividida en 3 secciones:
+
+=== Hardware ===
+
+###
+El proyecto **CIAA** cuenta hoy en día con más de 6 plataformas de HW. En la sección de **Hardware** se explican las características de cada plataforma, el procesador, los periféricos, los esquemáticos y todo lo relevante para poder trabajar y adaptar la **CIAA** al proyecto en el cual sea utilizada.
+###
+
+=== Firmware ===
+
+###
+El **firmware** es el programa que **se ejecuta en la CPU del microcontrolador**. Éste comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. La CIAA tiene tanto la posibilidad de correr [[docu:fw:linux|Linux]] como un [[docu:fw:bm]]. El Firmware también incluye un [[docu:fw:bm:ide|IDE]] para poder desarrollar desde un entorno confortable y amigable.
+###
+
+=== Software-PLC ===
+
+###
+El Software-PLC de la CIAA, es el entorno de desarrollo integrado (IDE) industrial que se ejecuta en una PC (Windows / Linux / MAC OS X compatible) y permite utilizar la CIAA como un PLC industrial. De esta forma es posible programar la placa en base al estándar **IEC 61131-3**
+###
+
+<- .. ^ desarrollo:docu:indice|Documentación ^ docu:hw:intro|2 - Hardware ->

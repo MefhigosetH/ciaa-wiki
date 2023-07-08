@@ -1,0 +1,116 @@
+====== Instalación de micropython ======
+
+Micropython requiere de un programa anfitrión instalado en la placa, que cumple dos funciones:
+
+  * Interprete de python vía la terminal serial
+  * Ejecución autónoma de un programa python almacenado en la placa 
+
+Para ambos casos, hay que instalar y configurar:
+
+  * El compilador (link)
+  * Los drivers (link)
+  * La [[repo:conexion:edu_ciaa_nxp|conexión]]
+  * La [[repo:instalacion:terminales|comunicación]]
+
+
+En linux puede hacer falta instalar zip //**nota: lo dejé pero no sé si es necesario**//:
+<code bash>
+  $ sudo aptitude install zip 
+</code>
+
+===== Clonando el repositorio del firmware =====
+
+El repositorio oficial de micropython para la EDU-CIAA es {{https://github.com/martinribelotta/micropython|https://github.com/martinribelotta/micropython}}, creado por Martín Ribelotta. Las versiones más estables suelen estar en {{https://github.com/ernesto-g/micropython|https://github.com/ernesto-g/micropython}}, mantenido por Ernesto Gigliotti.
+
+Para clonar el repositorio del proyecto micropython para la EDU-CIAA hay que ejecutar
+<code bash>
+$ git clone https://github.com/ernesto-g/micropython.git
+$ cd micropython
+$ git checkout frozen
+</code>
+Si deseamos colaborar con el proyecto, entonces mejor clonar el oficial:
+
+<code bash>
+$ git clone https://github.com/martinribelotta/micropython.git
+$ cd micropython
+</code>
+
+===== Compilando y grabando el firmware =====
+
+Ingresamos al directorio ciaa-nxp y compilamos el proyecto:
+
+<code bash>
+$ cd ciaa-nxp
+$ make
+</code>
+Grabamos el firmware generado mediante el comando:
+<code bash>
+$ make download
+</code>
+  
+Si se abre una terminal a la placa, deberíamos ver el prompt del intérprete:
+
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png?700|}}
+
+===== Utilización del IDE (beta) =====
+
+Existe un IDE simplificado que nos permite escribir el script de python y enviárselo a la placa, por otro lado se está trabajando en un IDE completo pero que todavía no es estable.
+
+Se puede obtener un instalador con todas las dependencias incluidas {{https://github.com/ernesto-g/educiaa_python_editor/releases|https://github.com/ernesto-g/educiaa_python_editor/releases}} o tambien se puede clonar el {{https://github.com/ernesto-g/educiaa_python_editor.git|repositorio}} y resolver las dependencias especificadas. Para ver todas las opciones de instalación, lea el archivo {{https://github.com/ernesto-g/educiaa_python_editor/blob/master/README.md}}
+
+
+Al ejecutar el IDE deberemos ver el siguiente entorno de trabajo:
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide.png?400 |}}
+
+
+=== Configuración de puerto serie ===
+
+En el menú EDU-CIAA -> Configuration -> selecionamos el segundo de los puertos creados, y presionamos OK
+
+=== Grabando el script en la placa ===
+
+Escribimos un pequeño script de prueba:
+
+<code python>
+print("Hello world")
+</code>
+
+Para grabar el script, mantenemos presionado el botón de reset en la placa y luego presionamos el botón "Load Script". Aparecerá el siguiente diálogo de progreso:
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load.png?450 |}}
+
+Al soltar el botón de reset, se comenzará la copia del script.
+
+=== Usando la terminal del IDE ===
+
+La IDE nos provee una ventana la cual cumple la función de terminal. Para acceder a la consola de la placa desde el IDE, presionamos el botón "Terminal". Al reiniciar la placa con el botón de reset veremos el mensaje de "Hello World" debido a la ejecución del script.
+
+{{ :desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png?400 |}}
+
+=== Snippets ===
+El IDE cuenta con pequeños programas de ejemplo (snippets) los cuales pueden agregarse al script para realizar las primeras pruebas con la placa.
+
+
+
+===== Programando un script de python =====
+Python es un lenguaje de programación interpretado con una sintaxis que favorece un código legible.Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y funcional. 
+
+Para comenzar a aprender este lenguaje se recomiendan los siguientes enlaces:
+
+  * [[https://es.wikipedia.org/wiki/Python|Python. Wikipedia]]
+  * [[http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf|Python para todos. Libro en español.]]
+
+
+Para acceder a la documentación de las bibliotecas Python que pueden utilizarse para manejar el hardware de la placa, dirigirse al siguiente enlace:
+
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas|Bibliotecas python para manejo del hardware]]
+ 
+
+Para descargar proyectos de ejemplo dirigirse al siguiente enlace: 
+
+  * [[desarrollo:edu-ciaa:edu-ciaa-nxp:python#proyectos_ejemplo|Proyectos de ejemplo]]
+
+Si queremos que solo arranque la consola, bastará con hacer un script vacío, si queremos que la consola nunca aparezca, no deberemos dejar que el script termine, colocando un bucle que englobe todo el código.
+
+

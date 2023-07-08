@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>docu:fw:bm:ide:ide_win_debug</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="docu,fw,bm,ide,ide_win_debug"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=docu:fw:bm:ide"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_win_debug.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=docu:fw:bm:ide:ide_win_debug"/>
+<link rel="canonical" href="./doku.php%3Fid=docu:fw:bm:ide:ide_win_debug.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='docu:fw:bm:ide';var JSINFO = {"id":"docu:fw:bm:ide:ide_win_debug","namespace":"docu:fw:bm:ide","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_win_debug.html#debug_con_windows">Debug con Windows</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_win_debug.html#debug_configuration">Debug Configuration</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_win_debug.html#posibles_errores">Posibles Errores</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=docu:fw:bm:ide:ide_win_debug.html#agregando_path_mapping">Agregando Path Mapping</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+<div class="docnavbar"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos.html" class="wikilink1" title="docu:fw:bm:ide:ide_primeros_pasos" data-wiki-id="docu:fw:bm:ide:ide_primeros_pasos">Primeros Pasos </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_edu_ciaa_debug" data-wiki-id="docu:fw:bm:ide:ide_edu_ciaa_debug">Debug con la placa EDU-CIAA y el Entorno IDE </a> →</div></div>
+<h1 class="sectionedit1" id="debug_con_windows">Debug con Windows</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debug con Windows&quot;,&quot;hid&quot;:&quot;debug_con_windows&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-32&quot;} -->
+<h2 class="sectionedit2" id="debug_configuration">Debug Configuration</h2>
+<div class="level2">
+<p class="divalign-justify">Tanto el entorno CIAA-IDE como el Firmware, esta preparado para iniciar los primeros pasos sin necesidad de tener la placa EDU-CIAA, o con la posibilidad de hacer debug del software desarrollado, sin ésta.
+Para que el Win Debug funcione es necesario realizar la siguiente configuración. En principio debemos decirle al IDE donde se encuentra el ejecutable que genera el Makefile nuestro. Para esto Hacemos Click derecho sobre el proyecto &#039;Debug As⇒Debug Configurations …&#039;.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:configdebug.png.html" class="media" title="docu:fw:bm:ide:configdebug.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:configdebug.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">El .exe que genera el makefile queda almacenado en la carpeta c:\CIAA\Firmware\out\bin\</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:path_to_exe.png.html" class="media" title="docu:fw:bm:ide:path_to_exe.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:path_to_exe.png" class="mediacenter" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Aplicamos los cambios y presionamos en <strong>Debug</strong>.</p><!--divalign-->
+
+<p>
+<br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debug Configuration&quot;,&quot;hid&quot;:&quot;debug_configuration&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;33-788&quot;} -->
+<h2 class="sectionedit3" id="posibles_errores">Posibles Errores</h2>
+<div class="level2">
+<p class="divalign-justify">Es posible que el IDE nos informe que no puede encontrar el Código Fuente, para solucionar esto es necesario crear un Path Mapping que convierta el estilo de Path de CygWin al formato Windows.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:errorpathmapping.png.html" class="media" title="docu:fw:bm:ide:errorpathmapping.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:errorpathmapping.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Posibles Errores&quot;,&quot;hid&quot;:&quot;posibles_errores&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;789-1063&quot;} -->
+<h2 class="sectionedit4" id="agregando_path_mapping">Agregando Path Mapping</h2>
+<div class="level2">
+<p class="divalign-justify">Seleccionamos en <strong>Edit Source Look Up Path</strong> donde esta el error y luego en la ventana emergente <strong>Add</strong></p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:lookuppathadd.png.html" class="media" title="docu:fw:bm:ide:lookuppathadd.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:lookuppathadd.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Seleccionamos <strong>Path Mapping</strong> y <strong>Ok</strong>. Se abrirá una nueva ventana donde deberemos mapear el directorio.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:pathmapping.png.html" class="media" title="docu:fw:bm:ide:pathmapping.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:pathmapping.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Colocamos las dos formas del Path y un nombre</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:pathmappingname.png.html" class="media" title="docu:fw:bm:ide:pathmappingname.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:pathmappingname.png" class="media" loading="lazy" alt="" /></a>
+</p>
+<p class="divalign-justify">Finalmente, si volvemos a compilar y hacer Debug, podremos hacerlo sin ningún inconveniente.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=docu:fw:bm:ide:ide_win_debug&amp;media=docu:fw:bm:ide:debugokwin.png.html" class="media" title="docu:fw:bm:ide:debugokwin.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:debugokwin.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Agregando Path Mapping&quot;,&quot;hid&quot;:&quot;agregando_path_mapping&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1064-&quot;} --><div class="clearer"></div><div class="docnavbar showtoc"><div class="leftnav">← <a href="./doku.php%3Fid=docu:fw:bm:ide:ide_primeros_pasos.html" class="wikilink1" title="docu:fw:bm:ide:ide_primeros_pasos" data-wiki-id="docu:fw:bm:ide:ide_primeros_pasos">Primeros Pasos </a>&nbsp;</div><div class="centernav"><a href="./doku.php%3Fid=docu:fw:bm:ide.html" class="wikilink1" title="docu:fw:bm:ide" data-wiki-id="docu:fw:bm:ide">IDE </a>&nbsp;</div><div class="rightnav">&nbsp;<a href="./doku.php%3Fid=docu:fw:bm:ide:ide_edu_ciaa_debug.html" class="wikilink1" title="docu:fw:bm:ide:ide_edu_ciaa_debug" data-wiki-id="docu:fw:bm:ide:ide_edu_ciaa_debug">Debug con la placa EDU-CIAA y el Entorno IDE </a> →</div></div></div>
+</body>
+</html>

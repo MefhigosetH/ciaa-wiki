@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> repo:conexion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:30:15+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:ciaa_nxp&amp;rev=1470341813&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_intro&amp;rev=1488019795&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_otg&amp;rev=1488019478&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_uart&amp;rev=1488019509&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp&amp;rev=1488019929&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:picociaa&amp;rev=1470341143&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:ciaa_nxp&amp;rev=1470341813&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T20:16:53+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:ciaa_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:ciaa_nxp&amp;rev=1470341813&amp;do=diff</link>
+        <description>Conexión ciaa-nxp
+
+alimentación
+
+comunicación para debug</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_intro&amp;rev=1488019795&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-25T10:49:55+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:edu_ciaa_nxp_intro</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_intro&amp;rev=1488019795&amp;do=diff</link>
+        <description>Conexión edu-ciaa-nxp a PC por USB
+
+La placa edu-ciaa-nxp se puede alimentar por cualquiera de los dos puertos y pueden usarse ambos a la vez. Necesitaremos uno o dos cables USB (A Plug a Micro-B Plug) como los utilizados para cargar los celulares de hoy en día.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_otg&amp;rev=1488019478&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-25T10:44:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:edu_ciaa_nxp_otg</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_otg&amp;rev=1488019478&amp;do=diff</link>
+        <description>Conexión para USB como dispositivo u OTG
+
+Conectar el cable USB a la placa en el conector “USB OTG” y luego a la PC. El led llamado “PWR” se encenderá.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_uart&amp;rev=1488019509&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-25T10:45:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:edu_ciaa_nxp_uart</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp_uart&amp;rev=1488019509&amp;do=diff</link>
+        <description>Conexión para programar y comunicación UART
+
+Conectar el cable USB a la placa en el conector “DEBUG” y luego a la PC. El led llamado “PWR” se encenderá.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp&amp;rev=1488019929&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-02-25T10:52:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:edu_ciaa_nxp</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:edu_ciaa_nxp&amp;rev=1488019929&amp;do=diff</link>
+        <description>Conexión edu-ciaa-nxp a PC por USB</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:picociaa&amp;rev=1470341143&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T20:05:43+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:conexion:picociaa</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:conexion:picociaa&amp;rev=1470341143&amp;do=diff</link>
+        <description>Conexión picociaa
+
+foto - cable
+
+foto en mother 
+
+apagar y desconectar power
+
+duda? que pasa si se conectan ambos a la vez?</description>
+    </item>
+</rdf:RDF>

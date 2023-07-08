@@ -1,0 +1,8 @@
+====== Bugfixes ======
+
+No siempre es fácil distinguir entre un bug y una nueva funcionalidad. Para que se realize una patch versión de una [[desarrollo:firmware:STS|STS]] o [[desarrollo:firmware:LTS|LTS]] uno o más bugs deben ser aceptados como tales.
+
+  * De haber una documentación respecto al problema, el mismo no puede ser aceptado como bug.
+  * De haber un test que espera este comportamiento, el problema no puede ser aceptado como un bug.
+
+Bugs deben ser reportados en el [[desarrollo:firmware:proceso#change_management|Issue Tracker]] oficial de CIAA-Firmware.

@@ -1,0 +1,113 @@
+====== CIAA-ACC ======
+
+=====Computadora industrial abierta para aplicaciones de Alto Costo Computacional=====
+
+{{ :desarrollo:ciaa_acc:ciaa-acc_top_armada_l.jpg?300 |}}
+====Resumen====
+
+Este proyecto está orientado al desarrollo de una computadora industrial en la modalidad de hardware libre que soporte aplicaciones de alto costo computacional, como son los sistemas de visión y procesamiento de imágenes y el manejo de pantallas de alta resolución, y que sea capaz de correr sistemas operativos de tipo Linux. En particular, el presente proyecto abordará al menos tres campos del conocimiento que son centrales para el desarrollo de sistemas digitales complejos: 
+  - Análisis, selección y utilización a nivel chip de procesadores o circuitos lógicos programables que brinden la capacidad de cómputo y las arquitecturas requeridas.
+  - Análisis, selección e implementación de sistemas operativos compatibles con entornos de tipo Linux, que sean acordes a sistemas industriales de tiempo real.
+  - Técnicas de diseño de circuitos impresos que permitan soportar la tasa de datos requerida para aplicaciones de este tipo, funcionando bajo condiciones industriales. 
+
+Este conocimiento no sólo redundará en beneficio de este proyecto y de quienes sean sus usuarios directos, sino que al trabajarse en la modalidad de hardware libre servirá también como referencia para el desarrollo nacional de otros sistemas embebidos similares.
+
+**[[Cronograma, tareas y responsables de la CIAA-ACC]]**
+
+===== Estado actual del proyecto (27/03/19) =====
+Hay 10 PCBs armados por Asembli y otros tantos en Italia (ICTP) que fueron fabricados por EDADOC y que arrancaron sin problemas. INTI-CMNB y Emtech desarrollaron el software necesario para las pruebas básicas, esto está en el repo CIAA_ACC_Support. Falta documentar los pasos necesarios para la puesta en marcha y algunos detalles de hardware (jumpers por ejemplo). Hay 4 placas disponibles para su uso en manos de Ariel Lutenberg.
+===== Etapa de estudio y selección =====
+
+  * [[Estudio y selección del sistema operativo]]. Alternativas para tiempo real y Linux.
+  * [[Estudio y selección de la arquitectura de Hardware]]. Alternativas de la arquitectura.
+     * Datos propuesta 1: [[Zynq UltraScale+ MPSoC (Xilinx)]]
+     * Datos propuesta 2: [[iMX6 (Freescale)]]
+     * [[Otras propuestas analizadas]]
+     * [[Selección final de la arquitectura de Hardware]]
+  * [[Estudio del factor de forma]]
+  * [[Sistemas similares, productos comerciales, ideas]]
+  * [[Compatibilidad con las características de hardware de las primeras CIAAs]]
+  * [[Estudio aproximado de costos]]
+
+===== Diagrama en bloques ====
+
+{{ :desarrollo:ciaa_acc:ciaa-acc_v1.1_block_diagram.png?direct |Diagrama en bloques CIAA-ACC}}
+
+Nota 1: El bloque de las entradas analógicas se eliminó porque las líneas del ADC no pudieron ser ruteadas por falta de espacio en el PCB. \\
+Nota 2: La entrada de la fuente de alimentación tuvo que dejarse en +5V porque las tensiones del procesador son muy bajas y no era coherente ni eficiente soportar +12V o +24V a la entrada.
+
+{{:desarrollo:ciaa_acc:diagrama_ciaa_acc.png?linkonly|Diagrama en bloques proyectado en Diciembre 2015.}}
+
+
+Para ilustrar las características del procesador seleccionado, se adjunta el diagrama del mismo tomado del software Vivado. Aquí pueden verse el procesador y todos los periféricos.
+
+{{ :desarrollo:ciaa_acc:zynq_z030_vivado.png?direct |Diagrama del procesador Zynq-7030}}
+
+===== Lógica programable =====
+
+La lógica programable del Zynq-7030 tiene las siguientes características:
+
+^  Part Number ^ XC7Z030 ^ 
+| Xilinx 7 Series Programmable Logic Equivalent | Kintex-7 FPGA |
+| Programmable Logic Cells | 125K Logic Cells (~1.9M) |
+| Look-Up Tables (LUTs) | 78,600 |
+| Flip-Flops | 157,200 |
+| Extensible Block RAM (# 36 Kb Blocks) | 1,060 KB (265) |
+| Programmable DSP Slices (18x25 MACCs) | 400 |
+| Peak DSP Performance (Symmetric FIR) | 593 GMACs |
+| PCI Express (Root Complex or Endpoint) | Gen2 x4 |
+| Analog Mixed Signal (AMS) / XADC | 2x 12 bit, MSPS ADCs with up to 17 Differential Inputs |
+| Security | AES and SHA 256b for Boot Code and Programmable Logic Configuration, Decryption, and Authentication |
+
+
+===== Diagramas Esquemáticos =====
+
+[[https://github.com/ciaa/Hardware/raw/master/PCB/ACC/CIAA_ACC/output_files/ciaa_acc_sch_v1.1.pdf|Esquemático de la versión V1.1]]
+
+[[https://github.com/ciaa/Hardware/raw/master/PCB/ACC/CIAA_ACC/output_files/ciaa_acc_sch_v1.3.pdf|Esquemático de la versión V1.3]]
+
+[[https://github.com/ciaa/Hardware/raw/master/PCB/ACC/CIAA_ACC/output_files/ciaa_acc_sch_v1.4.pdf|Esquemático de la versión V1.4]]
+
+
+==== Descripción de subsistemas e interfaces ====
+
+EN PROCESO...
+
+
+===== Placa del circuito impreso (PCB) =====
+
+El proyecto completo de KiCAD puede bajarse del siguiente repositorio: \\ 
+[[https://github.com/ciaa/Hardware/tree/master/PCB/ACC/CIAA_ACC|Acceso al repositorio de hardware en GitHub.]]
+
+Hay varias versiones de gerber files en el repositorio:
+  * V1.1: Primera versión.
+  * V1.1B: Idéntica a la V1.1 pero con el agregado de números de identificación en cada capa.
+  * V1.1C: Idéntica a la V1.1B pero con el agregado de puntos fiduciales.
+  * V1.1D: Idéntica a la V1.1C pero con correcciones en la máscara antisoldante y la pasta.
+  * V1.1E: El fabricante EDADOC la generó a partir de la V1.1D, corrigiendo todos los puntos donde el clearance entre un agujero y una pista o entre un agujero y un pad era menor a 8.9 mils. También modificaron algunos anchos de pistas debido al cambio de un prepreg en el stackup. Esta es la versión lista para fabricar.   
+  * V1.1F: Se cambiaron los componentes SMD que no aparecían en los pos files. Se corrigió la ubicación de los designators U45 y U47. Se cambió el texto IND. ARG. por DISEÑADO EN ARG.
+
+==== Vistas 3D ====
+{{:desarrollo:ciaa_acc:ciaa-acc_v1.1_top.png?315|}} {{:desarrollo:ciaa_acc:ciaa-acc_v1.1_bot.png?315|}}
+
+==== Fotos y videos ====
+{{:desarrollo:ciaa_acc:ciaa-acc_top_armada_l.jpg?300|TOP}} {{:desarrollo:ciaa_acc:ciaa-acc_bottom.jpg?300|BOTTOM}} 
+
+[[https://www.youtube.com/playlist?list=PLLNB-XwAzNbKZCp4wn6FLwzIEGCHnNeDI|Videos de la CIAA-ACC en el canal de Youtube de la CIAA]]
+
+
+==== Fabricación ====
+
+=== Lista de Materiales (BOM) ===
+
+[[https://github.com/ciaa/Hardware/raw/master/PCB/ACC/CIAA_ACC/output_files/BOM_ciaa_acc_v1.1.xlsx|Bill of materials CIAA-ACC V1.1.]]
+
+[[https://github.com/ciaa/Hardware/raw/master/PCB/ACC/CIAA_ACC/output_files/BOM_ciaa_acc_v1.3.xlsx|Bill of materials CIAA-ACC V1.3.]]
+
+=== Archivos Gerber ===
+[[https://github.com/ciaa/Hardware/tree/master/PCB/ACC/CIAA_ACC/output_files|Gerber Files]]
+
+
+===== Demos y soporte básico  =====
+En el repositorio [[https://github.com/ciaa/CIAA_ACC_Support|CIAA_ACC_Support]] están subidos los demos, y todos los archivos de soporte básico para comenzar a desarrollar el software. También está el manual de hardware escrito para el desarrollador de firmware y software. 
+

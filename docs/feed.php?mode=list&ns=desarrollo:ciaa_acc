@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:ciaa_acc</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:01:16+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:ciaa_acc_inicio&amp;rev=1566994678&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas&amp;rev=1459968017&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:cronograma_tareas_y_responsables_de_la_ciaa-acc&amp;rev=1509029083&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_aproximado_de_costos&amp;rev=1447426664&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_del_factor_de_forma&amp;rev=1447175722&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_de_la_arquitectura_de_hardware&amp;rev=1433962322&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_del_sistema_operativo&amp;rev=1433955549&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:imx6_freescale&amp;rev=1441899996&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:otras_propuestas_analizadas&amp;rev=1441915358&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware&amp;rev=1493213630&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas&amp;rev=1445540223&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx&amp;rev=1434049484&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:ciaa_acc_inicio&amp;rev=1566994678&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-08-28T12:17:58+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:ciaa_acc_inicio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:ciaa_acc_inicio&amp;rev=1566994678&amp;do=diff</link>
+        <description>CIAA-ACC
+
+Computadora industrial abierta para aplicaciones de Alto Costo Computacional
+
+
+
+Resumen
+
+Este proyecto está orientado al desarrollo de una computadora industrial en la modalidad de hardware libre que soporte aplicaciones de alto costo computacional, como son los sistemas de visión y procesamiento de imágenes y el manejo de pantallas de alta resolución, y que sea capaz de correr sistemas operativos de tipo Linux. En particular, el presente proyecto abordará al menos tres campos del cono…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas&amp;rev=1459968017&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-04-06T18:40:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:compatibilidad_con_las_caracteristicas_de_hardware_de_las_primeras_ciaas&amp;rev=1459968017&amp;do=diff</link>
+        <description>Compatibilidad con las características de hardware de las primeras CIAAs
+
+En un primer momento, cuando comenzó el proyecto CIAA, fueron definidas las características técnicas que tendrían todos los modelos de CIAAs. Ese documento puede consultarse en el siguiente link:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:cronograma_tareas_y_responsables_de_la_ciaa-acc&amp;rev=1509029083&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-26T14:44:43+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:cronograma_tareas_y_responsables_de_la_ciaa-acc</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:cronograma_tareas_y_responsables_de_la_ciaa-acc&amp;rev=1509029083&amp;do=diff</link>
+        <description>Responsables que figuran en la primera presentación del PICT
+  Rol  Responsable  Investigador Responsable  Ariel Lutenberg  Grupo Colaborador - Personal Técnico  Alejandro Furfaro  Grupo Colaborador - Personal Técnico  Pablo Ridolfi  Grupo Colaborador - Personal Técnico</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_aproximado_de_costos&amp;rev=1447426664&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-13T14:57:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:estudio_aproximado_de_costos</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_aproximado_de_costos&amp;rev=1447426664&amp;do=diff</link>
+        <description>Estudio aproximado de costos
+
+A fines de estimar los costos de los componentes electrónicos del PCB, se realizó un listado mínimo de componentes que podría tener la CIAA-ACC con los precios del distribuidor Digikey (FOB USA). 
+
+De la misma manera, y en base a cotizaciones solicitadas con anterioridad para otros PCBs de alta velocidad, se</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_del_factor_de_forma&amp;rev=1447175722&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-11-10T17:15:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:estudio_del_factor_de_forma</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_del_factor_de_forma&amp;rev=1447175722&amp;do=diff</link>
+        <description>Factor de forma
+
+Las opciones para el factor de forma son diversas y cada una presenta sus ventajas y desventajas en lo que respecta a: modularidad, flexibilidad, posibilidad de expansión, posibilidad de integración con otros productos comerciales, etc.
+A continuación se listan las principales opciones analizadas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_de_la_arquitectura_de_hardware&amp;rev=1433962322&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-10T18:52:02+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:estudio_y_seleccion_de_la_arquitectura_de_hardware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_de_la_arquitectura_de_hardware&amp;rev=1433962322&amp;do=diff</link>
+        <description>Estudio y selección de la arquitectura de Hardware
+
+Dentro de los campos de conocimiento se plantea:
+
+* Análisis, selección y utilización a nivel chip de procesadores o circuitos lógicos 
+programables que brinden la capacidad de cómputo y las arquitecturas requeridas.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_del_sistema_operativo&amp;rev=1433955549&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-10T16:59:09+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:estudio_y_seleccion_del_sistema_operativo</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:estudio_y_seleccion_del_sistema_operativo&amp;rev=1433955549&amp;do=diff</link>
+        <description>Selección del sistema operativo
+
+Según los objetivos de proyecto se plantea el:
+
+* Análisis, selección e implementación de sistemas operativos compatibles con entornos de 
+tipo Linux, que sean acordes a sistemas industriales de tiempo real. 
+
+El área de firmware incluirá como su principal tarea asociada el análisis y elección de los sistemas 
+operativos. El uso del plural se debe a que seguramente el sistema estará basado en una 
+arquitectura asimétrica, siguiendo las tendencias actuales para el…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:imx6_freescale&amp;rev=1441899996&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-10T15:46:36+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:imx6_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:imx6_freescale&amp;rev=1441899996&amp;do=diff</link>
+        <description>Propuesta para la utilización de un SoC iMX6
+
+Se estudia y se analiza la alternativa iMX6, estudiando los dispositivos disponibles dentro de la familia, los aspectos que pueden favorecer el desarrollo  y los objetivos asociados a la CIAA-ACC.
+
+Familia</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:otras_propuestas_analizadas&amp;rev=1441915358&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-10T20:02:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:otras_propuestas_analizadas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:otras_propuestas_analizadas&amp;rev=1441915358&amp;do=diff</link>
+        <description>Otras opciones analizadas
+
+Dentro de las propuestas que se expusieron en el grupo ciaa-hardware@googlegroups.com, están las que se listan a continuación. Todas fueron descartadas por diferentes motivos que se intentan explicar aquí.
+
+Epiphany Multicore Coprocessor (Adapteva)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware&amp;rev=1493213630&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-04-26T13:33:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware&amp;rev=1493213630&amp;do=diff</link>
+        <description>Selección final de la arquitectura de hardware
+
+La mayoría de las discusiones se realizaron en la lista CIAA-Hardware con la participación de muchos diseñadores de hardware que ya han participado en otros proyectos CIAA. Otras definiciones se realizaron entre el grupo de INTI-CMNB que diseñará la placa y Martín Ribelotta de EmTech, quien tiene experiencia en aplicaciones HPC. También hubo comunicación fluida con el equipo de diseño de la CIAA-Safety ya que se analizó la posibilidad de interconex…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas&amp;rev=1445540223&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-10-22T18:57:03+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:sistemas_similares_productos_comerciales_ideas&amp;rev=1445540223&amp;do=diff</link>
+        <description>Diseños de referencia
+
+A continuación se listan algunos productos para tener como referencia.
+
+Zynq para Arduino
+
+ Arduino Compatible Zynq Shield
+
+Single Board Computer con Zynq
+
+Proyecto Open Hardware, están disponibles los esquemáticos y más información. La más económica cuesta USD 99.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx&amp;rev=1434049484&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-06-11T19:04:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx&amp;rev=1434049484&amp;do=diff</link>
+        <description>Propuesta para la utilizacion de un SoC/MPSoC  Zynq
+
+Página en construcción.
+
+ Sitio web de la arquitectura: Xilinx All Programmable SoC
+
+Familias Candidatas
+
+Serie Zynq 7000 (Dual Core)
+
+Serie Zynq UltraEscale+MPSoC (QuadCore + RealTime DualCore + GPU)
+
+Caracteristicas Generales de cada Familia
+
+Serie Zynq 7000
+
+Processing System (PS)
+
+  
+- Dual-core ARM Cortex-A9 MPCore a 1GHz
+- Soporte para memorias DDR3, DDR3L, DDR2, LPDDR2, 2x Quad-SPI, NAND, NOR
+- Conectividad:
+        2x Tri-mode Gigabit …</description>
+    </item>
+</rdf:RDF>

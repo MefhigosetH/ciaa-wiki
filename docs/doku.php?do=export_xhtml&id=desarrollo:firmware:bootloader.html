@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:bootloader</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,bootloader"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:bootloader&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:bootloader"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:bootloader.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:bootloader","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html#bootloader">Bootloader</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html#introduccion">Introducción</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html#arquitectura_del_bootloader">Arquitectura del bootloader</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html#comentarios">Comentarios</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:bootloader.html#operacion_con_doble_imagen">Operación con doble imagen</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="bootloader">Bootloader</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bootloader&quot;,&quot;hid&quot;:&quot;bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-26&quot;} -->
+<h2 class="sectionedit2" id="introduccion">Introducción</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Introducci\u00f3n&quot;,&quot;hid&quot;:&quot;introduccion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;27-53&quot;} -->
+<h3 class="sectionedit3" id="que_es_el_bootloader">¿Qué es el “bootloader”?</h3>
+<div class="level3">
+<p class="divalign-justify">El bootloader es un conjunto de utilidades que permite la actualización del firmware de la CIAA por parte de un cliente en un entorno de producción, sin necesidad de disponer de herramientas especiales como una interface de depuración y eventualmente sin tener acceso al código fuente del sistema.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 es el \u201cbootloader\u201d?&quot;,&quot;hid&quot;:&quot;que_es_el_bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;54-405&quot;} -->
+<h3 class="sectionedit4" id="como_funciona_el_bootloader">¿Cómo funciona el bootloader?</h3>
+<div class="level3">
+<p class="divalign-justify">El bootloader tiene la capacidad de recibir una imagen del firmware que se quiere actualizar y grabarla en la Flash ROM del procesador. Para ello el desarrollador compila la imagen firmware, la prepara y la distribuye. El cliente recibe la imagen preparada del firmware y mediante una PC aplica dicha imagen a la CIAA que tiene instalada en el equipo.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo funciona el bootloader?&quot;,&quot;hid&quot;:&quot;como_funciona_el_bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;406-808&quot;} -->
+<h3 class="sectionedit5" id="como_esta_formado_el_bootloader">¿Cómo está formado el bootloader?</h3>
+<div class="level3">
+<p class="divalign-justify">El bootloader está formado por dos partes básicas: un conjunto de aplicaciones que corren en una PC, y una conjunto de tareas y rutinas que se ejecutan en la CIAA.</p><!--divalign-->
+
+<p>
+Las aplicaciones que se ejecutan en una PC son dos:
+</p>
+<ul>
+<li class="level1"><div class="li"> Utilidad de preparación de la imagen.</div>
+</li>
+<li class="level1"><div class="li"> Utilidad de aplicación de la imagen.</div>
+</li>
+</ul>
+<p class="divalign-justify">Estas herramientas se utilizan normalmente en dos computadoras distintas, la primera en la computadora del desarrollador y la segunda en la computadora del cliente en el sitio donde esta instalada la CIAA que se quiere actualizar.</p><!--divalign-->
+
+<p>
+Por otra parte en la CIAA se ejecutan las siguientes tareas:
+</p>
+<ul>
+<li class="level1"><div class="li"> Secuencia de arranque.</div>
+</li>
+<li class="level1"><div class="li"> Recepción de la imagen de binaria.</div>
+</li>
+<li class="level1"><div class="li"> Procesamiento de la imagen recibida.</div>
+</li>
+<li class="level1"><div class="li"> Grabación de la imagen en la memoria Flash.</div>
+</li>
+</ul>
+<p class="divalign-justify">La forma en que estas tareas se ensamblan entre sí y con el firmware principal de CIAA puede configurarse para obtener distintos modos de operación.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo est\u00e1 formado el bootloader?&quot;,&quot;hid&quot;:&quot;como_esta_formado_el_bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;809-1787&quot;} -->
+<h2 class="sectionedit6" id="arquitectura_del_bootloader">Arquitectura del bootloader</h2>
+<div class="level2">
+
+<p>
+<img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:arquitectura_booloader.png" class="mediacenter" loading="lazy" alt="" />
+</p>
+<p class="divalign-justify">Para la implementación inicial del bootloader se optó por un proceso de grabación On Fly. Para ello la memoria Flash se divide en tres partes: una parte muy pequeña que contiene un Bootmanager, una segunda fracción donde se ubica el programa de Bootloader y el resto de la memoria queda disponible para el MainFirmware.</p><!--divalign-->
+<p class="divalign-justify">En el funcionamiento normal de la CIAA el Bootmanager toma el control durante el arranque, lo transfiere al Main Firmware y este es el que opera el equipo. Cuando se requiere una actualización, mediante una bandera se indica al Bootmanager que transfiera el control al Bootloader, quien se encarga únicamente de actualizar la imagen del Main Firmware. Para ello el Bootloader borra el área de memoria ocupada por el Main Firmware y la escribe con la imagen enviada por la PC del cliente.</p><!--divalign-->
+<p class="divalign-justify">Si por algún problema no se puede completar la actualización del Main Firmware, el Bootmanager seguirá transfiriendo el control al Bootloader hasta que la actualización pueda completarse. De esta forma nos aseguramos de que el equipo no quede inoperable.</p><!--divalign-->
+<p class="divalign-justify">Para la eventual actualización del Bootloader será necesario un proceso indirecto: en un primer paso se actualizará el Main Firmware por uno especial destinado únicamente a la actualización del Bootloader, con este Main Firmware corriendo se procederá a la actualización del Bootloader, y una vez completa la actualización del mismo se volverá al Main Firmware original.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura del bootloader&quot;,&quot;hid&quot;:&quot;arquitectura_del_bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1788-3382&quot;} -->
+<h3 class="sectionedit7" id="que_tareas_tiene_cada_parte_del_bootloader">¿Qué tareas tiene cada parte del bootloader?</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> <strong>CIAA Firmware Image Preparation Utility (cfip)</strong>: Es una utilidad que se ejecuta en la PC del desarrollador y tiene siguientes funciones básicas:</div>
+<ul>
+<li class="level2"><div class="li"> Preparación de la imagen: indicando a qué hardware corresponde y para qué modo de operación está compilado.</div>
+</li>
+<li class="level2"><div class="li"> Encriptación de la imagen: existe la opción de encriptar la imagen de firmware que se quiere distribuir para evitar las duplicaciones indebidas. En ese caso esta utilidad es la encargada de encriptar la imagen antes de la distribución.</div>
+</li>
+<li class="level2"><div class="li"> Firma de la imagen: para asegurarse de que la imagen no es alterada, ya sea en forma deliberada o por un error en las comunicaciones, la ultima etapa de la preparación consiste en la aplicación de una firma digital por parte del desarrollador.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>CIAA Firmware Image Distribution utility (cfid)</strong>: Es una utilidad que ejecuta en la PC del cliente y tiene las siguientes funciones básicas:</div>
+<ul>
+<li class="level2"><div class="li"> Verificación de la imagen: la primera responsabilidad de la utilidad de la PC es asegurarse la proveniencia de la imagen que se quiere grabar, comprobando que la misma no fue alterada en ninguna forma.</div>
+</li>
+<li class="level2"><div class="li"> Verificación del destino: la segunda responsabilidad de la utilidad es recuperar información del hardware al que se le enviará la imagen para ver si la misma puede aplicarse en dicho equipo.</div>
+</li>
+<li class="level2"><div class="li"> Transmisión de la imagen: una vez que la imagen es aceptada como válida entonces la misma se divide en paquetes y se envía a la CIAA verificando la correcta recepción de la misma.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>Bootloader</strong>: Es un programa completo para la CIAA formado por una versión reducida del sistema operativo OSEK y del updater, y una colección de rutinas preparadas para la actualización del firmware principal de la CIAA. En el sistema oprerativo OSEK se requieren, además de los servicios básicos, los siguientes controladores:</div>
+<ul>
+<li class="level2"><div class="li"> Serial Driver: controlador del puerto serial del equipo que es utilizado como capa física del protocolo ModBus.</div>
+</li>
+<li class="level2"><div class="li"> ModBus Driver: se utiliza el protocolo ModBus como capa de transporte para el intercambio de mensajes entre el Update Protocol y la utilidad de cfid de la PC del cliente.</div>
+</li>
+<li class="level2"><div class="li"> Flash Driver: implementa las primitivas para el borrado y la escritura en flash dependientes del procesador utilizado.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> <strong>Updater</strong>: Se pueden identificar las siguientes funciones:</div>
+<ul>
+<li class="level2"><div class="li"> Update Protocol: es el responsable de la recepción de los mensajes de actualización de flash y también es el encargado de la generación de los mensajes de respuesta a dicha utilidad.</div>
+</li>
+<li class="level2"><div class="li"> Desencription: es la etapa encargada de la desencriptación de la imagen, si es que la misma fuera encriptada.</div>
+</li>
+<li class="level2"><div class="li"> Update Services: es la encargada del proceso general de actualización, como así también del control de errores en el proceso.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Bootmanager</strong>: Es la rutina que toma el control en el arranque de la CIAA y tiene como función principal determinar si se cede el control al Bootloader o bien al Main Firmware.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfQu\u00e9 tareas tiene cada parte del bootloader?&quot;,&quot;hid&quot;:&quot;que_tareas_tiene_cada_parte_del_bootloader&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;3383-6417&quot;} -->
+<h2 class="sectionedit8" id="comentarios">Comentarios</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Para el desarrollo de las herramientas para la PC se plantea el esquema habitual de Linux: desarrollar los programas para que utilicen la línea de comandos y eventualmente en un futuro desarrollar una interface gráfica que simplifique el uso de la misma.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> El desarrollo de las herramientas para la PC se plantea en C++, dando prioridad a los sistemas POSIX y dejando el sistema Windows para una segunda etapa.</div>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> La secuencia de arranque soportaría varios desencadenadores para determinar a quién debe ceder el control. Los propuestos hasta el momento son:</div>
+<ul>
+<li class="level2"><div class="li"> Un condición física como un botón o una llave.</div>
+</li>
+<li class="level2"><div class="li"> Un paquete especial del protocolo ModBus.</div>
+</li>
+<li class="level2"><div class="li"> Una verificación CRC de las imágenes en memoria.</div>
+</li>
+<li class="level2"><div class="li"> Una tabla con marcas específicas para esta decisión.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li">  Se podrá configurar qué desencadenadores se utilizarán realmente en la secuencia de arranque mediante directivas al compilador, para poder por ejemplo desactivar el chequeo de CRC y obtener un arranque mas rápido.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> La secuencia de arranque no podrá actualizarse en sitio, la única posibilidad de actualización será mediante una interface de depuración.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Se plantea incluir en el proceso de grabación del bootloader una restricción de las zonas que el mismo está autorizado a escribir, para de esta forma garantizar la integridad de la secuencia de arranque y del firmware en ejecución, evitando que un error de comunicaciones o una grabación fallida deje al sistema en un estado del cual no pueda recuperarse.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Si el procesador incluye máscaras de protección para evitar la grabación de determinadas zonas de Flash, se utilizaran las mismas además del mecanismo antes descripto para asegurar la integridad de las zonas criticas de memoria.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Se propone desarrollar primero la forma de trabajo On Fly sin características adicionales como la encriptación o compresión. En este modo de trabajo es menor el trabajo compilación y pre procesamiento de la imagen.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> En la primera versión se propone cambiar el proceso de firma de la imagen por un simple CRC para verificar que la imagen no es alterada.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comentarios&quot;,&quot;hid&quot;:&quot;comentarios&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;6418-8580&quot;} -->
+<h2 class="sectionedit9" id="operacion_con_doble_imagen">Operación con doble imagen</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Operaci\u00f3n con doble imagen&quot;,&quot;hid&quot;:&quot;operacion_con_doble_imagen&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:9,&quot;range&quot;:&quot;8581-8621&quot;} -->
+<h3 class="sectionedit10" id="arquitectura">Arquitectura</h3>
+<div class="level3">
+<p class="divalign-justify">Durante la etapa de discusión sobre la forma de implementación del bootloader hubo sugerencias respecto a una forma alternativa de trabajo con dos imágenes de Main Firmware simultáneas en memoria. A continuación se encuentra la forma propuesta para la implementacion de este esquema de trabajo utilizando básicamente los mismo módulos de software.</p><!--divalign-->
+
+<p>
+<img src="lib/exe/fetch.php%3Fmedia=desarrollo:firmware:bootloader_doble_imagen.png" class="mediacenter" loading="lazy" alt="" />
+</p>
+<p class="divalign-justify">En este modo de operación la memoria Flash se divide en tres partes: una parte muy pequeña contiene a la secuencia de arranque, y el resto de la memoria se divide en dos partes iguales. En cada parte se puede grabar una versión independiente del firmware completo de la CIAA. Cualquiera de estas imágenes es operable, pero una de ellas tiene preferencia sobre la otra y es la que se ejecuta en condiciones normales (Normalmente corresponde a la versión actualizada mas recientemente). Eventualmente se puede indicar a la secuencia de arranque que ejecute la imagen alternativa en lugar de la normal. Este cambio en la preferencia en la imagen puede ser por única vez o permanente. De esta forma en caso de un error en la actualización es posible volver a la imagen previa en una forma rápida y simple, aumentando de esta manera la disponibilidad del equipo.</p><!--divalign-->
+<p class="divalign-justify">En este modo de operación las rutinas de bootloader se incorporan al firmware como una tarea mas del sistema operativo. Por seguridad el bootloader de cada área solo esta autorizado a grabar el área contraria, de forma tal que no sea posible dañar la imagen en ejecución durante el proceso de actualización.</p><!--divalign-->
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura&quot;,&quot;hid&quot;:&quot;arquitectura&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;8622-10269&quot;} -->
+<h3 class="sectionedit11" id="ventajas">Ventajas</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> La principal ventaja de este modo de operación es la disponibilidad, ya que permite una posible vuelta atrás si no puede aplicarse correctamente la nueva imagen o si la misma no responde en la forma esperada. </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ventajas&quot;,&quot;hid&quot;:&quot;ventajas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:11,&quot;range&quot;:&quot;10270-10505&quot;} -->
+<h3 class="sectionedit12" id="desventajas">Desventajas</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> La principal desventaja de este modo de operación es el aprovechamiento de la Flash, ya que para el firmware solo queda disponible un poco menos de la mitad de la flash del procesador.</div>
+</li>
+<li class="level1"><div class="li"> Una desventaja adicional para garantizar seguridad y para resolver las referencias el firmware debe ser compilado para el Area A o para el Area B.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Desventajas&quot;,&quot;hid&quot;:&quot;desventajas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;10506-10869&quot;} -->
+<h3 class="sectionedit13" id="observaciones">Observaciones</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Cabe aclarar que no es de esperar que la imagen presente problemas durante la grabación de la misma ya que es verificada antes del envío por la PC y antes de la grabación de la misma, siendo mas probable que se deba a errores de programación en el firmware en sí mismo.</div>
+</li>
+<li class="level1"><div class="li"> Podría existir una alternativa  para evitar la compilación en las zonas A o B agregando en el procesamiento inicial de la imagen de firmware los marcadores de qué cambios realizar en la imagen al instalarla en la zona A o B.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Observaciones&quot;,&quot;hid&quot;:&quot;observaciones&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:13,&quot;range&quot;:&quot;10870-&quot;} --></div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,comenzar_programar"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html#comenzar_a_programar_con_micro_python">Comenzar a programar con Micro Python</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html#primeros_pasosconexion_de_la_placa_a_la_pc">Primeros pasos: Conexión de la placa a la PC</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html#utilizando_la_consola_de_la_edu-ciaa">Utilizando la consola de la EDU-CIAA</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html#utilizacion_del_ide_beta">Utilización del IDE (beta)</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar.html#programando_un_script_de_python">Programando un script de python</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="comenzar_a_programar_con_micro_python">Comenzar a programar con Micro Python</h1>
+<div class="level1">
+
+<p>
+Para comenzar a programar existen dos opciones, utilizar un programa para interactuar con la consola de python (miniterm, teraterm, etc) o utilizar el IDE desarrollado para escribir un script de python y grabarlo en la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Comenzar a programar con Micro Python&quot;,&quot;hid&quot;:&quot;comenzar_a_programar_con_micro_python&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-281&quot;} -->
+<h2 class="sectionedit2" id="primeros_pasosconexion_de_la_placa_a_la_pc">Primeros pasos: Conexión de la placa a la PC</h2>
+<div class="level2">
+
+<p>
+repo:conexion:edu_ciaa_nxp_uart&amp;nofooter
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Primeros pasos: Conexi\u00f3n de la placa a la PC&quot;,&quot;hid&quot;:&quot;primeros_pasosconexion_de_la_placa_a_la_pc&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;282-392&quot;} -->
+<h3 class="sectionedit3" id="instalacion_de_drivers">Instalación de drivers</h3>
+<div class="level3">
+
+<p>
+Cuando conectamos la placa al USB, se generará un puerto serie (COM virtual) en la PC. En el caso de Linux aparecerá el dispositivo /dev/ttyUSB0 y /dev/ttyUSB1, en el caso de Windows, se detectará un dispositivo desconocido, por lo que deberemos instalar el driver para poder utilizar el puerto serie virtual.
+</p>
+
+</div>
+
+<h4 id="instalacion_de_driver_para_windows">Instalación de driver para windows</h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li">Ingresamos a la página del <a href="http://www.ftdichip.com/Drivers/VCP.htm" class="urlextern" target="_blank" title="http://www.ftdichip.com/Drivers/VCP.htm" rel="ugc nofollow noopener">driver del chip ftdi</a></div>
+</li>
+<li class="level1"><div class="li">En la tabla que aparece en la página, seleccionamos la versión de 32 o 64 bits para Windows.</div>
+</li>
+<li class="level1"><div class="li">Descargamos y descromprimimos el archivo ZIP en una ruta conocida (Por ejemplo Mis Documentos)</div>
+</li>
+<li class="level1"><div class="li">Conectar la placa y esperar a que Windows comience el proceso de instalación del driver del dispositivo detectado. La instalación fallará.</div>
+</li>
+<li class="level1"><div class="li">Click en INICIO → Panel de Control</div>
+</li>
+<li class="level1"><div class="li">Dentro del panel de control seleccionamos “Sistema” y luego “Administrador de dispositivos”</div>
+</li>
+<li class="level1"><div class="li">Dentro de la categoría “Puertos (COM y LTP)” aparecerán dos puertos “USB serial port” en conflicto.</div>
+</li>
+<li class="level1"><div class="li">Hacemos click derecho sobre el primero de los puertos y elegimos “Actualizar software de controlador”</div>
+</li>
+<li class="level1"><div class="li">Seleccionamos la opción “Buscar software de controlador en el equipo”</div>
+</li>
+<li class="level1"><div class="li">Por último seleccionamos el botón examinar y seleccionamos la carpeta que descomprimimos con el driver. Tildamos el check “Incluir subcarpetas” y presionamos “Siguiente”</div>
+</li>
+<li class="level1"><div class="li">Windows instalará el driver correspondiente y aparecerán los dos puertos COM virtuales listos para funcionar.</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Instalaci\u00f3n de drivers&quot;,&quot;hid&quot;:&quot;instalacion_de_drivers&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;393-1930&quot;} -->
+<h2 class="sectionedit4" id="utilizando_la_consola_de_la_edu-ciaa">Utilizando la consola de la EDU-CIAA</h2>
+<div class="level2">
+
+<p>
+Cuando conectamos la placa al USB, se generará un puerto serie en la PC (en Windows se deberá instalar el <a href="http://www.ftdichip.com/Drivers/VCP.htm" class="urlextern" target="_blank" title="http://www.ftdichip.com/Drivers/VCP.htm" rel="ugc nofollow noopener">driver del chip ftdi</a>) si abrimos este puerto a 115200bps con un programa como miniterm o teraterm, tendremos una consola en donde tendremos el stdout y el stdin del script de python que se ejecuta. 
+</p>
+
+</div>
+
+<h4 id="ejemplo_para_linux_utilizando_miniterm">Ejemplo para Linux utilizando miniterm:</h4>
+<div class="level4">
+<pre class="code">$ aptitude install python-serial
+$ miniterm.py -p /dev/ttyUSB1 -b 115200</pre>
+
+</div>
+
+<h4 id="ejemplo_para_windows_utilizando_teraterm">Ejemplo para Windows utilizando TeraTerm:</h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Descargar <a href="http://logmett.com/tera-term-the-latest-version" class="urlextern" target="_blank" title="http://logmett.com/tera-term-the-latest-version" rel="ugc nofollow noopener">TeraTerm</a> e instalarlo.</div>
+</li>
+<li class="level1"><div class="li"> Menú File → New Connection → seleccionar la opción “Serial” y elegir el puerto COM correspondiente a la placa.</div>
+</li>
+<li class="level1"><div class="li"> Menú Setup → Serial port → configurar la velocidad en 115200</div>
+</li>
+</ol>
+
+<p>
+Al reiniciar la placa mediante el botón de reset, se verá el cursor de la consola de Python:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png"><img src="lib/exe/fetch.php%3Fw=700&amp;tok=413c4a&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_teraterm.png" class="media" loading="lazy" alt="" width="700" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Utilizando la consola de la EDU-CIAA&quot;,&quot;hid&quot;:&quot;utilizando_la_consola_de_la_edu-ciaa&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1931-2953&quot;} -->
+<h2 class="sectionedit5" id="utilizacion_del_ide_beta">Utilización del IDE (beta)</h2>
+<div class="level2">
+
+<p>
+Existe un IDE simplificado que nos permite escribir el script de python y enviárselo a la placa, por otro lado se está trabajando en un IDE completo pero que todavía no es estable.
+Deberemos bajar el IDE desde <a href="lib/exe/fetch.php%3Ftok=de1ca8&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Feduciaa_python_editor.git.html" class="urlextern" target="_blank" title="https://github.com/ernesto-g/educiaa_python_editor" rel="ugc nofollow noopener">https://github.com/ernesto-g/educiaa_python_editor</a> podemos clonar el repositorio y ejecutar “python Main.py” o buscar el instalador en la página de “releases”.
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="lib/exe/fetch.php%3Ftok=857690&amp;media=https:%252F%252Fgithub.com%252Fernesto-g%252Feduciaa_python_editor%252Freleases.html" class="urlextern" target="_blank" title="https://github.com/ernesto-g/educiaa_python_editor/releases" rel="ugc nofollow noopener">Releases</a></div>
+</li>
+</ul>
+
+<p>
+Al ejecutar el IDE deberemos ver el siguiente entorno de trabajo:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide2.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide2.png"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=a7b63b&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide2.png" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+En el caso de Windows, deberemos instalar el <a href="http://www.ftdichip.com/Drivers/VCP.htm" class="urlextern" target="_blank" title="http://www.ftdichip.com/Drivers/VCP.htm" rel="ugc nofollow noopener">driver del chip ftdi</a>, mediante el cual se creará un COM virtual cuando se conecte la placa, dicho COM deberá ser seleccionado en la configuración del IDE ya que mediante el mismo se enviará el script a la placa.
+</p>
+
+</div>
+
+<h4 id="configuracion_de_puerto_serie">Configuración de puerto serie</h4>
+<div class="level4">
+
+<p>
+Luego de instalar el driver FDI, aparecerán dos nuevos puertos serie en el sistema. 
+</p>
+
+<p>
+En el menú EDU-CIAA → Configuration → selecionamos el segundo de los puertos creados, y presionamos OK
+</p>
+
+</div>
+
+<h4 id="grabando_el_script_en_la_placa">Grabando el script en la placa</h4>
+<div class="level4">
+
+<p>
+Escribimos un pequeño script de prueba:
+</p>
+<pre class="code">print(&quot;Hello world&quot;)</pre>
+
+<p>
+Para grabar el script, mantenemos presionado el botón de reset en la placa y luego presionamos el botón “Load Script”. Aparecerá el siguiente diálogo de progreso:
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load2.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load2.png"><img src="lib/exe/fetch.php%3Fw=450&amp;tok=29e67e&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_load2.png" class="mediacenter" loading="lazy" alt="" width="450" /></a>
+</p>
+
+<p>
+Al soltar el botón de reset, se comenzará la copia del script.
+</p>
+
+</div>
+
+<h4 id="usando_la_terminal_del_ide">Usando la terminal del IDE</h4>
+<div class="level4">
+
+<p>
+En lugar de utilizar miniterm o Teraterm, el IDE nos provee una ventana la cual cumple la función de los programas mencionados. Para acceder a la consola de la placa desde el IDE, presionamos el botón “Terminal”. 
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_terminal.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_terminal.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_terminal.png" class="media" loading="lazy" alt="" /></a>
+Al reiniciar la placa con el botón de reset veremos el mensaje de “Hello World” debido a la ejecución del script.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png"><img src="lib/exe/fetch.php%3Fw=400&amp;tok=824221&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:terminal_hellow.png" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+</div>
+
+<h4 id="snippets">Snippets</h4>
+<div class="level4">
+
+<p>
+El IDE cuenta con pequeños programas de ejemplo (snippets) los cuales pueden agregarse al script para realizar las primeras pruebas con la placa. Para acceder a los mismos, se debe presionar el botón “Snippets” <a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_snippets.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_snippets.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_snippets.png" class="media" loading="lazy" alt="" /></a>. Aparecerá una ventana con una lista de ejemplos los cuales podrán agregarse al código que se esta escribiendo mediante el botón “Add code”.
+</p>
+
+</div>
+
+<h4 id="emulador">Emulador</h4>
+<div class="level4">
+
+<p>
+Si no se dispone de la placa, igualmente es posible ejecutar un emulador que simula a la EDU-CIAA corriendo micropython. De esta manera es posible probar una gran cantidad de ejemplos sin necesidad de disponer del dispositivo real.
+</p>
+
+<p>
+Para utilizar el emulador, debe instalarse aparte, se podrá encontrar la última versión en el siguiente link:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/ernesto-g/educiaa_python_emulator/releases" class="urlextern" target="_blank" title="https://github.com/ernesto-g/educiaa_python_emulator/releases" rel="ugc nofollow noopener">Releases</a></div>
+</li>
+</ul>
+
+<p>
+Una vez instalado el emulador, se podrá ejecutar el script de python programado en el IDE presionando el botón “Emulator” <a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_ide_btn_emulator.png" class="media" loading="lazy" alt="" /></a>. Aparecerán dos ventanas, una con la terminal del emulador, y otra con una imagen de la EDU-CIAA, la cual tendrá sobre la misma los botones y los LEDs que posee la placa, el resto de los periféricos se podrán acceder y simular desde el menú “Peripherals”.
+</p>
+
+<p>
+<a href="lib/exe/detail.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:comenzar_programar&amp;media=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png.html" class="media" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:edu-ciaa:edu-ciaa-nxp:python:python_emulator.png" class="media" loading="lazy" alt="" /></a>
+</p>
+
+<p>
+Para más información sobre cómo utilizar el emulador, dirigirse a la sección <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:emulador">Emulador de EDU-CIAA corriendo MicroPython</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Utilizaci\u00f3n del IDE (beta)&quot;,&quot;hid&quot;:&quot;utilizacion_del_ide_beta&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2954-6653&quot;} -->
+<h2 class="sectionedit6" id="programando_un_script_de_python">Programando un script de python</h2>
+<div class="level2">
+
+<p>
+Python es un lenguaje de programación interpretado con una sintaxis que favorece un código legible.Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y funcional. 
+</p>
+
+<p>
+Para comenzar a aprender este lenguaje se recomiendan los siguientes enlaces:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://es.wikipedia.org/wiki/Python" class="urlextern" target="_blank" title="https://es.wikipedia.org/wiki/Python" rel="ugc nofollow noopener">Python. Wikipedia</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf" class="urlextern" target="_blank" title="http://www.ceibal.edu.uy/contenidos/areas_conocimiento/aportes/python_para_todos.pdf" rel="ugc nofollow noopener">Python para todos. Libro en español.</a></div>
+</li>
+</ul>
+
+<p>
+Para acceder a la documentación de las bibliotecas Python que pueden utilizarse para manejar el hardware de la placa, dirigirse al siguiente enlace:
+</p>
+<div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas">Bibliotecas python soportadas</a>
+</div>
+<p>
+Para descargar proyectos de ejemplo dirigirse al siguiente enlace: 
+</p>
+<div class="plugin_note notetip"><a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python.html#proyectos_ejemplo" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp:python" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp:python">Proyectos de ejemplo</a>
+</div>
+<p>
+Si queremos que solo arranque la consola, bastará con hacer un script vacío, si queremos que la consola nunca aparezca, no deberemos dejar que el script termine, colocando un bucle que englobe todo el código.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Programando un script de python&quot;,&quot;hid&quot;:&quot;programando_un_script_de_python&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;6654-&quot;} --></div>
+</body>
+</html>

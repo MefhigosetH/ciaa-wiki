@@ -1,0 +1,244 @@
+<note tip>¡Inauguramos el nuevo sitio web de la CIAA que complementa a esta Wiki! [[http://www.proyecto-ciaa.com.ar/|http://www.proyecto-ciaa.com.ar/]] ¡No dejes de visitarlo! </note>
+
+====== Computadora Industrial Abierta Argentina (CIAA) ======
+~~NOTOC~~
+
+{{ blanco.png?10 | }}
+
+###
+**El Proyecto CIAA** nació en 2013 como **una iniciativa conjunta entre el sector académico y el  industrial**, representados por la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|ACSE]] y  [[http://www.cadieel.org.ar/esp/index.php|CADIEEL]], respectivamente.
+###
+
+===== Objetivos del proyecto =====
+
+  - Impulsar el desarrollo tecnológico nacional, a partir de sumar valor agregado al trabajo y a los productos y servicios, mediante el uso de sistemas electrónicos, en el marco de la vinculación de las instituciones educativas y el sistema científico-tecnológico con la industria.
+  - Darle visibilidad positiva a la electrónica argentina.
+  - Generar cambios estructurales en la forma en la que se desarrollan y utilizan en nuestro país los conocimientos en el ámbito de la electrónica y de las instituciones y empresas que hacen uso de ella.
+
+===== Misión =====
+Crear un ecosistema de valor centrado en el trabajo colaborativo, transdisciplinario y en red que promueva la innovación para crear, diseñar y desarrollar soluciones electrónicas en la industria.
+
+===== Visión =====
+Generar ámbitos de articulación entre las instituciones educativas, el sistema científico-tecnológico y las industrias para lograr estándares mundiales de competitividad que permitan ocupar una posición de liderazgo en materia de innovación y desarrollo en la industria electrónica.
+
+###
+Todo esto en el marco de un **trabajo libre, colaborativo y articulado** entre industria y academia. 
+###
+
+{{ blanco.png?50 | }}
+
+===== Principales logros y resultados del Proyecto CIAA =====
+###
+Para lograr los objetivos el primer paso fue articular el trabajo de decenas de [[proyecto:aportes_instituciones|Instituciones]], [[aportes_universidades|Universidades]], [[aportes_pymes|Empresas]] y [[aportes_desarrolladores|Desarrolladores]] para diseñar la primera versión de la CIAA, la denominada "[[desarrollo:hardware:ciaa_nxp:ciaa_nxp_inicio|CIAA-NXP]]", por estar basada en un procesador de la empresa NXP Semiconductors:
+###
+
+{{:imagen_portada_1.png?&360|}} {{:imagen_portada_2.png?&290|}}
+
+{{ blanco.png?20 | }}
+
+
+###
+La CIAA-NXP es la **primera y única computadora del mundo que reúne dos cualidades**:
+  - Ser **Industrial**, ya que su diseño está preparado para las [[industria|exigencias]] de confiabilidad, temperatura, vibraciones, ruido electromagnético, tensiones, cortocircuitos, etc., que [[industria:ciaa_en_empresas|demandan los productos y procesos industriales]].
+  - Ser **Abierta**, ya que toda la información sobre su diseño de hardware, firmware, software, etc. está libremente disponible en internet bajo la [[proyecto:licencia_CIAA|Licencia BSD]], para que cualquiera la utilice como quiera. 
+
+###
+
+###
+Para avanzar aún más **se desarrollaron versiones de la CIAA basadas en procesadores de otras marcas**, como la [[desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio|CIAA-FSL]], la [[desarrollo:hardware:ciaa_intel:ciaa_intel_inicio|CIAA-INTEL]], la [[desarrollo:hardware:ciaa_pic:ciaa_pic_inicio|CIAA-PIC]], etc. 
+###
+
+###
+En consecuencia, la CIAA además de ser la primera computadora industrial abierta, es también la **primera computadora realmente libre del mundo**, ya que su diseño no está atado a los procesadores de una determinada compañía, como ocurre con otras computadoras abiertas.
+###
+
+###
+La CIAA es [[proyecto:comprar|fabricada y comercializada por distintas empresas argentinas]], a las que se pueden sumar muchas más, sin ninguna limitación, ya que su diseño es libre y abierto, al punto de que cualquier interesado puede fabricar su propia versión de la plataforma.
+###
+
+###
+No hay que perder de vista que el Proyecto CIAA es mucho más que [[desarrollo:hardware|hardware]], ya que también incluye un [[desarrollo:software-ide|entorno IDE]] para su [[desarrollo:firmware|programación en lenguaje C]], el soporte de [[desarrollo:linux|Linux]], un entorno de [[desarrollo:software-plc|programación en lenguaje tipo PLC]], el diseño de un [[desarrollo:gabinete|gabinete]] y los primeros diseños de algunos de sus [[desarrollo:microelectronica|circuitos integrados]]. 
+###
+
+###
+Además, se diseñó una versión educativa de la plataforma, la [[desarrollo:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]], más simple y de menor costo, para lograr un **impacto en la enseñanza primaria, secundaria y universitaria**:
+###
+
+{{ :versiones:educiaav1_0:hardware:edu_ciaa_nxp:34-Finales.jpg?450 }}
+
+###
+La EDU-CIAA se vende en todo el país sin ánimo de lucro a través de las denominadas [[proyecto:pre-venta_edu-ciaa|preventas]], que organizan la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos|ACSE]] y la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse/|Red RUSE]] del [[http://www.confedi.org.ar/|CONFEDI]], con el apoyo de [[http://www.cadieel.org.ar/esp/index.php|CADIEEL]].
+###
+
+###
+Las distintas versiones de **la EDU-CIAA utilizan los mismos procesadores y programas que la CIAA**, de modo que **los estudiantes aprenden a resolver problemas reales**, y pueden aplicar sus conocimientos y desarrollos en **aplicaciones laborales y emprendimientos tecnológicos**.
+###
+
+###
+Por todos estos logros el Proyecto CIAA fue distinguido con importantes [[difusion:premios|Premios y Reconocimientos]], entre ellos el **Premio Innovar 2014** en la categoría "Producto Innovador" y el **Premio de la Fundación Sadosky** al "Trabajo de Investigación Colaborativo Industria-Academia", y fue [[http://www.diputados.gov.ar/proyectos/proyecto.jsp?id=168457|declarado de “interés” por la Cámara de Diputados de la Nación]].
+###
+
+{{ INNOVAR_2.jpg?&480 }}
+
+###
+El objetivo de darle visibilidad positiva a la electrónica argentina se cumplió, ya que [[vinculacion:Medios|el Proyecto CIAA fue abordado en infinidad de notas periodísticas]], y estuvo presente en eventos masivos, como la presentación del Proyecto CIAA ante un auditorio de 10.000 personas en  [[http://www.tedxriodelaplata.org/eventos/tedxr%C3%ADodelaplata-2014|TEDxRíodelaPlata 2014]], o la realización de un [[https://www.youtube.com/watch?v=jzXiX_xqhJ4|vuelo del CIAAcopter en la base antártica Marambio]], que tuvo amplia repercusión nacional.
+###
+
+{{ TEDx_CIAA2.jpg?&480 }}
+
+{{ blanco.png?50 | }}
+
+===== Líneas actuales de trabajo =====
+
+###
+**El Proyecto CIAA es mucho más que diseñar distintas versiones de una computadora** y mostrar casos de éxito en su aplicación. Entre los objetivos del proyecto está el de "generar cambios estructurales en la forma en la que se desarrollan y utilizan los conocimientos" y el de "impulsar el desarrollo tecnológico nacional". 
+###
+
+###
+Por eso se está trabajando con distintos Ministerios, Instituciones, Empresas, Universidades, Escuelas, etc, **para introducir nuevas metodologías en el dearrollo de productos y procesos productivos de las industrias** y para lograr el **desarrollo de importantes capacidades tecnológicas en la educación**. 
+###
+
+###
+Para abordar el sector industrial se cuenta con el apoyo del Ministerio de Ciencia, Tecnologìa e Innovación Productiva (MinCyT), que lanzó una [[http://www.mincyt.gob.ar/convocatoria/proyectos-de-innovacion-desarrollo-y-adopcion-de-la-computadora-industrial-abierta-argentina-ciaa-10929|convocatoria para apoyar proyectos basados en la CIAA]]. Además se está trabajando en la creación y puesta en marcha del [[https://www.dropbox.com/s/086r5m0i5mwti2f/SistemasCriticosyCETEM.pdf?dl=0|Centro Tecnológico Metalúrgico (CETEM)]], que brindará a las industrias soporte en el desarrollo de sistemas electrónicos y sistemas críticos.
+###
+
+###
+Para impulsar la [[educacion|inserción de la CIAA en el sistema educativo]] se conformó la [[vinculacion:contactos_locales|Red Federal de Contactos Locales]], con casi 60 representantes en 22 de las 24 provincias argentinas, gracias al apoyo de la [[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/red-ruse/|Red RUSE]] del [[http://www.confedi.org.ar/|CONFEDI]], y actualmente se trabaja en articulación con diversas instituciones estatales.
+###
+
+###
+A la vez, pensando en desarrollos cada vez más complejos, se está avanzando en nuevos diseños de la CIAA, orientados a [[https://www.dropbox.com/s/6hpcxti8t2u2p82/FormularioPDTS.pdf?dl=0|sistemas críticos]] y a aplicaciones de [[https://www.dropbox.com/s/7dfh40mpd6dmhsz/PICT%202014%20-%20Categoria%20IIB%20-%20Descripcion%20Tecnica.pdf?dl=0|alta capacidad de computo]].
+###
+
+###
+Los interesados en recibir novedades sobre el Proyecto CIAA pueden suscribirse a la 
+[[https://groups.google.com/group/embebidos32/subscribe|la lista de correos con más de 3000 desarrolladores]] y también pueden participar en cualquiera de las áreas de desarrollo del proyecto: [[desarrollo:firmware|Firmware]], [[desarrollo:gabinete|Gabinete]], [[desarrollo:hardware|Hardware]], [[desarrollo:linux|Linux]], [[desarrollo:microelectronica|Microelectrónica]], [[desarrollo:sistema|Sistema]], [[desarrollo:software-ide|Software-IDE]], [[desarrollo:software-plc|Software-PLC]],  [[desarrollo:testing|Testing]]. 
+###
+
+{{ blanco.png?50 | }}
+
+===== Empresas e instituciones que participan en el desarrollo de la CIAA =====
+
+El Proyecto CIAA es posible gracias a empresas e instituciones aportan horas de trabajo, insumos y fabricación de prototipos, a lo que se suma el aporte de diseños y códigos de desarrolladores independientes, totalizando así el equivalente a más de 15 millones de pesos argentinos:
+
+[[http://www.cadieel.org.ar/|{{blanco.png?100}}]]
+[[http://www.cadieel.org.ar/|{{cadieel_logos02-01.jpg?150}}]]
+[[http://www.cadieel.org.ar/|{{blanco.png?25}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{blanco.png?25}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{acse.jpg?260}}]]
+[[http://www.sase.com.ar/asociacion-civil-sistemas-embebidos/|{{blanco.png?50}}]]
+
+[[http://www.fi.uba.ar/|{{blanco.png?80}}]]
+[[http://www.fi.uba.ar/|{{logo_FIUBA.png?180}}]]
+[[http://www.fi.uba.ar/|{{blanco.png?30}}]]
+[[http://www.frba.utn.edu.ar/|{{blanco.png?30}}]]
+[[http://www.frba.utn.edu.ar/|{{logo_utn_frba.png?250}}]]
+[[http://www.frba.utn.edu.ar/|{{blanco.png?20}}]]
+
+[[http://www.inti.gob.ar/|{{blanco.png?50}}]]
+[[http://www.inti.gob.ar/|{{354px-INTI.svg.png?65}}]]
+[[http://www.inti.gob.ar/|{{blanco.png?20}}]]
+[[http://www.uner.edu.ar/|{{blanco.png?20}}]]
+[[http://www.uner.edu.ar/|{{logo_UNER.png?100}}]]
+[[http://www.uner.edu.ar/|{{blanco.png?20}}]]
+[[http://www.unlp.edu.ar/|{{blanco.png?20}}]]
+[[http://www.unlp.edu.ar/|{{UNLP.png?130}}]]
+[[http://www.unlp.edu.ar/|{{blanco.png?20}}]]
+[[http://www.diec.uns.edu.ar/|{{blanco.png?20}}]]
+[[http://www.diec.uns.edu.ar/|{{Logo_DIEC_vertical.png?90}}]]
+[[http://www.diec.uns.edu.ar/|{{blanco.png?30}}]]
+
+[[http://www.uncoma.edu.ar/|{{blanco.png?35}}]]
+[[http://www.uncoma.edu.ar/|{{UNCOMA.png?70}}]]
+[[http://www.uncoma.edu.ar/|{{blanco.png?20}}]]
+[[http://web.fceia.unr.edu.ar/|{{blanco.png?20}}]]
+[[http://web.fceia.unr.edu.ar/|{{FCEIA.png?140}}]]
+[[http://web.fceia.unr.edu.ar/|{{blanco.png?30}}]]
+[[http://www.unq.edu.ar/|{{blanco.png?10}}]]
+[[http://www.unq.edu.ar/|{{logoUNQ.png?140}}]]
+[[http://www.unq.edu.ar/|{{blanco.png?10}}]]
+[[http://www.unca.edu.ar/|{{blanco.png?20}}]]
+[[http://www.unca.edu.ar/|{{UNCA.png?70}}]]
+[[http://www.unca.edu.ar/|{{blanco.png?30}}]]
+
+[[http://www.nablaenergia.com.ar/|{{blanco.png?20}}]]
+[[http://www.nablaenergia.com.ar/|{{NablaEnergia.png?200}}]]
+[[http://www.nablaenergia.com.ar/|{{blanco.png?10}}]]
+[[http://www.adox.com.ar/|{{blanco.png?10}}]]
+[[http://www.adox.com.ar/|{{adox_1.png?140}}]]
+[[http://www.adox.com.ar/|{{blanco.png?10}}]]
+[[http://www.elemon.com.ar/elemon/|{{blanco.png?10}}]]
+[[http://www.elemon.com.ar/elemon/|{{Elemon.png?180}}]]
+[[http://www.elemon.com.ar/elemon/|{{blanco.png?10}}]]
+
+[[http://www.arrowar.com/iweb/|{{blanco.png?30}}]]
+[[http://www.arrowar.com/iweb/|{{arrow.png?140}}]]
+[[http://www.arrowar.com/iweb/|{{blanco.png?30}}]]
+[[http://www.suremptec.com/|{{blanco.png?30}}]]
+[[http://www.suremptec.com/|{{SUR_horizontal_res-media.png?140}}]]
+[[http://www.suremptec.com/|{{blanco.png?30}}]]
+[[http://www.asembli.com/|{{blanco.png?30}}]]
+[[http://www.asembli.com/|{{Asembli.PNG?180}}]]
+[[http://www.asembli.com/|{{blanco.png?30}}]]
+
+[[http://www.emtech.com.ar/|{{blanco.png?10}}]]
+[[http://www.emtech.com.ar/|{{emtech.png?190}}]]
+[[http://www.emtech.com.ar/|{{blanco.png?10}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{blanco.png?10}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{GSTR.png?80}}]]
+[[http://www.ing.unrc.edu.ar/grupos/gstr/|{{blanco.png?10}}]]
+[[http://www.unt.edu.ar/|{{blanco.png?10}}]]
+[[http://www.unt.edu.ar/|{{UNT.png?100}}]]
+[[http://www.unt.edu.ar/|{{blanco.png?10}}]]
+[[http://www.assisi.com.ar/|{{blanco.png?10}}]]
+[[http://www.assisi.com.ar/|{{Assisi.png?180}}]]
+[[http://www.assisi.com.ar/|{{blanco.png?10}}]]
+
+[[https://www.unaj.edu.ar/|{{blanco.png?50}}]]
+[[https://www.unaj.edu.ar/|{{UNAJ.png?200}}]]
+[[https://www.unaj.edu.ar/|{{blanco.png?30}}]]
+[[http://www.electrocomponentes.com/|{{blanco.png?5}}]]
+[[http://www.electrocomponentes.com/|{{Electrocomponentes.png?150}}]]
+[[http://www.electrocomponentes.com/|{{blanco.png?5}}]]
+[[http://www.numetron.com.ar/|{{blanco.png?15}}]]
+[[http://www.numetron.com.ar/|{{LogoNumetron_Normal.png?160}}]]
+[[http://www.numetron.com.ar/|{{blanco.png?15}}]]
+
+[[http://www.grupoalaska.com.ar|{{blanco.png?30}}]]
+[[http://www.grupoalaska.com.ar|{{GrupoAlaska_logo.png?150}}]]
+[[http://www.grupoalaska.com.ar|{{blanco.png?30}}]]
+[[http://ide4plc.wordpress.com/|{{blanco.png?30}}]]
+[[http://ide4plc.wordpress.com/|{{logoIDE4PLC.png?150}}]]
+[[http://ide4plc.wordpress.com/|{{blanco.png?30}}]]
+[[http://www.trimaker.com/|{{blanco.png?30}}]]
+[[http://www.trimaker.com/|{{Logo Trimaker.png?180}}]]
+[[http://www.trimaker.com/|{{blanco.png?30}}]]
+
+[[http://www.dai-ichi.com.ar/|{{blanco.png?10}}]]
+[[http://www.dai-ichi.com.ar/|{{logo_dai_ichi.png?280}}]]
+[[http://www.dai-ichi.com.ar/|{{blanco.png?5}}]]
+{{blanco.png?30|Vortex Technologies}}
+{{logo_vortex.png?60|Vortex Technologies}}
+{{blanco.png?20|Vortex Technologies}}
+[[http://www.globallogic.com.ar/|{{blanco.png?20}}]]
+[[http://www.globallogic.com.ar/|{{GlobalLogic.png?220}}]]
+[[http://www.globallogic.com.ar/|{{blanco.png?30}}]]
+
+[[http://www.mayerpcb.com/|{{blanco.png?20}}]]
+[[http://www.mayerpcb.com/|{{Mayer.png?220}}]]
+[[http://www.mayerpcb.com/|{{blanco.png?20}}]]
+[[http://www.chillemihnos.com.ar/|{{blanco.png?20}}]]
+[[http://www.chillemihnos.com.ar/|{{chillemi.png?80}}]]
+[[http://www.chillemihnos.com.ar/|{{blanco.png?20}}]]
+[[http://www.vanguardiasur.com.ar|{{blanco.png?20}}]]
+[[http://www.vanguardiasur.com.ar|{{vanguardiasur-logo.png?200}}]]
+[[http://www.vanguardiasur.com.ar|{{blanco.png?20}}]]
+
+[[http://www.debtech.com.ar/|{{blanco.png?100}}]]
+[[http://www.debtech.com.ar/|{{debtech_1.png?130}}]]
+[[http://www.debtech.com.ar/|{{blanco.png?50}}]]
+[[http://inarci.com/|{{blanco.png?50}}]]
+[[http://inarci.com/|{{inarci_logo.png?160}}]]
+[[http://inarci.com/|{{blanco.png?50}}]]
+
+{{ blanco.png?50 | }}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>borradores:install_linux</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="borradores,install_linux"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=borradores:install_linux&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=borradores"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=borradores:install_linux"/>
+<link rel="canonical" href="./doku.php%3Fid=borradores:install_linux.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='borradores';var JSINFO = {"id":"borradores:install_linux","namespace":"borradores","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#paso_a_pasociaa-ide_en_ubuntu_con_una_edu-ciaa-nxp">Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#requisitos">Requisitos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#configuracion_de_las_herramientas_por_linea_de_comandos">Configuración de las herramientas por línea de comandos</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#toolchain">Toolchain</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#clonar_repo">Clonar repo</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#openocd">OpenOCD</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#configuracion_compilacion">Configuración compilación</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#compilar_y_descargar">Compilar y descargar</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#eclipse">Eclipse</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#plugins">Plugins</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#configuracion_para_el_proyecto">Configuración para el proyecto</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#debugger">Debugger</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=borradores:install_linux.html#script_automatizado">Script automatizado</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="paso_a_pasociaa-ide_en_ubuntu_con_una_edu-ciaa-nxp">Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP&quot;,&quot;hid&quot;:&quot;paso_a_pasociaa-ide_en_ubuntu_con_una_edu-ciaa-nxp&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-68&quot;} -->
+<h2 class="sectionedit2" id="requisitos">Requisitos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Una <a href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp.html" class="wikilink1" title="desarrollo:edu-ciaa:edu-ciaa-nxp" data-wiki-id="desarrollo:edu-ciaa:edu-ciaa-nxp">EDU-CIAA-NXP</a>.</div>
+</li>
+<li class="level1"><div class="li"> Ubuntu 14.04 o posterior.</div>
+</li>
+<li class="level1"><div class="li"> Al menos 1GB de espacio libre en el home del usuario (<code>/home/$USER</code>).</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Requisitos&quot;,&quot;hid&quot;:&quot;requisitos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;69-256&quot;} -->
+<h2 class="sectionedit3" id="configuracion_de_las_herramientas_por_linea_de_comandos">Configuración de las herramientas por línea de comandos</h2>
+<div class="level2">
+
+<p>
+repo:instalacion:dependencias&amp;noheader&amp;nofooter
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n de las herramientas por l\u00ednea de comandos&quot;,&quot;hid&quot;:&quot;configuracion_de_las_herramientas_por_linea_de_comandos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;257-384&quot;} -->
+<h2 class="sectionedit4" id="toolchain">Toolchain</h2>
+<div class="level2">
+
+<p>
+repo:descripcion:toolchain_arm&amp;noheader&amp;nofooter
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Toolchain&quot;,&quot;hid&quot;:&quot;toolchain&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;385-529&quot;} -->
+<h2 class="sectionedit5" id="clonar_repo">Clonar repo</h2>
+<div class="level2">
+
+<p>
+Clonar repositorio de Firmware:
+</p>
+<pre class="code">cd $HOME/ciaa-ide/ # $HOME es la variable de entorno que apunta al directorio home del usuario, por ejemplo &quot;/home/luis&quot;
+git clone --recursive https://github.com/ciaa/Firmware.git</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Clonar repo&quot;,&quot;hid&quot;:&quot;clonar_repo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;530-777&quot;} -->
+<h2 class="sectionedit6" id="openocd">OpenOCD</h2>
+<div class="level2">
+
+<p>
+repo:descripcion:openocd&amp;noheader&amp;nofooter
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;OpenOCD&quot;,&quot;hid&quot;:&quot;openocd&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:6,&quot;range&quot;:&quot;778-906&quot;} -->
+<h2 class="sectionedit7" id="configuracion_compilacion">Configuración compilación</h2>
+<div class="level2">
+
+<p>
+9) Crear <code>Makefile.mine</code>:
+</p>
+<pre class="code">cd Firmware
+cp Makefile.config Makefile.mine</pre>
+
+<p>
+10) Editar Makefile.mine indicando que compilaremos para una EDU-CIAA-NXP:
+</p>
+<pre class="code">nano Makefile.mine</pre>
+
+<p>
+Reemplazar la línea 
+</p>
+<pre class="code">	BOARD          ?= ciaa_sim_ia32</pre>
+
+<p>
+por
+</p>
+<pre class="code">	BOARD          ?= edu_ciaa_nxp</pre>
+
+<p>
+y para evitar los warnings de LPCOpen, agregar una línea debajo de la anterior con el siguiente texto:
+</p>
+<pre class="code">	CFLAGS	+= -Wno-unused-function</pre>
+
+<p>
+11) Agregar toolchain y openocd al PATH:
+</p>
+<pre class="code">export PATH=$PATH:$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/bin:$HOME/ciaa-ide/openocd-0.9.0/src</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n compilaci\u00f3n&quot;,&quot;hid&quot;:&quot;configuracion_compilacion&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:7,&quot;range&quot;:&quot;907-1557&quot;} -->
+<h2 class="sectionedit8" id="compilar_y_descargar">Compilar y descargar</h2>
+<div class="level2">
+
+<p>
+12) Compilar:
+</p>
+<pre class="code">make clean
+make generate
+make</pre>
+
+<p>
+Si todo anduvo bien la compilación finaliza con este mensaje:
+</p>
+<pre class="code">===============================================================================
+Linking file: ./out/bin/blinking.axf
+ 
+arm-none-eabi-gcc ./out/obj/blinking.o ./out/obj/crp.o -Xlinker --start-group  ./out/lib/posix.a  ./out/lib/ciaak.a  ./out/lib/drivers.a  ./out/lib/ext_drivers.a  ./out/lib/rtos.a  ./out/lib/libs.a  ./out/lib/ext_base.a -Xlinker --end-group -o ./out/bin/blinking.axf   -fno-builtin -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Xlinker -Map=&quot;./out/bin/blinking.map&quot; -nostdlib -T &quot;externals/base/cortexM4/lpc43xx/linker/ciaa_lpc4337.ld&quot;
+ 
+===============================================================================
+Post Building blinking
+ 
+arm-none-eabi-objcopy -v -O binary ./out/bin/blinking.axf ./out/bin/blinking.bin
+copy from `./out/bin/blinking.axf&#039; [elf32-littlearm] to `./out/bin/blinking.bin&#039; [binary]</pre>
+
+<p>
+13) Ya estamos en condiciones de probar la comunicación con el hardware programando el MCU con el ejemplo <code>blinking</code>:
+</p>
+<pre class="code">make download</pre>
+
+<p>
+Salida de la consola:
+</p>
+<pre class="code">===============================================================================
+Starting OpenOCD and downloading...
+ 
+openocd -f ./modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg -c &quot;init&quot; -c &quot;halt&quot; -c &quot;flash write_image erase unlock ./out/bin/blinking.bin 0x1A000000 bin&quot; -c &quot;reset run&quot; -c &quot;shutdown&quot;
+Open On-Chip Debugger 0.9.0 (2015-02-13-09:19)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect &#039;jtag&#039;
+adapter speed: 2000 kHz
+none separate
+cortex_m reset_config vectreset
+Info : clock speed 2000 kHz
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Info : lpc4337.m4: hardware has 6 breakpoints, 4 watchpoints
+Info : lpc4337.m0: hardware has 2 breakpoints, 1 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x21000000 pc: 0x10407bf8 msp: 0x10089f60
+auto erase enabled
+auto unlock enabled
+Warn : Verification will fail since checksum in image (0x00000000) to be written to flash is different from calculated vector checksum (0x53ff4386).
+Warn : To remove this warning modify build tools on developer PC to inject correct LPC vector checksum.
+wrote 327680 bytes from file ./out/bin/blinking.bin in 4.918178s (65.065 KiB/s)
+Info : JTAG tap: lpc4337.m4 tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: lpc4337.m0 tap/device found: 0x0ba01477 (mfg: 0x23b, part: 0xba01, ver: 0x0)
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+Warn : Only resetting the Cortex-M core, use a reset-init event handler to reset any peripherals or configure hardware srst support.
+shutdown command invoked</pre>
+
+<p>
+Presionar el pulsador de reset de la CIAA, luego debería verse un LED destellando.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Compilar y descargar&quot;,&quot;hid&quot;:&quot;compilar_y_descargar&quot;,&quot;codeblockOffset&quot;:7,&quot;secid&quot;:8,&quot;range&quot;:&quot;1558-4753&quot;} -->
+<h2 class="sectionedit9" id="eclipse">Eclipse</h2>
+<div class="level2">
+
+<p>
+Puede ser necesario <a href="./doku.php%3Fid=repo:instalacion:java.html" class="wikilink1" title="repo:instalacion:java" data-wiki-id="repo:instalacion:java">instalar java</a> para poder utilizar eclipse
+</p>
+
+
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Eclipse&quot;,&quot;hid&quot;:&quot;eclipse&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:9,&quot;range&quot;:&quot;4754-4923&quot;} -->
+<h2 class="sectionedit10" id="plugins">Plugins</h2>
+<div class="level2">
+
+<p>
+4) Instalar plug-ins GNU ARM Eclipse y eGIT.
+</p>
+<ul>
+<li class="level1"><div class="li"> Update sites:</div>
+</li>
+</ul>
+
+<p>
+<a href="http://gnuarmeclipse.sourceforge.net/updates" class="urlextern" target="_blank" title="http://gnuarmeclipse.sourceforge.net/updates" rel="ugc nofollow noopener">http://gnuarmeclipse.sourceforge.net/updates</a> (si este plug-in trae problemas, ver <a href="http://gnuarmeclipse.livius.net/blog/plugins-install/" class="urlextern" target="_blank" title="http://gnuarmeclipse.livius.net/blog/plugins-install/" rel="ugc nofollow noopener">este enlace</a>).<br/>
+
+<a href="http://download.eclipse.org/egit/updates" class="urlextern" target="_blank" title="http://download.eclipse.org/egit/updates" rel="ugc nofollow noopener">http://download.eclipse.org/egit/updates</a> (puede que no sea necesario instalar este plug-in, ya viene instalado en las últimas versiones de Eclipse).
+</p>
+<ul>
+<li class="level1"><div class="li"> En Eclipse, ir a Help → Install new Software…</div>
+</li>
+<li class="level1"><div class="li"> Ingresar un <abbr title="Uniform Resource Locator">URL</abbr> por vez y seguir los pasos.</div>
+</li>
+<li class="level1"><div class="li"> Eclipse se reiniciará una vez por cada plug-in instalado.</div>
+</li>
+</ul>
+
+<p>
+5) Importar Firmware en Eclipse:
+</p>
+<ul>
+<li class="level1"><div class="li"> File → New → Makefile Project with Existing Code</div>
+</li>
+<li class="level1"><div class="li"> En Existing Code Location, navegar a <code>$HOME/ciaa-ide/Firmware</code>. Click a Finish. Aparecerá un proyecto nuevo de nombre “Firmware”.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plugins&quot;,&quot;hid&quot;:&quot;plugins&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:10,&quot;range&quot;:&quot;4924-5701&quot;} -->
+<h2 class="sectionedit11" id="configuracion_para_el_proyecto">Configuración para el proyecto</h2>
+<div class="level2">
+
+<p>
+6) Configurar Firmware en Eclipse:
+</p>
+<ul>
+<li class="level1"><div class="li"> Ir a las propiedades de Firmware (clic derecho → Properties).</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ Build, pestaña Behavior.</div>
+</li>
+<li class="level1"><div class="li"> En la opción Build (Incremental build) borrar la palabra <code>all</code>.</div>
+</li>
+<li class="level1"><div class="li"> En la opción Clean escribir <code>clean_generate</code>.</div>
+</li>
+<li class="level1"><div class="li"> Click en Apply. Esto evita que se recompile todo cada vez, y con cada “Clean” se generan los archivos del RTOS.</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ Build &gt; Environment. Agregar la variable <code>BOARD</code> con valor <code>edu_ciaa_nxp</code>. Click en <code>Add…</code>, Name: <code>BOARD</code>, Value: <code>edu_ciaa_nxp</code>.</div>
+</li>
+<li class="level1"><div class="li"> Navegar a C/C++ General, Paths and Symbols.</div>
+</li>
+<li class="level1"><div class="li"> En la sección Languages, elegir GNU C.</div>
+</li>
+<li class="level1"><div class="li"> Click en <code>Add…</code>, click en <code>File System…</code></div>
+</li>
+<li class="level1"><div class="li"> Navegar a la ruta <code>$HOME/ciaa-ide/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include</code></div>
+</li>
+<li class="level1"><div class="li"> Click en <code>Ok</code> (esto no afecta la compilación, es para que Eclipse parsee los headers estándar y no aparezcan errores de tipos no encontrados).</div>
+</li>
+</ul>
+
+<p>
+7) Compilar: ctrl+B. La consola debería mostrar el mismo resultado que el paso 13:
+<a href="lib/exe/detail.php%3Fid=borradores:install_linux&amp;media=docu:fw:bm:ide:consola.png.html" class="media" title="docu:fw:bm:ide:consola.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:consola.png" class="mediacenter" loading="lazy" title="Consola de Eclipse" alt="Consola de Eclipse" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Configuraci\u00f3n para el proyecto&quot;,&quot;hid&quot;:&quot;configuracion_para_el_proyecto&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:11,&quot;range&quot;:&quot;5702-6820&quot;} -->
+<h2 class="sectionedit12" id="debugger">Debugger</h2>
+<div class="level2">
+
+<p>
+8) Configurar debugging:
+</p>
+<ul>
+<li class="level1"><div class="li"> Run → Debug configurations…</div>
+</li>
+<li class="level1"><div class="li"> Doble click a GDB OpenOCD Debugging</div>
+</li>
+<li class="level1"><div class="li"> Pestaña Main → C/C++ Application, “Browse…” a <code>$HOME/ciaa-ide/Firmware/out/bin/blinking.axf</code></div>
+</li>
+<li class="level1"><div class="li"> Pestaña Debugger → “Start OpenOCD locally” debe estar activado.</div>
+</li>
+<li class="level1"><div class="li"> Executable: <code>openocd</code></div>
+</li>
+<li class="level1"><div class="li"> Config options: <code>-f $HOME/ciaa-ide/Firmware/modules/tools/openocd/cfg/cortexM4/lpc43xx/lpc4337/ciaa-nxp.cfg</code></div>
+</li>
+</ul>
+<div class="plugin_note noteimportant">OJO!!! En este caso reemplazar $HOME por la ruta (por ejemplo, <code>/home/luis</code>).
+</div><ul>
+<li class="level1"><div class="li"> Sección “GDB Client Setup”, campo Executable: arm-none-eabi-gdb</div>
+</li>
+<li class="level1"><div class="li"> Click en Apply, luego en Debug…</div>
+</li>
+<li class="level1"><div class="li"> Debería abrirse la perspectiva Debug y detenerse en la primer sentencia de la función main().</div>
+</li>
+<li class="level1"><div class="li"> Si se está usando una EDU-CIAA con la memoria flash borrada, puede que falle al iniciar el debugging. Ver <a href="./doku.php%3Fid=desarrollo:hardware:primeros_pasos.html" class="wikilink1" title="desarrollo:hardware:primeros_pasos" data-wiki-id="desarrollo:hardware:primeros_pasos">Primeros pasos con el hardware de la CIAA</a>.</div>
+</li>
+</ul>
+
+<p>
+9) Disfrutar de tu CIAA-IDE <img src="lib/images/smileys/smile.svg" class="icon smiley" alt=":-)" />
+</p>
+
+<p>
+10) <em>Opcional</em>: Cambiar el splash screen de Eclipse por uno con el logo de la CIAA:
+<a href="lib/exe/detail.php%3Fid=borradores:install_linux&amp;media=docu:fw:bm:ide:splash.png.html" class="media" title="docu:fw:bm:ide:splash.png"><img src="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:splash.png" class="mediacenter" loading="lazy" title="Splash CIAA-IDE" alt="Splash CIAA-IDE" /></a>
+</p>
+<pre class="code">cd $HOME/ciaa-ide
+wget http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/fetch.php?media=docu:fw:bm:ide:splash.bmp.tar.gz -O splash.bmp.tar.gz
+cd eclipse/plugins/org.eclipse.platform_4.4.2.v20150204-1700/
+mv splash.bmp splash.bmp.old # guardamos splash predeterminado
+tar -xzvf ../../../splash.bmp.tar.gz</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Debugger&quot;,&quot;hid&quot;:&quot;debugger&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:12,&quot;range&quot;:&quot;6821-8244&quot;} -->
+<h2 class="sectionedit13" id="script_automatizado">Script automatizado</h2>
+<div class="level2">
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=docu:fw:bm:ide:ciaa_ide_setup.sh.tar.gz" class="media mediafile mf_gz" title="docu:fw:bm:ide:ciaa_ide_setup.sh.tar.gz (2.4 KB)">Aquí</a> podrás descargar un script de shell que automatiza la descarga y configuración de las herramientas, según los pasos anteriores. Aún deberás realizar manualmente los pasos 8 a 13 de la primer sección (que corresponden a las pruebas de hardware) y 4 a 8 de la segunda (configuración dentro de Eclipse). <strong>Aviso: Este script no está totalmente probado!</strong>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Script automatizado&quot;,&quot;hid&quot;:&quot;script_automatizado&quot;,&quot;codeblockOffset&quot;:12,&quot;secid&quot;:13,&quot;range&quot;:&quot;8245-&quot;} --></div>
+</body>
+</html>

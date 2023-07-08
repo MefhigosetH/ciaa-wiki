@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,ciaa_acc,seleccion_final_de_la_arquitectura_de_hardware"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:ciaa_acc"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:ciaa_acc';var JSINFO = {"id":"desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware","namespace":"desarrollo:ciaa_acc","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware.html#seleccion_final_de_la_arquitectura_de_hardware">Selección final de la arquitectura de hardware</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware.html#opciones_descartadas">Opciones descartadas</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:ciaa_acc:seleccion_final_de_la_arquitectura_de_hardware.html#opcion_seleccionada_xilinx_zynq-7000">Opción seleccionada Xilinx Zynq-7000</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="seleccion_final_de_la_arquitectura_de_hardware">Selección final de la arquitectura de hardware</h1>
+<div class="level1">
+
+<p>
+La mayoría de las discusiones se realizaron en la lista CIAA-Hardware con la participación de muchos diseñadores de hardware que ya han participado en otros proyectos CIAA. Otras definiciones se realizaron entre el grupo de INTI-CMNB que diseñará la placa y Martín Ribelotta de EmTech, quien tiene experiencia en aplicaciones HPC. También hubo comunicación fluida con el equipo de diseño de la CIAA-Safety ya que se analizó la posibilidad de interconexión entre ambas placas.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Selecci\u00f3n final de la arquitectura de hardware&quot;,&quot;hid&quot;:&quot;seleccion_final_de_la_arquitectura_de_hardware&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-551&quot;} -->
+<h2 class="sectionedit2" id="opciones_descartadas">Opciones descartadas</h2>
+<div class="level2">
+
+<p>
+A continuación se listan las opciones analizadas y descartadas por diferentes motivos.
+</p>
+<ul>
+<li class="level1 node"><div class="li"> Serie Zynq UltraScale+ MPSoC</div>
+<ul>
+<li class="level2"><div class="li"> Tecnología muy nueva (en desarrollo).</div>
+</li>
+<li class="level2"><div class="li"> No se consiguen aún en Digikey.</div>
+</li>
+<li class="level2"><div class="li"> Las versiones gratuitas de los programas ISE y Vivado no lo van a soportar.  </div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> SoC Freescale iMX6</div>
+<ul>
+<li class="level2"><div class="li"> Ya existen en el mercado numerosos productos con estos micros y a muy buen precio.</div>
+</li>
+<li class="level2"><div class="li"> Algunos periféricos del iMX6 son muy limitados, como por ejemplo el PCIe x1 o el Ethernet 1Gb.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Epiphany Multicore Coprocessor (Adapteva)</div>
+<ul>
+<li class="level2"><div class="li"> Dependencia absoluta de Adapteva, no se pueden comprar en ningún distribuidor.</div>
+</li>
+<li class="level2"><div class="li"> En este momento (2015), no se consiguen los chips ni en su página (dice sold out).</div>
+</li>
+<li class="level2"><div class="li"> Procesadores muy caros (USD 600).</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> MIPS Processor (Warrior o Aptiv) </div>
+<ul>
+<li class="level2"><div class="li"> En caso de querer implementar el IP core en silicio, habría que afrontar costos altísimos e imposibles.</div>
+</li>
+<li class="level2"><div class="li"> En caso de querer implementarlo en FPGA, se necesitaría una FPGA de gran tamaño y alto costo y la performance obtenida sería mucho menor a la de un SoC físico.</div>
+</li>
+<li class="level2"><div class="li"> Tecnología propietaria, de alto costo y difícil de adquirir.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> GPU NVIDIA o AMD Radeon</div>
+<ul>
+<li class="level2"><div class="li"> Dificultad para adquirir chips Nvidia o AMD.</div>
+</li>
+<li class="level2"><div class="li"> Drivers propietarios.</div>
+</li>
+<li class="level2"><div class="li"> Documentación difícil de conseguir.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Opciones descartadas&quot;,&quot;hid&quot;:&quot;opciones_descartadas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;552-1894&quot;} -->
+<h2 class="sectionedit3" id="opcion_seleccionada_xilinx_zynq-7000">Opción seleccionada Xilinx Zynq-7000</h2>
+<div class="level2">
+
+<p>
+La opción seleccionada para el procesador es la <a href="http://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html" class="urlextern" target="_blank" title="http://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html" rel="ugc nofollow noopener">Serie Zynq-7000 </a> de Xilinx. En la sección <a href="./doku.php%3Fid=desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx.html" class="wikilink1" title="desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx" data-wiki-id="desarrollo:ciaa_acc:zynq_ultrascale_mpsoc_xilinx">Propuesta para la utilización de un SoC/MPSoC  Zynq</a> se describe esta familia de Xilinx.
+</p>
+
+<p>
+Se copian aquí algunas ventajas y características positivas que reforzaron la decisión:
+</p>
+<ul>
+<li class="level1"><div class="li"> Disponible a la venta en Digikey.</div>
+</li>
+<li class="level1"><div class="li"> Diseños de referencia disponibles.</div>
+</li>
+<li class="level1"><div class="li"> Documentación disponible.</div>
+</li>
+<li class="level1"><div class="li"> Mayor potencia de cómputo frente a las otras opciones.</div>
+</li>
+<li class="level1"><div class="li"> Interfaces de comunicación de muy alta velocidad (10 Gb/s o más).</div>
+</li>
+<li class="level1"><div class="li"> Disponibilidad de herramientas de desarrollo gratuitas (en la gama baja de la familia).</div>
+</li>
+<li class="level1"><div class="li"> La parte de Lógica Programable permite implementar aceleradores de procesamiento por hardware.</div>
+</li>
+<li class="level1"><div class="li"> Se pueden ingresar datos/muestras directamente al sistema, las interfaces no son limitantes (por ejemplo para video en HD).</div>
+</li>
+</ul>
+
+<p>
+En la lista CIAA-Hardware se discutieron todas las ventajas y desventajas, su alto costo, su alcance y las aplicaciones posibles que podrían desarrollarse con este SoC + FPGA. Se llegó a la conclusión de que era el hardware más adecuado para las aplicaciones que se buscan y de que realmente sería un diseño abierto que serviría como diseño de referencia para la industria o para fines educativos.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Opci\u00f3n seleccionada Xilinx Zynq-7000&quot;,&quot;hid&quot;:&quot;opcion_seleccionada_xilinx_zynq-7000&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1895-3310&quot;} -->
+<h3 class="sectionedit4" id="seleccion_de_part_number_y_encapsulado_dentro_de_la_familia_zynq-7000">Selección de part number y encapsulado dentro de la familia Zynq-7000</h3>
+<div class="level3">
+
+<p>
+Luego de haber seleccionado la familia Zynq-7000, se analizó cuál de todos los procesadores era más conveniente. Para esto, se revisaron los modelos que soporta la versión Webpack del software Vivado: Z-7010, Z-7015, Z-7020 y Z-7030. De estas opciones se seleccionó el más potente, el Z-7030, a fines de cumplir con los requisitos de las aplicaciones de Alto Costo Computacional (considerando también que el costo no es un factor decisivo en este proyecto).
+</p>
+
+<p>
+<a href="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_acc:zynq_z030_vivado.png" class="media" title="desarrollo:ciaa_acc:zynq_z030_vivado.png"><img src="lib/exe/fetch.php%3Fmedia=desarrollo:ciaa_acc:zynq_z030_vivado.png" class="mediacenter" loading="lazy" title="Diagrama interno del procesador  Zynq Z-7030 extraída del software Vivado" alt="Diagrama interno del procesador  Zynq Z-7030 extraída del software Vivado" /></a>
+</p>
+
+</div>
+
+<h4 id="encapsulado">Encapsulado</h4>
+<div class="level4">
+
+<p>
+Las opciones de encapsulado del Z-7030 son las siguientes.
+</p>
+<ul>
+<li class="level1 node"><div class="li"> Encapsulado SBG485 (pitch 0.8mm, 19x19mm): 318.75 U$S</div>
+<ul>
+<li class="level2"><div class="li"> Ventajas: Se puede soldar en su lugar el 7Z015.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Encapsulado FBG484 (pitch 1mm, 23x23mm): 290 U$S</div>
+<ul>
+<li class="level2"><div class="li"> Ventajas: Precio inferior, pero no hay gran diferencia.</div>
+</li>
+<li class="level2"><div class="li"> Desventajas: No es compatible con otras partes.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Encapsulado FBG676 (pitch 1mm, 27x27mm): 333.75 U$S</div>
+<ul>
+<li class="level2"><div class="li"> Ventajas: Se puede soldar en su lugar el 7Z035 o el 7Z045.</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Encapsulado FFG676 (pitch 1mm, 27x27mm): 417.50 U$S</div>
+<ul>
+<li class="level2"><div class="li"> Ventajas: Se puede soldar en su lugar el 7Z035 o el 7Z045. Los transceivers son de mayor velocidad.</div>
+</li>
+<li class="level2"><div class="li"> Desventajas: Precio elevado.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Todas las partes elegidas son de grado industrial y tienen “speed grade” 2 (aunque podrán utilizarse partes con “speed grade” 1). 
+</p>
+
+<p>
+A continuación se listan algunos argumentos que se expusieron en la lista y que ayudaron en la decisión del encapsulado:
+</p>
+<ul>
+<li class="level1"><div class="li"> En cuanto al pitch, no hay diferencia entre utilizar el de 0.8mm o el de 1mm ya que el breakout es idéntico (no pasan dos tracks entre pads BGA salvo que se recurra a una fabricación más cara).</div>
+</li>
+<li class="level1"><div class="li"> Los encapsulados más grandes tienen cantidades más interesantes de pines HR/HP. </div>
+</li>
+<li class="level1"><div class="li"> En el encapsulado FFG676, los transceivers pueden llegar a 12.5 Gb/s. </div>
+</li>
+<li class="level1"><div class="li"> No hay diferencia de pines entre un FFG676 y FBG676, por lo tanto eligiendo cualquiera de estos dos encapsulados, se tendría la mayoría de los FPGA+SoC de Xilinx cubiertos y el diseño sería muy escalable.</div>
+</li>
+<li class="level1"><div class="li"> Si se selecciona el SBG485 sólo se estaría incluyendo la gama baja que no está a la altura de los requerimientos del proyecto.</div>
+</li>
+</ul>
+
+<p>
+<strong>En conclusión el part number con mayores ventajas es el XC7Z030-2FBG676I (speed grade 2)</strong>. También podría ser el XC7Z030-1FBG676I (speed grade 1). Estos part numbers son compatibles con el FFG676, se podrá soldar en la placa cualquiera de estas opciones: 7Z030/35/45. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Selecci\u00f3n de part number y encapsulado dentro de la familia Zynq-7000&quot;,&quot;hid&quot;:&quot;seleccion_de_part_number_y_encapsulado_dentro_de_la_familia_zynq-7000&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;3311-&quot;} --></div>
+</body>
+</html>

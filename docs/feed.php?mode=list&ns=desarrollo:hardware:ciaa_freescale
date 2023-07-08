@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:hardware:ciaa_freescale</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:01:26+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio&amp;rev=1427297063&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_freescale&amp;rev=1411406501&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_y_debugger_freescale&amp;rev=1411406031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_analogicas_freescale&amp;rev=1411406502&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_digitales_freescale&amp;rev=1411406117&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ethernet_freescale&amp;rev=1411406502&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:fuente_freescale&amp;rev=1411406502&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:gpio_freescale&amp;rev=1411657937&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:jtag_freescale&amp;rev=1411657939&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:memorias_freescale&amp;rev=1411657942&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:rs485_rs232_can_freescale&amp;rev=1431633030&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salida_analogica_freescale&amp;rev=1411657944&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salidas_digitales_freescale&amp;rev=1411410878&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:sd_freescale&amp;rev=1411406030&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:usb_otg_freescale&amp;rev=1411576490&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio&amp;rev=1427297063&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-25T15:24:23+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ciaa_freescale_inicio&amp;rev=1427297063&amp;do=diff</link>
+        <description>CIAA-FSL
+
+[ Prototipo funcional de la CIAA-FSL]
+
+Estado actual (09/01/15)
+
+	*  Hay 20 CIAA-FSL CEIBO v1.0 fabricadas por Ernesto Mayer S.A.
+	*  Hay una CIAA-FSL CEIBO v1.0 fabricada en el laboratorio de prototipado de la  UNER.
+	*  Hay cinco placas armadas, de las cuales una fue soldada manualmente por el INTI-CMNB y cuatro fueron armadas por Asembli. Todas fueron probadas por el INTI-CMNB y funcionan correctamente (al menos sus interfaces básicas). Fueron distribuidas por Ignacio Zaradnik a dis…</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_freescale&amp;rev=1411406501&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:21:41+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:cpu_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_freescale&amp;rev=1411406501&amp;do=diff</link>
+        <description>CIAA-FSL: CPU MK60FX512VLQ15
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  CPU: Freescale MK60FX512VLQ15
+		*  ARM Cortex-M4 @ 150 MHz
+		*  512 kB Flash, 128 kB SRAM
+		*  Encapsulado LQFP144
+
+
+Descripción
+
+	*  En esta hoja del esquemático se realizan las conexiones de todas las interfaces de la CPU, los cristales, los leds de estado y el reset.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_y_debugger_freescale&amp;rev=1411406031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:13:51+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:cpu_y_debugger_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:cpu_y_debugger_freescale&amp;rev=1411406031&amp;do=diff</link>
+        <description>CIAA-Freescale: CPU y Debugger
+
+Esquemático
+
+(pegar foto)
+
+Descripción
+
+(texto)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_analogicas_freescale&amp;rev=1411406502&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:21:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:entradas_analogicas_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_analogicas_freescale&amp;rev=1411406502&amp;do=diff</link>
+        <description>CIAA-FSL: Entradas Analógicas
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  4 Entradas analógicas configurables por Corriente/Tensión.
+	*  Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia de carga 237 Ohm.
+	*  Control por tensión 0-10V, impedancia de entrada 45 KOhm.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_digitales_freescale&amp;rev=1411406117&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:15:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:entradas_digitales_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:entradas_digitales_freescale&amp;rev=1411406117&amp;do=diff</link>
+        <description>CIAA-FSL: Entradas Digitales
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  8 entradas digitales opto-aisladas bipolares.
+	*  Rango de tensión de entrada asegurado 12VDC a 30VDC.
+	*  LED testigo en cada entrada.
+	*  Protección contra polaridad invertida o tensiones negativas</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ethernet_freescale&amp;rev=1411406502&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:21:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:ethernet_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:ethernet_freescale&amp;rev=1411406502&amp;do=diff</link>
+        <description>CIAA-FSL: Interfaz Ethernet
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Transceiver:  Micrel KSZ8041TLI
+		*  Compatible con el estándar IEEE 802.3u.
+		*  Full-Duplex 10Mbps/100Mbps (10Base-T/100Base-TX).
+		*  Diseño CMOS de bajo consumo, menor a 180 mW.
+		*  Interfaz MII/RMII/SMII hacia la CPU.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:fuente_freescale&amp;rev=1411406502&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:21:42+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:fuente_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:fuente_freescale&amp;rev=1411406502&amp;do=diff</link>
+        <description>CIAA-FSL: Fuente de Alimentación
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Rango de tensión de entrada típico: 12VDC a 30VDC
+	*  Fuente Switching para reducción a 5V/3A.
+	*  Fuente lineal de 3.3V/1A, a partir de los 5V
+	*  Fuente filtrada de 3.3V para conversores ADC</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:gpio_freescale&amp;rev=1411657937&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:12:17+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:gpio_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:gpio_freescale&amp;rev=1411657937&amp;do=diff</link>
+        <description>CIAA-FSL: GPIO
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Conector GPIO 
+		*  16 pines GPIO disponibles con protección contra ESD y sobre impulsos.
+		*  3.3V con limite de corriente a 0.35A
+		*  5V con limite de corriente a 1A
+		*  24V con limite de corriente a 1A</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:jtag_freescale&amp;rev=1411657939&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:12:19+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:jtag_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:jtag_freescale&amp;rev=1411657939&amp;do=diff</link>
+        <description>CIAA-FSL: Debugger
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Interfaz JTAG para debugger externo
+		*  Conector SMD:  HARWIN M50-3600542
+
+	*  Debugger USB-JTAG con el chip  FTDI CHIP FT2232HL
+		*  Conector micro USB hembra de tipo AB SMT:  Hirose ZX62-AB-5PA(11)
+		*  Memoria EEPROM para el FT2232H:  ATMEL AT93C46DN-SH-B
+		*  Diodos TVS para protección contra ESD y transitorios:</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:memorias_freescale&amp;rev=1411657942&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:12:22+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:memorias_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:memorias_freescale&amp;rev=1411657942&amp;do=diff</link>
+        <description>CIAA-FSL: Memorias NV
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Memorias internas del MK60FX512VLQ15
+		*  Memoria Flash de 512 kB
+		*  Memoria SRAM de 128 kB
+
+	*  Memoria Flash S25FL032P0XMFI013
+		*  32-Mbit CMOS 3.0 V Flash Memory
+		*  Quad I/O FAST_READ: 80</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:rs485_rs232_can_freescale&amp;rev=1431633030&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-05-14T19:50:30+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:rs485_rs232_can_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:rs485_rs232_can_freescale&amp;rev=1431633030&amp;do=diff</link>
+        <description>CIAA-FSL: Interfaces: RS232, RS485 y CAN
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Interfaz serial RS232
+		*  Basada en el estándar EIA/TIA-232.
+		*  Data Rate máximo mayor a 250Kbps.
+		*  Filtrado con ferrites.
+		*  Control de Flujo por Hardware RTS/CTS.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salida_analogica_freescale&amp;rev=1411657944&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-25T15:12:24+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:salida_analogica_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salida_analogica_freescale&amp;rev=1411657944&amp;do=diff</link>
+        <description>CIAA-FSL: Salida Analógica
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  1 Salida analógica configurable como Corriente/Tensión.
+	*  Salida de tensión 0-10V (extendido a 10,5V) con impedancia de Carga mínima de 3KOhm.
+	*  Transmisor Activo para Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia máx 1KOhm.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salidas_digitales_freescale&amp;rev=1411410878&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T18:34:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:salidas_digitales_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:salidas_digitales_freescale&amp;rev=1411410878&amp;do=diff</link>
+        <description>CIAA-FSL: Salidas Digitales
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  4 x Salidas Open-Drain
+		*  Corriente limitada a 1A, mediante gate driver.
+		*  Tensión máxima de salida soportada: 60V.
+		*  Indicación mediante LED
+		*  Frecuencia máxima de conmutación (estimada): 2MHz</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:sd_freescale&amp;rev=1411406030&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:13:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:sd_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:sd_freescale&amp;rev=1411406030&amp;do=diff</link>
+        <description>CIAA-Freescale: Memoria SD
+
+Esquemático
+
+(pegar foto)
+
+Descripción
+
+(texto)</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:usb_otg_freescale&amp;rev=1411576490&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-24T16:34:50+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:ciaa_freescale:usb_otg_freescale</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:ciaa_freescale:usb_otg_freescale&amp;rev=1411576490&amp;do=diff</link>
+        <description>CIAA-FSL: Interfaz USB OTG
+
+Diagrama Esquemático
+
+
+
+Características
+
+	*  Controladora USB: Compatible con USB 1.1 y 2.0
+	*  Velocidad de transferencia: Full Speed (12 Mb/s) / Low Speed (1,5 Mb/s)
+	*  Conector micro USB hembra tipo AB SMT:  Hirose ZX62-AB-5PA(11)
+	*  Power Switch para control de encendido y limitación de corriente (500 mA):</description>
+    </item>
+</rdf:RDF>

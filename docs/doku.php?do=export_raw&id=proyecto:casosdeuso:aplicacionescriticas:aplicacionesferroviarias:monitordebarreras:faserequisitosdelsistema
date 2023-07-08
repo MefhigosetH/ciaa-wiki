@@ -1,0 +1,157 @@
+====== Diseño e Implementación de un Monitor de Barreras Ferroviarias - Fase (4/14): Requisitos del sistema ======
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:faseanalisisderiesgos|Ver Fase previa]] ] - [ Ver Fase siguiente ]
+
+{{ :blanco.png?10 | }}
+
+===== Introducción =====
+
+###
+A Continuación se muestra cómo se adapta el alcance y la aplicación de los requisitos dispuestos por la Norma UNE EN 50126 para cumplir los requisitos específicos del Monitor de Barreras. 
+### 
+
+===== Objetivos =====
+
+<fc #ff0000>**Falta Modificar todo lo que sigue a continuación**</fc>
+
+###
+Los objetivos establecidos para esta fase son:
+###
+
+  - Especificar los requisitos globales RAMS para el sistema
+  - Especificar los criterios globales de demostración y aceptación correspondiente al RAMS del sistema
+  - Establecer el Programa RAMS para controlar las tareas RAMS durante las sucesivas fases del ciclo de vida
+
+===== Entradas =====
+
+###
+Las entradas para esta fase deben incluir toda la información relevante y, en los casos en que proceda, los datos para cumplir los requisitos de la fase y, en especial, los entregables presentados en la fase 2 y la fase 3.
+###
+
+===== Requisitos =====
+
+El **Requisito 1** de esta fase debe ser el de especificar (con referencia al apartado 6.2.3.1 de la norma) los requisitos globales RAMS correspondientes al sistema total. Los requisitos RAMS, para el sistema de que se trate, deben incluir:
+  - Definición y límites del sistema
+  - Perfil de la misión
+  - Requisitos funcionales y requisitos de rendimiento auxiliares, incluidos los requisitos funcionales de seguridad y los requisitos de integridad de la seguridad para cada función de seguridad
+  - Requisitos de apoyo logístico
+  - Entrorno de la aplicación
+  - Niveles tolerables de riesgo correspondientes a peligros identificadas
+  - Medidas externas necesarias para cumplir los requisitos
+  - Requisitos de soporte del sistema
+  - Detalles de los límites del análisis
+  - Detalle de cualesquiera suposiciones hechas
+
+El **Requisito 2** de esta fase debe ser el de especificar (con referencia al apartado 6.2.3.3 de la norma) los requisitos globales para lograr cumplir los requisitos RAMS correspondientes al sistema, incluidos:
+  - Los criterios de aceptación correspondientes a los requisitos globales RAMS
+  - El proceso de demostración y aceptación correspondiente a los requisitos globales RAMS facilitados por el plan de validación del sistema RAMS, y que deberían incluir:
+      * Una descripción del sistema
+      * Los principios de validación RAMS que se vayan a aplicar al sistema
+      * Las pruebas RAMS que se vayan a realizar para la validación, incluidos detalles del entorno necesario, herramientas, equipos, etc.
+      * La estructura de gestión de la validación, incluidos los requisitos de independencia del personal
+      * Los detalles del programa de validación (secuencia y calendario)
+      * Los procedimientos que tratan con la no-conformidad
+
+El **Requisito 3** de esta fase debe ser el de establecer el programa detallado RAM correspondiente a las restantes tareas del ciclo de vida  (con referencia al apartado 6.2.3.3 de la norma) El programa RAM debe incluir las tareas que se consideren como mas eficaces para el logro de los requisitos RAM  correspondientes al sistema que se trate. El programa RAM debe acordarse con la Autoridad Ferroviaria y la industria ferroviaria para el sistema que se trate y debe ser puesto en práctica durante todo el ciclo de vida del sistema. Dentro del Programa RAM, debería prestarse atención a la inclusión de las siguientes tareas:
+  - La gestión, incluidos detalles de:
+      * La política y estrategia destinada a cumplir los requisitos RAM.
+      * El alcance del programa.
+      * Una descripción del sistema.
+      * El ciclo de vida del sistema así como las tareas y procesos RAM que hayan de emprenderse dentro del ciclo de vida; específicamente, el orden de las tareas RAM para garantizar el máximo provecho al diseño del sistema.
+      * Las funciones, responsabilidades, competencias y relaciones de las organizaciones que realicen tareas dentro del ciclo de vida.
+      * Un sistema de comunicación de fallos y medidas correctoras (FRACAS) que se vaya a aplicar al sistema a partir de la fase 7 del ciclo de vida (por parte de la Autoridad Ferroviaria y la industria ferroviaria, según proceda), con registros en los que se incluyan:
+              * Los datos técnicos del sistema.
+              * El motivo para la actuación de mantenimiento.
+              * El tipo de actuación de mantenimiento.
+              * La horas/hombre empleadas y el tiempo transcurrido durante la actuación de mantenimiento.
+              * El tiempo de caída durante el mantenimiento.
+              * El número y nivel de capacitación del personal.
+              * Las piezas de repuesto utilizadas.
+              * El costo de los consumibles.
+              * El informe y la actuación correctora.
+      * Los planes para garantizar la coordinación de cada elemento RAM.
+      * Detalles de todos los entregables del ciclo de vida relacionado con la RAM.
+      * Detalles de las tareas de aceptación RAM.
+      * Interfaces con otros programas y planes relacionados.
+      * Las restricciones y las suposiciones hechas en el programa RAM.
+      * Los planes para la gestión de sub-contratistas.
+  - La fiabilidad, incluidos:
+      * El análisis y la predicción de la fiabilidad, incluidos:
+              * El análisis funcional y la definición de fallos del sistema.
+              * El análisis descendente; por ejemplo, el análisis del árbol de fallos y el análisis del diagrama en bloques.
+              * El análisis ascendente; por ejemplo, el Análisis de Modalidades y Efectos de fallos (FMEA).
+              * El análisis de fallos de causa común o el de fallos múltiples.
+              * El análisis de sensibilidad y los estudios de ponderación.
+              * La distribución de la fiabilidad.
+              * El análisis de las interfaces hombre – máquina.
+              * Pruebas de esfuerzo.
+              * La predicción del caso más desfavorable y el análisis de la tolerancia.
+      * La planificación de la fiabilidad, incluidos:
+              * El programa de revisión de la fiabilidad del diseño.
+              * El programa de garantía de fiabilidad de los componentes.
+              * El programa de garantía de calidad / fiabilidad del software.
+      * Realización de pruebas de fiabilidad, incluidas:
+              * Pruebas de incremento de la fiabilidad, basada en la generación de fallos.
+              * Pruebas de demostración de la fiabilidad, basada en modos de fallos esperados.
+              * Pruebas de resistencia en condiciones ambientales.
+              * Pruebas de duración de componentes.
+              * Pruebas de duración del sistema durante las primeras etapas del funcionamiento.
+      *  Adquisición y evaluación de datos de fiabilidad.
+      *  Análisis de datos para la mejora de la fiabilidad.
+  - La mantenibilidad, incluido:
+      * El análisis y la predicción de la mantenibilidad, incluidos:
+              * El análisis y la verificación de la mantenibilidad.
+              * El análisis de las tareas de mantenimiento.
+              * Estudios y pruebas de factibilidad de mantenimiento.
+              * Consideraciones de mantenibilidad relacionadas con factores humanos.
+      * Planificación de la mantenibilidad, incluidos:
+              * El programa de revisión de la mantenibilidad del diseño.
+              * El establecimiento de la estrategia de mantenimiento.
+              * El examen de opciones de mantenimiento centradas .en la fiabilidad.
+              * Programa de mantenimiento de software.
+      * Evaluación de apoyo logístico, incluidos:
+              * La definición de los requisitos de mantenimiento.
+              * La definición de políticas de repuestos y recursos de apoyo.
+              * El personal y las instalaciones de mantenimiento.
+              * Las precauciones para la seguridad del personal.
+              * Los requisitos de apoyo del sistema.
+              * Los requisitos del programa de formación.
+              * Las condiciones de transporte, embalaje, manipulación y almacenamiento del sistema.
+      * Adquisición y evaluación de datos de mantenibilidad.
+      * Análisis de datos para la mejora de la mantenibilidad.
+  - Disponibilidad, Incluidos:
+      * El análisis de disponibilidad.
+      * El análisis de sensibilidad y los estudios de ponderación.
+      * La demostración de la disponibilidad durante las primeras etapas del funcionamiento.
+      * Adquisición y evaluación de datos de disponibilidad.
+      * Análisis de datos para la mejora y predicción de la disponibilidad.
+
+El **Requisito 4** de esta fase debe ser el de corregir el Plan de Seguridad para garantizar que todas las tareas futuras planeadas sean coherentes con los requisitos emergentes RAMS del sistema.
+
+===== Entregas =====
+
+
+Los resultados de esta fase se deben documentar, junto con cualesquiera suposiciones y justificaciones realizadas durante la fase
+
+La fase debe producir un Plan de Seguridad y un plan de aceptación actualizados
+
+
+Las entregas de esta fase son las entradas para sucesivas fases del ciclo de vida.
+
+
+
+===== Verificación  =====
+
+Las siguientes tareas de verificación deben emprenderse en esta fase:
+
+  - Evaluación de la idoneidad de la información y, en los casos en que proceda, de los datos y otras estadísticas utilizadas como información aportada para tareas dentro de esta fase
+  - Los requisitos del sistema deben ser verificados comparándolos con las entregas producidas en la fase 2 y en la fase 3, incluido el cálculo de costos del ciclo de vida.
+  - Los requisitos de seguridad deben ser verificados comparándolos con cualesquiera objetivos de seguridad y políticas de seguridad de la Autoridad Ferroviaria.
+  - Los requisitos RAM deben ser verificados comparándolos con cualesquiera objetivos y políticas RAM de la Autoridad Ferroviaria
+  - Evaluación de la idoneidad e integridad del Plan de Aceptación y del Plan de Validación.
+  - Evaluación de la idoneidad del Programa RAM, incluido un examen de la idoneidad de cualesquiera fuente de datos utilizados.
+  - Evaluación de los métodos, herramientas y técnicas usadas en la fase.
+  - Evaluación de la competencia del personal que desempeñe tareas en la fase.
+
+[ [[..:monitordebarreras:contextoymotivacion:inicio|Ver Página Inicial]] ] - [ [[..:monitordebarreras:faseanalisisderiesgos|Ver Fase previa]] ] - [ Ver Fase siguiente ]
+

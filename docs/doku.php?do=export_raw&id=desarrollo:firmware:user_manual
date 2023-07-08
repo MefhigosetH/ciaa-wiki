@@ -1,0 +1,29 @@
+====== Manual del Usuario de CIAA Firmware ======
+
+Esta página hace de Manual del Usuario del CIAA Firmware. Es para aquellos desarrolladores que quieran utilizar CIAA Firmware para sus proyectos.
+
+Se sugiere también suscribirse a la lista de correos [[https://groups.google.com/forum/#!forum/ciaa-firmware|ciaa-firmware@googlegroups.com]] dónde podrá conocer las novedades sobre el desarrollo y hacer consultas.
+
+===== Instalación de CIAA Firmware =====
+
+Lo primero que necesitará será instalar Firmware de la CIAA, para ello puede leer:\\
+  * [[instalacion_sw|Instalación de CIAA Firmware]].
+
+
+===== Preparando el IDE-Eclipse para un ejemplo con CIAA Firmware =====
+
+Una vez que tenemos las herramientos instaladas, puede configurar el IDE-Eclipse para empezar a probar alguno de los ejemplos, para ellos puede leer: \\
+  * [[examples_ide|Eclipse: crear un proyecto a partir de 'Firmware-Examples']].
+===== Makefile =====
+
+Una vez instalado el CIAA Firmware deberán entender como funciona el [[:make_environment|Make]].
+
+===== Compilando =====
+
+[[primer_compile|Compilando por primera vez]]
+===== Debugging =====
+
+Luego de haber podido compilar pueden realizar el debugging. Si ha compilado para Windows o Linux lo puede hacer directamente, en caso de haber compilado para un CIAA-HW puede utilizar [[openocd|OpenOCD]]
+
+===== Visual Studio Code =====
+Es posible compilar y depurar los proyecto desarrollador dentro de CIAA Firmware también pueden ser depurados [[vscode|VSCode]]

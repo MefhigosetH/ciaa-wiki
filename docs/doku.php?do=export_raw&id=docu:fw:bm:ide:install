@@ -1,0 +1,96 @@
+====== Instalación Software-IDE de la CIAA ======
+
+###
+El CIAA-Software-IDE es el entorno de desarrollo del CIAA-Firmware. En su versión más completa, se ofrece un instalador llamado [[https://github.com/ciaa/Software-IDE/releases|CIAA-IDE-Suite]] con el cual podrán de forma sencilla instalar y configurar automáticamente la totalidad de las herramientas necesarias para trabajar con la CIAA, incluyendo otras herramientas además del Firmware como ser IDE4PLC. 
+Este instalador es para los usuarios Windows, específicamente para aquellos con un Windows XP o superior, para la instalación en Linux, todavía no contamos con un instalador unificado, por tal motivo va a ser necesario seguir los pasos indicados en la [[docu:fw:bm:ide:install_linux|Página paso a paso: CIAA-IDE en Ubuntu con una EDU-CIAA-NXP]].
+Si desea descargar las instrucciones que se describen a continuación hacer clic en el enlace correspondiente:
+  * {{:docu:fw:bm:ide:installciaa_ide_windows_v1.0.pdf|Instructivo de instalación para Windows}}
+  * {{:docu:fw:bm:ide:installciaa_ide_linux_v1.0.pdf|Instructivo de instalación para Linux}}
+
+###
+
+Esta es la manera más simple de comenzar a trabajar con la  [[.:edu-ciaa:edu-ciaa-nxp|EDU-CIAA]]. En futuras versiones, se contemplará una versión reducida y más sencilla enfocada exclusivamente a la EDU-CIAA.
+
+===== Instalación =====
+
+###
+Como se indicó anteriormente, primero debe descargar [[desarrollo:descargas|CIAA-IDE-Suite]].
+Este es sumamente intuitivo, se recomienda no cambiar la ruta de instalación, y de ser necesario, no debe elegirse una ruta que contenga directorios con espacios.
+###
+**(Imágenes obsoletas, corresponde a la versión anterior del instalador)** 
+
+{{ :docu:fw:bm:ide:instalador:instalador_1.png |}}
+
+{{ :docu:fw:bm:ide:instalador:instalador_licencia.png |}}
+
+###
+En la siguiente ventana deberá elegir que componentes desea instalar. Si usted no posee una EDU-CIAA. No será necesario que instale los **driver**. Si en algún momento la adquiere, los controladores quedarán almacenados junto al CIAA-IDE, pudiendo hacer **a mano** la instalación de los mismos. De la misma manera tiene la opción de elegir, que se descargue automáticamente la edición correspondiente del CIAA-Firmware.
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador_componentes.png |}}
+
+###
+A continuación deberá colocar la ruta de instalación. Como se indicó anteriormente, si se desea cambiar la ruta de instalación, se debe tener la precaución, de no elegir una ruta donde los directorios posean **espacios** en su nombre.
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador_path.png |}}
+
+===== Instalación Drivers =====
+###
+Si en la ventana de instalación de componentes, usted dejó tildado el casillero de **drivers**, entonces se le harán un par de preguntas. Si no dispone del hardware, entonces simplemente conteste **No**.
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador:instalador_dispone_de_hardware.png |}}
+
+###
+Si dispone de Hardware, entonces será necesario lo conecte al equipo en el **puerto USB indicado como DEBUG**, y una vez sea reconocido por el Sistema Operativo continúe con la instalación.
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador:instalador_conecte_el_hardware.png |}}
+
+###
+A continuación se instalaran los controladores por defecto del fabricante FTDI para puerto virtual.
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador_ftdi.png |}}
+
+{{ :docu:fw:bm:ide:instalador:instalador_ftdi2.png |}}
+###
+Acepte la Licencia y presione en Next.
+###
+{{ :docu:fw:bm:ide:instalador:instalador_ftdi3.png |}}
+###
+Por último podrá ver que los drivers FTDI fueron instalados correctamente.
+###
+{{ :docu:fw:bm:ide:instalador:instalador_ftdi_ok.png |}}
+
+###
+Si por algún motivo, la instalación de los controladores falla, aparecerá el siguiente cartel, indicando que puede llegar a ser necesario la instalación manual de los mismos. 
+###
+{{ :docu:fw:bm:ide:instalador:instalador_ftdi_error.png |}}
+
+===== Windows Security Error =====
+###
+En algunos sistemas operativos, el sistema detecta que el controlador no está firmado y muestra un error de Windows Security. De ser el caso presione en  **Install this driver Software anyway**
+###
+{{ :docu:fw:bm:ide:instalador:error_windows_security.png |}}
+
+===== Fin de la Instalación =====
+###
+Las últimas ventanas del instalador se muestran a continuación. 
+###
+
+{{ :docu:fw:bm:ide:instalador:instalador_progreso.png |}}
+{{ :docu:fw:bm:ide:instalador:instalador_fin.png |}}
+
+###
+Si no ocurrieron errores durante la instalación, usted dispondrá de un link en el escritorio que le permitirá abrir el CIAA-IDE y comenzar a trabajar con el Firmware. 
+###
+
+===== Desinstalación =====
+###
+Si instaló el Software de CIAA-IDE y decide desinstalarlo. Ten especial precaución en quitar cualquier contenido que desees conservar, de la carpeta C:\CIAA o el directorio de instalación. 
+El desinstalador del Software CIAA-IDE, elimina el directorio completamente, borrando todo su contenido. 
+###
+
+<- docu:fw:bm:ide|IDE ^ docu:fw:bm:ide|IDE ^ docu:fw:bm:ide:ide_entorno|Configuración del Entorno CIAA-IDE ->

@@ -1,0 +1,241 @@
+====== Diseño del módulo MODBUS ======
+
+===== Resumen =====
+Este documento tiene por objetivo definir la estructura del módulo MODBUS tal que permita al usuario configurar los componentes de aplicación que se deseen utilizar (slaves y/o masters), configurar los canales de transmisión (ASCII, RTU y/o TCP) y establecer el flujo de mensaje entre estos a través de la configuración de un componente denominado “gateway”.
+
+
+===== Documentos aplicables y de referencia =====
+
+^ID ^ Título                                                              ^ Autor               ^
+| 1 | [[http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf|MODBUS Application Protocol Specification V1.1b]]                     | Modbus Organization |
+| 2 | [[http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf|MODBUS over serial line specification and implementation guide V1.0]] | Modbus Organization |
+| 3 | [[http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf| MODBUS Messaging on TCP/IP Implementation Guide V1.0b]]| Modbus Organization |
+
+
+===== Términos, definiciones y abreviaturas =====
+
+^ Acrónimos       ^ Descripción     ^
+| PDU | Unidad de Datos de Protocolo  |
+| ADU | Unidad de Datos de Aplicación |
+| RTU | Unidad Terminal Remota        |
+
+
+===== Descripción general de MODBUS =====
+
+Modbus es un protocolo del tipo Master/Slave, donde pueden utilizarse diferentes tipos de de formatos para enviar los mensajes a través del canal de transmisión.
+
+A nivel de aplicación podemos tener rol de Master, Slave o ambos. A nivel de transporte, los formatos más comunes son: MODBUS ASCII, MODBUS RTU y MODBUS TCP.
+
+
+==== Arquitectura estática ====
+
+Las especificaciones se dividen en cuatro componentes:
+  * Los dos primeros (ciaaModbus_slave y ciaaModbus_master) corresponden a la implementación del protocolo a nivel de aplicación según el documento: [[http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf|MODBUS Application Protocol Specification V1.1b]]
+  * El tercer componente (ciaaModbus_transport) corresponde a la implementación del protocolo a nivel de transporte según los documentos: [[http://www.modbus.org/docs/Modbus_over_serial_line_V1.pdf|MODBUS over serial line specification and implementation guide V1.0]] y [[http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf| MODBUS Messaging on TCP/IP Implementation Guide V1.0b]]
+  * El cuarto componente, denominado ciaaModbus_gateway es el encargado de gestionar el intercambio de mensaje entre los componentes anteriores.
+
+Modbus, puede ser utilizado como Slave, Master o Master-Slave, Esto quiere decir que según la necesidad de la aplicación, se pueden inicializar los componentes que se deseen. También puede utilizarse como conversor de protocolos, por ejemplo Modbus-ASCII a Modbus-TCP. 
+La aplicación sólo debe inicializar los distintos componentes que se deseen utilizar, configurar el gateway y finalmente llamar a la función ciaaModbus_gatewayMainTask() periódicamente para ejecutar las tareas del (los) gateway(s).
+
+Para el accesos a los distintos periféricos, Modbus utiliza la funciones ciaaPOSIX_read() y ciaaPOSIX_write() con los file descriptors que pasan en la inicialización de cada componente.
+
+Para coordinar el accesos concurrente de diferentes tareas, Modbus utiliza las funciones GetResource(MODBUSR) y ReleaseResource(MODBUSR) del sistema operativo.
+
+Finalmente, Modbus Master utiliza las funciones WaitEvent(MODBUSE) y ClearEvent(MODBUSE) para bloquear la tarea, hasta que finalice la comunicación (en caso de no utilizar callback).
+ 
+==== Arquitectura dinámica ====
+
+//<Descripción de la arquitectura dinámica. Descripción de las decisiones de diseño tomadas para satisfacer con las restricciones de tiempo real.>//
+
+
+==== Comportamiento ====
+
+//<Descripción del comportamiento del módulo.>//
+
+
+==== Interfaces externas ====
+
+//<Descripción de las interfaces externas, basada en un diagrama en bloques del sistema.>//
+
+
+===== Descripción detallada de los módulos =====
+
+//<Descripción detallada de cada componente de MODBUS. La descripción debería hacerse siguiendo una organización jerárquica, e identificando cada módulo en términos de://
+  * //<Identificador único del componente>// 
+  * //<Tipo: Clasificación del componente> //
+  * //<Requerimientos de modbus asociados>// 
+  * //<Función> //
+  * //<Subordinados>// 
+  * //<Dependencias>// 
+  * //<Interfaces>// 
+  * //<Recursos necesarios>// 
+  * //<Datos: Descripción de la estructura de los datos internos, por ejemplo, en términos de nombre, tipo, dimensión, relación con otros elementos, rango de valores posibles, valores iniciales.>// 
+
+==== ciaaModbus_slave ====
+
+== ID: ciaaModbus_slave ==
+
+== Tipo ==
+
+== Requerimientos ==
+
+== Función ==
+Este módulo es el encargado de proveer los servicios descriptos en ModbusApplicationProtocol. Para esto, se analizan las PDUs recibidas, y se invocan a las funciones “call backs” de la aplicación que ejecutan cada una de las funciones posibles del protocolo.
+
+== Subordinados ==
+
+== Dependencias ==
+
+== Interfaces ==
+<code c>
+extern int32_t ciaaModbus_slaveOpen(
+      ciaaModbus_slaveCmd_type *cmd);
+extern int32_t ciaaModbus_slaveClose(
+      int32_t hModbusSlave);
+</code>
+
+
+
+      
+== Recursos ==
+
+== Datos ==
+<code c>
+typedef uint16_t (*modbusSlave_processFuncMultipleRead)(
+      uint16_t start,
+      uint16_t quantity,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );
+</code>
+
+<code c>
+typedef void (*modbusSlave_processFuncSingleWrite)(
+      uint16_t start,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );
+</code>
+
+<code c>
+typedef void (*modbusSlave_processFuncMultipleWrite)(
+      uint16_t start,
+      uint16_t quantity,
+      uint8_t bytecount,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );
+</code>
+
+<code c>
+typedef void (*modbusSlave_processFuncMultipleReadWrite)(
+      uint16_t readStart,
+      uint16_t readQuantity,
+      uint16_t writeStart,
+      uint16_t writeQuantity,
+      uint8_t writeByteCount,
+      uint8_t * exceptioncode,
+      uint8_t * buf
+      );
+</code>
+
+<code c>      
+typedef struct
+{
+   modbusSlave_processFuncMultipleRead       cmd0x01ReadCoils;
+   modbusSlave_processFuncMultipleRead       cmd0x02ReadDiscrteInputs;
+   modbusSlave_processFuncMultipleRead       cmd0x03ReadHoldingReg;
+   modbusSlave_processFuncMultipleRead       cmd0x04ReadInputReg;
+
+   modbusSlave_processFuncSingleWrite        cmd0x05WriteSingleCoil;
+   modbusSlave_processFuncSingleWrite        cmd0x06WriteSingleRegister;
+
+   modbusSlave_processFuncMultipleWrite      cmd0x0FWriteMultipleCoils;
+   modbusSlave_processFuncMultipleWrite      cmd0x10WriteMultipleReg;
+   modbusSlave_processFuncMultipleReadWrite  cmd0x17ReadWriteMultipleReg;
+
+}ciaaModbus_slaveCmd_type;
+</code>
+
+
+==== ciaaModbus_master ====
+
+== ID: ciaaModbus_master ==
+
+== Tipo ==
+
+== Requerimientos ==
+
+== Función ==
+Este módulo permite al programa de aplicación, invocar los servicios descriptos en ModbusApplicationProtocol para que sean ejecutados en un slave deseado. El slave es identificado a través del número de identificación. 
+
+== Subordinados ==
+
+== Dependencias ==
+
+== Interfaces ==
+
+== Recursos ==
+
+== Datos ==
+
+
+==== ciaaModbus_transport ====
+
+== ID: ciaaModbus_transport ==
+
+== Tipo ==
+
+== Requerimientos ==
+
+== Función ==
+En este módulo se configuran los diferente formatos de transporte y se vinculan con un dispositivo o socket a travez del “file handler” indicado para que se envíen y reciban los mensajes a través de un medio físico determinado. Los formatos de transporte son: MODBUS ASCII, MODBUS RTU y MODBUS TCP. Los dos primeros utilizan puertos series y el tercero utiliza conexiones TCP. 
+
+== Subordinados ==
+ciaaModbus_ascii
+ciaaModbus_rtu
+ciaaModbus_tcp
+
+== Dependencias ==
+ciaaModbus_ascii
+ciaaModbus_rtu
+ciaaModbus_tcp
+
+== Interfaces ==
+
+== Recursos ==
+
+== Datos ==
+
+
+==== ciaaModbus_gateway ====
+
+== ID: ciaaModbus_gateway ==
+
+== Tipo ==
+
+== Requerimientos ==
+
+== Función ==
+Finalmente esté módulo es el encargado de direccionar los mensajes entrantes a los diferentes slaves que podemos instanciar. Los mensajes “entrantes” pueden venir desde un master externo o desde un master internos. Al arribar, se lee el número de identificación para buscar el destinatario de ese mensaje según la configuración establecida. Si no se encuentra coincidencia, se descarta el mensaje.
+
+== Subordinados ==
+ciaaModbus_slave
+ciaaModbus_master
+ciaaModbus_transport
+
+== Dependencias ==
+ciaaModbus_slave
+ciaaModbus_master
+ciaaModbus_transport
+
+== Interfaces ==
+
+== Recursos ==
+
+== Datos ==
+
+
+===== Matrices de trazabilidad =====
+
+//<Matrices de trazabilidad que demuestren que todos los requerimientos propuestos para MODBUS son cubiertos por los módulos propuestos en el presente diseño, y que todos los módulos que se proponen contribuyen a cubrir al menos alguno de los requerimientos de MODBUS.>//

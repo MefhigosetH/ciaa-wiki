@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>implementaciones:petroleo_y_gas</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="implementaciones,petroleo_y_gas"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=implementaciones:petroleo_y_gas&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="feed.php%3Fmode=list&amp;ns=implementaciones"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=implementaciones:petroleo_y_gas.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=implementaciones:petroleo_y_gas"/>
+<link rel="canonical" href="./doku.php%3Fid=implementaciones:petroleo_y_gas.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='implementaciones';var JSINFO = {"id":"implementaciones:petroleo_y_gas","namespace":"implementaciones","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="la_ciaa_en_la_industria_del_petroleo_y_gas">La CIAA en la industria del Petróleo y Gas</h1>
+<div class="level1">
+<p class="divalign-justify">Los siguientes son productos basados en la CIAA, desarrollados para ser utilizados en la industria del <strong>Petróleo y Gas</strong>.</p><!--divalign-->
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;La CIAA en la industria del Petr\u00f3leo y Gas&quot;,&quot;hid&quot;:&quot;la_ciaa_en_la_industria_del_petroleo_y_gas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-198&quot;} -->
+<h2 class="sectionedit2" id="antena_auto-orientable_vsat_para_campamentos_petroleros">Antena auto-orientable VSAT para campamentos petroleros</h2>
+<div class="level2">
+
+<p>
+<a href="http://www.vsatmotion.com/" class="media" target="_blank" title="http://www.vsatmotion.com/" rel="ugc nofollow noopener"><img src="lib/exe/fetch.php%3Fw=200&amp;tok=639a29&amp;media=implementaciones:vsat.png" class="mediaright" loading="lazy" alt="" width="200" /></a>
+</p>
+<p class="divalign-justify">La empresa <a href="http://www.vsatmotion.com/" class="urlextern" target="_blank" title="http://www.vsatmotion.com/" rel="ugc nofollow noopener">VSATMotion</a> se encuentra desarrollando una <strong>antena auto-orientable del tipo VSAT para enlaces de voz y datos para campamentos petroleros</strong> (perforación, WO, Pulling, Servicios Especiales).</p><!--divalign-->
+<p class="divalign-justify">Actualmente durante las perforaciones petroleras se utilizan antenas tipo VSAT fijas. Cada vez que los equipos de perforación se mueven a otro sitio, se debe enviar un técnico a mover la antena (esto a veces ocurre 2 o 3 veces al mes). Lo mismo sucede si se desalinea una antena. Los técnicos pueden tardar en resolver el problema un par de horas o varios días (según la disponibilidad de los técnicos y la locación de la antena), dejando los campamentos de perforación sin comunicación (la mayoría de las veces los sitios de perforación se encuentran a varios kilómetros de los centros urbanos).</p><!--divalign-->
+<p class="divalign-justify">La idea de desarrollar una antena auto-orientable surgió precisamente para solucionar los problemas antes mencionados y para sustituir importaciones, ya que las antenas auto-orientables en la actualidad se desarrollan en el extranjero.</p><!--divalign-->
+
+<p>
+<a href="lib/exe/detail.php%3Fid=implementaciones:petroleo_y_gas&amp;media=implementaciones:dsa7.png.html" class="media" title="implementaciones:dsa7.png"><img src="lib/exe/fetch.php%3Fw=250&amp;tok=64afb9&amp;media=implementaciones:dsa7.png" class="mediaright" loading="lazy" title="Antena auto-orientable VSAT" alt="Antena auto-orientable VSAT" width="250" /></a>
+</p>
+<p class="divalign-justify">Para este proyecto <strong>se utilizará la CIAA como electrónica central</strong> para controlar a lazo cerrado el movimiento de la antena. Básicamente se deben controlar los siguientes procesos:</p><!--divalign-->
+<ol>
+<li class="level1"><div class="li"> <strong>Despliegue de antena</strong>: Cuando se llega al sitio donde operará la antena, se debe desplegar el plato.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Apuntamiento grueso</strong>: A partir de sensores se determina la orientación actual de la antena y hacia dónde debe desplazarse tanto en azimuth como en elevación para apuntar hacia el satélite. Una vez determinado el movimiento se procede a ejecutarlo (a lazo cerrado).</div>
+</li>
+<li class="level1"><div class="li"> <strong>Apuntamiento fino</strong>: Una vez que el plato de la antena está orientado, se habilita el sensor que mide el nivel de atenuación de la señal recibida del satélite y se ejecuta un ajuste de la orientación del plato para maximizar el nivel de intensidad de la señal.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Repliegue de antena</strong>: Antes de mover la antena se debe replegar el plato.</div>
+</li>
+</ol>
+
+<p>
+La siguiente es una demostración real de la antena durante la exposición <a href="http://www.oge-patagonia.com.ar" class="urlextern" target="_blank" title="http://www.oge-patagonia.com.ar" rel="ugc nofollow noopener">Oil&amp;Gas Patagonia 2014</a>:
+-iZv62qUZPE
+</p>
+<hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Antena auto-orientable VSAT para campamentos petroleros&quot;,&quot;hid&quot;:&quot;antena_auto-orientable_vsat_para_campamentos_petroleros&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;199-&quot;} --></div>
+</body>
+</html>

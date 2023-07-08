@@ -1,0 +1,99 @@
+====== EDU-CIAA-NXP ======
+
+###
+La EDU-CIAA-NXP es una **versión de bajo costo de la CIAA-NXP pensada para la enseñanza universitaria, terciaria y secundaria**.
+###
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp.png|}}
+
+
+=== Información adicional sobre el desarrollo de la EDU-CIAA-NXP ===
+
+        * [[EDU-CIAA-NXP:Requerimientos | Propósito, alcance, objetivos y requerimientos EDU-CIAA-NXP. ]]
+        * [[EDU-CIAA-NXP:Desarrolladores| Desarrolladores, colaboradores y gestión de proyecto de la EDU-CIAA-NXP]]
+        * [[EDU-CIAA-NXP:FotosEnsablaje|Fotos del proceso de ensamblaje de la EDU-CIAA-NXP]]
+
+
+===== Bloques funcionales ===== 
+La EDU-CIAA está basada en la CIAA-NXP, por ser la primera versión de la CIAA que se encuentra disponible.
+Por lo tanto su microcontrolador es también el LPC4337 (dual core ARM Cortex-M4F y Cortex-M0). 
+
+Sin embargo, con el objetivo de abaratar costos y reducir su complejidad la EDU-CIAA incorpora sólo algunas de las funcionalidades de la CIAA.
+
+A su vez, con el fin de permitir el desarrollo de algunas prácticas sencillas sin que sea necesario recurrir a hardware adicional, incluye además algunos recursos que no están presentes en la CIAA.
+
+
+==== Diagrama en bloques de la plataforma ====
+En la siguiente figura se observa un diagrama en bloques de la EDU-CIAA basada en LPC4337:
+{{:versiones:educiaav1_0:hardware:edu_ciaa_nxp:diagrama_en_bloques.jpg?400|}}
+
+
+La EDU-CIAA cuenta con los siguientes módulos:
+   * 2 puertos micro-USB (uno para aplicaciones y debugging, otro para alimentación).
+   * 4 salidas digitales implementadas con leds RGB.
+   * 4 entradas digitales con pulsadores.
+   * 1 puerto de comunicaciones RS 485 con bornera.
+   * 2 conectores de expansión:
+      * P1: 
+         * 3 entradas analógicas (ADC0_1,2y3),
+         * 1 salida analógica (DAC0),
+         * 1 puerto I2C,
+         * 1 puerto asincrónico full duplex (para RS-232).
+         * 1 puerto CAN,
+         * 1 conexión para un teclado de 3x4,
+
+      * P2:
+         * 1 puerto Ethernet,
+         * 1 puerto SPI,
+         * 1 puerto para Display LCD con 4 bits de datos, Enable y RS.
+         * 9 pines genéricos de I/O.
+
+===== Diseño del diagrama esquemático ====
+
+El esquemático de la EDU-CIAA en su versión NXP se realizó utilizando KICAD y está diponible en este link:
+{{:desarrollo:edu-ciaa:edu-ciaa-nxp:edu-ciaa-nxp_color.pdf|Descargar esquemáticos EDU-CIAA}}
+
+Consultar el [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/Doc/EDU_CIAA_Pinout_Rev_1.0.ods | Pinout de la EDU-CIAA-NXP]]
+
+Consultar la asignación de pines de la EDU-CIAA-NXP en PDF, con información del uso de los mismos en el microcontrolador: {{:desarrollo:edu-ciaa:edu-ciaa-nxp_pinout_a4_v4r2_es.pdf|Asignación de pines}}
+===== Listado de materiales =====
+
+
+* Listado de materiales mantenido a mano: [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/Doc/edu-ciaa-bom_x100_v2.4.ods | edu-ciaa-bom_x100_v2.4.ods]]
+
+* Listado de materiales exportado de Kicad en formato texto simple: [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/edu-ciaa-nxp.lst | edu-ciaa-nxp.lst]]
+
+* Listado de materiales exportado de Kicad en formato .csv (comma-separated values): [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/Doc/edu-ciaa-nxp.csv | edu-ciaa-nxp.csv]]
+
+* Listado de materiales generado con el script perl  [[https://github.com/ciaa/Hardware/blob/master/PCB/FSL/kicad_scripts/bom_opt.pl|bom_opt.pl]] que agrupa por valores: [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/Doc/edu-ciaa-nxp-BoM.csv | edu-ciaa-nxp-BoM.csv]]
+
+Este último listado se genera de la siguiente forma:
+      $ bom_opt.pl  --input=edu-ciaa-nxp.csv --pcb=edu-ciaa-nxp.kicad_pcb
+
+===== Placa de Circuito Impreso (PCB) =====
+
+   * Dimensiones del circuito: Ver [[https://github.com/ciaa/Hardware/blob/master/PCB/EDU-NXP/Doc/PCB.pdf | Dimensiones de la EDU-CIAA-NXP]]
+   * Fabricación: [[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-NXP/Gerbers | Gerbers EDU-CIAA-FSL]]
+
+El circuito impreso de la EDU-CIAA-NXP está desarrollado en Kicad. La documentación completa y material relacionado al PCB de la EDU-CIAA-NXP se puede obtener del \\
+[[https://github.com/ciaa/Hardware/tree/master/PCB/EDU-NXP|Repositorio de hardware en GitHub.]]
+
+Para bajar el repositorio desde la línea de comandos (Linux/Unix):
+     $ git clone https://github.com/ciaa/Hardware/
+     $ cd  Hardware/PCB/EDU-NXP/
+
+-------
+
+{{page>repo:descripcion:ponchos&nofooter}}
+
+-------
+
+
+===== Desarrollo del Entorno de Desarrollo Integrado (IDE) ===== 
+
+Pronto se publicará aquí el IDE de la EDU-CIAA.
+
+===== Micropython corriendo en la EDU-CIAA ===== 
+
+El proyecto Micropython permite ejecutar python en microcontroladores sin grandes requerimientos de RAM ni memoria de programa. 
+
+Se implementó el soporte para la EDU-CIAA, para conocer más acerca del proyecto ingresá al siguiente enlace:[[desarrollo:edu-ciaa:edu-ciaa-nxp:python|desarrollo:edu-ciaa:edu-ciaa-nxp:python]]

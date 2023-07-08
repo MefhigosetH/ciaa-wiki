@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> desarrollo:hardware:interfaces_comunes</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:06:00+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:can&amp;rev=1411504112&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:entradas_analogicas&amp;rev=1411482214&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion&amp;rev=1467830775&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:rs232&amp;rev=1411504152&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salida_analogica&amp;rev=1411482218&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salidas_rele&amp;rev=1411408011&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:usb&amp;rev=1411560511&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:can&amp;rev=1411504112&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-23T20:28:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:can</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:can&amp;rev=1411504112&amp;do=diff</link>
+        <description>Interfaz CAN
+
+Diagrama esquemático
+
+
+
+Características
+
+	*  Transceptor compatible con el estándar ISO11898.
+	*  Estado recesivo mediante V-Split (mejoras en EMC) 
+	*  Transceptor de Alta Velocidad, hasta 1 Mbit/s (High-Speed).
+	*  Protección contra descargas electrostáticas (ESD).</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:entradas_analogicas&amp;rev=1411482214&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-23T14:23:34+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:entradas_analogicas</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:entradas_analogicas&amp;rev=1411482214&amp;do=diff</link>
+        <description>Entradas Analógicas
+
+Esquemático
+
+
+
+Características
+
+	*  4 Entradas analógicas configurables por Corriente/Tensión.
+	*  Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia de carga 237 Ohm.
+	*  Control por tensión 0-10V, impedancia de entrada 45 KOhm.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion&amp;rev=1467830775&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-06T18:46:15+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:fuente_de_alimentacion&amp;rev=1467830775&amp;do=diff</link>
+        <description>Fuente de Alimentación
+
+Diagrama esquemático
+
+
+
+Descripción
+
+La fuente de alimentación de la CIAA (v1.0) fue concebida para lograr el compromiso entre un alto rendimiento y un amplio rango de tensión de entrada. Por tal razón se optó por una fuente switching con topología reductora (buck o step-down) para obtener una primer tensión de 5V con capacidad de 3A, regulados a partir de un rango típico de entre 12VDC y 30VDC. Se utilizó el circuito integrado monolítico</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:rs232&amp;rev=1411504152&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-23T20:29:12+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:rs232</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:rs232&amp;rev=1411504152&amp;do=diff</link>
+        <description>Interfaz RS232
+
+Diagrama esquemático
+
+
+
+Características
+
+	*  Basado en el estándar EIA/TIA-232.
+	*  Data Rate máximo mayor a 250Kbps.
+	*  Protección contra descargas electrostáticas (ESD).
+	*  Filtrado con Bead de Ferrite.
+	*  Control de Flujo por Hardware RTS/CTS</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salida_analogica&amp;rev=1411482218&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-23T14:23:38+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:salida_analogica</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salida_analogica&amp;rev=1411482218&amp;do=diff</link>
+        <description>Salida Analógica
+
+Esquemático
+
+
+
+Características
+
+	*  1 Salida analógica configurable como Corriente/Tensión.
+	*  Salida de tensión 0-10V (extendido a 10,5V) con impedancia de carga mínima de 3KOhm.
+	*  Transmisor Activo para Lazo de corriente 4-20mA (con rango extendido 0-22mA), impedancia máx 1KOhm.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salidas_rele&amp;rev=1411408011&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-22T17:46:51+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:salidas_rele</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:salidas_rele&amp;rev=1411408011&amp;do=diff</link>
+        <description>Salidas a Relé
+
+Esquemático
+
+
+
+Características
+
+	*  4 Salidas con Relay  DPDT
+	*  Seleccionables NA / NC por 4 bornera, mediante switch en PCB
+	*  Capacidad de corriente para carga resistiva: 0,50A @ 125 VAC, 2A @ 30 VDC
+	*  LED testigo en cada salida.</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:usb&amp;rev=1411560511&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-09-24T12:08:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>desarrollo:hardware:interfaces_comunes:usb</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:hardware:interfaces_comunes:usb&amp;rev=1411560511&amp;do=diff</link>
+        <description>Interfaz USB On-The-Go
+
+Diagrama esquemático
+
+
+
+Componentes principales
+
+	*  Control de Vbus y limitación de corriente: MIC2025
+	*  TVS (protección contra transitorios): PRTR5V0U2X
+	*  Choque RF de modo común: DLW21HN900SQ2
+	*  Conector microUSB tipo AB: ZX62-AB-5PA(11)</description>
+    </item>
+</rdf:RDF>

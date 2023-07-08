@@ -1,0 +1,59 @@
+======= Arquitectura dinámica =======
+
+Esta página ejemplifica la estructura dinámica del ciaa Firmware. La estructura se basa en la arquitectura presentada en [[arq_estatica_fw|Arquitectura del Firmware]].
+
+====== Inicialización ======
+
+La primera figura muestra como se inicia el código de la ciaaFirmware.
+
+{{ lifecycle.png?direct |}}
+
+====== Acceso a un dispositivo ======
+
+ciaaFirmware implementa un sistema similar a POSIX, claro limitado teniendo en cuenta los recursos disponibles en un dispositivo embebido.
+
+===== Abrir un dispositivo =====
+
+Abrir un archivo/dispositivo se realiza con la función open:
+
+{{ open.png?direct |}}
+
+===== Acceso =====
+
+EL Firmware permite 2 tipos de acceso a los dispositivos, sincrónico y asincrónico. Cada forma de acceder a los dispositivos tiene sus ventajas y desventajas.
+  * **Sincrónico**: la aplicación que llama a la escritura o lectura es interrumpida hasta completar la operación.
+  * **Asincrónico**: la aplicación que llama a la escritura o lectura retoma el control inmediatamente y es informada por una [[callback|callback]] sobre el resultado de la operación.
+
+El sistema **Sincrónico** es más sencillo de implementar, pero requiere de un buffer adicional en la capa de Interfaz. El sistema **Asincrónico** permite a la aplicación recibir los datos y la notificación de ellos en tiempo real.
+
+==== Acceso Sincrónico ====
+
+El acceso sincrónico es el más sencillo de implementar para una aplicación. Se llama a las funciones read o write y el programa es bloqueado hasta recibir datos o hasta haber enviado los datos.
+
+=== Leer ===
+
+Esquema de lectura de datos de forma sincrónica
+
+{{ readblocking.png?direct |}}
+
+=== Escribir ===
+
+Esquema de escritura de datos de forma sincrónica
+
+{{ writeblocking.png?direct |}}
+
+==== Acceso Asincrónico ====
+
+El acceso asincrónico permiten a una aplicación iniciar una lectura y escritura y que el sistema le devuelva el control inmediatamente. De esta forma podrá realizar otras tareas. Cuando la operación de lectura y/o escritura es terminada es informada mediante un [[callback|Callback]]
+
+=== Leer ===
+
+Lectura de datos de forma asincrónica.
+
+{{ readnonblocking.png?direct |}}
+
+=== Escribir ===
+
+Escritura de datos de forma asincrónica.
+
+{{ writenonblocking.png?direct |}}

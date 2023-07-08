@@ -1,0 +1,41 @@
+====== CIAA-FSL: Interfaz Ethernet ======
+
+===== Diagrama Esquemático =====
+
+{{03-ethernet.png}}
+
+===== Características =====
+
+  * Transceiver: [[http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf | Micrel KSZ8041TLI]]
+    * Compatible con el estándar IEEE 802.3u.
+    * Full-Duplex 10Mbps/100Mbps (10Base-T/100Base-TX).
+    * Diseño CMOS de bajo consumo, menor a 180 mW.
+    * Interfaz MII/RMII/SMII hacia la CPU.
+    * Salidas programables para LEDs de link, actividad y velocidad.
+  * Jack RJ45: [[http://productfinder.pulseeng.com/products/datasheets/J403.pdf | Pulse J0011D01BNL]]
+    * Transformador y choque de modo común integrados.
+    * 2 leds (verde y amarillo).
+  * Oscilador de 25 MHz: [[http://www.foxonline.com/pdfs/FXO_HC73.pdf | Fox Electronics FXO-HC735-25]]
+  * Clock Buffer: [[http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF | ON Semiconductor NB2304AI2]]
+    * Delay cero entre entrada y salida
+    * Salida 2xREF
+
+===== Descripción =====
+
+  * El modo de conexión utilizado entre el K60 y el transceiver es RMII, para el cual es necesario un clock de 50 MHz.
+  * Se utiliza un oscilador de 25 MHz conectado a un buffer con dos salidas con el doble de frecuencia que la de referencia, una se conecta al transceiver y la otra al K60.
+  * El shield del conector RJ45 se conecta al chassis general de la placa que a su vez está conectado al terminal de puesta a tierra.
+  * El shield del conector RJ45 está conectado a la masa del circuito a través de un capacitor de 100 nF y un resistor de 1 Mohm. Este circuito permite un camino controlado para la descarga electrostática (ESD), captada por el shield, hacia GND. Como recomienda la Nota de Texas (citada abajo), estos componentes pueden cambiarse por un ferrite o un resistor de 0 ohm, según los resultados del test de EMC.
+
+===== Referencias =====
+
+  * [[http://www.micrel.com/_PDF/Ethernet/app-notes/an-111.pdf | Micrel General PCB Design and Layout Guidelines]]
+  * [[http://ww1.microchip.com/downloads/en/AppNotes/en562748.pdf | SMSC Ethernet Physical Layer Layout Guidelines]]
+  * [[http://www.ti.com/lit/an/snla107a/snla107a.pdf | Texas Instrument Reducing Radiated Emissions in Ethernet 10/100 LAN]]
+
+===== Datasheets de componentes importantes =====
+
+  * [[http://www.micrel.com/_PDF/Ethernet/datasheets/KSZ8041TL-FTL.pdf | Micrel KSZ8041TLI]]
+  * [[http://productfinder.pulseeng.com/products/datasheets/J403.pdf | Pulse J0011D01BNL]]
+  * [[http://www.onsemi.com/pub_link/Collateral/NB2304A-D.PDF | ON Semiconductor NB2304AI2]]
+  * [[http://www.foxonline.com/pdfs/FXO_HC73.pdf | Fox Electronics FXO-HC735-25]]

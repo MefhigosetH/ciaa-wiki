@@ -1,0 +1,105 @@
+====== Linux en la CIAA ======
+
+###
+El Proyecto CIAA cuenta con un equipo de desarrollo dedicado a preparar Linux para correr en las distintas versiones de CIAA, empezando por la CIAA-NXP.
+###
+
+===== ¿Cómo participar del desarrollo? =====
+
+###
+Sólo es necesario unirse al grupo [[https://groups.google.com/forum/#!forum/ciaa-linux|ciaa-linux@googlegroups.com]], presentarse y ofrecer su ayuda. ¡Siempre hay cosas para hacer!
+###
+
+===== Linux en la CIAA-NXP =====
+
+==== ¿Es posible correr Linux en la CIAA-NXP? ====
+###
+Usualmente los sistemas embebidos Linux, se asocian a poderosos SoC, mucha RAM y mucha memoria de almacenamiento. Si bien Linux es un sistema operativo pesado, debido a su inmensa cantidad de features, también es altamente configurable. Una correcta configuración permite correr un sistema Linux en un microcontrolador como el que utiliza la CIAA-NXP.
+###
+ 
+==== ¿Es posible correr Linux en la EDU-CIAA-NXP ? ====
+###
+No. La EDU-CIAA carece de suficiente RAM y la flash. Tampoco es factible diseñar un poncho para la EDU-CIAA con estas memorias porque los pines del controlador de memoria no fueron ruteados.
+###
+
+==== ¿Es posible correr $mi_software_favorito en la CIAA NXP Linux ? ====
+###
+Probablemente no. Además de la falta de RAM, la plataforma tiene otras limitaciones inherentes
+a los sistemas sin MMU. Por ejemplo, no hay soporte para un fork() verdadero, y tampoco
+hay soporte para threads.
+
+Esto significa que muchas aplicaciones y librerías (Apache, Python, OpenCV, etc) no están soportadas.
+###
+
+
+==== Alcances y limitaciones ====
+###
+La CIAA en su versión NXP tiene disponible un firmware Linux basado en Buildroot. Actualmente, varios periféricos están funcionando y falta probar varios otros. Aunque muchas pruebas restan por hacer, tenemos una idea aproximada de las capacidades del sistema.
+###
+
+###
+Dado que el sistema Linux+Buildroot está basado completamente en software  [[http://en.wikipedia.org/wiki/Vanilla_software|vainilla]] (i.e. sin grandes modificaciones ni parches especiales) tiene todas las posibilidades de cualquier sistema embebido Linux. El limitante no es el software, sino el hardware.
+###
+
+###
+El sistema es capaz de hacer todo lo que sea posible para un LPC4337 con un CPU Cortex-M4 @ 204 MHz, una SDRAM de 8 MiB y una memoria flash de 16 MiB.
+
+Para más información acerca de las limitaciones ver https://speakerdeck.com/ezequielgarcia/linux
+###
+==== ¿Entonces ya está funcionando? ====
+
+**¡Linux ya está corriendo en la CIAA-NXP!** Enterate de los detalles entrando [[.:linux:linux_en_ciaa-nxp|Linux en CIAA-NXP]].
+
+
+===== Es un microcontrolador, ¿no debería usarse uClinux ? =====
+
+No.
+
+###
+La CIAA-NXP no usa ningún componente del proyecto uClinux. Por el contrario, es el **mismo** kernel que corre en laptops, servidores, y demás sistemas. El kernel Linux, y todos los demás paquetes se configuran de manera específica para poder correr en la CIAA-NXP, sin que sea necesario ningún otro tipo de ajuste.
+###
+
+===== ¿Qué diferencia existe entre uClinux y Linux? =====
+
+Si bien la literatura existente utiliza los términos uClinux y Linux en forma ambigua, estos tienen solamente un significado correcto.
+
+"Linux" es el kernel del sistema, que se puede obtener del sitio web [[https://www.kernel.org/|oficial]].
+El kernel Linux es altamente configurable, lo que permite soportar una enorme variedad de sistemas distintos. Desde poderosos servidores a sistemas embebidos muy reducidos, basados en microcontroladores sin MMU, pasando por todo tipo de arquitecturas y plataformas, ya sean ARM, MIPS o soft-cores basados en FPGA.
+
+"uClinux" es una distribución basada en código fuente. Tiene por objetivo proveer un conjunto completo de paquetes (junto con el Linux kernel) y está orientada a sistemas embebidos sin MMU. Para tal fin, todos los paquetes son modificados con parches ad-hoc para correr de forma óptima en un sistema sin MMU.
+
+Se puede visitar su sitio web en http://www.uclinux.org/.
+
+En realidad, la comparación correcta sería entre Buildroot y uClinux, dado que ambas son distribuciones basadas en código fuente.
+
+===== ¿Por qué el port CIAA NXP Linux está basado en Buildroot? =====
+
+[[http://buildroot.org/|Buildroot]] presenta un número de características ideales para este tipo de port:
+
+  * Es esencialmente un conjunto ordenado de Makefiles, y por lo tanto el repositorio es liviano.
+  * Es muy simple de modificar, solamente es necesario conocer el lenguaje [[http://www.gnu.org/software/make/|Make]].
+  * Tiene soporte para sistemas sin MMU.
+  * Está perfectamente [[http://nightly.buildroot.org/manual.html|documentado]].
+  * Tiene un desarrollo muy activo y una comunidad saludable, lo qué significa buen soporte.
+
+===== Entonces, ¿no hay forma de correr Linux en sistemas con poca RAM? =====
+
+El stack de Linux tradicional, usando el kernel oficial, necesita generalmente bastante RAM.
+Sin embargo, han existido **y existen** esfuerzos para reducir o eliminar este requerimiento.
+
+En particular ver:
+
+  * [[http://lwn.net/Articles/597742/| Linux CAN be made to run small]]
+  * [[http://elinux.org/images/5/54/Tom.zanussi-elc2014.pdf|microYocto and the Internet of Tiny]]
+  * [[http://elinux.org/images/c/ca/Spreading.pdf|Spreading the disease: Linux on microcontrollers]]
+  * [[http://elinux.org/Linux_Tiny|Linux Tiny]]
+
+Actualmente, ninguna de estas técnicas han sido aplicadas al sistema CIAA NXP Linux. ¡Cualquiera está invitado a hacer experimentos con esto! (aunque hay que tener en cuenta que este tipo de tareas requiere algo de experiencia).
+
+===== ¿Cómo instalar Linux en la CIAA NXP? =====
+
+[[.:linux:linux_en_ciaa-nxp#como_cargar_linux_en_la_ciaa-nxp|Aquí]] se encuentra una guía detallada para la compilación y la instalación.
+
+===== ¿Dónde están en los fuentes? =====
+
+En el repositorio oficial del proyecto CIAA se encuentran los fuentes que componen las tres piezas del port Linux: [[https://github.com/ciaa/u-boot|U-Boot]], [[https://github.com/ciaa/linux|Linux]] y [[https://github.com/ciaa/buildroot|Buildroot]].

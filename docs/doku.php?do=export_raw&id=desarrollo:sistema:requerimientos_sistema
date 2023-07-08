@@ -1,0 +1,51 @@
+====== Requerimientos de Ingeniería de Sistema de la CIAA ======
+
+Los siguientes son los requerimientos del área de Ingeniería de Sistema del Proyecto CIAA.
+
+//Nota: Esta página se encuentra en construcción.//
+
+
+===== Gestión del desarrollo =====
+----
+== CIAA_SIS_001==
+Para cada rama de desarrollo de la CIAA se deberá establecer un equipo de coordinación conformado por un Responsable, y uno o más Sub-Responsables.
+----
+== CIAA_SIS_002==
+Para cada rama de desarrollo de la CIAA se deberá establecer un plan de trabajo con objetivos, tareas y cronograma tentativo de ejecución.
+----
+== CIAA_SIS_003==
+Para cada tarea identificada se deberá establecer uno o más responsables a cargo de su ejecución.
+----
+== CIAA_SIS_004==
+Cuando no exista responsable para una tarea, el equipo de coordinación correspondiente deberá difundir una convocatoria para cubrir la tarea.
+----
+
+===== Documentación =====
+
+----
+== CIAA_SIS_005==
+La principal herramienta de documentación es la página web de tipo Dokuwiki, de edición colaborativa.
+----
+== CIAA_SIS_006==
+Toda aquella documentación que se haya elaborado en un soporte o formato distinto al establecido en [[.requerimientos_sistema#CIAA_SIS_005]] deberá incorporarse a la página web.
+----
+== CIAA_SIS_007==
+Cada equipo de desarrollo es responsable de elaborar y mantener actualizada la documentación de su rama de desarrollo.
+----
+== CIAA_SIS_008==
+Deberá existir una herramienta para exportar documentación en formato portable PDF.
+----
+
+===== Vinculación =====
+----
+== CIAA_SIS_009==
+###
+La incorporación de un nuevo **Grupo de trabajo** al Proyecto CIAA se realizará una vez que el grupo en cuestión haya realizado un aporte concreto (identificable y medible) a alguna de las áreas del proyecto. 
+###
+###
+Nota: Todas aquellas intenciones de aporte podrán ser registradas a discreción por los responsables de las distintas áreas de trabajo, pero la formalización como nuevo Grupo de trabajo se realizará al concretarse el aporte ofrecido.
+###
+----
+== CIAA_SIS_010==
+Los Grupos de trabajo quedarán registrados en la página web destinada para tal fin: [[proyecto:grupos_de_trabajo|Grupos de trabajo]].
+----

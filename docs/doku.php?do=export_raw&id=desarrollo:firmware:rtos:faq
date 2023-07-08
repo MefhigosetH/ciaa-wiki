@@ -1,0 +1,17 @@
+?????? FAQ: OSEK ??????
+
+????? El RTOS no compila y dice que falta un archivo *_Cfg.h ?????
+
+Estos archivos son generados en base a la configuración OIL. Debe recordar de correr
+<code>
+make generate
+</code>
+o en su defecto con un clean previo haciendo
+<code>
+make clean_generate
+</code>
+para que estos archivos sean generados.
+
+????? ¿Qué es OIL? ?????
+
+OIL es OSEK Implementation Language, es un lenguaje de configuración para indicar al RTOS cuántas tareas hay, qué prioridades tienen, etc. Es parte del estándar. 

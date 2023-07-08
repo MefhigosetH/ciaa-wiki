@@ -1,0 +1,26 @@
+====== OpenOCD ======
+
+OpenOCD (Open On Chip Debugger) es un tool que se puede utilizar para debuggear y ejecutar paso a paso un programa sobre el HW.
+
+La versión de OpenOCD testeada y funcional de la CIAA es la 0.9.0: [[http://sourceforge.net/projects/openocd/files/openocd/0.9.0/|OpenOCD 0.9.0]]
+
+===== Instalación =====
+
+==== Instalación de libusb en Ubuntu ====
+
+Es necesario antes de correr el configure instalar libusb. Esto depende del sistema que se este utilizando.
+
+<code>
+sudo apt-get install libusb-1.0-0-dev
+</code>
+
+==== Instalacioón de OpenOCD ====
+
+<code>
+$ ./configure --enable-maintainer-mode --disable-werror --enable-ftdi 
+$ make
+$ sudo make install
+</code>
+
+
+

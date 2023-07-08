@@ -1,0 +1,33 @@
+====== Otras opciones analizadas ======
+Dentro de las propuestas que se expusieron en el grupo ciaa-hardware@googlegroups.com, están las que se listan a continuación. Todas fueron descartadas por diferentes motivos que se intentan explicar aquí.
+
+===== Epiphany Multicore Coprocessor (Adapteva) =====
+
+Otra de las opciones analizadas es utilizar un SoC + FPGA + n * Coprocessors.
+
+[[http://www.adapteva.com/epiphanyiii | Epiphany-III 16-core Microprocessor]]
+
+==== Desventajas ====
+  * Dependencia absoluta de Adapteva, no se pueden comprar en ningún distribuidor.
+  * En este momento (2015), no se consiguen los chips ni en su página (dice sold out). 
+  * Procesadores muy caros (USD 600).
+
+===== MIPS Processor (Warrior o Aptiv) =====
+
+[[http://www.imgtec.com/mips/warrior | Warrior Cores]]
+
+[[http://www.imgtec.com/mips/aptiv | Aptiv Cores]]
+
+==== Desventajas ====
+  * En caso de querer implementar el IP core en silicio, habría que afrontar costos altísimos e imposibles.
+  * En caso de querer implementarlo en FPGA, se necesitaría una FPGA de gran tamaño y alto costo y la performance obtenida sería mucho menor a la de un SoC físico. 
+  * Tecnologías propietarias, de alto costo y difíciles de adquirir.
+
+===== GPU NVIDIA o AMD Radeon =====
+
+Se habló de las desventajas de un diseño similar al siguiente: [[http://www.connecttech.com/pdf/XGG001-Xtreme-GPU.pdf | Xtreme/GPU Graphics Processing Unit]].
+
+==== Desventajas ====
+  * Dificultad para adquirir chips Nvidia o AMD.
+  * Drivers propietarios.
+  * Documentación difícil de conseguir.

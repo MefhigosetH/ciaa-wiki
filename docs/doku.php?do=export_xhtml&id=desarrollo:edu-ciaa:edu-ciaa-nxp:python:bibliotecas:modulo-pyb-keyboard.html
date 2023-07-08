@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-keyboard"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-keyboard","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h1 class="sectionedit1" id="soporte_teclado_matricialclase_keyboard">Soporte Teclado matricial: Clase Keyboard</h1>
+<div class="level1">
+<pre class="code">import pyb
+
+keyboard = pyb.Keyboard(4,4) #4 rows, 4 columns
+print(keyboard)
+
+while True:
+  key = keyboard.get_char()
+  print(&quot;key:&quot;+str(key))</pre>
+
+<p>
+El constructor recibe la cantidad de filas y columnas que se sensan. El método “get_char” se quedará esperando que se presione una tecla, se devolverá un byte en donde los 4 bits de más peso corresponden con el número de fila y los 4 bits de menor peso corresponden con el número de columna. También puede utilizarse el método “get_matrix” el cual no es bloqueante y devolverá 0xFF si ninguna tecla es presionada.
+</p>
+
+<p>
+Los pines que su utilizan para conectar el teclado son los marcados con los siguientes nombres:
+</p>
+<ul>
+<li class="level1"><div class="li"> T_FIL0</div>
+</li>
+<li class="level1"><div class="li"> T_FIL1</div>
+</li>
+<li class="level1"><div class="li"> T_FIL2</div>
+</li>
+<li class="level1"><div class="li"> T_FIL3</div>
+</li>
+<li class="level1"><div class="li"> T_COL0</div>
+</li>
+<li class="level1"><div class="li"> T_COL1</div>
+</li>
+<li class="level1"><div class="li"> T_COL2</div>
+</li>
+<li class="level1"><div class="li"> GPIO8 (T_COL_3)</div>
+</li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>

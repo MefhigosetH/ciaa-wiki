@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,edu-ciaa,edu-ciaa-nxp,python,bibliotecas,modulo-pyb-dac"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas';var JSINFO = {"id":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac","namespace":"desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac.html#soporte_dacclase_dac">Soporte DAC: Clase DAC</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac.html#constructor">Constructor</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:edu-ciaa:edu-ciaa-nxp:python:bibliotecas:modulo-pyb-dac.html#metodos">Métodos</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="soporte_dacclase_dac">Soporte DAC: Clase DAC</h1>
+<div class="level1">
+
+<p>
+La clase DAC permitirá crear objetos que representan la salida analógica de la placa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Soporte DAC: Clase DAC&quot;,&quot;hid&quot;:&quot;soporte_dacclase_dac&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-127&quot;} -->
+<h2 class="sectionedit2" id="constructor">Constructor</h2>
+<div class="level2">
+
+<p>
+La clase posee un constructor que recibe un solo argumento, este argumento es el número de salida analógica que controlará. Solo existe una salida, por lo que el valor que debe pasarse siempre es 1.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Constructor&quot;,&quot;hid&quot;:&quot;constructor&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;128-355&quot;} -->
+<h2 class="sectionedit3" id="metodos">Métodos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> write(val) : Escribe el valor en cuentas (0 a 1023) en la salida con un fondo de escala de 3.3V</div>
+</li>
+<li class="level1"><div class="li"> noise(f): Genera una señal de ruido pseudo aleatorio de 256 muestras a la frecuencia especificada (de 1 a 400000)</div>
+</li>
+<li class="level1"><div class="li"> triangle(f): Genera una señal triangular de 256 muestras a la frecuencia especificada (de 1 a 400000)</div>
+</li>
+<li class="level1"><div class="li"> write_timed(data,freq,mode): Genera una señal utilizando como muestras el array de datos pasado como argumento (data) a la frecuencia dada (freq de 1 a 400000) utilizando DMA. El argumento mode puede ser pyb.DAC.NORMAL (solo genera la señal una vez) o pyb.DAC.CIRCULAR (al terminar vuelve a empezar)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;M\u00e9todos&quot;,&quot;hid&quot;:&quot;metodos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;356-1010&quot;} -->
+<h3 class="sectionedit4" id="ejemplo_generacion_de_una_senal_senoidal">Ejemplo generación de una señal senoidal</h3>
+<div class="level3">
+<pre class="code">import pyb
+import math
+
+dac = pyb.DAC(1)
+
+# sine
+buf = bytearray(200) #100 samples. 2 bytes per sample
+j=0
+for i in range (0,len(buf)/2):
+        v = 512 + int(511 * math.sin(2 * math.pi * i / (len(buf)/2) ) )
+        buf[j+1] = (v &gt;&gt;  8) &amp; 0xff
+        buf[j] = v &amp; 0xff
+        j=j+2
+
+# output the sine-wave at 400Hz
+print(&quot;sine created&quot;)
+
+dac.write_timed(buf, 400*(int(len(buf)/2)), mode=pyb.DAC.CIRCULAR)
+
+while True:
+        pyb.delay(1000)</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ejemplo generaci\u00f3n de una se\u00f1al senoidal&quot;,&quot;hid&quot;:&quot;ejemplo_generacion_de_una_senal_senoidal&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1011-&quot;} --></div>
+</body>
+</html>

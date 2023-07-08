@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> tline</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:29:49+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=tline:releases_de_ciaa-firmware&amp;rev=1425417194&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=tline:releases_de_ciaa-firmware&amp;rev=1425417194&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-03T21:13:14+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>tline:releases_de_ciaa-firmware</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=tline:releases_de_ciaa-firmware&amp;rev=1425417194&amp;do=diff</link>
+        <description>/*
+Description
+
+Indem Sie diese Seite bearbeiten, können Sie neue Events hinzufügen oder entfernen.
+
+Sie können hier auch das Aussehen und die verschiedenen Bänder konfigurieren.
+
+Diese Timeline kann als Vorlage für andere Timelines dienen.
+configuration</description>
+    </item>
+</rdf:RDF>

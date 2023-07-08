@@ -1,0 +1,25 @@
+====== Compilando por primera vez ======
+
+El CIAA Firmware utiliza [[http://de.wikipedia.org/wiki/GNU_Make|GNU Make]] para compilar. Hay que perderle el miedo a la linea de comandos y al Make. :)
+
+Por supuesto antes de poder compilar deben haber instalado los tools necesarios:[[instalacion_sw|Instalación del Firmware]]
+
+Les recomendamos leer [[:docu:fw:bm:make|Make]], y por ejemplo utilizar los siguientes comandos, cuando esté parado en el directorio raiz del firmware (donde esté el makefile principal del proyecto):
+
+<code>
+make help       ☜ FUNDAMENTAL: ayuda del makefile del Proyecto CIAA, lista los comandos principales
+make info       ☜ informacón sobre la configuración actual para make
+make clean      ☜ Borra todos los archivos generados durante la compilación, tests, etc
+make generate   ☜ generacion del RTOS, típicamente para ejemplos que usen OSEK previo a compilar
+make            ☜ Compilar incrementalmente el proyecto según seteos en Makefile.mine, y las dependencias ya generadas
+make all        ☜ Hace un make clean, generate y compila
+make info_<mod> ☜ información sobre alguno de los módulos de CIAA Firmware
+</code>
+
+Para quienes quieran trabajar y desarrollar nuevos módulos de CIAA Firmware pueden ser además interesantes los siguientes comandos:
+
+<code>
+make mocks      ☜ generación de los [[versiones:v1_0:firmware:unit_tests|mocks]]
+make tst_<mod>  ☜ testea el módulo de CIAA Firmware indicado
+</code>
+

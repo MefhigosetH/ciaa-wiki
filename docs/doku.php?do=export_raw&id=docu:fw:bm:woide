@@ -1,0 +1,7 @@
+====== Trabajando sin IDE ======
+
+El Firmware ofrece un IDE para poder trabajar de forma comoda y amigable, sin embargo para usuarios experimentados que prefieren utilizar otro editor de texto en vez de eclipse pueden hacer uso otros tools. Esto es posible gracias a que el entorno de desarrollo y el Firmware no son un mismo producto sino 2 interconectados a travez del makefile.
+
+Aquellos que utilizen el Firmware sin el IDE tendrán que conocer un poco más de la estructura de Firmware pero podrán llevar a cabo las mismas tareas.
+
+<- docu:fw:bm:ide:ide_edu_ciaa_debug|Debug con la placa EDU-CIAA y el Entorno IDE ^ ^ docu:fw:bm:estructura|Estructura de directorios ->

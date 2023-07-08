@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>desarrollo:firmware:generador</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="desarrollo,firmware,generador"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title=""/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=desarrollo:firmware:generador&amp;do=index.html" title="Índice"/>
+<link rel="manifest" href="lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Cambios recientes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Espacio de nombres actual" href="./feed.php%3Fmode=list&amp;ns=desarrollo:firmware"/>
+<link rel="alternate" type="text/html" title="HTML sencillo" href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html"/>
+<link rel="alternate" type="text/plain" title="Etiquetado Wiki" href="./doku.php%3Fdo=export_raw&amp;id=desarrollo:firmware:generador"/>
+<link rel="canonical" href="./doku.php%3Fid=desarrollo:firmware:generador.html"/>
+<link rel="stylesheet" href="lib/exe/css.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='desarrollo:firmware';var JSINFO = {"id":"desarrollo:firmware:generador","namespace":"desarrollo:firmware","ACT":"export_xhtml","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="lib/exe/jquery.php%3Ftseed=34a552433bc33cc9c3bc32527289a0b2"></script>
+<script src="lib/exe/js.php%3Ft=dokuwiki&amp;tseed=48a4f103b3dd9c0f0740691fb104868a"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="dokuwiki export">
+<!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Tabla de Contenidos</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#generador_de_archivo_oil">Generador de archivo OIL</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#que_es_oil_por_si_no_esta_en_otro_lado">Qué es OIL?  (Por si no está en otro lado)</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#arquitectura">Arquitectura</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#detalles">Detalles</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#interrelacion_de_templates">Interrelación de templates</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#ciclo_de_vida_de_un_helper">Ciclo de vida de un Helper</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#opciones">Opciones</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#testing">Testing</a></div></li>
+<li class="level2"><div class="li"><a href="./doku.php%3Fdo=export_xhtml&amp;id=desarrollo:firmware:generador.html#como_hago_para">¿Cómo hago para...</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="generador_de_archivo_oil">Generador de archivo OIL</h1>
+<div class="level1">
+<div class="plugin_note noteimportant">En construcción
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Generador de archivo OIL&quot;,&quot;hid&quot;:&quot;generador_de_archivo_oil&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-82&quot;} -->
+<h2 class="sectionedit2" id="que_es_oil_por_si_no_esta_en_otro_lado">Qué es OIL?  (Por si no está en otro lado)</h2>
+<div class="level2">
+
+<p>
+*) xxx
+El propósito del generador es producir archivos de encabezados .h y .c a partir de unos templates de C con php embebido que se ejectua según unos archivos configuración .oil y .oilx.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Qu\u00e9 es OIL?  (Por si no est\u00e1 en otro lado)&quot;,&quot;hid&quot;:&quot;que_es_oil_por_si_no_esta_en_otro_lado&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;83-337&quot;} -->
+<h2 class="sectionedit3" id="arquitectura">Arquitectura</h2>
+<div class="level2">
+
+<p>
+Diagrama de clases
+</p>
+<pre class="code">+---+
+|Log|
++---+
+  ^
+  |  
++------------+          +------+
+|OilGenerator|---------&gt;|Helper|
++------------+          +------+  
+  |       |
+  |       v
+  |    +---------+       +---------+
+  |    |OilConfig|------&gt;|OilParser|
+  |    +---------+       +---------+
+  |
+  |   +------------+
+  +--&gt;|OutputWriter|
+      +------------+
+             A                                    (A = Herencia) 
+             |                                    (^v&lt;&gt; = Uso o composición)
+      +------+-------+       
+      |              |
++----------+   +------------+
+|FileWriter|   |StdoutWriter|
++----------+   +------------+</pre>
+
+<p>
+Diagrama de componentes
+</p>
+<pre class="code"> +-----------+          +----------+          +-------------+
+ |+------------+        |+-----------+        |+--------------+
+ ||+-------------+      ||+------------+      ||+---------------+
+ +||  configs    |      +||  helpers   |      +||   templates   |
+  +|(.oil|.olix) |       +|   (.php)   |       +|(.c.php|.h.php)|
+   +-------------+        +------------+        +---------------+
+         |                     |                     |
+         +----------------+    |   +-----------------+
+                          |    |   |
+                          v    v   v
++--------------+        +------------+
+| command line |-------&gt;| generator  |
+| options and  |        +------------+
+| defines      |               |
++--------------+               v 
+                         +----------+
+                         |+-----------+
+                         +|+------------+
+                          +|  salidas   |
+                           |  (.h|.c)   |
+                           +------------+</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Arquitectura&quot;,&quot;hid&quot;:&quot;arquitectura&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;338-2127&quot;} -->
+<h2 class="sectionedit4" id="detalles">Detalles</h2>
+<div class="level2">
+
+<p>
+generator.php contruye el objeto OilGenerator dándole un tipo de salida.
+</p>
+
+<p>
+OilGenerator procesa los argumentos, verifica la existencia de las entradas y salidas, carga los helpers declarados, parsea los oil/oilx e incluye cada template, que utilizando los métodos disponibles genera cada archivo objetivo, según estas reglas de nombres (completar)
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Detalles&quot;,&quot;hid&quot;:&quot;detalles&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;2128-2500&quot;} -->
+<h2 class="sectionedit5" id="interrelacion_de_templates">Interrelación de templates</h2>
+<div class="level2">
+
+<p>
+La implementación original permitía la comunicación directa entre templates, o sea, estos se cargaban en el mismo scope. 
+</p>
+<pre class="code"> clase OilGenerator
+     metodo run()                           \
+         para cada template en templates    |
+             activar buffer de salida       + scope original
+             evaluar template               |
+             salvar buffer de salida        /   </pre>
+
+<p>
+Según #386 y la cadena “Consulta acerca de aislación de templates de OilGenerator”, la nueva implementación encapsulará las llamadas impidiendo efectos colaterales entre templates.
+</p>
+<pre class="code"> clase OilGenerator
+     metodo run()
+         para cada template en templates
+             activar buffer de salida
+             llamada a metodo de objeto encapsulador   
+                 evaluar template                      } scope actual
+             salvar buffer de salida              </pre>
+
+<p>
+Si hubiera necesidad concreta de que haya alguna comunicación, implementaremos algún mecanismo explícito.
+</p>
+
+<p>
+Con respecto a la invocación de helpers hay permanentes y efímeros. Los primeros son los cargados por linea de comando disponibles para todos los templates. Los efímeros los que se cargan en cada template.
+</p>
+
+<p>
+Carga efímera de Helper con invocación en el template:
+</p>
+<pre class="code php"><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">loadHelper</span><span class="br0">&#40;</span><span class="st0">&quot;modules/rtos/gen/ginc/HelperX.php&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+Carga permanente por linea de comando:
+</p>
+<pre class="code bash"><span class="re5">-H</span> modules<span class="sy0">/</span>rtos<span class="sy0">/</span>gen<span class="sy0">/</span>ginc<span class="sy0">/</span>HelperX.php</pre>
+
+<p>
+La inclusión de helpers brinda acceso a los métodos de un objeto Helper:
+</p>
+<pre class="code php"><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">helper</span><span class="sy0">-&gt;</span><span class="me1">multicore</span><span class="sy0">-&gt;</span><span class="me1">getLocalList</span><span class="br0">&#40;</span><span class="st0">&quot;/OSEK&quot;</span><span class="sy0">,</span> <span class="st0">&quot;TASK&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+Aún no está definido el comportamiento ante múltiples cargas del mismo Helper. El resultado es que cada carga pisa a la anterior y podría ser el comportamiento final deseado. Veremos.
+</p>
+
+<p>
+Para la migración hay que estar atentos a la aparición en el log de mensajes de warning o error referidos a variables indefinidas como $os, $priority y $tasks. Se soluciona copiando del template anterior que funcione y tenga las llamadas tipo 
+</p>
+<pre class="code php"><span class="re0">$tasks</span> <span class="sy0">=</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">helper</span><span class="sy0">-&gt;</span><span class="me1">multicore</span><span class="sy0">-&gt;</span><span class="me1">getLocalList</span><span class="br0">&#40;</span><span class="st0">&quot;/OSEK&quot;</span><span class="sy0">,</span> <span class="st0">&quot;TASK&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+Por ahora hay que repetir en cada template todas las llamadas. Si surge un patrón de uso, veremos de refactorizar.
+</p>
+
+<p>
+Por el momento no nos preocuparemos por la falta de performance de esta solución, ya que no es una operación frecuente.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interrelaci\u00f3n de templates&quot;,&quot;hid&quot;:&quot;interrelacion_de_templates&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2501-4914&quot;} -->
+<h2 class="sectionedit6" id="ciclo_de_vida_de_un_helper">Ciclo de vida de un Helper</h2>
+<div class="level2">
+
+<p>
+El ciclo sería primero definir las funciones propias de un template en el mismo. Si hay oportunidad de reutilización, va a un Helper local al módulo o proyecto. Si su utilidad es transversal, pasaría a … la carpeta de Helpers del generador o alguna ubicación común a definir.
+</p>
+
+<p>
+TODO: los Helpers deben proveer un método de ayuda e implementar en algún lado que ante … –help-helpers se exploren los Helpers y se muestre esa ayuda. Esto implica que debe existir la clase AbstractHelper.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Ciclo de vida de un Helper&quot;,&quot;hid&quot;:&quot;ciclo_de_vida_de_un_helper&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:6,&quot;range&quot;:&quot;4915-5452&quot;} -->
+<h2 class="sectionedit7" id="opciones">Opciones</h2>
+<div class="level2">
+
+<p>
+Las opciones se pueden consultar con 
+</p>
+<pre class="code bash">php modules<span class="sy0">/</span>rtos<span class="sy0">/</span>generator<span class="sy0">/</span>generator.php <span class="re5">--help</span>
+&nbsp;
+php generator.php <span class="br0">&#91;</span>-l<span class="br0">&#93;</span> <span class="br0">&#91;</span>-h<span class="br0">&#93;</span> <span class="br0">&#91;</span>--cmdline<span class="br0">&#93;</span> \
+     <span class="br0">&#91;</span>-b path<span class="br0">&#93;</span>\
+     <span class="br0">&#91;</span>-Ddef<span class="br0">&#91;</span>=definition<span class="br0">&#93;</span><span class="br0">&#93;</span> \
+     <span class="re5">-c</span> <span class="sy0">&lt;</span>CONFIG_1<span class="sy0">&gt;</span> <span class="br0">&#91;</span><span class="sy0">&lt;</span>CONFIG_N<span class="sy0">&gt;</span><span class="br0">&#93;</span> \
+     <span class="re5">-o</span> <span class="sy0">&lt;</span>OUTPUTDIR<span class="sy0">&gt;</span> \
+     <span class="re5">-t</span> <span class="sy0">&lt;</span>TEMPLATE_1<span class="sy0">&gt;</span> <span class="br0">&#91;</span><span class="sy0">&lt;</span>TEMPLATE_N<span class="sy0">&gt;</span><span class="br0">&#93;</span> \
+     -<span class="br0">&#91;</span> <span class="re5">-H</span> <span class="sy0">&lt;</span>HELPER_1<span class="sy0">&gt;</span> <span class="br0">&#91;</span>HELPER_N<span class="br0">&#93;</span><span class="br0">&#93;</span>
+&nbsp;
+     <span class="re5">-c</span>   indicate the configuration input files
+     <span class="re5">-o</span>   output directory
+     <span class="re5">-t</span>   indicates the templates to be processed
+  optional parameters:
+     <span class="re5">-b</span>   relative base path <span class="br0">&#40;</span>default <span class="st0">&quot;/templates/&quot;</span><span class="br0">&#41;</span>
+     <span class="re5">-H</span>   load helpers
+     <span class="re5">-h</span>   display this <span class="kw3">help</span>
+     <span class="re5">-l</span>   displays a short license overview
+     <span class="re5">-D</span>   defines
+     <span class="re5">--cmdline</span> print the <span class="kw3">command</span> line</pre>
+
+<p>
+StdoutWriter existe a fines de testeo y si mal no recuerdo, no funciona bien por el hecho de estar usando ob_*.
+</p>
+
+</div>
+
+<h4 id="eleccion_del_lenguaje">Elección del lenguaje</h4>
+<div class="level4">
+
+<p>
+Se ha elegido php por que aunque es un lenguaje completo, está pensado para templating. Se pudo haber usado django, twig o similares, pero en esos casos había que incorporar un lenguaje y un sistema de templating.
+</p>
+
+<p>
+Los programas php estaban pensados originalmente para intercalar código con el formato html, al igual que jsp (no?). Esto viene muy bien pues permite escribir archivos .h o .c con partes estáticas y resolver mediante código las partes dinámicas, provenientes de los .oil con ayuda de los helpers.
+</p>
+
+<p>
+Una particularidad muy especial es que existen funciones de buffering (ob_*) para manipular el stdout, lo que permite intercalar código C estático con el código embebido en php con extrema sencillez.
+</p>
+
+<p>
+Estas piezas de código, se ejecutan en el contexto de una llamada a un método de un objeto OilGenerator, que previamente ha cargado la configuración y mediante una serie de métodos disponibles xxxxx
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Opciones&quot;,&quot;hid&quot;:&quot;opciones&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:7,&quot;range&quot;:&quot;5453-7232&quot;} -->
+<h2 class="sectionedit8" id="testing">Testing</h2>
+<div class="level2">
+
+<p>
+Se está utilizando test unitario con phpunit y funcional con shunit…
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Testing&quot;,&quot;hid&quot;:&quot;testing&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:8,&quot;range&quot;:&quot;7233-7326&quot;} -->
+<h2 class="sectionedit9" id="como_hago_para">¿Cómo hago para...</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;\u00bfC\u00f3mo hago para...&quot;,&quot;hid&quot;:&quot;como_hago_para&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:9,&quot;range&quot;:&quot;7327-7363&quot;} -->
+<h3 class="sectionedit10" id="hacer_un_template">... hacer un template?</h3>
+<div class="level3">
+
+<p>
+Copiar el ejemplo para tener la licencia
+</p>
+
+<p>
+El template consta de dos partes intercaladas, las estáticas y las dinámicas
+</p>
+
+<p>
+Las estáticas son las que van de modo incondicional y fijo, como la licencia.
+</p>
+
+<p>
+Las dinámicas son las que dependen de distintos factores variables como:
+</p>
+<ul>
+<li class="level1"><div class="li"> Configuración OIL</div>
+</li>
+<li class="level1"><div class="li"> Defines pasados por linea de comando</div>
+</li>
+</ul>
+
+<p>
+Lo contenidos dinámicos pueden ser tan sencillos como mostrar un define:
+</p>
+
+<p>
+&lt;? 
+</p>
+
+<p>
+la … de un componente
+</p>
+
+<p>
+…
+</p>
+
+<p>
+o la …
+</p>
+
+<p>
+…
+</p>
+
+<p>
+Los loops tienen contadores implícitos que se pueden aprovechar para simplificar el código.
+</p>
+<pre class="code php"><span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$coleccion</span> <span class="kw1">as</span> <span class="re0">$contador</span><span class="sy0">=&gt;</span><span class="re0">$elemento</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;elemento: &quot;</span> <span class="sy0">.</span> <span class="re0">$elemento</span><span class="sy0">-&gt;</span><span class="me1">nombre</span> <span class="sy0">.</span> <span class="st0">&quot; posición: &quot;</span> <span class="sy0">.</span> <span class="re0">$contador</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+producirá:
+</p>
+<pre class="code">elemento nombreUno posición: 0
+elemento nombreDos posición: 1
+elemento nombreTres posición: 2</pre>
+
+<p>
+y es equivalente a:
+</p>
+<pre class="code php"><span class="re0">$contador</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">foreach</span> <span class="br0">&#40;</span><span class="re0">$coleccion</span> <span class="kw1">as</span> <span class="re0">$elemento</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;elemento: &quot;</span> <span class="sy0">.</span> <span class="re0">$elemento</span><span class="sy0">-&gt;</span><span class="me1">nombre</span> <span class="sy0">.</span> <span class="st0">&quot; posición: &quot;</span> <span class="sy0">.</span> <span class="re0">$contador</span><span class="sy0">++</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+o tambien a
+</p>
+<pre class="code php"><span class="kw1">for</span><span class="br0">&#40;</span><span class="re0">$contador</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="re0">$contador</span> <span class="sy0">&lt;</span> <span class="re0">$coleccion</span><span class="sy0">.</span>size<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="re0">$contador</span><span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+   <span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;elemento: &quot;</span> <span class="sy0">.</span> <span class="re0">$elemento</span><span class="sy0">-&gt;</span><span class="me1">nombre</span> <span class="sy0">.</span> <span class="st0">&quot; posición: &quot;</span> <span class="sy0">.</span> <span class="re0">$contador</span><span class="sy0">++</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+Los recursos disponibles en el contexto del template son
+</p>
+<ul>
+<li class="level1"><div class="li"> log</div>
+</li>
+<li class="level1"><div class="li"> config</div>
+</li>
+<li class="level1"><div class="li"> helper</div>
+</li>
+</ul>
+
+<p>
+y se acceden mediante 
+</p>
+<pre class="code php"><span class="re0">$this</span><span class="sy0">-&gt;</span></pre>
+
+<p>
+en particular, la clase Log provée:
+</p>
+<pre class="code php"><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">log</span><span class="sy0">-&gt;</span><span class="me1">info</span><span class="br0">&#40;</span><span class="re0">$msg</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">log</span><span class="sy0">-&gt;</span><span class="me1">warn</span><span class="br0">&#40;</span><span class="re0">$msg</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">log</span><span class="sy0">-&gt;</span><span class="me1">error</span><span class="br0">&#40;</span><span class="re0">$msg</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+En caso de cancelar, por ahora hay que tirar una excepción usando la OilGeneratorException
+</p>
+<pre class="code php"><span class="kw1">throw</span> <span class="kw2">new</span> OilGeneratorException<span class="br0">&#40;</span><span class="re0">$msg</span><span class="sy0">,</span> <span class="re0">$exitCode</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;... hacer un template?&quot;,&quot;hid&quot;:&quot;hacer_un_template&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:10,&quot;range&quot;:&quot;7364-9009&quot;} -->
+<h3 class="sectionedit11" id="para_utilizar_unos_templates_con_algunos_config_y_algunos_con_otros">... para utilizar unos templates con algunos config y algunos con otros?</h3>
+<div class="level3">
+<div class="plugin_note noteimportant">ver si es un escenario factible y reformular
+</div>
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;... para utilizar unos templates con algunos config y algunos con otros?&quot;,&quot;hid&quot;:&quot;para_utilizar_unos_templates_con_algunos_config_y_algunos_con_otros&quot;,&quot;codeblockOffset&quot;:12,&quot;secid&quot;:11,&quot;range&quot;:&quot;9010-&quot;} --></div>
+</body>
+</html>

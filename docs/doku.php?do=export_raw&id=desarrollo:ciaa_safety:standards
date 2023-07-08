@@ -1,0 +1,73 @@
+====== Estándares relacionados ======
+
+Estos son los estándares relacionados con el desarrollo de la  [[start|CIAA-Safety]], en algunos casos son implementaciones específicas de cada ámbito de aplicación según la norma IEC 61508.
+
+===== Industria ferroviaria =====
+
+En Europa:
+  * EN 50126 : Especificación y demostración de la confiabilidad, la disponibilidad, la mantenibilidad y la seguridad (RAMS).
+  * EN 50128 : Sistemas de comunicación, señalización y procesamiento. Software para sistemas de control y protección de ferrocarril.
+  * EN 50129 : Sistemas de comunicación, señalización y procesamiento. Sistemas electrónicos relacionados con la seguridad para la señalización.
+  * EN 50121: Serie sobre Compatibilidad Electromagnética.
+  * EN 50124 : Coordinación de aislamiento.
+  * EN 50155 : Equipos electrónicos utilizados sobre material rodante.
+  * EN 50125 : Condiciones ambientales para el equipo.
+
+En Estados Unidos
+  * FRA : Compendio de Regulaciones
+  * AREMA : Manual de Prácticas Recomendadas para Comunicaciones y Señalamiento.
+  * IEEE 730 : Norma para el aseguramiento de la calidad del software.
+  * IEEE 8XX : Norma y Prácticas Recomendadas para prueba y configuración de software y especificación de requerimientos. Diagnóstico y plan de acción preliminar del área de sistemas críticos - v1.2 Página 23 de 56
+  * IEEE 1012 : Norma para verificación y validación de software.
+  * IEEE 10XX : Norma y Prácticas Recomendadas para el diseño y manejo de proyectos de software.
+  * IEEE 1483 : Norma para la verificación de funciones vitales en sistemas utilizados en control de tránsito ferroviario basados en procesadores.
+  * IEEE 1558 : Norma para la documentación de software para equipamiento y sistemas ferroviarios.
+  * MIL STD 882C : Prácticas del Ministerio de Defensa para sistemas de seguridad, Actividades a la medida de los sistemas de seguridad por "Task"
+   * Task 101/102: Programación de sistemas de seguridad
+   * Task 103/104/105/107: Manejo de contratistas, Revisión y Auditorías, Grupos de Trabajo en Seguridad, Progresos en Seguridad
+   * Task 201/202/203/204/205/206/207: PHL / PHA / Requisitos de Seguridad /SSHA / SHA / OSHA / Evaluación de Riesgos de Salud
+   * Task 301/302/303: Evaluación de Seguridad / Prueba y Evaluación de Seguridad / Revisión de Seguridad, Informes de Problemas a cambiar, Desviaciones.
+   * Task 401/402: Verificación de Seguridad / Cumplimientos de Seguridad
+
+===== Industria aeroespacial =====
+
+  * NASA Software Safety Standard NASA STD 8719.13A  
+  * NASA-GB-1740.13-96, NASA Guidebook for Safety Critical Software.
+  * Estándar ECSS-E-40 de la European Comission for Space Standarization. 
+  * Estándar ECSS-Q-ST-80 referido al aseguramiento de la calidad del software para uso espacial.
+   
+===== Industria nuclear =====
+
+  * IEC 62566: Nuclear Power Plants – Instrumentation and control important to safety – Development of HDL-programmed integrated circuits for systems performing category A functions.
+  * EPRI TR 1019181: Guidelines on the Use of Field Programmable Gate Arrays in Nuclear Power Plant I&C Systems.
+  * NUREG/CR-7006: Review Guidelines for Field-Programmable Gate Arrays in Nuclear Power Plant Safety System.
+  * EPRI TR 1022983: Recommended Approaches and Design Criteria for Application of Field Programmable Gate Arrays in Nuclear Power Plant I&C Systems.
+
+===== Industria automotriz =====
+
+  * ISO 26262
+  * SAE J2980
+
+===== Equipamiento médico =====
+
+  * IEC 60601: Referido a sistemas eléctricos programables para aplicaciones médicas, o PEMS, por las siglas en inglés de Programmable Electrical Medical Systems, o subsistemas electrónicos progrtamables, o PESS, por las siglas en inglés de Programmable Electronic Subsystems, lo que incluye unidades de procesamiento, su programas e interfaces, y aplica principalmente a equipos que tienen contacto directo con el paciente. 
+  * IEC 62304: Referido a productos de software, entendido como un conjunto de programas, procedimientos y la documentación e información asociada, lo que es aplicable por ejemplo a los programas de diagnóstico por imágenes. 
+  * ISO 14708: Aborda implantes quirúrgicos y equipamiento médico activo implantable, no sólo alimentado mediante electricidad, sino también mediante gas presurizado o resortes. 
+  * ISO 14971: Se refiere a la gestión de riesgo e incluye el análisis de riesgo en tiempo de diseño, agregando además agrega acciones para gestionar el riesgo durante toda la vida del producto. 
+  * ISO 82304: Sobre programas de computación o cálculo relacionados con la salud. 
+
+===== Industrias de procesos =====
+
+  * IEC 61511
+
+===== Industria aeronáutica =====
+
+  * DO-178C: "Software Considerations in Airborne Systems and Equipment Certification"
+  * DO-254: "Design Assurance Guidance For Airborne Electronic Hardware"
+  * DO-160: "Environmental Conditions and Test Procedures for Airborne Equipment"
+  * ARP4761: "Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment"
+  * ARP4754A, "Guidelines For Development Of Civil Aircraft and Systems"
+
+===== Industria de control de tráfico terrestre =====
+
+  * EN 12675, “Traffic Signal Controllers - Functional Safety Requirements”

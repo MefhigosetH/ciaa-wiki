@@ -1,0 +1,21 @@
+====== Firmware ======
+
+###
+El **firmware** es el programa que **se ejecuta en la CPU del microcontrolador**. Éste comprende los módulos de código de programas para realizar una aplicación determinada, e interactúa directamente con los periféricos internos y otros componentes físicos de la computadora industrial, dispositivos electrónicos, e interfaces de comunicación. La CIAA tiene tanto la posibilidad de correr [[docu:fw:linux]] como un [[docu:fw:bm]]. El Firmware también incluye un [[docu:fw:bm:ide]] para poder desarrollar desde un entorno confortable y amigable.
+###
+
+La **CIAA** ofrece 2 Firmwares, uno basado en [[docu:fw:linux]] y otro [[docu:fw:bm]] basado en OSEK y un posix like.
+
+===== ¿Que Firmware utilizar: Linux ó BareMetal? =====
+
+No hay una respuesta a esta pregunta. Depende de lo que el usuario desee hacer y mediante que medios. Le ofrecemos la siguiente tabla comparativa:
+
+^ Característica ^ Linux ^ Baremetal ^ Comentarios ^
+| Memoria FLASH | <fc #ff0000>✘</fc> | <fc #00ff00>✔</fc> | Linux necesita de aproximadamente xxx ROM, mientras que el Firmware basado en BareMetal unos pocos kbytes de memoria ROM |
+| Memoria RAM | <fc #ff0000>✘</fc> | <fc #00ff00>✔</fc> | Linux necesita de aproximadamente 12Mbytes de RAM, mientras que el Firmware basado en BareMetal unos pocos kbytes de memoria RAM |
+| Carga dinámica de Tareas | <fc #00ff00>✔</fc> | <fc #ff0000>✘</fc> | En linux se pueden cargar programas de forma dinámica, mientras que en Baremetal deben estar todas las aplicaciones programadas en el momento de compilar |
+| Manejo dinámico de memoria | <fc #00ff00>✔</fc> | <fc #ff0000>✘</fc> | En aplicaciónes donde el manejo dinámico de memoria sea una necesidad constante puede que resulte mejor utilizar Linux. |
+| Periféricos | <fc #00ff00>✔</fc> | <fc #ff0000>✘</fc> | La gran comunidad de Linux ofrece la posibilidad de tener para casi todos los dispositivos un driver, en el caso de baremetal le recomendamos ver la tabla de drivers soportados |
+| Portados a EDU-CIAA | <fc #ff0000>✘</fc> | <fc #00ff00>✔</fc> | Dadas las necesidades de ROM y RAM que se necesitan para correr Linux, no es posible utilizarlo en las EDU-CIAAs |
+
+<- docu:hw:intro|Hardware ^ desarrollo:docu:indice|Indice ^ docu:fw:linux|Linux ->

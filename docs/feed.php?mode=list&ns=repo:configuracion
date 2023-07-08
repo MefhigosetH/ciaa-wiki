@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="http://www.proyecto-ciaa.com.ar/devwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/feed.php">
+        <title> repo:configuracion</title>
+        <description></description>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <image rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2023-07-08T15:31:27+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:debug&amp;rev=1471651844&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:git&amp;rev=1471440151&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:java&amp;rev=1469998952&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title></title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/</link>
+        <url>http://www.proyecto-ciaa.com.ar/devwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:debug&amp;rev=1471651844&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-20T00:10:44+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:configuracion:debug</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:debug&amp;rev=1471651844&amp;do=diff</link>
+        <description>OpenOCD con Eclipse
+
+Linux
+
+Configurar debugging:
+
+	*  Run -&gt; Debug configurations...
+	*  Doble click a GDB OpenOCD Debugging
+	*  Pestaña Main -&gt; C/C++ Application, “Browse...” a $HOME/ciaa-ide/Firmware/out/bin/blinking.axf
+	*  Pestaña Debugger</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:git&amp;rev=1471440151&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-17T13:22:31+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:configuracion:git</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:git&amp;rev=1471440151&amp;do=diff</link>
+        <description>setear usuario
+
+lol y lola</description>
+    </item>
+    <item rdf:about="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:java&amp;rev=1469998952&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-31T21:02:32+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>repo:configuracion:java</title>
+        <link>http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=repo:configuracion:java&amp;rev=1469998952&amp;do=diff</link>
+        <description>Los componentes de java pueden ser de distintos proveedores y versiones y pueden convivir simultáneamente usando la arquitectura de update-alternatives.
+
+Los programas que nos interesan son java para ejecutar y javac, el compilador. Para ver que versiones hay instaladas, use</description>
+    </item>
+</rdf:RDF>
